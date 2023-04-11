@@ -83,5 +83,11 @@
   <ItemGroup>
     <None Include="src\assets\imagens\BackgroundImage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\assets\icons\arrow_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\assets\icons\menu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
