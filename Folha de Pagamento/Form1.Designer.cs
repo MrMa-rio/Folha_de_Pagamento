@@ -90,12 +90,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Folha_de_Pagamento.Properties.Resources.BackgroundImage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1217, 751);
+            this.ClientSize = new System.Drawing.Size(1264, 751);
             this.Controls.Add(this.Barra_Gerenciamento);
             this.Controls.Add(this.btn_arrow_teste);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1280, 790);
+            this.MinimumSize = new System.Drawing.Size(1280, 790);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Folha de Pagamento";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
