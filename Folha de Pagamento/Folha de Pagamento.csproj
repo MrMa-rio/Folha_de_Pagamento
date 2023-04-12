@@ -46,16 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormShow.cs" />
+    <Compile Include="navBarShow.cs" />
+    <Compile Include="ScreenHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ScreenHome.Designer.cs">
+      <DependentUpon>ScreenHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="navBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="navBar.Designer.cs">
+      <DependentUpon>navBar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="telaTeste1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaTeste1.Designer.cs">
+      <DependentUpon>telaTeste1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ScreenHome.resx">
+      <DependentUpon>ScreenHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="navBar.resx">
+      <DependentUpon>navBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +84,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="telaTeste1.resx">
+      <DependentUpon>telaTeste1.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\assets\icons\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\ConfigDefault.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

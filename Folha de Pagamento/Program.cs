@@ -16,7 +16,7 @@ namespace Folha_de_Pagamento
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ScreenHome());
         }
     }
 }
