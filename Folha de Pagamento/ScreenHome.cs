@@ -13,30 +13,21 @@ namespace Folha_de_Pagamento
     
     public partial class ScreenHome : Form
     {
-        navBar NavBar = new navBar();
+        
+        FormShow formShow = new FormShow();
         NavBarShow navBarShow = new NavBarShow();
-        private Form formAtivo;
-
-        public Form FormAtivo
-        {
-            get { return formAtivo; }
-            set { formAtivo = value; }
-        }
-
-
+        Form NavBars;
+        
         public ScreenHome()
         {
             InitializeComponent();
-            
+            navBar NavBar = new navBar(this);
+            NavBars = NavBar;
         }
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            navBarShow.setNavBarShow(pnlInicial, NavBar);
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
@@ -49,9 +40,9 @@ namespace Folha_de_Pagamento
             Btn_Menu.BackColor = Color.Transparent;
         }
 
-        private void pnlInicial_Click(object sender, EventArgs e)
+        private void Btn_Menu_MouseClick(object sender, MouseEventArgs e)
         {
-            NavBar.Hide();
+            navBarShow.setNavBarShow(this, NavBars);
         }
     }
 }

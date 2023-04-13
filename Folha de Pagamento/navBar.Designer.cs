@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.Barra_Gerenciamento = new System.Windows.Forms.Panel();
+            this.Relatorio = new System.Windows.Forms.Button();
+            this.Gerenciamento = new System.Windows.Forms.Button();
             this.BtnArrowLeft = new System.Windows.Forms.PictureBox();
             this.Barra_Gerenciamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnArrowLeft)).BeginInit();
@@ -37,12 +39,52 @@
             // Barra_Gerenciamento
             // 
             this.Barra_Gerenciamento.BackColor = System.Drawing.Color.Silver;
+            this.Barra_Gerenciamento.Controls.Add(this.Relatorio);
+            this.Barra_Gerenciamento.Controls.Add(this.Gerenciamento);
             this.Barra_Gerenciamento.Controls.Add(this.BtnArrowLeft);
             this.Barra_Gerenciamento.Dock = System.Windows.Forms.DockStyle.Left;
             this.Barra_Gerenciamento.Location = new System.Drawing.Point(0, 0);
             this.Barra_Gerenciamento.Name = "Barra_Gerenciamento";
             this.Barra_Gerenciamento.Size = new System.Drawing.Size(345, 751);
             this.Barra_Gerenciamento.TabIndex = 1;
+            // 
+            // Relatorio
+            // 
+            this.Relatorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Relatorio.FlatAppearance.BorderSize = 0;
+            this.Relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Relatorio.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Relatorio.Image = global::Folha_de_Pagamento.Properties.Resources.summarize_FILL0_wght400_GRAD0_opsz48;
+            this.Relatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Relatorio.Location = new System.Drawing.Point(0, 228);
+            this.Relatorio.Name = "Relatorio";
+            this.Relatorio.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Relatorio.Size = new System.Drawing.Size(345, 63);
+            this.Relatorio.TabIndex = 6;
+            this.Relatorio.Text = "Relatório";
+            this.Relatorio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Relatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Relatorio.UseVisualStyleBackColor = true;
+            this.Relatorio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Relatorio_MouseClick);
+            // 
+            // Gerenciamento
+            // 
+            this.Gerenciamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Gerenciamento.FlatAppearance.BorderSize = 0;
+            this.Gerenciamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Gerenciamento.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gerenciamento.Image = global::Folha_de_Pagamento.Properties.Resources.manager;
+            this.Gerenciamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Gerenciamento.Location = new System.Drawing.Point(0, 159);
+            this.Gerenciamento.Name = "Gerenciamento";
+            this.Gerenciamento.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Gerenciamento.Size = new System.Drawing.Size(345, 63);
+            this.Gerenciamento.TabIndex = 3;
+            this.Gerenciamento.Text = "Gerenciamento";
+            this.Gerenciamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Gerenciamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Gerenciamento.UseVisualStyleBackColor = true;
+            this.Gerenciamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gerenciamento_MouseClick);
             // 
             // BtnArrowLeft
             // 
@@ -57,9 +99,9 @@
             this.BtnArrowLeft.Size = new System.Drawing.Size(39, 39);
             this.BtnArrowLeft.TabIndex = 2;
             this.BtnArrowLeft.TabStop = false;
-            this.BtnArrowLeft.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
-            this.BtnArrowLeft.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.BtnArrowLeft.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.BtnArrowLeft.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btn_arrow_left_MouseClick);
+            this.BtnArrowLeft.MouseEnter += new System.EventHandler(this.btn_arrow_left_MouseEnter);
+            this.BtnArrowLeft.MouseLeave += new System.EventHandler(this.btn_arrow_left_MouseLeave);
             // 
             // navBar
             // 
@@ -80,5 +122,7 @@
 
         private System.Windows.Forms.Panel Barra_Gerenciamento;
         private System.Windows.Forms.PictureBox BtnArrowLeft;
+        public System.Windows.Forms.Button Gerenciamento;
+        public System.Windows.Forms.Button Relatorio;
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Folha_de_Pagamento
 {
-    public partial class telaTeste1 : ScreenHome
+    public partial class Cadastro : Form
     {
-        public telaTeste1()
+        public Cadastro()
         {
             InitializeComponent();
-        }
-
-        private void telaTeste3_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

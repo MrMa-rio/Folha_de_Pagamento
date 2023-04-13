@@ -9,7 +9,7 @@ namespace Folha_de_Pagamento
 {
     internal class NavBarShow
     {
-        public void setNavBarShow(Panel ScreenTarget, Form Nav)
+        public void setNavBarShow(Form ScreenTarget, Form Nav)
         {
             Nav.TopLevel = false;
             ScreenTarget.Controls.Add(Nav);
@@ -17,5 +17,7 @@ namespace Folha_de_Pagamento
             Nav.BringToFront();
             Nav.Show();
         }
+
+        
     }
 }

@@ -21,4 +21,5 @@ C:\Users\MrBlackWolf\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\
 C:\Users\MrBlackWolf\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\Folha de Pagamento.pdb
 C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\Folha_de_Pagamento.navBar.resources
 C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\Folha_de_Pagamento.ScreenHome.resources
-C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\Folha_de_Pagamento.telaTeste1.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\Folha_de_Pagamento.Cadastro.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\Folha_de_Pagamento.Relatorio.resources
