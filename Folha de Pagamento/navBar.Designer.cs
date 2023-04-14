@@ -32,6 +32,8 @@
             this.Relatorio = new System.Windows.Forms.Button();
             this.Gerenciamento = new System.Windows.Forms.Button();
             this.BtnArrowLeft = new System.Windows.Forms.PictureBox();
+            this.btnConfiguracao = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Barra_Gerenciamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnArrowLeft)).BeginInit();
             this.SuspendLayout();
@@ -39,10 +41,13 @@
             // Barra_Gerenciamento
             // 
             this.Barra_Gerenciamento.BackColor = System.Drawing.Color.Silver;
+            this.Barra_Gerenciamento.Controls.Add(this.button1);
+            this.Barra_Gerenciamento.Controls.Add(this.btnConfiguracao);
             this.Barra_Gerenciamento.Controls.Add(this.Relatorio);
             this.Barra_Gerenciamento.Controls.Add(this.Gerenciamento);
             this.Barra_Gerenciamento.Controls.Add(this.BtnArrowLeft);
             this.Barra_Gerenciamento.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Barra_Gerenciamento.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Barra_Gerenciamento.Location = new System.Drawing.Point(0, 0);
             this.Barra_Gerenciamento.Name = "Barra_Gerenciamento";
             this.Barra_Gerenciamento.Size = new System.Drawing.Size(345, 751);
@@ -103,6 +108,37 @@
             this.BtnArrowLeft.MouseEnter += new System.EventHandler(this.btn_arrow_left_MouseEnter);
             this.BtnArrowLeft.MouseLeave += new System.EventHandler(this.btn_arrow_left_MouseLeave);
             // 
+            // btnConfiguracao
+            // 
+            this.btnConfiguracao.BackColor = System.Drawing.Color.DarkGray;
+            this.btnConfiguracao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfiguracao.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracao.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnConfiguracao.Image = global::Folha_de_Pagamento.Properties.Resources.settings;
+            this.btnConfiguracao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracao.Location = new System.Drawing.Point(18, 683);
+            this.btnConfiguracao.Name = "btnConfiguracao";
+            this.btnConfiguracao.Padding = new System.Windows.Forms.Padding(4);
+            this.btnConfiguracao.Size = new System.Drawing.Size(174, 47);
+            this.btnConfiguracao.TabIndex = 7;
+            this.btnConfiguracao.Text = "Configurações";
+            this.btnConfiguracao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConfiguracao.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.button1.Location = new System.Drawing.Point(207, 683);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 47);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Trocar/Sair";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // navBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,5 +160,7 @@
         private System.Windows.Forms.PictureBox BtnArrowLeft;
         public System.Windows.Forms.Button Gerenciamento;
         public System.Windows.Forms.Button Relatorio;
+        public System.Windows.Forms.Button btnConfiguracao;
+        private System.Windows.Forms.Button button1;
     }
 }
