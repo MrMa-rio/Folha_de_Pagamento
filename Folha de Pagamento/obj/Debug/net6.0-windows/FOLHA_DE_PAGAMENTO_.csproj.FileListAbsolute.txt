@@ -1,0 +1,61 @@
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.exe
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.deps.json
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.runtimeconfig.json
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.pdb
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.csproj.AssemblyReference.cache
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.csproj.GenerateResource.cache
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.AssemblyInfoInputs.cache
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.AssemblyInfo.cs
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\refint\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.pdb
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.genruntimeconfig.cache
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\ref\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormHome.resources
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.Properties.Resources.resources
+C:\Users\Mario\Documents\GitHub\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormNavBar.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.exe
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.deps.json
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.runtimeconfig.json
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.pdb
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.csproj.AssemblyReference.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormHome.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormNavBar.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.Properties.Resources.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.csproj.GenerateResource.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.AssemblyInfoInputs.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.AssemblyInfo.cs
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\refint\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.pdb
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.genruntimeconfig.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\ref\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormCadastro.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\FOLHA_DE_PAGAMENTO_\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormAlterarCadastro.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.exe
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.deps.json
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.runtimeconfig.json
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\bin\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.pdb
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.csproj.AssemblyReference.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormAlterarCadastro.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormHome.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormNavBar.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.Properties.Resources.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.csproj.GenerateResource.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.AssemblyInfoInputs.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.AssemblyInfo.cs
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\refint\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.pdb
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.genruntimeconfig.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\ref\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormCadastroFunc.resources

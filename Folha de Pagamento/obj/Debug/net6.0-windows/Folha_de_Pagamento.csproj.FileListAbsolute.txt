@@ -1,0 +1,11 @@
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\Folha_de_Pagamento.csproj.AssemblyReference.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormAlterarCadastro.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormCadastro.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormHome.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.FormNavBar.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\Folha_de_Pagamento.Properties.Resources.resources
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\Folha_de_Pagamento.csproj.GenerateResource.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\Folha_de_Pagamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\Folha_de_Pagamento.AssemblyInfoInputs.cache
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\Folha_de_Pagamento.AssemblyInfo.cs
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\Folha_de_Pagamento.csproj.CoreCompileInputs.cache
