@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             BtnMenu = new Button();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // BtnMenu
@@ -44,6 +46,30 @@
             BtnMenu.UseVisualStyleBackColor = false;
             BtnMenu.MouseClick += BtnMenu_MouseClick;
             // 
+            // button1
+            // 
+            button1.BackgroundImage = Properties.Resources.circle_account;
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(1180, 28);
+            button1.Name = "button1";
+            button1.Size = new Size(48, 48);
+            button1.TabIndex = 1;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.BackgroundImage = Properties.Resources.settings;
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(1107, 28);
+            button2.Name = "button2";
+            button2.Size = new Size(48, 48);
+            button2.TabIndex = 2;
+            button2.UseVisualStyleBackColor = true;
+            // 
             // FormHome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -52,6 +78,8 @@
             BackgroundImage = Properties.Resources.BackgroundImage1;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1264, 751);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(BtnMenu);
             DoubleBuffered = true;
             MaximizeBox = false;
@@ -66,5 +94,7 @@
         #endregion
 
         private Button BtnMenu;
+        private Button button1;
+        private Button button2;
     }
 }
