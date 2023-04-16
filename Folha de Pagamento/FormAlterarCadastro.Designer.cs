@@ -38,6 +38,8 @@
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            LbValidacao = new Label();
+            comboBox2 = new ComboBox();
             button3 = new Button();
             button2 = new Button();
             textBox11 = new TextBox();
@@ -52,11 +54,10 @@
             label10 = new Label();
             textBox6 = new TextBox();
             label9 = new Label();
-            textBox5 = new TextBox();
             label8 = new Label();
             comboBox1 = new ComboBox();
             label7 = new Label();
-            textBox4 = new TextBox();
+            TxtCpf = new TextBox();
             label6 = new Label();
             textBox3 = new TextBox();
             label5 = new Label();
@@ -183,6 +184,8 @@
             panel2.AutoScrollMargin = new Size(0, 10);
             panel2.AutoScrollMinSize = new Size(0, 10);
             panel2.BackColor = Color.Silver;
+            panel2.Controls.Add(LbValidacao);
+            panel2.Controls.Add(comboBox2);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(textBox11);
@@ -197,11 +200,10 @@
             panel2.Controls.Add(label10);
             panel2.Controls.Add(textBox6);
             panel2.Controls.Add(label9);
-            panel2.Controls.Add(textBox5);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(comboBox1);
             panel2.Controls.Add(label7);
-            panel2.Controls.Add(textBox4);
+            panel2.Controls.Add(TxtCpf);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(textBox3);
             panel2.Controls.Add(label5);
@@ -211,6 +213,31 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(740, 458);
             panel2.TabIndex = 5;
+            // 
+            // LbValidacao
+            // 
+            LbValidacao.AutoSize = true;
+            LbValidacao.BackColor = Color.Transparent;
+            LbValidacao.Font = new Font("Palatino Linotype", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            LbValidacao.Location = new Point(485, 155);
+            LbValidacao.Name = "LbValidacao";
+            LbValidacao.Size = new Size(0, 18);
+            LbValidacao.TabIndex = 27;
+            // 
+            // comboBox2
+            // 
+            comboBox2.AutoCompleteCustomSource.AddRange(new string[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
+            comboBox2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBox2.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBox2.BackColor = Color.DarkGray;
+            comboBox2.FlatStyle = FlatStyle.Flat;
+            comboBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
+            comboBox2.Location = new Point(192, 222);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(220, 31);
+            comboBox2.TabIndex = 26;
             // 
             // button3
             // 
@@ -362,29 +389,21 @@
             label9.TabIndex = 11;
             label9.Text = "A Definir:";
             // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.DarkGray;
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(192, 223);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "A Definir";
-            textBox5.Size = new Size(287, 31);
-            textBox5.TabIndex = 8;
-            // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label8.Location = new Point(36, 226);
             label8.Name = "label8";
-            label8.Size = new Size(74, 21);
+            label8.Size = new Size(55, 21);
             label8.TabIndex = 9;
-            label8.Text = "A Definir:";
+            label8.Text = "Cargo:";
             // 
             // comboBox1
             // 
+            comboBox1.AutoCompleteCustomSource.AddRange(new string[] { "Casado", "Solteiro", "Uniao Estavel", "Outro" });
+            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
             comboBox1.BackColor = Color.DarkGray;
             comboBox1.FlatStyle = FlatStyle.Flat;
             comboBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
@@ -392,7 +411,7 @@
             comboBox1.Items.AddRange(new object[] { "Solteiro", "Casado", "Uniao Estável", "Outro" });
             comboBox1.Location = new Point(192, 186);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(145, 31);
+            comboBox1.Size = new Size(160, 31);
             comboBox1.TabIndex = 7;
             // 
             // label7
@@ -405,16 +424,17 @@
             label7.TabIndex = 6;
             label7.Text = "Estado Civil:";
             // 
-            // textBox4
+            // TxtCpf
             // 
-            textBox4.BackColor = Color.DarkGray;
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(192, 149);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = " XXX.XXX.XXX-XX";
-            textBox4.Size = new Size(287, 31);
-            textBox4.TabIndex = 3;
+            TxtCpf.BackColor = Color.DarkGray;
+            TxtCpf.BorderStyle = BorderStyle.FixedSingle;
+            TxtCpf.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCpf.Location = new Point(192, 149);
+            TxtCpf.Name = "TxtCpf";
+            TxtCpf.PlaceholderText = " XXX.XXX.XXX-XX";
+            TxtCpf.Size = new Size(287, 31);
+            TxtCpf.TabIndex = 3;
+            TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // label6
             // 
@@ -532,7 +552,7 @@
         private Label label4;
         private ComboBox comboBox1;
         private Label label7;
-        private TextBox textBox4;
+        private TextBox TxtCpf;
         private Label label6;
         private TextBox textBox3;
         private Label label5;
@@ -548,10 +568,11 @@
         private Label label10;
         private TextBox textBox6;
         private Label label9;
-        private TextBox textBox5;
         private Label label8;
         private Button button3;
         private Button button2;
         private Button button4;
+        private ComboBox comboBox2;
+        private Label LbValidacao;
     }
 }

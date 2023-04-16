@@ -17,9 +17,10 @@ namespace FOLHA_DE_PAGAMENTO_
             InitializeComponent();
         }
 
-        private void LbTitulo_Click(object sender, EventArgs e)
+        private void TxtCpf_TextChanged(object sender, EventArgs e)
         {
-
+            C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
+            c_ValidadorCPF.setValidacao(TxtCpf, LbValidacao);
         }
     }
 }

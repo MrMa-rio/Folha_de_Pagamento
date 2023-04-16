@@ -91,7 +91,6 @@
             PanelSubMenuRel.Name = "PanelSubMenuRel";
             PanelSubMenuRel.Size = new Size(325, 285);
             PanelSubMenuRel.TabIndex = 6;
-            PanelSubMenuRel.Visible = false;
             // 
             // button10
             // 
@@ -196,7 +195,6 @@
             PanelSubMenu.Name = "PanelSubMenu";
             PanelSubMenu.Size = new Size(325, 264);
             PanelSubMenu.TabIndex = 13;
-            PanelSubMenu.Visible = false;
             // 
             // BtnCadastro
             // 
@@ -210,8 +208,7 @@
             BtnCadastro.Name = "BtnCadastro";
             BtnCadastro.Size = new Size(220, 40);
             BtnCadastro.TabIndex = 0;
-            BtnCadastro.Text = "Cadastrar Funcionario";
-            BtnCadastro.TextAlign = ContentAlignment.MiddleRight;
+            BtnCadastro.Text = "     Cadastrar Funcionario";
             BtnCadastro.UseVisualStyleBackColor = false;
             BtnCadastro.MouseClick += BtnCadastro_MouseClick;
             // 
@@ -244,7 +241,7 @@
             button2.Name = "button2";
             button2.Size = new Size(220, 40);
             button2.TabIndex = 3;
-            button2.Text = "A Definir";
+            button2.Text = "Cargos Funcionario";
             button2.UseVisualStyleBackColor = false;
             // 
             // button3

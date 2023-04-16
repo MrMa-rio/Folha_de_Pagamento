@@ -33,6 +33,8 @@
             BtnEditar = new Button();
             PctFotoFunc = new PictureBox();
             PanelCtrlCad = new Panel();
+            LbValidacao = new Label();
+            comboBox1 = new ComboBox();
             BtnConfirmar = new Button();
             textBox3 = new TextBox();
             BtnCancelar = new Button();
@@ -41,7 +43,6 @@
             label9 = new Label();
             CbEstadoCivil = new ComboBox();
             textBox6 = new TextBox();
-            textBox5 = new TextBox();
             TxtCpf = new TextBox();
             TxtDataNasc = new TextBox();
             TxtNomeFunc = new TextBox();
@@ -109,6 +110,8 @@
             PanelCtrlCad.AutoScroll = true;
             PanelCtrlCad.AutoScrollMargin = new Size(0, 10);
             PanelCtrlCad.AutoScrollMinSize = new Size(0, 10);
+            PanelCtrlCad.Controls.Add(LbValidacao);
+            PanelCtrlCad.Controls.Add(comboBox1);
             PanelCtrlCad.Controls.Add(BtnConfirmar);
             PanelCtrlCad.Controls.Add(textBox3);
             PanelCtrlCad.Controls.Add(BtnCancelar);
@@ -117,7 +120,6 @@
             PanelCtrlCad.Controls.Add(label9);
             PanelCtrlCad.Controls.Add(CbEstadoCivil);
             PanelCtrlCad.Controls.Add(textBox6);
-            PanelCtrlCad.Controls.Add(textBox5);
             PanelCtrlCad.Controls.Add(TxtCpf);
             PanelCtrlCad.Controls.Add(TxtDataNasc);
             PanelCtrlCad.Controls.Add(TxtNomeFunc);
@@ -131,6 +133,31 @@
             PanelCtrlCad.Name = "PanelCtrlCad";
             PanelCtrlCad.Size = new Size(740, 469);
             PanelCtrlCad.TabIndex = 3;
+            // 
+            // LbValidacao
+            // 
+            LbValidacao.AutoSize = true;
+            LbValidacao.BackColor = Color.Transparent;
+            LbValidacao.Font = new Font("Palatino Linotype", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            LbValidacao.Location = new Point(352, 137);
+            LbValidacao.Name = "LbValidacao";
+            LbValidacao.Size = new Size(0, 18);
+            LbValidacao.TabIndex = 18;
+            // 
+            // comboBox1
+            // 
+            comboBox1.AutoCompleteCustomSource.AddRange(new string[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
+            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBox1.BackColor = Color.DarkGray;
+            comboBox1.FlatStyle = FlatStyle.Flat;
+            comboBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
+            comboBox1.Location = new Point(194, 222);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(220, 31);
+            comboBox1.TabIndex = 17;
             // 
             // BtnConfirmar
             // 
@@ -219,17 +246,6 @@
             textBox6.Size = new Size(287, 31);
             textBox6.TabIndex = 11;
             // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.DarkGray;
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(194, 224);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "A DEFINIR";
-            textBox5.Size = new Size(287, 31);
-            textBox5.TabIndex = 10;
-            // 
             // TxtCpf
             // 
             TxtCpf.BackColor = Color.DarkGray;
@@ -240,6 +256,8 @@
             TxtCpf.PlaceholderText = "XXX.XXX.XXX-XX";
             TxtCpf.Size = new Size(152, 31);
             TxtCpf.TabIndex = 9;
+            TxtCpf.TextChanged += TxtCpf_TextChanged;
+            
             // 
             // TxtDataNasc
             // 
@@ -279,9 +297,9 @@
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label7.Location = new Point(38, 226);
             label7.Name = "label7";
-            label7.Size = new Size(74, 21);
+            label7.Size = new Size(55, 21);
             label7.TabIndex = 4;
-            label7.Text = "A Definir:";
+            label7.Text = "Cargo:";
             // 
             // LbEstadoCivil
             // 
@@ -385,7 +403,6 @@
         private Label LbNomeFunc;
         private TextBox TxtNomeFunc;
         private TextBox textBox6;
-        private TextBox textBox5;
         private TextBox TxtCpf;
         private TextBox TxtDataNasc;
         private ComboBox CbEstadoCivil;
@@ -397,5 +414,7 @@
         private Button BtnConfirmar;
         private Button BtnCancelar;
         private Button BtnEditar;
+        private ComboBox comboBox1;
+        private Label LbValidacao;
     }
 }

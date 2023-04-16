@@ -17,6 +17,7 @@ namespace FOLHA_DE_PAGAMENTO_
             Nav.Dock = DockStyle.Fill;
             Nav.Show();
             return Nav;
+            
         }
     }
 }

@@ -33,7 +33,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BtnCadastro_MouseClick(object sender, MouseEventArgs e)
         {
             C_FormShow c_FormShow = new C_FormShow();
-            FormCadastroFunc formCadastro = new FormCadastroFunc();
+            FormCadastroFunc formCadastro = new FormCadastroFunc(FormAtivo);
             handleForm = c_FormShow.setFormShow(FormAtivo, formCadastro, handleForm);
         }
 
