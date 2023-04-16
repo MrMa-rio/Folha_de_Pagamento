@@ -25,11 +25,6 @@ namespace FOLHA_DE_PAGAMENTO_
             c_ValidadorCPF.setValidacao(TxtCpf, LbValidacao);
         }
 
-        private void button1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void BtnCalendario_MouseClick(object sender, MouseEventArgs e)
         {
             BoxCalendario.Visible = !BoxCalendario.Visible ? true : false;

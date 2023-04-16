@@ -220,7 +220,7 @@
             // 
             // BoxCalendario
             // 
-            BoxCalendario.Location = new Point(485, 75);
+            BoxCalendario.Location = new Point(492, 75);
             BoxCalendario.Name = "BoxCalendario";
             BoxCalendario.ShowToday = false;
             BoxCalendario.ShowTodayCircle = false;
@@ -272,7 +272,7 @@
             LbValidacao.AutoSize = true;
             LbValidacao.BackColor = Color.Transparent;
             LbValidacao.Font = new Font("Palatino Linotype", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            LbValidacao.Location = new Point(485, 155);
+            LbValidacao.Location = new Point(358, 156);
             LbValidacao.Name = "LbValidacao";
             LbValidacao.Size = new Size(0, 18);
             LbValidacao.TabIndex = 27;
