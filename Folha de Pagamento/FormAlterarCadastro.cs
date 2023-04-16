@@ -22,5 +22,15 @@ namespace FOLHA_DE_PAGAMENTO_
             C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
             c_ValidadorCPF.setValidacao(TxtCpf, LbValidacao);
         }
+
+        private void BtnCalendario_MouseClick(object sender, MouseEventArgs e)
+        {
+            BoxCalendario.Visible = !BoxCalendario.Visible ? true : false;
+        }
+
+        private void BoxCalendario_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            TxtCalendario.Text = BoxCalendario.SelectionEnd.ToString();
+        }
     }
 }

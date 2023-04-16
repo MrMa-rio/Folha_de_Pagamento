@@ -38,6 +38,10 @@
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            BoxCalendario = new MonthCalendar();
+            BtnCalendario = new Button();
+            TxtCalendario = new MaskedTextBox();
+            TxtCpf = new MaskedTextBox();
             LbValidacao = new Label();
             comboBox2 = new ComboBox();
             button3 = new Button();
@@ -57,9 +61,7 @@
             label8 = new Label();
             comboBox1 = new ComboBox();
             label7 = new Label();
-            TxtCpf = new TextBox();
             label6 = new Label();
-            textBox3 = new TextBox();
             label5 = new Label();
             textBox2 = new TextBox();
             label4 = new Label();
@@ -184,6 +186,10 @@
             panel2.AutoScrollMargin = new Size(0, 10);
             panel2.AutoScrollMinSize = new Size(0, 10);
             panel2.BackColor = Color.Silver;
+            panel2.Controls.Add(BoxCalendario);
+            panel2.Controls.Add(BtnCalendario);
+            panel2.Controls.Add(TxtCalendario);
+            panel2.Controls.Add(TxtCpf);
             panel2.Controls.Add(LbValidacao);
             panel2.Controls.Add(comboBox2);
             panel2.Controls.Add(button3);
@@ -203,9 +209,7 @@
             panel2.Controls.Add(label8);
             panel2.Controls.Add(comboBox1);
             panel2.Controls.Add(label7);
-            panel2.Controls.Add(TxtCpf);
             panel2.Controls.Add(label6);
-            panel2.Controls.Add(textBox3);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(textBox2);
             panel2.Controls.Add(label4);
@@ -213,6 +217,55 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(740, 458);
             panel2.TabIndex = 5;
+            // 
+            // BoxCalendario
+            // 
+            BoxCalendario.Location = new Point(485, 75);
+            BoxCalendario.Name = "BoxCalendario";
+            BoxCalendario.ShowToday = false;
+            BoxCalendario.ShowTodayCircle = false;
+            BoxCalendario.TabIndex = 31;
+            BoxCalendario.Visible = false;
+            BoxCalendario.DateChanged += BoxCalendario_DateChanged;
+            // 
+            // BtnCalendario
+            // 
+            BtnCalendario.BackgroundImage = Properties.Resources.calendario;
+            BtnCalendario.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCalendario.FlatAppearance.BorderSize = 0;
+            BtnCalendario.FlatStyle = FlatStyle.Flat;
+            BtnCalendario.Location = new Point(326, 114);
+            BtnCalendario.Name = "BtnCalendario";
+            BtnCalendario.Size = new Size(26, 26);
+            BtnCalendario.TabIndex = 30;
+            BtnCalendario.UseVisualStyleBackColor = true;
+            BtnCalendario.MouseClick += BtnCalendario_MouseClick;
+            // 
+            // TxtCalendario
+            // 
+            TxtCalendario.BackColor = Color.DarkGray;
+            TxtCalendario.BorderStyle = BorderStyle.FixedSingle;
+            TxtCalendario.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCalendario.Location = new Point(192, 111);
+            TxtCalendario.Mask = "00/00/0000";
+            TxtCalendario.Name = "TxtCalendario";
+            TxtCalendario.PromptChar = 'X';
+            TxtCalendario.Size = new Size(121, 31);
+            TxtCalendario.TabIndex = 29;
+            TxtCalendario.Text = "01012000";
+            // 
+            // TxtCpf
+            // 
+            TxtCpf.BackColor = Color.DarkGray;
+            TxtCpf.BorderStyle = BorderStyle.FixedSingle;
+            TxtCpf.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCpf.Location = new Point(192, 150);
+            TxtCpf.Mask = "000,000,000-00";
+            TxtCpf.Name = "TxtCpf";
+            TxtCpf.PromptChar = 'X';
+            TxtCpf.Size = new Size(160, 31);
+            TxtCpf.TabIndex = 28;
+            TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // LbValidacao
             // 
@@ -424,18 +477,6 @@
             label7.TabIndex = 6;
             label7.Text = "Estado Civil:";
             // 
-            // TxtCpf
-            // 
-            TxtCpf.BackColor = Color.DarkGray;
-            TxtCpf.BorderStyle = BorderStyle.FixedSingle;
-            TxtCpf.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCpf.Location = new Point(192, 149);
-            TxtCpf.Name = "TxtCpf";
-            TxtCpf.PlaceholderText = " XXX.XXX.XXX-XX";
-            TxtCpf.Size = new Size(287, 31);
-            TxtCpf.TabIndex = 3;
-            TxtCpf.TextChanged += TxtCpf_TextChanged;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -445,17 +486,6 @@
             label6.Size = new Size(40, 21);
             label6.TabIndex = 4;
             label6.Text = "CPF:";
-            // 
-            // textBox3
-            // 
-            textBox3.BackColor = Color.DarkGray;
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(192, 112);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = " DD/MM/AAAA";
-            textBox3.Size = new Size(287, 31);
-            textBox3.TabIndex = 1;
             // 
             // label5
             // 
@@ -552,9 +582,7 @@
         private Label label4;
         private ComboBox comboBox1;
         private Label label7;
-        private TextBox TxtCpf;
         private Label label6;
-        private TextBox textBox3;
         private Label label5;
         private TextBox textBox11;
         private Label label14;
@@ -574,5 +602,9 @@
         private Button button4;
         private ComboBox comboBox2;
         private Label LbValidacao;
+        private MaskedTextBox TxtCpf;
+        private MaskedTextBox TxtCalendario;
+        private MonthCalendar BoxCalendario;
+        private Button BtnCalendario;
     }
 }

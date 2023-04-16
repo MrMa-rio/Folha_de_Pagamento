@@ -50,7 +50,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
             return true;
         }
-        public void setValidacao(TextBox TxtCpf, Label LbValidacao)
+        public void setValidacao(MaskedTextBox TxtCpf, Label LbValidacao)
         {
             bool Validacao;
             C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
@@ -65,7 +65,7 @@ namespace FOLHA_DE_PAGAMENTO_
                 LbValidacao.ForeColor = Color.Red;
                 LbValidacao.Text = "CPF Inválido";
             }
-            if (TxtCpf.Text == "")
+            if (TxtCpf.Text == "   .   .   -")
             {
                 LbValidacao.Visible = false;
             }

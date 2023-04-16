@@ -33,6 +33,10 @@
             BtnEditar = new Button();
             PctFotoFunc = new PictureBox();
             PanelCtrlCad = new Panel();
+            BtnCalendario = new Button();
+            BoxCalendario = new MonthCalendar();
+            TxtCalendario = new MaskedTextBox();
+            TxtCpf = new MaskedTextBox();
             LbValidacao = new Label();
             comboBox1 = new ComboBox();
             BtnConfirmar = new Button();
@@ -43,8 +47,6 @@
             label9 = new Label();
             CbEstadoCivil = new ComboBox();
             textBox6 = new TextBox();
-            TxtCpf = new TextBox();
-            TxtDataNasc = new TextBox();
             TxtNomeFunc = new TextBox();
             label8 = new Label();
             label7 = new Label();
@@ -108,8 +110,11 @@
             // PanelCtrlCad
             // 
             PanelCtrlCad.AutoScroll = true;
-            PanelCtrlCad.AutoScrollMargin = new Size(0, 10);
-            PanelCtrlCad.AutoScrollMinSize = new Size(0, 10);
+            PanelCtrlCad.BackgroundImageLayout = ImageLayout.Stretch;
+            PanelCtrlCad.Controls.Add(BtnCalendario);
+            PanelCtrlCad.Controls.Add(BoxCalendario);
+            PanelCtrlCad.Controls.Add(TxtCalendario);
+            PanelCtrlCad.Controls.Add(TxtCpf);
             PanelCtrlCad.Controls.Add(LbValidacao);
             PanelCtrlCad.Controls.Add(comboBox1);
             PanelCtrlCad.Controls.Add(BtnConfirmar);
@@ -120,8 +125,6 @@
             PanelCtrlCad.Controls.Add(label9);
             PanelCtrlCad.Controls.Add(CbEstadoCivil);
             PanelCtrlCad.Controls.Add(textBox6);
-            PanelCtrlCad.Controls.Add(TxtCpf);
-            PanelCtrlCad.Controls.Add(TxtDataNasc);
             PanelCtrlCad.Controls.Add(TxtNomeFunc);
             PanelCtrlCad.Controls.Add(label8);
             PanelCtrlCad.Controls.Add(label7);
@@ -133,6 +136,58 @@
             PanelCtrlCad.Name = "PanelCtrlCad";
             PanelCtrlCad.Size = new Size(740, 469);
             PanelCtrlCad.TabIndex = 3;
+            // 
+            // BtnCalendario
+            // 
+            BtnCalendario.BackgroundImage = Properties.Resources.calendario;
+            BtnCalendario.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCalendario.FlatAppearance.BorderSize = 0;
+            BtnCalendario.FlatStyle = FlatStyle.Flat;
+            BtnCalendario.Location = new Point(326, 92);
+            BtnCalendario.Name = "BtnCalendario";
+            BtnCalendario.Size = new Size(26, 26);
+            BtnCalendario.TabIndex = 22;
+            BtnCalendario.UseVisualStyleBackColor = true;
+            BtnCalendario.MouseClick += BtnCalendario_MouseClick;
+            // 
+            // BoxCalendario
+            // 
+            BoxCalendario.Location = new Point(426, 85);
+            BoxCalendario.Name = "BoxCalendario";
+            BoxCalendario.ShowToday = false;
+            BoxCalendario.ShowTodayCircle = false;
+            BoxCalendario.TabIndex = 21;
+            BoxCalendario.Visible = false;
+            BoxCalendario.DateSelected += BoxCalendario_DateSelected;
+            // 
+            // TxtCalendario
+            // 
+            TxtCalendario.BackColor = Color.DarkGray;
+            TxtCalendario.BorderStyle = BorderStyle.FixedSingle;
+            TxtCalendario.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCalendario.Location = new Point(193, 89);
+            TxtCalendario.Mask = "00/00/0000";
+            TxtCalendario.Name = "TxtCalendario";
+            TxtCalendario.PromptChar = 'X';
+            TxtCalendario.Size = new Size(121, 31);
+            TxtCalendario.TabIndex = 20;
+            TxtCalendario.Text = "01012000";
+            TxtCalendario.TextAlign = HorizontalAlignment.Center;
+            TxtCalendario.ValidatingType = typeof(DateTime);
+            // 
+            // TxtCpf
+            // 
+            TxtCpf.BackColor = Color.DarkGray;
+            TxtCpf.BeepOnError = true;
+            TxtCpf.BorderStyle = BorderStyle.FixedSingle;
+            TxtCpf.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCpf.Location = new Point(193, 136);
+            TxtCpf.Mask = "000,000,000-00";
+            TxtCpf.Name = "TxtCpf";
+            TxtCpf.PromptChar = 'X';
+            TxtCpf.Size = new Size(160, 31);
+            TxtCpf.TabIndex = 19;
+            TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // LbValidacao
             // 
@@ -225,6 +280,8 @@
             // 
             // CbEstadoCivil
             // 
+            CbEstadoCivil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CbEstadoCivil.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbEstadoCivil.BackColor = Color.DarkGray;
             CbEstadoCivil.FlatStyle = FlatStyle.Flat;
             CbEstadoCivil.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
@@ -245,30 +302,6 @@
             textBox6.PlaceholderText = "A DEFINIR";
             textBox6.Size = new Size(287, 31);
             textBox6.TabIndex = 11;
-            // 
-            // TxtCpf
-            // 
-            TxtCpf.BackColor = Color.DarkGray;
-            TxtCpf.BorderStyle = BorderStyle.FixedSingle;
-            TxtCpf.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCpf.Location = new Point(194, 131);
-            TxtCpf.Name = "TxtCpf";
-            TxtCpf.PlaceholderText = "XXX.XXX.XXX-XX";
-            TxtCpf.Size = new Size(152, 31);
-            TxtCpf.TabIndex = 9;
-            TxtCpf.TextChanged += TxtCpf_TextChanged;
-            
-            // 
-            // TxtDataNasc
-            // 
-            TxtDataNasc.BackColor = Color.DarkGray;
-            TxtDataNasc.BorderStyle = BorderStyle.FixedSingle;
-            TxtDataNasc.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataNasc.Location = new Point(194, 84);
-            TxtDataNasc.Name = "TxtDataNasc";
-            TxtDataNasc.PlaceholderText = "DD/MM/AAAA";
-            TxtDataNasc.Size = new Size(136, 31);
-            TxtDataNasc.TabIndex = 7;
             // 
             // TxtNomeFunc
             // 
@@ -377,6 +410,7 @@
             Controls.Add(panel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            MaximizeBox = false;
             Name = "FormCadastroFunc";
             Text = "FormCadastro";
             panel1.ResumeLayout(false);
@@ -403,8 +437,6 @@
         private Label LbNomeFunc;
         private TextBox TxtNomeFunc;
         private TextBox textBox6;
-        private TextBox TxtCpf;
-        private TextBox TxtDataNasc;
         private ComboBox CbEstadoCivil;
         private TextBox textBox3;
         private TextBox textBox7;
@@ -416,5 +448,9 @@
         private Button BtnEditar;
         private ComboBox comboBox1;
         private Label LbValidacao;
+        private MaskedTextBox TxtCpf;
+        private MonthCalendar BoxCalendario;
+        private MaskedTextBox TxtCalendario;
+        private Button BtnCalendario;
     }
 }
