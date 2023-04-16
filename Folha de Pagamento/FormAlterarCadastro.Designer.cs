@@ -217,10 +217,11 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(740, 458);
             panel2.TabIndex = 5;
+         
             // 
             // BoxCalendario
             // 
-            BoxCalendario.Location = new Point(492, 75);
+            BoxCalendario.Location = new Point(491, 75);
             BoxCalendario.Name = "BoxCalendario";
             BoxCalendario.ShowToday = false;
             BoxCalendario.ShowTodayCircle = false;

@@ -171,7 +171,6 @@
             TxtCalendario.PromptChar = 'X';
             TxtCalendario.Size = new Size(121, 31);
             TxtCalendario.TabIndex = 20;
-            TxtCalendario.Text = "01012000";
             TxtCalendario.TextAlign = HorizontalAlignment.Center;
             TxtCalendario.ValidatingType = typeof(DateTime);
             // 
@@ -194,7 +193,7 @@
             LbValidacao.AutoSize = true;
             LbValidacao.BackColor = Color.Transparent;
             LbValidacao.Font = new Font("Palatino Linotype", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            LbValidacao.Location = new Point(352, 137);
+            LbValidacao.Location = new Point(359, 142);
             LbValidacao.Name = "LbValidacao";
             LbValidacao.Size = new Size(0, 18);
             LbValidacao.TabIndex = 18;
