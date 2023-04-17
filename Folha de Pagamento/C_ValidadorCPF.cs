@@ -50,28 +50,26 @@ namespace FOLHA_DE_PAGAMENTO_
 
             return true;
         }
-        public void setValidacao(MaskedTextBox TxtCpf, Label LbValidacao)
+        public void setValidacao(MaskedTextBox TxtCpf, PictureBox pictureBox)
         {
             bool Validacao;
             C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
             Validacao = c_ValidadorCPF.ValidarCPF(TxtCpf.Text);
             if (Validacao)
             {
-                LbValidacao.ForeColor = Color.Green;
-                LbValidacao.Text = "CPF Válido";
+                pictureBox.BackgroundImage = Properties.Resources.check__1_;
             }
             if (!Validacao)
             {
-                LbValidacao.ForeColor = Color.Red;
-                LbValidacao.Text = "CPF Inválido";
+                pictureBox.BackgroundImage = Properties.Resources.x__1_;
             }
             if (TxtCpf.Text == "   .   .   -")
             {
-                LbValidacao.Visible = false;
+                pictureBox.Visible = false;
             }
             else
             {
-                LbValidacao.Visible = true;
+                pictureBox.Visible = true;
             }
         }
     }

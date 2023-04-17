@@ -22,7 +22,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private void TxtCpf_TextChanged(object sender, EventArgs e)
         {
             C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
-            c_ValidadorCPF.setValidacao(TxtCpf, LbValidacao);
+            c_ValidadorCPF.setValidacao(TxtCpf, PctCpf);
         }
 
         private void BtnCalendario_MouseClick(object sender, MouseEventArgs e)
@@ -32,7 +32,23 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BoxCalendario_DateSelected(object sender, DateRangeEventArgs e)
         {
-            TxtCalendario.Text = BoxCalendario.SelectionEnd.ToString();
+            TxtDataNascimento.Text = BoxCalendario.SelectionEnd.ToString();
+        }
+
+        private void BtnCalendario2_MouseClick(object sender, MouseEventArgs e)
+        {
+            BoxCalendario2.Location = new Point(469, 214);
+            BoxCalendario2.Visible = !BoxCalendario2.Visible ? true : false;
+        }
+
+        private void BoxCalendario2_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            TxtDataEmissao.Text = BoxCalendario2.SelectionEnd.ToString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
