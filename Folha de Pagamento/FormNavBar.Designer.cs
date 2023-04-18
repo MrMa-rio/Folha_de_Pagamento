@@ -231,6 +231,7 @@
             // BtnCargosFun
             // 
             BtnCargosFun.BackColor = Color.Transparent;
+            BtnCargosFun.Enabled = false;
             BtnCargosFun.FlatAppearance.BorderSize = 0;
             BtnCargosFun.FlatStyle = FlatStyle.Flat;
             BtnCargosFun.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
