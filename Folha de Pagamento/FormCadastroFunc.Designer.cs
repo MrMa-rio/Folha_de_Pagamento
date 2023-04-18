@@ -188,7 +188,6 @@
             PctCpf.Size = new Size(28, 28);
             PctCpf.TabIndex = 112;
             PctCpf.TabStop = false;
-            PctCpf.Click += pictureBox1_Click;
             // 
             // textBox1
             // 
@@ -708,14 +707,14 @@
             // 
             // CbCargo
             // 
-            CbCargo.AutoCompleteCustomSource.AddRange(new string[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
+            CbCargo.AutoCompleteCustomSource.AddRange(new string[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo ", "Contadora" });
             CbCargo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbCargo.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbCargo.BackColor = Color.DarkGray;
             CbCargo.FlatStyle = FlatStyle.Flat;
             CbCargo.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbCargo.FormattingEnabled = true;
-            CbCargo.Items.AddRange(new object[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
+            CbCargo.Items.AddRange(new object[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo ", "Contadora" });
             CbCargo.Location = new Point(172, 1069);
             CbCargo.Name = "CbCargo";
             CbCargo.Size = new Size(220, 31);
@@ -812,6 +811,7 @@
             // 
             BtnEditar.BackgroundImage = Properties.Resources.edit;
             BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnEditar.Enabled = false;
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
             BtnEditar.Location = new Point(111, 270);
@@ -841,9 +841,9 @@
             LbTitulo.Location = new Point(86, 33);
             LbTitulo.Name = "LbTitulo";
             LbTitulo.Padding = new Padding(10, 0, 0, 0);
-            LbTitulo.Size = new Size(368, 41);
+            LbTitulo.Size = new Size(401, 41);
             LbTitulo.TabIndex = 50;
-            LbTitulo.Text = "Dados do Funcionário      ";
+            LbTitulo.Text = "Cadastro do Funcionário      ";
             // 
             // label1
             // 
@@ -851,7 +851,7 @@
             label1.BackColor = Color.Transparent;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(65, 50);
+            label1.Location = new Point(91, 50);
             label1.Name = "label1";
             label1.Size = new Size(402, 37);
             label1.TabIndex = 60;
@@ -859,6 +859,7 @@
             // 
             // BtnConfirmar
             // 
+            BtnConfirmar.Enabled = false;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = Properties.Resources.check;
@@ -870,6 +871,7 @@
             // 
             // BtnCancelar
             // 
+            BtnCancelar.Enabled = false;
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = Properties.Resources.close;
@@ -883,7 +885,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(105, 129, 241);
+            BackColor = Color.FromArgb(46, 76, 32);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1264, 751);
             Controls.Add(LbAlterarCadastro);

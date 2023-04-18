@@ -45,10 +45,5 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             TxtDataEmissao.Text = BoxCalendario2.SelectionEnd.ToString();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

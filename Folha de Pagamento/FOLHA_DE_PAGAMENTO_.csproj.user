@@ -7,10 +7,25 @@
     <Compile Update="FormCadastroFunc.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormCalculoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormFolhaDetalhada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormHolerite.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormNavBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormFolhaNormal.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

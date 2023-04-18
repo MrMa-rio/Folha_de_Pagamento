@@ -50,6 +50,7 @@
             // 
             button1.BackgroundImage = Properties.Resources.circle_account;
             button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Enabled = false;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(1180, 28);
@@ -62,6 +63,7 @@
             // 
             button2.BackgroundImage = Properties.Resources.settings;
             button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Enabled = false;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(1107, 28);
@@ -74,9 +76,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(105, 129, 241);
-            BackgroundImage = Properties.Resources.BackgroundImage1;
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackColor = Color.FromArgb(46, 76, 32);
+            BackgroundImage = Properties.Resources.Impermais_green;
+            BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1264, 751);
             Controls.Add(button2);
             Controls.Add(button1);

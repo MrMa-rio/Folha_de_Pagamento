@@ -4,7 +4,7 @@ namespace FOLHA_DE_PAGAMENTO_
     {
 
         C_FormNavBarShow navBarShow = new C_FormNavBarShow();
-        Form NavBar;
+        public Form NavBar;
 
         public FormHome()
         {
@@ -15,7 +15,6 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnMenu_MouseClick(object sender, MouseEventArgs e)
         {
-
             navBarShow.setNavBarShow(this, NavBar);
         }
     }

@@ -101,6 +101,7 @@
             // 
             button4.BackgroundImage = Properties.Resources.edit;
             button4.BackgroundImageLayout = ImageLayout.Stretch;
+            button4.Enabled = false;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(111, 270);
@@ -720,6 +721,7 @@
             button1.BackColor = Color.DimGray;
             button1.BackgroundImage = Properties.Resources.Search;
             button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Enabled = false;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
@@ -733,6 +735,7 @@
             // 
             textBox1.BackColor = Color.DarkGray;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Enabled = false;
             textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(488, 104);
             textBox1.Name = "textBox1";
@@ -764,6 +767,7 @@
             // 
             TxtMatricula.BackColor = Color.DarkGray;
             TxtMatricula.BorderStyle = BorderStyle.FixedSingle;
+            TxtMatricula.Enabled = false;
             TxtMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMatricula.Location = new Point(191, 104);
             TxtMatricula.MaxLength = 6;
@@ -799,6 +803,7 @@
             // 
             button2.BackgroundImage = Properties.Resources.check;
             button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Enabled = false;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(89, 502);
@@ -811,6 +816,7 @@
             // 
             button3.BackgroundImage = Properties.Resources.close;
             button3.BackgroundImageLayout = ImageLayout.Stretch;
+            button3.Enabled = false;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(147, 502);
@@ -849,7 +855,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(105, 129, 241);
+            BackColor = Color.FromArgb(46, 76, 32);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1264, 751);
             Controls.Add(panel1);

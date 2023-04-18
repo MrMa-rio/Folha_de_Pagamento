@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.33" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="FormCargos - Cópia %283%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormCargos - Cópia %285%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

@@ -21,5 +21,17 @@ namespace FOLHA_DE_PAGAMENTO_
             }
             
         }
+        public void setHideForms(Form form)
+        {
+            if (form != null && form.Visible)
+            {
+                form.Visible = false;
+            }
+            else
+            {
+                form.Visible = true;
+            }
+
+        }
     }
 }
