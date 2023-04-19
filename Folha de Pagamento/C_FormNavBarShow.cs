@@ -8,13 +8,29 @@ namespace FOLHA_DE_PAGAMENTO_
 {
     internal class C_FormNavBarShow
     {
-        public void setNavBarShow(Form ScreenTarget, Form Nav)
+        public void setNavBarShow(Form ScreenTarget, FormNavBar Nav, Panel panel)
         {
             Nav.TopLevel = false;
             ScreenTarget.Controls.Add(Nav);
-            Nav.Dock = DockStyle.Left;
-            Nav.BringToFront();
-            Nav.Show();
+            //Nav.Dock = DockStyle.Left;
+            
+            AnimationShow(Nav, panel);
+        }
+        public void AnimationShow(Form Nav, Panel panelTarget)
+        {
+            for (int teste = 0; teste < 345; teste++)
+            {
+                Nav.BringToFront();
+                Nav.Width = teste;
+                teste = teste+1;
+                Nav.Show();
+            }
+            panelTarget.Visible = true;
+        }
+        public void AnimationHide(Form Nav, Panel panelTarget)
+        {
+            panelTarget.Visible = false;
+            Nav.Hide();
         }
     }
 }

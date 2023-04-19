@@ -27,7 +27,9 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnArrowLeft_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Hide();
+            C_FormNavBarShow c_FormNavBarShow = new C_FormNavBarShow();
+            c_FormNavBarShow.AnimationHide(this, Pnl2);
+
         }
 
         private void BtnCadastro_MouseClick(object sender, MouseEventArgs e)

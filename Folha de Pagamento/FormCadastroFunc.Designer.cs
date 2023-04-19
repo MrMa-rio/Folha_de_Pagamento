@@ -35,9 +35,9 @@
             label3 = new Label();
             textBox2 = new TextBox();
             label12 = new Label();
-            maskedTextBox2 = new MaskedTextBox();
+            TxtCep = new MaskedTextBox();
             label2 = new Label();
-            maskedTextBox1 = new MaskedTextBox();
+            TxtRg = new MaskedTextBox();
             LbRg = new Label();
             TxtTelefone = new MaskedTextBox();
             BoxCalendario2 = new MonthCalendar();
@@ -125,9 +125,9 @@
             PnlCtrlFunc.Controls.Add(label3);
             PnlCtrlFunc.Controls.Add(textBox2);
             PnlCtrlFunc.Controls.Add(label12);
-            PnlCtrlFunc.Controls.Add(maskedTextBox2);
+            PnlCtrlFunc.Controls.Add(TxtCep);
             PnlCtrlFunc.Controls.Add(label2);
-            PnlCtrlFunc.Controls.Add(maskedTextBox1);
+            PnlCtrlFunc.Controls.Add(TxtRg);
             PnlCtrlFunc.Controls.Add(LbRg);
             PnlCtrlFunc.Controls.Add(TxtTelefone);
             PnlCtrlFunc.Controls.Add(BoxCalendario2);
@@ -231,17 +231,18 @@
             label12.TabIndex = 110;
             label12.Text = " Reservista:";
             // 
-            // maskedTextBox2
+            // TxtCep
             // 
-            maskedTextBox2.BackColor = Color.DarkGray;
-            maskedTextBox2.BorderStyle = BorderStyle.FixedSingle;
-            maskedTextBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            maskedTextBox2.ForeColor = SystemColors.WindowText;
-            maskedTextBox2.Location = new Point(171, 824);
-            maskedTextBox2.Mask = "00,000-000";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(100, 31);
-            maskedTextBox2.TabIndex = 107;
+            TxtCep.BackColor = Color.DarkGray;
+            TxtCep.BorderStyle = BorderStyle.FixedSingle;
+            TxtCep.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCep.ForeColor = SystemColors.WindowText;
+            TxtCep.Location = new Point(171, 824);
+            TxtCep.Mask = "00,000-000";
+            TxtCep.Name = "TxtCep";
+            TxtCep.Size = new Size(100, 31);
+            TxtCep.TabIndex = 107;
+            TxtCep.MouseClick += TxtCep_MouseClick;
             // 
             // label2
             // 
@@ -253,16 +254,17 @@
             label2.TabIndex = 106;
             label2.Text = "*CEP:";
             // 
-            // maskedTextBox1
+            // TxtRg
             // 
-            maskedTextBox1.BackColor = Color.DarkGray;
-            maskedTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            maskedTextBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            maskedTextBox1.Location = new Point(170, 295);
-            maskedTextBox1.Mask = "00,000,000-0";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(160, 31);
-            maskedTextBox1.TabIndex = 103;
+            TxtRg.BackColor = Color.DarkGray;
+            TxtRg.BorderStyle = BorderStyle.FixedSingle;
+            TxtRg.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtRg.Location = new Point(170, 295);
+            TxtRg.Mask = "00,000,000-0";
+            TxtRg.Name = "TxtRg";
+            TxtRg.Size = new Size(160, 31);
+            TxtRg.TabIndex = 103;
+            TxtRg.MouseClick += TxtRg_MouseClick;
             // 
             // LbRg
             // 
@@ -284,6 +286,7 @@
             TxtTelefone.Name = "TxtTelefone";
             TxtTelefone.Size = new Size(287, 31);
             TxtTelefone.TabIndex = 5;
+            TxtTelefone.MouseClick += TxtTelefone_MouseClick;
             // 
             // BoxCalendario2
             // 
@@ -319,6 +322,7 @@
             TxtDataEmissao.PromptChar = 'X';
             TxtDataEmissao.Size = new Size(121, 31);
             TxtDataEmissao.TabIndex = 16;
+            TxtDataEmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // TxtSalarioBase
             // 
@@ -691,6 +695,7 @@
             TxtDataNascimento.PromptChar = 'X';
             TxtDataNascimento.Size = new Size(121, 31);
             TxtDataNascimento.TabIndex = 1;
+            TxtDataNascimento.MouseClick += TxtDataNascimento_MouseClick;
             // 
             // TxtCpf
             // 
@@ -703,6 +708,7 @@
             TxtCpf.PromptChar = 'X';
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 2;
+            TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // CbCargo
@@ -961,9 +967,9 @@
         private Button BtnCalendario2;
         private MonthCalendar BoxCalendario2;
         private MaskedTextBox TxtTelefone;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox TxtRg;
         private Label LbRg;
-        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox TxtCep;
         private Label label2;
         private TextBox textBox1;
         private Label label3;

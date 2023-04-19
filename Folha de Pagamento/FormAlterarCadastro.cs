@@ -42,5 +42,20 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             TxtDataEmissao.Text = BoxCalendario2.SelectionEnd.ToString();
         }
+
+        private void TxtCalendario_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtCalendario.SelectAll();
+        }
+
+        private void TxtCpf_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtCpf.SelectAll();
+        }
+
+        private void TxtDataEmissao_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtDataEmissao.SelectAll();
+        }
     }
 }

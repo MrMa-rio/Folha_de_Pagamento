@@ -228,6 +228,7 @@
             TxtDataEmissao.PromptChar = 'X';
             TxtDataEmissao.Size = new Size(121, 31);
             TxtDataEmissao.TabIndex = 20;
+            TxtDataEmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // textBox17
             // 
@@ -611,6 +612,7 @@
             TxtCalendario.PromptChar = 'X';
             TxtCalendario.Size = new Size(121, 31);
             TxtCalendario.TabIndex = 5;
+            TxtCalendario.MouseClick += TxtCalendario_MouseClick;
             // 
             // TxtCpf
             // 
@@ -623,6 +625,7 @@
             TxtCpf.PromptChar = 'X';
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 6;
+            TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // comboBox2
