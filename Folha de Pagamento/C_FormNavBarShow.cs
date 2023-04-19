@@ -22,7 +22,6 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 Nav.BringToFront();
                 Nav.Width = teste;
-                teste = teste+1;
                 Nav.Show();
             }
             panelTarget.Visible = true;

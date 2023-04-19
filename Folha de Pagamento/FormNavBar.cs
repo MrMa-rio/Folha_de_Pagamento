@@ -60,31 +60,26 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             FormCargos formCargosFun = new FormCargos(this);
             handleForm = c_FormShow.setFormShow(FormAtivo, formCargosFun, handleForm);
-
         }
         private void BtnCalculoPagamento_MouseClick(object sender, MouseEventArgs e)
         {
             FormCalculoPagamento formCalculoPagamento = new FormCalculoPagamento(this);
             handleForm = c_FormShow.setFormShow(FormAtivo, formCalculoPagamento, handleForm);
-
         }
         private void BtnFolhaPNormal_MouseClick(object sender, MouseEventArgs e)
         {
             FormFolhaNormal formFolhaNormal = new FormFolhaNormal(this);
             handleForm = c_FormShow.setFormShow(FormAtivo, formFolhaNormal, handleForm);
-
         }
         private void BtnFolhaPDetalhada_MouseClick(object sender, MouseEventArgs e)
         {
             FormFolhaDetalhada formFolhaDetalhada = new FormFolhaDetalhada(this);
             handleForm = c_FormShow.setFormShow(FormAtivo, formFolhaDetalhada, handleForm);
-
         }
         private void BtnHolerite_MouseClick(object sender, MouseEventArgs e)
         {
             FormHolerite formHolerite = new FormHolerite(this);
             handleForm = c_FormShow.setFormShow(FormAtivo, formHolerite, handleForm);
-
         }
     }
 }
