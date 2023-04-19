@@ -1,3 +1,6 @@
+using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.SQL;
+
 namespace FOLHA_DE_PAGAMENTO_
 {
     public partial class FormHome : Form
@@ -11,7 +14,9 @@ namespace FOLHA_DE_PAGAMENTO_
             InitializeComponent();
             FormNavBar navBar = new FormNavBar(this);
             NavBar = navBar;
-
+            
+            
+            
         }
 
         private void BtnMenu_MouseClick(object sender, MouseEventArgs e)

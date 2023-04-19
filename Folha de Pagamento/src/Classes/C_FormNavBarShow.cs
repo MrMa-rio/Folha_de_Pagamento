@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FOLHA_DE_PAGAMENTO_
+namespace FOLHA_DE_PAGAMENTO_.src.Classes
 {
     internal class C_FormNavBarShow
     {
@@ -13,7 +13,7 @@ namespace FOLHA_DE_PAGAMENTO_
             Nav.TopLevel = false;
             ScreenTarget.Controls.Add(Nav);
             //Nav.Dock = DockStyle.Left;
-            
+
             AnimationShow(Nav, panel);
         }
         public void AnimationShow(Form Nav, Panel panelTarget)
