@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroFunc));
             LbAlterarCadastro = new Panel();
             PnlCtrlFunc = new Panel();
             PctCpf = new PictureBox();
@@ -92,6 +93,7 @@
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
+            BtnLimpar = new Button();
             LbAlterarCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
@@ -102,7 +104,8 @@
             // LbAlterarCadastro
             // 
             LbAlterarCadastro.AccessibleRole = AccessibleRole.None;
-            LbAlterarCadastro.BackColor = Color.Silver;
+            LbAlterarCadastro.BackColor = Color.LightGray;
+            LbAlterarCadastro.Controls.Add(BtnLimpar);
             LbAlterarCadastro.Controls.Add(PnlCtrlFunc);
             LbAlterarCadastro.Controls.Add(PanelPerfilFunc);
             LbAlterarCadastro.Controls.Add(LbTitulo);
@@ -799,7 +802,7 @@
             // PanelPerfilFunc
             // 
             PanelPerfilFunc.AutoScroll = true;
-            PanelPerfilFunc.BackColor = Color.DarkGray;
+            PanelPerfilFunc.BackColor = Color.LightGray;
             PanelPerfilFunc.Controls.Add(BtnEditar);
             PanelPerfilFunc.Controls.Add(PctFotoFunc);
             PanelPerfilFunc.Location = new Point(810, 50);
@@ -809,7 +812,7 @@
             // 
             // BtnEditar
             // 
-            BtnEditar.BackgroundImage = Properties.Resources.edit;
+            BtnEditar.BackgroundImage = (Image)resources.GetObject("BtnEditar.BackgroundImage");
             BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
             BtnEditar.Enabled = false;
             BtnEditar.FlatAppearance.BorderSize = 0;
@@ -836,7 +839,7 @@
             LbTitulo.AutoSize = true;
             LbTitulo.FlatStyle = FlatStyle.Flat;
             LbTitulo.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
-            LbTitulo.Image = Properties.Resources.circle_account;
+            LbTitulo.Image = (Image)resources.GetObject("LbTitulo.Image");
             LbTitulo.ImageAlign = ContentAlignment.MiddleRight;
             LbTitulo.Location = new Point(86, 33);
             LbTitulo.Name = "LbTitulo";
@@ -862,8 +865,8 @@
             BtnConfirmar.Enabled = false;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
-            BtnConfirmar.Image = Properties.Resources.check;
-            BtnConfirmar.Location = new Point(636, 582);
+            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
+            BtnConfirmar.Location = new Point(608, 582);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 18;
@@ -874,12 +877,24 @@
             BtnCancelar.Enabled = false;
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
-            BtnCancelar.Image = Properties.Resources.close;
-            BtnCancelar.Location = new Point(685, 582);
+            BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
+            BtnCancelar.Location = new Point(657, 582);
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 19;
             BtnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // BtnLimpar
+            // 
+            BtnLimpar.Enabled = false;
+            BtnLimpar.FlatAppearance.BorderSize = 0;
+            BtnLimpar.FlatStyle = FlatStyle.Flat;
+            BtnLimpar.Image = (Image)resources.GetObject("BtnLimpar.Image");
+            BtnLimpar.Location = new Point(706, 582);
+            BtnLimpar.Name = "BtnLimpar";
+            BtnLimpar.Size = new Size(43, 43);
+            BtnLimpar.TabIndex = 61;
+            BtnLimpar.UseVisualStyleBackColor = true;
             // 
             // FormCadastroFunc
             // 
@@ -970,5 +985,6 @@
         private TextBox textBox2;
         private Label label12;
         private PictureBox PctCpf;
+        private Button BtnLimpar;
     }
 }
