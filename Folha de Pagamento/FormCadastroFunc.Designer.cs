@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            LbAlterarCadastro = new Panel();
+            PnlCadastro = new Panel();
             PnlCtrlFunc = new Panel();
             PctCpf = new PictureBox();
             textBox1 = new TextBox();
@@ -92,27 +92,29 @@
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
-            LbAlterarCadastro.SuspendLayout();
+            PnlCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
             PanelPerfilFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctFotoFunc).BeginInit();
             SuspendLayout();
             // 
-            // LbAlterarCadastro
+            // PnlCadastro
             // 
-            LbAlterarCadastro.AccessibleRole = AccessibleRole.None;
-            LbAlterarCadastro.BackColor = Color.Silver;
-            LbAlterarCadastro.Controls.Add(PnlCtrlFunc);
-            LbAlterarCadastro.Controls.Add(PanelPerfilFunc);
-            LbAlterarCadastro.Controls.Add(LbTitulo);
-            LbAlterarCadastro.Controls.Add(label1);
-            LbAlterarCadastro.Controls.Add(BtnConfirmar);
-            LbAlterarCadastro.Controls.Add(BtnCancelar);
-            LbAlterarCadastro.Location = new Point(80, 90);
-            LbAlterarCadastro.Name = "LbAlterarCadastro";
-            LbAlterarCadastro.Size = new Size(1110, 630);
-            LbAlterarCadastro.TabIndex = 0;
+            PnlCadastro.AccessibleRole = AccessibleRole.None;
+            PnlCadastro.BackColor = Color.Silver;
+            PnlCadastro.Controls.Add(PnlCtrlFunc);
+            PnlCadastro.Controls.Add(PanelPerfilFunc);
+            PnlCadastro.Controls.Add(LbTitulo);
+            PnlCadastro.Controls.Add(label1);
+            PnlCadastro.Controls.Add(BtnConfirmar);
+            PnlCadastro.Controls.Add(BtnCancelar);
+            PnlCadastro.Location = new Point(80, 90);
+            PnlCadastro.Name = "PnlCadastro";
+            PnlCadastro.Size = new Size(1110, 630);
+            PnlCadastro.TabIndex = 0;
+            PnlCadastro.Click += PnlCadastro_Click;
+            PnlCadastro.MouseClick += AllForms_MouseClick;
             // 
             // PnlCtrlFunc
             // 
@@ -179,6 +181,7 @@
             PnlCtrlFunc.Name = "PnlCtrlFunc";
             PnlCtrlFunc.Size = new Size(718, 460);
             PnlCtrlFunc.TabIndex = 7;
+            PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
             // PctCpf
             // 
@@ -812,6 +815,7 @@
             PanelPerfilFunc.Name = "PanelPerfilFunc";
             PanelPerfilFunc.Size = new Size(275, 575);
             PanelPerfilFunc.TabIndex = 4;
+            PanelPerfilFunc.MouseClick += AllForms_MouseClick;
             // 
             // BtnEditar
             // 
@@ -894,14 +898,15 @@
             BackColor = Color.FromArgb(46, 76, 32);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1264, 751);
-            Controls.Add(LbAlterarCadastro);
+            Controls.Add(PnlCadastro);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             Name = "FormCadastroFunc";
             Text = "FormCadastro";
-            LbAlterarCadastro.ResumeLayout(false);
-            LbAlterarCadastro.PerformLayout();
+            MouseClick += AllForms_MouseClick;
+            PnlCadastro.ResumeLayout(false);
+            PnlCadastro.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);
             PnlCtrlFunc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PctCpf).EndInit();
@@ -912,7 +917,7 @@
 
         #endregion
 
-        private Panel LbAlterarCadastro;
+        private Panel PnlCadastro;
         private Label label1;
         private Label LbTitulo;
         private Panel PanelPerfilFunc;

@@ -12,9 +12,13 @@ namespace FOLHA_DE_PAGAMENTO_
 {
     public partial class FormCalculoPagamento : Form
     {
-        public FormCalculoPagamento()
+        private FormNavBar FormAtivo;
+        private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
+        public FormCalculoPagamento(FormNavBar navBar)
         {
             InitializeComponent();
+            FormAtivo = navBar;
+
         }
     }
 }

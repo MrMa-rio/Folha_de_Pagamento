@@ -12,9 +12,12 @@ namespace FOLHA_DE_PAGAMENTO_
 {
     public partial class FormHolerite : Form
     {
-        public FormHolerite()
+        private FormNavBar FormAtivo;
+        private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
+        public FormHolerite(FormNavBar navBar)
         {
             InitializeComponent();
+            FormAtivo = navBar;
         }
     }
 }

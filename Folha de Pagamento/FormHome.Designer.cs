@@ -90,6 +90,7 @@
             Name = "FormHome";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Folha de Pagamento";
+            MouseClick += FormHome_MouseClick;
             ResumeLayout(false);
         }
 

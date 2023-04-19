@@ -18,6 +18,10 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             navBarShow.setNavBarShow(this, NavBar, NavBar.Pnl2);
         }
-        
+
+        private void FormHome_MouseClick(object sender, MouseEventArgs e)
+        {
+            navBarShow.AnimationHide(NavBar, NavBar.Pnl2);
+        }
     }
 }

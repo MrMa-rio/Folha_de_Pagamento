@@ -12,11 +12,12 @@ namespace FOLHA_DE_PAGAMENTO_
 {
     public partial class FormCadastroFunc : Form
     {
-        private Form FormAtivo; //Nao utilizado
-        public FormCadastroFunc(Form C_FormAtivo)
+        private FormNavBar FormAtivo;
+        private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
+        public FormCadastroFunc(FormNavBar NavBar)
         {
             InitializeComponent();
-            FormAtivo = C_FormAtivo;
+            FormAtivo = NavBar;
         }
 
         private void TxtCpf_TextChanged(object sender, EventArgs e)
@@ -74,6 +75,17 @@ namespace FOLHA_DE_PAGAMENTO_
         private void TxtDataEmissao_MouseClick(object sender, MouseEventArgs e)
         {
             TxtDataEmissao.SelectAll();
+        }
+
+        private void PnlCadastro_Click(object sender, EventArgs e)
+        {
+            FormAtivo.Pnl2.Visible = false;
+            FormAtivo.Visible = false;
+        }
+
+        private void AllForms_MouseClick(object sender, MouseEventArgs e)
+        {
+            navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
         }
     }
 }

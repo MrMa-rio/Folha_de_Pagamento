@@ -59,7 +59,7 @@
             BtnArrowLeft.BackgroundImageLayout = ImageLayout.Stretch;
             BtnArrowLeft.FlatAppearance.BorderSize = 0;
             BtnArrowLeft.FlatStyle = FlatStyle.Flat;
-            BtnArrowLeft.Location = new Point(27, 28);
+            BtnArrowLeft.Location = new Point(12, 24);
             BtnArrowLeft.Name = "BtnArrowLeft";
             BtnArrowLeft.Size = new Size(48, 48);
             BtnArrowLeft.TabIndex = 0;
@@ -75,9 +75,9 @@
             Pnl1.Controls.Add(BtnRelatorio);
             Pnl1.Controls.Add(PanelSubMenu);
             Pnl1.Controls.Add(BtnGerenciamento);
-            Pnl1.Location = new Point(3, 24);
+            Pnl1.Location = new Point(1, 106);
             Pnl1.Name = "Pnl1";
-            Pnl1.Size = new Size(342, 504);
+            Pnl1.Size = new Size(343, 504);
             Pnl1.TabIndex = 1;
             // 
             // PanelSubMenuRel
@@ -89,7 +89,7 @@
             PanelSubMenuRel.Dock = DockStyle.Top;
             PanelSubMenuRel.Location = new Point(0, 390);
             PanelSubMenuRel.Name = "PanelSubMenuRel";
-            PanelSubMenuRel.Size = new Size(325, 247);
+            PanelSubMenuRel.Size = new Size(326, 274);
             PanelSubMenuRel.TabIndex = 6;
             // 
             // BtnCalculoPagamento
@@ -175,7 +175,7 @@
             BtnRelatorio.ImageAlign = ContentAlignment.MiddleLeft;
             BtnRelatorio.Location = new Point(0, 327);
             BtnRelatorio.Name = "BtnRelatorio";
-            BtnRelatorio.Size = new Size(325, 63);
+            BtnRelatorio.Size = new Size(326, 63);
             BtnRelatorio.TabIndex = 14;
             BtnRelatorio.Text = "  Relatorios";
             BtnRelatorio.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -192,7 +192,7 @@
             PanelSubMenu.Dock = DockStyle.Top;
             PanelSubMenu.Location = new Point(0, 63);
             PanelSubMenu.Name = "PanelSubMenu";
-            PanelSubMenu.Size = new Size(325, 264);
+            PanelSubMenu.Size = new Size(326, 264);
             PanelSubMenu.TabIndex = 13;
             // 
             // BtnCadastro
@@ -292,7 +292,7 @@
             BtnGerenciamento.ImageAlign = ContentAlignment.MiddleLeft;
             BtnGerenciamento.Location = new Point(0, 0);
             BtnGerenciamento.Name = "BtnGerenciamento";
-            BtnGerenciamento.Size = new Size(325, 63);
+            BtnGerenciamento.Size = new Size(326, 63);
             BtnGerenciamento.TabIndex = 12;
             BtnGerenciamento.Text = "Gerenciamento";
             BtnGerenciamento.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -308,7 +308,7 @@
             BtnConfiguracao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnConfiguracao.Image = Properties.Resources.settings;
             BtnConfiguracao.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnConfiguracao.Location = new Point(10, 590);
+            BtnConfiguracao.Location = new Point(3, 679);
             BtnConfiguracao.Name = "BtnConfiguracao";
             BtnConfiguracao.Size = new Size(174, 48);
             BtnConfiguracao.TabIndex = 2;
@@ -325,7 +325,7 @@
             BtnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnLogout.Image = Properties.Resources.logout;
             BtnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnLogout.Location = new Point(190, 590);
+            BtnLogout.Location = new Point(183, 679);
             BtnLogout.Name = "BtnLogout";
             BtnLogout.Size = new Size(141, 48);
             BtnLogout.TabIndex = 3;
@@ -336,11 +336,12 @@
             // Pnl2
             // 
             Pnl2.Controls.Add(Pnl1);
+            Pnl2.Controls.Add(BtnArrowLeft);
             Pnl2.Controls.Add(BtnConfiguracao);
             Pnl2.Controls.Add(BtnLogout);
-            Pnl2.Location = new Point(2, 98);
+            Pnl2.Location = new Point(0, 0);
             Pnl2.Name = "Pnl2";
-            Pnl2.Size = new Size(344, 641);
+            Pnl2.Size = new Size(345, 746);
             Pnl2.TabIndex = 4;
             Pnl2.Visible = false;
             // 
@@ -351,7 +352,6 @@
             BackColor = Color.DarkGray;
             ClientSize = new Size(345, 751);
             Controls.Add(Pnl2);
-            Controls.Add(BtnArrowLeft);
             FormBorderStyle = FormBorderStyle.None;
             MinimizeBox = false;
             Name = "FormNavBar";
