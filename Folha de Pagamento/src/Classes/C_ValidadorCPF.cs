@@ -50,7 +50,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
 
             return true;
         }
-        public bool setValidacao(MaskedTextBox TxtCpf, PictureBox pictureBox)
+        public void setValidacao(MaskedTextBox TxtCpf, PictureBox pictureBox)
         {
             bool Validacao;
             C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
@@ -71,8 +71,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                 pictureBox.Visible = true;
             }
-            return Validacao;
-
         }
     }
 }

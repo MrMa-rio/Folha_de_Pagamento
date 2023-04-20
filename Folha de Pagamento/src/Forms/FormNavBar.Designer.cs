@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNavBar));
             BtnArrowLeft = new Button();
-            Pnl1 = new Panel();
+            panel1 = new Panel();
             PanelSubMenuRel = new Panel();
             BtnCalculoPagamento = new Button();
             FolhaPDetalhada = new Button();
@@ -40,16 +41,14 @@
             BtnCadastro = new Button();
             BtnAlterarCadastro = new Button();
             BtnCargosFun = new Button();
-            button3 = new Button();
+            BtnPesquisar = new Button();
             button4 = new Button();
             BtnGerenciamento = new Button();
             BtnConfiguracao = new Button();
             BtnLogout = new Button();
-            Pnl2 = new Panel();
-            Pnl1.SuspendLayout();
+            panel1.SuspendLayout();
             PanelSubMenuRel.SuspendLayout();
             PanelSubMenu.SuspendLayout();
-            Pnl2.SuspendLayout();
             SuspendLayout();
             // 
             // BtnArrowLeft
@@ -59,26 +58,26 @@
             BtnArrowLeft.BackgroundImageLayout = ImageLayout.Stretch;
             BtnArrowLeft.FlatAppearance.BorderSize = 0;
             BtnArrowLeft.FlatStyle = FlatStyle.Flat;
-            BtnArrowLeft.Location = new Point(12, 24);
+            BtnArrowLeft.Location = new Point(27, 28);
             BtnArrowLeft.Name = "BtnArrowLeft";
             BtnArrowLeft.Size = new Size(48, 48);
             BtnArrowLeft.TabIndex = 0;
             BtnArrowLeft.UseVisualStyleBackColor = false;
             BtnArrowLeft.MouseClick += BtnArrowLeft_MouseClick;
             // 
-            // Pnl1
+            // panel1
             // 
-            Pnl1.AutoScroll = true;
-            Pnl1.AutoScrollMargin = new Size(0, 30);
-            Pnl1.AutoScrollMinSize = new Size(0, 30);
-            Pnl1.Controls.Add(PanelSubMenuRel);
-            Pnl1.Controls.Add(BtnRelatorio);
-            Pnl1.Controls.Add(PanelSubMenu);
-            Pnl1.Controls.Add(BtnGerenciamento);
-            Pnl1.Location = new Point(1, 106);
-            Pnl1.Name = "Pnl1";
-            Pnl1.Size = new Size(343, 504);
-            Pnl1.TabIndex = 1;
+            panel1.AutoScroll = true;
+            panel1.AutoScrollMargin = new Size(0, 30);
+            panel1.AutoScrollMinSize = new Size(0, 30);
+            panel1.Controls.Add(PanelSubMenuRel);
+            panel1.Controls.Add(BtnRelatorio);
+            panel1.Controls.Add(PanelSubMenu);
+            panel1.Controls.Add(BtnGerenciamento);
+            panel1.Location = new Point(2, 121);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(342, 504);
+            panel1.TabIndex = 1;
             // 
             // PanelSubMenuRel
             // 
@@ -89,7 +88,7 @@
             PanelSubMenuRel.Dock = DockStyle.Top;
             PanelSubMenuRel.Location = new Point(0, 390);
             PanelSubMenuRel.Name = "PanelSubMenuRel";
-            PanelSubMenuRel.Size = new Size(326, 274);
+            PanelSubMenuRel.Size = new Size(325, 247);
             PanelSubMenuRel.TabIndex = 6;
             // 
             // BtnCalculoPagamento
@@ -99,13 +98,13 @@
             BtnCalculoPagamento.FlatAppearance.BorderSize = 0;
             BtnCalculoPagamento.FlatStyle = FlatStyle.Flat;
             BtnCalculoPagamento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnCalculoPagamento.Image = Properties.Resources.cube;
+            BtnCalculoPagamento.Image = (Image)resources.GetObject("BtnCalculoPagamento.Image");
             BtnCalculoPagamento.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnCalculoPagamento.Location = new Point(25, 21);
+            BtnCalculoPagamento.Location = new Point(35, 21);
             BtnCalculoPagamento.Name = "BtnCalculoPagamento";
-            BtnCalculoPagamento.Size = new Size(221, 40);
+            BtnCalculoPagamento.Size = new Size(244, 40);
             BtnCalculoPagamento.TabIndex = 7;
-            BtnCalculoPagamento.Text = "Calculo Pagamento";
+            BtnCalculoPagamento.Text = "    Calculo Pagamento";
             BtnCalculoPagamento.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnCalculoPagamento.UseVisualStyleBackColor = false;
             BtnCalculoPagamento.MouseClick += BtnCalculoPagamento_MouseClick;
@@ -117,13 +116,13 @@
             FolhaPDetalhada.FlatAppearance.BorderSize = 0;
             FolhaPDetalhada.FlatStyle = FlatStyle.Flat;
             FolhaPDetalhada.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            FolhaPDetalhada.Image = Properties.Resources.cube;
+            FolhaPDetalhada.Image = (Image)resources.GetObject("FolhaPDetalhada.Image");
             FolhaPDetalhada.ImageAlign = ContentAlignment.MiddleLeft;
-            FolhaPDetalhada.Location = new Point(25, 113);
+            FolhaPDetalhada.Location = new Point(35, 113);
             FolhaPDetalhada.Name = "FolhaPDetalhada";
-            FolhaPDetalhada.Size = new Size(221, 40);
+            FolhaPDetalhada.Size = new Size(255, 40);
             FolhaPDetalhada.TabIndex = 8;
-            FolhaPDetalhada.Text = "Folha P. Detalhada";
+            FolhaPDetalhada.Text = "    Folha Pagamento Detalhada";
             FolhaPDetalhada.TextImageRelation = TextImageRelation.ImageBeforeText;
             FolhaPDetalhada.UseVisualStyleBackColor = false;
             FolhaPDetalhada.MouseClick += BtnFolhaPDetalhada_MouseClick;
@@ -135,13 +134,13 @@
             BtnHolerite.FlatAppearance.BorderSize = 0;
             BtnHolerite.FlatStyle = FlatStyle.Flat;
             BtnHolerite.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnHolerite.Image = Properties.Resources.cube;
+            BtnHolerite.Image = (Image)resources.GetObject("BtnHolerite.Image");
             BtnHolerite.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnHolerite.Location = new Point(25, 159);
+            BtnHolerite.Location = new Point(35, 159);
             BtnHolerite.Name = "BtnHolerite";
             BtnHolerite.Size = new Size(221, 40);
             BtnHolerite.TabIndex = 9;
-            BtnHolerite.Text = "Holerite";
+            BtnHolerite.Text = "    Holerite";
             BtnHolerite.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnHolerite.UseVisualStyleBackColor = false;
             BtnHolerite.MouseClick += BtnHolerite_MouseClick;
@@ -153,13 +152,13 @@
             BtnFolhaPNormal.FlatAppearance.BorderSize = 0;
             BtnFolhaPNormal.FlatStyle = FlatStyle.Flat;
             BtnFolhaPNormal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnFolhaPNormal.Image = Properties.Resources.cube;
+            BtnFolhaPNormal.Image = (Image)resources.GetObject("BtnFolhaPNormal.Image");
             BtnFolhaPNormal.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnFolhaPNormal.Location = new Point(25, 67);
+            BtnFolhaPNormal.Location = new Point(35, 67);
             BtnFolhaPNormal.Name = "BtnFolhaPNormal";
-            BtnFolhaPNormal.Size = new Size(221, 40);
+            BtnFolhaPNormal.Size = new Size(244, 40);
             BtnFolhaPNormal.TabIndex = 11;
-            BtnFolhaPNormal.Text = "Folha P. Normal";
+            BtnFolhaPNormal.Text = "    Folha Pagamento Normal";
             BtnFolhaPNormal.TextAlign = ContentAlignment.MiddleLeft;
             BtnFolhaPNormal.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnFolhaPNormal.UseVisualStyleBackColor = false;
@@ -175,7 +174,7 @@
             BtnRelatorio.ImageAlign = ContentAlignment.MiddleLeft;
             BtnRelatorio.Location = new Point(0, 327);
             BtnRelatorio.Name = "BtnRelatorio";
-            BtnRelatorio.Size = new Size(326, 63);
+            BtnRelatorio.Size = new Size(325, 63);
             BtnRelatorio.TabIndex = 14;
             BtnRelatorio.Text = "  Relatorios";
             BtnRelatorio.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -187,44 +186,44 @@
             PanelSubMenu.Controls.Add(BtnCadastro);
             PanelSubMenu.Controls.Add(BtnAlterarCadastro);
             PanelSubMenu.Controls.Add(BtnCargosFun);
-            PanelSubMenu.Controls.Add(button3);
+            PanelSubMenu.Controls.Add(BtnPesquisar);
             PanelSubMenu.Controls.Add(button4);
             PanelSubMenu.Dock = DockStyle.Top;
             PanelSubMenu.Location = new Point(0, 63);
             PanelSubMenu.Name = "PanelSubMenu";
-            PanelSubMenu.Size = new Size(326, 264);
+            PanelSubMenu.Size = new Size(325, 264);
             PanelSubMenu.TabIndex = 13;
             // 
             // BtnCadastro
             // 
-            BtnCadastro.BackColor = Color.DarkGray;
+            BtnCadastro.BackColor = Color.Transparent;
             BtnCadastro.FlatAppearance.BorderSize = 0;
             BtnCadastro.FlatStyle = FlatStyle.Flat;
             BtnCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnCadastro.Image = Properties.Resources.cube;
+            BtnCadastro.Image = (Image)resources.GetObject("BtnCadastro.Image");
             BtnCadastro.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnCadastro.Location = new Point(25, 6);
+            BtnCadastro.Location = new Point(35, 6);
             BtnCadastro.Name = "BtnCadastro";
             BtnCadastro.Size = new Size(220, 40);
             BtnCadastro.TabIndex = 0;
-            BtnCadastro.Text = "Cadastrar Funcionario";
+            BtnCadastro.Text = "    Cadastrar Funcionários";
             BtnCadastro.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnCadastro.UseVisualStyleBackColor = false;
             BtnCadastro.MouseClick += BtnCadastro_MouseClick;
             // 
             // BtnAlterarCadastro
             // 
-            BtnAlterarCadastro.BackColor = Color.DarkGray;
+            BtnAlterarCadastro.BackColor = Color.Transparent;
             BtnAlterarCadastro.FlatAppearance.BorderSize = 0;
             BtnAlterarCadastro.FlatStyle = FlatStyle.Flat;
             BtnAlterarCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnAlterarCadastro.Image = Properties.Resources.cube;
+            BtnAlterarCadastro.Image = (Image)resources.GetObject("BtnAlterarCadastro.Image");
             BtnAlterarCadastro.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnAlterarCadastro.Location = new Point(25, 56);
+            BtnAlterarCadastro.Location = new Point(35, 56);
             BtnAlterarCadastro.Name = "BtnAlterarCadastro";
             BtnAlterarCadastro.Size = new Size(220, 40);
             BtnAlterarCadastro.TabIndex = 1;
-            BtnAlterarCadastro.Text = "Alterar Cad. Funcionario";
+            BtnAlterarCadastro.Text = "    Alterar Funcionários";
             BtnAlterarCadastro.TextAlign = ContentAlignment.MiddleRight;
             BtnAlterarCadastro.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnAlterarCadastro.UseVisualStyleBackColor = false;
@@ -232,53 +231,52 @@
             // 
             // BtnCargosFun
             // 
-            BtnCargosFun.BackColor = Color.DarkGray;
-            BtnCargosFun.Enabled = false;
+            BtnCargosFun.BackColor = Color.Transparent;
             BtnCargosFun.FlatAppearance.BorderSize = 0;
             BtnCargosFun.FlatStyle = FlatStyle.Flat;
             BtnCargosFun.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnCargosFun.Image = Properties.Resources.cube;
+            BtnCargosFun.Image = (Image)resources.GetObject("BtnCargosFun.Image");
             BtnCargosFun.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnCargosFun.Location = new Point(25, 102);
+            BtnCargosFun.Location = new Point(35, 102);
             BtnCargosFun.Name = "BtnCargosFun";
             BtnCargosFun.Size = new Size(220, 40);
             BtnCargosFun.TabIndex = 3;
-            BtnCargosFun.Text = "Cargos Funcionario";
+            BtnCargosFun.Text = "    Cargos Funcionários";
             BtnCargosFun.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnCargosFun.UseVisualStyleBackColor = false;
             BtnCargosFun.MouseClick += BtnCargosFun_MouseClick;
             // 
-            // button3
+            // BtnPesquisar
             // 
-            button3.BackColor = Color.DarkGray;
-            button3.Enabled = false;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Image = Properties.Resources.cube;
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(25, 148);
-            button3.Name = "button3";
-            button3.Size = new Size(220, 40);
-            button3.TabIndex = 4;
-            button3.Text = "A Definir";
-            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button3.UseVisualStyleBackColor = false;
+            BtnPesquisar.BackColor = Color.Transparent;
+            BtnPesquisar.Enabled = false;
+            BtnPesquisar.FlatAppearance.BorderSize = 0;
+            BtnPesquisar.FlatStyle = FlatStyle.Flat;
+            BtnPesquisar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnPesquisar.Image = (Image)resources.GetObject("BtnPesquisar.Image");
+            BtnPesquisar.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnPesquisar.Location = new Point(35, 148);
+            BtnPesquisar.Name = "BtnPesquisar";
+            BtnPesquisar.Size = new Size(220, 40);
+            BtnPesquisar.TabIndex = 4;
+            BtnPesquisar.Text = "    Pesquisar";
+            BtnPesquisar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            BtnPesquisar.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
-            button4.BackColor = Color.DarkGray;
+            button4.BackColor = Color.Transparent;
             button4.Enabled = false;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button4.Image = Properties.Resources.cube;
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(25, 194);
+            button4.Location = new Point(35, 194);
             button4.Name = "button4";
             button4.Size = new Size(220, 40);
             button4.TabIndex = 5;
-            button4.Text = "A Definir";
+            button4.Text = "    A Definir";
             button4.TextImageRelation = TextImageRelation.ImageBeforeText;
             button4.UseVisualStyleBackColor = false;
             // 
@@ -292,7 +290,7 @@
             BtnGerenciamento.ImageAlign = ContentAlignment.MiddleLeft;
             BtnGerenciamento.Location = new Point(0, 0);
             BtnGerenciamento.Name = "BtnGerenciamento";
-            BtnGerenciamento.Size = new Size(326, 63);
+            BtnGerenciamento.Size = new Size(325, 63);
             BtnGerenciamento.TabIndex = 12;
             BtnGerenciamento.Text = "Gerenciamento";
             BtnGerenciamento.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -301,14 +299,14 @@
             // 
             // BtnConfiguracao
             // 
-            BtnConfiguracao.BackColor = Color.DarkGray;
+            BtnConfiguracao.BackColor = Color.LightGray;
             BtnConfiguracao.Enabled = false;
             BtnConfiguracao.FlatAppearance.BorderSize = 0;
             BtnConfiguracao.FlatStyle = FlatStyle.Flat;
             BtnConfiguracao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnConfiguracao.Image = Properties.Resources.settings;
             BtnConfiguracao.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnConfiguracao.Location = new Point(3, 679);
+            BtnConfiguracao.Location = new Point(12, 664);
             BtnConfiguracao.Name = "BtnConfiguracao";
             BtnConfiguracao.Size = new Size(174, 48);
             BtnConfiguracao.TabIndex = 2;
@@ -318,14 +316,14 @@
             // 
             // BtnLogout
             // 
-            BtnLogout.BackColor = Color.DarkGray;
+            BtnLogout.BackColor = Color.LightGray;
             BtnLogout.Enabled = false;
             BtnLogout.FlatAppearance.BorderSize = 0;
             BtnLogout.FlatStyle = FlatStyle.Flat;
             BtnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnLogout.Image = Properties.Resources.logout;
             BtnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnLogout.Location = new Point(183, 679);
+            BtnLogout.Location = new Point(192, 664);
             BtnLogout.Name = "BtnLogout";
             BtnLogout.Size = new Size(141, 48);
             BtnLogout.TabIndex = 3;
@@ -333,40 +331,29 @@
             BtnLogout.TextAlign = ContentAlignment.MiddleRight;
             BtnLogout.UseVisualStyleBackColor = false;
             // 
-            // Pnl2
-            // 
-            Pnl2.Controls.Add(Pnl1);
-            Pnl2.Controls.Add(BtnArrowLeft);
-            Pnl2.Controls.Add(BtnConfiguracao);
-            Pnl2.Controls.Add(BtnLogout);
-            Pnl2.Location = new Point(0, 0);
-            Pnl2.Name = "Pnl2";
-            Pnl2.Size = new Size(345, 746);
-            Pnl2.TabIndex = 4;
-            Pnl2.Visible = false;
-            // 
             // FormNavBar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkGray;
+            BackColor = Color.LightGray;
             ClientSize = new Size(345, 751);
-            Controls.Add(Pnl2);
+            Controls.Add(BtnLogout);
+            Controls.Add(BtnConfiguracao);
+            Controls.Add(panel1);
+            Controls.Add(BtnArrowLeft);
             FormBorderStyle = FormBorderStyle.None;
-            MinimizeBox = false;
             Name = "FormNavBar";
-            ShowInTaskbar = false;
             Text = "FormNavBar";
-            Pnl1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             PanelSubMenuRel.ResumeLayout(false);
             PanelSubMenu.ResumeLayout(false);
-            Pnl2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button BtnArrowLeft;
+        private Panel panel1;
         private Button BtnAlterarCadastro;
         private Button BtnCadastro;
         private Button BtnConfiguracao;
@@ -376,13 +363,11 @@
         private Button FolhaPDetalhada;
         private Button BtnCalculoPagamento;
         private Button button4;
-        private Button button3;
+        private Button BtnPesquisar;
         private Button BtnCargosFun;
         private Button BtnGerenciamento;
         private Panel PanelSubMenu;
         private Button BtnRelatorio;
         private Panel PanelSubMenuRel;
-        public Panel Pnl1;
-        public Panel Pnl2;
     }
 }

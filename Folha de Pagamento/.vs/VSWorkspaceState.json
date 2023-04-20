@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\Classes"
+    ""
   ],
-  "SelectedNode": "\\src\\Classes\\C_FormNavBarShow.cs",
+  "SelectedNode": "\\FormNavBar.cs",
   "PreviewInSolutionExplorer": false
 }

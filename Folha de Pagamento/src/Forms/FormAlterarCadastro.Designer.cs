@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             Button button4;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             panel1 = new Panel();
             PnlCtrlFunc = new Panel();
             PctCpf = new PictureBox();
@@ -79,7 +80,7 @@
             TxtNomeCompleto = new TextBox();
             LbNomeCompleto = new Label();
             button1 = new Button();
-            textBox1 = new TextBox();
+            TxtNomePesquisa = new TextBox();
             label3 = new Label();
             label2 = new Label();
             TxtMatricula = new TextBox();
@@ -112,10 +113,10 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Silver;
+            panel1.BackColor = Color.LightGray;
             panel1.Controls.Add(PnlCtrlFunc);
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(TxtNomePesquisa);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(TxtMatricula);
@@ -126,7 +127,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1110, 630);
             panel1.TabIndex = 0;
-            panel1.MouseClick += AllForms_MouseClick;
             // 
             // PnlCtrlFunc
             // 
@@ -185,7 +185,6 @@
             PnlCtrlFunc.Name = "PnlCtrlFunc";
             PnlCtrlFunc.Size = new Size(718, 460);
             PnlCtrlFunc.TabIndex = 12;
-            PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
             // PctCpf
             // 
@@ -230,7 +229,6 @@
             TxtDataEmissao.PromptChar = 'X';
             TxtDataEmissao.Size = new Size(121, 31);
             TxtDataEmissao.TabIndex = 20;
-            TxtDataEmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // textBox17
             // 
@@ -614,7 +612,6 @@
             TxtCalendario.PromptChar = 'X';
             TxtCalendario.Size = new Size(121, 31);
             TxtCalendario.TabIndex = 5;
-            TxtCalendario.MouseClick += TxtCalendario_MouseClick;
             // 
             // TxtCpf
             // 
@@ -627,7 +624,6 @@
             TxtCpf.PromptChar = 'X';
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 6;
-            TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // comboBox2
@@ -736,23 +732,23 @@
             button1.TabIndex = 3;
             button1.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // TxtNomePesquisa
             // 
-            textBox1.BackColor = Color.DarkGray;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Enabled = false;
-            textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(488, 104);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = " Digite o nome aqui";
-            textBox1.Size = new Size(259, 32);
-            textBox1.TabIndex = 2;
+            TxtNomePesquisa.BackColor = Color.DarkGray;
+            TxtNomePesquisa.BorderStyle = BorderStyle.FixedSingle;
+            TxtNomePesquisa.Enabled = false;
+            TxtNomePesquisa.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtNomePesquisa.Location = new Point(473, 104);
+            TxtNomePesquisa.Name = "TxtNomePesquisa";
+            TxtNomePesquisa.PlaceholderText = " Digite o nome aqui";
+            TxtNomePesquisa.Size = new Size(274, 32);
+            TxtNomePesquisa.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(309, 106);
+            label3.Location = new Point(295, 106);
             label3.Name = "label3";
             label3.Size = new Size(172, 25);
             label3.TabIndex = 9;
@@ -762,7 +758,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(93, 106);
+            label2.Location = new Point(67, 106);
             label2.Name = "label2";
             label2.Size = new Size(96, 25);
             label2.TabIndex = 8;
@@ -774,7 +770,7 @@
             TxtMatricula.BorderStyle = BorderStyle.FixedSingle;
             TxtMatricula.Enabled = false;
             TxtMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtMatricula.Location = new Point(191, 104);
+            TxtMatricula.Location = new Point(169, 106);
             TxtMatricula.MaxLength = 6;
             TxtMatricula.Name = "TxtMatricula";
             TxtMatricula.PlaceholderText = " XX-XXXX";
@@ -783,7 +779,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.DarkGray;
+            panel3.BackColor = Color.LightGray;
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(button4);
             panel3.Controls.Add(pictureBox1);
@@ -793,7 +789,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(275, 550);
             panel3.TabIndex = 6;
-            panel3.MouseClick += AllForms_MouseClick;
             // 
             // pictureBox1
             // 
@@ -836,14 +831,14 @@
             LbTitulo.AutoSize = true;
             LbTitulo.FlatStyle = FlatStyle.Flat;
             LbTitulo.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
-            LbTitulo.Image = Properties.Resources.circle_account;
+            LbTitulo.Image = (Image)resources.GetObject("LbTitulo.Image");
             LbTitulo.ImageAlign = ContentAlignment.MiddleRight;
-            LbTitulo.Location = new Point(83, 28);
+            LbTitulo.Location = new Point(82, 28);
             LbTitulo.Name = "LbTitulo";
             LbTitulo.Padding = new Padding(10, 0, 0, 0);
-            LbTitulo.Size = new Size(443, 41);
+            LbTitulo.Size = new Size(452, 41);
             LbTitulo.TabIndex = 50;
-            LbTitulo.Text = "Alterar Registro Funcionário      ";
+            LbTitulo.Text = "Alterar Cadastro Funcionário      ";
             // 
             // label1
             // 
@@ -869,7 +864,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAlterarCadastro";
             Text = "FormAlterarCadastro";
-            MouseClick += AllForms_MouseClick;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);
@@ -889,7 +883,7 @@
         private TextBox TxtMatricula;
         private Label label2;
         private Button button1;
-        private TextBox textBox1;
+        private TextBox TxtNomePesquisa;
         private Label label3;
         private PictureBox pictureBox1;
         private Button button3;
