@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\Classes"
   ],
-  "SelectedNode": "\\Folha_de_Pagamento.sln",
+  "SelectedNode": "\\src\\Classes\\C_FormNavBarShow.cs",
   "PreviewInSolutionExplorer": false
 }
