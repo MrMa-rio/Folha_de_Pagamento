@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroFunc));
             LbAlterarCadastro = new Panel();
+            BtnLimpar = new Button();
             PnlCtrlFunc = new Panel();
             PctCpf = new PictureBox();
             textBox1 = new TextBox();
@@ -93,7 +94,6 @@
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
-            BtnLimpar = new Button();
             LbAlterarCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
@@ -116,6 +116,19 @@
             LbAlterarCadastro.Name = "LbAlterarCadastro";
             LbAlterarCadastro.Size = new Size(1110, 630);
             LbAlterarCadastro.TabIndex = 0;
+            LbAlterarCadastro.MouseClick += AllForms_MouseClick;
+            // 
+            // BtnLimpar
+            // 
+            BtnLimpar.Enabled = false;
+            BtnLimpar.FlatAppearance.BorderSize = 0;
+            BtnLimpar.FlatStyle = FlatStyle.Flat;
+            BtnLimpar.Image = (Image)resources.GetObject("BtnLimpar.Image");
+            BtnLimpar.Location = new Point(706, 582);
+            BtnLimpar.Name = "BtnLimpar";
+            BtnLimpar.Size = new Size(43, 43);
+            BtnLimpar.TabIndex = 61;
+            BtnLimpar.UseVisualStyleBackColor = true;
             // 
             // PnlCtrlFunc
             // 
@@ -182,6 +195,7 @@
             PnlCtrlFunc.Name = "PnlCtrlFunc";
             PnlCtrlFunc.Size = new Size(718, 460);
             PnlCtrlFunc.TabIndex = 7;
+            PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
             // PctCpf
             // 
@@ -809,6 +823,7 @@
             PanelPerfilFunc.Name = "PanelPerfilFunc";
             PanelPerfilFunc.Size = new Size(275, 575);
             PanelPerfilFunc.TabIndex = 4;
+            PanelPerfilFunc.MouseClick += AllForms_MouseClick;
             // 
             // BtnEditar
             // 
@@ -884,18 +899,6 @@
             BtnCancelar.TabIndex = 19;
             BtnCancelar.UseVisualStyleBackColor = true;
             // 
-            // BtnLimpar
-            // 
-            BtnLimpar.Enabled = false;
-            BtnLimpar.FlatAppearance.BorderSize = 0;
-            BtnLimpar.FlatStyle = FlatStyle.Flat;
-            BtnLimpar.Image = (Image)resources.GetObject("BtnLimpar.Image");
-            BtnLimpar.Location = new Point(706, 582);
-            BtnLimpar.Name = "BtnLimpar";
-            BtnLimpar.Size = new Size(43, 43);
-            BtnLimpar.TabIndex = 61;
-            BtnLimpar.UseVisualStyleBackColor = true;
-            // 
             // FormCadastroFunc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -909,6 +912,7 @@
             MaximizeBox = false;
             Name = "FormCadastroFunc";
             Text = "FormCadastro";
+            MouseClick += AllForms_MouseClick;
             LbAlterarCadastro.ResumeLayout(false);
             LbAlterarCadastro.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);

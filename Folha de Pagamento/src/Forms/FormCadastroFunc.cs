@@ -13,11 +13,13 @@ namespace FOLHA_DE_PAGAMENTO_
 {
     public partial class FormCadastroFunc : Form
     {
-        private Form FormAtivo; //Nao utilizado
-        public FormCadastroFunc(Form C_FormAtivo)
+        private FormNavBar FormAtivo;
+        private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
+        private bool ValidadorCPF;
+        public FormCadastroFunc(FormNavBar NavBar)
         {
             InitializeComponent();
-            FormAtivo = C_FormAtivo;
+            FormAtivo = NavBar;
         }
 
         private void TxtCpf_TextChanged(object sender, EventArgs e)
@@ -45,6 +47,10 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BoxCalendario2_DateSelected(object sender, DateRangeEventArgs e)
         {
             TxtDataEmissao.Text = BoxCalendario2.SelectionEnd.ToString();
+        }
+        private void AllForms_MouseClick(object sender, MouseEventArgs e)
+        {
+            navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
         }
     }
 }
