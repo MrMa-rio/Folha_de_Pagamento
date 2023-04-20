@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FOLHA_DE_PAGAMENTO_
+namespace FOLHA_DE_PAGAMENTO_.src.Classes
 {
     internal class C_HideAllForms
     {
         public void setHideForms(Panel panel)
         {
-            if (panel != null && panel.Visible) 
+            if (panel != null && panel.Visible)
             {
                 panel.Visible = false;
             }
@@ -19,7 +19,7 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 panel.Visible = true;
             }
-            
+
         }
         public void setHideForms(Form form)
         {

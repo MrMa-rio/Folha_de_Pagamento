@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FOLHA_DE_PAGAMENTO_.src.Classes;
 
 namespace FOLHA_DE_PAGAMENTO_
 {
-    public partial class FormFolhaNormal : Form
+    public partial class FormCargos : Form
     {
-        public FormFolhaNormal()
+        private FormNavBar FormAtivo;
+        private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
+        public FormCargos(FormNavBar navBar)
         {
             InitializeComponent();
+            FormAtivo = navBar;
         }
     }
 }

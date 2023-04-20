@@ -126,6 +126,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1110, 630);
             panel1.TabIndex = 0;
+            panel1.MouseClick += AllForms_MouseClick;
             // 
             // PnlCtrlFunc
             // 
@@ -184,6 +185,7 @@
             PnlCtrlFunc.Name = "PnlCtrlFunc";
             PnlCtrlFunc.Size = new Size(718, 460);
             PnlCtrlFunc.TabIndex = 12;
+            PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
             // PctCpf
             // 
@@ -228,6 +230,7 @@
             TxtDataEmissao.PromptChar = 'X';
             TxtDataEmissao.Size = new Size(121, 31);
             TxtDataEmissao.TabIndex = 20;
+            TxtDataEmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // textBox17
             // 
@@ -611,6 +614,7 @@
             TxtCalendario.PromptChar = 'X';
             TxtCalendario.Size = new Size(121, 31);
             TxtCalendario.TabIndex = 5;
+            TxtCalendario.MouseClick += TxtCalendario_MouseClick;
             // 
             // TxtCpf
             // 
@@ -623,6 +627,7 @@
             TxtCpf.PromptChar = 'X';
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 6;
+            TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // comboBox2
@@ -788,6 +793,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(275, 550);
             panel3.TabIndex = 6;
+            panel3.MouseClick += AllForms_MouseClick;
             // 
             // pictureBox1
             // 
@@ -863,6 +869,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAlterarCadastro";
             Text = "FormAlterarCadastro";
+            MouseClick += AllForms_MouseClick;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);
