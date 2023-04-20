@@ -127,6 +127,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1110, 630);
             panel1.TabIndex = 0;
+            panel1.MouseClick += AllForms_MouseClick;
             // 
             // PnlCtrlFunc
             // 
@@ -185,6 +186,7 @@
             PnlCtrlFunc.Name = "PnlCtrlFunc";
             PnlCtrlFunc.Size = new Size(718, 460);
             PnlCtrlFunc.TabIndex = 12;
+            PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
             // PctCpf
             // 
@@ -789,6 +791,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(275, 550);
             panel3.TabIndex = 6;
+            panel3.MouseClick += AllForms_MouseClick;
             // 
             // pictureBox1
             // 
@@ -864,6 +867,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAlterarCadastro";
             Text = "FormAlterarCadastro";
+            MouseClick += AllForms_MouseClick;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);

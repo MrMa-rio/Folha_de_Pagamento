@@ -75,6 +75,7 @@
             LbAlterarCadastro.Name = "LbAlterarCadastro";
             LbAlterarCadastro.Size = new Size(1110, 630);
             LbAlterarCadastro.TabIndex = 1;
+            LbAlterarCadastro.MouseClick += AllForms_MouseClick;
             // 
             // BtnLimpar
             // 
@@ -118,6 +119,7 @@
             PnlCtrlFunc.Name = "PnlCtrlFunc";
             PnlCtrlFunc.Size = new Size(1050, 460);
             PnlCtrlFunc.TabIndex = 7;
+            PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
             // PctCpf
             // 

@@ -46,9 +46,11 @@
             BtnGerenciamento = new Button();
             BtnConfiguracao = new Button();
             BtnLogout = new Button();
+            Pnl2 = new Panel();
             panel1.SuspendLayout();
             PanelSubMenuRel.SuspendLayout();
             PanelSubMenu.SuspendLayout();
+            Pnl2.SuspendLayout();
             SuspendLayout();
             // 
             // BtnArrowLeft
@@ -74,9 +76,9 @@
             panel1.Controls.Add(BtnRelatorio);
             panel1.Controls.Add(PanelSubMenu);
             panel1.Controls.Add(BtnGerenciamento);
-            panel1.Location = new Point(2, 121);
+            panel1.Location = new Point(0, 90);
             panel1.Name = "panel1";
-            panel1.Size = new Size(342, 504);
+            panel1.Size = new Size(342, 573);
             panel1.TabIndex = 1;
             // 
             // PanelSubMenuRel
@@ -306,7 +308,7 @@
             BtnConfiguracao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnConfiguracao.Image = Properties.Resources.settings;
             BtnConfiguracao.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnConfiguracao.Location = new Point(12, 664);
+            BtnConfiguracao.Location = new Point(11, 687);
             BtnConfiguracao.Name = "BtnConfiguracao";
             BtnConfiguracao.Size = new Size(174, 48);
             BtnConfiguracao.TabIndex = 2;
@@ -323,7 +325,7 @@
             BtnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnLogout.Image = Properties.Resources.logout;
             BtnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnLogout.Location = new Point(192, 664);
+            BtnLogout.Location = new Point(191, 687);
             BtnLogout.Name = "BtnLogout";
             BtnLogout.Size = new Size(141, 48);
             BtnLogout.TabIndex = 3;
@@ -331,22 +333,32 @@
             BtnLogout.TextAlign = ContentAlignment.MiddleRight;
             BtnLogout.UseVisualStyleBackColor = false;
             // 
+            // Pnl2
+            // 
+            Pnl2.Controls.Add(BtnArrowLeft);
+            Pnl2.Controls.Add(BtnLogout);
+            Pnl2.Controls.Add(BtnConfiguracao);
+            Pnl2.Controls.Add(panel1);
+            Pnl2.Location = new Point(1, 1);
+            Pnl2.Name = "Pnl2";
+            Pnl2.Size = new Size(345, 750);
+            Pnl2.TabIndex = 4;
+            Pnl2.Visible = false;
+            // 
             // FormNavBar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(345, 751);
-            Controls.Add(BtnLogout);
-            Controls.Add(BtnConfiguracao);
-            Controls.Add(panel1);
-            Controls.Add(BtnArrowLeft);
+            Controls.Add(Pnl2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormNavBar";
             Text = "FormNavBar";
             panel1.ResumeLayout(false);
             PanelSubMenuRel.ResumeLayout(false);
             PanelSubMenu.ResumeLayout(false);
+            Pnl2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -369,5 +381,6 @@
         private Panel PanelSubMenu;
         private Button BtnRelatorio;
         private Panel PanelSubMenuRel;
+        public Panel Pnl2;
     }
 }

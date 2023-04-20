@@ -6,7 +6,7 @@ namespace FOLHA_DE_PAGAMENTO_
     {
 
         C_FormNavBarShow navBarShow = new C_FormNavBarShow();
-        public Form NavBar;
+        public FormNavBar NavBar;
 
         public FormHome()
         {
@@ -17,7 +17,12 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnMenu_MouseClick(object sender, MouseEventArgs e)
         {
-            navBarShow.setNavBarShow(this, NavBar);
+            navBarShow.setNavBarShow(this, NavBar, NavBar.Pnl2);
+        }
+
+        private void AllForms_MouseClick(object sender, MouseEventArgs e)
+        {
+            navBarShow.AnimationHide(NavBar, NavBar.Pnl2);
         }
     }
 }
