@@ -116,7 +116,7 @@
             PnlCtrlFunc.Controls.Add(LbNomeCompleto);
             PnlCtrlFunc.Location = new Point(29, 117);
             PnlCtrlFunc.Name = "PnlCtrlFunc";
-            PnlCtrlFunc.Size = new Size(1052, 460);
+            PnlCtrlFunc.Size = new Size(1050, 460);
             PnlCtrlFunc.TabIndex = 7;
             // 
             // PctCpf
