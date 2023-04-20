@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace FOLHA_DE_PAGAMENTO_
+namespace FOLHA_DE_PAGAMENTO_.src.Classes
 {
     internal class C_ValidadorCPF
     {
@@ -32,7 +32,7 @@ namespace FOLHA_DE_PAGAMENTO_
             int add = 0;
             for (int i = 0; i < 9; i++)
                 add += int.Parse(cpf[i].ToString()) * (10 - i);
-            int rev = 11 - (add % 11);
+            int rev = 11 - add % 11;
             if (rev == 10 || rev == 11)
                 rev = 0;
             if (rev != int.Parse(cpf[9].ToString()))
@@ -42,7 +42,7 @@ namespace FOLHA_DE_PAGAMENTO_
             add = 0;
             for (int i = 0; i < 10; i++)
                 add += int.Parse(cpf[i].ToString()) * (11 - i);
-            rev = 11 - (add % 11);
+            rev = 11 - add % 11;
             if (rev == 10 || rev == 11)
                 rev = 0;
             if (rev != int.Parse(cpf[10].ToString()))

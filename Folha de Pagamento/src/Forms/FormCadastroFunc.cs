@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FOLHA_DE_PAGAMENTO_.src.Classes;
 
 namespace FOLHA_DE_PAGAMENTO_
 {

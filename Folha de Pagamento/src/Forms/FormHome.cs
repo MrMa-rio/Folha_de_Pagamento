@@ -1,3 +1,5 @@
+using FOLHA_DE_PAGAMENTO_.src.Classes;
+
 namespace FOLHA_DE_PAGAMENTO_
 {
     public partial class FormHome : Form
