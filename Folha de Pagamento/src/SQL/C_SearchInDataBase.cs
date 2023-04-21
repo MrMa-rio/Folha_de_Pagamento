@@ -27,24 +27,18 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                 conexão.ConnectionString = endereco;
                 conexão.Open();
                 MySqlCommand command = new MySqlCommand(insertSql, conexão);
-
-                
                 MySqlDataReader mySqlDataReader = command.ExecuteReader();
 
-                while(mySqlDataReader.Read())
+                while (mySqlDataReader.Read())
                 {
                     string[] Result = {
                         mySqlDataReader.GetString(0),
-                        
-                       
                     };
 
                     MessageBox.Show("Deu Certoo");
                     conexão.Close();
                     return Result;
                 }
-
-                
             }
             catch (MySqlException ex)
             {

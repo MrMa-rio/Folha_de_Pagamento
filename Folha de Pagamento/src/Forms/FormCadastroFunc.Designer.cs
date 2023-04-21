@@ -37,9 +37,8 @@
             LbTituloEleitor = new Label();
             TxtReservista = new TextBox();
             LbReservista = new Label();
-            maskedTextBox2 = new MaskedTextBox();
+            TxtRg = new MaskedTextBox();
             LbCep = new Label();
-            maskedTextBox1 = new MaskedTextBox();
             LbRg = new Label();
             TxtTelefone = new MaskedTextBox();
             BoxCalendario2 = new MonthCalendar();
@@ -98,6 +97,7 @@
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
+            TxtCep = new MaskedTextBox();
             LbAlterarCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
@@ -140,14 +140,14 @@
             PnlCtrlFunc.AutoScrollMargin = new Size(0, 90);
             PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
             PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
+            PnlCtrlFunc.Controls.Add(TxtCep);
             PnlCtrlFunc.Controls.Add(PctCpf);
             PnlCtrlFunc.Controls.Add(TxtTituloEleitor);
             PnlCtrlFunc.Controls.Add(LbTituloEleitor);
             PnlCtrlFunc.Controls.Add(TxtReservista);
             PnlCtrlFunc.Controls.Add(LbReservista);
-            PnlCtrlFunc.Controls.Add(maskedTextBox2);
+            PnlCtrlFunc.Controls.Add(TxtRg);
             PnlCtrlFunc.Controls.Add(LbCep);
-            PnlCtrlFunc.Controls.Add(maskedTextBox1);
             PnlCtrlFunc.Controls.Add(LbRg);
             PnlCtrlFunc.Controls.Add(TxtTelefone);
             PnlCtrlFunc.Controls.Add(BoxCalendario2);
@@ -252,19 +252,18 @@
             LbReservista.TabIndex = 110;
             LbReservista.Text = " Reservista:";
             // 
-            // TxtCep
+            // TxtRg
             // 
-            TxtCep.BackColor = Color.DarkGray;
-            TxtCep.BorderStyle = BorderStyle.FixedSingle;
-            TxtCep.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCep.ForeColor = SystemColors.WindowText;
-            TxtCep.Location = new Point(171, 824);
-            TxtCep.Mask = "00,000-000";
-            TxtCep.Name = "TxtCep";
-            TxtCep.Size = new Size(100, 31);
-            TxtCep.TabIndex = 16;
-            TxtCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            TxtCep.MouseClick += TxtCep_MouseClick;
+            TxtRg.BackColor = Color.DarkGray;
+            TxtRg.BorderStyle = BorderStyle.FixedSingle;
+            TxtRg.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtRg.Location = new Point(170, 295);
+            TxtRg.Mask = "00,000,000-0";
+            TxtRg.Name = "TxtRg";
+            TxtRg.PromptChar = 'X';
+            TxtRg.Size = new Size(162, 31);
+            TxtRg.TabIndex = 113;
+            TxtRg.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             // 
             // LbCep
             // 
@@ -275,19 +274,6 @@
             LbCep.Size = new Size(47, 21);
             LbCep.TabIndex = 106;
             LbCep.Text = "*CEP:";
-            // 
-            // TxtRg
-            // 
-            TxtRg.BackColor = Color.DarkGray;
-            TxtRg.BorderStyle = BorderStyle.FixedSingle;
-            TxtRg.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtRg.Location = new Point(170, 295);
-            TxtRg.Mask = "00,000,000-0";
-            TxtRg.Name = "TxtRg";
-            TxtRg.Size = new Size(160, 31);
-            TxtRg.TabIndex = 5;
-            TxtRg.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            TxtRg.MouseClick += TxtRg_MouseClick;
             // 
             // LbRg
             // 
@@ -964,6 +950,19 @@
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
             // 
+            // TxtCep
+            // 
+            TxtCep.BackColor = Color.DarkGray;
+            TxtCep.BorderStyle = BorderStyle.FixedSingle;
+            TxtCep.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCep.Location = new Point(171, 825);
+            TxtCep.Mask = "00,000-000";
+            TxtCep.Name = "TxtCep";
+            TxtCep.PromptChar = 'X';
+            TxtCep.Size = new Size(160, 31);
+            TxtCep.TabIndex = 114;
+            TxtCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            // 
             // FormCadastroFunc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1045,9 +1044,8 @@
         private Button BtnCalendario2;
         private MonthCalendar BoxCalendario2;
         private MaskedTextBox TxtTelefone;
-        private MaskedTextBox TxtRg;
         private Label LbRg;
-        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox TxtRg;
         private Label LbCep;
         private TextBox TxtTituloEleitor;
         private Label LbTituloEleitor;
@@ -1060,5 +1058,6 @@
         private Label label6;
         private Label label3;
         private Label label2;
+        private MaskedTextBox TxtCep;
     }
 }

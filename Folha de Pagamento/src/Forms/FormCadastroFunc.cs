@@ -75,7 +75,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void TxtCep_MouseClick(object sender, MouseEventArgs e)
         {
-            TxtCep.SelectAll();
+            // TxtCep.SelectAll();
         }
 
         private void TxtDataEmissao_MouseClick(object sender, MouseEventArgs e)

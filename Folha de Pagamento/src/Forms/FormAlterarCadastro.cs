@@ -70,7 +70,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             string[] Result = new string[9];
             C_SearchInDataBase c_SearchInDataBase = new C_SearchInDataBase();
-            Result = c_SearchInDataBase.getDatainTable(Convert.ToInt32(TxtMatricula.Text), TxtNomePesquisa.Text);
+            Result = c_SearchInDataBase.getDatainTable(Convert.ToInt32(TxtMatricula.Text), TxtNomeCompleto.Text); //Corrigir
             TxtNomeCompleto.Text = Result[0];
         }
     }
