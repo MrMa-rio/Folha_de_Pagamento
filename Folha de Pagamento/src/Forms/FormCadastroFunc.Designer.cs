@@ -252,17 +252,19 @@
             LbReservista.TabIndex = 110;
             LbReservista.Text = " Reservista:";
             // 
-            // maskedTextBox2
+            // TxtCep
             // 
-            maskedTextBox2.BackColor = Color.DarkGray;
-            maskedTextBox2.BorderStyle = BorderStyle.FixedSingle;
-            maskedTextBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            maskedTextBox2.ForeColor = SystemColors.WindowText;
-            maskedTextBox2.Location = new Point(171, 824);
-            maskedTextBox2.Mask = "00,000-000";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(100, 31);
-            maskedTextBox2.TabIndex = 107;
+            TxtCep.BackColor = Color.DarkGray;
+            TxtCep.BorderStyle = BorderStyle.FixedSingle;
+            TxtCep.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCep.ForeColor = SystemColors.WindowText;
+            TxtCep.Location = new Point(171, 824);
+            TxtCep.Mask = "00,000-000";
+            TxtCep.Name = "TxtCep";
+            TxtCep.Size = new Size(100, 31);
+            TxtCep.TabIndex = 16;
+            TxtCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtCep.MouseClick += TxtCep_MouseClick;
             // 
             // LbCep
             // 
@@ -274,16 +276,18 @@
             LbCep.TabIndex = 106;
             LbCep.Text = "*CEP:";
             // 
-            // maskedTextBox1
+            // TxtRg
             // 
-            maskedTextBox1.BackColor = Color.DarkGray;
-            maskedTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            maskedTextBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            maskedTextBox1.Location = new Point(170, 295);
-            maskedTextBox1.Mask = "00,000,000-0";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(160, 31);
-            maskedTextBox1.TabIndex = 103;
+            TxtRg.BackColor = Color.DarkGray;
+            TxtRg.BorderStyle = BorderStyle.FixedSingle;
+            TxtRg.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtRg.Location = new Point(170, 295);
+            TxtRg.Mask = "00,000,000-0";
+            TxtRg.Name = "TxtRg";
+            TxtRg.Size = new Size(160, 31);
+            TxtRg.TabIndex = 5;
+            TxtRg.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtRg.MouseClick += TxtRg_MouseClick;
             // 
             // LbRg
             // 
@@ -304,7 +308,9 @@
             TxtTelefone.Mask = "(00) 0 0000-0000";
             TxtTelefone.Name = "TxtTelefone";
             TxtTelefone.Size = new Size(287, 31);
-            TxtTelefone.TabIndex = 5;
+            TxtTelefone.TabIndex = 8;
+            TxtTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtTelefone.MouseClick += TxtTelefone_MouseClick;
             // 
             // BoxCalendario2
             // 
@@ -339,7 +345,9 @@
             TxtDataEmissao.Name = "TxtDataEmissao";
             TxtDataEmissao.PromptChar = 'X';
             TxtDataEmissao.Size = new Size(121, 31);
-            TxtDataEmissao.TabIndex = 16;
+            TxtDataEmissao.TabIndex = 20;
+            TxtDataEmissao.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtDataEmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // TxtSalarioBase
             // 
@@ -351,7 +359,7 @@
             TxtSalarioBase.PlaceholderText = " R$1.304,98";
             TxtSalarioBase.ReadOnly = true;
             TxtSalarioBase.Size = new Size(220, 31);
-            TxtSalarioBase.TabIndex = 17;
+            TxtSalarioBase.TabIndex = 21;
             // 
             // LbSalarioBase
             // 
@@ -382,7 +390,7 @@
             TxtCTrabalho.Name = "TxtCTrabalho";
             TxtCTrabalho.PlaceholderText = "A Definir";
             TxtCTrabalho.Size = new Size(287, 31);
-            TxtCTrabalho.TabIndex = 14;
+            TxtCTrabalho.TabIndex = 18;
             // 
             // LbCarteiraTrabalho
             // 
@@ -403,7 +411,7 @@
             TxtNit.Name = "TxtNit";
             TxtNit.PlaceholderText = "A Definir";
             TxtNit.Size = new Size(220, 31);
-            TxtNit.TabIndex = 13;
+            TxtNit.TabIndex = 17;
             // 
             // LbNit
             // 
@@ -455,7 +463,7 @@
             CbUF.MaxDropDownItems = 6;
             CbUF.Name = "CbUF";
             CbUF.Size = new Size(160, 31);
-            CbUF.TabIndex = 11;
+            CbUF.TabIndex = 14;
             // 
             // TxtCidade
             // 
@@ -466,7 +474,7 @@
             TxtCidade.Name = "TxtCidade";
             TxtCidade.PlaceholderText = "A Definir";
             TxtCidade.Size = new Size(287, 31);
-            TxtCidade.TabIndex = 12;
+            TxtCidade.TabIndex = 15;
             // 
             // LbCidade
             // 
@@ -497,7 +505,7 @@
             TextEmail.Name = "TextEmail";
             TextEmail.PlaceholderText = "A Definir";
             TextEmail.Size = new Size(287, 31);
-            TextEmail.TabIndex = 6;
+            TextEmail.TabIndex = 9;
             // 
             // LbEmail
             // 
@@ -518,7 +526,7 @@
             TxtNumRua.Name = "TxtNumRua";
             TxtNumRua.PlaceholderText = "A Definir";
             TxtNumRua.Size = new Size(287, 31);
-            TxtNumRua.TabIndex = 8;
+            TxtNumRua.TabIndex = 11;
             // 
             // LbTelefone
             // 
@@ -539,7 +547,7 @@
             TxtComplemento.Name = "TxtComplemento";
             TxtComplemento.PlaceholderText = "A Definir";
             TxtComplemento.Size = new Size(287, 31);
-            TxtComplemento.TabIndex = 10;
+            TxtComplemento.TabIndex = 13;
             // 
             // LbComplemento
             // 
@@ -560,7 +568,7 @@
             TxtBairro.Name = "TxtBairro";
             TxtBairro.PlaceholderText = "A Definir";
             TxtBairro.Size = new Size(287, 31);
-            TxtBairro.TabIndex = 9;
+            TxtBairro.TabIndex = 12;
             // 
             // LbBairro
             // 
@@ -591,7 +599,7 @@
             TxtRua.Name = "TxtRua";
             TxtRua.PlaceholderText = "A Definir";
             TxtRua.Size = new Size(287, 31);
-            TxtRua.TabIndex = 7;
+            TxtRua.TabIndex = 10;
             // 
             // LbRua
             // 
@@ -681,7 +689,9 @@
             // BoxCalendario
             // 
             BoxCalendario.Location = new Point(464, 110);
+            BoxCalendario.MaxDate = new DateTime(2023, 4, 20, 0, 0, 0, 0);
             BoxCalendario.Name = "BoxCalendario";
+            BoxCalendario.RightToLeft = RightToLeft.No;
             BoxCalendario.ShowToday = false;
             BoxCalendario.ShowTodayCircle = false;
             BoxCalendario.TabIndex = 56;
@@ -712,6 +722,8 @@
             TxtDataNascimento.PromptChar = 'X';
             TxtDataNascimento.Size = new Size(121, 31);
             TxtDataNascimento.TabIndex = 1;
+            TxtDataNascimento.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtDataNascimento.MouseClick += TxtDataNascimento_MouseClick;
             // 
             // TxtCpf
             // 
@@ -724,6 +736,8 @@
             TxtCpf.PromptChar = 'X';
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 2;
+            TxtCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // CbCargo
@@ -739,7 +753,7 @@
             CbCargo.Location = new Point(172, 1069);
             CbCargo.Name = "CbCargo";
             CbCargo.Size = new Size(220, 31);
-            CbCargo.TabIndex = 15;
+            CbCargo.TabIndex = 19;
             // 
             // LbCargo
             // 
@@ -928,7 +942,6 @@
             // 
             // BtnConfirmar
             // 
-            BtnConfirmar.Enabled = false;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
@@ -937,10 +950,10 @@
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 18;
             BtnConfirmar.UseVisualStyleBackColor = true;
+            BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
             // 
             // BtnCancelar
             // 
-            BtnCancelar.Enabled = false;
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
@@ -949,6 +962,7 @@
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 19;
             BtnCancelar.UseVisualStyleBackColor = true;
+            BtnCancelar.MouseClick += BtnCancelar_MouseClick;
             // 
             // FormCadastroFunc
             // 
@@ -1031,7 +1045,7 @@
         private Button BtnCalendario2;
         private MonthCalendar BoxCalendario2;
         private MaskedTextBox TxtTelefone;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox TxtRg;
         private Label LbRg;
         private MaskedTextBox maskedTextBox2;
         private Label LbCep;

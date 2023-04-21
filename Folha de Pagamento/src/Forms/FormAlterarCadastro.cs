@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.SQL;
 
 namespace FOLHA_DE_PAGAMENTO_
 {
@@ -46,9 +47,31 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             TxtDataEmissao.Text = BoxCalendario2.SelectionEnd.ToString();
         }
+        private void TxtCalendario_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtCalendario.SelectAll();
+        }
+
+        private void TxtCpf_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtCpf.SelectAll();
+        }
+
+        private void TxtDataEmissao_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtDataEmissao.SelectAll();
+        }
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
         {
             navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
+        }
+
+        private void BtnPesquisar_MouseClick(object sender, MouseEventArgs e)
+        {
+            string[] Result = new string[9];
+            C_SearchInDataBase c_SearchInDataBase = new C_SearchInDataBase();
+            Result = c_SearchInDataBase.getDatainTable(Convert.ToInt32(TxtMatricula.Text), TxtNomePesquisa.Text);
+            TxtNomeCompleto.Text = Result[0];
         }
     }
 }

@@ -357,6 +357,8 @@
             TxtDataEmissao.PromptChar = 'X';
             TxtDataEmissao.Size = new Size(121, 31);
             TxtDataEmissao.TabIndex = 20;
+            TxtDataEmissao.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtDataEmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // textBox17
             // 
@@ -740,6 +742,8 @@
             TxtCalendario.PromptChar = 'X';
             TxtCalendario.Size = new Size(121, 31);
             TxtCalendario.TabIndex = 5;
+            TxtCalendario.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtCalendario.MouseClick += TxtCalendario_MouseClick;
             // 
             // TxtCpf
             // 
@@ -752,6 +756,8 @@
             TxtCpf.PromptChar = 'X';
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 6;
+            TxtCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // comboBox2
@@ -886,7 +892,6 @@
             // 
             TxtMatricula.BackColor = Color.DarkGray;
             TxtMatricula.BorderStyle = BorderStyle.FixedSingle;
-            TxtMatricula.Enabled = false;
             TxtMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMatricula.Location = new Point(169, 103);
             TxtMatricula.MaxLength = 6;

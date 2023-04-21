@@ -339,9 +339,10 @@
             Pnl2.Controls.Add(BtnLogout);
             Pnl2.Controls.Add(BtnConfiguracao);
             Pnl2.Controls.Add(panel1);
-            Pnl2.Location = new Point(1, 1);
+            Pnl2.Dock = DockStyle.Fill;
+            Pnl2.Location = new Point(0, 0);
             Pnl2.Name = "Pnl2";
-            Pnl2.Size = new Size(345, 750);
+            Pnl2.Size = new Size(345, 751);
             Pnl2.TabIndex = 4;
             Pnl2.Visible = false;
             // 
