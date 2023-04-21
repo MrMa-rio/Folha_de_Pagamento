@@ -32,6 +32,13 @@
             LbAlterarCadastro = new Panel();
             BtnLimpar = new Button();
             PnlCtrlFunc = new Panel();
+            textBox1 = new TextBox();
+            LbBeneficios = new Label();
+            pictureBox1 = new PictureBox();
+            maskedTextBox1 = new MaskedTextBox();
+            LbSalario = new Label();
+            label2 = new Label();
+            label3 = new Label();
             PctCpf = new PictureBox();
             label4 = new Label();
             label5 = new Label();
@@ -40,23 +47,18 @@
             TxtCpf = new MaskedTextBox();
             LbIrrf = new Label();
             LbInss = new Label();
-            TxtNomeCompleto = new TextBox();
+            TxtFgts = new TextBox();
             LbFgts = new Label();
             LbTitulo = new Label();
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            pictureBox1 = new PictureBox();
-            maskedTextBox1 = new MaskedTextBox();
-            LbSalario = new Label();
-            textBox1 = new TextBox();
-            LbBeneficios = new Label();
+            textBox2 = new TextBox();
+            label6 = new Label();
             LbAlterarCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
             SuspendLayout();
             // 
             // LbAlterarCadastro
@@ -92,6 +94,8 @@
             PnlCtrlFunc.AutoScrollMargin = new Size(0, 90);
             PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
             PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
+            PnlCtrlFunc.Controls.Add(textBox2);
+            PnlCtrlFunc.Controls.Add(label6);
             PnlCtrlFunc.Controls.Add(textBox1);
             PnlCtrlFunc.Controls.Add(LbBeneficios);
             PnlCtrlFunc.Controls.Add(pictureBox1);
@@ -107,12 +111,89 @@
             PnlCtrlFunc.Controls.Add(TxtCpf);
             PnlCtrlFunc.Controls.Add(LbIrrf);
             PnlCtrlFunc.Controls.Add(LbInss);
-            PnlCtrlFunc.Controls.Add(TxtNomeCompleto);
+            PnlCtrlFunc.Controls.Add(TxtFgts);
             PnlCtrlFunc.Controls.Add(LbFgts);
             PnlCtrlFunc.Location = new Point(29, 117);
             PnlCtrlFunc.Name = "PnlCtrlFunc";
             PnlCtrlFunc.Size = new Size(1050, 460);
             PnlCtrlFunc.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.DarkGray;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(172, 270);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = " Digite o nome aqui";
+            textBox1.Size = new Size(287, 31);
+            textBox1.TabIndex = 118;
+            // 
+            // LbBeneficios
+            // 
+            LbBeneficios.AutoSize = true;
+            LbBeneficios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LbBeneficios.Location = new Point(15, 280);
+            LbBeneficios.Name = "LbBeneficios";
+            LbBeneficios.Size = new Size(80, 21);
+            LbBeneficios.TabIndex = 119;
+            LbBeneficios.Text = "Benefícios";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(338, 196);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(28, 28);
+            pictureBox1.TabIndex = 117;
+            pictureBox1.TabStop = false;
+            // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.BackColor = Color.DarkGray;
+            maskedTextBox1.BorderStyle = BorderStyle.FixedSingle;
+            maskedTextBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            maskedTextBox1.Location = new Point(172, 196);
+            maskedTextBox1.Mask = "000,000,000-00";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.PromptChar = 'X';
+            maskedTextBox1.Size = new Size(160, 31);
+            maskedTextBox1.TabIndex = 115;
+            // 
+            // LbSalario
+            // 
+            LbSalario.AutoSize = true;
+            LbSalario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            LbSalario.Location = new Point(15, 199);
+            LbSalario.Name = "LbSalario";
+            LbSalario.Size = new Size(100, 21);
+            LbSalario.TabIndex = 116;
+            LbSalario.Text = "Salário Bruto";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.FlatStyle = FlatStyle.Flat;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ImageAlign = ContentAlignment.MiddleRight;
+            label2.Location = new Point(34, 317);
+            label2.Name = "label2";
+            label2.Padding = new Padding(10, 0, 0, 0);
+            label2.Size = new Size(115, 32);
+            label2.TabIndex = 114;
+            label2.Text = "A definir";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.FlatStyle = FlatStyle.Flat;
+            label3.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label3.Location = new Point(14, 317);
+            label3.Name = "label3";
+            label3.Size = new Size(314, 37);
+            label3.TabIndex = 113;
+            label3.Text = "___________________________";
             // 
             // PctCpf
             // 
@@ -188,7 +269,7 @@
             // 
             LbIrrf.AutoSize = true;
             LbIrrf.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbIrrf.Location = new Point(14, 162);
+            LbIrrf.Location = new Point(15, 162);
             LbIrrf.Name = "LbIrrf";
             LbIrrf.Size = new Size(42, 21);
             LbIrrf.TabIndex = 35;
@@ -198,28 +279,28 @@
             // 
             LbInss.AutoSize = true;
             LbInss.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbInss.Location = new Point(14, 125);
+            LbInss.Location = new Point(15, 125);
             LbInss.Name = "LbInss";
             LbInss.Size = new Size(44, 21);
             LbInss.TabIndex = 34;
             LbInss.Text = "INSS";
             // 
-            // TxtNomeCompleto
+            // TxtFgts
             // 
-            TxtNomeCompleto.BackColor = Color.DarkGray;
-            TxtNomeCompleto.BorderStyle = BorderStyle.FixedSingle;
-            TxtNomeCompleto.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtNomeCompleto.Location = new Point(172, 85);
-            TxtNomeCompleto.Name = "TxtNomeCompleto";
-            TxtNomeCompleto.PlaceholderText = " Digite o nome aqui";
-            TxtNomeCompleto.Size = new Size(287, 31);
-            TxtNomeCompleto.TabIndex = 0;
+            TxtFgts.BackColor = Color.DarkGray;
+            TxtFgts.BorderStyle = BorderStyle.FixedSingle;
+            TxtFgts.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtFgts.Location = new Point(172, 85);
+            TxtFgts.Name = "TxtFgts";
+            TxtFgts.PlaceholderText = " Digite o nome aqui";
+            TxtFgts.Size = new Size(287, 31);
+            TxtFgts.TabIndex = 0;
             // 
             // LbFgts
             // 
             LbFgts.AutoSize = true;
             LbFgts.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbFgts.Location = new Point(14, 88);
+            LbFgts.Location = new Point(15, 88);
             LbFgts.Name = "LbFgts";
             LbFgts.Size = new Size(46, 21);
             LbFgts.TabIndex = 32;
@@ -275,82 +356,26 @@
             BtnCancelar.TabIndex = 19;
             BtnCancelar.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // textBox2
             // 
-            label2.AutoSize = true;
-            label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ImageAlign = ContentAlignment.MiddleRight;
-            label2.Location = new Point(34, 317);
-            label2.Name = "label2";
-            label2.Padding = new Padding(10, 0, 0, 0);
-            label2.Size = new Size(115, 32);
-            label2.TabIndex = 114;
-            label2.Text = "A definir";
+            textBox2.BackColor = Color.DarkGray;
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(172, 233);
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = " Digite o nome aqui";
+            textBox2.Size = new Size(287, 31);
+            textBox2.TabIndex = 120;
             // 
-            // label3
+            // label6
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label3.Location = new Point(14, 317);
-            label3.Name = "label3";
-            label3.Size = new Size(314, 37);
-            label3.TabIndex = 113;
-            label3.Text = "___________________________";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(338, 196);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(28, 28);
-            pictureBox1.TabIndex = 117;
-            pictureBox1.TabStop = false;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.BackColor = Color.DarkGray;
-            maskedTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            maskedTextBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            maskedTextBox1.Location = new Point(172, 196);
-            maskedTextBox1.Mask = "000,000,000-00";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.PromptChar = 'X';
-            maskedTextBox1.Size = new Size(160, 31);
-            maskedTextBox1.TabIndex = 115;
-            // 
-            // LbSalario
-            // 
-            LbSalario.AutoSize = true;
-            LbSalario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbSalario.Location = new Point(15, 199);
-            LbSalario.Name = "LbSalario";
-            LbSalario.Size = new Size(100, 21);
-            LbSalario.TabIndex = 116;
-            LbSalario.Text = "Salário Bruto";
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.DarkGray;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(172, 242);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = " Digite o nome aqui";
-            textBox1.Size = new Size(287, 31);
-            textBox1.TabIndex = 118;
-            // 
-            // LbBeneficios
-            // 
-            LbBeneficios.AutoSize = true;
-            LbBeneficios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbBeneficios.Location = new Point(14, 245);
-            LbBeneficios.Name = "LbBeneficios";
-            LbBeneficios.Size = new Size(80, 21);
-            LbBeneficios.TabIndex = 119;
-            LbBeneficios.Text = "Benefícios";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(15, 243);
+            label6.Name = "label6";
+            label6.Size = new Size(80, 21);
+            label6.TabIndex = 121;
+            label6.Text = "Benefícios";
             // 
             // FormCalculoPagamento
             // 
@@ -366,8 +391,8 @@
             LbAlterarCadastro.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);
             PnlCtrlFunc.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)PctCpf).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PctCpf).EndInit();
             ResumeLayout(false);
         }
 
@@ -384,7 +409,7 @@
         private MaskedTextBox TxtCpf;
         private Label LbIrrf;
         private Label LbInss;
-        private TextBox TxtNomeCompleto;
+        private TextBox TxtFgts;
         private Label LbFgts;
         private Label LbTitulo;
         private Label label1;
@@ -397,5 +422,7 @@
         private Label LbSalario;
         private Label label2;
         private Label label3;
+        private TextBox textBox2;
+        private Label label6;
     }
 }
