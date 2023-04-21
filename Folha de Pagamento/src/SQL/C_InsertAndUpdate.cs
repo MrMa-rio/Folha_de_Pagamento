@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FOLHA_DE_PAGAMENTO_.src.SQL
 {
-    internal class C_CreateAndUpdate
+    internal class C_InsertAndUpdate
     {
         private string IP = "localhost";
         private string User = "root";
@@ -44,6 +44,24 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                 conexão.Close();
             }
 
+        }
+        public void setDatainTbFuncionarios(TextBox TxtNomeCompleto, bool ValidadorCPF, ComboBox CbEstadoCivil, ComboBox CbGenero, MaskedTextBox TxtCpf, MaskedTextBox TxtRg)
+        {
+            if (TxtNomeCompleto.Text.Length < 4 || !ValidadorCPF || CbEstadoCivil.Text == "" || CbGenero.Text == "" || TxtRg.Text.Length < 4)
+            {
+                MessageBox.Show("Preencha os campos do Cadastro.");
+            }
+            else
+            {
+                DialogResult alertBox = MessageBox.Show("Você está preste á salvar esses DADOS!", "Salvar Dados", MessageBoxButtons.OKCancel);
+
+                if (alertBox == DialogResult.OK)
+                {
+                    string fillColumns = "NomeCompleto,CPF,EstadoCivil, Genero, RG";
+                    string values = $"'{TxtNomeCompleto.Text}','{TxtCpf.Text}','{CbEstadoCivil.Text}','{CbGenero.Text}','{TxtRg.Text}'";
+                    setDatainTable("tbfuncionarios", fillColumns, values);
+                }
+            }
         }
     }
 }

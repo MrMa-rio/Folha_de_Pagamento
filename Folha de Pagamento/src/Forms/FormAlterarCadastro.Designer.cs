@@ -79,7 +79,7 @@
             LbDataNascimento = new Label();
             TxtNomeCompleto = new TextBox();
             LbNomeCompleto = new Label();
-            button1 = new Button();
+            BtnPesquisar = new Button();
             TxtNomePesquisa = new TextBox();
             label3 = new Label();
             label2 = new Label();
@@ -115,7 +115,7 @@
             // 
             panel1.BackColor = Color.LightGray;
             panel1.Controls.Add(PnlCtrlFunc);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(BtnPesquisar);
             panel1.Controls.Add(TxtNomePesquisa);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -231,6 +231,8 @@
             TxtDataEmissao.PromptChar = 'X';
             TxtDataEmissao.Size = new Size(121, 31);
             TxtDataEmissao.TabIndex = 20;
+            TxtDataEmissao.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtDataEmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // textBox17
             // 
@@ -614,6 +616,8 @@
             TxtCalendario.PromptChar = 'X';
             TxtCalendario.Size = new Size(121, 31);
             TxtCalendario.TabIndex = 5;
+            TxtCalendario.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtCalendario.MouseClick += TxtCalendario_MouseClick;
             // 
             // TxtCpf
             // 
@@ -626,6 +630,8 @@
             TxtCpf.PromptChar = 'X';
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 6;
+            TxtCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
             // comboBox2
@@ -719,26 +725,25 @@
             LbNomeCompleto.TabIndex = 32;
             LbNomeCompleto.Text = "*Nome Completo:";
             // 
-            // button1
+            // BtnPesquisar
             // 
-            button1.BackColor = Color.DimGray;
-            button1.BackgroundImage = Properties.Resources.Search;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Enabled = false;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(753, 104);
-            button1.Name = "button1";
-            button1.Size = new Size(32, 32);
-            button1.TabIndex = 3;
-            button1.UseVisualStyleBackColor = false;
+            BtnPesquisar.BackColor = Color.DimGray;
+            BtnPesquisar.BackgroundImage = Properties.Resources.Search;
+            BtnPesquisar.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnPesquisar.FlatAppearance.BorderSize = 0;
+            BtnPesquisar.FlatStyle = FlatStyle.Flat;
+            BtnPesquisar.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnPesquisar.Location = new Point(753, 104);
+            BtnPesquisar.Name = "BtnPesquisar";
+            BtnPesquisar.Size = new Size(32, 32);
+            BtnPesquisar.TabIndex = 3;
+            BtnPesquisar.UseVisualStyleBackColor = false;
+            BtnPesquisar.MouseClick += BtnPesquisar_MouseClick;
             // 
             // TxtNomePesquisa
             // 
             TxtNomePesquisa.BackColor = Color.DarkGray;
             TxtNomePesquisa.BorderStyle = BorderStyle.FixedSingle;
-            TxtNomePesquisa.Enabled = false;
             TxtNomePesquisa.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtNomePesquisa.Location = new Point(473, 104);
             TxtNomePesquisa.Name = "TxtNomePesquisa";
@@ -770,7 +775,6 @@
             // 
             TxtMatricula.BackColor = Color.DarkGray;
             TxtMatricula.BorderStyle = BorderStyle.FixedSingle;
-            TxtMatricula.Enabled = false;
             TxtMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMatricula.Location = new Point(169, 106);
             TxtMatricula.MaxLength = 6;
@@ -886,7 +890,7 @@
         private Panel panel3;
         private TextBox TxtMatricula;
         private Label label2;
-        private Button button1;
+        private Button BtnPesquisar;
         private TextBox TxtNomePesquisa;
         private Label label3;
         private PictureBox pictureBox1;

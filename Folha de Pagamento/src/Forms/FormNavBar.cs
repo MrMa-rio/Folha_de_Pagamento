@@ -41,7 +41,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnAlterarCadastro_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
             FormAlterarCadastro formAlterarCadastro = new FormAlterarCadastro(this);
             handleForm = c_FormShow.setFormShow(FormAtivo, formAlterarCadastro, handleForm);
         }

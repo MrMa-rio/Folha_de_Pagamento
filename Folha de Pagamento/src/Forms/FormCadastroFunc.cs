@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.SQL;
 
 namespace FOLHA_DE_PAGAMENTO_
 {
@@ -25,7 +26,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private void TxtCpf_TextChanged(object sender, EventArgs e)
         {
             C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
-            c_ValidadorCPF.setValidacao(TxtCpf, PctCpf);
+            ValidadorCPF = c_ValidadorCPF.setValidacao(TxtCpf, PctCpf);
         }
 
         private void BtnCalendario_MouseClick(object sender, MouseEventArgs e)
@@ -51,6 +52,51 @@ namespace FOLHA_DE_PAGAMENTO_
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
         {
             navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
+        }
+        private void TxtDataNascimento_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtDataNascimento.SelectAll();
+        }
+
+        private void TxtCpf_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtCpf.SelectAll();
+        }
+
+        private void TxtRg_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtRg.SelectAll();
+        }
+
+        private void TxtTelefone_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtTelefone.SelectAll();
+        }
+
+        private void TxtCep_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtCep.SelectAll();
+        }
+
+        private void TxtDataEmissao_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtDataEmissao.SelectAll();
+        }
+
+        private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_InsertAndUpdate c_InsertAndUpdate = new C_InsertAndUpdate();
+            c_InsertAndUpdate.setDatainTbFuncionarios(TxtNomeCompleto, ValidadorCPF, CbEstadoCivil, CbGenero, TxtCpf, TxtRg);
+
+        }
+
+        private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult alert = MessageBox.Show("Você está preste a fechar a area de Cadatro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
+            if (alert == DialogResult.OK)
+            {
+                Close();
+            }
         }
     }
 }
