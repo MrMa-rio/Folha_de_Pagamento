@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Button button4;
+            Button BtnEditar;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             panel1 = new Panel();
             BtnLimpar = new Button();
             BtnConfirmar = new Button();
             PnlCtrlFunc = new Panel();
+            TxtTelefone = new MaskedTextBox();
             TxtCep = new MaskedTextBox();
             LbCep = new Label();
             TxtTituloEleitor = new TextBox();
@@ -46,30 +47,29 @@
             BoxCalendario2 = new MonthCalendar();
             BtnCalendario2 = new Button();
             TxtDataEmissao = new MaskedTextBox();
-            textBox17 = new TextBox();
+            TxtSalarioBase = new TextBox();
             label26 = new Label();
             label27 = new Label();
-            textBox19 = new TextBox();
+            TxtCTrabalho = new TextBox();
             label28 = new Label();
-            textBox20 = new TextBox();
+            TxtNit = new TextBox();
             label29 = new Label();
             label24 = new Label();
             label25 = new Label();
             CbUF = new ComboBox();
-            textBox2 = new TextBox();
+            TxtCidade = new TextBox();
             label19 = new Label();
             label23 = new Label();
-            textBox14 = new TextBox();
+            TxtEmail = new TextBox();
             label20 = new Label();
-            textBox16 = new TextBox();
             label22 = new Label();
-            textBox15 = new TextBox();
+            TxtComplemento = new TextBox();
             label21 = new Label();
-            textBox8 = new TextBox();
+            TxtBairro = new TextBox();
             label11 = new Label();
-            textBox7 = new TextBox();
+            TxtNumRua = new TextBox();
             label10 = new Label();
-            textBox6 = new TextBox();
+            TxtRua = new TextBox();
             label9 = new Label();
             label7 = new Label();
             label8 = new Label();
@@ -81,7 +81,7 @@
             BtnCalendario = new Button();
             TxtCalendario = new MaskedTextBox();
             TxtCpf = new MaskedTextBox();
-            comboBox2 = new ComboBox();
+            CbCargo = new ComboBox();
             LbCargo = new Label();
             CbEstadoCivil = new ComboBox();
             LbEstadoCivil = new Label();
@@ -98,7 +98,7 @@
             pictureBox1 = new PictureBox();
             LbTitulo = new Label();
             label1 = new Label();
-            button4 = new Button();
+            BtnEditar = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
@@ -106,18 +106,18 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button4
+            // BtnEditar
             // 
-            button4.BackgroundImage = Properties.Resources.edit;
-            button4.BackgroundImageLayout = ImageLayout.Stretch;
-            button4.Enabled = false;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(111, 270);
-            button4.Name = "button4";
-            button4.Size = new Size(49, 49);
-            button4.TabIndex = 1;
-            button4.UseVisualStyleBackColor = true;
+            BtnEditar.BackgroundImage = Properties.Resources.edit;
+            BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnEditar.FlatAppearance.BorderSize = 0;
+            BtnEditar.FlatStyle = FlatStyle.Flat;
+            BtnEditar.Location = new Point(116, 270);
+            BtnEditar.Name = "BtnEditar";
+            BtnEditar.Size = new Size(49, 49);
+            BtnEditar.TabIndex = 1;
+            BtnEditar.UseVisualStyleBackColor = true;
+            BtnEditar.MouseClick += BtnEditar_MouseClick;
             // 
             // panel1
             // 
@@ -168,6 +168,7 @@
             PnlCtrlFunc.AutoScrollMargin = new Size(0, 90);
             PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
             PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
+            PnlCtrlFunc.Controls.Add(TxtTelefone);
             PnlCtrlFunc.Controls.Add(TxtCep);
             PnlCtrlFunc.Controls.Add(LbCep);
             PnlCtrlFunc.Controls.Add(TxtTituloEleitor);
@@ -180,30 +181,29 @@
             PnlCtrlFunc.Controls.Add(BoxCalendario2);
             PnlCtrlFunc.Controls.Add(BtnCalendario2);
             PnlCtrlFunc.Controls.Add(TxtDataEmissao);
-            PnlCtrlFunc.Controls.Add(textBox17);
+            PnlCtrlFunc.Controls.Add(TxtSalarioBase);
             PnlCtrlFunc.Controls.Add(label26);
             PnlCtrlFunc.Controls.Add(label27);
-            PnlCtrlFunc.Controls.Add(textBox19);
+            PnlCtrlFunc.Controls.Add(TxtCTrabalho);
             PnlCtrlFunc.Controls.Add(label28);
-            PnlCtrlFunc.Controls.Add(textBox20);
+            PnlCtrlFunc.Controls.Add(TxtNit);
             PnlCtrlFunc.Controls.Add(label29);
             PnlCtrlFunc.Controls.Add(label24);
             PnlCtrlFunc.Controls.Add(label25);
             PnlCtrlFunc.Controls.Add(CbUF);
-            PnlCtrlFunc.Controls.Add(textBox2);
+            PnlCtrlFunc.Controls.Add(TxtCidade);
             PnlCtrlFunc.Controls.Add(label19);
             PnlCtrlFunc.Controls.Add(label23);
-            PnlCtrlFunc.Controls.Add(textBox14);
+            PnlCtrlFunc.Controls.Add(TxtEmail);
             PnlCtrlFunc.Controls.Add(label20);
-            PnlCtrlFunc.Controls.Add(textBox16);
             PnlCtrlFunc.Controls.Add(label22);
-            PnlCtrlFunc.Controls.Add(textBox15);
+            PnlCtrlFunc.Controls.Add(TxtComplemento);
             PnlCtrlFunc.Controls.Add(label21);
-            PnlCtrlFunc.Controls.Add(textBox8);
+            PnlCtrlFunc.Controls.Add(TxtBairro);
             PnlCtrlFunc.Controls.Add(label11);
-            PnlCtrlFunc.Controls.Add(textBox7);
+            PnlCtrlFunc.Controls.Add(TxtNumRua);
             PnlCtrlFunc.Controls.Add(label10);
-            PnlCtrlFunc.Controls.Add(textBox6);
+            PnlCtrlFunc.Controls.Add(TxtRua);
             PnlCtrlFunc.Controls.Add(label9);
             PnlCtrlFunc.Controls.Add(label7);
             PnlCtrlFunc.Controls.Add(label8);
@@ -215,7 +215,7 @@
             PnlCtrlFunc.Controls.Add(BtnCalendario);
             PnlCtrlFunc.Controls.Add(TxtCalendario);
             PnlCtrlFunc.Controls.Add(TxtCpf);
-            PnlCtrlFunc.Controls.Add(comboBox2);
+            PnlCtrlFunc.Controls.Add(CbCargo);
             PnlCtrlFunc.Controls.Add(LbCargo);
             PnlCtrlFunc.Controls.Add(CbEstadoCivil);
             PnlCtrlFunc.Controls.Add(LbEstadoCivil);
@@ -229,10 +229,25 @@
             PnlCtrlFunc.TabIndex = 12;
             PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
+            // TxtTelefone
+            // 
+            TxtTelefone.BackColor = Color.DarkGray;
+            TxtTelefone.BorderStyle = BorderStyle.FixedSingle;
+            TxtTelefone.Enabled = false;
+            TxtTelefone.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtTelefone.Location = new Point(172, 535);
+            TxtTelefone.Mask = "(00) 0 0000-0000";
+            TxtTelefone.Name = "TxtTelefone";
+            TxtTelefone.Size = new Size(287, 31);
+            TxtTelefone.TabIndex = 122;
+            TxtTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtTelefone.MouseClick += TxtTelefone_MouseClick;
+            // 
             // TxtCep
             // 
             TxtCep.BackColor = Color.DarkGray;
             TxtCep.BorderStyle = BorderStyle.FixedSingle;
+            TxtCep.Enabled = false;
             TxtCep.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCep.ForeColor = SystemColors.WindowText;
             TxtCep.Location = new Point(172, 831);
@@ -240,6 +255,7 @@
             TxtCep.Name = "TxtCep";
             TxtCep.Size = new Size(100, 31);
             TxtCep.TabIndex = 121;
+            TxtCep.MouseClick += TxtCep_MouseClick;
             // 
             // LbCep
             // 
@@ -255,6 +271,7 @@
             // 
             TxtTituloEleitor.BackColor = Color.DarkGray;
             TxtTituloEleitor.BorderStyle = BorderStyle.FixedSingle;
+            TxtTituloEleitor.Enabled = false;
             TxtTituloEleitor.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtTituloEleitor.Location = new Point(171, 327);
             TxtTituloEleitor.Name = "TxtTituloEleitor";
@@ -276,6 +293,7 @@
             // 
             TxtReservista.BackColor = Color.DarkGray;
             TxtReservista.BorderStyle = BorderStyle.FixedSingle;
+            TxtReservista.Enabled = false;
             TxtReservista.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtReservista.Location = new Point(171, 364);
             TxtReservista.Name = "TxtReservista";
@@ -297,12 +315,14 @@
             // 
             TxtRg.BackColor = Color.DarkGray;
             TxtRg.BorderStyle = BorderStyle.FixedSingle;
+            TxtRg.Enabled = false;
             TxtRg.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtRg.Location = new Point(172, 290);
             TxtRg.Mask = "00,000,000-0";
             TxtRg.Name = "TxtRg";
             TxtRg.Size = new Size(160, 31);
             TxtRg.TabIndex = 114;
+            TxtRg.MouseClick += TxtRg_MouseClick;
             // 
             // LbRg
             // 
@@ -317,6 +337,7 @@
             // PctCpf
             // 
             PctCpf.BackgroundImageLayout = ImageLayout.Stretch;
+            PctCpf.Enabled = false;
             PctCpf.Location = new Point(338, 181);
             PctCpf.Name = "PctCpf";
             PctCpf.Size = new Size(28, 28);
@@ -337,6 +358,7 @@
             // 
             BtnCalendario2.BackgroundImage = Properties.Resources.calendario;
             BtnCalendario2.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCalendario2.Enabled = false;
             BtnCalendario2.FlatAppearance.BorderSize = 0;
             BtnCalendario2.FlatStyle = FlatStyle.Flat;
             BtnCalendario2.Location = new Point(299, 1132);
@@ -350,6 +372,7 @@
             // 
             TxtDataEmissao.BackColor = Color.DarkGray;
             TxtDataEmissao.BorderStyle = BorderStyle.FixedSingle;
+            TxtDataEmissao.Enabled = false;
             TxtDataEmissao.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtDataEmissao.Location = new Point(172, 1129);
             TxtDataEmissao.Mask = "00/00/0000";
@@ -360,17 +383,18 @@
             TxtDataEmissao.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtDataEmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
-            // textBox17
+            // TxtSalarioBase
             // 
-            textBox17.BackColor = Color.DarkGray;
-            textBox17.BorderStyle = BorderStyle.FixedSingle;
-            textBox17.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox17.Location = new Point(172, 1167);
-            textBox17.Name = "textBox17";
-            textBox17.PlaceholderText = " R$1.304,98";
-            textBox17.ReadOnly = true;
-            textBox17.Size = new Size(220, 31);
-            textBox17.TabIndex = 21;
+            TxtSalarioBase.BackColor = Color.DarkGray;
+            TxtSalarioBase.BorderStyle = BorderStyle.FixedSingle;
+            TxtSalarioBase.Enabled = false;
+            TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtSalarioBase.Location = new Point(172, 1167);
+            TxtSalarioBase.Name = "TxtSalarioBase";
+            TxtSalarioBase.PlaceholderText = " R$1.304,98";
+            TxtSalarioBase.ReadOnly = true;
+            TxtSalarioBase.Size = new Size(220, 31);
+            TxtSalarioBase.TabIndex = 21;
             // 
             // label26
             // 
@@ -392,16 +416,17 @@
             label27.TabIndex = 97;
             label27.Text = "*Data de Emissão:";
             // 
-            // textBox19
+            // TxtCTrabalho
             // 
-            textBox19.BackColor = Color.DarkGray;
-            textBox19.BorderStyle = BorderStyle.FixedSingle;
-            textBox19.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox19.Location = new Point(172, 1055);
-            textBox19.Name = "textBox19";
-            textBox19.PlaceholderText = "A Definir";
-            textBox19.Size = new Size(287, 31);
-            textBox19.TabIndex = 18;
+            TxtCTrabalho.BackColor = Color.DarkGray;
+            TxtCTrabalho.BorderStyle = BorderStyle.FixedSingle;
+            TxtCTrabalho.Enabled = false;
+            TxtCTrabalho.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCTrabalho.Location = new Point(172, 1055);
+            TxtCTrabalho.Name = "TxtCTrabalho";
+            TxtCTrabalho.PlaceholderText = "A Definir";
+            TxtCTrabalho.Size = new Size(287, 31);
+            TxtCTrabalho.TabIndex = 18;
             // 
             // label28
             // 
@@ -413,16 +438,17 @@
             label28.TabIndex = 95;
             label28.Text = "*C. de Trabalho:";
             // 
-            // textBox20
+            // TxtNit
             // 
-            textBox20.BackColor = Color.DarkGray;
-            textBox20.BorderStyle = BorderStyle.FixedSingle;
-            textBox20.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox20.Location = new Point(172, 1018);
-            textBox20.Name = "textBox20";
-            textBox20.PlaceholderText = "A Definir";
-            textBox20.Size = new Size(220, 31);
-            textBox20.TabIndex = 17;
+            TxtNit.BackColor = Color.DarkGray;
+            TxtNit.BorderStyle = BorderStyle.FixedSingle;
+            TxtNit.Enabled = false;
+            TxtNit.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtNit.Location = new Point(172, 1018);
+            TxtNit.Name = "TxtNit";
+            TxtNit.PlaceholderText = "A Definir";
+            TxtNit.Size = new Size(220, 31);
+            TxtNit.TabIndex = 17;
             // 
             // label29
             // 
@@ -465,6 +491,7 @@
             CbUF.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbUF.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbUF.BackColor = Color.DarkGray;
+            CbUF.Enabled = false;
             CbUF.FlatStyle = FlatStyle.Flat;
             CbUF.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbUF.FormattingEnabled = true;
@@ -476,16 +503,17 @@
             CbUF.Size = new Size(160, 31);
             CbUF.TabIndex = 15;
             // 
-            // textBox2
+            // TxtCidade
             // 
-            textBox2.BackColor = Color.DarkGray;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(171, 794);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "A Definir";
-            textBox2.Size = new Size(287, 31);
-            textBox2.TabIndex = 16;
+            TxtCidade.BackColor = Color.DarkGray;
+            TxtCidade.BorderStyle = BorderStyle.FixedSingle;
+            TxtCidade.Enabled = false;
+            TxtCidade.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCidade.Location = new Point(171, 794);
+            TxtCidade.Name = "TxtCidade";
+            TxtCidade.PlaceholderText = "A Definir";
+            TxtCidade.Size = new Size(287, 31);
+            TxtCidade.TabIndex = 16;
             // 
             // label19
             // 
@@ -507,16 +535,17 @@
             label23.TabIndex = 86;
             label23.Text = "*UF:";
             // 
-            // textBox14
+            // TxtEmail
             // 
-            textBox14.BackColor = Color.DarkGray;
-            textBox14.BorderStyle = BorderStyle.FixedSingle;
-            textBox14.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox14.Location = new Point(172, 572);
-            textBox14.Name = "textBox14";
-            textBox14.PlaceholderText = "A Definir";
-            textBox14.Size = new Size(287, 31);
-            textBox14.TabIndex = 10;
+            TxtEmail.BackColor = Color.DarkGray;
+            TxtEmail.BorderStyle = BorderStyle.FixedSingle;
+            TxtEmail.Enabled = false;
+            TxtEmail.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtEmail.Location = new Point(172, 572);
+            TxtEmail.Name = "TxtEmail";
+            TxtEmail.PlaceholderText = "A Definir";
+            TxtEmail.Size = new Size(287, 31);
+            TxtEmail.TabIndex = 10;
             // 
             // label20
             // 
@@ -528,17 +557,6 @@
             label20.TabIndex = 84;
             label20.Text = " Email:";
             // 
-            // textBox16
-            // 
-            textBox16.BackColor = Color.DarkGray;
-            textBox16.BorderStyle = BorderStyle.FixedSingle;
-            textBox16.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox16.Location = new Point(172, 535);
-            textBox16.Name = "textBox16";
-            textBox16.PlaceholderText = "A Definir";
-            textBox16.Size = new Size(287, 31);
-            textBox16.TabIndex = 9;
-            // 
             // label22
             // 
             label22.AutoSize = true;
@@ -549,16 +567,17 @@
             label22.TabIndex = 82;
             label22.Text = "*Telefone:";
             // 
-            // textBox15
+            // TxtComplemento
             // 
-            textBox15.BackColor = Color.DarkGray;
-            textBox15.BorderStyle = BorderStyle.FixedSingle;
-            textBox15.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox15.Location = new Point(171, 719);
-            textBox15.Name = "textBox15";
-            textBox15.PlaceholderText = "A Definir";
-            textBox15.Size = new Size(287, 31);
-            textBox15.TabIndex = 14;
+            TxtComplemento.BackColor = Color.DarkGray;
+            TxtComplemento.BorderStyle = BorderStyle.FixedSingle;
+            TxtComplemento.Enabled = false;
+            TxtComplemento.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtComplemento.Location = new Point(171, 719);
+            TxtComplemento.Name = "TxtComplemento";
+            TxtComplemento.PlaceholderText = "A Definir";
+            TxtComplemento.Size = new Size(287, 31);
+            TxtComplemento.TabIndex = 14;
             // 
             // label21
             // 
@@ -570,16 +589,17 @@
             label21.TabIndex = 80;
             label21.Text = " Complemento:";
             // 
-            // textBox8
+            // TxtBairro
             // 
-            textBox8.BackColor = Color.DarkGray;
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox8.Location = new Point(171, 682);
-            textBox8.Name = "textBox8";
-            textBox8.PlaceholderText = "A Definir";
-            textBox8.Size = new Size(287, 31);
-            textBox8.TabIndex = 13;
+            TxtBairro.BackColor = Color.DarkGray;
+            TxtBairro.BorderStyle = BorderStyle.FixedSingle;
+            TxtBairro.Enabled = false;
+            TxtBairro.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtBairro.Location = new Point(171, 682);
+            TxtBairro.Name = "TxtBairro";
+            TxtBairro.PlaceholderText = "A Definir";
+            TxtBairro.Size = new Size(287, 31);
+            TxtBairro.TabIndex = 13;
             // 
             // label11
             // 
@@ -591,16 +611,17 @@
             label11.TabIndex = 78;
             label11.Text = "*Bairro:";
             // 
-            // textBox7
+            // TxtNumRua
             // 
-            textBox7.BackColor = Color.DarkGray;
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox7.Location = new Point(171, 645);
-            textBox7.Name = "textBox7";
-            textBox7.PlaceholderText = "A Definir";
-            textBox7.Size = new Size(287, 31);
-            textBox7.TabIndex = 12;
+            TxtNumRua.BackColor = Color.DarkGray;
+            TxtNumRua.BorderStyle = BorderStyle.FixedSingle;
+            TxtNumRua.Enabled = false;
+            TxtNumRua.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtNumRua.Location = new Point(171, 645);
+            TxtNumRua.Name = "TxtNumRua";
+            TxtNumRua.PlaceholderText = "A Definir";
+            TxtNumRua.Size = new Size(287, 31);
+            TxtNumRua.TabIndex = 12;
             // 
             // label10
             // 
@@ -612,16 +633,17 @@
             label10.TabIndex = 76;
             label10.Text = "*Numero:";
             // 
-            // textBox6
+            // TxtRua
             // 
-            textBox6.BackColor = Color.DarkGray;
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.Location = new Point(171, 608);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "A Definir";
-            textBox6.Size = new Size(287, 31);
-            textBox6.TabIndex = 11;
+            TxtRua.BackColor = Color.DarkGray;
+            TxtRua.BorderStyle = BorderStyle.FixedSingle;
+            TxtRua.Enabled = false;
+            TxtRua.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtRua.Location = new Point(171, 608);
+            TxtRua.Name = "TxtRua";
+            TxtRua.PlaceholderText = "A Definir";
+            TxtRua.Size = new Size(287, 31);
+            TxtRua.TabIndex = 11;
             // 
             // label9
             // 
@@ -664,6 +686,7 @@
             CbGenero.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbGenero.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbGenero.BackColor = Color.DarkGray;
+            CbGenero.Enabled = false;
             CbGenero.FlatStyle = FlatStyle.Flat;
             CbGenero.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbGenero.FormattingEnabled = true;
@@ -722,6 +745,7 @@
             // 
             BtnCalendario.BackgroundImage = Properties.Resources.calendario;
             BtnCalendario.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCalendario.Enabled = false;
             BtnCalendario.FlatAppearance.BorderSize = 0;
             BtnCalendario.FlatStyle = FlatStyle.Flat;
             BtnCalendario.Location = new Point(304, 149);
@@ -735,6 +759,7 @@
             // 
             TxtCalendario.BackColor = Color.DarkGray;
             TxtCalendario.BorderStyle = BorderStyle.FixedSingle;
+            TxtCalendario.Enabled = false;
             TxtCalendario.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCalendario.Location = new Point(172, 146);
             TxtCalendario.Mask = "00/00/0000";
@@ -749,6 +774,7 @@
             // 
             TxtCpf.BackColor = Color.DarkGray;
             TxtCpf.BorderStyle = BorderStyle.FixedSingle;
+            TxtCpf.Enabled = false;
             TxtCpf.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCpf.Location = new Point(172, 181);
             TxtCpf.Mask = "000,000,000-00";
@@ -760,20 +786,21 @@
             TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
-            // comboBox2
+            // CbCargo
             // 
-            comboBox2.AutoCompleteCustomSource.AddRange(new string[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
-            comboBox2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            comboBox2.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBox2.BackColor = Color.DarkGray;
-            comboBox2.FlatStyle = FlatStyle.Flat;
-            comboBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
-            comboBox2.Location = new Point(172, 1092);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(220, 31);
-            comboBox2.TabIndex = 19;
+            CbCargo.AutoCompleteCustomSource.AddRange(new string[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
+            CbCargo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CbCargo.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CbCargo.BackColor = Color.DarkGray;
+            CbCargo.Enabled = false;
+            CbCargo.FlatStyle = FlatStyle.Flat;
+            CbCargo.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbCargo.FormattingEnabled = true;
+            CbCargo.Items.AddRange(new object[] { "Analista de Sistema", "Suporte TI", "Desenvolvedor de Software" });
+            CbCargo.Location = new Point(172, 1092);
+            CbCargo.Name = "CbCargo";
+            CbCargo.Size = new Size(220, 31);
+            CbCargo.TabIndex = 19;
             // 
             // LbCargo
             // 
@@ -791,6 +818,7 @@
             CbEstadoCivil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbEstadoCivil.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbEstadoCivil.BackColor = Color.DarkGray;
+            CbEstadoCivil.Enabled = false;
             CbEstadoCivil.FlatStyle = FlatStyle.Flat;
             CbEstadoCivil.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbEstadoCivil.FormattingEnabled = true;
@@ -834,6 +862,7 @@
             // 
             TxtNomeCompleto.BackColor = Color.DarkGray;
             TxtNomeCompleto.BorderStyle = BorderStyle.FixedSingle;
+            TxtNomeCompleto.Enabled = false;
             TxtNomeCompleto.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtNomeCompleto.Location = new Point(172, 110);
             TxtNomeCompleto.Name = "TxtNomeCompleto";
@@ -868,7 +897,6 @@
             btnPesquisar.BackColor = Color.LightGray;
             btnPesquisar.BackgroundImage = Properties.Resources.Search;
             btnPesquisar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnPesquisar.Enabled = false;
             btnPesquisar.FlatAppearance.BorderSize = 0;
             btnPesquisar.FlatStyle = FlatStyle.Flat;
             btnPesquisar.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
@@ -877,6 +905,7 @@
             btnPesquisar.Size = new Size(32, 32);
             btnPesquisar.TabIndex = 3;
             btnPesquisar.UseVisualStyleBackColor = false;
+            btnPesquisar.MouseClick += BtnPesquisar_MouseClick;
             // 
             // LbMatricula
             // 
@@ -905,7 +934,7 @@
             panel3.BackColor = Color.LightGray;
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(label2);
-            panel3.Controls.Add(button4);
+            panel3.Controls.Add(BtnEditar);
             panel3.Controls.Add(pictureBox1);
             panel3.Location = new Point(810, 50);
             panel3.Name = "panel3";
@@ -917,7 +946,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(94, 322);
+            label2.Location = new Point(98, 322);
             label2.Name = "label2";
             label2.Size = new Size(77, 25);
             label2.TabIndex = 122;
@@ -993,66 +1022,65 @@
         private Label LbMatricula;
         private Button btnPesquisar;
         private PictureBox pictureBox1;
-        //private Button button4;
         private Panel PnlCtrlFunc;
         private MonthCalendar BoxCalendario2;
-        private Button BtnCalendario2;
-        private MaskedTextBox TxtDataEmissao;
-        private TextBox textBox17;
         private Label label26;
         private Label label27;
-        private TextBox textBox19;
         private Label label28;
-        private TextBox textBox20;
         private Label label29;
         private Label label24;
         private Label label25;
-        private ComboBox CbUF;
-        private TextBox textBox2;
         private Label label19;
         private Label label23;
-        private TextBox textBox14;
         private Label label20;
-        private TextBox textBox16;
         private Label label22;
-        private TextBox textBox15;
         private Label label21;
-        private TextBox textBox8;
         private Label label11;
-        private TextBox textBox7;
         private Label label10;
-        private TextBox textBox6;
         private Label label9;
         private Label label7;
         private Label label8;
-        private ComboBox CbGenero;
         private Label LbGenero;
         private Label label4;
         private Label label5;
         private MonthCalendar BoxCalendario;
-        private Button BtnCalendario;
-        private MaskedTextBox TxtCalendario;
-        private MaskedTextBox TxtCpf;
-        private ComboBox comboBox2;
         private Label LbCargo;
-        private ComboBox CbEstadoCivil;
         private Label LbEstadoCivil;
         private Label LbCpf;
         private Label LbDataNascimento;
-        private TextBox TxtNomeCompleto;
         private Label LbNomeCompleto;
-        private PictureBox PctCpf;
         private Button BtnLimpar;
         private Button BtnConfirmar;
         private Button BtnCancelar;
-        private TextBox TxtTituloEleitor;
         private Label LbTituloEleitor;
-        private TextBox TxtReservista;
         private Label LbReservista;
-        private MaskedTextBox TxtRg;
         private Label LbRg;
-        private MaskedTextBox TxtCep;
         private Label LbCep;
         private Label label2;
+        internal ComboBox CbGenero;
+        internal MaskedTextBox TxtCalendario;
+        internal MaskedTextBox TxtCpf;
+        internal ComboBox CbEstadoCivil;
+        internal TextBox TxtNomeCompleto;
+        internal TextBox TxtTituloEleitor;
+        internal TextBox TxtReservista;
+        internal MaskedTextBox TxtRg;
+        internal Button BtnCalendario;
+        internal PictureBox PctCpf;
+        internal ComboBox CbUF;
+        internal TextBox TxtCidade;
+        internal TextBox TxtEmail;
+        internal TextBox TxtComplemento;
+        internal TextBox TxtBairro;
+        internal TextBox TxtNumRua;
+        internal TextBox TxtRua;
+        internal MaskedTextBox TxtCep;
+        internal MaskedTextBox TxtTelefone;
+        internal Button BtnCalendario2;
+        internal MaskedTextBox TxtDataEmissao;
+        internal TextBox TxtSalarioBase;
+        internal TextBox TxtCTrabalho;
+        internal TextBox TxtNit;
+        internal ComboBox CbCargo;
     }
 }

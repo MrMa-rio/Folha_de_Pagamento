@@ -15,9 +15,12 @@ namespace FOLHA_DE_PAGAMENTO_
     {
         FormNavBar FormAtivo;
         C_FormNavBarShow navBarShow = new C_FormNavBarShow();
-        public FormCargos(FormNavBar navBar)
+        public FormCargos()
         {
             InitializeComponent();
+        }
+        public FormCargos(FormNavBar navBar) :this()
+        {
             FormAtivo = navBar;
         }
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
