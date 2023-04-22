@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaNormal));
             LbAlterarCadastro = new Panel();
-            PanelPerfilFunc = new Panel();
-            textBox4 = new TextBox();
-            label8 = new Label();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            PctFotoFunc = new PictureBox();
             BtnLimpar = new Button();
             PnlCtrlFunc = new Panel();
             textBox3 = new TextBox();
@@ -61,8 +55,6 @@
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
             LbAlterarCadastro.SuspendLayout();
-            PanelPerfilFunc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)PctFotoFunc).BeginInit();
             PnlCtrlFunc.SuspendLayout();
             SuspendLayout();
             // 
@@ -70,7 +62,6 @@
             // 
             LbAlterarCadastro.AccessibleRole = AccessibleRole.None;
             LbAlterarCadastro.BackColor = Color.LightGray;
-            LbAlterarCadastro.Controls.Add(PanelPerfilFunc);
             LbAlterarCadastro.Controls.Add(BtnLimpar);
             LbAlterarCadastro.Controls.Add(PnlCtrlFunc);
             LbAlterarCadastro.Controls.Add(LbTitulo);
@@ -82,81 +73,13 @@
             LbAlterarCadastro.Size = new Size(1110, 630);
             LbAlterarCadastro.TabIndex = 2;
             // 
-            // PanelPerfilFunc
-            // 
-            PanelPerfilFunc.AutoScroll = true;
-            PanelPerfilFunc.BackColor = Color.LightGray;
-            PanelPerfilFunc.BorderStyle = BorderStyle.FixedSingle;
-            PanelPerfilFunc.Controls.Add(textBox4);
-            PanelPerfilFunc.Controls.Add(label8);
-            PanelPerfilFunc.Controls.Add(textBox2);
-            PanelPerfilFunc.Controls.Add(label2);
-            PanelPerfilFunc.Controls.Add(PctFotoFunc);
-            PanelPerfilFunc.Location = new Point(810, 50);
-            PanelPerfilFunc.Name = "PanelPerfilFunc";
-            PanelPerfilFunc.Size = new Size(275, 526);
-            PanelPerfilFunc.TabIndex = 62;
-            // 
-            // textBox4
-            // 
-            textBox4.BackColor = Color.DarkGray;
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(108, 402);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "N pessoas";
-            textBox4.Size = new Size(152, 31);
-            textBox4.TabIndex = 118;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(108, 378);
-            label8.Name = "label8";
-            label8.Size = new Size(66, 21);
-            label8.TabIndex = 117;
-            label8.Text = "ID Setor";
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.DarkGray;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(108, 477);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "N pessoas";
-            textBox2.Size = new Size(152, 31);
-            textBox2.TabIndex = 113;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(108, 447);
-            label2.Name = "label2";
-            label2.Size = new Size(129, 21);
-            label2.TabIndex = 114;
-            label2.Text = "Pessoas no cargo";
-            // 
-            // PctFotoFunc
-            // 
-            PctFotoFunc.ErrorImage = null;
-            PctFotoFunc.Image = Properties.Resources.circle_account1;
-            PctFotoFunc.Location = new Point(15, 15);
-            PctFotoFunc.Name = "PctFotoFunc";
-            PctFotoFunc.Size = new Size(245, 245);
-            PctFotoFunc.SizeMode = PictureBoxSizeMode.StretchImage;
-            PctFotoFunc.TabIndex = 0;
-            PctFotoFunc.TabStop = false;
-            // 
             // BtnLimpar
             // 
             BtnLimpar.Enabled = false;
             BtnLimpar.FlatAppearance.BorderSize = 0;
             BtnLimpar.FlatStyle = FlatStyle.Flat;
             BtnLimpar.Image = (Image)resources.GetObject("BtnLimpar.Image");
-            BtnLimpar.Location = new Point(742, 578);
+            BtnLimpar.Location = new Point(1004, 582);
             BtnLimpar.Name = "BtnLimpar";
             BtnLimpar.Size = new Size(43, 43);
             BtnLimpar.TabIndex = 61;
@@ -188,7 +111,7 @@
             PnlCtrlFunc.Controls.Add(LbNomeCompleto);
             PnlCtrlFunc.Location = new Point(67, 142);
             PnlCtrlFunc.Name = "PnlCtrlFunc";
-            PnlCtrlFunc.Size = new Size(718, 434);
+            PnlCtrlFunc.Size = new Size(980, 434);
             PnlCtrlFunc.TabIndex = 7;
             // 
             // textBox3
@@ -426,7 +349,7 @@
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(644, 578);
+            BtnConfirmar.Location = new Point(906, 582);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 18;
@@ -438,7 +361,7 @@
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
-            BtnCancelar.Location = new Point(693, 578);
+            BtnCancelar.Location = new Point(955, 582);
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 19;
@@ -456,9 +379,6 @@
             Text = "FormNormal";
             LbAlterarCadastro.ResumeLayout(false);
             LbAlterarCadastro.PerformLayout();
-            PanelPerfilFunc.ResumeLayout(false);
-            PanelPerfilFunc.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)PctFotoFunc).EndInit();
             PnlCtrlFunc.ResumeLayout(false);
             PnlCtrlFunc.PerformLayout();
             ResumeLayout(false);
@@ -467,12 +387,6 @@
         #endregion
 
         private Panel LbAlterarCadastro;
-        private Panel PanelPerfilFunc;
-        private TextBox textBox4;
-        private Label label8;
-        private TextBox textBox2;
-        private Label label2;
-        private PictureBox PctFotoFunc;
         private Button BtnLimpar;
         private Panel PnlCtrlFunc;
         private TextBox textBox3;

@@ -251,7 +251,6 @@
             // BtnPesquisar
             // 
             BtnPesquisar.BackColor = Color.Transparent;
-            BtnPesquisar.Enabled = false;
             BtnPesquisar.FlatAppearance.BorderSize = 0;
             BtnPesquisar.FlatStyle = FlatStyle.Flat;
             BtnPesquisar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -264,6 +263,7 @@
             BtnPesquisar.Text = "    Pesquisar";
             BtnPesquisar.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnPesquisar.UseVisualStyleBackColor = false;
+            BtnPesquisar.MouseClick += BtnPesquisar_MouseClick;
             // 
             // button4
             // 

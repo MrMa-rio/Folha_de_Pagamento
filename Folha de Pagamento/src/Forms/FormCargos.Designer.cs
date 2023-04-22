@@ -40,13 +40,9 @@
             PnlCtrlFunc = new Panel();
             textBox3 = new TextBox();
             label7 = new Label();
-            CbGenero = new ComboBox();
             label6 = new Label();
             label4 = new Label();
             label5 = new Label();
-            TxtDataNascimento = new MaskedTextBox();
-            TxtCpf = new MaskedTextBox();
-            CbEstadoCivil = new ComboBox();
             LbEstadoCivil = new Label();
             LbCpf = new Label();
             LbDataNascimento = new Label();
@@ -56,6 +52,10 @@
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
             LbAlterarCadastro.SuspendLayout();
             PanelPerfilFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctFotoFunc).BeginInit();
@@ -163,15 +163,15 @@
             PnlCtrlFunc.AutoScrollMargin = new Size(0, 90);
             PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
             PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
+            PnlCtrlFunc.Controls.Add(textBox5);
+            PnlCtrlFunc.Controls.Add(textBox4);
+            PnlCtrlFunc.Controls.Add(textBox2);
+            PnlCtrlFunc.Controls.Add(textBox1);
             PnlCtrlFunc.Controls.Add(textBox3);
             PnlCtrlFunc.Controls.Add(label7);
-            PnlCtrlFunc.Controls.Add(CbGenero);
             PnlCtrlFunc.Controls.Add(label6);
             PnlCtrlFunc.Controls.Add(label4);
             PnlCtrlFunc.Controls.Add(label5);
-            PnlCtrlFunc.Controls.Add(TxtDataNascimento);
-            PnlCtrlFunc.Controls.Add(TxtCpf);
-            PnlCtrlFunc.Controls.Add(CbEstadoCivil);
             PnlCtrlFunc.Controls.Add(LbEstadoCivil);
             PnlCtrlFunc.Controls.Add(LbCpf);
             PnlCtrlFunc.Controls.Add(LbDataNascimento);
@@ -204,21 +204,6 @@
             label7.TabIndex = 115;
             label7.Text = "ID Cargo";
             // 
-            // CbGenero
-            // 
-            CbGenero.AutoCompleteCustomSource.AddRange(new string[] { "Masculino", "Feminino", "Transgênero", "Cisgênero", "Outro" });
-            CbGenero.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            CbGenero.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CbGenero.BackColor = Color.DarkGray;
-            CbGenero.FlatStyle = FlatStyle.Flat;
-            CbGenero.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbGenero.FormattingEnabled = true;
-            CbGenero.Items.AddRange(new object[] { "Masculino", "Feminino", "Transgênero", "Cisgênero", "Outro" });
-            CbGenero.Location = new Point(150, 270);
-            CbGenero.Name = "CbGenero";
-            CbGenero.Size = new Size(160, 31);
-            CbGenero.TabIndex = 4;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -235,12 +220,12 @@
             label4.FlatStyle = FlatStyle.Flat;
             label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ImageAlign = ContentAlignment.MiddleRight;
-            label4.Location = new Point(34, 18);
+            label4.Location = new Point(30, 17);
             label4.Name = "label4";
             label4.Padding = new Padding(10, 0, 0, 0);
-            label4.Size = new Size(249, 32);
+            label4.Size = new Size(280, 32);
             label4.TabIndex = 9;
-            label4.Text = "Informações Pessoais";
+            label4.Text = "Informações dos Cargos";
             // 
             // label5
             // 
@@ -253,45 +238,6 @@
             label5.Size = new Size(314, 37);
             label5.TabIndex = 8;
             label5.Text = "___________________________";
-            // 
-            // TxtDataNascimento
-            // 
-            TxtDataNascimento.BackColor = Color.DarkGray;
-            TxtDataNascimento.BorderStyle = BorderStyle.FixedSingle;
-            TxtDataNascimento.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataNascimento.Location = new Point(150, 150);
-            TxtDataNascimento.Mask = "00/00/0000";
-            TxtDataNascimento.Name = "TxtDataNascimento";
-            TxtDataNascimento.PromptChar = 'X';
-            TxtDataNascimento.Size = new Size(121, 31);
-            TxtDataNascimento.TabIndex = 1;
-            // 
-            // TxtCpf
-            // 
-            TxtCpf.BackColor = Color.DarkGray;
-            TxtCpf.BorderStyle = BorderStyle.FixedSingle;
-            TxtCpf.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCpf.Location = new Point(150, 190);
-            TxtCpf.Mask = "000,000,000-00";
-            TxtCpf.Name = "TxtCpf";
-            TxtCpf.PromptChar = 'X';
-            TxtCpf.Size = new Size(160, 31);
-            TxtCpf.TabIndex = 2;
-            // 
-            // CbEstadoCivil
-            // 
-            CbEstadoCivil.AutoCompleteCustomSource.AddRange(new string[] { "Casado", "Solteiro", "Uniao Estavel", "Outro" });
-            CbEstadoCivil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            CbEstadoCivil.AutoCompleteSource = AutoCompleteSource.ListItems;
-            CbEstadoCivil.BackColor = Color.DarkGray;
-            CbEstadoCivil.FlatStyle = FlatStyle.Flat;
-            CbEstadoCivil.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbEstadoCivil.FormattingEnabled = true;
-            CbEstadoCivil.Items.AddRange(new object[] { "Solteiro", "Casado", "Uniao Estável", "Outro" });
-            CbEstadoCivil.Location = new Point(150, 230);
-            CbEstadoCivil.Name = "CbEstadoCivil";
-            CbEstadoCivil.Size = new Size(160, 31);
-            CbEstadoCivil.TabIndex = 3;
             // 
             // LbEstadoCivil
             // 
@@ -394,6 +340,50 @@
             BtnCancelar.TabIndex = 19;
             BtnCancelar.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.DarkGray;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(150, 150);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = " Digite o nome aqui";
+            textBox1.Size = new Size(287, 31);
+            textBox1.TabIndex = 117;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.DarkGray;
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(150, 190);
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = " Digite o nome aqui";
+            textBox2.Size = new Size(287, 31);
+            textBox2.TabIndex = 118;
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = Color.DarkGray;
+            textBox4.BorderStyle = BorderStyle.FixedSingle;
+            textBox4.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox4.Location = new Point(150, 230);
+            textBox4.Name = "textBox4";
+            textBox4.PlaceholderText = " Digite o nome aqui";
+            textBox4.Size = new Size(287, 31);
+            textBox4.TabIndex = 119;
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = Color.DarkGray;
+            textBox5.BorderStyle = BorderStyle.FixedSingle;
+            textBox5.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox5.Location = new Point(150, 270);
+            textBox5.Name = "textBox5";
+            textBox5.PlaceholderText = " Digite o nome aqui";
+            textBox5.Size = new Size(287, 31);
+            textBox5.TabIndex = 120;
+            // 
             // FormCargos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -420,13 +410,9 @@
         private Panel LbAlterarCadastro;
         private Button BtnLimpar;
         private Panel PnlCtrlFunc;
-        private ComboBox CbGenero;
         private Label label6;
         private Label label4;
         private Label label5;
-        private MaskedTextBox TxtDataNascimento;
-        private MaskedTextBox TxtCpf;
-        private ComboBox CbEstadoCivil;
         private Label LbEstadoCivil;
         private Label LbCpf;
         private Label LbDataNascimento;
@@ -444,5 +430,9 @@
         private Label label8;
         private Label label10;
         private Label label9;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox2;
+        private TextBox textBox1;
     }
 }

@@ -34,13 +34,13 @@
             BtnLimpar = new Button();
             BtnConfirmar = new Button();
             PnlCtrlFunc = new Panel();
-            maskedTextBox2 = new MaskedTextBox();
+            TxtCep = new MaskedTextBox();
             LbCep = new Label();
             TxtTituloEleitor = new TextBox();
             LbTituloEleitor = new Label();
             TxtReservista = new TextBox();
             LbReservista = new Label();
-            maskedTextBox1 = new MaskedTextBox();
+            TxtRg = new MaskedTextBox();
             LbRg = new Label();
             PctCpf = new PictureBox();
             BoxCalendario2 = new MonthCalendar();
@@ -168,13 +168,13 @@
             PnlCtrlFunc.AutoScrollMargin = new Size(0, 90);
             PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
             PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
-            PnlCtrlFunc.Controls.Add(maskedTextBox2);
+            PnlCtrlFunc.Controls.Add(TxtCep);
             PnlCtrlFunc.Controls.Add(LbCep);
             PnlCtrlFunc.Controls.Add(TxtTituloEleitor);
             PnlCtrlFunc.Controls.Add(LbTituloEleitor);
             PnlCtrlFunc.Controls.Add(TxtReservista);
             PnlCtrlFunc.Controls.Add(LbReservista);
-            PnlCtrlFunc.Controls.Add(maskedTextBox1);
+            PnlCtrlFunc.Controls.Add(TxtRg);
             PnlCtrlFunc.Controls.Add(LbRg);
             PnlCtrlFunc.Controls.Add(PctCpf);
             PnlCtrlFunc.Controls.Add(BoxCalendario2);
@@ -229,17 +229,17 @@
             PnlCtrlFunc.TabIndex = 12;
             PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
-            // maskedTextBox2
+            // TxtCep
             // 
-            maskedTextBox2.BackColor = Color.DarkGray;
-            maskedTextBox2.BorderStyle = BorderStyle.FixedSingle;
-            maskedTextBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            maskedTextBox2.ForeColor = SystemColors.WindowText;
-            maskedTextBox2.Location = new Point(172, 831);
-            maskedTextBox2.Mask = "00,000-000";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(100, 31);
-            maskedTextBox2.TabIndex = 121;
+            TxtCep.BackColor = Color.DarkGray;
+            TxtCep.BorderStyle = BorderStyle.FixedSingle;
+            TxtCep.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCep.ForeColor = SystemColors.WindowText;
+            TxtCep.Location = new Point(172, 831);
+            TxtCep.Mask = "00,000-000";
+            TxtCep.Name = "TxtCep";
+            TxtCep.Size = new Size(100, 31);
+            TxtCep.TabIndex = 121;
             // 
             // LbCep
             // 
@@ -293,16 +293,16 @@
             LbReservista.TabIndex = 118;
             LbReservista.Text = " Reservista:";
             // 
-            // maskedTextBox1
+            // TxtRg
             // 
-            maskedTextBox1.BackColor = Color.DarkGray;
-            maskedTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            maskedTextBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            maskedTextBox1.Location = new Point(172, 290);
-            maskedTextBox1.Mask = "00,000,000-0";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(160, 31);
-            maskedTextBox1.TabIndex = 114;
+            TxtRg.BackColor = Color.DarkGray;
+            TxtRg.BorderStyle = BorderStyle.FixedSingle;
+            TxtRg.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtRg.Location = new Point(172, 290);
+            TxtRg.Mask = "00,000,000-0";
+            TxtRg.Name = "TxtRg";
+            TxtRg.Size = new Size(160, 31);
+            TxtRg.TabIndex = 114;
             // 
             // LbRg
             // 
@@ -1049,9 +1049,9 @@
         private Label LbTituloEleitor;
         private TextBox TxtReservista;
         private Label LbReservista;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox TxtRg;
         private Label LbRg;
-        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox TxtCep;
         private Label LbCep;
         private Label label2;
     }

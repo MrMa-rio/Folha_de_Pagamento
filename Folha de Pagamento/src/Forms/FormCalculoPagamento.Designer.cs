@@ -32,6 +32,8 @@
             LbAlterarCadastro = new Panel();
             BtnLimpar = new Button();
             PnlCtrlFunc = new Panel();
+            textBox2 = new TextBox();
+            label6 = new Label();
             textBox1 = new TextBox();
             LbBeneficios = new Label();
             pictureBox1 = new PictureBox();
@@ -53,8 +55,6 @@
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
-            textBox2 = new TextBox();
-            label6 = new Label();
             LbAlterarCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -117,6 +117,27 @@
             PnlCtrlFunc.Name = "PnlCtrlFunc";
             PnlCtrlFunc.Size = new Size(1050, 460);
             PnlCtrlFunc.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.DarkGray;
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(172, 233);
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = " Digite o nome aqui";
+            textBox2.Size = new Size(287, 31);
+            textBox2.TabIndex = 120;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(15, 243);
+            label6.Name = "label6";
+            label6.Size = new Size(80, 21);
+            label6.TabIndex = 121;
+            label6.Text = "Benefícios";
             // 
             // textBox1
             // 
@@ -355,27 +376,6 @@
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 19;
             BtnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.DarkGray;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(172, 233);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = " Digite o nome aqui";
-            textBox2.Size = new Size(287, 31);
-            textBox2.TabIndex = 120;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(15, 243);
-            label6.Name = "label6";
-            label6.Size = new Size(80, 21);
-            label6.TabIndex = 121;
-            label6.Text = "Benefícios";
             // 
             // FormCalculoPagamento
             // 

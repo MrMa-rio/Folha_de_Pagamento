@@ -73,15 +73,21 @@
   </data>
   <data name="LbTitulo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
+        RU5ErkJggg==
 </value>
   </data>
   <data name="BtnConfirmar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

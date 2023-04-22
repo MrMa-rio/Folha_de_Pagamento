@@ -64,6 +64,12 @@ namespace FOLHA_DE_PAGAMENTO_
             handleForm = c_FormShow.setFormShow(FormAtivo, formCargosFun, handleForm);
 
         }
+        private void BtnPesquisar_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormPesquisar formPesquisar = new FormPesquisar();
+            handleForm = c_FormShow.setFormShow(FormAtivo, formPesquisar, handleForm);
+        }
+
         private void BtnCalculoPagamento_MouseClick(object sender, MouseEventArgs e)
         {
             FormCalculoPagamento formCalculoPagamento = new FormCalculoPagamento(this);
