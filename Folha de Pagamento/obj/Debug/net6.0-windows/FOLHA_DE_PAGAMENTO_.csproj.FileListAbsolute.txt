@@ -82,3 +82,4 @@ C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\
 C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.pdb
 C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.genruntimeconfig.cache
 C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\ref\FOLHA_DE_PAGAMENTO_.dll
+C:\Users\Mario\Documents\GitHub\Folha_de_Pagamento\Folha de Pagamento\obj\Debug\net6.0-windows\FOLHA_DE_PAGAMENTO_.src.Forms.FormShowDadosCadastrais.resources

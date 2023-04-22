@@ -68,10 +68,29 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnPesquisar_MouseClick(object sender, MouseEventArgs e)
         {
-            string[] Result = new string[9];
-            C_SearchInDataBase c_SearchInDataBase = new C_SearchInDataBase();
-            Result = c_SearchInDataBase.getDatainTable(Convert.ToInt32(TxtMatricula.Text), TxtNomeCompleto.Text); //Corrigir
-            TxtNomeCompleto.Text = Result[0];
+
+            C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
+            c_ShowDataUsers.setShowDataUser(TxtNomeCompleto, TxtCpf, CbEstadoCivil, CbGenero, TxtRg, TxtMatricula);
+        }
+        private void BtnEditar_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_EnableBoxCadastro c_EnableBoxCadastro = new C_EnableBoxCadastro();
+            c_EnableBoxCadastro.setEnableAltCadastro(this);
+        }
+
+        private void TxtRg_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtRg.SelectAll();
+        }
+
+        private void TxtTelefone_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtTelefone.SelectAll();
+        }
+
+        private void TxtCep_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtCep.SelectAll();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using FOLHA_DE_PAGAMENTO_.src.Forms;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         private string Password = "";
         private string TargetDB = "meudt";
 
-        public void setDatainTable(string table, string columnsTable, string values)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
+        public void setDatainTable(string table, string columnsTable, string values, string[] result)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
             string insertSql = $"INSERT INTO {table} ({columnsTable}) VALUES ({values})";
@@ -22,14 +23,15 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             conexão = new MySqlConnection();
             try
             {
-
                 conexão.ConnectionString = endereco;
-
                 MySqlCommand command = new MySqlCommand(insertSql, conexão);
-
                 conexão.Open();
                 command.ExecuteReader();
-                
+                MessageBox.Show("Cadastro realizado com Sucesso!!");
+                //MessageBox.Show(result, "Dados Enviados", MessageBoxButtons.OK);
+                FormShowDadosCadastrais formShowDadosCadastrais = new FormShowDadosCadastrais(result);
+                formShowDadosCadastrais.ShowDialog();
+
             }
             catch (MySqlException ex)
             {
@@ -47,6 +49,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         }
         public void setDatainTbFuncionarios(TextBox TxtNomeCompleto, bool ValidadorCPF, ComboBox CbEstadoCivil, ComboBox CbGenero, MaskedTextBox TxtCpf, MaskedTextBox TxtRg)
         {
+            string[] result = new string[] { TxtNomeCompleto.Text, TxtCpf.Text, TxtRg.Text, CbGenero.Text };
+
             if (TxtNomeCompleto.Text.Length < 4 || !ValidadorCPF || CbEstadoCivil.Text == "" || CbGenero.Text == "" || TxtRg.Text.Length < 4)
             {
                 MessageBox.Show("Preencha os campos do Cadastro.");
@@ -59,7 +63,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                 {
                     string fillColumns = "NomeCompleto,CPF,EstadoCivil, Genero, RG";
                     string values = $"'{TxtNomeCompleto.Text}','{TxtCpf.Text}','{CbEstadoCivil.Text}','{CbGenero.Text}','{TxtRg.Text}'";
-                    setDatainTable("tbfuncionarios", fillColumns, values);
+                    setDatainTable("tbfuncionarios", fillColumns, values, result);
                 }
             }
         }

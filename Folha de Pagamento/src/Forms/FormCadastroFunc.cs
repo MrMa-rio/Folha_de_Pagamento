@@ -25,8 +25,10 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void TxtCpf_TextChanged(object sender, EventArgs e)
         {
+            LbCpfResult.Text = TxtCpf.Text;
             C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
             ValidadorCPF = c_ValidadorCPF.setValidacao(TxtCpf, PctCpf);
+
         }
 
         private void BtnCalendario_MouseClick(object sender, MouseEventArgs e)
@@ -75,7 +77,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void TxtCep_MouseClick(object sender, MouseEventArgs e)
         {
-            // TxtCep.SelectAll();
+            TxtCep.SelectAll();
         }
 
         private void TxtDataEmissao_MouseClick(object sender, MouseEventArgs e)
@@ -85,6 +87,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
         {
+            
             C_InsertAndUpdate c_InsertAndUpdate = new C_InsertAndUpdate();
             c_InsertAndUpdate.setDatainTbFuncionarios(TxtNomeCompleto, ValidadorCPF, CbEstadoCivil, CbGenero, TxtCpf, TxtRg);
 
@@ -97,6 +100,26 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 Close();
             }
+        }
+
+        private void TxtNomeCompleto_TextChanged(object sender, EventArgs e)
+        {
+            LbNomeCompletoResult.Text = TxtNomeCompleto.Text;
+        }
+
+        private void TxtDataNascimento_TextChanged(object sender, EventArgs e)
+        {
+            LbDataNascimentoResult.Text = TxtDataNascimento.Text;
+        }
+
+        private void TxtTelefone_TextChanged(object sender, EventArgs e)
+        {
+            LbTelefoneResult.Text = TxtTelefone.Text;
+        }
+
+        private void CbCargo_TextChanged(object sender, EventArgs e)
+        {
+            LbCargoResult.Text = CbCargo.Text;
         }
     }
 }
