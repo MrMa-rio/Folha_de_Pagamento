@@ -910,10 +910,10 @@
             // LbMatricula
             // 
             LbMatricula.AutoSize = true;
-            LbMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            LbMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             LbMatricula.Location = new Point(67, 103);
             LbMatricula.Name = "LbMatricula";
-            LbMatricula.Size = new Size(96, 25);
+            LbMatricula.Size = new Size(101, 25);
             LbMatricula.TabIndex = 8;
             LbMatricula.Text = "Matrícula:";
             // 
