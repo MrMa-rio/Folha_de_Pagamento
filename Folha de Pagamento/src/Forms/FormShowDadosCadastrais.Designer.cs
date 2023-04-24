@@ -36,6 +36,10 @@
             TxtMatricula = new Label();
             TxtNomeCompleto = new Label();
             PnlInformacoesFunc = new Panel();
+            TxtDataAdmissao = new Label();
+            TxtCargo = new Label();
+            label12 = new Label();
+            label10 = new Label();
             TxtGenero = new Label();
             TxtRg = new MaskedTextBox();
             TxtCpf = new MaskedTextBox();
@@ -58,7 +62,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(37, 128);
+            label2.Location = new Point(37, 96);
             label2.Name = "label2";
             label2.Size = new Size(69, 21);
             label2.TabIndex = 1;
@@ -68,7 +72,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(37, 208);
+            label3.Location = new Point(37, 142);
             label3.Name = "label3";
             label3.Size = new Size(42, 21);
             label3.TabIndex = 2;
@@ -78,7 +82,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(37, 288);
+            label4.Location = new Point(37, 190);
             label4.Name = "label4";
             label4.Size = new Size(35, 21);
             label4.TabIndex = 3;
@@ -88,7 +92,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(37, 368);
+            label5.Location = new Point(37, 334);
             label5.Name = "label5";
             label5.Size = new Size(206, 21);
             label5.TabIndex = 4;
@@ -98,7 +102,7 @@
             // 
             TxtMatricula.AutoSize = true;
             TxtMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtMatricula.Location = new Point(242, 368);
+            TxtMatricula.Location = new Point(242, 331);
             TxtMatricula.Name = "TxtMatricula";
             TxtMatricula.Size = new Size(52, 25);
             TxtMatricula.TabIndex = 9;
@@ -108,7 +112,7 @@
             // 
             TxtNomeCompleto.AutoSize = true;
             TxtNomeCompleto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtNomeCompleto.Location = new Point(242, 48);
+            TxtNomeCompleto.Location = new Point(242, 45);
             TxtNomeCompleto.MaximumSize = new Size(220, 22);
             TxtNomeCompleto.Name = "TxtNomeCompleto";
             TxtNomeCompleto.Size = new Size(0, 22);
@@ -117,7 +121,12 @@
             // PnlInformacoesFunc
             // 
             PnlInformacoesFunc.AutoScroll = true;
+            PnlInformacoesFunc.AutoScrollMargin = new Size(0, 25);
             PnlInformacoesFunc.BackColor = Color.LightGray;
+            PnlInformacoesFunc.Controls.Add(TxtDataAdmissao);
+            PnlInformacoesFunc.Controls.Add(TxtCargo);
+            PnlInformacoesFunc.Controls.Add(label12);
+            PnlInformacoesFunc.Controls.Add(label10);
             PnlInformacoesFunc.Controls.Add(TxtGenero);
             PnlInformacoesFunc.Controls.Add(TxtRg);
             PnlInformacoesFunc.Controls.Add(TxtCpf);
@@ -133,11 +142,49 @@
             PnlInformacoesFunc.Size = new Size(436, 427);
             PnlInformacoesFunc.TabIndex = 10;
             // 
+            // TxtDataAdmissao
+            // 
+            TxtDataAdmissao.AutoSize = true;
+            TxtDataAdmissao.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDataAdmissao.Location = new Point(242, 283);
+            TxtDataAdmissao.Name = "TxtDataAdmissao";
+            TxtDataAdmissao.Size = new Size(0, 25);
+            TxtDataAdmissao.TabIndex = 18;
+            // 
+            // TxtCargo
+            // 
+            TxtCargo.AutoSize = true;
+            TxtCargo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCargo.Location = new Point(243, 235);
+            TxtCargo.Name = "TxtCargo";
+            TxtCargo.Size = new Size(0, 25);
+            TxtCargo.TabIndex = 17;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(37, 238);
+            label12.Name = "label12";
+            label12.Size = new Size(59, 21);
+            label12.TabIndex = 16;
+            label12.Text = "Cargo:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(37, 286);
+            label10.Name = "label10";
+            label10.Size = new Size(128, 21);
+            label10.TabIndex = 15;
+            label10.Text = "Data Admissao:";
+            // 
             // TxtGenero
             // 
             TxtGenero.AutoSize = true;
             TxtGenero.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtGenero.Location = new Point(242, 124);
+            TxtGenero.Location = new Point(242, 94);
             TxtGenero.Name = "TxtGenero";
             TxtGenero.Size = new Size(0, 25);
             TxtGenero.TabIndex = 13;
@@ -148,7 +195,7 @@
             TxtRg.BorderStyle = BorderStyle.None;
             TxtRg.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtRg.ForeColor = SystemColors.WindowText;
-            TxtRg.Location = new Point(242, 285);
+            TxtRg.Location = new Point(242, 190);
             TxtRg.Mask = "00,000,000-0";
             TxtRg.Name = "TxtRg";
             TxtRg.ReadOnly = true;
@@ -163,7 +210,7 @@
             TxtCpf.BorderStyle = BorderStyle.None;
             TxtCpf.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCpf.ForeColor = SystemColors.WindowText;
-            TxtCpf.Location = new Point(242, 205);
+            TxtCpf.Location = new Point(242, 139);
             TxtCpf.Mask = "000,000,000-00";
             TxtCpf.Name = "TxtCpf";
             TxtCpf.ReadOnly = true;
@@ -232,5 +279,9 @@
         private MaskedTextBox TxtCpf;
         private Label TxtGenero;
         private Button BtnOK;
+        private Label TxtDataAdmissao;
+        private Label TxtCargo;
+        private Label label12;
+        private Label label10;
     }
 }

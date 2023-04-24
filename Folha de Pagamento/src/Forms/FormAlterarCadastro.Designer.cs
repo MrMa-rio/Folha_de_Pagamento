@@ -31,6 +31,7 @@
             Button BtnEditar;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             panel1 = new Panel();
+            TxtMatricula = new MaskedTextBox();
             BtnLimpar = new Button();
             BtnConfirmar = new Button();
             PnlCtrlFunc = new Panel();
@@ -92,7 +93,6 @@
             BtnCancelar = new Button();
             btnPesquisar = new Button();
             LbMatricula = new Label();
-            TxtMatricula = new TextBox();
             panel3 = new Panel();
             label2 = new Label();
             pictureBox1 = new PictureBox();
@@ -122,13 +122,13 @@
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
+            panel1.Controls.Add(TxtMatricula);
             panel1.Controls.Add(BtnLimpar);
             panel1.Controls.Add(BtnConfirmar);
             panel1.Controls.Add(PnlCtrlFunc);
             panel1.Controls.Add(BtnCancelar);
             panel1.Controls.Add(btnPesquisar);
             panel1.Controls.Add(LbMatricula);
-            panel1.Controls.Add(TxtMatricula);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(LbTitulo);
             panel1.Controls.Add(label1);
@@ -137,6 +137,22 @@
             panel1.Size = new Size(1110, 630);
             panel1.TabIndex = 0;
             panel1.MouseClick += AllForms_MouseClick;
+            // 
+            // TxtMatricula
+            // 
+            TxtMatricula.BackColor = Color.DarkGray;
+            TxtMatricula.BorderStyle = BorderStyle.FixedSingle;
+            TxtMatricula.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtMatricula.Location = new Point(169, 103);
+            TxtMatricula.Mask = "00000";
+            TxtMatricula.Name = "TxtMatricula";
+            TxtMatricula.PromptChar = ' ';
+            TxtMatricula.RightToLeft = RightToLeft.No;
+            TxtMatricula.Size = new Size(88, 31);
+            TxtMatricula.TabIndex = 117;
+            TxtMatricula.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtMatricula.Click += TxtMatricula_Click;
+            TxtMatricula.KeyDown += TxtMatricula_KeyDown;
             // 
             // BtnLimpar
             // 
@@ -900,7 +916,7 @@
             btnPesquisar.FlatAppearance.BorderSize = 0;
             btnPesquisar.FlatStyle = FlatStyle.Flat;
             btnPesquisar.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPesquisar.Location = new Point(312, 103);
+            btnPesquisar.Location = new Point(265, 103);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(32, 32);
             btnPesquisar.TabIndex = 3;
@@ -910,24 +926,12 @@
             // LbMatricula
             // 
             LbMatricula.AutoSize = true;
-            LbMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            LbMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             LbMatricula.Location = new Point(67, 103);
             LbMatricula.Name = "LbMatricula";
-            LbMatricula.Size = new Size(96, 25);
+            LbMatricula.Size = new Size(101, 25);
             LbMatricula.TabIndex = 8;
             LbMatricula.Text = "Matrícula:";
-            // 
-            // TxtMatricula
-            // 
-            TxtMatricula.BackColor = Color.DarkGray;
-            TxtMatricula.BorderStyle = BorderStyle.FixedSingle;
-            TxtMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtMatricula.Location = new Point(169, 103);
-            TxtMatricula.MaxLength = 6;
-            TxtMatricula.Name = "TxtMatricula";
-            TxtMatricula.PlaceholderText = " XX-XXXX";
-            TxtMatricula.Size = new Size(134, 32);
-            TxtMatricula.TabIndex = 1;
             // 
             // panel3
             // 
@@ -1018,7 +1022,6 @@
         private Label LbTitulo;
         private Label label1;
         private Panel panel3;
-        private TextBox TxtMatricula;
         private Label LbMatricula;
         private Button btnPesquisar;
         private PictureBox pictureBox1;
@@ -1082,5 +1085,6 @@
         internal TextBox TxtCTrabalho;
         internal TextBox TxtNit;
         internal ComboBox CbCargo;
+        private MaskedTextBox TxtMatricula;
     }
 }

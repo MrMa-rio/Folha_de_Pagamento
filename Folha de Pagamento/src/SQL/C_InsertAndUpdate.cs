@@ -13,7 +13,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         private string IP = "localhost";
         private string User = "root";
         private string Password = "";
-        private string TargetDB = "meudt";
+        private string TargetDB = "bd";
 
         public void setDatainTable(string table, string columnsTable, string values, string[] result)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {
@@ -28,10 +28,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                 conexão.Open();
                 command.ExecuteReader();
                 MessageBox.Show("Cadastro realizado com Sucesso!!");
-                //MessageBox.Show(result, "Dados Enviados", MessageBoxButtons.OK);
-                FormShowDadosCadastrais formShowDadosCadastrais = new FormShowDadosCadastrais(result);
+                FormShowDadosCadastrais formShowDadosCadastrais = new FormShowDadosCadastrais(result); //arrumar no demostrativo de cadastro
                 formShowDadosCadastrais.ShowDialog();
-
             }
             catch (MySqlException ex)
             {
@@ -45,13 +43,26 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             {
                 conexão.Close();
             }
-
         }
-        public void setDatainTbFuncionarios(TextBox TxtNomeCompleto, bool ValidadorCPF, ComboBox CbEstadoCivil, ComboBox CbGenero, MaskedTextBox TxtCpf, MaskedTextBox TxtRg)
-        {
-            string[] result = new string[] { TxtNomeCompleto.Text, TxtCpf.Text, TxtRg.Text, CbGenero.Text };
+        public void setDatainTbFuncionarios(TextBox TxtNomeCompleto,
+                                            string TxtDataNascimento,
+                                            MaskedTextBox TxtNit,
+                                            MaskedTextBox TxtPis,
+                                            MaskedTextBox TxtTituloEleitor,
+                                            string CbDepartamento,
+                                            string CbCargo,
+                                            string DataAdmissao,
+                                            MaskedTextBox TxtReservista,
+                                            bool ValidadorCPF,
+                                            ComboBox CbEstadoCivil,
+                                            ComboBox CbGenero,
+                                            MaskedTextBox TxtCpf,
+                                            MaskedTextBox TxtRg)
 
-            if (TxtNomeCompleto.Text.Length < 4 || !ValidadorCPF || CbEstadoCivil.Text == "" || CbGenero.Text == "" || TxtRg.Text.Length < 4)
+        {
+            string[] result = new string[] {TxtCpf.Text, TxtNomeCompleto.Text, TxtDataNascimento, CbGenero.Text, TxtRg.Text, TxtNit.Text, TxtPis.Text, TxtTituloEleitor.Text, CbEstadoCivil.Text, CbDepartamento, CbCargo, DataAdmissao };
+
+            if (TxtNomeCompleto.Text.Length < 4 || !ValidadorCPF || CbEstadoCivil.Text == "" || CbGenero.Text == "" || TxtRg.Text.Length < 9 || TxtNit.Text == "" || TxtPis.Text == "" || CbDepartamento == "0" || CbCargo == "0")
             {
                 MessageBox.Show("Preencha os campos do Cadastro.");
             }
@@ -61,11 +72,27 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
 
                 if (alertBox == DialogResult.OK)
                 {
-                    string fillColumns = "NomeCompleto,CPF,EstadoCivil, Genero, RG";
-                    string values = $"'{TxtNomeCompleto.Text}','{TxtCpf.Text}','{CbEstadoCivil.Text}','{CbGenero.Text}','{TxtRg.Text}'";
-                    setDatainTable("tbfuncionarios", fillColumns, values, result);
+                    string fillColumns = "CPF, Nome, DATA_Nascimento, Sexo, RG, NIT, PIS, Titulo_Eleitor, Estado_Civel, Reservista, Senha, Data_Admissao, FK_Departamento, FK_Cargo, FK_Empresa";
+                    string values = $"'{TxtCpf.Text}','{TxtNomeCompleto.Text}','{TxtDataNascimento}','{CbGenero.Text}','{TxtRg.Text}','{TxtNit.Text}','{TxtPis.Text}','{TxtTituloEleitor.Text}','{CbEstadoCivil.Text}','{TxtReservista.Text}','123456', '{DataAdmissao}',{CbDepartamento}, {CbCargo}, 1 "; //hardcode
+                    setDatainTable("funcionario", fillColumns, values, result);   //hardcode
+
                 }
             }
         }
     }
 }
+
+/*
+
+    Corrigir os parametros dos metodos do SQL para comportar as novas alterações
+    Fazer as devidas alterações no Forms Alterar Cadastro.
+    Fazer as alterações em cada instancia dos metodos.
+
+ */
+
+/*
+        
+    Comecar a pensar em como ira editar os dados vindo no Alterar
+    Cadastro.
+
+ */

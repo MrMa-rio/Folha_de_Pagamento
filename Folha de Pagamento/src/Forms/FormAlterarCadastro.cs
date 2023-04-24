@@ -70,7 +70,13 @@ namespace FOLHA_DE_PAGAMENTO_
         {
 
             C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
-            c_ShowDataUsers.setShowDataUser(TxtNomeCompleto, TxtCpf, CbEstadoCivil, CbGenero, TxtRg, TxtMatricula);
+            bool alert;
+            alert = c_ShowDataUsers.setShowDataUser(TxtNomeCompleto, TxtCpf, CbEstadoCivil, CbGenero, TxtRg, TxtMatricula);
+
+            if (!alert)
+            {
+                MessageBox.Show("Matrícula Inválida!");
+            }
         }
         private void BtnEditar_MouseClick(object sender, MouseEventArgs e)
         {
@@ -91,6 +97,25 @@ namespace FOLHA_DE_PAGAMENTO_
         private void TxtCep_MouseClick(object sender, MouseEventArgs e)
         {
             TxtCep.SelectAll();
+        }
+
+        private void TxtMatricula_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
+                c_ShowDataUsers.setShowDataUser(TxtNomeCompleto, TxtCpf, CbEstadoCivil, CbGenero, TxtRg, TxtMatricula);
+            }
+        }
+
+        private void TxtMatricula_Click(object sender, EventArgs e)
+        {
+            TxtMatricula.SelectAll();
+        }
+
+        private void TxtMatricula_TextChanged(object sender, EventArgs e)
+        {
+            TxtNomeCompleto.Text = TxtMatricula.Text;
         }
     }
 }

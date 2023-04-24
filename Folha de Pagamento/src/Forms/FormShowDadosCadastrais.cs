@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FOLHA_DE_PAGAMENTO_.src.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,11 +26,14 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
         }
         private void FormShowDadosCadastrais_Load(object sender, EventArgs e)
         {
-            TxtNomeCompleto.Text = Result[0];
-            TxtCpf.Text = Result[1];
-            //TxtDataNascimento.Text = Result[2];
-            TxtRg.Text = Result[2];
+
+            TxtNomeCompleto.Text = Result[1];
+            TxtCpf.Text = Result[0];
+            TxtRg.Text = Result[4];
             TxtGenero.Text = Result[3];
+            TxtCargo.Text = Result[10];
+            TxtDataAdmissao.Text = Result[11];
+
         }
 
         private void BtnOK_MouseClick(object sender, MouseEventArgs e)
