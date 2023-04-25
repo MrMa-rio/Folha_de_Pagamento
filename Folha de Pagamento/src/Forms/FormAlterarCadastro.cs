@@ -40,8 +40,9 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnCalendario2_MouseClick(object sender, MouseEventArgs e)
         {
-            BoxCalendario2.Location = new Point(469, 214);
+
             BoxCalendario2.Visible = !BoxCalendario2.Visible ? true : false;
+            BoxCalendario2.Location = new Point(444, BtnCalendario2.Location.Y);
         }
         private void BoxCalendario2_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -70,13 +71,10 @@ namespace FOLHA_DE_PAGAMENTO_
         {
 
             C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
-            bool alert;
+            bool alert, alert2;
             alert = c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto, TxtCalendario, CbGenero, TxtRg, TxtNit, TxtPis, TxtTituloEleitor, CbEstadoCivil, TxtReservista, TxtDataAdmissao, CbDepartamento, CbCargo, TxtMatricula); //adicionar textbox dos parametros que falta!! e testar as entradas.
-
-            if (!alert)
-            {
-                MessageBox.Show("Matrícula Inválida!");
-            }
+            alert2 = c_ShowDataUsers.setShowEndereco(TxtRua, TxtNumRua, TxtBairro, TxtComplemento, CbUF, TxtCidade, TxtCep, TxtMatricula);
+            
         }
         private void BtnEditar_MouseClick(object sender, MouseEventArgs e)
         {
@@ -104,9 +102,10 @@ namespace FOLHA_DE_PAGAMENTO_
             if (e.KeyCode == Keys.Enter)
             {
                 C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
-
-                c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto, TxtCalendario, CbGenero, TxtRg, TxtNit, TxtPis, TxtTituloEleitor, CbEstadoCivil, TxtReservista, TxtDataAdmissao, CbDepartamento, CbCargo, TxtMatricula); //adicionar textbox dos parametros que falta!! e testar as entradas.
-
+                bool alert, alert2;
+                alert = c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto, TxtCalendario, CbGenero, TxtRg, TxtNit, TxtPis, TxtTituloEleitor, CbEstadoCivil, TxtReservista, TxtDataAdmissao, CbDepartamento, CbCargo, TxtMatricula); //adicionar textbox dos parametros que falta!! e testar as entradas.
+                alert2 = c_ShowDataUsers.setShowEndereco(TxtRua, TxtNumRua, TxtBairro, TxtComplemento, CbUF, TxtCidade, TxtCep, TxtMatricula);
+                
             }
         }
 

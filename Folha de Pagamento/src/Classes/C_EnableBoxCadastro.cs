@@ -20,7 +20,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formAlterarCadastro.TxtTituloEleitor.Enabled = true;
             //formAlterarCadastro.BtnCalendario.Enabled = true;
             //formAlterarCadastro.PctCpf.Enabled = true;
-
+            formAlterarCadastro.BtnCalendario.Enabled = true;
+            formAlterarCadastro.BtnCalendario2.Enabled = true;
             formAlterarCadastro.TxtTelefone.Enabled = true;
             formAlterarCadastro.TxtEmail.Enabled = true;
             formAlterarCadastro.TxtRua.Enabled = true;
@@ -33,6 +34,9 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formAlterarCadastro.TxtPis.Enabled = true;
             formAlterarCadastro.CbDepartamento.Enabled = true;
 
+            formAlterarCadastro.TxtNumRua.Enabled=true;
+            formAlterarCadastro.TxtCalendario.Enabled = true;
+            formAlterarCadastro.TxtDataAdmissao.Enabled = true;
             formAlterarCadastro.TxtReservista.Enabled = true;
             formAlterarCadastro.TxtNit.Enabled = true;
             formAlterarCadastro.TxtTituloEleitor.Enabled = true;

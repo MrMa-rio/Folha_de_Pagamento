@@ -21,6 +21,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             InitializeComponent();
             FormAtivo = NavBar;
+
         }
 
         private void TxtCpf_TextChanged(object sender, EventArgs e)
@@ -43,13 +44,15 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnCalendario2_MouseClick(object sender, MouseEventArgs e)
         {
-            BoxCalendario2.Location = new Point(469, 214);
             BoxCalendario2.Visible = !BoxCalendario2.Visible ? true : false;
+            BoxCalendario2.Location = new Point(444, BtnCalendario2.Location.Y);
+
         }
 
         private void BoxCalendario2_DateSelected(object sender, DateRangeEventArgs e)
         {
             TxtDataAdmissao.Text = BoxCalendario2.SelectionEnd.ToString();
+
         }
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
         {
@@ -93,9 +96,10 @@ namespace FOLHA_DE_PAGAMENTO_
             string cargo = c_HandleCargoSalario.setIdCargo(CbCargo.Text);
             string DataNascimento = c_InvertendoData.setDateInvert(TxtDataNascimento.Text, '/');
             string DataAdmissao = c_InvertendoData.setDateInvert(TxtDataAdmissao.Text, '/');
-
-            C_InsertAndUpdate c_InsertAndUpdate = new C_InsertAndUpdate();
-            c_InsertAndUpdate.setDatainTbFuncionarios(TxtNomeCompleto, DataNascimento, TxtNit, TxtPis, TxtTituloEleitor, departamento, cargo, DataAdmissao, TxtReservista, ValidadorCPF, CbEstadoCivil, CbGenero, TxtCpf, TxtRg, CbCargo);
+            string[] dataCadastroPessoal = new string[] { TxtNomeCompleto.Text, DataNascimento, TxtNit.Text, TxtPis.Text, TxtTituloEleitor.Text, departamento, cargo, DataAdmissao, TxtReservista.Text, ValidadorCPF.ToString(), CbEstadoCivil.Text, CbGenero.Text, TxtCpf.Text, TxtRg.Text, CbCargo.Text };
+            string[] dataCadastroAdicional = new string[] { TxtRua.Text, TxtNumRua.Value.ToString(), TxtBairro.Text, TxtComplemento.Text, CbUF.Text, TxtCidade.Text, TxtCep.Text };
+            C_InsertData c_InsertAndUpdate = new C_InsertData();
+            c_InsertAndUpdate.setDatainDB(dataCadastroPessoal, dataCadastroAdicional);
 
         }
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)

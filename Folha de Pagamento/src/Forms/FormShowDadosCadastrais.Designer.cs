@@ -36,6 +36,8 @@
             TxtMatricula = new Label();
             TxtNomeCompleto = new Label();
             PnlInformacoesFunc = new Panel();
+            TxtCargo = new Label();
+            label6 = new Label();
             TxtDataAdmissao = new MaskedTextBox();
             TxtIdCargo = new Label();
             label12 = new Label();
@@ -45,8 +47,6 @@
             TxtCpf = new MaskedTextBox();
             label11 = new Label();
             BtnOK = new Button();
-            label6 = new Label();
-            TxtCargo = new Label();
             PnlInformacoesFunc.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(37, 48);
+            label1.Location = new Point(17, 48);
             label1.Name = "label1";
             label1.Size = new Size(140, 21);
             label1.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(37, 96);
+            label2.Location = new Point(17, 96);
             label2.Name = "label2";
             label2.Size = new Size(69, 21);
             label2.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(37, 142);
+            label3.Location = new Point(17, 142);
             label3.Name = "label3";
             label3.Size = new Size(42, 21);
             label3.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(37, 190);
+            label4.Location = new Point(17, 190);
             label4.Name = "label4";
             label4.Size = new Size(35, 21);
             label4.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(37, 371);
+            label5.Location = new Point(17, 371);
             label5.Name = "label5";
             label5.Size = new Size(206, 21);
             label5.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             TxtMatricula.AutoSize = true;
             TxtMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtMatricula.Location = new Point(242, 368);
+            TxtMatricula.Location = new Point(222, 368);
             TxtMatricula.Name = "TxtMatricula";
             TxtMatricula.Size = new Size(52, 25);
             TxtMatricula.TabIndex = 9;
@@ -114,7 +114,7 @@
             // 
             TxtNomeCompleto.AutoSize = true;
             TxtNomeCompleto.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtNomeCompleto.Location = new Point(242, 45);
+            TxtNomeCompleto.Location = new Point(222, 45);
             TxtNomeCompleto.MaximumSize = new Size(220, 22);
             TxtNomeCompleto.Name = "TxtNomeCompleto";
             TxtNomeCompleto.Size = new Size(0, 22);
@@ -146,13 +146,33 @@
             PnlInformacoesFunc.Size = new Size(436, 427);
             PnlInformacoesFunc.TabIndex = 10;
             // 
+            // TxtCargo
+            // 
+            TxtCargo.AutoSize = true;
+            TxtCargo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCargo.Location = new Point(222, 281);
+            TxtCargo.MaximumSize = new Size(220, 22);
+            TxtCargo.Name = "TxtCargo";
+            TxtCargo.Size = new Size(0, 22);
+            TxtCargo.TabIndex = 20;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(17, 284);
+            label6.Name = "label6";
+            label6.Size = new Size(59, 21);
+            label6.TabIndex = 19;
+            label6.Text = "Cargo:";
+            // 
             // TxtDataAdmissao
             // 
             TxtDataAdmissao.BackColor = Color.LightGray;
             TxtDataAdmissao.BorderStyle = BorderStyle.None;
             TxtDataAdmissao.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtDataAdmissao.ForeColor = SystemColors.WindowText;
-            TxtDataAdmissao.Location = new Point(242, 320);
+            TxtDataAdmissao.Location = new Point(222, 320);
             TxtDataAdmissao.Mask = "00/00/0000";
             TxtDataAdmissao.Name = "TxtDataAdmissao";
             TxtDataAdmissao.ReadOnly = true;
@@ -164,7 +184,7 @@
             // 
             TxtIdCargo.AutoSize = true;
             TxtIdCargo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtIdCargo.Location = new Point(243, 235);
+            TxtIdCargo.Location = new Point(223, 235);
             TxtIdCargo.Name = "TxtIdCargo";
             TxtIdCargo.Size = new Size(0, 25);
             TxtIdCargo.TabIndex = 17;
@@ -173,7 +193,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(37, 238);
+            label12.Location = new Point(17, 238);
             label12.Name = "label12";
             label12.Size = new Size(78, 21);
             label12.TabIndex = 16;
@@ -183,7 +203,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(37, 323);
+            label10.Location = new Point(17, 323);
             label10.Name = "label10";
             label10.Size = new Size(128, 21);
             label10.TabIndex = 15;
@@ -193,7 +213,7 @@
             // 
             TxtGenero.AutoSize = true;
             TxtGenero.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtGenero.Location = new Point(242, 94);
+            TxtGenero.Location = new Point(222, 94);
             TxtGenero.Name = "TxtGenero";
             TxtGenero.Size = new Size(0, 25);
             TxtGenero.TabIndex = 13;
@@ -204,7 +224,7 @@
             TxtRg.BorderStyle = BorderStyle.None;
             TxtRg.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtRg.ForeColor = SystemColors.WindowText;
-            TxtRg.Location = new Point(242, 190);
+            TxtRg.Location = new Point(222, 190);
             TxtRg.Mask = "00,000,000-0";
             TxtRg.Name = "TxtRg";
             TxtRg.ReadOnly = true;
@@ -219,7 +239,7 @@
             TxtCpf.BorderStyle = BorderStyle.None;
             TxtCpf.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCpf.ForeColor = SystemColors.WindowText;
-            TxtCpf.Location = new Point(242, 139);
+            TxtCpf.Location = new Point(222, 139);
             TxtCpf.Mask = "000,000,000-00";
             TxtCpf.Name = "TxtCpf";
             TxtCpf.ReadOnly = true;
@@ -250,26 +270,6 @@
             BtnOK.Text = "OK";
             BtnOK.UseVisualStyleBackColor = false;
             BtnOK.MouseClick += BtnOK_MouseClick;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(37, 284);
-            label6.Name = "label6";
-            label6.Size = new Size(59, 21);
-            label6.TabIndex = 19;
-            label6.Text = "Cargo:";
-            // 
-            // TxtCargo
-            // 
-            TxtCargo.AutoSize = true;
-            TxtCargo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCargo.Location = new Point(242, 281);
-            TxtCargo.MaximumSize = new Size(220, 22);
-            TxtCargo.Name = "TxtCargo";
-            TxtCargo.Size = new Size(0, 22);
-            TxtCargo.TabIndex = 20;
             // 
             // FormShowDadosCadastrais
             // 
