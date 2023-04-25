@@ -239,9 +239,9 @@
             label61.Location = new Point(620, 25);
             label61.MaximumSize = new Size(85, 19);
             label61.Name = "label61";
-            label61.Size = new Size(81, 19);
+            label61.Size = new Size(68, 19);
             label61.TabIndex = 78;
-            label61.Text = "000000000";
+            label61.Text = "R$182,67";
             // 
             // label60
             // 
@@ -250,9 +250,9 @@
             label60.Location = new Point(800, 25);
             label60.MaximumSize = new Size(85, 19);
             label60.Name = "label60";
-            label60.Size = new Size(81, 19);
+            label60.Size = new Size(76, 19);
             label60.TabIndex = 77;
-            label60.Text = "000000000";
+            label60.Text = "R$2097,39";
             // 
             // label59
             // 
@@ -261,9 +261,9 @@
             label59.Location = new Point(430, 25);
             label59.MaximumSize = new Size(85, 19);
             label59.Name = "label59";
-            label59.Size = new Size(81, 19);
+            label59.Size = new Size(76, 19);
             label59.TabIndex = 76;
-            label59.Text = "000000000";
+            label59.Text = "R$2283,36";
             // 
             // label58
             // 
@@ -272,9 +272,9 @@
             label58.Location = new Point(240, 25);
             label58.MaximumSize = new Size(85, 19);
             label58.Name = "label58";
-            label58.Size = new Size(81, 19);
+            label58.Size = new Size(76, 19);
             label58.TabIndex = 75;
-            label58.Text = "000000000";
+            label58.Text = "R$2283,36";
             // 
             // label57
             // 
@@ -283,9 +283,9 @@
             label57.Location = new Point(50, 25);
             label57.MaximumSize = new Size(85, 19);
             label57.Name = "label57";
-            label57.Size = new Size(81, 19);
+            label57.Size = new Size(76, 19);
             label57.TabIndex = 74;
-            label57.Text = "000000000";
+            label57.Text = "R$2283,36";
             // 
             // label56
             // 
@@ -471,12 +471,13 @@
             label43.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label43.AutoSize = true;
             label43.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label43.ForeColor = Color.DarkGreen;
             label43.Location = new Point(3, 10);
             label43.MaximumSize = new Size(88, 19);
             label43.Name = "label43";
-            label43.Size = new Size(81, 19);
+            label43.Size = new Size(76, 19);
             label43.TabIndex = 73;
-            label43.Text = "000000000000";
+            label43.Text = "R$2082,89";
             // 
             // panel12
             // 
@@ -492,12 +493,13 @@
             label42.Anchor = AnchorStyles.Left;
             label42.AutoSize = true;
             label42.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label42.ForeColor = Color.Red;
             label42.Location = new Point(3, 9);
             label42.MaximumSize = new Size(88, 19);
             label42.Name = "label42";
-            label42.Size = new Size(81, 19);
+            label42.Size = new Size(68, 19);
             label42.TabIndex = 73;
-            label42.Text = "0000000000000";
+            label42.Text = "R$200,47";
             // 
             // panel11
             // 
@@ -516,9 +518,9 @@
             label41.Location = new Point(3, 9);
             label41.MaximumSize = new Size(88, 19);
             label41.Name = "label41";
-            label41.Size = new Size(81, 19);
+            label41.Size = new Size(76, 19);
             label41.TabIndex = 73;
-            label41.Text = "00000000000";
+            label41.Text = "R$2283,36";
             // 
             // panel9
             // 
@@ -537,48 +539,52 @@
             label39.AutoSize = true;
             label39.Dock = DockStyle.Top;
             label39.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label39.ForeColor = Color.Red;
             label39.Location = new Point(0, 57);
             label39.MaximumSize = new Size(88, 19);
             label39.Name = "label39";
             label39.Size = new Size(87, 19);
             label39.TabIndex = 73;
-            label39.Text = "R$2.000.000.000";
+            label39.Text = "R$000.000.000";
             // 
             // label37
             // 
             label37.AutoSize = true;
             label37.Dock = DockStyle.Top;
             label37.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label37.ForeColor = Color.Red;
             label37.Location = new Point(0, 38);
             label37.MaximumSize = new Size(88, 19);
             label37.Name = "label37";
-            label37.Size = new Size(57, 19);
+            label37.Size = new Size(60, 19);
             label37.TabIndex = 73;
-            label37.Text = "000000";
+            label37.Text = "R$14,50";
             // 
             // label36
             // 
             label36.AutoSize = true;
             label36.Dock = DockStyle.Top;
             label36.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label36.ForeColor = Color.Red;
             label36.Location = new Point(0, 19);
             label36.MaximumSize = new Size(88, 19);
             label36.Name = "label36";
-            label36.Size = new Size(57, 19);
+            label36.Size = new Size(68, 19);
             label36.TabIndex = 73;
-            label36.Text = "000000";
+            label36.Text = "R$185,97";
             // 
             // label35
             // 
             label35.AutoSize = true;
             label35.Dock = DockStyle.Top;
             label35.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label35.ForeColor = Color.Red;
             label35.Location = new Point(0, 0);
             label35.MaximumSize = new Size(88, 19);
             label35.Name = "label35";
-            label35.Size = new Size(57, 19);
+            label35.Size = new Size(17, 19);
             label35.TabIndex = 73;
-            label35.Text = "000000";
+            label35.Text = "0";
             // 
             // panel8
             // 
@@ -600,9 +606,9 @@
             label40.Location = new Point(0, 57);
             label40.MaximumSize = new Size(88, 19);
             label40.Name = "label40";
-            label40.Size = new Size(57, 19);
+            label40.Size = new Size(65, 19);
             label40.TabIndex = 73;
-            label40.Text = "000000";
+            label40.Text = "0000000";
             // 
             // label38
             // 
@@ -612,9 +618,9 @@
             label38.Location = new Point(0, 38);
             label38.MaximumSize = new Size(88, 19);
             label38.Name = "label38";
-            label38.Size = new Size(57, 19);
+            label38.Size = new Size(17, 19);
             label38.TabIndex = 73;
-            label38.Text = "000000";
+            label38.Text = "0";
             // 
             // label34
             // 
@@ -624,9 +630,9 @@
             label34.Location = new Point(0, 19);
             label34.MaximumSize = new Size(88, 19);
             label34.Name = "label34";
-            label34.Size = new Size(57, 19);
+            label34.Size = new Size(17, 19);
             label34.TabIndex = 73;
-            label34.Text = "000000";
+            label34.Text = "0";
             // 
             // label33
             // 
@@ -636,9 +642,9 @@
             label33.Location = new Point(0, 0);
             label33.MaximumSize = new Size(88, 19);
             label33.Name = "label33";
-            label33.Size = new Size(57, 19);
+            label33.Size = new Size(76, 19);
             label33.TabIndex = 73;
-            label33.Text = "000000";
+            label33.Text = "R$2283,36";
             // 
             // panel7
             // 
@@ -672,9 +678,9 @@
             label31.Location = new Point(0, 38);
             label31.MaximumSize = new Size(88, 19);
             label31.Name = "label31";
-            label31.Size = new Size(81, 19);
+            label31.Size = new Size(28, 19);
             label31.TabIndex = 74;
-            label31.Text = "000000000";
+            label31.Text = "7,5";
             // 
             // label30
             // 
@@ -684,9 +690,9 @@
             label30.Location = new Point(0, 19);
             label30.MaximumSize = new Size(88, 19);
             label30.Name = "label30";
-            label30.Size = new Size(81, 19);
+            label30.Size = new Size(36, 19);
             label30.TabIndex = 73;
-            label30.Text = "000000000";
+            label30.Text = "8,14";
             // 
             // label29
             // 
@@ -696,9 +702,9 @@
             label29.Location = new Point(0, 0);
             label29.MaximumSize = new Size(88, 19);
             label29.Name = "label29";
-            label29.Size = new Size(81, 19);
+            label29.Size = new Size(25, 19);
             label29.TabIndex = 73;
-            label29.Text = "000000000";
+            label29.Text = "30";
             // 
             // panel6
             // 
@@ -732,9 +738,9 @@
             label26.Location = new Point(0, 38);
             label26.MaximumSize = new Size(550, 0);
             label26.Name = "label26";
-            label26.Size = new Size(549, 19);
+            label26.Size = new Size(45, 19);
             label26.TabIndex = 71;
-            label26.Text = "Jubileu Gomes Soares da Costa Filho Neto dos Santos Nunes da Aparecida da Conceição";
+            label26.Text = "I.R.R.F";
             // 
             // label25
             // 
@@ -744,9 +750,9 @@
             label25.Location = new Point(0, 19);
             label25.MaximumSize = new Size(550, 0);
             label25.Name = "label25";
-            label25.Size = new Size(549, 19);
+            label25.Size = new Size(37, 19);
             label25.TabIndex = 70;
-            label25.Text = "Jubileu Gomes Soares da Costa Filho Neto dos Santos Nunes da Aparecida da Conceição";
+            label25.Text = "INSS";
             // 
             // label24
             // 
@@ -756,9 +762,9 @@
             label24.Location = new Point(0, 0);
             label24.MaximumSize = new Size(550, 0);
             label24.Name = "label24";
-            label24.Size = new Size(549, 19);
+            label24.Size = new Size(150, 19);
             label24.TabIndex = 69;
-            label24.Text = "Jubileu Gomes Soares da Costa Filho Neto dos Santos Nunes da Aparecida da Conceição";
+            label24.Text = "Salário Base Mensalista";
             // 
             // panel5
             // 
@@ -792,9 +798,9 @@
             label23.Location = new Point(0, 38);
             label23.MaximumSize = new Size(57, 19);
             label23.Name = "label23";
-            label23.Size = new Size(57, 19);
+            label23.Size = new Size(33, 19);
             label23.TabIndex = 69;
-            label23.Text = "000000";
+            label23.Text = "790";
             // 
             // label22
             // 
@@ -804,9 +810,9 @@
             label22.Location = new Point(0, 19);
             label22.MaximumSize = new Size(57, 19);
             label22.Name = "label22";
-            label22.Size = new Size(57, 19);
+            label22.Size = new Size(33, 19);
             label22.TabIndex = 69;
-            label22.Text = "000000";
+            label22.Text = "780";
             // 
             // label21
             // 
@@ -818,7 +824,7 @@
             label21.Name = "label21";
             label21.Size = new Size(57, 19);
             label21.TabIndex = 17;
-            label21.Text = "000000";
+            label21.Text = "000001";
             // 
             // panel4
             // 
