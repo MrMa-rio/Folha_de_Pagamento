@@ -114,7 +114,6 @@
             // FolhaPDetalhada
             // 
             FolhaPDetalhada.BackColor = Color.Transparent;
-            FolhaPDetalhada.Enabled = false;
             FolhaPDetalhada.FlatAppearance.BorderSize = 0;
             FolhaPDetalhada.FlatStyle = FlatStyle.Flat;
             FolhaPDetalhada.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -149,7 +148,6 @@
             // BtnFolhaPNormal
             // 
             BtnFolhaPNormal.BackColor = Color.Transparent;
-            BtnFolhaPNormal.Enabled = false;
             BtnFolhaPNormal.FlatAppearance.BorderSize = 0;
             BtnFolhaPNormal.FlatStyle = FlatStyle.Flat;
             BtnFolhaPNormal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);

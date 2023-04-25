@@ -94,13 +94,13 @@ namespace FOLHA_DE_PAGAMENTO_
             string DataNascimento = c_InvertendoData.setDateInvert(TxtDataNascimento.Text, '/');
             string DataAdmissao = c_InvertendoData.setDateInvert(TxtDataAdmissao.Text, '/');
 
-            C_InsertAndUpdate c_InsertAndUpdate = new C_InsertAndUpdate();
+            C_InsertData c_InsertAndUpdate = new C_InsertData();
             c_InsertAndUpdate.setDatainTbFuncionarios(TxtNomeCompleto, DataNascimento, TxtNit, TxtPis, TxtTituloEleitor, departamento, cargo, DataAdmissao, TxtReservista, ValidadorCPF, CbEstadoCivil, CbGenero, TxtCpf, TxtRg, CbCargo);
 
         }
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
         {
-            DialogResult alert = MessageBox.Show("Você está preste a fechar a area de Cadatro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
+            DialogResult alert = MessageBox.Show("Você está preste a fechar a area de Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
             if (alert == DialogResult.OK)
             {
                 Close();

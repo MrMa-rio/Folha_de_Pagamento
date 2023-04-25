@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FOLHA_DE_PAGAMENTO_.src.SQL
 {
-    internal class C_InsertAndUpdate
+    internal class C_InsertData
     {
         private string IP = "localhost";
         private string User = "root";
