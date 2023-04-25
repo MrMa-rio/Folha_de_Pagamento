@@ -59,3 +59,8 @@ Folha de Pagamento/.vs/Folha_de_Pagamento/FileContentIndex/a46a11f9-0514-494d-94
 Folha de Pagamento/.vs/Folha_de_Pagamento/FileContentIndex/9c856f16-2f7d-46d0-8081-cfa1c7e4e347.vsidx
 Folha de Pagamento/.vs/Folha_de_Pagamento/FileContentIndex/4810efb5-25ba-4507-b00d-e0d9ea84f75e.vsidx
 Folha de Pagamento/.vs/Folha_de_Pagamento/DesignTimeBuild/.dtbcache.v2
+*.cache
+*.props
+*.pdb
+*.dll
+*.exe

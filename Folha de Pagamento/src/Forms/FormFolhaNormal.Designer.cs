@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaNormal));
-            LbAlterarCadastro = new Panel();
+            LbFolhaNormal = new Panel();
             BtnLimpar = new Button();
-            PnlCtrlFunc = new Panel();
+            PanelFolhaNormal = new Panel();
             textBox3 = new TextBox();
             label7 = new Label();
             textBox1 = new TextBox();
@@ -54,24 +54,24 @@
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
-            LbAlterarCadastro.SuspendLayout();
-            PnlCtrlFunc.SuspendLayout();
+            LbFolhaNormal.SuspendLayout();
+            PanelFolhaNormal.SuspendLayout();
             SuspendLayout();
             // 
-            // LbAlterarCadastro
+            // LbFolhaNormal
             // 
-            LbAlterarCadastro.AccessibleRole = AccessibleRole.None;
-            LbAlterarCadastro.BackColor = Color.LightGray;
-            LbAlterarCadastro.Controls.Add(BtnLimpar);
-            LbAlterarCadastro.Controls.Add(PnlCtrlFunc);
-            LbAlterarCadastro.Controls.Add(LbTitulo);
-            LbAlterarCadastro.Controls.Add(label1);
-            LbAlterarCadastro.Controls.Add(BtnConfirmar);
-            LbAlterarCadastro.Controls.Add(BtnCancelar);
-            LbAlterarCadastro.Location = new Point(69, 41);
-            LbAlterarCadastro.Name = "LbAlterarCadastro";
-            LbAlterarCadastro.Size = new Size(1110, 630);
-            LbAlterarCadastro.TabIndex = 2;
+            LbFolhaNormal.AccessibleRole = AccessibleRole.None;
+            LbFolhaNormal.BackColor = Color.LightGray;
+            LbFolhaNormal.Controls.Add(BtnLimpar);
+            LbFolhaNormal.Controls.Add(PanelFolhaNormal);
+            LbFolhaNormal.Controls.Add(LbTitulo);
+            LbFolhaNormal.Controls.Add(label1);
+            LbFolhaNormal.Controls.Add(BtnConfirmar);
+            LbFolhaNormal.Controls.Add(BtnCancelar);
+            LbFolhaNormal.Location = new Point(69, 41);
+            LbFolhaNormal.Name = "LbFolhaNormal";
+            LbFolhaNormal.Size = new Size(1110, 630);
+            LbFolhaNormal.TabIndex = 2;
             // 
             // BtnLimpar
             // 
@@ -85,34 +85,34 @@
             BtnLimpar.TabIndex = 61;
             BtnLimpar.UseVisualStyleBackColor = true;
             // 
-            // PnlCtrlFunc
+            // PanelFolhaNormal
             // 
-            PnlCtrlFunc.AutoScroll = true;
-            PnlCtrlFunc.AutoScrollMargin = new Size(0, 90);
-            PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
-            PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
-            PnlCtrlFunc.Controls.Add(textBox3);
-            PnlCtrlFunc.Controls.Add(label7);
-            PnlCtrlFunc.Controls.Add(textBox1);
-            PnlCtrlFunc.Controls.Add(label3);
-            PnlCtrlFunc.Controls.Add(maskedTextBox1);
-            PnlCtrlFunc.Controls.Add(LbRg);
-            PnlCtrlFunc.Controls.Add(CbGenero);
-            PnlCtrlFunc.Controls.Add(label6);
-            PnlCtrlFunc.Controls.Add(label4);
-            PnlCtrlFunc.Controls.Add(label5);
-            PnlCtrlFunc.Controls.Add(TxtDataNascimento);
-            PnlCtrlFunc.Controls.Add(TxtCpf);
-            PnlCtrlFunc.Controls.Add(CbEstadoCivil);
-            PnlCtrlFunc.Controls.Add(LbEstadoCivil);
-            PnlCtrlFunc.Controls.Add(LbCpf);
-            PnlCtrlFunc.Controls.Add(LbDataNascimento);
-            PnlCtrlFunc.Controls.Add(TxtNomeCompleto);
-            PnlCtrlFunc.Controls.Add(LbNomeCompleto);
-            PnlCtrlFunc.Location = new Point(67, 142);
-            PnlCtrlFunc.Name = "PnlCtrlFunc";
-            PnlCtrlFunc.Size = new Size(980, 434);
-            PnlCtrlFunc.TabIndex = 7;
+            PanelFolhaNormal.AutoScroll = true;
+            PanelFolhaNormal.AutoScrollMargin = new Size(0, 90);
+            PanelFolhaNormal.AutoScrollMinSize = new Size(0, 90);
+            PanelFolhaNormal.BorderStyle = BorderStyle.FixedSingle;
+            PanelFolhaNormal.Controls.Add(textBox3);
+            PanelFolhaNormal.Controls.Add(label7);
+            PanelFolhaNormal.Controls.Add(textBox1);
+            PanelFolhaNormal.Controls.Add(label3);
+            PanelFolhaNormal.Controls.Add(maskedTextBox1);
+            PanelFolhaNormal.Controls.Add(LbRg);
+            PanelFolhaNormal.Controls.Add(CbGenero);
+            PanelFolhaNormal.Controls.Add(label6);
+            PanelFolhaNormal.Controls.Add(label4);
+            PanelFolhaNormal.Controls.Add(label5);
+            PanelFolhaNormal.Controls.Add(TxtDataNascimento);
+            PanelFolhaNormal.Controls.Add(TxtCpf);
+            PanelFolhaNormal.Controls.Add(CbEstadoCivil);
+            PanelFolhaNormal.Controls.Add(LbEstadoCivil);
+            PanelFolhaNormal.Controls.Add(LbCpf);
+            PanelFolhaNormal.Controls.Add(LbDataNascimento);
+            PanelFolhaNormal.Controls.Add(TxtNomeCompleto);
+            PanelFolhaNormal.Controls.Add(LbNomeCompleto);
+            PanelFolhaNormal.Location = new Point(67, 142);
+            PanelFolhaNormal.Name = "PanelFolhaNormal";
+            PanelFolhaNormal.Size = new Size(980, 434);
+            PanelFolhaNormal.TabIndex = 7;
             // 
             // textBox3
             // 
@@ -211,9 +211,9 @@
             label4.Location = new Point(34, 18);
             label4.Name = "label4";
             label4.Padding = new Padding(10, 0, 0, 0);
-            label4.Size = new Size(249, 32);
+            label4.Size = new Size(339, 32);
             label4.TabIndex = 9;
-            label4.Text = "Informações Pessoais";
+            label4.Text = "Informações da Folha Normal";
             // 
             // label5
             // 
@@ -223,9 +223,9 @@
             label5.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label5.Location = new Point(15, 20);
             label5.Name = "label5";
-            label5.Size = new Size(314, 37);
+            label5.Size = new Size(380, 37);
             label5.TabIndex = 8;
-            label5.Text = "___________________________";
+            label5.Text = "_________________________________";
             // 
             // TxtDataNascimento
             // 
@@ -339,9 +339,9 @@
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(70, 50);
             label1.Name = "label1";
-            label1.Size = new Size(402, 37);
+            label1.Size = new Size(259, 37);
             label1.TabIndex = 60;
-            label1.Text = "___________________________________";
+            label1.Text = "______________________";
             // 
             // BtnConfirmar
             // 
@@ -373,22 +373,22 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 76, 32);
             ClientSize = new Size(1248, 712);
-            Controls.Add(LbAlterarCadastro);
+            Controls.Add(LbFolhaNormal);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormFolhaNormal";
             Text = "FormNormal";
-            LbAlterarCadastro.ResumeLayout(false);
-            LbAlterarCadastro.PerformLayout();
-            PnlCtrlFunc.ResumeLayout(false);
-            PnlCtrlFunc.PerformLayout();
+            LbFolhaNormal.ResumeLayout(false);
+            LbFolhaNormal.PerformLayout();
+            PanelFolhaNormal.ResumeLayout(false);
+            PanelFolhaNormal.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel LbAlterarCadastro;
+        private Panel LbFolhaNormal;
         private Button BtnLimpar;
-        private Panel PnlCtrlFunc;
+        private Panel PanelFolhaNormal;
         private TextBox textBox3;
         private Label label7;
         private TextBox textBox1;

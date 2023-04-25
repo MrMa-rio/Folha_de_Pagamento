@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCalculoPagamento));
-            LbAlterarCadastro = new Panel();
+            LbCalculoPagamento = new Panel();
             BtnLimpar = new Button();
-            PnlCtrlFunc = new Panel();
+            PanelCalculoPagamento = new Panel();
             textBox2 = new TextBox();
             label6 = new Label();
             textBox1 = new TextBox();
@@ -55,26 +55,26 @@
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
-            LbAlterarCadastro.SuspendLayout();
-            PnlCtrlFunc.SuspendLayout();
+            LbCalculoPagamento.SuspendLayout();
+            PanelCalculoPagamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
             SuspendLayout();
             // 
-            // LbAlterarCadastro
+            // LbCalculoPagamento
             // 
-            LbAlterarCadastro.AccessibleRole = AccessibleRole.None;
-            LbAlterarCadastro.BackColor = Color.LightGray;
-            LbAlterarCadastro.Controls.Add(BtnLimpar);
-            LbAlterarCadastro.Controls.Add(PnlCtrlFunc);
-            LbAlterarCadastro.Controls.Add(LbTitulo);
-            LbAlterarCadastro.Controls.Add(label1);
-            LbAlterarCadastro.Controls.Add(BtnConfirmar);
-            LbAlterarCadastro.Controls.Add(BtnCancelar);
-            LbAlterarCadastro.Location = new Point(69, 41);
-            LbAlterarCadastro.Name = "LbAlterarCadastro";
-            LbAlterarCadastro.Size = new Size(1110, 630);
-            LbAlterarCadastro.TabIndex = 1;
+            LbCalculoPagamento.AccessibleRole = AccessibleRole.None;
+            LbCalculoPagamento.BackColor = Color.LightGray;
+            LbCalculoPagamento.Controls.Add(BtnLimpar);
+            LbCalculoPagamento.Controls.Add(PanelCalculoPagamento);
+            LbCalculoPagamento.Controls.Add(LbTitulo);
+            LbCalculoPagamento.Controls.Add(label1);
+            LbCalculoPagamento.Controls.Add(BtnConfirmar);
+            LbCalculoPagamento.Controls.Add(BtnCancelar);
+            LbCalculoPagamento.Location = new Point(69, 41);
+            LbCalculoPagamento.Name = "LbCalculoPagamento";
+            LbCalculoPagamento.Size = new Size(1110, 630);
+            LbCalculoPagamento.TabIndex = 1;
             // 
             // BtnLimpar
             // 
@@ -88,35 +88,35 @@
             BtnLimpar.TabIndex = 61;
             BtnLimpar.UseVisualStyleBackColor = true;
             // 
-            // PnlCtrlFunc
+            // PanelCalculoPagamento
             // 
-            PnlCtrlFunc.AutoScroll = true;
-            PnlCtrlFunc.AutoScrollMargin = new Size(0, 90);
-            PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
-            PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
-            PnlCtrlFunc.Controls.Add(textBox2);
-            PnlCtrlFunc.Controls.Add(label6);
-            PnlCtrlFunc.Controls.Add(textBox1);
-            PnlCtrlFunc.Controls.Add(LbBeneficios);
-            PnlCtrlFunc.Controls.Add(pictureBox1);
-            PnlCtrlFunc.Controls.Add(maskedTextBox1);
-            PnlCtrlFunc.Controls.Add(LbSalario);
-            PnlCtrlFunc.Controls.Add(label2);
-            PnlCtrlFunc.Controls.Add(label3);
-            PnlCtrlFunc.Controls.Add(PctCpf);
-            PnlCtrlFunc.Controls.Add(label4);
-            PnlCtrlFunc.Controls.Add(label5);
-            PnlCtrlFunc.Controls.Add(BtnCalendario);
-            PnlCtrlFunc.Controls.Add(TxtDataNascimento);
-            PnlCtrlFunc.Controls.Add(TxtCpf);
-            PnlCtrlFunc.Controls.Add(LbIrrf);
-            PnlCtrlFunc.Controls.Add(LbInss);
-            PnlCtrlFunc.Controls.Add(TxtFgts);
-            PnlCtrlFunc.Controls.Add(LbFgts);
-            PnlCtrlFunc.Location = new Point(29, 117);
-            PnlCtrlFunc.Name = "PnlCtrlFunc";
-            PnlCtrlFunc.Size = new Size(1050, 460);
-            PnlCtrlFunc.TabIndex = 7;
+            PanelCalculoPagamento.AutoScroll = true;
+            PanelCalculoPagamento.AutoScrollMargin = new Size(0, 90);
+            PanelCalculoPagamento.AutoScrollMinSize = new Size(0, 90);
+            PanelCalculoPagamento.BorderStyle = BorderStyle.FixedSingle;
+            PanelCalculoPagamento.Controls.Add(textBox2);
+            PanelCalculoPagamento.Controls.Add(label6);
+            PanelCalculoPagamento.Controls.Add(textBox1);
+            PanelCalculoPagamento.Controls.Add(LbBeneficios);
+            PanelCalculoPagamento.Controls.Add(pictureBox1);
+            PanelCalculoPagamento.Controls.Add(maskedTextBox1);
+            PanelCalculoPagamento.Controls.Add(LbSalario);
+            PanelCalculoPagamento.Controls.Add(label2);
+            PanelCalculoPagamento.Controls.Add(label3);
+            PanelCalculoPagamento.Controls.Add(PctCpf);
+            PanelCalculoPagamento.Controls.Add(label4);
+            PanelCalculoPagamento.Controls.Add(label5);
+            PanelCalculoPagamento.Controls.Add(BtnCalendario);
+            PanelCalculoPagamento.Controls.Add(TxtDataNascimento);
+            PanelCalculoPagamento.Controls.Add(TxtCpf);
+            PanelCalculoPagamento.Controls.Add(LbIrrf);
+            PanelCalculoPagamento.Controls.Add(LbInss);
+            PanelCalculoPagamento.Controls.Add(TxtFgts);
+            PanelCalculoPagamento.Controls.Add(LbFgts);
+            PanelCalculoPagamento.Location = new Point(29, 117);
+            PanelCalculoPagamento.Name = "PanelCalculoPagamento";
+            PanelCalculoPagamento.Size = new Size(1050, 460);
+            PanelCalculoPagamento.TabIndex = 7;
             // 
             // textBox2
             // 
@@ -246,9 +246,9 @@
             label5.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label5.Location = new Point(14, 20);
             label5.Name = "label5";
-            label5.Size = new Size(314, 37);
+            label5.Size = new Size(270, 37);
             label5.TabIndex = 8;
-            label5.Text = "___________________________";
+            label5.Text = "_______________________";
             // 
             // BtnCalendario
             // 
@@ -383,14 +383,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 76, 32);
             ClientSize = new Size(1248, 712);
-            Controls.Add(LbAlterarCadastro);
+            Controls.Add(LbCalculoPagamento);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormCalculoPagamento";
             Text = "FormCalculoPagamento";
-            LbAlterarCadastro.ResumeLayout(false);
-            LbAlterarCadastro.PerformLayout();
-            PnlCtrlFunc.ResumeLayout(false);
-            PnlCtrlFunc.PerformLayout();
+            LbCalculoPagamento.ResumeLayout(false);
+            LbCalculoPagamento.PerformLayout();
+            PanelCalculoPagamento.ResumeLayout(false);
+            PanelCalculoPagamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).EndInit();
             ResumeLayout(false);
@@ -398,9 +398,9 @@
 
         #endregion
 
-        private Panel LbAlterarCadastro;
+        private Panel LbCalculoPagamento;
         private Button BtnLimpar;
-        private Panel PnlCtrlFunc;
+        private Panel PanelCalculoPagamento;
         private PictureBox PctCpf;
         private Label label4;
         private Label label5;
