@@ -515,7 +515,7 @@
             label41.Anchor = AnchorStyles.Left;
             label41.AutoSize = true;
             label41.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label41.ForeColor = Color.DarkGreen;
+            label41.ForeColor = Color.FromArgb(0, 64, 0);
             label41.Location = new Point(3, 9);
             label41.MaximumSize = new Size(88, 19);
             label41.Name = "label41";

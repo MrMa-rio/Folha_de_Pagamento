@@ -538,7 +538,7 @@
             // 
             label61.AutoSize = true;
             label61.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label61.ForeColor = Color.FromArgb(0, 64, 0);
+            label61.ForeColor = Color.FromArgb(0, 65, 0);
             label61.Location = new Point(620, 25);
             label61.MaximumSize = new Size(85, 19);
             label61.Name = "label61";
