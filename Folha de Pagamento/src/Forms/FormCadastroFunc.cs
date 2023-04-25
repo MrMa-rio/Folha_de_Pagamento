@@ -91,11 +91,11 @@ namespace FOLHA_DE_PAGAMENTO_
             C_InvertendoData c_InvertendoData = new C_InvertendoData();
             string departamento = c_HandleCargoSalario.setIdDepartamento(CbDepartamento.Text);
             string cargo = c_HandleCargoSalario.setIdCargo(CbCargo.Text);
-            string DataNascimento = c_InvertendoData.setDateInvert(TxtDataNascimento.Text);
-            string DataAdmissao = c_InvertendoData.setDateInvert(TxtDataAdmissao.Text);
+            string DataNascimento = c_InvertendoData.setDateInvert(TxtDataNascimento.Text, '/');
+            string DataAdmissao = c_InvertendoData.setDateInvert(TxtDataAdmissao.Text, '/');
 
             C_InsertAndUpdate c_InsertAndUpdate = new C_InsertAndUpdate();
-            c_InsertAndUpdate.setDatainTbFuncionarios(TxtNomeCompleto, DataNascimento, TxtNit, TxtPis, TxtTituloEleitor, departamento, cargo, DataAdmissao, TxtReservista, ValidadorCPF, CbEstadoCivil, CbGenero, TxtCpf, TxtRg);
+            c_InsertAndUpdate.setDatainTbFuncionarios(TxtNomeCompleto, DataNascimento, TxtNit, TxtPis, TxtTituloEleitor, departamento, cargo, DataAdmissao, TxtReservista, ValidadorCPF, CbEstadoCivil, CbGenero, TxtCpf, TxtRg, CbCargo);
 
         }
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
@@ -147,6 +147,11 @@ namespace FOLHA_DE_PAGAMENTO_
         private void TxtTituloEleitor_MouseClick(object sender, MouseEventArgs e)
         {
             TxtTituloEleitor.SelectAll();
+        }
+
+        private void TxtReservista_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtReservista.SelectAll();
         }
     }
 }

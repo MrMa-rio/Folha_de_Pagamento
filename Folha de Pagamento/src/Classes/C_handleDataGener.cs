@@ -19,6 +19,10 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                 return "Feminino";
             }
+            if (Sexo == "T" || Sexo == "t")
+            {
+                return "Transgênero";
+            }
             else
             {
                 return "Outro";

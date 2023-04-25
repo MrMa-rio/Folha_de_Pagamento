@@ -45,7 +45,7 @@ namespace FOLHA_DE_PAGAMENTO_
         }
         private void BoxCalendario2_DateChanged(object sender, DateRangeEventArgs e)
         {
-            TxtDataEmissao.Text = BoxCalendario2.SelectionEnd.ToString();
+            TxtDataAdmissao.Text = BoxCalendario2.SelectionEnd.ToString();
         }
         private void TxtCalendario_MouseClick(object sender, MouseEventArgs e)
         {
@@ -59,7 +59,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void TxtDataEmissao_MouseClick(object sender, MouseEventArgs e)
         {
-            TxtDataEmissao.SelectAll();
+            TxtDataAdmissao.SelectAll();
         }
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
         {
@@ -71,7 +71,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
             C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
             bool alert;
-            alert = c_ShowDataUsers.setShowDataUser(TxtNomeCompleto, TxtCpf, CbEstadoCivil, CbGenero, TxtRg, TxtMatricula);
+            alert = c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto, TxtCalendario, CbGenero, TxtRg, TxtNit, TxtPis, TxtTituloEleitor, CbEstadoCivil, TxtReservista, TxtDataAdmissao, CbDepartamento, CbCargo, TxtMatricula); //adicionar textbox dos parametros que falta!! e testar as entradas.
 
             if (!alert)
             {
@@ -104,7 +104,9 @@ namespace FOLHA_DE_PAGAMENTO_
             if (e.KeyCode == Keys.Enter)
             {
                 C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
-                c_ShowDataUsers.setShowDataUser(TxtNomeCompleto, TxtCpf, CbEstadoCivil, CbGenero, TxtRg, TxtMatricula);
+
+                c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto, TxtCalendario, CbGenero, TxtRg, TxtNit, TxtPis, TxtTituloEleitor, CbEstadoCivil, TxtReservista, TxtDataAdmissao, CbDepartamento, CbCargo, TxtMatricula); //adicionar textbox dos parametros que falta!! e testar as entradas.
+
             }
         }
 
@@ -116,6 +118,38 @@ namespace FOLHA_DE_PAGAMENTO_
         private void TxtMatricula_TextChanged(object sender, EventArgs e)
         {
             TxtNomeCompleto.Text = TxtMatricula.Text;
+        }
+
+        private void TxtTituloEleitor_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtTituloEleitor.SelectAll();
+        }
+
+        private void TxtReservista_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtReservista.SelectAll();
+        }
+
+        private void TxtNit_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtNit.SelectAll();
+        }
+
+        private void TxtPis_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtPis.SelectAll();
+        }
+
+        private void TxtCTrabalho_MouseClick(object sender, MouseEventArgs e)
+        {
+            TxtCTrabalho.SelectAll();
+        }
+
+        private void CbCargo_TextChanged(object sender, EventArgs e)
+        {
+            C_handleCargoSalarioDepartamento c_Cargo = new C_handleCargoSalarioDepartamento();
+            //LbCargoResult.Text = CbCargo.Text;
+            TxtSalarioBase.Text = c_Cargo.setSalarioBase(CbCargo.Text);
         }
     }
 }

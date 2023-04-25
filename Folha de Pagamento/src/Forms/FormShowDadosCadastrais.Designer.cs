@@ -36,8 +36,8 @@
             TxtMatricula = new Label();
             TxtNomeCompleto = new Label();
             PnlInformacoesFunc = new Panel();
-            TxtDataAdmissao = new Label();
-            TxtCargo = new Label();
+            TxtDataAdmissao = new MaskedTextBox();
+            TxtIdCargo = new Label();
             label12 = new Label();
             label10 = new Label();
             TxtGenero = new Label();
@@ -45,6 +45,8 @@
             TxtCpf = new MaskedTextBox();
             label11 = new Label();
             BtnOK = new Button();
+            label6 = new Label();
+            TxtCargo = new Label();
             PnlInformacoesFunc.SuspendLayout();
             SuspendLayout();
             // 
@@ -92,7 +94,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(37, 334);
+            label5.Location = new Point(37, 371);
             label5.Name = "label5";
             label5.Size = new Size(206, 21);
             label5.TabIndex = 4;
@@ -102,7 +104,7 @@
             // 
             TxtMatricula.AutoSize = true;
             TxtMatricula.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtMatricula.Location = new Point(242, 331);
+            TxtMatricula.Location = new Point(242, 368);
             TxtMatricula.Name = "TxtMatricula";
             TxtMatricula.Size = new Size(52, 25);
             TxtMatricula.TabIndex = 9;
@@ -123,8 +125,10 @@
             PnlInformacoesFunc.AutoScroll = true;
             PnlInformacoesFunc.AutoScrollMargin = new Size(0, 25);
             PnlInformacoesFunc.BackColor = Color.LightGray;
-            PnlInformacoesFunc.Controls.Add(TxtDataAdmissao);
             PnlInformacoesFunc.Controls.Add(TxtCargo);
+            PnlInformacoesFunc.Controls.Add(label6);
+            PnlInformacoesFunc.Controls.Add(TxtDataAdmissao);
+            PnlInformacoesFunc.Controls.Add(TxtIdCargo);
             PnlInformacoesFunc.Controls.Add(label12);
             PnlInformacoesFunc.Controls.Add(label10);
             PnlInformacoesFunc.Controls.Add(TxtGenero);
@@ -144,21 +148,26 @@
             // 
             // TxtDataAdmissao
             // 
-            TxtDataAdmissao.AutoSize = true;
+            TxtDataAdmissao.BackColor = Color.LightGray;
+            TxtDataAdmissao.BorderStyle = BorderStyle.None;
             TxtDataAdmissao.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataAdmissao.Location = new Point(242, 283);
+            TxtDataAdmissao.ForeColor = SystemColors.WindowText;
+            TxtDataAdmissao.Location = new Point(242, 320);
+            TxtDataAdmissao.Mask = "00/00/0000";
             TxtDataAdmissao.Name = "TxtDataAdmissao";
-            TxtDataAdmissao.Size = new Size(0, 25);
+            TxtDataAdmissao.ReadOnly = true;
+            TxtDataAdmissao.Size = new Size(101, 25);
             TxtDataAdmissao.TabIndex = 18;
+            TxtDataAdmissao.TextAlign = HorizontalAlignment.Center;
             // 
-            // TxtCargo
+            // TxtIdCargo
             // 
-            TxtCargo.AutoSize = true;
-            TxtCargo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCargo.Location = new Point(243, 235);
-            TxtCargo.Name = "TxtCargo";
-            TxtCargo.Size = new Size(0, 25);
-            TxtCargo.TabIndex = 17;
+            TxtIdCargo.AutoSize = true;
+            TxtIdCargo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtIdCargo.Location = new Point(243, 235);
+            TxtIdCargo.Name = "TxtIdCargo";
+            TxtIdCargo.Size = new Size(0, 25);
+            TxtIdCargo.TabIndex = 17;
             // 
             // label12
             // 
@@ -166,15 +175,15 @@
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label12.Location = new Point(37, 238);
             label12.Name = "label12";
-            label12.Size = new Size(59, 21);
+            label12.Size = new Size(78, 21);
             label12.TabIndex = 16;
-            label12.Text = "Cargo:";
+            label12.Text = "Id Cargo:";
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(37, 286);
+            label10.Location = new Point(37, 323);
             label10.Name = "label10";
             label10.Size = new Size(128, 21);
             label10.TabIndex = 15;
@@ -242,6 +251,26 @@
             BtnOK.UseVisualStyleBackColor = false;
             BtnOK.MouseClick += BtnOK_MouseClick;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(37, 284);
+            label6.Name = "label6";
+            label6.Size = new Size(59, 21);
+            label6.TabIndex = 19;
+            label6.Text = "Cargo:";
+            // 
+            // TxtCargo
+            // 
+            TxtCargo.AutoSize = true;
+            TxtCargo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCargo.Location = new Point(242, 281);
+            TxtCargo.MaximumSize = new Size(220, 22);
+            TxtCargo.Name = "TxtCargo";
+            TxtCargo.Size = new Size(0, 22);
+            TxtCargo.TabIndex = 20;
+            // 
             // FormShowDadosCadastrais
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -279,9 +308,11 @@
         private MaskedTextBox TxtCpf;
         private Label TxtGenero;
         private Button BtnOK;
-        private Label TxtDataAdmissao;
-        private Label TxtCargo;
+        private Label TxtIdCargo;
         private Label label12;
         private Label label10;
+        private MaskedTextBox TxtDataAdmissao;
+        private Label TxtCargo;
+        private Label label6;
     }
 }

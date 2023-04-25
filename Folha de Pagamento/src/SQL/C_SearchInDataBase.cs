@@ -9,16 +9,16 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
 {
     internal class C_SearchInDataBase
     {
-        private string IP = "bdfolha.mysql.dbaas.com.br";
-        private string User = "bdaula";
-        private string Password = "Senha@db123";
-        private string TargetDB = "bdaula";
+        private string IP = "localhost";
+        private string User = "root";
+        private string Password = "";
+        private string TargetDB = "bd";
 
         public string[] getDatainTable(string matricula)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
             string insertSql = $"SELECT * FROM Funcionario where Matricula LIKE {matricula} "; 
-            string[] Result = new string[12] ;
+            string[] Result = new string[15];
             MySqlConnection conexão;
             conexão = new MySqlConnection();
             try

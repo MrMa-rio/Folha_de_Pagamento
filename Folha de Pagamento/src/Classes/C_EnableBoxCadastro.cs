@@ -30,11 +30,15 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formAlterarCadastro.CbUF.Enabled = true;
             formAlterarCadastro.TxtCidade.Enabled = true;
             formAlterarCadastro.TxtCep.Enabled = true;
+            formAlterarCadastro.TxtPis.Enabled = true;
+            formAlterarCadastro.CbDepartamento.Enabled = true;
 
+            formAlterarCadastro.TxtReservista.Enabled = true;
             formAlterarCadastro.TxtNit.Enabled = true;
-            //formAlterarCadastro.TxtCTrabalho.Enabled = true;
+            formAlterarCadastro.TxtTituloEleitor.Enabled = true;
             formAlterarCadastro.CbCargo.Enabled = true;
-            //formAlterarCadastro.TxtDataEmissao.Enabled = true;
+            formAlterarCadastro.TxtDataAdmissao.Enabled = true;
+            formAlterarCadastro.TxtCTrabalho.Enabled = true;
             formAlterarCadastro.TxtSalarioBase.Enabled = true;
         }
     }

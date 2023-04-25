@@ -227,6 +227,7 @@
             TxtReservista.Size = new Size(162, 31);
             TxtReservista.TabIndex = 7;
             TxtReservista.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtReservista.MouseClick += TxtReservista_MouseClick;
             // 
             // CbDepartamento
             // 

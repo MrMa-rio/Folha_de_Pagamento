@@ -26,13 +26,14 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
         }
         private void FormShowDadosCadastrais_Load(object sender, EventArgs e)
         {
-
+            C_InvertendoData c_InvertendoData = new C_InvertendoData();
             TxtNomeCompleto.Text = Result[1];
             TxtCpf.Text = Result[0];
             TxtRg.Text = Result[4];
             TxtGenero.Text = Result[3];
-            TxtCargo.Text = Result[10];
-            TxtDataAdmissao.Text = Result[11];
+            TxtCargo.Text = Result[9];
+            TxtIdCargo.Text = Result[10];
+            TxtDataAdmissao.Text = c_InvertendoData.setDateReInvert(Result[11]);
 
         }
 

@@ -60,23 +60,72 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         {
             if (cargo == "Ajudante Geral")
             {
-                return "14";
+                return "4";
             }
             if (cargo == "Impermeabilizador(a)")
             {
-                return "13";
+                return "3";
             }
             if (cargo == "Auxiliar Administrativo")
             {
-                return "12";
+                return "2";
             }
             if (cargo == "Contadora")
             {
-                return "11";
+                return "1";
             }
             else
             {
-                return "10";
+                return "0";
+            }
+        }
+
+        public string getIdDepartamento(string Id_Departamento)
+        {
+            if (Id_Departamento == "1")
+            {
+                return "Contabil";
+            }
+            if (Id_Departamento == "2")
+            {
+                return "Adminstração";
+
+            }
+            if (Id_Departamento == "3")
+            {
+                return "Engenharia";
+            }
+            if (Id_Departamento == "4")
+            {
+                return "Produção";
+            }
+            else
+            {
+                return "0";
+            }
+        }
+        public string getIdCargo(string Id_Cargo)
+        {
+            if (Id_Cargo == "1")
+            {
+                return "Contadora";
+            }
+            if (Id_Cargo == "2")
+            {
+                return "Auxiliar Administrativo";
+
+            }
+            if (Id_Cargo == "3")
+            {
+                return "Impermeabilizador(a)";
+            }
+            if (Id_Cargo == "4")
+            {
+                return "Ajudante Geral";
+            }
+            else
+            {
+                return "0";
             }
         }
     }
