@@ -493,7 +493,7 @@
             label42.Anchor = AnchorStyles.Left;
             label42.AutoSize = true;
             label42.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label42.ForeColor = Color.Red;
+            label42.ForeColor = Color.FromArgb(210, 0, 0);
             label42.Location = new Point(3, 9);
             label42.MaximumSize = new Size(88, 19);
             label42.Name = "label42";
@@ -539,7 +539,7 @@
             label39.AutoSize = true;
             label39.Dock = DockStyle.Top;
             label39.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label39.ForeColor = Color.Red;
+            label39.ForeColor = Color.FromArgb(210, 0, 0);
             label39.Location = new Point(0, 57);
             label39.MaximumSize = new Size(88, 19);
             label39.Name = "label39";
@@ -552,7 +552,7 @@
             label37.AutoSize = true;
             label37.Dock = DockStyle.Top;
             label37.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label37.ForeColor = Color.Red;
+            label37.ForeColor = Color.FromArgb(210, 0, 0);
             label37.Location = new Point(0, 38);
             label37.MaximumSize = new Size(88, 19);
             label37.Name = "label37";
@@ -565,7 +565,7 @@
             label36.AutoSize = true;
             label36.Dock = DockStyle.Top;
             label36.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label36.ForeColor = Color.Red;
+            label36.ForeColor = Color.FromArgb(210, 0, 0);
             label36.Location = new Point(0, 19);
             label36.MaximumSize = new Size(88, 19);
             label36.Name = "label36";
@@ -578,7 +578,7 @@
             label35.AutoSize = true;
             label35.Dock = DockStyle.Top;
             label35.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label35.ForeColor = Color.Red;
+            label35.ForeColor = Color.FromArgb(210, 0, 0);
             label35.Location = new Point(0, 0);
             label35.MaximumSize = new Size(88, 19);
             label35.Name = "label35";
