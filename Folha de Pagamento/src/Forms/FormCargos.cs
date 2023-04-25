@@ -19,7 +19,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             InitializeComponent();
         }
-        public FormCargos(FormNavBar navBar) :this()
+        public FormCargos(FormNavBar navBar) : this()
         {
             FormAtivo = navBar;
         }

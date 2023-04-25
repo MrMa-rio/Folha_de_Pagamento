@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel2 = new Panel();
+            PanelCard = new Panel();
             lbCargo = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -41,29 +41,29 @@
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
-            panel2.SuspendLayout();
+            PanelCard.SuspendLayout();
             SuspendLayout();
             // 
-            // panel2
+            // PanelCard
             // 
-            panel2.BackColor = Color.DarkGray;
-            panel2.Controls.Add(lbCargo);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(lbidCargo);
-            panel2.Controls.Add(LbNome);
-            panel2.Controls.Add(LbMatricula);
-            panel2.Controls.Add(label13);
-            panel2.Controls.Add(label14);
-            panel2.Controls.Add(label15);
-            panel2.Controls.Add(label16);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(980, 88);
-            panel2.TabIndex = 15;
+            PanelCard.BackColor = Color.DarkGray;
+            PanelCard.Controls.Add(lbCargo);
+            PanelCard.Controls.Add(label2);
+            PanelCard.Controls.Add(label1);
+            PanelCard.Controls.Add(label7);
+            PanelCard.Controls.Add(label8);
+            PanelCard.Controls.Add(lbidCargo);
+            PanelCard.Controls.Add(LbNome);
+            PanelCard.Controls.Add(LbMatricula);
+            PanelCard.Controls.Add(label13);
+            PanelCard.Controls.Add(label14);
+            PanelCard.Controls.Add(label15);
+            PanelCard.Controls.Add(label16);
+            PanelCard.Dock = DockStyle.Fill;
+            PanelCard.Location = new Point(0, 0);
+            PanelCard.Name = "PanelCard";
+            PanelCard.Size = new Size(980, 88);
+            PanelCard.TabIndex = 15;
             // 
             // lbCargo
             // 
@@ -190,18 +190,18 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(980, 88);
-            Controls.Add(panel2);
+            Controls.Add(PanelCard);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormCard";
             Text = "FormCard";
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            PanelCard.ResumeLayout(false);
+            PanelCard.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel2;
+        private Panel PanelCard;
         private Label lbCargo;
         private Label label2;
         private Label label1;

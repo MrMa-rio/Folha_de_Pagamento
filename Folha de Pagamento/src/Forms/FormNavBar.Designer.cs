@@ -132,7 +132,6 @@
             // BtnHolerite
             // 
             BtnHolerite.BackColor = Color.Transparent;
-            BtnHolerite.Enabled = false;
             BtnHolerite.FlatAppearance.BorderSize = 0;
             BtnHolerite.FlatStyle = FlatStyle.Flat;
             BtnHolerite.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
