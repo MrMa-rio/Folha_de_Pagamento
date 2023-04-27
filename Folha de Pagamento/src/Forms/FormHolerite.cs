@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FOLHA_DE_PAGAMENTO_.src.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace FOLHA_DE_PAGAMENTO_
 {
     public partial class FormHolerite : Form
     {
-        public FormHolerite()
+        private FormNavBar FormAtivo;
+        private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
+
+        public FormHolerite(FormNavBar navBar)
         {
             InitializeComponent();
+            FormAtivo = navBar;
+        }
+        private void AllForms_MouseClick(object sender, MouseEventArgs e)
+        {
+            navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
         }
     }
 }

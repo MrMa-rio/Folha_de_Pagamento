@@ -547,7 +547,7 @@
             CbUF.ItemHeight = 23;
             CbUF.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE ", "TO" });
             CbUF.Location = new Point(167, 1100);
-            CbUF.MaxDropDownItems = 6;
+            CbUF.MaxDropDownItems = 3;
             CbUF.Name = "CbUF";
             CbUF.Size = new Size(160, 31);
             CbUF.TabIndex = 14;
@@ -1062,6 +1062,7 @@
             PctFotoFunc.SizeMode = PictureBoxSizeMode.StretchImage;
             PctFotoFunc.TabIndex = 0;
             PctFotoFunc.TabStop = false;
+            PctFotoFunc.Click += PctFotoFunc_Click;
             // 
             // LbTitulo
             // 

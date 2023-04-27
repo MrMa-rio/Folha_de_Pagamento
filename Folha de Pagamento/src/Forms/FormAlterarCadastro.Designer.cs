@@ -182,6 +182,7 @@
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 114;
             BtnConfirmar.UseVisualStyleBackColor = true;
+            BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
             // 
             // PnlCtrlFunc
             // 
@@ -262,7 +263,7 @@
             TxtNumRua.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtNumRua.ForeColor = SystemColors.WindowText;
             TxtNumRua.Location = new Point(166, 969);
-            TxtNumRua.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            TxtNumRua.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             TxtNumRua.Name = "TxtNumRua";
             TxtNumRua.Size = new Size(160, 31);
             TxtNumRua.TabIndex = 136;
@@ -444,6 +445,7 @@
             TxtCep.Name = "TxtCep";
             TxtCep.Size = new Size(100, 31);
             TxtCep.TabIndex = 121;
+            TxtCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtCep.MouseClick += TxtCep_MouseClick;
             // 
             // LbCep
@@ -467,6 +469,7 @@
             TxtRg.Name = "TxtRg";
             TxtRg.Size = new Size(160, 31);
             TxtRg.TabIndex = 114;
+            TxtRg.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtRg.MouseClick += TxtRg_MouseClick;
             // 
             // LbRg
@@ -525,7 +528,6 @@
             TxtDataAdmissao.PromptChar = 'X';
             TxtDataAdmissao.Size = new Size(121, 31);
             TxtDataAdmissao.TabIndex = 20;
-            TxtDataAdmissao.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtDataAdmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // TxtSalarioBase
@@ -856,7 +858,6 @@
             TxtCalendario.PromptChar = 'X';
             TxtCalendario.Size = new Size(121, 31);
             TxtCalendario.TabIndex = 5;
-            TxtCalendario.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtCalendario.MouseClick += TxtCalendario_MouseClick;
             // 
             // TxtCpf
@@ -972,7 +973,6 @@
             // 
             // BtnCancelar
             // 
-            BtnCancelar.Enabled = false;
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
@@ -981,6 +981,7 @@
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 115;
             BtnCancelar.UseVisualStyleBackColor = true;
+            BtnCancelar.MouseClick += BtnCancelar_MouseClick;
             // 
             // btnPesquisar
             // 

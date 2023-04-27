@@ -18,7 +18,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         }
         public void AnimationShow(Form Nav, Panel panelTarget)
         {
-            for (int l = 2; l < 345; l = l +4)
+            for (int l = 2; l < 345; l++)
             {
                 Nav.BringToFront();
                 Nav.Width = l;

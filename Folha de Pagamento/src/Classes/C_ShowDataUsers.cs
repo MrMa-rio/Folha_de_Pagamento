@@ -29,7 +29,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         {
             string[] ResultFuncionario;
             
-            C_InvertendoData c_InvertendoData = new C_InvertendoData();
             if(MatriculaFuncionario.Text.Trim().Length > 0)
             {
                
@@ -48,8 +47,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 CbDepartamento.Text = c_HandleCargoSalario.getIdDepartamento( ResultFuncionario[13] );
                 CbCargo.Text = c_HandleCargoSalario.getIdCargo( ResultFuncionario[14] );
 
-                
-                
                 return true;
             }
             else
@@ -63,7 +60,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             if (MatriculaFuncionario.Text.Trim().Length > 0)
             {
                 string[] ResultEndereco;
-                ResultEndereco = searchInData.getDataEndereco(MatriculaFuncionario.Text);
+                ResultEndereco = searchInData.getData(MatriculaFuncionario.Text, "endereço");
                 TxtRua.Text = ResultEndereco[1];
                 TxtRuaNum.Value = Convert.ToInt32(ResultEndereco[2]);
                 TxtCep.Text = ResultEndereco[3];
@@ -77,6 +74,59 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                 return false;
             }
+        }
+        public bool setShowTelefone(MaskedTextBox Telefone, MaskedTextBox MatriculaFuncionario)
+        {
+            
+            if (MatriculaFuncionario.Text.Trim().Length > 0)
+            {
+                string[] ResultTelefone;
+                ResultTelefone = searchInData.getData(MatriculaFuncionario.Text, "telefone");
+                Telefone.Text = ResultTelefone[1];
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool setShowEmail(TextBox Email, MaskedTextBox MatriculaFuncionario)
+        {
+
+
+            if (MatriculaFuncionario.Text.Trim().Length > 0)
+            {
+                string[] ResultEmail;
+                ResultEmail = searchInData.getData(MatriculaFuncionario.Text, "email");
+                Email.Text = ResultEmail[1];
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public bool VerificaDadosFuncionario(string[] dataFuncionario)
+        {
+            if (dataFuncionario[0].Length < 4 || dataFuncionario[9] == "false" || dataFuncionario[10] == "" || dataFuncionario[11] == "" || dataFuncionario[13].Length < 9 || dataFuncionario[2] == "" || dataFuncionario[3] == "" || dataFuncionario[5] == "0" || dataFuncionario[6] == "0" || dataFuncionario[7].Length < 8)
+            {
+                MessageBox.Show("Preencha os campos do Cadastro Pessoais.");
+                return false;
+            }
+            else{ return true; }
+        }
+        public bool VerificaDadosAdicionais(string[] dataAdicional)
+        {
+            if (dataAdicional[0].Length < 2 || dataAdicional[1] == "0" || dataAdicional[2].Length < 2 || dataAdicional[4].Length == 0 || dataAdicional[5].Length == 0 || dataAdicional[6].Length < 8)
+            {
+                MessageBox.Show("Preencha os campos do Cadastro Adicional.");
+                return false;
+            }
+            else { return true; }
         }
     }
 }

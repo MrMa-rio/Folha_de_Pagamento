@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             BtnMenu = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            BtnPerfil = new Button();
+            BtnSetting = new Button();
             SuspendLayout();
             // 
             // BtnMenu
             // 
-            BtnMenu.BackColor = Color.Transparent;
-            BtnMenu.BackgroundImage = Properties.Resources.menu;
+            BtnMenu.BackColor = Color.FromArgb(46, 76, 32);
+            BtnMenu.BackgroundImage = Properties.Resources.menu2;
+            BtnMenu.BackgroundImageLayout = ImageLayout.Stretch;
             BtnMenu.FlatAppearance.BorderSize = 0;
             BtnMenu.FlatStyle = FlatStyle.Flat;
             BtnMenu.Location = new Point(27, 28);
@@ -46,31 +48,29 @@
             BtnMenu.UseVisualStyleBackColor = false;
             BtnMenu.MouseClick += BtnMenu_MouseClick;
             // 
-            // button1
+            // BtnPerfil
             // 
-            button1.BackgroundImage = Properties.Resources.circle_account;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Enabled = false;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(1180, 28);
-            button1.Name = "button1";
-            button1.Size = new Size(48, 48);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = true;
+            BtnPerfil.BackgroundImage = Properties.Resources.user;
+            BtnPerfil.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnPerfil.FlatAppearance.BorderSize = 0;
+            BtnPerfil.FlatStyle = FlatStyle.Flat;
+            BtnPerfil.Location = new Point(1180, 28);
+            BtnPerfil.Name = "BtnPerfil";
+            BtnPerfil.Size = new Size(48, 48);
+            BtnPerfil.TabIndex = 1;
+            BtnPerfil.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnSetting
             // 
-            button2.BackgroundImage = Properties.Resources.settings;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Enabled = false;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(1107, 28);
-            button2.Name = "button2";
-            button2.Size = new Size(48, 48);
-            button2.TabIndex = 2;
-            button2.UseVisualStyleBackColor = true;
+            BtnSetting.BackgroundImage = (Image)resources.GetObject("BtnSetting.BackgroundImage");
+            BtnSetting.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnSetting.FlatAppearance.BorderSize = 0;
+            BtnSetting.FlatStyle = FlatStyle.Flat;
+            BtnSetting.Location = new Point(1107, 28);
+            BtnSetting.Name = "BtnSetting";
+            BtnSetting.Size = new Size(48, 48);
+            BtnSetting.TabIndex = 2;
+            BtnSetting.UseVisualStyleBackColor = true;
             // 
             // FormHome
             // 
@@ -80,8 +80,8 @@
             BackgroundImage = Properties.Resources.Impermais_green;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1264, 751);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(BtnSetting);
+            Controls.Add(BtnPerfil);
             Controls.Add(BtnMenu);
             DoubleBuffered = true;
             MaximizeBox = false;
@@ -97,7 +97,7 @@
         #endregion
 
         private Button BtnMenu;
-        private Button button1;
-        private Button button2;
+        private Button BtnPerfil;
+        private Button BtnSetting;
     }
 }

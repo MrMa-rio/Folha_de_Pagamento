@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.Servidor.GET;
 using FOLHA_DE_PAGAMENTO_.src.SQL;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FOLHA_DE_PAGAMENTO_
 {
@@ -97,7 +99,7 @@ namespace FOLHA_DE_PAGAMENTO_
             string DataNascimento = c_InvertendoData.setDateInvert(TxtDataNascimento.Text, '/');
             string DataAdmissao = c_InvertendoData.setDateInvert(TxtDataAdmissao.Text, '/');
             string[] dataCadastroPessoal = new string[] { TxtNomeCompleto.Text, DataNascimento, TxtNit.Text, TxtPis.Text, TxtTituloEleitor.Text, departamento, cargo, DataAdmissao, TxtReservista.Text, ValidadorCPF.ToString(), CbEstadoCivil.Text, CbGenero.Text, TxtCpf.Text, TxtRg.Text, CbCargo.Text };
-            string[] dataCadastroAdicional = new string[] { TxtRua.Text, TxtNumRua.Value.ToString(), TxtBairro.Text, TxtComplemento.Text, CbUF.Text, TxtCidade.Text, TxtCep.Text };
+            string[] dataCadastroAdicional = new string[] { TxtRua.Text, TxtNumRua.Value.ToString(), TxtBairro.Text, TxtComplemento.Text, CbUF.Text, TxtCidade.Text, TxtCep.Text, TextEmail.Text, TxtTelefone.Text };
             C_InsertData c_InsertAndUpdate = new C_InsertData();
             c_InsertAndUpdate.setDatainDB(dataCadastroPessoal, dataCadastroAdicional);
 
@@ -156,6 +158,13 @@ namespace FOLHA_DE_PAGAMENTO_
         private void TxtReservista_MouseClick(object sender, MouseEventArgs e)
         {
             TxtReservista.SelectAll();
+        }
+
+        private void PctFotoFunc_Click(object sender, EventArgs e)
+        {
+            C_GetImagens c_GetImagens = new C_GetImagens();
+            c_GetImagens.getImagemUser(PctFotoFunc);
+            c_GetImagens.setImagemUser(PctFotoFunc);
         }
     }
 }

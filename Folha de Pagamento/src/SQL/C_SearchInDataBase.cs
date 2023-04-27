@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                             for (int i = 0; i < mySqlDataReader.FieldCount - 1; i++)
                             {
                                 Result[i] = mySqlDataReader.GetString(i);
+                                
                             }
                             conexão.Close();
                             return Result;
@@ -65,23 +67,26 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         }
 
 
-        public string[] getDataEndereco(string Matricula)
+        public string[] getData(string Matricula, string Table)
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
-            string insertSql = $"SELECT * FROM endereço where FK_Matricula LIKE {Matricula} ";
-            string[] Result = new string[8];
+            string insertSql = $"SELECT * FROM {Table} where FK_Matricula LIKE {Matricula} ";
+            
             MySqlConnection conexão;
             conexão = new MySqlConnection();
+            conexão.ConnectionString = endereco;
+            conexão.Open();
+            MySqlCommand command = new MySqlCommand(insertSql, conexão);
+            MySqlDataReader mySqlDataReader = command.ExecuteReader();
+            string[]  Result = new string[mySqlDataReader.FieldCount];
+
             try
             {
-                conexão.ConnectionString = endereco;
-                conexão.Open();
-                MySqlCommand command = new MySqlCommand(insertSql, conexão);
-                MySqlDataReader mySqlDataReader = command.ExecuteReader();
-
                 if (!mySqlDataReader.HasRows)
                 {
+                    
                     return Result;
+                    
                 }
                 else
                 {
@@ -89,14 +94,75 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                     {
                         if (mySqlDataReader.HasRows)
                         {
-                            for (int i = 1; i < Result.Length ; i++)
+                            for (int i = 0; i < Result.Length; i++)
                             {
                                 Result[i] = mySqlDataReader.GetString(i);
+                                
                             }
                             conexão.Close();
                             return Result;
                         }
                     }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message + "\n Algo de Errado Na conexão ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexão.Close();
+            }
+            return Result;
+        }
+        public List<string[]> getListFuncionarios(string coluna, string entrada)
+        {
+            string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
+            string insertSql = $"select * from funcionario where {coluna} LIKE '%{entrada}%'";
+            List<string[]> Result = new List<string[]>();
+
+            MySqlConnection conexão;
+            conexão = new MySqlConnection();
+            conexão.ConnectionString = endereco;
+            conexão.Open();
+            MySqlCommand command = new MySqlCommand(insertSql, conexão);
+            MySqlDataReader mySqlDataReader = command.ExecuteReader();
+
+            try
+            {
+                if (!mySqlDataReader.HasRows)
+                {
+
+                    return Result;
+
+                }
+                else
+                {
+                    while (mySqlDataReader.Read())
+                    {
+                        string[] row = new string[mySqlDataReader.FieldCount];
+                        if (mySqlDataReader.HasRows)
+                        {
+                            for (int i = 0; i < mySqlDataReader.FieldCount; i++)
+                            {
+                                row[i] = mySqlDataReader.GetString(i);
+
+                            }
+                            
+                        }
+                            Result.Add(row);
+                            
+                            
+                            
+                            //return Result;
+                    }
+                    
+                    conexão.Close();
+                    return Result;
                 }
             }
             catch (MySqlException ex)

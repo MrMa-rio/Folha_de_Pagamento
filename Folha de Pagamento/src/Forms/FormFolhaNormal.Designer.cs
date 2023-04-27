@@ -127,6 +127,7 @@
             LbFolhaNormal.Name = "LbFolhaNormal";
             LbFolhaNormal.Size = new Size(1110, 630);
             LbFolhaNormal.TabIndex = 2;
+            LbFolhaNormal.MouseClick += AllForms_MouseClick;
             // 
             // PanelFolhaDetalhada
             // 
@@ -146,6 +147,7 @@
             PanelFolhaDetalhada.Name = "PanelFolhaDetalhada";
             PanelFolhaDetalhada.Size = new Size(980, 434);
             PanelFolhaDetalhada.TabIndex = 62;
+            PanelFolhaDetalhada.MouseClick += AllForms_MouseClick;
             // 
             // panel7
             // 
@@ -166,6 +168,7 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(956, 50);
             panel7.TabIndex = 24;
+            panel7.MouseClick += AllForms_MouseClick;
             // 
             // label64
             // 
@@ -310,6 +313,7 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
+            panel6.MouseClick += AllForms_MouseClick;
             // 
             // label24
             // 
@@ -430,6 +434,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(315, 257);
             panel3.TabIndex = 19;
+            panel3.MouseClick += AllForms_MouseClick;
             // 
             // label56
             // 
@@ -509,6 +514,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(956, 50);
             panel2.TabIndex = 18;
+            panel2.MouseClick += AllForms_MouseClick;
             // 
             // label2
             // 
@@ -533,6 +539,7 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 17;
+            panel19.MouseClick += AllForms_MouseClick;
             // 
             // label61
             // 
@@ -617,6 +624,7 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(315, 257);
             panel5.TabIndex = 10;
+            panel5.MouseClick += AllForms_MouseClick;
             // 
             // label40
             // 
@@ -749,6 +757,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(315, 257);
             panel4.TabIndex = 9;
+            panel4.MouseClick += AllForms_MouseClick;
             // 
             // label4
             // 
@@ -892,6 +901,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(955, 72);
             panel1.TabIndex = 6;
+            panel1.MouseClick += AllForms_MouseClick;
             // 
             // label8
             // 
@@ -959,6 +969,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormFolhaNormal";
             Text = "FormNormal";
+            MouseClick += AllForms_MouseClick;
             LbFolhaNormal.ResumeLayout(false);
             LbFolhaNormal.PerformLayout();
             PanelFolhaDetalhada.ResumeLayout(false);

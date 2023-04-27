@@ -30,10 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisar));
             LbPesquisar = new Panel();
-            BtnPesquisarCargos = new Button();
+            TxtPesquisarCargo = new ComboBox();
             label3 = new Label();
             label2 = new Label();
-            TxtPesquisarCargos = new TextBox();
             TxtPesquisarNomes = new TextBox();
             BtnPesquisarNomes = new Button();
             PanelPesquisar = new Panel();
@@ -46,31 +45,33 @@
             // 
             LbPesquisar.AccessibleRole = AccessibleRole.None;
             LbPesquisar.BackColor = Color.LightGray;
-            LbPesquisar.Controls.Add(BtnPesquisarCargos);
+            LbPesquisar.Controls.Add(TxtPesquisarCargo);
             LbPesquisar.Controls.Add(label3);
             LbPesquisar.Controls.Add(label2);
-            LbPesquisar.Controls.Add(TxtPesquisarCargos);
             LbPesquisar.Controls.Add(TxtPesquisarNomes);
             LbPesquisar.Controls.Add(BtnPesquisarNomes);
             LbPesquisar.Controls.Add(PanelPesquisar);
             LbPesquisar.Controls.Add(LbTitulo);
             LbPesquisar.Controls.Add(label1);
-            LbPesquisar.Location = new Point(80, 90);
+            LbPesquisar.Location = new Point(81, 90);
             LbPesquisar.Name = "LbPesquisar";
             LbPesquisar.Size = new Size(1110, 630);
             LbPesquisar.TabIndex = 1;
+            LbPesquisar.MouseClick += AllForms_MouseClick;
             // 
-            // BtnPesquisarCargos
+            // TxtPesquisarCargo
             // 
-            BtnPesquisarCargos.BackgroundImage = (Image)resources.GetObject("BtnPesquisarCargos.BackgroundImage");
-            BtnPesquisarCargos.BackgroundImageLayout = ImageLayout.Stretch;
-            BtnPesquisarCargos.FlatAppearance.BorderSize = 0;
-            BtnPesquisarCargos.FlatStyle = FlatStyle.Flat;
-            BtnPesquisarCargos.Location = new Point(1016, 101);
-            BtnPesquisarCargos.Name = "BtnPesquisarCargos";
-            BtnPesquisarCargos.Size = new Size(31, 31);
-            BtnPesquisarCargos.TabIndex = 67;
-            BtnPesquisarCargos.UseVisualStyleBackColor = true;
+            TxtPesquisarCargo.AutoCompleteCustomSource.AddRange(new string[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo ", "Contadora" });
+            TxtPesquisarCargo.BackColor = Color.DarkGray;
+            TxtPesquisarCargo.FlatStyle = FlatStyle.Flat;
+            TxtPesquisarCargo.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtPesquisarCargo.FormattingEnabled = true;
+            TxtPesquisarCargo.Items.AddRange(new object[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo", "Contadora" });
+            TxtPesquisarCargo.Location = new Point(803, 100);
+            TxtPesquisarCargo.Name = "TxtPesquisarCargo";
+            TxtPesquisarCargo.Size = new Size(207, 31);
+            TxtPesquisarCargo.TabIndex = 68;
+            TxtPesquisarCargo.TextChanged += TxtPesquisarCargo_TextChanged;
             // 
             // label3
             // 
@@ -92,16 +93,6 @@
             label2.TabIndex = 65;
             label2.Text = "Pesquisar por Nomes:";
             // 
-            // TxtPesquisarCargos
-            // 
-            TxtPesquisarCargos.BackColor = Color.DarkGray;
-            TxtPesquisarCargos.BorderStyle = BorderStyle.FixedSingle;
-            TxtPesquisarCargos.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtPesquisarCargos.Location = new Point(799, 101);
-            TxtPesquisarCargos.Name = "TxtPesquisarCargos";
-            TxtPesquisarCargos.Size = new Size(211, 31);
-            TxtPesquisarCargos.TabIndex = 64;
-            // 
             // TxtPesquisarNomes
             // 
             TxtPesquisarNomes.BackColor = Color.DarkGray;
@@ -111,18 +102,21 @@
             TxtPesquisarNomes.Name = "TxtPesquisarNomes";
             TxtPesquisarNomes.Size = new Size(290, 31);
             TxtPesquisarNomes.TabIndex = 63;
+            TxtPesquisarNomes.TextChanged += TxtPesquisarNomes_TextChanged;
             // 
             // BtnPesquisarNomes
             // 
+            BtnPesquisarNomes.BackColor = Color.DarkGray;
             BtnPesquisarNomes.BackgroundImage = (Image)resources.GetObject("BtnPesquisarNomes.BackgroundImage");
             BtnPesquisarNomes.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnPesquisarNomes.Enabled = false;
             BtnPesquisarNomes.FlatAppearance.BorderSize = 0;
             BtnPesquisarNomes.FlatStyle = FlatStyle.Flat;
-            BtnPesquisarNomes.Location = new Point(530, 101);
+            BtnPesquisarNomes.Location = new Point(525, 101);
             BtnPesquisarNomes.Name = "BtnPesquisarNomes";
             BtnPesquisarNomes.Size = new Size(31, 31);
             BtnPesquisarNomes.TabIndex = 61;
-            BtnPesquisarNomes.UseVisualStyleBackColor = true;
+            BtnPesquisarNomes.UseVisualStyleBackColor = false;
             // 
             // PanelPesquisar
             // 
@@ -135,6 +129,7 @@
             PanelPesquisar.Name = "PanelPesquisar";
             PanelPesquisar.Size = new Size(980, 434);
             PanelPesquisar.TabIndex = 7;
+            PanelPesquisar.MouseClick += AllForms_MouseClick;
             // 
             // LbTitulo
             // 
@@ -172,6 +167,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormPesquisar";
             Text = "FormPesquisar";
+            MouseClick += AllForms_MouseClick;
             LbPesquisar.ResumeLayout(false);
             LbPesquisar.PerformLayout();
             ResumeLayout(false);
@@ -180,14 +176,13 @@
         #endregion
 
         private Panel LbPesquisar;
-        private Panel PanelPesquisar;
         private Label LbTitulo;
         private Label label1;
         private Label label3;
         private Label label2;
-        private TextBox TxtPesquisarCargos;
         private TextBox TxtPesquisarNomes;
         private Button BtnPesquisarNomes;
-        private Button BtnPesquisarCargos;
+        internal Panel PanelPesquisar;
+        private ComboBox TxtPesquisarCargo;
     }
 }

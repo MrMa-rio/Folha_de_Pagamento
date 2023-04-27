@@ -24,5 +24,15 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             navBarShow.AnimationHide(NavBar, NavBar.Pnl2);
         }
+
+        private void BtnMenu_MouseEnter(object sender, EventArgs e)
+        {
+            BtnMenu.BackgroundImage = Properties.Resources.menu_black;
+        }
+
+        private void BtnMenu_MouseLeave(object sender, EventArgs e)
+        {
+            BtnMenu.BackgroundImage = Properties.Resources.menu2;
+        }
     }
 }

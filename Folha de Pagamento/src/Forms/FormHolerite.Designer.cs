@@ -151,6 +151,7 @@
             LbHolerite.Name = "LbHolerite";
             LbHolerite.Size = new Size(1110, 630);
             LbHolerite.TabIndex = 2;
+            LbHolerite.MouseClick += AllForms_MouseClick;
             // 
             // label20
             // 
@@ -213,6 +214,7 @@
             PanelHolerite.Name = "PanelHolerite";
             PanelHolerite.Size = new Size(980, 434);
             PanelHolerite.TabIndex = 7;
+            PanelHolerite.MouseClick += AllForms_MouseClick;
             // 
             // panel19
             // 
@@ -231,6 +233,7 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 16;
+            panel19.MouseClick += AllForms_MouseClick;
             // 
             // label61
             // 
@@ -345,6 +348,7 @@
             panel18.Name = "panel18";
             panel18.Size = new Size(110, 30);
             panel18.TabIndex = 15;
+            panel18.MouseClick += AllForms_MouseClick;
             // 
             // label11
             // 
@@ -365,6 +369,7 @@
             panel17.Name = "panel17";
             panel17.Size = new Size(110, 30);
             panel17.TabIndex = 14;
+            panel17.MouseClick += AllForms_MouseClick;
             // 
             // label5
             // 
@@ -385,6 +390,7 @@
             panel15.Name = "panel15";
             panel15.Size = new Size(66, 30);
             panel15.TabIndex = 12;
+            panel15.MouseClick += AllForms_MouseClick;
             // 
             // label13
             // 
@@ -405,6 +411,7 @@
             panel16.Name = "panel16";
             panel16.Size = new Size(90, 30);
             panel16.TabIndex = 13;
+            panel16.MouseClick += AllForms_MouseClick;
             // 
             // label6
             // 
@@ -425,6 +432,7 @@
             panel10.Name = "panel10";
             panel10.Size = new Size(556, 30);
             panel10.TabIndex = 9;
+            panel10.MouseClick += AllForms_MouseClick;
             // 
             // label12
             // 
@@ -445,6 +453,7 @@
             panel14.Name = "panel14";
             panel14.Size = new Size(132, 40);
             panel14.TabIndex = 13;
+            panel14.MouseClick += AllForms_MouseClick;
             // 
             // label19
             // 
@@ -465,6 +474,7 @@
             panel13.Name = "panel13";
             panel13.Size = new Size(184, 40);
             panel13.TabIndex = 13;
+            panel13.MouseClick += AllForms_MouseClick;
             // 
             // label43
             // 
@@ -487,6 +497,7 @@
             panel12.Name = "panel12";
             panel12.Size = new Size(110, 40);
             panel12.TabIndex = 13;
+            panel12.MouseClick += AllForms_MouseClick;
             // 
             // label42
             // 
@@ -509,6 +520,7 @@
             panel11.Name = "panel11";
             panel11.Size = new Size(110, 40);
             panel11.TabIndex = 12;
+            panel11.MouseClick += AllForms_MouseClick;
             // 
             // label41
             // 
@@ -534,6 +546,7 @@
             panel9.Name = "panel9";
             panel9.Size = new Size(110, 160);
             panel9.TabIndex = 12;
+            panel9.MouseClick += AllForms_MouseClick;
             // 
             // label39
             // 
@@ -598,6 +611,7 @@
             panel8.Name = "panel8";
             panel8.Size = new Size(110, 160);
             panel8.TabIndex = 11;
+            panel8.MouseClick += AllForms_MouseClick;
             // 
             // label40
             // 
@@ -658,6 +672,7 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(90, 205);
             panel7.TabIndex = 10;
+            panel7.MouseClick += AllForms_MouseClick;
             // 
             // label32
             // 
@@ -718,6 +733,7 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(556, 205);
             panel6.TabIndex = 10;
+            panel6.MouseClick += AllForms_MouseClick;
             // 
             // label27
             // 
@@ -778,6 +794,7 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(66, 205);
             panel5.TabIndex = 9;
+            panel5.MouseClick += AllForms_MouseClick;
             // 
             // label28
             // 
@@ -844,6 +861,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(956, 50);
             panel4.TabIndex = 8;
+            panel4.MouseClick += AllForms_MouseClick;
             // 
             // label48
             // 
@@ -960,6 +978,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(628, 40);
             panel3.TabIndex = 7;
+            panel3.MouseClick += AllForms_MouseClick;
             // 
             // label51
             // 
@@ -1003,6 +1022,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(273, 111);
             panel2.TabIndex = 6;
+            panel2.MouseClick += AllForms_MouseClick;
             // 
             // label4
             // 
@@ -1045,6 +1065,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(677, 111);
             panel1.TabIndex = 5;
+            panel1.MouseClick += AllForms_MouseClick;
             // 
             // label7
             // 
@@ -1122,6 +1143,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormHolerite";
             Text = "FormHolerite";
+            MouseClick += AllForms_MouseClick;
             LbHolerite.ResumeLayout(false);
             LbHolerite.PerformLayout();
             PanelHolerite.ResumeLayout(false);

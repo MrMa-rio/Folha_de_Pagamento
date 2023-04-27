@@ -29,161 +29,139 @@
         private void InitializeComponent()
         {
             PanelCard = new Panel();
-            lbCargo = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            lbidCargo = new Label();
-            LbNome = new Label();
-            LbMatricula = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
+            PnlBackground = new Panel();
+            TxtDepartamento = new Label();
+            TxtCargo = new Label();
             label16 = new Label();
+            TxtNome = new Label();
+            label15 = new Label();
+            TxtMatricula = new Label();
+            label13 = new Label();
+            label1 = new Label();
+            label14 = new Label();
             PanelCard.SuspendLayout();
+            PnlBackground.SuspendLayout();
             SuspendLayout();
             // 
             // PanelCard
             // 
             PanelCard.BackColor = Color.DarkGray;
-            PanelCard.Controls.Add(lbCargo);
-            PanelCard.Controls.Add(label2);
-            PanelCard.Controls.Add(label1);
-            PanelCard.Controls.Add(label7);
-            PanelCard.Controls.Add(label8);
-            PanelCard.Controls.Add(lbidCargo);
-            PanelCard.Controls.Add(LbNome);
-            PanelCard.Controls.Add(LbMatricula);
-            PanelCard.Controls.Add(label13);
-            PanelCard.Controls.Add(label14);
-            PanelCard.Controls.Add(label15);
-            PanelCard.Controls.Add(label16);
+            PanelCard.Controls.Add(PnlBackground);
             PanelCard.Dock = DockStyle.Fill;
             PanelCard.Location = new Point(0, 0);
             PanelCard.Name = "PanelCard";
             PanelCard.Size = new Size(980, 88);
             PanelCard.TabIndex = 15;
             // 
-            // lbCargo
+            // PnlBackground
             // 
-            lbCargo.AutoSize = true;
-            lbCargo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbCargo.Location = new Point(634, 52);
-            lbCargo.Name = "lbCargo";
-            lbCargo.Size = new Size(95, 21);
-            lbCargo.TabIndex = 16;
-            lbCargo.Text = "Cargo puxar";
+            PnlBackground.BackColor = Color.DarkGray;
+            PnlBackground.Controls.Add(TxtDepartamento);
+            PnlBackground.Controls.Add(TxtCargo);
+            PnlBackground.Controls.Add(label16);
+            PnlBackground.Controls.Add(TxtNome);
+            PnlBackground.Controls.Add(label15);
+            PnlBackground.Controls.Add(TxtMatricula);
+            PnlBackground.Controls.Add(label13);
+            PnlBackground.Controls.Add(label1);
+            PnlBackground.Controls.Add(label14);
+            PnlBackground.Location = new Point(10, 7);
+            PnlBackground.Name = "PnlBackground";
+            PnlBackground.Size = new Size(958, 75);
+            PnlBackground.TabIndex = 17;
+            PnlBackground.MouseEnter += PnlBackground_MouseEnter;
+            PnlBackground.MouseLeave += PnlBackground_MouseLeave;
             // 
-            // label2
+            // TxtDepartamento
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(614, 52);
-            label2.Name = "label2";
-            label2.Size = new Size(14, 21);
-            label2.TabIndex = 15;
-            label2.Text = ":";
+            TxtDepartamento.AutoSize = true;
+            TxtDepartamento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDepartamento.Location = new Point(697, 6);
+            TxtDepartamento.Name = "TxtDepartamento";
+            TxtDepartamento.Size = new Size(114, 21);
+            TxtDepartamento.TabIndex = 10;
+            TxtDepartamento.Text = "ID Cargo puxar";
             // 
-            // label1
+            // TxtCargo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(614, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(14, 21);
-            label1.TabIndex = 14;
-            label1.Text = ":";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(110, 52);
-            label7.Name = "label7";
-            label7.Size = new Size(14, 21);
-            label7.TabIndex = 13;
-            label7.Text = ":";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(110, 18);
-            label8.Name = "label8";
-            label8.Size = new Size(14, 21);
-            label8.TabIndex = 12;
-            label8.Text = ":";
-            // 
-            // lbidCargo
-            // 
-            lbidCargo.AutoSize = true;
-            lbidCargo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbidCargo.Location = new Point(634, 18);
-            lbidCargo.Name = "lbidCargo";
-            lbidCargo.Size = new Size(114, 21);
-            lbidCargo.TabIndex = 10;
-            lbidCargo.Text = "ID Cargo puxar";
-            // 
-            // LbNome
-            // 
-            LbNome.AutoSize = true;
-            LbNome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbNome.Location = new Point(130, 52);
-            LbNome.Name = "LbNome";
-            LbNome.Size = new Size(96, 21);
-            LbNome.TabIndex = 9;
-            LbNome.Text = "Nome puxar";
-            // 
-            // LbMatricula
-            // 
-            LbMatricula.AutoSize = true;
-            LbMatricula.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbMatricula.Location = new Point(130, 18);
-            LbMatricula.Name = "LbMatricula";
-            LbMatricula.Size = new Size(118, 21);
-            LbMatricula.TabIndex = 8;
-            LbMatricula.Text = "Matrícula puxar";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(30, 18);
-            label13.Name = "label13";
-            label13.Size = new Size(83, 21);
-            label13.TabIndex = 0;
-            label13.Text = "Matrícula";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.Location = new Point(30, 52);
-            label14.Name = "label14";
-            label14.Size = new Size(57, 21);
-            label14.TabIndex = 1;
-            label14.Text = "Nome";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.Location = new Point(540, 18);
-            label15.Name = "label15";
-            label15.Size = new Size(80, 21);
-            label15.TabIndex = 2;
-            label15.Text = "ID Cargo ";
+            TxtCargo.AutoSize = true;
+            TxtCargo.BackColor = Color.Transparent;
+            TxtCargo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCargo.Location = new Point(697, 40);
+            TxtCargo.Name = "TxtCargo";
+            TxtCargo.Size = new Size(95, 21);
+            TxtCargo.TabIndex = 16;
+            TxtCargo.Text = "Cargo puxar";
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.Location = new Point(540, 52);
+            label16.Location = new Point(542, 40);
             label16.Name = "label16";
-            label16.Size = new Size(55, 21);
+            label16.Size = new Size(59, 21);
             label16.TabIndex = 3;
-            label16.Text = "Cargo";
+            label16.Text = "Cargo:";
+            // 
+            // TxtNome
+            // 
+            TxtNome.AutoSize = true;
+            TxtNome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtNome.Location = new Point(118, 40);
+            TxtNome.Name = "TxtNome";
+            TxtNome.Size = new Size(96, 21);
+            TxtNome.TabIndex = 9;
+            TxtNome.Text = "Nome puxar";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Location = new Point(542, 6);
+            label15.Name = "label15";
+            label15.Size = new Size(125, 21);
+            label15.TabIndex = 2;
+            label15.Text = "Departamento:";
+            // 
+            // TxtMatricula
+            // 
+            TxtMatricula.AutoSize = true;
+            TxtMatricula.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtMatricula.Location = new Point(118, 6);
+            TxtMatricula.Name = "TxtMatricula";
+            TxtMatricula.Size = new Size(118, 21);
+            TxtMatricula.TabIndex = 8;
+            TxtMatricula.Text = "Matrícula puxar";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Location = new Point(18, 6);
+            label13.Name = "label13";
+            label13.Size = new Size(87, 21);
+            label13.TabIndex = 0;
+            label13.Text = "Matrícula:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(608, 6);
+            label1.Name = "label1";
+            label1.Size = new Size(14, 21);
+            label1.TabIndex = 14;
+            label1.Text = ":";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.Location = new Point(18, 40);
+            label14.Name = "label14";
+            label14.Size = new Size(61, 21);
+            label14.TabIndex = 1;
+            label14.Text = "Nome:";
             // 
             // FormCard
             // 
@@ -195,24 +173,23 @@
             Name = "FormCard";
             Text = "FormCard";
             PanelCard.ResumeLayout(false);
-            PanelCard.PerformLayout();
+            PnlBackground.ResumeLayout(false);
+            PnlBackground.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel PanelCard;
-        private Label lbCargo;
-        private Label label2;
+        private Label TxtCargo;
         private Label label1;
-        private Label label7;
-        private Label label8;
-        private Label lbidCargo;
-        private Label LbNome;
-        private Label LbMatricula;
+        private Label TxtDepartamento;
+        private Label TxtNome;
+        private Label TxtMatricula;
         private Label label13;
         private Label label14;
         private Label label15;
         private Label label16;
+        private Panel PnlBackground;
     }
 }
