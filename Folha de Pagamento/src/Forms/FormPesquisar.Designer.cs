@@ -100,7 +100,7 @@
             TxtPesquisarCargos.Location = new Point(799, 101);
             TxtPesquisarCargos.Name = "TxtPesquisarCargos";
             TxtPesquisarCargos.Size = new Size(211, 31);
-            TxtPesquisarCargos.TabIndex = 64;
+            TxtPesquisarCargos.TabIndex = 2;
             // 
             // TxtPesquisarNomes
             // 
@@ -110,7 +110,7 @@
             TxtPesquisarNomes.Location = new Point(234, 101);
             TxtPesquisarNomes.Name = "TxtPesquisarNomes";
             TxtPesquisarNomes.Size = new Size(290, 31);
-            TxtPesquisarNomes.TabIndex = 63;
+            TxtPesquisarNomes.TabIndex = 1;
             // 
             // BtnPesquisarNomes
             // 

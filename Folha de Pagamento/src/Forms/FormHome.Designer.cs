@@ -38,6 +38,8 @@
             BtnMenu.BackColor = Color.Transparent;
             BtnMenu.BackgroundImage = Properties.Resources.menu;
             BtnMenu.FlatAppearance.BorderSize = 0;
+            BtnMenu.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            BtnMenu.FlatAppearance.MouseOverBackColor = Color.LightGray;
             BtnMenu.FlatStyle = FlatStyle.Flat;
             BtnMenu.Location = new Point(27, 28);
             BtnMenu.Name = "BtnMenu";
