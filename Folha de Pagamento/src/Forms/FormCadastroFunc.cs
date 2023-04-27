@@ -163,8 +163,8 @@ namespace FOLHA_DE_PAGAMENTO_
         private void PctFotoFunc_Click(object sender, EventArgs e)
         {
             C_GetImagens c_GetImagens = new C_GetImagens();
-            c_GetImagens.getImagemUser(PctFotoFunc);
-            c_GetImagens.setImagemUser(PctFotoFunc);
+            //c_GetImagens.getImagemUser(PctFotoFunc);
+            //c_GetImagens.setImagemUser(PctFotoFunc);
         }
     }
 }
