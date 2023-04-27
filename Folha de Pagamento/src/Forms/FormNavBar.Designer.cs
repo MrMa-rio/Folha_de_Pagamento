@@ -96,7 +96,6 @@
             // BtnCalculoPagamento
             // 
             BtnCalculoPagamento.BackColor = Color.Transparent;
-            BtnCalculoPagamento.Enabled = false;
             BtnCalculoPagamento.FlatAppearance.BorderSize = 0;
             BtnCalculoPagamento.FlatStyle = FlatStyle.Flat;
             BtnCalculoPagamento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
