@@ -13,22 +13,22 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
 {
     public partial class FormCard : Form
     {
+        FormNavBar formNavBar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
+        Form formPrincipal = Application.OpenForms.OfType<FormHome>().FirstOrDefault();
         private string[] DadosFuncionario;
+
         C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
-        public FormCard(string[] dadosFuncionario)
+        public FormCard()
         {
             InitializeComponent();
+        }
+        public FormCard(string[] dadosFuncionario):this()
+        {
             DadosFuncionario = dadosFuncionario;
             TxtNome.Text = dadosFuncionario[2];
             TxtMatricula.Text = dadosFuncionario[0];
-            TxtCargo.Text = c_HandleCargoSalario.getIdCargo(dadosFuncionario[14]);
-            TxtDepartamento.Text = c_HandleCargoSalario.getIdDepartamento( dadosFuncionario[13]);
-
-        }
-
-        private void PanelCard_MouseEnter(object sender, EventArgs e)
-        {
-            BackColor = Color.White;
+            TxtCargo.Text = c_HandleCargoSalario.getIdCargo(dadosFuncionario[15]);
+            TxtDepartamento.Text = c_HandleCargoSalario.getIdDepartamento(dadosFuncionario[14]);
         }
 
         private void PnlBackground_MouseLeave(object sender, EventArgs e)
@@ -43,6 +43,13 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
             Thread.Sleep(45);
             PnlBackground.BackColor = Color.LightGray;
             PanelCard.BackColor = Color.Gray;
+        }
+
+        private void PnlBackground_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_FormShow formShow = new C_FormShow();
+            FormAlterarCadastro formAlterarCadastro = new FormAlterarCadastro(formNavBar, DadosFuncionario[0]);
+            formShow.setFormShow(formPrincipal, formAlterarCadastro);
         }
     }
 }

@@ -14,6 +14,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         C_FormShow C_FormShow = new C_FormShow();
         public void handleListFuncionario(string coluna, string entrada, FormPesquisar formPesquisar)
         {
+            
             List<string[]> strings = new List<string[]>();
             strings = inDataBase.getListFuncionarios(coluna, entrada);
             formPesquisar.PanelPesquisar.Controls.Clear();

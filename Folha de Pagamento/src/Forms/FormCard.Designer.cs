@@ -69,6 +69,7 @@
             PnlBackground.Name = "PnlBackground";
             PnlBackground.Size = new Size(958, 75);
             PnlBackground.TabIndex = 17;
+            PnlBackground.MouseClick += PnlBackground_MouseClick;
             PnlBackground.MouseEnter += PnlBackground_MouseEnter;
             PnlBackground.MouseLeave += PnlBackground_MouseLeave;
             // 

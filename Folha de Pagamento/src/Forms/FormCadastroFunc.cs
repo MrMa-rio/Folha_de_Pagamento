@@ -18,12 +18,15 @@ namespace FOLHA_DE_PAGAMENTO_
     {
         private FormNavBar FormAtivo;
         private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
+        private C_ManiplaçaoData c_InvertendoData = new C_ManiplaçaoData();
         private bool ValidadorCPF;
+        private bool ValidacaoDate;
+        private string endereco = "";
+        private string matricula;
         public FormCadastroFunc(FormNavBar NavBar)
         {
             InitializeComponent();
             FormAtivo = NavBar;
-
         }
 
         private void TxtCpf_TextChanged(object sender, EventArgs e)
@@ -31,7 +34,6 @@ namespace FOLHA_DE_PAGAMENTO_
             LbCpfResult.Text = TxtCpf.Text;
             C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
             ValidadorCPF = c_ValidadorCPF.setValidacao(TxtCpf, PctCpf);
-
         }
 
         private void BtnCalendario_MouseClick(object sender, MouseEventArgs e)
@@ -48,13 +50,11 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             BoxCalendario2.Visible = !BoxCalendario2.Visible ? true : false;
             BoxCalendario2.Location = new Point(444, BtnCalendario2.Location.Y);
-
         }
 
         private void BoxCalendario2_DateSelected(object sender, DateRangeEventArgs e)
         {
             TxtDataAdmissao.Text = BoxCalendario2.SelectionEnd.ToString();
-
         }
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
         {
@@ -93,15 +93,35 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
         {
             C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
-            C_InvertendoData c_InvertendoData = new C_InvertendoData();
+
             string departamento = c_HandleCargoSalario.setIdDepartamento(CbDepartamento.Text);
             string cargo = c_HandleCargoSalario.setIdCargo(CbCargo.Text);
             string DataNascimento = c_InvertendoData.setDateInvert(TxtDataNascimento.Text, '/');
             string DataAdmissao = c_InvertendoData.setDateInvert(TxtDataAdmissao.Text, '/');
-            string[] dataCadastroPessoal = new string[] { TxtNomeCompleto.Text, DataNascimento, TxtNit.Text, TxtPis.Text, TxtTituloEleitor.Text, departamento, cargo, DataAdmissao, TxtReservista.Text, ValidadorCPF.ToString(), CbEstadoCivil.Text, CbGenero.Text, TxtCpf.Text, TxtRg.Text, CbCargo.Text };
-            string[] dataCadastroAdicional = new string[] { TxtRua.Text, TxtNumRua.Value.ToString(), TxtBairro.Text, TxtComplemento.Text, CbUF.Text, TxtCidade.Text, TxtCep.Text, TextEmail.Text, TxtTelefone.Text };
+
+            string[] dataCadastroPessoal = new string[] { TxtNomeCompleto.Text,
+                DataNascimento, TxtNit.Text,
+                TxtPis.Text, TxtTituloEleitor.Text,
+                departamento, cargo, DataAdmissao,
+                TxtReservista.Text, ValidadorCPF.ToString(),
+                CbEstadoCivil.Text, CbGenero.Text,
+                TxtCpf.Text, TxtRg.Text, CbCargo.Text,TxtCTrabalho.Text,ValidacaoDate.ToString()
+            };
+
+            string[] dataCadastroAdicional = new string[] { TxtRua.Text, TxtNumRua.Value.ToString(),
+                TxtBairro.Text, TxtComplemento.Text,
+                CbUF.Text, TxtCidade.Text, TxtCep.Text,
+                TextEmail.Text, TxtTelefone.Text
+            };
+
             C_InsertData c_InsertAndUpdate = new C_InsertData();
-            c_InsertAndUpdate.setDatainDB(dataCadastroPessoal, dataCadastroAdicional);
+            matricula = c_InsertAndUpdate.setDatainDB(dataCadastroPessoal, dataCadastroAdicional);
+            if (endereco != "")
+            {
+                C_ManipulaçãoImagens c_ManipulaçãoImagens = new C_ManipulaçãoImagens();
+                c_ManipulaçãoImagens.setImagemUser(matricula, endereco);
+            }
+
 
         }
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
@@ -120,7 +140,10 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void TxtDataNascimento_TextChanged(object sender, EventArgs e)
         {
+            
+
             LbDataNascimentoResult.Text = TxtDataNascimento.Text;
+            ValidacaoDate = c_InvertendoData.setValidacaoData(TxtDataNascimento, BoxCalendario.TodayDate, Pctdata);
         }
 
         private void TxtTelefone_TextChanged(object sender, EventArgs e)
@@ -149,7 +172,6 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             TxtPis.SelectAll();
         }
-
         private void TxtTituloEleitor_MouseClick(object sender, MouseEventArgs e)
         {
             TxtTituloEleitor.SelectAll();
@@ -160,11 +182,18 @@ namespace FOLHA_DE_PAGAMENTO_
             TxtReservista.SelectAll();
         }
 
-        private void PctFotoFunc_Click(object sender, EventArgs e)
+        private void button1_MouseClick(object sender, EventArgs e)
         {
-            C_GetImagens c_GetImagens = new C_GetImagens();
-            //c_GetImagens.getImagemUser(PctFotoFunc);
-            //c_GetImagens.setImagemUser(PctFotoFunc);
+            C_ManipulaçãoImagens c_GetImagens = new C_ManipulaçãoImagens();
+            endereco = c_GetImagens.setFotoNovoFuncionario(PctFotoFunc);
+        }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_ManipulaçãoImagens c_Manipulação = new C_ManipulaçãoImagens();
+            {
+                c_Manipulação.erasePhoto(PctFotoFunc);
+            }
         }
     }
 }

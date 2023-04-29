@@ -63,6 +63,16 @@ namespace FOLHA_DE_PAGAMENTO_.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addPhoto {
+            get {
+                object obj = ResourceManager.GetObject("addPhoto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_left {
             get {
                 object obj = ResourceManager.GetObject("arrow_left", resourceCulture);
@@ -183,6 +193,16 @@ namespace FOLHA_DE_PAGAMENTO_.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap editPhoto {
+            get {
+                object obj = ResourceManager.GetObject("editPhoto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Impermais_circle_white {
             get {
                 object obj = ResourceManager.GetObject("Impermais_circle_white", resourceCulture);
@@ -266,6 +286,16 @@ namespace FOLHA_DE_PAGAMENTO_.Properties {
         internal static System.Drawing.Bitmap person_black {
             get {
                 object obj = ResourceManager.GetObject("person_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap photo {
+            get {
+                object obj = ResourceManager.GetObject("photo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

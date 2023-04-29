@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             Button BtnEditar;
+            Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             panel1 = new Panel();
             TxtMatricula = new MaskedTextBox();
             BtnLimpar = new Button();
             BtnConfirmar = new Button();
             PnlCtrlFunc = new Panel();
+            PctData = new PictureBox();
             TxtNumRua = new NumericUpDown();
             TxtTituloEleitor = new MaskedTextBox();
             LbTituloEleitor = new Label();
@@ -99,16 +101,18 @@
             LbMatricula = new Label();
             panel3 = new Panel();
             label2 = new Label();
-            pictureBox1 = new PictureBox();
+            PctUser = new PictureBox();
             LbTitulo = new Label();
             label1 = new Label();
             BtnEditar = new Button();
+            button1 = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PctData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumRua).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PctUser).BeginInit();
             SuspendLayout();
             // 
             // BtnEditar
@@ -117,12 +121,25 @@
             BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Location = new Point(116, 270);
+            BtnEditar.Location = new Point(116, 391);
             BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(49, 49);
+            BtnEditar.Size = new Size(43, 43);
             BtnEditar.TabIndex = 1;
             BtnEditar.UseVisualStyleBackColor = true;
             BtnEditar.MouseClick += BtnEditar_MouseClick;
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = Properties.Resources.editPhoto;
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(218, 221);
+            button1.Name = "button1";
+            button1.Size = new Size(43, 43);
+            button1.TabIndex = 123;
+            button1.UseVisualStyleBackColor = true;
+            button1.MouseClick += button1_MouseClick;
             // 
             // panel1
             // 
@@ -190,6 +207,7 @@
             PnlCtrlFunc.AutoScrollMargin = new Size(0, 10);
             PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
             PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
+            PnlCtrlFunc.Controls.Add(PctData);
             PnlCtrlFunc.Controls.Add(TxtNumRua);
             PnlCtrlFunc.Controls.Add(TxtTituloEleitor);
             PnlCtrlFunc.Controls.Add(LbTituloEleitor);
@@ -254,6 +272,16 @@
             PnlCtrlFunc.Size = new Size(718, 434);
             PnlCtrlFunc.TabIndex = 12;
             PnlCtrlFunc.MouseClick += AllForms_MouseClick;
+            // 
+            // PctData
+            // 
+            PctData.BackgroundImageLayout = ImageLayout.Stretch;
+            PctData.Enabled = false;
+            PctData.Location = new Point(300, 148);
+            PctData.Name = "PctData";
+            PctData.Size = new Size(28, 28);
+            PctData.TabIndex = 137;
+            PctData.TabStop = false;
             // 
             // TxtNumRua
             // 
@@ -839,7 +867,7 @@
             BtnCalendario.Enabled = false;
             BtnCalendario.FlatAppearance.BorderSize = 0;
             BtnCalendario.FlatStyle = FlatStyle.Flat;
-            BtnCalendario.Location = new Point(304, 149);
+            BtnCalendario.Location = new Point(338, 150);
             BtnCalendario.Name = "BtnCalendario";
             BtnCalendario.Size = new Size(26, 26);
             BtnCalendario.TabIndex = 55;
@@ -858,7 +886,9 @@
             TxtCalendario.PromptChar = 'X';
             TxtCalendario.Size = new Size(121, 31);
             TxtCalendario.TabIndex = 5;
+            TxtCalendario.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
             TxtCalendario.MouseClick += TxtCalendario_MouseClick;
+            TxtCalendario.TextChanged += TxtCalendario_TextChanged;
             // 
             // TxtCpf
             // 
@@ -878,7 +908,7 @@
             // 
             // CbCargo
             // 
-            CbCargo.AutoCompleteCustomSource.AddRange(new string[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo", "Contadora" });
+            CbCargo.AutoCompleteCustomSource.AddRange(new string[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo", "Contador(a)" });
             CbCargo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbCargo.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbCargo.BackColor = Color.DarkGray;
@@ -886,7 +916,7 @@
             CbCargo.FlatStyle = FlatStyle.Flat;
             CbCargo.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbCargo.FormattingEnabled = true;
-            CbCargo.Items.AddRange(new object[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo", "Contadora" });
+            CbCargo.Items.AddRange(new object[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo", "Contador(a)" });
             CbCargo.Location = new Point(167, 555);
             CbCargo.Name = "CbCargo";
             CbCargo.Size = new Size(190, 31);
@@ -1012,9 +1042,10 @@
             // 
             panel3.BackColor = Color.LightGray;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(button1);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(BtnEditar);
-            panel3.Controls.Add(pictureBox1);
+            panel3.Controls.Add(PctUser);
             panel3.Location = new Point(810, 50);
             panel3.Name = "panel3";
             panel3.Size = new Size(275, 526);
@@ -1025,21 +1056,21 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(98, 322);
+            label2.Location = new Point(98, 443);
             label2.Name = "label2";
             label2.Size = new Size(77, 25);
             label2.TabIndex = 122;
             label2.Text = "EDITAR";
             // 
-            // pictureBox1
+            // PctUser
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.circle_account1;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(15, 19);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(246, 245);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            PctUser.BackgroundImage = Properties.Resources.circle_account1;
+            PctUser.BackgroundImageLayout = ImageLayout.Stretch;
+            PctUser.Location = new Point(15, 19);
+            PctUser.Name = "PctUser";
+            PctUser.Size = new Size(246, 245);
+            PctUser.TabIndex = 0;
+            PctUser.TabStop = false;
             // 
             // LbTitulo
             // 
@@ -1079,16 +1110,18 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAlterarCadastro";
             Text = "FormAlterarCadastro";
+            Load += FormAlterarCadastro_Load;
             MouseClick += AllForms_MouseClick;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);
             PnlCtrlFunc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)PctData).EndInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumRua).EndInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PctUser).EndInit();
             ResumeLayout(false);
         }
 
@@ -1100,7 +1133,7 @@
         private Panel panel3;
         private Label LbMatricula;
         private Button btnPesquisar;
-        private PictureBox pictureBox1;
+        private PictureBox PctUser;
         private Panel PnlCtrlFunc;
         private MonthCalendar BoxCalendario2;
         private Label label26;
@@ -1166,5 +1199,6 @@
         internal MaskedTextBox TxtPis;
         internal MaskedTextBox TxtCTrabalho;
         internal NumericUpDown TxtNumRua;
+        internal PictureBox PctData;
     }
 }

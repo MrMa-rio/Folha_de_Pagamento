@@ -18,7 +18,6 @@ namespace FOLHA_DE_PAGAMENTO_
         private Form handleForm;
         private C_FormShow c_FormShow = new C_FormShow();
         C_FormNavBarShow c_FormNavBarShow = new C_FormNavBarShow();
-
         public FormNavBar()
         {
             InitializeComponent();
@@ -30,14 +29,13 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnArrowLeft_MouseClick(object sender, MouseEventArgs e)
         {
-            
             c_FormNavBarShow.AnimationHide(this, Pnl2);
         }
         
         private void BtnCadastro_MouseClick(object sender, MouseEventArgs e)
         {
             FormCadastroFunc formCadastro = new FormCadastroFunc(this);
-            handleForm = c_FormShow.setFormShow(FormAtivo, formCadastro, handleForm);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formCadastro);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
         }
 
@@ -45,7 +43,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
 
             FormAlterarCadastro formAlterarCadastro = new FormAlterarCadastro(this);
-            handleForm = c_FormShow.setFormShow(FormAtivo, formAlterarCadastro, handleForm);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formAlterarCadastro);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
         }
 
@@ -64,50 +62,39 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BtnCargosFun_MouseClick(object sender, MouseEventArgs e)
         {
             FormCargos formCargosFun = new FormCargos(this);
-            handleForm = c_FormShow.setFormShow(FormAtivo, formCargosFun, handleForm);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formCargosFun);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
-
-
         }
         private void BtnPesquisar_MouseClick(object sender, MouseEventArgs e)
         {
             FormPesquisar formPesquisar = new FormPesquisar(this);
-            handleForm = c_FormShow.setFormShow(FormAtivo, formPesquisar, handleForm);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formPesquisar);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
-
         }
 
         private void BtnCalculoPagamento_MouseClick(object sender, MouseEventArgs e)
         {
             FormCalculoPagamento formCalculoPagamento = new FormCalculoPagamento(this);
-            handleForm = c_FormShow.setFormShow(FormAtivo, formCalculoPagamento, handleForm);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formCalculoPagamento);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
-
-
         }
         private void BtnFolhaPNormal_MouseClick(object sender, MouseEventArgs e)
         {
             FormFolhaNormal formFolhaNormal = new FormFolhaNormal(this);
-            handleForm = c_FormShow.setFormShow(FormAtivo, formFolhaNormal, handleForm);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formFolhaNormal);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
-
-
         }
         private void BtnFolhaPDetalhada_MouseClick(object sender, MouseEventArgs e)
         {
             FormFolhaDetalhada formFolhaDetalhada = new FormFolhaDetalhada(this);
-            handleForm = c_FormShow.setFormShow(FormAtivo, formFolhaDetalhada, handleForm);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formFolhaDetalhada);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
-
-
         }
         private void BtnHolerite_MouseClick(object sender, MouseEventArgs e)
         {
             FormHolerite formHolerite = new FormHolerite(this);
-            handleForm = c_FormShow.setFormShow(FormAtivo, formHolerite, handleForm);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formHolerite);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
-
-
         }
     }
 }

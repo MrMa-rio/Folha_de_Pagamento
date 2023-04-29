@@ -13,22 +13,23 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         private string IP = "localhost";
         private string User = "root";
         private string Password = "";
-        private string TargetDB = "bd";
+        private string TargetDB = "bd_folha";
 
         public string[] getDatainTable(string matricula)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
-            string searchDataFuncionario = $"SELECT * FROM Funcionario where Matricula LIKE {matricula} ";
-            string[] Result = new string[15];
+            string searchDataFuncionario = $"SELECT * FROM tb_funcionario where Matricula LIKE {matricula} ";
+            
             MySqlConnection conexão;
             conexão = new MySqlConnection();
+            conexão.ConnectionString = endereco;
+            conexão.Open();
+            MySqlCommand command = new MySqlCommand(searchDataFuncionario, conexão);
+            MySqlDataReader mySqlDataReader = command.ExecuteReader();
+            string[] Result = new string[mySqlDataReader.FieldCount];
             try
             {
-                conexão.ConnectionString = endereco;
-                conexão.Open();
-                MySqlCommand command = new MySqlCommand(searchDataFuncionario, conexão);
-                MySqlDataReader mySqlDataReader = command.ExecuteReader();
-
+                
                 if (!mySqlDataReader.HasRows)
                 {
                     MessageBox.Show("Nenhum Cadastro encontrado.");
@@ -57,7 +58,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Nenhum usuario cadastrado");
             }
             finally
             {
@@ -97,7 +98,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                             for (int i = 0; i < Result.Length; i++)
                             {
                                 Result[i] = mySqlDataReader.GetString(i);
-                                
                             }
                             conexão.Close();
                             return Result;
@@ -122,7 +122,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         public List<string[]> getListFuncionarios(string coluna, string entrada)
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
-            string insertSql = $"select * from funcionario where {coluna} LIKE '%{entrada}%'";
+            string insertSql = $"select * from tb_funcionario where {coluna} LIKE '%{entrada}%'";
             List<string[]> Result = new List<string[]>();
 
             MySqlConnection conexão;

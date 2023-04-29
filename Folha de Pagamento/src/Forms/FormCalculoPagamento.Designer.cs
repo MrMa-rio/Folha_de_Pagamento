@@ -155,7 +155,6 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 132;
-            panel19.UseWaitCursor = true;
             // 
             // label26
             // 
@@ -166,7 +165,6 @@
             label26.Size = new Size(330, 25);
             label26.TabIndex = 165;
             label26.Text = "do salário bruto pago ao trabalhador.";
-            label26.UseWaitCursor = true;
             // 
             // textBox46
             // 
@@ -179,7 +177,6 @@
             textBox46.Size = new Size(38, 31);
             textBox46.TabIndex = 164;
             textBox46.Text = "8%";
-            textBox46.UseWaitCursor = true;
             // 
             // label52
             // 
@@ -190,7 +187,6 @@
             label52.Size = new Size(414, 25);
             label52.TabIndex = 13;
             label52.Text = "Fundo de Garantia do Tempo de Serviço (FGTS)";
-            label52.UseWaitCursor = true;
             // 
             // panel5
             // 

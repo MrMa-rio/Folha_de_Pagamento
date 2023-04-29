@@ -23,7 +23,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                 return "1486";
             }
-            if (cargo == "Contadora")
+            if (cargo == "Contador(a)")
             {
                 return "3595";
             }
@@ -70,7 +70,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                 return "2";
             }
-            if (cargo == "Contadora")
+            if (cargo == "Contador(a)")
             {
                 return "1";
             }
@@ -108,7 +108,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         {
             if (Id_Cargo == "1")
             {
-                return "Contadora";
+                return "Contador(a)";
             }
             if (Id_Cargo == "2")
             {
@@ -127,6 +127,20 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                 return "0";
             }
+        }
+
+        public string setNvlAcesso(string departamento)
+        {
+            if(departamento == "Adminstração")
+            {
+                return "2";
+            }
+            else
+            {
+                return "3";
+            }
+
+            
         }
     }
 }

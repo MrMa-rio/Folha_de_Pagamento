@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace FOLHA_DE_PAGAMENTO_.src.SQL
 {
@@ -18,57 +19,62 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         private string IP = "localhost";
         private string User = "root";
         private string Password = "";
-        private string TargetDB = "bd";
+        private string TargetDB = "bd_folha";
 
         public bool setUpdateFuncionario( string[] Data , string[] DataAdicional, string[] DataTelefone, string[] DataEmail)
         {
             
-            //string matriculaFuncionario = Data[13];
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
-            string insertSqlFuncionario = $"UPDATE `funcionario` SET `CPF` = '{Data[0]}', `Nome` = '{Data[1]}', `DATA_Nascimento` = '{Data[2]}', `Sexo` = '{Data[3]}', `RG` = '{Data[4]}', `NIT` = '{Data[5]}', `PIS` = '{Data[6]}', `Titulo_Eleitor` = '{Data[7]}', `Estado_Civel` = '{Data[8]}', `Reservista` = '{Data[9]}', `Senha` = '435455', `Data_Admissao` = '{Data[10]}', `FK_Departamento` = '{Data[11]}', `FK_Cargo` = '{Data[12]}' WHERE (`Matricula` = '{Data[13]}')";
-            string insertSqlEndereco = $"UPDATE `endereço` SET `Rua` = '{DataAdicional[0]}', `Numero` = '{DataAdicional[1]}', `Cep` = '{DataAdicional[6]}', `Complemento` = '{DataAdicional[3]}', `UF` = '{DataAdicional[4]}', `Bairro` = '{DataAdicional[2]}', `Cidade` = '{DataAdicional[5]}' WHERE (`FK_Matricula` = '{Data[13]}')";
-            string insertSqlTelefone = $"UPDATE `telefone` SET `Telefone` = '{DataTelefone[0]}' WHERE (`FK_Matricula` = '{Data[13]}')";
-            string insertSqlEmail = $"UPDATE `email` SET `Email` = '{DataEmail[0]}' WHERE (`FK_Matricula` = '{Data[13]}')";
-
+            string insertSqlFuncionario = $"UPDATE `tb_funcionario` SET `CPF` = '{Data[0]}', `Nome` = '{Data[1]}', `DATA_Nascimento` = '{Data[2]}', `Sexo` = '{Data[3]}', `RG` = '{Data[4]}', `NIT` = '{Data[6]}', `PIS` = '{Data[7]}', `Titulo_Eleitor` = '{Data[8]}', `Estado_Civil` = '{Data[9]}', `Reservista` = '{Data[10]}', `Senha` = '435455', `Data_Admissao` = '{Data[11]}', `FK_Departamento` = '{Data[12]}', `FK_Cargo` = '{Data[13]}' , `FK_NvlAcesso` = '{Data[15]}', `Carteira_Trabalho` = '{Data[5]}' WHERE (`Matricula` = '{Data[14]}')";
+            string insertSqlEndereco = $"UPDATE `tb_endereço` SET `Rua` = '{DataAdicional[0]}', `Numero` = '{DataAdicional[1]}', `Cep` = '{DataAdicional[6]}', `Complemento` = '{DataAdicional[3]}', `UF` = '{DataAdicional[4]}', `Bairro` = '{DataAdicional[2]}', `Cidade` = '{DataAdicional[5]}' WHERE (`FK_Matricula` = '{Data[13]}')";
+            string insertSqlTelefone = $"UPDATE `tb_telefone` SET `Telefone` = '{DataTelefone[0]}' WHERE (`FK_Matricula` = '{Data[13]}')";
+            string insertSqlEmail = $"UPDATE `tb_email` SET `Email` = '{DataEmail[0]}' WHERE (`FK_Matricula` = '{Data[13]}')";
             MySqlConnection conexao = new MySqlConnection();
-            
-            try
+            if (Data[16] == "True" && Data[17] == "True")
             {
-                conexao.ConnectionString = endereco;
-                MySqlCommand commandInsertinFuncionario = new MySqlCommand(insertSqlFuncionario, conexao);
-                MySqlCommand commandInsertinEndereco = new MySqlCommand(insertSqlEndereco, conexao);
-                MySqlCommand commandInsertinTelefone = new MySqlCommand(insertSqlTelefone, conexao);
-                MySqlCommand commandInsertinEmail = new MySqlCommand(insertSqlEmail, conexao);
+                try
+                {
+                    conexao.ConnectionString = endereco;
+                    MySqlCommand commandInsertinFuncionario = new MySqlCommand(insertSqlFuncionario, conexao);
+                    MySqlCommand commandInsertinEndereco = new MySqlCommand(insertSqlEndereco, conexao);
+                    MySqlCommand commandInsertinTelefone = new MySqlCommand(insertSqlTelefone, conexao);
+                    MySqlCommand commandInsertinEmail = new MySqlCommand(insertSqlEmail, conexao);
 
-                conexao.Open();
-                commandInsertinFuncionario.ExecuteReader();
-                conexao.Close();
+                    conexao.Open();
+                    commandInsertinFuncionario.ExecuteReader();
+                    conexao.Close();
 
-                conexao.Open();
-                commandInsertinEndereco.ExecuteReader();
-                conexao.Close();
+                    conexao.Open();
+                    commandInsertinEndereco.ExecuteReader();
+                    conexao.Close();
 
-                conexao.Open();
-                commandInsertinTelefone.ExecuteReader();
-                conexao.Close();
+                    conexao.Open();
+                    commandInsertinTelefone.ExecuteReader();
+                    conexao.Close();
 
-                conexao.Open();
-                commandInsertinEmail.ExecuteReader();
-                conexao.Close();
+                    conexao.Open();
+                    commandInsertinEmail.ExecuteReader();
+                    conexao.Close();
 
-                MessageBox.Show("Cadastro Alterado com Sucesso!!");
-                return true;
+                    MessageBox.Show("Cadastro Alterado com Sucesso!!");
+                    return true;
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message + "\n Algo de Errado Na conexão ");
+                    conexao.Close();
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    conexao.Close();
+                    return false;
+                }
             }
-            catch (MySqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message + "\n Algo de Errado Na conexão ");
-                conexao.Close();
-                return false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                conexao.Close();
+                MessageBox.Show("Erro ao Alterar Cadastro!!\nConfirme as informações Cadastrais!");
                 return false;
             }
         }

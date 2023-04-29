@@ -1,4 +1,5 @@
-﻿using FOLHA_DE_PAGAMENTO_.src.Forms;
+﻿using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.Forms;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Common;
 using System;
@@ -14,13 +15,13 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         private string IP = "localhost";
         private string User = "root";
         private string Password = "";
-        private string TargetDB = "bd";
+        private string TargetDB = "bd_folha";
 
         public string setDatainTableFuncionario(string table, string columnsTable, string values, string CPF)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
             string insertSql = $"INSERT INTO {table} ({columnsTable}) VALUES ({values})";
-            string matriculaSql = $"SELECT Matricula FROM Funcionario WHERE CPF = '{CPF}'";
+            string matriculaSql = $"SELECT Matricula FROM tb_funcionario WHERE CPF = '{CPF}'";
             string matriculaFuncionario = "0";
             MySqlConnection conexão;
             conexão = new MySqlConnection();
@@ -62,7 +63,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             finally
             {
                 conexão.Close();
-                
             }
             return matriculaFuncionario;
         }
@@ -73,7 +73,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             string insertSql = $"INSERT INTO {table} ({columnsTable}) VALUES ({values})";
 
             MySqlConnection conexão = new MySqlConnection();;
-
+            
             try
             {
                 conexão.ConnectionString = endereco;
@@ -93,12 +93,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             finally
             {
                 conexão.Close();
-
             }
         }
-        
-
-
         /*
             dataFuncionario[0] = TxtNomeCompleto
             dataFuncionario[1] = TxtDataNascimento
@@ -125,11 +121,12 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             dataAdicional[6] = TxtCep
          */
 
-        public void setDatainDB(string[] dataFuncionario, string[] dataAdicional)
+        public string setDatainDB(string[] dataFuncionario, string[] dataAdicional)
         {
+            C_handleCargoSalarioDepartamento c_HandleCargoSalarioDepartamento = new C_handleCargoSalarioDepartamento();
             string[] result = new string[] { dataFuncionario[12], dataFuncionario[0], dataFuncionario[1], dataFuncionario[11], dataFuncionario[13], dataFuncionario[2], dataFuncionario[3], dataFuncionario[4], dataFuncionario[10], dataFuncionario[14], dataFuncionario[6], dataFuncionario[7] };
-
-            if (dataFuncionario[0].Length < 4 || dataFuncionario[9] == "false" || dataFuncionario[10] == "" || dataFuncionario[11] == "" || dataFuncionario[13].Length < 9 || dataFuncionario[2] == "" || dataFuncionario[3] == "" || dataFuncionario[5] == "0" || dataFuncionario[6] == "0" || dataFuncionario[7].Length < 8)
+            string matriculaFuncionario = "0";
+            if (dataFuncionario[0].Length < 4 || dataFuncionario[9] == "false" || dataFuncionario[16] == "False" || dataFuncionario[10] == "" || dataFuncionario[11] == "" || dataFuncionario[13].Length < 9 || dataFuncionario[2] == "" || dataFuncionario[3] == "" || dataFuncionario[5] == "0" || dataFuncionario[6] == "0" || dataFuncionario[7].Length < 8)
             {
                 MessageBox.Show("Preencha os campos do Cadastro Pessoais.");
             }
@@ -138,25 +135,25 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             {
                 MessageBox.Show("Preencha os campos do Cadastro Adicional.");
             }
-            
             else
             {
-                DialogResult alertBox = MessageBox.Show("Você está preste á salvar esses DADOS!", "Salvar Dados", MessageBoxButtons.OKCancel);
 
+                DialogResult alertBox = MessageBox.Show("Você está preste á salvar esses DADOS!", "Salvar Dados", MessageBoxButtons.OKCancel);
                 if (alertBox == DialogResult.OK)
                 {
                     string fillColumnsFuncionario = "CPF, " +
                                                     "Nome, " +
                                                     "DATA_Nascimento, " +
-                                                    "Sexo, RG, NIT, PIS, " +
+                                                    "Sexo, RG,Carteira_Trabalho, NIT, PIS, " +
                                                     "Titulo_Eleitor, " +
-                                                    "Estado_Civel, " +
+                                                    "Estado_Civil, " +
                                                     "Reservista, " +
                                                     "Senha, " +
                                                     "Data_Admissao, " +
                                                     "FK_Departamento, " +
                                                     "FK_Cargo, " +
-                                                    "FK_Empresa";
+                                                    "FK_Empresa," +
+                                                    "FK_NvlAcesso";
 
                     string fillColumnsAdicionais = "FK_Matricula," +
                                                     " Rua, Numero, Cep," +
@@ -165,23 +162,39 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                     string fillColumnsTelefone = "FK_Matricula, Telefone";
                     string fillColumnsEmail = "FK_Matricula, Email";
 
-                    string valuesCadPessoal = $"'{dataFuncionario[12]}','{dataFuncionario[0]}','{dataFuncionario[1]}','{dataFuncionario[11]}','{dataFuncionario[13]}','{dataFuncionario[2]}','{dataFuncionario[3]}','{dataFuncionario[4]}','{dataFuncionario[10]}','{dataFuncionario[8]}','123456', '{dataFuncionario[7]}',{dataFuncionario[5]}, {dataFuncionario[6]}, 1 ";
-                    string matriculaFuncionario = setDatainTableFuncionario("funcionario", fillColumnsFuncionario, valuesCadPessoal, dataFuncionario[12]);
+                    string valuesCadPessoal = $"'{dataFuncionario[12]}'," +
+                        $"'{dataFuncionario[0]}'," +
+                        $"'{dataFuncionario[1]}'," +
+                        $"'{dataFuncionario[11]}'," +
+                        $"'{dataFuncionario[13]}'," +
+                        $"'109909900019'," +  //Carteira Trabalho
+                        $"'{dataFuncionario[2]}'," +
+                        $"'{dataFuncionario[3]}'," +
+                        $"'{dataFuncionario[4]}'," +
+                        $"'{dataFuncionario[10]}'," +
+                        $"'{dataFuncionario[8]}'," +
+                        $"'123456', '{dataFuncionario[7]}'," +
+                        $"{dataFuncionario[5]}, {dataFuncionario[6]}," +
+                        $" 1, {c_HandleCargoSalarioDepartamento.setNvlAcesso(dataFuncionario[5])} ";
+                    MessageBox.Show(dataFuncionario[5]);
+
+                    matriculaFuncionario = setDatainTableFuncionario("tb_funcionario", fillColumnsFuncionario, valuesCadPessoal, dataFuncionario[12]);
                     string valuesTelefone = $"'{matriculaFuncionario}', '{dataAdicional[8]}'";
                     string valuesEmail = $"'{matriculaFuncionario}', '{dataAdicional[7]}'";
                     string valuesCadAdicionais = $"'{matriculaFuncionario}', '{dataAdicional[0]}', '{dataAdicional[1]}', '{dataAdicional[6]}', '{dataAdicional[3]}', '{dataAdicional[4]}', '{dataAdicional[2]}', '{dataAdicional[5]}'";
 
                     if (matriculaFuncionario != "0")
                     {
-                        setData("endereço", fillColumnsAdicionais, valuesCadAdicionais);
-                        setData("telefone", fillColumnsTelefone, valuesTelefone);
-                        setData("email", fillColumnsEmail, valuesEmail);
+                        setData("tb_endereço", fillColumnsAdicionais, valuesCadAdicionais);
+                        setData("tb_telefone", fillColumnsTelefone, valuesTelefone);
+                        setData("tb_email", fillColumnsEmail, valuesEmail);
                         MessageBox.Show("Cadastro realizado com Sucesso!!");
                         FormShowDadosCadastrais formShowDadosCadastrais = new FormShowDadosCadastrais(result, matriculaFuncionario); //arrumar no demostrativo de cadastro
                         formShowDadosCadastrais.ShowDialog();
                     }
                 }
             }
+            return matriculaFuncionario;
         }
     }
 } 

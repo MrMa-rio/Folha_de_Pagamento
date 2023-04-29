@@ -17,6 +17,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                                     MaskedTextBox TxtCalendario, 
                                     ComboBox CbGenero, 
                                     MaskedTextBox TxtRg, 
+                                    MaskedTextBox TxtCTrabalho,
                                     MaskedTextBox TxtNit, 
                                     MaskedTextBox TxtPis, 
                                     MaskedTextBox TxtTituloEleitor, 
@@ -33,19 +34,21 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                
                 ResultFuncionario = searchInData.getDatainTable(MatriculaFuncionario.Text);
-                TxtCpf.Text = ResultFuncionario[1];
-                TxtNomeCompleto.Text = ResultFuncionario[2];
-                TxtCalendario.Text = ResultFuncionario[3];
-                CbGenero.Text = c_HandleDataGener.handleGener( ResultFuncionario[4] );
-                TxtRg.Text = ResultFuncionario[5];
-                TxtNit.Text = ResultFuncionario[6];
-                TxtPis.Text = ResultFuncionario[7];
-                TxtTituloEleitor.Text = ResultFuncionario[8];
-                CbEstadoCivil.Text = ResultFuncionario[9];
-                TxtReservista.Text = ResultFuncionario[10];
-                TxtDataAdmissao.Text = ResultFuncionario[12];
-                CbDepartamento.Text = c_HandleCargoSalario.getIdDepartamento( ResultFuncionario[13] );
-                CbCargo.Text = c_HandleCargoSalario.getIdCargo( ResultFuncionario[14] );
+                TxtCpf.Text = ResultFuncionario[1]; //
+                TxtNomeCompleto.Text = ResultFuncionario[2]; //
+                TxtCalendario.Text = ResultFuncionario[3]; //
+                CbGenero.Text = c_HandleDataGener.handleGener( ResultFuncionario[4] ); //
+                TxtRg.Text = ResultFuncionario[5];//
+                TxtCTrabalho.Text = ResultFuncionario[6];
+
+                TxtNit.Text = ResultFuncionario[7]; //
+                TxtPis.Text = ResultFuncionario[8]; //
+                TxtTituloEleitor.Text = ResultFuncionario[9];//
+                CbEstadoCivil.Text = ResultFuncionario[10]; //
+                TxtReservista.Text = ResultFuncionario[11];//
+                TxtDataAdmissao.Text = ResultFuncionario[13];////////
+                CbDepartamento.Text = c_HandleCargoSalario.getIdDepartamento( ResultFuncionario[14] );/////////
+                CbCargo.Text = c_HandleCargoSalario.getIdCargo( ResultFuncionario[15] );//
 
                 return true;
             }
@@ -60,14 +63,14 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             if (MatriculaFuncionario.Text.Trim().Length > 0)
             {
                 string[] ResultEndereco;
-                ResultEndereco = searchInData.getData(MatriculaFuncionario.Text, "endereço");
-                TxtRua.Text = ResultEndereco[1];
-                TxtRuaNum.Value = Convert.ToInt32(ResultEndereco[2]);
-                TxtCep.Text = ResultEndereco[3];
-                TxtComplemento.Text = ResultEndereco[4];
-                CbUF.Text = ResultEndereco[5];
-                TxtBairro.Text = ResultEndereco[6];
-                TxtCidade.Text = ResultEndereco[7];
+                ResultEndereco = searchInData.getData(MatriculaFuncionario.Text, "tb_endereço");
+                TxtRua.Text = ResultEndereco[2];
+                TxtRuaNum.Value = Convert.ToInt32(ResultEndereco[3]);
+                TxtCep.Text = ResultEndereco[1];
+                TxtComplemento.Text = ResultEndereco[7];
+                CbUF.Text = ResultEndereco[6];
+                TxtBairro.Text = ResultEndereco[4];
+                TxtCidade.Text = ResultEndereco[5];
                 return true;
             }
             else
@@ -81,7 +84,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             if (MatriculaFuncionario.Text.Trim().Length > 0)
             {
                 string[] ResultTelefone;
-                ResultTelefone = searchInData.getData(MatriculaFuncionario.Text, "telefone");
+                ResultTelefone = searchInData.getData(MatriculaFuncionario.Text, "tb_telefone");
                 Telefone.Text = ResultTelefone[1];
 
                 return true;
@@ -98,7 +101,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             if (MatriculaFuncionario.Text.Trim().Length > 0)
             {
                 string[] ResultEmail;
-                ResultEmail = searchInData.getData(MatriculaFuncionario.Text, "email");
+                ResultEmail = searchInData.getData(MatriculaFuncionario.Text, "tb_email");
                 Email.Text = ResultEmail[1];
 
                 return true;

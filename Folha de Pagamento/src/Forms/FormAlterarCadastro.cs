@@ -6,9 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.Servidor.GET;
 using FOLHA_DE_PAGAMENTO_.src.SQL;
+using Microsoft.VisualBasic.Devices;
 
 namespace FOLHA_DE_PAGAMENTO_
 {
@@ -18,14 +21,25 @@ namespace FOLHA_DE_PAGAMENTO_
         private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
         C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
         C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
+        C_ManiplaçaoData c_Manipula = new C_ManiplaçaoData();
+        string endereco = "";
 
         private bool validacao;
-        public FormAlterarCadastro(FormNavBar navBar)
+        private bool validacaoDate;
+        public FormAlterarCadastro()
         {
             InitializeComponent();
+        }
+        public FormAlterarCadastro(FormNavBar navBar) : this()
+        {
             FormAtivo = navBar;
-
-
+        }
+        public FormAlterarCadastro(FormNavBar navBar, string matriculaFuncionario) : this()
+        {
+            FormAtivo = navBar;
+            TxtMatricula.Text = matriculaFuncionario;
+            Keyboard keyboard = new Keyboard();
+            keyboard.SendKeys("{ENTER}");
         }
 
         private void TxtCpf_TextChanged(object sender, EventArgs e)
@@ -47,7 +61,6 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnCalendario2_MouseClick(object sender, MouseEventArgs e)
         {
-
             BoxCalendario2.Visible = !BoxCalendario2.Visible ? true : false;
             BoxCalendario2.Location = new Point(444, BtnCalendario2.Location.Y);
         }
@@ -71,17 +84,28 @@ namespace FOLHA_DE_PAGAMENTO_
         }
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
         {
-            navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
+            if (FormAtivo != null)
+            {
+                navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
+            }
         }
-
         private void BtnPesquisar_MouseClick(object sender, MouseEventArgs e)
         {
-
-
-            c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto, TxtCalendario, CbGenero, TxtRg, TxtNit, TxtPis, TxtTituloEleitor, CbEstadoCivil, TxtReservista, TxtDataAdmissao, CbDepartamento, CbCargo, TxtMatricula); //adicionar textbox dos parametros que falta!! e testar as entradas.
+            c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto,
+                TxtCalendario, CbGenero,
+                TxtRg, TxtCTrabalho, TxtNit, TxtPis,
+                TxtTituloEleitor, CbEstadoCivil,
+                TxtReservista, TxtDataAdmissao,
+                CbDepartamento, CbCargo, TxtMatricula
+                );
             c_ShowDataUsers.setShowEndereco(TxtRua, TxtNumRua, TxtBairro, TxtComplemento, CbUF, TxtCidade, TxtCep, TxtMatricula);
-            c_ShowDataUsers.setShowTelefone(TxtTelefone,TxtMatricula);
+            c_ShowDataUsers.setShowTelefone(TxtTelefone, TxtMatricula);
             c_ShowDataUsers.setShowEmail(TxtEmail, TxtMatricula);
+            C_ManipulaçãoImagens c_ManipulaçãoImagens = new C_ManipulaçãoImagens();
+            if (!c_ManipulaçãoImagens.getImagemUser(PctUser, TxtMatricula.Text))
+            {
+                PctUser.BackgroundImage = Properties.Resources.circle_account1;
+            }
             if (validacao)
             {
                 BtnConfirmar.Enabled = true;
@@ -96,7 +120,6 @@ namespace FOLHA_DE_PAGAMENTO_
             C_EnableBoxCadastro c_EnableBoxCadastro = new C_EnableBoxCadastro();
             c_EnableBoxCadastro.setEnableAltCadastro(this);
         }
-
         private void TxtRg_MouseClick(object sender, MouseEventArgs e)
         {
             TxtRg.SelectAll();
@@ -116,12 +139,19 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             if (e.KeyCode == Keys.Enter)
             {
+                c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto,
+                    TxtCalendario, CbGenero,
+                    TxtRg, TxtCTrabalho, TxtNit, TxtPis,
+                    TxtTituloEleitor, CbEstadoCivil,
+                    TxtReservista, TxtDataAdmissao,
+                    CbDepartamento, CbCargo, TxtMatricula
+                    );
 
-                
-                c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto, TxtCalendario, CbGenero, TxtRg, TxtNit, TxtPis, TxtTituloEleitor, CbEstadoCivil, TxtReservista, TxtDataAdmissao, CbDepartamento, CbCargo, TxtMatricula); //adicionar textbox dos parametros que falta!! e testar as entradas.
                 c_ShowDataUsers.setShowEndereco(TxtRua, TxtNumRua, TxtBairro, TxtComplemento, CbUF, TxtCidade, TxtCep, TxtMatricula);
                 c_ShowDataUsers.setShowTelefone(TxtTelefone, TxtMatricula);
                 c_ShowDataUsers.setShowEmail(TxtEmail, TxtMatricula);
+                C_ManipulaçãoImagens c_ManipulaçãoImagens = new C_ManipulaçãoImagens();
+                c_ManipulaçãoImagens.getImagemUser(PctUser, TxtMatricula.Text);
                 if (validacao)
                 {
                     BtnConfirmar.Enabled = true;
@@ -174,34 +204,69 @@ namespace FOLHA_DE_PAGAMENTO_
             DialogResult messageAlert = MessageBox.Show("Você está preste à alterar este cadastro. Tem certeza?", "Alterar Cadastro", MessageBoxButtons.YesNo);
             if (messageAlert == DialogResult.Yes)
             {
-                C_InvertendoData c_InvertendoData = new C_InvertendoData();
+                C_ManiplaçaoData c_InvertendoData = new C_ManiplaçaoData();
 
                 string DataNascimento = c_InvertendoData.setDateInvert(TxtCalendario.Text, '/');
                 string DataAdmissao = c_InvertendoData.setDateInvert(TxtDataAdmissao.Text, '/');
+
                 string departamento = c_HandleCargoSalario.setIdDepartamento(CbDepartamento.Text);
                 string cargo = c_HandleCargoSalario.setIdCargo(CbCargo.Text);
-                string[] data = new string[] { TxtCpf.Text, TxtNomeCompleto.Text, DataNascimento, CbGenero.Text, TxtRg.Text, TxtNit.Text, TxtPis.Text, TxtTituloEleitor.Text, CbEstadoCivil.Text, TxtReservista.Text, DataAdmissao, departamento, cargo, TxtMatricula.Text };
+                string NvlAcesso = c_HandleCargoSalario.setNvlAcesso(CbDepartamento.Text); // 
+                string[] data = new string[] { TxtCpf.Text,
+                    TxtNomeCompleto.Text, DataNascimento,
+                    CbGenero.Text, TxtRg.Text,TxtCTrabalho.Text, TxtNit.Text,
+                    TxtPis.Text, TxtTituloEleitor.Text,
+                    CbEstadoCivil.Text, TxtReservista.Text,
+                    DataAdmissao, departamento, cargo,
+                    TxtMatricula.Text,NvlAcesso,validacao.ToString(), validacaoDate.ToString()
+                };
                 string[] dataTelefone = new string[] { TxtTelefone.Text };
                 string[] dataEmail = new string[] { TxtEmail.Text };
-                string[] dataCadastroPessoal = new string[] { TxtNomeCompleto.Text, DataNascimento, TxtNit.Text, TxtPis.Text, TxtTituloEleitor.Text, departamento, cargo, DataAdmissao, TxtReservista.Text, validacao.ToString(), CbEstadoCivil.Text, CbGenero.Text, TxtCpf.Text, TxtRg.Text, CbCargo.Text };
+
+                string[] dataCadastroPessoal = new string[] { TxtNomeCompleto.Text,
+                    DataNascimento, TxtNit.Text,
+                    TxtPis.Text, TxtTituloEleitor.Text,
+                    departamento, cargo, DataAdmissao,
+                    TxtReservista.Text, validacao.ToString(),
+                    CbEstadoCivil.Text, CbGenero.Text, TxtCpf.Text,
+                    TxtRg.Text, CbCargo.Text
+                };
+
                 string[] dataCadastroAdicional = new string[] { TxtRua.Text, TxtNumRua.Value.ToString(), TxtBairro.Text, TxtComplemento.Text, CbUF.Text, TxtCidade.Text, TxtCep.Text };
                 bool alert = c_ShowDataUsers.VerificaDadosFuncionario(dataCadastroPessoal);
+                if (endereco != "")
+                {
+                    C_ManipulaçãoImagens c_ManipulaçãoImagens = new C_ManipulaçãoImagens();
+                    c_ManipulaçãoImagens.setImagemUser(TxtMatricula.Text, endereco);
+                }
 
                 if (alert)
                 {
                     C_updateSql c_UpdateSql = new C_updateSql();
-                    c_UpdateSql.setUpdateFuncionario(data, dataCadastroAdicional,dataTelefone, dataEmail);
+                    c_UpdateSql.setUpdateFuncionario(data, dataCadastroAdicional, dataTelefone, dataEmail);
                 }
             }
-
-
-
-
         }
 
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_ManipulaçãoImagens c_ManipulaçãoImagens = new C_ManipulaçãoImagens();
+            endereco = c_ManipulaçãoImagens.setFotoNovoFuncionario(PctUser);
+        }
+        private void FormAlterarCadastro_Load(object sender, EventArgs e)
+        {
+            TxtMatricula.Select();
+        }
+
+        private void TxtCalendario_TextChanged(object sender, EventArgs e)
+        {
+
+            validacaoDate = c_Manipula.setValidacaoData(TxtCalendario, BoxCalendario.TodayDate, PctData);
         }
     }
 }

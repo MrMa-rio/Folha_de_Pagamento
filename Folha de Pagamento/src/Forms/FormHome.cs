@@ -1,4 +1,5 @@
 using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.Forms;
 
 namespace FOLHA_DE_PAGAMENTO_
 {
@@ -23,16 +24,6 @@ namespace FOLHA_DE_PAGAMENTO_
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
         {
             navBarShow.AnimationHide(NavBar, NavBar.Pnl2);
-        }
-
-        private void BtnMenu_MouseEnter(object sender, EventArgs e)
-        {
-            BtnMenu.BackgroundImage = Properties.Resources.menu_black;
-        }
-
-        private void BtnMenu_MouseLeave(object sender, EventArgs e)
-        {
-            BtnMenu.BackgroundImage = Properties.Resources.menu2;
         }
     }
 }

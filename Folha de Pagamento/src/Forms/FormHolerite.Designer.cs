@@ -468,13 +468,13 @@
             // 
             // panelValorLiquido
             // 
-            panelValorLiquido.MouseClick += AllForms_MouseClick;
             panelValorLiquido.BorderStyle = BorderStyle.FixedSingle;
             panelValorLiquido.Controls.Add(LbValorLiquido);
             panelValorLiquido.Location = new Point(774, 420);
             panelValorLiquido.Name = "panelValorLiquido";
             panelValorLiquido.Size = new Size(184, 40);
             panelValorLiquido.TabIndex = 13;
+            panelValorLiquido.MouseClick += AllForms_MouseClick;
             // 
             // LbValorLiquido
             // 
@@ -491,13 +491,13 @@
             // 
             // panelDescTotal
             // 
-            panelDescTotal.MouseClick += AllForms_MouseClick;
             panelDescTotal.BorderStyle = BorderStyle.FixedSingle;
             panelDescTotal.Controls.Add(LbDescTotal);
             panelDescTotal.Location = new Point(849, 374);
             panelDescTotal.Name = "panelDescTotal";
             panelDescTotal.Size = new Size(110, 40);
             panelDescTotal.TabIndex = 13;
+            panelDescTotal.MouseClick += AllForms_MouseClick;
             // 
             // LbDescTotal
             // 
@@ -514,13 +514,13 @@
             // 
             // panelVencTotal
             // 
-            panelVencTotal.MouseClick += AllForms_MouseClick;
             panelVencTotal.BorderStyle = BorderStyle.FixedSingle;
             panelVencTotal.Controls.Add(LbVencTotal);
             panelVencTotal.Location = new Point(733, 374);
             panelVencTotal.Name = "panelVencTotal";
             panelVencTotal.Size = new Size(110, 40);
             panelVencTotal.TabIndex = 12;
+            panelVencTotal.MouseClick += AllForms_MouseClick;
             // 
             // LbVencTotal
             // 
@@ -537,7 +537,6 @@
             // 
             // panelDescontos
             // 
-            panelDescontos.MouseClick += AllForms_MouseClick;
             panelDescontos.BorderStyle = BorderStyle.FixedSingle;
             panelDescontos.Controls.Add(label39);
             panelDescontos.Controls.Add(label37);
@@ -547,6 +546,7 @@
             panelDescontos.Name = "panelDescontos";
             panelDescontos.Size = new Size(110, 160);
             panelDescontos.TabIndex = 12;
+            panelDescontos.MouseClick += AllForms_MouseClick;
             // 
             // label39
             // 
@@ -602,7 +602,6 @@
             // 
             // panelVencimentos
             // 
-            panelVencimentos.MouseClick += AllForms_MouseClick;
             panelVencimentos.BorderStyle = BorderStyle.FixedSingle;
             panelVencimentos.Controls.Add(label40);
             panelVencimentos.Controls.Add(label38);
@@ -612,6 +611,7 @@
             panelVencimentos.Name = "panelVencimentos";
             panelVencimentos.Size = new Size(110, 160);
             panelVencimentos.TabIndex = 11;
+            panelVencimentos.MouseClick += AllForms_MouseClick;
             // 
             // label40
             // 
@@ -663,7 +663,6 @@
             // 
             // panelReferencia
             // 
-            panelReferencia.MouseClick += AllForms_MouseClick;
             panelReferencia.BorderStyle = BorderStyle.FixedSingle;
             panelReferencia.Controls.Add(label32);
             panelReferencia.Controls.Add(label31);
@@ -673,6 +672,7 @@
             panelReferencia.Name = "panelReferencia";
             panelReferencia.Size = new Size(90, 205);
             panelReferencia.TabIndex = 10;
+            panelReferencia.MouseClick += AllForms_MouseClick;
             // 
             // label32
             // 
@@ -724,7 +724,6 @@
             // 
             // panelDescricao
             // 
-            panelDescricao.MouseClick += AllForms_MouseClick;
             panelDescricao.BorderStyle = BorderStyle.FixedSingle;
             panelDescricao.Controls.Add(label27);
             panelDescricao.Controls.Add(label26);
@@ -734,6 +733,7 @@
             panelDescricao.Name = "panelDescricao";
             panelDescricao.Size = new Size(556, 205);
             panelDescricao.TabIndex = 10;
+            panelDescricao.MouseClick += AllForms_MouseClick;
             // 
             // label27
             // 
@@ -785,7 +785,6 @@
             // 
             // panelCod
             // 
-            panelCod.MouseClick += AllForms_MouseClick;
             panelCod.BorderStyle = BorderStyle.FixedSingle;
             panelCod.Controls.Add(label28);
             panelCod.Controls.Add(label23);
@@ -795,6 +794,7 @@
             panelCod.Name = "panelCod";
             panelCod.Size = new Size(66, 205);
             panelCod.TabIndex = 9;
+            panelCod.MouseClick += AllForms_MouseClick;
             // 
             // label28
             // 
