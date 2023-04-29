@@ -40,13 +40,11 @@
             PctFotoCargos = new PictureBox();
             BtnLimpar = new Button();
             PanelAdminCargos = new Panel();
-            TxtCargaHoraria = new TextBox();
             TxtSalarioBase = new TextBox();
             Txtid = new TextBox();
             label7 = new Label();
             label4 = new Label();
             label5 = new Label();
-            LbCpf = new Label();
             LbDataNascimento = new Label();
             TxtCargo = new TextBox();
             LbNomeCompleto = new Label();
@@ -183,13 +181,11 @@
             PanelAdminCargos.AutoScrollMargin = new Size(0, 90);
             PanelAdminCargos.AutoScrollMinSize = new Size(0, 90);
             PanelAdminCargos.BorderStyle = BorderStyle.FixedSingle;
-            PanelAdminCargos.Controls.Add(TxtCargaHoraria);
             PanelAdminCargos.Controls.Add(TxtSalarioBase);
             PanelAdminCargos.Controls.Add(Txtid);
             PanelAdminCargos.Controls.Add(label7);
             PanelAdminCargos.Controls.Add(label4);
             PanelAdminCargos.Controls.Add(label5);
-            PanelAdminCargos.Controls.Add(LbCpf);
             PanelAdminCargos.Controls.Add(LbDataNascimento);
             PanelAdminCargos.Controls.Add(TxtCargo);
             PanelAdminCargos.Controls.Add(LbNomeCompleto);
@@ -198,17 +194,6 @@
             PanelAdminCargos.Size = new Size(718, 364);
             PanelAdminCargos.TabIndex = 7;
             PanelAdminCargos.MouseClick += AllForms_MouseClick;
-            // 
-            // TxtCargaHoraria
-            // 
-            TxtCargaHoraria.BackColor = Color.DarkGray;
-            TxtCargaHoraria.BorderStyle = BorderStyle.FixedSingle;
-            TxtCargaHoraria.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCargaHoraria.Location = new Point(150, 278);
-            TxtCargaHoraria.Name = "TxtCargaHoraria";
-            TxtCargaHoraria.PlaceholderText = "Digite a carga horária.";
-            TxtCargaHoraria.Size = new Size(179, 31);
-            TxtCargaHoraria.TabIndex = 4;
             // 
             // TxtSalarioBase
             // 
@@ -267,16 +252,6 @@
             label5.Size = new Size(270, 37);
             label5.TabIndex = 8;
             label5.Text = "_______________________";
-            // 
-            // LbCpf
-            // 
-            LbCpf.AutoSize = true;
-            LbCpf.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbCpf.Location = new Point(15, 278);
-            LbCpf.Name = "LbCpf";
-            LbCpf.Size = new Size(108, 21);
-            LbCpf.TabIndex = 35;
-            LbCpf.Text = "Carga horária:";
             // 
             // LbDataNascimento
             // 
@@ -387,7 +362,6 @@
         private Panel PanelAdminCargos;
         private Label label4;
         private Label label5;
-        private Label LbCpf;
         private Label LbDataNascimento;
         private TextBox TxtCargo;
         private Label LbNomeCompleto;
@@ -403,7 +377,6 @@
         private Label label8;
         private Label label10;
         private Label Lbid;
-        private TextBox TxtCargaHoraria;
         private TextBox TxtSalarioBase;
         private Label LbSalarioBase;
         private Label label3;

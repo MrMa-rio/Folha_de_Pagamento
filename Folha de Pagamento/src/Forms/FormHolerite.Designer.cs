@@ -90,12 +90,10 @@
             label21 = new Label();
             panel4 = new Panel();
             LbAdmissao = new Label();
-            LbCbo = new Label();
             LbCargo = new Label();
             LbNome = new Label();
             LbCodigo = new Label();
             label18 = new Label();
-            label17 = new Label();
             label16 = new Label();
             label15 = new Label();
             label14 = new Label();
@@ -848,12 +846,10 @@
             // 
             panel4.BorderStyle = BorderStyle.FixedSingle;
             panel4.Controls.Add(LbAdmissao);
-            panel4.Controls.Add(LbCbo);
             panel4.Controls.Add(LbCargo);
             panel4.Controls.Add(LbNome);
             panel4.Controls.Add(LbCodigo);
             panel4.Controls.Add(label18);
-            panel4.Controls.Add(label17);
             panel4.Controls.Add(label16);
             panel4.Controls.Add(label15);
             panel4.Controls.Add(label14);
@@ -873,17 +869,6 @@
             LbAdmissao.Size = new Size(83, 19);
             LbAdmissao.TabIndex = 73;
             LbAdmissao.Text = "12/12/2050";
-            // 
-            // LbCbo
-            // 
-            LbCbo.AutoSize = true;
-            LbCbo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbCbo.Location = new Point(782, 19);
-            LbCbo.MaximumSize = new Size(57, 19);
-            LbCbo.Name = "LbCbo";
-            LbCbo.Size = new Size(57, 19);
-            LbCbo.TabIndex = 73;
-            LbCbo.Text = "000000";
             // 
             // LbCargo
             // 
@@ -927,16 +912,6 @@
             label18.Size = new Size(74, 19);
             label18.TabIndex = 16;
             label18.Text = "Admissão";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(782, 0);
-            label17.Name = "label17";
-            label17.Size = new Size(38, 19);
-            label17.TabIndex = 15;
-            label17.Text = "CBO";
             // 
             // label16
             // 
@@ -1197,7 +1172,6 @@
         private Panel panel2;
         private Label label3;
         private Panel panel1;
-        private Label label7;
         private Label label8;
         private Label label10;
         private Label label9;
@@ -1222,7 +1196,6 @@
         private Label label12;
         private Label label13;
         private Label label18;
-        private Label label17;
         private Label label16;
         private Label label15;
         private Label label14;
@@ -1233,7 +1206,6 @@
         private Label label20;
         private TextBox TxtPesquisarMatricula;
         private Button BtnPesquisarMatricula;
-        private Label label21;
         private Label LbValorLiquido;
         private Label LbDescTotal;
         private Label LbVencTotal;
@@ -1252,12 +1224,10 @@
         private Label label27;
         private Label label26;
         private Label label25;
-        private Label label24;
         private Label label28;
         private Label label23;
         private Label label22;
         private Label LbAdmissao;
-        private Label LbCbo;
         private Label LbCargo;
         private Label LbNome;
         private Label LbCodigo;
@@ -1275,5 +1245,8 @@
         private Label LbDataAssinatura;
         private Label label50;
         private Label label49;
+        private Label label24;
+        private Label label21;
+        private Label label7;
     }
 }
