@@ -43,7 +43,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formAlterarCadastro.CbCargo.Enabled = true;
             formAlterarCadastro.TxtDataAdmissao.Enabled = true;
             formAlterarCadastro.TxtCTrabalho.Enabled = true;
-            formAlterarCadastro.TxtSalarioBase.Enabled = true;
         }
     }
 }

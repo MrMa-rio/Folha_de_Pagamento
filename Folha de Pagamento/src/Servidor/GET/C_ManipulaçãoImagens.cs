@@ -31,9 +31,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.Servidor.GET
                 User.BackgroundImage = Properties.Resources.circle_account1;
                 return false;
             }
-            
-            
-            
         }
 
         public void setImagemUser(string matriculaFuncionario, string endereco)

@@ -31,7 +31,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             c_FormNavBarShow.AnimationHide(this, Pnl2);
         }
-        
+
         private void BtnCadastro_MouseClick(object sender, MouseEventArgs e)
         {
             FormCadastroFunc formCadastro = new FormCadastroFunc(this);

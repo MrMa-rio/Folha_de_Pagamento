@@ -61,16 +61,15 @@
             // 
             // TxtPesquisarCargo
             // 
-            TxtPesquisarCargo.AutoCompleteCustomSource.AddRange(new string[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo ", "Contador(a)" });
             TxtPesquisarCargo.BackColor = Color.DarkGray;
             TxtPesquisarCargo.FlatStyle = FlatStyle.Flat;
             TxtPesquisarCargo.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtPesquisarCargo.FormattingEnabled = true;
-            TxtPesquisarCargo.Items.AddRange(new object[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo", "Contador(a)" });
             TxtPesquisarCargo.Location = new Point(803, 100);
             TxtPesquisarCargo.Name = "TxtPesquisarCargo";
             TxtPesquisarCargo.Size = new Size(207, 31);
             TxtPesquisarCargo.TabIndex = 68;
+            TxtPesquisarCargo.DropDown += TxtPesquisarCargo_DropDown;
             TxtPesquisarCargo.TextChanged += TxtPesquisarCargo_TextChanged;
             // 
             // label3

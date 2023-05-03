@@ -27,14 +27,67 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
         }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
+            bool alert = c_HandleCargoSalario.setCargo(TxtCargo, TxtSalarioBase);
+            if (alert)
+            {
+                MessageBox.Show("Cadastro realizado com Sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Cadastro de Cargo Inválida");
+            }
+        }
+
+        private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você está prestes a sair desta página.\nTem certeza?", "Sair da Página", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+        private void CbCargo_TextChanged(object sender, EventArgs e)
+        {
+            C_handleCargoSalarioDepartamento c_HandleCargoSalarioDepartamento = new C_handleCargoSalarioDepartamento();
+
+            c_HandleCargoSalarioDepartamento.getCargo(CbCargo);
+            c_HandleCargoSalarioDepartamento.getSalario(CbCargo, TxtAlterarSalario);
+            TxtAlterarCargo.Text = CbCargo.Text;
+        }
+
+        private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você está prestes à alterar esse Cargo! Tem certeza?", "Alterar Cargo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                C_handleCargoSalarioDepartamento c_HandleCargoSalarioDepartamento = new C_handleCargoSalarioDepartamento();
+                c_HandleCargoSalarioDepartamento.alterCargo(CbCargo, TxtAlterarCargo, TxtAlterarSalario);
+            }
+        }
+
+        private void BtnErase2_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_eraseBoxes c_Erase = new C_eraseBoxes();
+            c_Erase.eraseTextBox(PnlAlteraCargo);
+        }
+
+        private void BtnErase1_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_eraseBoxes c_Erase = new C_eraseBoxes();
+            c_Erase.eraseTextBox(PnlCadastraCargos);
+        }
+
+        private void BtnRefresh_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormNavBar navBar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
+            FormCargos formCargos = new FormCargos(navBar);
+            C_FormShow c_FormShow = new C_FormShow();
+            c_FormShow.refreshFormWithAlert(formCargos, this);
+        }
     }
 }
-
-
-
-/*
- * TODO:
- * Nesse Forms o usuario do RH de nivel alto ira poder criar um novo cargo e criar um novo departamento;
- * 
- 
- */

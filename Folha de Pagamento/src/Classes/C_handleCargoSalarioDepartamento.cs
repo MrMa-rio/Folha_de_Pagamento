@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FOLHA_DE_PAGAMENTO_.src.SQL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,30 +9,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
 {
     internal class C_handleCargoSalarioDepartamento
     {
-        public string setSalarioBase(string cargo)
-        {
+        C_CargoDepartamento c_Cargo = new C_CargoDepartamento();
 
-            if (cargo == "Ajudante Geral")  
-            {
-                return "1578";
-            }
-            if (cargo == "Impermeabilizador(a)")
-            {
-                return "2487";
-            }
-            if (cargo == "Auxiliar Administrativo")
-            {
-                return "1486";
-            }
-            if (cargo == "Contador(a)")
-            {
-                return "3595";
-            }
-            else
-            {
-                return "0";
-            }
-        }
         public string setIdDepartamento(string departamento)
         {
             if (departamento == "Contabil")
@@ -58,30 +37,21 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         }
         public string setIdCargo(string cargo)
         {
-            if (cargo == "Ajudante Geral")
+            List<string[]> cargos = c_Cargo.getCargosDB();
+
+            foreach (string[] carg in cargos)
             {
-                return "4";
+                if(cargo == carg[1])
+                {
+                    return carg[0];
+                }
             }
-            if (cargo == "Impermeabilizador(a)")
-            {
-                return "3";
-            }
-            if (cargo == "Auxiliar Administrativo")
-            {
-                return "2";
-            }
-            if (cargo == "Contador(a)")
-            {
-                return "1";
-            }
-            else
-            {
-                return "0";
-            }
+            return "0";
         }
 
         public string getIdDepartamento(string Id_Departamento)
         {
+
             if (Id_Departamento == "1")
             {
                 return "Contabil";
@@ -106,27 +76,15 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         }
         public string getIdCargo(string Id_Cargo)
         {
-            if (Id_Cargo == "1")
+            List<string[]> cargos = c_Cargo.getCargosDB();
+            foreach (string[] cargo in cargos)
             {
-                return "Contador(a)";
+                if(Id_Cargo == cargo[0])
+                {
+                    return cargo[1];
+                }
             }
-            if (Id_Cargo == "2")
-            {
-                return "Auxiliar Administrativo";
-
-            }
-            if (Id_Cargo == "3")
-            {
-                return "Impermeabilizador(a)";
-            }
-            if (Id_Cargo == "4")
-            {
-                return "Ajudante Geral";
-            }
-            else
-            {
-                return "0";
-            }
+            return "";
         }
 
         public string setNvlAcesso(string departamento)
@@ -139,15 +97,103 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                 return "3";
             }
+        }
 
-            
+        public void getCargo(ComboBox CbCargo)
+        {
+            List<string[]> cargos = c_Cargo.getCargosDB();
+            foreach (string[] cargo in cargos)
+            {
+                if(CbCargo.Items.Count < cargos.Count)
+                {
+                    CbCargo.Height = cargos.Count;
+                    CbCargo.Items.Add(cargo[1]);
+                    CbCargo.AutoCompleteCustomSource.Add(cargo[1]);
+                }
+                if (CbCargo.GetItemText(cargo[1]) != cargo[1])
+                {
+                    CbCargo.Items.Add(cargo[1]);
+                    CbCargo.AutoCompleteCustomSource.Add(cargo[1]);
+                }
+            }
+        }
+        public void getSalario(ComboBox CbCargo ,MaskedTextBox TxtSalario)
+        {
+            List<string[]> cargos = c_Cargo.getCargosDB();
+            foreach (string[] cargo in cargos)
+            {
+                if (CbCargo.Text == cargo[1])
+                {
+                    TxtSalario.Text = Convert.ToDecimal(cargo[2]).ToString("N2");
+                    break;
+                }
+                else
+                {
+                    TxtSalario.Text = "";
+                }
+            }
+        }
+        public void getSalario(string Cargo, Label Salario)
+        {
+            List<string[]> cargos = c_Cargo.getCargosDB();
+            foreach (string[] cargo in cargos)
+            {
+                if (Cargo == cargo[1])
+                {
+
+                    Salario.Text = Convert.ToDecimal(cargo[2]).ToString("N2");
+                    break;
+                }
+                else
+                {
+                    Salario.Text = "";
+                }
+            }
+        }
+        public bool setCargo(TextBox TxtCargo, TextBox TxtSalario)
+        {
+            if(TxtCargo.Text.Trim() != "" && TxtSalario.Text.Trim() != "")
+            {
+                List<string[]> cargos = c_Cargo.getCargosDB();
+                foreach (string[] cargo in cargos)
+                {
+                    if (cargo[1] ==  TxtCargo.Text.Trim())
+                    {
+                        return false;
+                    }
+                }
+
+                DialogResult dialogResult = MessageBox.Show("Você está prestes a cadastar um Novo Cargo.Tem Certeza?", "Criar Cargo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    c_Cargo.setNovoCargoDB(TxtCargo.Text, TxtSalario.Text);
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool alterCargo(ComboBox CbCargo, TextBox Cargo, MaskedTextBox Salario)
+        {
+            if(CbCargo.Text.Trim() != "" && Cargo.Text.Trim() != "" && Salario.Text.Trim() != "")
+            {
+                List<string[]> cargos = c_Cargo.getCargosDB();
+                foreach (string[] cargo in cargos)
+                {
+                    if (cargo[1] == Cargo.Text.Trim() && Cargo.Text.Trim() != CbCargo.Text)
+                    {
+                        MessageBox.Show("Nome de Cargo já Existente.");
+                        return false;
+                    }
+                }
+                string idCargo = setIdCargo(CbCargo.Text);
+                c_Cargo.modificaCargoDB(Cargo.Text, Salario.Text,idCargo);
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Campos de Alterção vazio.");
+                return false;
+            }
         }
     }
 }
-
-
-/*
- 
- */
-
-

@@ -34,12 +34,22 @@ namespace FOLHA_DE_PAGAMENTO_
         }
         private void TxtPesquisarCargo_TextChanged(object sender, EventArgs e)
         {
+            TxtPesquisarCargo.Controls.Clear();
+            C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
+            c_HandleCargoSalario.getCargo(TxtPesquisarCargo);
             c.handleListFuncionario("FK_Cargo", c_HandleCargoSalario.setIdCargo(TxtPesquisarCargo.Text), this);
         }
 
         private void TxtPesquisarNomes_TextChanged(object sender, EventArgs e)
         {
             c.handleListFuncionario("Nome", TxtPesquisarNomes.Text, this);
+        }
+
+        private void TxtPesquisarCargo_DropDown(object sender, EventArgs e)
+        {
+            TxtPesquisarCargo.Controls.Clear();
+            C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
+            c_HandleCargoSalario.getCargo(TxtPesquisarCargo);
         }
     }
 }

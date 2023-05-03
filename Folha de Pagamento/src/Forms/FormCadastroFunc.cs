@@ -19,10 +19,12 @@ namespace FOLHA_DE_PAGAMENTO_
         private FormNavBar FormAtivo;
         private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
         private C_ManiplaçaoData c_InvertendoData = new C_ManiplaçaoData();
+        private C_VerificadorCEP c_verificadorCEP = new C_VerificadorCEP();
         private bool ValidadorCPF;
         private bool ValidacaoDate;
         private string endereco = "";
         private string matricula;
+
         public FormCadastroFunc(FormNavBar NavBar)
         {
             InitializeComponent();
@@ -114,19 +116,26 @@ namespace FOLHA_DE_PAGAMENTO_
                 TextEmail.Text, TxtTelefone.Text
             };
 
-            C_InsertData c_InsertAndUpdate = new C_InsertData();
-            matricula = c_InsertAndUpdate.setDatainDB(dataCadastroPessoal, dataCadastroAdicional);
+            C_InsertData c_InsertData = new C_InsertData();
+            matricula = c_InsertData.setDatainDB(dataCadastroPessoal, dataCadastroAdicional);
             if (endereco != "")
             {
                 C_ManipulaçãoImagens c_ManipulaçãoImagens = new C_ManipulaçãoImagens();
                 c_ManipulaçãoImagens.setImagemUser(matricula, endereco);
+            }
+            if (matricula != "0")
+            {
+                C_FormShow c_FormShow = new C_FormShow();
+                FormNavBar navBar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
+                FormCadastroFunc formCadastroFunc = new FormCadastroFunc(navBar);
+                c_FormShow.refreshForm(formCadastroFunc, this);
             }
 
 
         }
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
         {
-            DialogResult alert = MessageBox.Show("Você está preste a fechar a area de Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
+            DialogResult alert = MessageBox.Show("Você está preste a fechar a Area de Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
             if (alert == DialogResult.OK)
             {
                 Close();
@@ -140,8 +149,6 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void TxtDataNascimento_TextChanged(object sender, EventArgs e)
         {
-            
-
             LbDataNascimentoResult.Text = TxtDataNascimento.Text;
             ValidacaoDate = c_InvertendoData.setValidacaoData(TxtDataNascimento, BoxCalendario.TodayDate, Pctdata);
         }
@@ -149,13 +156,6 @@ namespace FOLHA_DE_PAGAMENTO_
         private void TxtTelefone_TextChanged(object sender, EventArgs e)
         {
             LbTelefoneResult.Text = TxtTelefone.Text;
-        }
-
-        private void CbCargo_TextChanged(object sender, EventArgs e)
-        {
-            C_handleCargoSalarioDepartamento c_Cargo = new C_handleCargoSalarioDepartamento();
-            LbCargoResult.Text = CbCargo.Text;
-            TxtSalarioBase.Text = c_Cargo.setSalarioBase(CbCargo.Text);
         }
 
         private void TxtNit_MouseClick(object sender, MouseEventArgs e)
@@ -167,7 +167,6 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             TxtCTrabalho.SelectAll();
         }
-
         private void TxtPis_MouseClick(object sender, MouseEventArgs e)
         {
             TxtPis.SelectAll();
@@ -194,6 +193,44 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 c_Manipulação.erasePhoto(PctFotoFunc);
             }
+        }
+
+        private void TxtCep_Leave(object sender, EventArgs e)
+        {
+            if (TxtCep.Text.Length == 8)
+            {
+                c_verificadorCEP.LocalizarCEP(TxtCep.Text, CbUF, TxtCidade, TxtBairro, TxtRua, TxtCep);
+            }
+        }
+
+        private void CbCargo_DropDown(object sender, EventArgs e)
+        {
+            CbCargo.Controls.Clear();
+            C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
+            c_HandleCargoSalario.getCargo(CbCargo);
+            LbCargoResult.Text = CbCargo.Text;
+
+        }
+        private void CbCargo_Leave(object sender, EventArgs e)
+        {
+            C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
+            c_HandleCargoSalario.getSalario(CbCargo, TxtSalarioBase);
+
+        }
+
+        private void BtnLimpar_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_eraseBoxes c_EraseBoxes = new C_eraseBoxes();
+            c_EraseBoxes.eraseTextBox(PnlCtrlFunc);
+            c_EraseBoxes.erasemaskedTextBox(PnlCtrlFunc);
+            c_EraseBoxes.eraseCombobox(PnlCtrlFunc);
+        }
+        private void BtnRefresh_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormNavBar navBar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
+            FormCadastroFunc formCadastroFunc = new FormCadastroFunc(navBar);
+            C_FormShow c_FormShow = new C_FormShow();
+            c_FormShow.refreshFormWithAlert(formCadastroFunc, this);
         }
     }
 }

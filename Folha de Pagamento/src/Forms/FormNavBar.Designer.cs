@@ -42,7 +42,6 @@
             BtnAlterarCadastro = new Button();
             BtnCargosFun = new Button();
             BtnPesquisar = new Button();
-            button4 = new Button();
             BtnGerenciamento = new Button();
             BtnConfiguracao = new Button();
             BtnLogout = new Button();
@@ -88,9 +87,9 @@
             PanelSubMenuRel.Controls.Add(BtnHolerite);
             PanelSubMenuRel.Controls.Add(BtnFolhaPNormal);
             PanelSubMenuRel.Dock = DockStyle.Top;
-            PanelSubMenuRel.Location = new Point(0, 390);
+            PanelSubMenuRel.Location = new Point(0, 320);
             PanelSubMenuRel.Name = "PanelSubMenuRel";
-            PanelSubMenuRel.Size = new Size(325, 247);
+            PanelSubMenuRel.Size = new Size(342, 199);
             PanelSubMenuRel.TabIndex = 6;
             // 
             // BtnCalculoPagamento
@@ -101,7 +100,7 @@
             BtnCalculoPagamento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnCalculoPagamento.Image = (Image)resources.GetObject("BtnCalculoPagamento.Image");
             BtnCalculoPagamento.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnCalculoPagamento.Location = new Point(35, 21);
+            BtnCalculoPagamento.Location = new Point(35, 11);
             BtnCalculoPagamento.Name = "BtnCalculoPagamento";
             BtnCalculoPagamento.Size = new Size(244, 40);
             BtnCalculoPagamento.TabIndex = 7;
@@ -118,7 +117,7 @@
             FolhaPDetalhada.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FolhaPDetalhada.Image = (Image)resources.GetObject("FolhaPDetalhada.Image");
             FolhaPDetalhada.ImageAlign = ContentAlignment.MiddleLeft;
-            FolhaPDetalhada.Location = new Point(35, 113);
+            FolhaPDetalhada.Location = new Point(35, 103);
             FolhaPDetalhada.Name = "FolhaPDetalhada";
             FolhaPDetalhada.Size = new Size(255, 40);
             FolhaPDetalhada.TabIndex = 8;
@@ -135,7 +134,7 @@
             BtnHolerite.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnHolerite.Image = (Image)resources.GetObject("BtnHolerite.Image");
             BtnHolerite.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnHolerite.Location = new Point(35, 159);
+            BtnHolerite.Location = new Point(35, 149);
             BtnHolerite.Name = "BtnHolerite";
             BtnHolerite.Size = new Size(221, 40);
             BtnHolerite.TabIndex = 9;
@@ -152,7 +151,7 @@
             BtnFolhaPNormal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnFolhaPNormal.Image = (Image)resources.GetObject("BtnFolhaPNormal.Image");
             BtnFolhaPNormal.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnFolhaPNormal.Location = new Point(35, 67);
+            BtnFolhaPNormal.Location = new Point(35, 57);
             BtnFolhaPNormal.Name = "BtnFolhaPNormal";
             BtnFolhaPNormal.Size = new Size(244, 40);
             BtnFolhaPNormal.TabIndex = 11;
@@ -170,9 +169,9 @@
             BtnRelatorio.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             BtnRelatorio.Image = Properties.Resources.summary;
             BtnRelatorio.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnRelatorio.Location = new Point(0, 327);
+            BtnRelatorio.Location = new Point(0, 257);
             BtnRelatorio.Name = "BtnRelatorio";
-            BtnRelatorio.Size = new Size(325, 63);
+            BtnRelatorio.Size = new Size(342, 63);
             BtnRelatorio.TabIndex = 14;
             BtnRelatorio.Text = "  Relatorios";
             BtnRelatorio.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -185,11 +184,10 @@
             PanelSubMenu.Controls.Add(BtnAlterarCadastro);
             PanelSubMenu.Controls.Add(BtnCargosFun);
             PanelSubMenu.Controls.Add(BtnPesquisar);
-            PanelSubMenu.Controls.Add(button4);
             PanelSubMenu.Dock = DockStyle.Top;
             PanelSubMenu.Location = new Point(0, 63);
             PanelSubMenu.Name = "PanelSubMenu";
-            PanelSubMenu.Size = new Size(325, 264);
+            PanelSubMenu.Size = new Size(342, 194);
             PanelSubMenu.TabIndex = 13;
             // 
             // BtnCadastro
@@ -200,9 +198,9 @@
             BtnCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnCadastro.Image = (Image)resources.GetObject("BtnCadastro.Image");
             BtnCadastro.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnCadastro.Location = new Point(35, 6);
+            BtnCadastro.Location = new Point(35, 10);
             BtnCadastro.Name = "BtnCadastro";
-            BtnCadastro.Size = new Size(220, 40);
+            BtnCadastro.Size = new Size(244, 40);
             BtnCadastro.TabIndex = 0;
             BtnCadastro.Text = "    Cadastrar Funcionários";
             BtnCadastro.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -261,23 +259,6 @@
             BtnPesquisar.UseVisualStyleBackColor = false;
             BtnPesquisar.MouseClick += BtnPesquisar_MouseClick;
             // 
-            // button4
-            // 
-            button4.BackColor = Color.Transparent;
-            button4.Enabled = false;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Image = Properties.Resources.cube;
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(35, 194);
-            button4.Name = "button4";
-            button4.Size = new Size(220, 40);
-            button4.TabIndex = 5;
-            button4.Text = "    A Definir";
-            button4.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button4.UseVisualStyleBackColor = false;
-            // 
             // BtnGerenciamento
             // 
             BtnGerenciamento.Dock = DockStyle.Top;
@@ -288,7 +269,7 @@
             BtnGerenciamento.ImageAlign = ContentAlignment.MiddleLeft;
             BtnGerenciamento.Location = new Point(0, 0);
             BtnGerenciamento.Name = "BtnGerenciamento";
-            BtnGerenciamento.Size = new Size(325, 63);
+            BtnGerenciamento.Size = new Size(342, 63);
             BtnGerenciamento.TabIndex = 12;
             BtnGerenciamento.Text = "Gerenciamento";
             BtnGerenciamento.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -371,7 +352,6 @@
         private Button BtnHolerite;
         private Button FolhaPDetalhada;
         private Button BtnCalculoPagamento;
-        private Button button4;
         private Button BtnPesquisar;
         private Button BtnCargosFun;
         private Button BtnGerenciamento;

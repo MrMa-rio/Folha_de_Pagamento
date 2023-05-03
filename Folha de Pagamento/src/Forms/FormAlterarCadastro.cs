@@ -21,6 +21,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
         C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
         C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
+        C_VerificadorCEP verificadorCEP = new C_VerificadorCEP();
         C_ManiplaçaoData c_Manipula = new C_ManiplaçaoData();
         string endereco = "";
 
@@ -195,10 +196,18 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void CbCargo_TextChanged(object sender, EventArgs e)
         {
-
-            TxtSalarioBase.Text = c_HandleCargoSalario.setSalarioBase(CbCargo.Text);
+            CbCargo.Controls.Clear();
+            C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
+            c_HandleCargoSalario.getCargo(CbCargo);
+            c_HandleCargoSalario.getSalario(CbCargo, TxtSalarioBase);
         }
+        private void CbCargo_DropDown(object sender, EventArgs e)
+        {
+            CbCargo.Controls.Clear();
+            C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
+            c_HandleCargoSalario.getCargo(CbCargo);
 
+        }
         private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
         {
             DialogResult messageAlert = MessageBox.Show("Você está preste à alterar este cadastro. Tem certeza?", "Alterar Cadastro", MessageBoxButtons.YesNo);
@@ -250,7 +259,11 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Close();
+            DialogResult alert = MessageBox.Show("Você está preste a fechar a Area de Alertar Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
+            if (alert == DialogResult.OK)
+            {
+                Close();
+            }
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
@@ -265,8 +278,14 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void TxtCalendario_TextChanged(object sender, EventArgs e)
         {
-
             validacaoDate = c_Manipula.setValidacaoData(TxtCalendario, BoxCalendario.TodayDate, PctData);
+        }
+        private void TxtCep_Leave(object sender, EventArgs e)
+        {
+            if (TxtCep.Text.Length == 8)
+            {
+                verificadorCEP.LocalizarCEP(TxtCep.Text, CbUF, TxtCidade, TxtBairro, TxtRua, TxtCep);
+            }
         }
     }
 }

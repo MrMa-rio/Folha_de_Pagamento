@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Common;
+using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,14 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         private string Password = "";
         private string TargetDB = "bd_folha";
 
+        //string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
+        //string insertSql = $"SELECT * FROM {Table} where FK_Matricula LIKE {Matricula} ";
+
         public string[] getDatainTable(string matricula)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
             string searchDataFuncionario = $"SELECT * FROM tb_funcionario where Matricula LIKE {matricula} ";
-            
+
             MySqlConnection conexão;
             conexão = new MySqlConnection();
             conexão.ConnectionString = endereco;
@@ -29,7 +33,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             string[] Result = new string[mySqlDataReader.FieldCount];
             try
             {
-                
+
                 if (!mySqlDataReader.HasRows)
                 {
                     MessageBox.Show("Nenhum Cadastro encontrado.");
@@ -43,10 +47,10 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                             for (int i = 0; i < mySqlDataReader.FieldCount - 1; i++)
                             {
                                 Result[i] = mySqlDataReader.GetString(i);
-                                
+
                             }
                             conexão.Close();
-                            return Result;
+                            return Result; //Retorna as informaçoes de apenas um funcionario.
                         }
                     }
 
@@ -72,22 +76,22 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
             string insertSql = $"SELECT * FROM {Table} where FK_Matricula LIKE {Matricula} ";
-            
+
             MySqlConnection conexão;
             conexão = new MySqlConnection();
             conexão.ConnectionString = endereco;
             conexão.Open();
             MySqlCommand command = new MySqlCommand(insertSql, conexão);
             MySqlDataReader mySqlDataReader = command.ExecuteReader();
-            string[]  Result = new string[mySqlDataReader.FieldCount];
+            string[] Result = new string[mySqlDataReader.FieldCount];
 
             try
             {
                 if (!mySqlDataReader.HasRows)
                 {
-                    
+
                     return Result;
-                    
+
                 }
                 else
                 {
@@ -121,10 +125,16 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         }
         public List<string[]> getListFuncionarios(string coluna, string entrada)
         {
-            string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
             string insertSql = $"select * from tb_funcionario where {coluna} LIKE '%{entrada}%'";
-            List<string[]> Result = new List<string[]>();
+            return getListinDB(insertSql);
 
+        }
+
+        public List<string[]> getListinDB(string insertSql)
+        {
+
+            List<string[]> Result = new List<string[]>();
+            string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
             MySqlConnection conexão;
             conexão = new MySqlConnection();
             conexão.ConnectionString = endereco;
@@ -136,9 +146,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             {
                 if (!mySqlDataReader.HasRows)
                 {
-
                     return Result;
-
                 }
                 else
                 {
@@ -150,17 +158,10 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                             for (int i = 0; i < mySqlDataReader.FieldCount; i++)
                             {
                                 row[i] = mySqlDataReader.GetString(i);
-
                             }
-                            
                         }
-                            Result.Add(row);
-                            
-                            
-                            
-                            //return Result;
+                        Result.Add(row);
                     }
-                    
                     conexão.Close();
                     return Result;
                 }
@@ -178,6 +179,22 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                 conexão.Close();
             }
             return Result;
+        }
+        public List<string[]> getListSalariosDescINSS()
+        {
+            string insertSql = $"SELECT * FROM tb_inss;";
+            return getListinDB(insertSql);
+        }
+        public List<string[]> getListSalariosDescIRRF()
+        {
+            string insertSql = $"SELECT * FROM tb_irf";
+            return getListinDB(insertSql);
+        }
+
+        public List<string[]> getListValorFGTS()
+        {
+            string insertSql = $"SELECT * FROM tb_fgts";
+            return getListinDB(insertSql);
         }
     }
 }

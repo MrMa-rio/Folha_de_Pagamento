@@ -132,3 +132,6 @@ Folha de Pagamento/.vs/ProjectEvaluation/folha_de_pagamento.metadata.v6.1
 Folha de Pagamento/.vs/Folha_de_Pagamento/v17/.suo
 Folha de Pagamento/.vs/Folha_de_Pagamento/v17/.futdcache.v2
 Folha de Pagamento/.vs/Folha_de_Pagamento/DesignTimeBuild/.dtbcache.v2
+*.cache
+*.v2
+*.1

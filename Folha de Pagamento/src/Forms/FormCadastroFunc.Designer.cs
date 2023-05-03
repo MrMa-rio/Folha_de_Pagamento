@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroFunc));
             LbAlterarCadastro = new Panel();
+            BtnRefresh = new Button();
             BtnLimpar = new Button();
             PnlCtrlFunc = new Panel();
+            Pctdata = new PictureBox();
             BoxCalendario2 = new MonthCalendar();
             TxtReservista = new MaskedTextBox();
             CbDepartamento = new ComboBox();
@@ -52,7 +55,6 @@
             TxtTelefone = new MaskedTextBox();
             BtnCalendario2 = new Button();
             TxtDataAdmissao = new MaskedTextBox();
-            TxtSalarioBase = new TextBox();
             LbSalarioBase = new Label();
             LbDataAdmissao = new Label();
             LbCarteiraTrabalho = new Label();
@@ -109,20 +111,22 @@
             label1 = new Label();
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
-            Pctdata = new PictureBox();
+            toolTip1 = new ToolTip(components);
+            TxtSalarioBase = new MaskedTextBox();
             LbAlterarCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Pctdata).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumRua).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
             PanelPerfilFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctFotoFunc).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Pctdata).BeginInit();
             SuspendLayout();
             // 
             // LbAlterarCadastro
             // 
             LbAlterarCadastro.AccessibleRole = AccessibleRole.None;
             LbAlterarCadastro.BackColor = Color.LightGray;
+            LbAlterarCadastro.Controls.Add(BtnRefresh);
             LbAlterarCadastro.Controls.Add(BtnLimpar);
             LbAlterarCadastro.Controls.Add(PnlCtrlFunc);
             LbAlterarCadastro.Controls.Add(PanelPerfilFunc);
@@ -136,17 +140,32 @@
             LbAlterarCadastro.TabIndex = 0;
             LbAlterarCadastro.MouseClick += AllForms_MouseClick;
             // 
+            // BtnRefresh
+            // 
+            BtnRefresh.BackgroundImage = Properties.Resources.refresh1;
+            BtnRefresh.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnRefresh.FlatAppearance.BorderSize = 0;
+            BtnRefresh.FlatStyle = FlatStyle.Flat;
+            BtnRefresh.Location = new Point(693, 50);
+            BtnRefresh.Name = "BtnRefresh";
+            BtnRefresh.Size = new Size(43, 43);
+            BtnRefresh.TabIndex = 66;
+            toolTip1.SetToolTip(BtnRefresh, "Recarregar Pagina");
+            BtnRefresh.UseVisualStyleBackColor = true;
+            BtnRefresh.MouseClick += BtnRefresh_MouseClick;
+            // 
             // BtnLimpar
             // 
-            BtnLimpar.Enabled = false;
             BtnLimpar.FlatAppearance.BorderSize = 0;
             BtnLimpar.FlatStyle = FlatStyle.Flat;
             BtnLimpar.Image = (Image)resources.GetObject("BtnLimpar.Image");
-            BtnLimpar.Location = new Point(742, 578);
+            BtnLimpar.Location = new Point(742, 582);
             BtnLimpar.Name = "BtnLimpar";
             BtnLimpar.Size = new Size(43, 43);
             BtnLimpar.TabIndex = 61;
+            toolTip1.SetToolTip(BtnLimpar, "Limpar Campos");
             BtnLimpar.UseVisualStyleBackColor = true;
+            BtnLimpar.MouseClick += BtnLimpar_MouseClick;
             // 
             // PnlCtrlFunc
             // 
@@ -154,6 +173,7 @@
             PnlCtrlFunc.AutoScrollMargin = new Size(0, 10);
             PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
             PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
+            PnlCtrlFunc.Controls.Add(TxtSalarioBase);
             PnlCtrlFunc.Controls.Add(Pctdata);
             PnlCtrlFunc.Controls.Add(BoxCalendario2);
             PnlCtrlFunc.Controls.Add(TxtReservista);
@@ -175,7 +195,6 @@
             PnlCtrlFunc.Controls.Add(TxtTelefone);
             PnlCtrlFunc.Controls.Add(BtnCalendario2);
             PnlCtrlFunc.Controls.Add(TxtDataAdmissao);
-            PnlCtrlFunc.Controls.Add(TxtSalarioBase);
             PnlCtrlFunc.Controls.Add(LbSalarioBase);
             PnlCtrlFunc.Controls.Add(LbDataAdmissao);
             PnlCtrlFunc.Controls.Add(LbCarteiraTrabalho);
@@ -220,6 +239,15 @@
             PnlCtrlFunc.TabIndex = 7;
             PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
+            // Pctdata
+            // 
+            Pctdata.BackgroundImageLayout = ImageLayout.Stretch;
+            Pctdata.Location = new Point(300, 150);
+            Pctdata.Name = "Pctdata";
+            Pctdata.Size = new Size(28, 28);
+            Pctdata.TabIndex = 124;
+            Pctdata.TabStop = false;
+            // 
             // BoxCalendario2
             // 
             BoxCalendario2.Location = new Point(463, 666);
@@ -235,10 +263,10 @@
             TxtReservista.BackColor = Color.DarkGray;
             TxtReservista.BorderStyle = BorderStyle.FixedSingle;
             TxtReservista.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtReservista.Location = new Point(169, 369);
+            TxtReservista.Location = new Point(164, 369);
             TxtReservista.Mask = "00000000000";
             TxtReservista.Name = "TxtReservista";
-            TxtReservista.PromptChar = 'X';
+            TxtReservista.PromptChar = ' ';
             TxtReservista.Size = new Size(162, 31);
             TxtReservista.TabIndex = 7;
             TxtReservista.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
@@ -257,7 +285,7 @@
             CbDepartamento.Location = new Point(510, 549);
             CbDepartamento.Name = "CbDepartamento";
             CbDepartamento.Size = new Size(185, 31);
-            CbDepartamento.TabIndex = 20;
+            CbDepartamento.TabIndex = 9;
             // 
             // label6
             // 
@@ -274,21 +302,21 @@
             TxtNumRua.BackColor = Color.DarkGray;
             TxtNumRua.BorderStyle = BorderStyle.FixedSingle;
             TxtNumRua.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtNumRua.Location = new Point(168, 989);
+            TxtNumRua.Location = new Point(167, 1094);
             TxtNumRua.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             TxtNumRua.Name = "TxtNumRua";
             TxtNumRua.Size = new Size(160, 31);
-            TxtNumRua.TabIndex = 11;
+            TxtNumRua.TabIndex = 20;
             // 
             // TxtTituloEleitor
             // 
             TxtTituloEleitor.BackColor = Color.DarkGray;
             TxtTituloEleitor.BorderStyle = BorderStyle.FixedSingle;
             TxtTituloEleitor.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtTituloEleitor.Location = new Point(169, 332);
+            TxtTituloEleitor.Location = new Point(164, 332);
             TxtTituloEleitor.Mask = "000000000000";
             TxtTituloEleitor.Name = "TxtTituloEleitor";
-            TxtTituloEleitor.PromptChar = 'X';
+            TxtTituloEleitor.PromptChar = ' ';
             TxtTituloEleitor.Size = new Size(162, 31);
             TxtTituloEleitor.TabIndex = 6;
             TxtTituloEleitor.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
@@ -302,9 +330,8 @@
             TxtPis.Location = new Point(170, 623);
             TxtPis.Mask = "000,00000,00-0";
             TxtPis.Name = "TxtPis";
-            TxtPis.PromptChar = 'X';
             TxtPis.Size = new Size(165, 31);
-            TxtPis.TabIndex = 19;
+            TxtPis.TabIndex = 12;
             TxtPis.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtPis.MouseClick += TxtPis_MouseClick;
             // 
@@ -316,9 +343,8 @@
             TxtCTrabalho.Location = new Point(170, 586);
             TxtCTrabalho.Mask = "0000000 | 000-0";
             TxtCTrabalho.Name = "TxtCTrabalho";
-            TxtCTrabalho.PromptChar = 'X';
             TxtCTrabalho.Size = new Size(165, 31);
-            TxtCTrabalho.TabIndex = 18;
+            TxtCTrabalho.TabIndex = 10;
             TxtCTrabalho.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtCTrabalho.MouseClick += TxtCTrabalho_MouseClick;
             // 
@@ -327,12 +353,12 @@
             TxtNit.BackColor = Color.DarkGray;
             TxtNit.BorderStyle = BorderStyle.FixedSingle;
             TxtNit.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtNit.Location = new Point(510, 586);
+            TxtNit.Location = new Point(510, 587);
             TxtNit.Mask = "00000000000";
             TxtNit.Name = "TxtNit";
-            TxtNit.PromptChar = 'X';
+            TxtNit.PromptChar = ' ';
             TxtNit.Size = new Size(165, 31);
-            TxtNit.TabIndex = 17;
+            TxtNit.TabIndex = 11;
             TxtNit.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtNit.MouseClick += TxtNit_MouseClick;
             // 
@@ -351,14 +377,14 @@
             TxtCep.BackColor = Color.DarkGray;
             TxtCep.BorderStyle = BorderStyle.FixedSingle;
             TxtCep.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCep.Location = new Point(167, 1180);
-            TxtCep.Mask = "00,000-000";
+            TxtCep.Location = new Point(167, 946);
+            TxtCep.Mask = "00000-000";
             TxtCep.Name = "TxtCep";
-            TxtCep.PromptChar = 'X';
             TxtCep.Size = new Size(160, 31);
             TxtCep.TabIndex = 16;
             TxtCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtCep.MouseClick += TxtCep_MouseClick;
+            TxtCep.Leave += TxtCep_Leave;
             // 
             // PctCpf
             // 
@@ -373,7 +399,7 @@
             // 
             LbTituloEleitor.AutoSize = true;
             LbTituloEleitor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbTituloEleitor.Location = new Point(15, 335);
+            LbTituloEleitor.Location = new Point(10, 335);
             LbTituloEleitor.Name = "LbTituloEleitor";
             LbTituloEleitor.Size = new Size(125, 21);
             LbTituloEleitor.TabIndex = 111;
@@ -383,7 +409,7 @@
             // 
             LbReservista.AutoSize = true;
             LbReservista.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbReservista.Location = new Point(15, 372);
+            LbReservista.Location = new Point(10, 372);
             LbReservista.Name = "LbReservista";
             LbReservista.Size = new Size(88, 21);
             LbReservista.TabIndex = 110;
@@ -394,10 +420,9 @@
             TxtRg.BackColor = Color.DarkGray;
             TxtRg.BorderStyle = BorderStyle.FixedSingle;
             TxtRg.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtRg.Location = new Point(170, 295);
+            TxtRg.Location = new Point(165, 295);
             TxtRg.Mask = "00,000,000-0";
             TxtRg.Name = "TxtRg";
-            TxtRg.PromptChar = 'X';
             TxtRg.Size = new Size(162, 31);
             TxtRg.TabIndex = 5;
             TxtRg.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
@@ -407,7 +432,7 @@
             // 
             LbCep.AutoSize = true;
             LbCep.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbCep.Location = new Point(11, 1183);
+            LbCep.Location = new Point(10, 949);
             LbCep.Name = "LbCep";
             LbCep.Size = new Size(47, 21);
             LbCep.TabIndex = 106;
@@ -417,7 +442,7 @@
             // 
             LbRg.AutoSize = true;
             LbRg.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbRg.Location = new Point(15, 298);
+            LbRg.Location = new Point(10, 298);
             LbRg.Name = "LbRg";
             LbRg.Size = new Size(41, 21);
             LbRg.TabIndex = 104;
@@ -428,11 +453,11 @@
             TxtTelefone.BackColor = Color.DarkGray;
             TxtTelefone.BorderStyle = BorderStyle.FixedSingle;
             TxtTelefone.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtTelefone.Location = new Point(168, 872);
+            TxtTelefone.Location = new Point(167, 872);
             TxtTelefone.Mask = "(00) 0 0000-0000";
             TxtTelefone.Name = "TxtTelefone";
             TxtTelefone.Size = new Size(287, 31);
-            TxtTelefone.TabIndex = 8;
+            TxtTelefone.TabIndex = 14;
             TxtTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtTelefone.MouseClick += TxtTelefone_MouseClick;
             TxtTelefone.TextChanged += TxtTelefone_TextChanged;
@@ -458,22 +483,9 @@
             TxtDataAdmissao.Location = new Point(167, 697);
             TxtDataAdmissao.Mask = "00/00/0000";
             TxtDataAdmissao.Name = "TxtDataAdmissao";
-            TxtDataAdmissao.PromptChar = 'X';
             TxtDataAdmissao.Size = new Size(121, 31);
-            TxtDataAdmissao.TabIndex = 22;
+            TxtDataAdmissao.TabIndex = 13;
             TxtDataAdmissao.MouseClick += TxtDataEmissao_MouseClick;
-            // 
-            // TxtSalarioBase
-            // 
-            TxtSalarioBase.BackColor = Color.DarkGray;
-            TxtSalarioBase.BorderStyle = BorderStyle.FixedSingle;
-            TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioBase.Location = new Point(510, 623);
-            TxtSalarioBase.Name = "TxtSalarioBase";
-            TxtSalarioBase.PlaceholderText = " R$1.304,98";
-            TxtSalarioBase.ReadOnly = true;
-            TxtSalarioBase.Size = new Size(165, 31);
-            TxtSalarioBase.TabIndex = 23;
             // 
             // LbSalarioBase
             // 
@@ -551,28 +563,28 @@
             CbUF.FormattingEnabled = true;
             CbUF.ItemHeight = 23;
             CbUF.Items.AddRange(new object[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE ", "TO" });
-            CbUF.Location = new Point(167, 1100);
+            CbUF.Location = new Point(167, 983);
             CbUF.MaxDropDownItems = 3;
             CbUF.Name = "CbUF";
             CbUF.Size = new Size(160, 31);
-            CbUF.TabIndex = 14;
+            CbUF.TabIndex = 17;
             // 
             // TxtCidade
             // 
             TxtCidade.BackColor = Color.DarkGray;
             TxtCidade.BorderStyle = BorderStyle.FixedSingle;
             TxtCidade.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCidade.Location = new Point(167, 1138);
+            TxtCidade.Location = new Point(167, 1020);
             TxtCidade.Name = "TxtCidade";
             TxtCidade.PlaceholderText = "Ribeirão Preto";
             TxtCidade.Size = new Size(287, 31);
-            TxtCidade.TabIndex = 15;
+            TxtCidade.TabIndex = 18;
             // 
             // LbCidade
             // 
             LbCidade.AutoSize = true;
             LbCidade.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbCidade.Location = new Point(11, 1141);
+            LbCidade.Location = new Point(10, 1023);
             LbCidade.Name = "LbCidade";
             LbCidade.Size = new Size(68, 21);
             LbCidade.TabIndex = 88;
@@ -582,7 +594,7 @@
             // 
             LbUf.AutoSize = true;
             LbUf.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbUf.Location = new Point(11, 1104);
+            LbUf.Location = new Point(10, 987);
             LbUf.Name = "LbUf";
             LbUf.Size = new Size(39, 21);
             LbUf.TabIndex = 86;
@@ -593,17 +605,17 @@
             TextEmail.BackColor = Color.DarkGray;
             TextEmail.BorderStyle = BorderStyle.FixedSingle;
             TextEmail.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TextEmail.Location = new Point(168, 916);
+            TextEmail.Location = new Point(167, 909);
             TextEmail.Name = "TextEmail";
             TextEmail.PlaceholderText = " XXXX@gmail.com";
             TextEmail.Size = new Size(287, 31);
-            TextEmail.TabIndex = 9;
+            TextEmail.TabIndex = 15;
             // 
             // LbEmail
             // 
             LbEmail.AutoSize = true;
             LbEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbEmail.Location = new Point(11, 919);
+            LbEmail.Location = new Point(10, 912);
             LbEmail.Name = "LbEmail";
             LbEmail.Size = new Size(55, 21);
             LbEmail.TabIndex = 84;
@@ -613,7 +625,7 @@
             // 
             LbTelefone.AutoSize = true;
             LbTelefone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbTelefone.Location = new Point(11, 882);
+            LbTelefone.Location = new Point(10, 875);
             LbTelefone.Name = "LbTelefone";
             LbTelefone.Size = new Size(77, 21);
             LbTelefone.TabIndex = 82;
@@ -624,17 +636,17 @@
             TxtComplemento.BackColor = Color.DarkGray;
             TxtComplemento.BorderStyle = BorderStyle.FixedSingle;
             TxtComplemento.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtComplemento.Location = new Point(167, 1063);
+            TxtComplemento.Location = new Point(167, 1168);
             TxtComplemento.Name = "TxtComplemento";
             TxtComplemento.PlaceholderText = " Apto.200";
             TxtComplemento.Size = new Size(287, 31);
-            TxtComplemento.TabIndex = 13;
+            TxtComplemento.TabIndex = 22;
             // 
             // LbComplemento
             // 
             LbComplemento.AutoSize = true;
             LbComplemento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbComplemento.Location = new Point(11, 1066);
+            LbComplemento.Location = new Point(10, 1171);
             LbComplemento.Name = "LbComplemento";
             LbComplemento.Size = new Size(116, 21);
             LbComplemento.TabIndex = 80;
@@ -645,17 +657,17 @@
             TxtBairro.BackColor = Color.DarkGray;
             TxtBairro.BorderStyle = BorderStyle.FixedSingle;
             TxtBairro.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtBairro.Location = new Point(167, 1026);
+            TxtBairro.Location = new Point(167, 1131);
             TxtBairro.Name = "TxtBairro";
             TxtBairro.PlaceholderText = " Jd.Paraná";
             TxtBairro.Size = new Size(287, 31);
-            TxtBairro.TabIndex = 12;
+            TxtBairro.TabIndex = 21;
             // 
             // LbBairro
             // 
             LbBairro.AutoSize = true;
             LbBairro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbBairro.Location = new Point(11, 1029);
+            LbBairro.Location = new Point(10, 1134);
             LbBairro.Name = "LbBairro";
             LbBairro.Size = new Size(62, 21);
             LbBairro.TabIndex = 78;
@@ -665,7 +677,7 @@
             // 
             LbNumero.AutoSize = true;
             LbNumero.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbNumero.Location = new Point(11, 992);
+            LbNumero.Location = new Point(10, 1097);
             LbNumero.Name = "LbNumero";
             LbNumero.Size = new Size(78, 21);
             LbNumero.TabIndex = 76;
@@ -676,17 +688,17 @@
             TxtRua.BackColor = Color.DarkGray;
             TxtRua.BorderStyle = BorderStyle.FixedSingle;
             TxtRua.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtRua.Location = new Point(167, 952);
+            TxtRua.Location = new Point(167, 1057);
             TxtRua.Name = "TxtRua";
             TxtRua.PlaceholderText = " Avenida São Paulo";
             TxtRua.Size = new Size(287, 31);
-            TxtRua.TabIndex = 10;
+            TxtRua.TabIndex = 19;
             // 
             // LbRua
             // 
             LbRua.AutoSize = true;
             LbRua.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbRua.Location = new Point(11, 955);
+            LbRua.Location = new Point(10, 1060);
             LbRua.Name = "LbRua";
             LbRua.Size = new Size(47, 21);
             LbRua.TabIndex = 74;
@@ -727,7 +739,7 @@
             CbGenero.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbGenero.FormattingEnabled = true;
             CbGenero.Items.AddRange(new object[] { "Masculino", "Feminino", "Transgênero", "Cisgênero", "Outro" });
-            CbGenero.Location = new Point(170, 258);
+            CbGenero.Location = new Point(165, 258);
             CbGenero.Name = "CbGenero";
             CbGenero.Size = new Size(160, 31);
             CbGenero.TabIndex = 4;
@@ -736,7 +748,7 @@
             // 
             LbGenero.AutoSize = true;
             LbGenero.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbGenero.Location = new Point(15, 262);
+            LbGenero.Location = new Point(10, 262);
             LbGenero.Name = "LbGenero";
             LbGenero.Size = new Size(71, 21);
             LbGenero.TabIndex = 69;
@@ -797,10 +809,9 @@
             TxtDataNascimento.BackColor = Color.DarkGray;
             TxtDataNascimento.BorderStyle = BorderStyle.FixedSingle;
             TxtDataNascimento.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataNascimento.Location = new Point(172, 147);
+            TxtDataNascimento.Location = new Point(167, 147);
             TxtDataNascimento.Mask = "00/00/0000";
             TxtDataNascimento.Name = "TxtDataNascimento";
-            TxtDataNascimento.PromptChar = 'X';
             TxtDataNascimento.Size = new Size(121, 31);
             TxtDataNascimento.TabIndex = 1;
             TxtDataNascimento.MouseClick += TxtDataNascimento_MouseClick;
@@ -811,10 +822,9 @@
             TxtCpf.BackColor = Color.DarkGray;
             TxtCpf.BorderStyle = BorderStyle.FixedSingle;
             TxtCpf.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCpf.Location = new Point(171, 184);
+            TxtCpf.Location = new Point(166, 184);
             TxtCpf.Mask = "000,000,000-00";
             TxtCpf.Name = "TxtCpf";
-            TxtCpf.PromptChar = 'X';
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 2;
             TxtCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
@@ -823,19 +833,19 @@
             // 
             // CbCargo
             // 
-            CbCargo.AutoCompleteCustomSource.AddRange(new string[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo ", "Contador(a)" });
             CbCargo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbCargo.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbCargo.BackColor = Color.DarkGray;
             CbCargo.FlatStyle = FlatStyle.Flat;
             CbCargo.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbCargo.FormattingEnabled = true;
-            CbCargo.Items.AddRange(new object[] { "Ajudante Geral", "Impermeabilizador(a)", "Auxiliar Administrativo", "Contador(a)" });
             CbCargo.Location = new Point(170, 549);
             CbCargo.Name = "CbCargo";
             CbCargo.Size = new Size(185, 31);
-            CbCargo.TabIndex = 21;
-            CbCargo.TextChanged += CbCargo_TextChanged;
+            CbCargo.TabIndex = 8;
+            CbCargo.DropDown += CbCargo_DropDown;
+            CbCargo.TextChanged += CbCargo_DropDown;
+            CbCargo.Leave += CbCargo_Leave;
             // 
             // LbCargo
             // 
@@ -857,7 +867,7 @@
             CbEstadoCivil.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbEstadoCivil.FormattingEnabled = true;
             CbEstadoCivil.Items.AddRange(new object[] { "Solteiro", "Casado", "Uniao Estável", "Outro" });
-            CbEstadoCivil.Location = new Point(170, 221);
+            CbEstadoCivil.Location = new Point(165, 221);
             CbEstadoCivil.Name = "CbEstadoCivil";
             CbEstadoCivil.Size = new Size(160, 31);
             CbEstadoCivil.TabIndex = 3;
@@ -866,7 +876,7 @@
             // 
             LbEstadoCivil.AutoSize = true;
             LbEstadoCivil.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbEstadoCivil.Location = new Point(15, 225);
+            LbEstadoCivil.Location = new Point(10, 225);
             LbEstadoCivil.Name = "LbEstadoCivil";
             LbEstadoCivil.Size = new Size(100, 21);
             LbEstadoCivil.TabIndex = 36;
@@ -876,7 +886,7 @@
             // 
             LbCpf.AutoSize = true;
             LbCpf.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbCpf.Location = new Point(15, 187);
+            LbCpf.Location = new Point(10, 187);
             LbCpf.Name = "LbCpf";
             LbCpf.Size = new Size(47, 21);
             LbCpf.TabIndex = 35;
@@ -886,7 +896,7 @@
             // 
             LbDataNascimento.AutoSize = true;
             LbDataNascimento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbDataNascimento.Location = new Point(15, 150);
+            LbDataNascimento.Location = new Point(10, 150);
             LbDataNascimento.Name = "LbDataNascimento";
             LbDataNascimento.Size = new Size(160, 21);
             LbDataNascimento.TabIndex = 34;
@@ -897,7 +907,7 @@
             TxtNomeCompleto.BackColor = Color.DarkGray;
             TxtNomeCompleto.BorderStyle = BorderStyle.FixedSingle;
             TxtNomeCompleto.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtNomeCompleto.Location = new Point(172, 110);
+            TxtNomeCompleto.Location = new Point(167, 110);
             TxtNomeCompleto.Name = "TxtNomeCompleto";
             TxtNomeCompleto.PlaceholderText = " Digite o nome aqui";
             TxtNomeCompleto.Size = new Size(287, 31);
@@ -908,7 +918,7 @@
             // 
             LbNomeCompleto.AutoSize = true;
             LbNomeCompleto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbNomeCompleto.Location = new Point(15, 113);
+            LbNomeCompleto.Location = new Point(10, 113);
             LbNomeCompleto.Name = "LbNomeCompleto";
             LbNomeCompleto.Size = new Size(135, 21);
             LbNomeCompleto.TabIndex = 32;
@@ -940,13 +950,15 @@
             // 
             // button2
             // 
+            button2.BackgroundImage = Properties.Resources.remove;
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(217, 264);
+            button2.Location = new Point(143, 264);
             button2.Name = "button2";
             button2.Size = new Size(43, 43);
             button2.TabIndex = 62;
+            toolTip1.SetToolTip(button2, "Remover Foto");
             button2.UseVisualStyleBackColor = true;
             button2.MouseClick += button2_MouseClick;
             // 
@@ -956,10 +968,11 @@
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(15, 264);
+            button1.Location = new Point(94, 264);
             button1.Name = "button1";
             button1.Size = new Size(43, 43);
             button1.TabIndex = 122;
+            toolTip1.SetToolTip(button1, "Adicionar Foto");
             button1.UseVisualStyleBackColor = true;
             button1.MouseClick += button1_MouseClick;
             // 
@@ -1127,10 +1140,11 @@
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(644, 578);
+            BtnConfirmar.Location = new Point(693, 582);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 18;
+            toolTip1.SetToolTip(BtnConfirmar, "Confirmar");
             BtnConfirmar.UseVisualStyleBackColor = true;
             BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
             // 
@@ -1139,21 +1153,23 @@
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
-            BtnCancelar.Location = new Point(693, 578);
+            BtnCancelar.Location = new Point(742, 50);
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 19;
+            toolTip1.SetToolTip(BtnCancelar, "Sair da Pagina");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
             // 
-            // Pctdata
+            // TxtSalarioBase
             // 
-            Pctdata.BackgroundImageLayout = ImageLayout.Stretch;
-            Pctdata.Location = new Point(300, 150);
-            Pctdata.Name = "Pctdata";
-            Pctdata.Size = new Size(28, 28);
-            Pctdata.TabIndex = 124;
-            Pctdata.TabStop = false;
+            TxtSalarioBase.BackColor = Color.DarkGray;
+            TxtSalarioBase.BorderStyle = BorderStyle.FixedSingle;
+            TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtSalarioBase.Location = new Point(510, 623);
+            TxtSalarioBase.Name = "TxtSalarioBase";
+            TxtSalarioBase.Size = new Size(165, 31);
+            TxtSalarioBase.TabIndex = 125;
             // 
             // FormCadastroFunc
             // 
@@ -1173,12 +1189,12 @@
             LbAlterarCadastro.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);
             PnlCtrlFunc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Pctdata).EndInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumRua).EndInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).EndInit();
             PanelPerfilFunc.ResumeLayout(false);
             PanelPerfilFunc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PctFotoFunc).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Pctdata).EndInit();
             ResumeLayout(false);
         }
 
@@ -1224,7 +1240,6 @@
         private Label LbCidade;
         private Label LbUf;
         private ComboBox CbUF;
-        private TextBox TxtSalarioBase;
         private Label LbSalarioBase;
         private Label LbDataAdmissao;
         private Label LbCarteiraTrabalho;
@@ -1265,5 +1280,8 @@
         private Button button1;
         private Button button2;
         private PictureBox Pctdata;
+        private ToolTip toolTip1;
+        private Button BtnRefresh;
+        private MaskedTextBox TxtSalarioBase;
     }
 }

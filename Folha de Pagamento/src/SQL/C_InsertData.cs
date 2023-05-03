@@ -12,10 +12,10 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
 {
     internal class C_InsertData
     {
-        private string IP = "localhost";
-        private string User = "root";
-        private string Password = "";
-        private string TargetDB = "bd_folha";
+        private readonly string IP = "localhost";
+        private readonly string User = "root";
+        private readonly string Password = "";
+        private readonly string TargetDB = "bd_folha";
 
         public string setDatainTableFuncionario(string table, string columnsTable, string values, string CPF)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {
@@ -47,7 +47,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                         if (mySqlDataReader.HasRows)
                         {
                             matriculaFuncionario = mySqlDataReader.GetString(0);
-                            
                         }
                     }
                 }
@@ -167,7 +166,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                         $"'{dataFuncionario[1]}'," +
                         $"'{dataFuncionario[11]}'," +
                         $"'{dataFuncionario[13]}'," +
-                        $"'109909900019'," +  //Carteira Trabalho
+                        $"'{dataFuncionario[15]}'," + 
                         $"'{dataFuncionario[2]}'," +
                         $"'{dataFuncionario[3]}'," +
                         $"'{dataFuncionario[4]}'," +
@@ -176,7 +175,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                         $"'123456', '{dataFuncionario[7]}'," +
                         $"{dataFuncionario[5]}, {dataFuncionario[6]}," +
                         $" 1, {c_HandleCargoSalarioDepartamento.setNvlAcesso(dataFuncionario[5])} ";
-                    MessageBox.Show(dataFuncionario[5]);
 
                     matriculaFuncionario = setDatainTableFuncionario("tb_funcionario", fillColumnsFuncionario, valuesCadPessoal, dataFuncionario[12]);
                     string valuesTelefone = $"'{matriculaFuncionario}', '{dataAdicional[8]}'";
@@ -189,8 +187,9 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                         setData("tb_telefone", fillColumnsTelefone, valuesTelefone);
                         setData("tb_email", fillColumnsEmail, valuesEmail);
                         MessageBox.Show("Cadastro realizado com Sucesso!!");
-                        FormShowDadosCadastrais formShowDadosCadastrais = new FormShowDadosCadastrais(result, matriculaFuncionario); //arrumar no demostrativo de cadastro
+                        FormShowDadosCadastrais formShowDadosCadastrais = new FormShowDadosCadastrais(result, matriculaFuncionario);
                         formShowDadosCadastrais.ShowDialog();
+
                     }
                 }
             }

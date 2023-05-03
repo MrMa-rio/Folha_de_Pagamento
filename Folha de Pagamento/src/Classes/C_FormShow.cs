@@ -29,15 +29,19 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formCard.Dock = DockStyle.Top;
             formCard.Show();
         }
+        public void refreshForm(Form newForm, Form closeForm)
+        {
+            Form formPrincipal = Application.OpenForms.OfType<FormHome>().FirstOrDefault();
+            closeForm.Close();
+            setFormShow(formPrincipal, newForm);
+        }
+        public void refreshFormWithAlert(Form newForm, Form closeForm)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você está prestes à recarregar está página.\nAlguns dados poderão ser perdidos. Tem certeza?", "Atualizar Pagina", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                refreshForm(newForm, closeForm);
+            }
+        }
     }
 }
-
-/*
- *  Corrigir bug de panel sumindo com base nas telas abertas
- *  Arrumar um metodo onde assim que o usuario clicar no pesquisar 
- ja redirecione para o alterar com a pesquisa feita;
- * 
- * 
- * 
- 
- */

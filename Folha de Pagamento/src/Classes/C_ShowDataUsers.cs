@@ -34,21 +34,20 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                
                 ResultFuncionario = searchInData.getDatainTable(MatriculaFuncionario.Text);
-                TxtCpf.Text = ResultFuncionario[1]; //
-                TxtNomeCompleto.Text = ResultFuncionario[2]; //
-                TxtCalendario.Text = ResultFuncionario[3]; //
-                CbGenero.Text = c_HandleDataGener.handleGener( ResultFuncionario[4] ); //
-                TxtRg.Text = ResultFuncionario[5];//
+                TxtCpf.Text = ResultFuncionario[1];
+                TxtNomeCompleto.Text = ResultFuncionario[2];
+                TxtCalendario.Text = ResultFuncionario[3];
+                CbGenero.Text = c_HandleDataGener.handleGener( ResultFuncionario[4] );
+                TxtRg.Text = ResultFuncionario[5];
                 TxtCTrabalho.Text = ResultFuncionario[6];
-
-                TxtNit.Text = ResultFuncionario[7]; //
-                TxtPis.Text = ResultFuncionario[8]; //
-                TxtTituloEleitor.Text = ResultFuncionario[9];//
-                CbEstadoCivil.Text = ResultFuncionario[10]; //
-                TxtReservista.Text = ResultFuncionario[11];//
-                TxtDataAdmissao.Text = ResultFuncionario[13];////////
-                CbDepartamento.Text = c_HandleCargoSalario.getIdDepartamento( ResultFuncionario[14] );/////////
-                CbCargo.Text = c_HandleCargoSalario.getIdCargo( ResultFuncionario[15] );//
+                TxtNit.Text = ResultFuncionario[7];
+                TxtPis.Text = ResultFuncionario[8];
+                TxtTituloEleitor.Text = ResultFuncionario[9];
+                CbEstadoCivil.Text = ResultFuncionario[10];
+                TxtReservista.Text = ResultFuncionario[11];
+                TxtDataAdmissao.Text = ResultFuncionario[13];
+                CbDepartamento.Text = c_HandleCargoSalario.getIdDepartamento( ResultFuncionario[14] );
+                CbCargo.Text = c_HandleCargoSalario.getIdCargo( ResultFuncionario[15] );
 
                 return true;
             }

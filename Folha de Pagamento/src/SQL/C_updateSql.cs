@@ -26,9 +26,9 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
             string insertSqlFuncionario = $"UPDATE `tb_funcionario` SET `CPF` = '{Data[0]}', `Nome` = '{Data[1]}', `DATA_Nascimento` = '{Data[2]}', `Sexo` = '{Data[3]}', `RG` = '{Data[4]}', `NIT` = '{Data[6]}', `PIS` = '{Data[7]}', `Titulo_Eleitor` = '{Data[8]}', `Estado_Civil` = '{Data[9]}', `Reservista` = '{Data[10]}', `Senha` = '435455', `Data_Admissao` = '{Data[11]}', `FK_Departamento` = '{Data[12]}', `FK_Cargo` = '{Data[13]}' , `FK_NvlAcesso` = '{Data[15]}', `Carteira_Trabalho` = '{Data[5]}' WHERE (`Matricula` = '{Data[14]}')";
-            string insertSqlEndereco = $"UPDATE `tb_endereço` SET `Rua` = '{DataAdicional[0]}', `Numero` = '{DataAdicional[1]}', `Cep` = '{DataAdicional[6]}', `Complemento` = '{DataAdicional[3]}', `UF` = '{DataAdicional[4]}', `Bairro` = '{DataAdicional[2]}', `Cidade` = '{DataAdicional[5]}' WHERE (`FK_Matricula` = '{Data[13]}')";
-            string insertSqlTelefone = $"UPDATE `tb_telefone` SET `Telefone` = '{DataTelefone[0]}' WHERE (`FK_Matricula` = '{Data[13]}')";
-            string insertSqlEmail = $"UPDATE `tb_email` SET `Email` = '{DataEmail[0]}' WHERE (`FK_Matricula` = '{Data[13]}')";
+            string insertSqlEndereco = $"UPDATE `tb_endereço` SET `Rua` = '{DataAdicional[0]}', `Numero` = '{DataAdicional[1]}', `Cep` = '{DataAdicional[6]}', `Complemento` = '{DataAdicional[3]}', `UF` = '{DataAdicional[4]}', `Bairro` = '{DataAdicional[2]}', `Cidade` = '{DataAdicional[5]}' WHERE (`FK_Matricula` = '{Data[14]}')";
+            string insertSqlTelefone = $"UPDATE `tb_telefone` SET `Telefone` = '{DataTelefone[0]}' WHERE (`FK_Matricula` = '{Data[14]}')";
+            string insertSqlEmail = $"UPDATE `tb_email` SET `Email` = '{DataEmail[0]}' WHERE (`FK_Matricula` = '{Data[14]}')";
             MySqlConnection conexao = new MySqlConnection();
             if (Data[16] == "True" && Data[17] == "True")
             {

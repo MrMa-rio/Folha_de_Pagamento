@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             BtnMenu = new Button();
             BtnPerfil = new Button();
             BtnSetting = new Button();
+            toolTip1 = new ToolTip(components);
             SuspendLayout();
             // 
             // BtnMenu
@@ -45,6 +47,7 @@
             BtnMenu.Name = "BtnMenu";
             BtnMenu.Size = new Size(48, 48);
             BtnMenu.TabIndex = 0;
+            toolTip1.SetToolTip(BtnMenu, "Menu");
             BtnMenu.UseVisualStyleBackColor = false;
             BtnMenu.MouseClick += BtnMenu_MouseClick;
             // 
@@ -58,6 +61,7 @@
             BtnPerfil.Name = "BtnPerfil";
             BtnPerfil.Size = new Size(48, 48);
             BtnPerfil.TabIndex = 1;
+            toolTip1.SetToolTip(BtnPerfil, "Perfil");
             BtnPerfil.UseVisualStyleBackColor = true;
             // 
             // BtnSetting
@@ -70,6 +74,7 @@
             BtnSetting.Name = "BtnSetting";
             BtnSetting.Size = new Size(48, 48);
             BtnSetting.TabIndex = 2;
+            toolTip1.SetToolTip(BtnSetting, "Configuração");
             BtnSetting.UseVisualStyleBackColor = true;
             // 
             // FormHome
@@ -99,5 +104,6 @@
         private Button BtnMenu;
         private Button BtnPerfil;
         private Button BtnSetting;
+        private ToolTip toolTip1;
     }
 }
