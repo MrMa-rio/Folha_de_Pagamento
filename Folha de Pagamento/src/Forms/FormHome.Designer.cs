@@ -34,6 +34,14 @@
             BtnPerfil = new Button();
             BtnSetting = new Button();
             toolTip1 = new ToolTip(components);
+            PnlPerfil = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            PnlPerfil.SuspendLayout();
             SuspendLayout();
             // 
             // BtnMenu
@@ -49,6 +57,7 @@
             BtnMenu.TabIndex = 0;
             toolTip1.SetToolTip(BtnMenu, "Menu");
             BtnMenu.UseVisualStyleBackColor = false;
+            BtnMenu.Visible = false;
             BtnMenu.MouseClick += BtnMenu_MouseClick;
             // 
             // BtnPerfil
@@ -63,6 +72,7 @@
             BtnPerfil.TabIndex = 1;
             toolTip1.SetToolTip(BtnPerfil, "Perfil");
             BtnPerfil.UseVisualStyleBackColor = true;
+            BtnPerfil.MouseClick += BtnPerfil_MouseClick;
             // 
             // BtnSetting
             // 
@@ -77,6 +87,75 @@
             toolTip1.SetToolTip(BtnSetting, "Configuração");
             BtnSetting.UseVisualStyleBackColor = true;
             // 
+            // PnlPerfil
+            // 
+            PnlPerfil.BackColor = Color.White;
+            PnlPerfil.Controls.Add(label6);
+            PnlPerfil.Controls.Add(label5);
+            PnlPerfil.Controls.Add(label4);
+            PnlPerfil.Controls.Add(label3);
+            PnlPerfil.Controls.Add(label2);
+            PnlPerfil.Controls.Add(label1);
+            PnlPerfil.Location = new Point(971, 82);
+            PnlPerfil.Name = "PnlPerfil";
+            PnlPerfil.Size = new Size(281, 410);
+            PnlPerfil.TabIndex = 3;
+            PnlPerfil.Visible = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(29, 102);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(29, 330);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 1;
+            label2.Text = "label2";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(29, 282);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 2;
+            label3.Text = "label3";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(29, 238);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 15);
+            label4.TabIndex = 3;
+            label4.Text = "label4";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(29, 198);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 15);
+            label5.TabIndex = 4;
+            label5.Text = "label5";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(29, 148);
+            label6.Name = "label6";
+            label6.Size = new Size(38, 15);
+            label6.TabIndex = 5;
+            label6.Text = "label6";
+            // 
             // FormHome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -85,6 +164,7 @@
             BackgroundImage = Properties.Resources.Impermais_green;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1264, 751);
+            Controls.Add(PnlPerfil);
             Controls.Add(BtnSetting);
             Controls.Add(BtnPerfil);
             Controls.Add(BtnMenu);
@@ -96,14 +176,22 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Folha de Pagamento";
             MouseClick += AllForms_MouseClick;
+            PnlPerfil.ResumeLayout(false);
+            PnlPerfil.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button BtnMenu;
         private Button BtnPerfil;
         private Button BtnSetting;
         private ToolTip toolTip1;
+        internal Button BtnMenu;
+        private Panel PnlPerfil;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }

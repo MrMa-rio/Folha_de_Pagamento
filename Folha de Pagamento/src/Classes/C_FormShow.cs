@@ -11,7 +11,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
     {
         public Form setFormShow(Form ScreenTarget, Form Nav)
         {
-            if(ScreenTarget.Controls.Count > 4)
+            if(ScreenTarget.Controls.Count > 5)
             {
                 ScreenTarget.Controls.RemoveAt(ScreenTarget.Controls.Count - 1);
             }
@@ -34,6 +34,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             Form formPrincipal = Application.OpenForms.OfType<FormHome>().FirstOrDefault();
             closeForm.Close();
             setFormShow(formPrincipal, newForm);
+
         }
         public void refreshFormWithAlert(Form newForm, Form closeForm)
         {

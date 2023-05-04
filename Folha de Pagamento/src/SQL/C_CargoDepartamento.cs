@@ -16,6 +16,12 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         private readonly string User = "root";
         private readonly string Password = "";
         private readonly string TargetDB = "bd_folha";
+
+        //private readonly string IP = "dbfolha.mysql.database.azure.com";
+        //private readonly string User = "administrador";
+        //private readonly string Password = "Senha@db123";
+        //private readonly string TargetDB = "DBfolha";
+
         public List<string[]> getCargosDB()
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";

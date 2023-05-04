@@ -18,6 +18,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private Form handleForm;
         private C_FormShow c_FormShow = new C_FormShow();
         C_FormNavBarShow c_FormNavBarShow = new C_FormNavBarShow();
+        C_privateArea c_privateArea = new C_privateArea();
         public FormNavBar()
         {
             InitializeComponent();
@@ -25,6 +26,8 @@ namespace FOLHA_DE_PAGAMENTO_
         public FormNavBar(FormHome formHome) : this()
         {
             FormAtivo = formHome;
+
+
         }
 
         private void BtnArrowLeft_MouseClick(object sender, MouseEventArgs e)
@@ -95,6 +98,22 @@ namespace FOLHA_DE_PAGAMENTO_
             FormHolerite formHolerite = new FormHolerite(this);
             handleForm = c_FormShow.setFormShow(FormAtivo, formHolerite);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
+        }
+
+        private void Pnl2_VisibleChanged(object sender, EventArgs e)
+        {
+            c_privateArea.setNvlAcesso(FormAtivo.DataUser[4]);
+        }
+
+        private void BtnLogout_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Trocar de Perfil ?", "Trocar Usuario", MessageBoxButtons.YesNo);
+            if(dialogResult == DialogResult.Yes)
+            {
+                C_VerificarLogin c_VerificarLogin = new C_VerificarLogin();
+                c_FormNavBarShow.AnimationHide(this, Pnl2);
+                c_VerificarLogin.logout(FormAtivo, this);
+            }
         }
     }
 }

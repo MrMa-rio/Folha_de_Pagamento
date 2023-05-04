@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FOLHA_DE_PAGAMENTO_.src.Classes
+{
+    internal class C_privateArea
+    {
+        
+        public void setNvlAcesso(string NvlAcesso)
+        {
+            
+            int NivelAcesso = Convert.ToInt32(NvlAcesso);
+
+            if(NivelAcesso > 1 && NvlAcesso != null)
+            {
+                if(NivelAcesso == 2)
+                {
+                    setNvl2NavBar();
+                }
+                if(NivelAcesso == 3)
+                {
+
+                    setNvl3NavBar();
+                }
+            }
+        }
+
+        public void setNvl3NavBar()
+        {
+            FormNavBar formNavbar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
+            formNavbar.BtnGerenciamento.Visible = false;
+            formNavbar.PanelSubMenu.Visible = false;
+
+            foreach (Control control in formNavbar.PanelSubMenuRel.Controls)
+            {
+                if (control is Button)
+                {
+                    control.Visible = false;
+                }
+            }
+            formNavbar.BtnHolerite.Visible = true;
+            formNavbar.BtnHolerite.Location = new Point(35, 11);
+        }
+
+        public void setNvl2NavBar()
+        {
+            FormNavBar formNavbar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
+            formNavbar.BtnGerenciamento.Visible = true;
+            formNavbar.PanelSubMenu.Visible = true;
+            formNavbar.PanelSubMenuRel.Visible = true;
+            formNavbar.PanelSubMenu.Visible = true;
+            foreach (Control control in formNavbar.PanelSubMenuRel.Controls)
+            {
+                if (control is Button)
+                {
+                    control.Visible = true;
+                }
+            }
+            formNavbar.BtnHolerite.Location = new Point(35, 149);
+        }
+    }
+}
+
+
+//Nivel de Acesso 1
+/*
+    Alterar Valores dos Salarios e Taxas do Calculo de Pagamento
+    Ele e ó ele podera criar apagar e alterar cargo
+    Deletar Funcionario 
+ */

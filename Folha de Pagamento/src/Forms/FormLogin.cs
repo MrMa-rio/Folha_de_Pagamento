@@ -14,20 +14,24 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
 {
     public partial class FormLogin : Form
     {
-        private FormNavBar FormAtivo;
-        private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
-        public FormLogin(FormNavBar navBar)
+        FormHome FormHome;
+        public FormLogin(FormHome formHome)
         {
             InitializeComponent();
-            FormAtivo = navBar;
+            FormHome = formHome;
         }
-        private void AllForms_MouseClick(object sender, MouseEventArgs e)
+        private void BtnEntrar_MouseClick(object sender, MouseEventArgs e)
         {
-            navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
-        }
-        private void panel1_MouseEnter(object sender, EventArgs e)
-        {
-            panel1.BackColor = Color.FromArgb(46, 90, 32);
+            if (TxtUser.Text.Trim().Length != 0 && TxtPassword.Text.Trim().Length != 0)
+            {
+
+                C_VerificarLogin c_VerificarLogin = new C_VerificarLogin();
+                c_VerificarLogin.statusLogin(TxtUser.Text, TxtPassword.Text, this);
+            }
+            else
+            {
+                MessageBox.Show("Usuario/Senha Invalidos!");
+            }
         }
     }
 }

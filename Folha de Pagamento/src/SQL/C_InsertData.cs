@@ -17,6 +17,11 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         private readonly string Password = "";
         private readonly string TargetDB = "bd_folha";
 
+        //private readonly string IP = "dbfolha.mysql.database.azure.com";
+        //private readonly string User = "administrador";
+        //private readonly string Password = "Senha@db123";
+        //private readonly string TargetDB = "DBfolha";
+
         public string setDatainTableFuncionario(string table, string columnsTable, string values, string CPF)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
@@ -95,6 +100,12 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             }
         }
         /*
+         *  dbfolha.mysql.database.azure.com
+            adminitrador
+            Senha@db123
+            DBfolha
+         * 
+         * 
             dataFuncionario[0] = TxtNomeCompleto
             dataFuncionario[1] = TxtDataNascimento
             dataFuncionario[2] = TxtNit

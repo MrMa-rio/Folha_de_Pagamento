@@ -14,12 +14,17 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
     internal class C_updateSql
     {
         //UPDATE `bd`.`funcionario` SET `DATA_Nascimento` = '2005-09-15', `NIT` = '66793261052' WHERE (`Matricula` = '22');
-       // TxtCpf.Text, TxtNomeCompleto.Text, TxtCalendario.Text, CbGenero.Text, TxtRg.Text, TxtNit.Text, TxtPis.Text, TxtTituloEleitor.Text, CbEstadoCivil.Text, TxtReservista.Text, TxtDataAdmissao.Text, CbDepartamento.Text, CbCargo.Text, TxtMatricula.Text
+        // TxtCpf.Text, TxtNomeCompleto.Text, TxtCalendario.Text, CbGenero.Text, TxtRg.Text, TxtNit.Text, TxtPis.Text, TxtTituloEleitor.Text, CbEstadoCivil.Text, TxtReservista.Text, TxtDataAdmissao.Text, CbDepartamento.Text, CbCargo.Text, TxtMatricula.Text
 
         private string IP = "localhost";
         private string User = "root";
         private string Password = "";
         private string TargetDB = "bd_folha";
+
+        //private readonly string IP = "dbfolha.mysql.database.azure.com";
+        //private readonly string User = "administrador";
+        //private readonly string Password = "Senha@db123";
+        //private readonly string TargetDB = "DBfolha";
 
         public bool setUpdateFuncionario( string[] Data , string[] DataAdicional, string[] DataTelefone, string[] DataEmail)
         {

@@ -296,7 +296,6 @@
             // BtnLogout
             // 
             BtnLogout.BackColor = Color.LightGray;
-            BtnLogout.Enabled = false;
             BtnLogout.FlatAppearance.BorderSize = 0;
             BtnLogout.FlatStyle = FlatStyle.Flat;
             BtnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -309,6 +308,7 @@
             BtnLogout.Text = "Trocar Perfil";
             BtnLogout.TextAlign = ContentAlignment.MiddleRight;
             BtnLogout.UseVisualStyleBackColor = false;
+            BtnLogout.MouseClick += BtnLogout_MouseClick;
             // 
             // Pnl2
             // 
@@ -322,6 +322,7 @@
             Pnl2.Size = new Size(345, 751);
             Pnl2.TabIndex = 4;
             Pnl2.Visible = false;
+            Pnl2.VisibleChanged += Pnl2_VisibleChanged;
             // 
             // FormNavBar
             // 
@@ -344,20 +345,20 @@
 
         private Button BtnArrowLeft;
         private Panel panel1;
-        private Button BtnAlterarCadastro;
-        private Button BtnCadastro;
         private Button BtnConfiguracao;
         private Button BtnLogout;
-        private Button BtnFolhaPNormal;
-        private Button BtnHolerite;
-        private Button FolhaPDetalhada;
-        private Button BtnCalculoPagamento;
-        private Button BtnPesquisar;
-        private Button BtnCargosFun;
-        private Button BtnGerenciamento;
-        private Panel PanelSubMenu;
-        private Button BtnRelatorio;
-        private Panel PanelSubMenuRel;
         public Panel Pnl2;
+        internal Button BtnGerenciamento;
+        internal Panel PanelSubMenu;
+        internal Button BtnRelatorio;
+        internal Panel PanelSubMenuRel;
+        internal Button BtnAlterarCadastro;
+        internal Button BtnCadastro;
+        internal Button BtnFolhaPNormal;
+        internal Button BtnHolerite;
+        internal Button FolhaPDetalhada;
+        internal Button BtnCalculoPagamento;
+        internal Button BtnPesquisar;
+        internal Button BtnCargosFun;
     }
 }

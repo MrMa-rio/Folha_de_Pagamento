@@ -16,12 +16,18 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         private string Password = "";
         private string TargetDB = "bd_folha";
 
+        //private readonly string IP = "dbfolha.mysql.database.azure.com";
+        //private readonly string User = "administrador";
+        //private readonly string Password = "Senha@bd123";
+        //private readonly string TargetDB = "bd_folha";
+        //private readonly string SSL_mode = "require";
+
         //string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
         //string insertSql = $"SELECT * FROM {Table} where FK_Matricula LIKE {Matricula} ";
 
         public string[] getDatainTable(string matricula)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {
-            string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
+            string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB};";
             string searchDataFuncionario = $"SELECT * FROM tb_funcionario where Matricula LIKE {matricula} ";
 
             MySqlConnection conexão;
@@ -127,13 +133,11 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         {
             string insertSql = $"select * from tb_funcionario where {coluna} LIKE '%{entrada}%'";
             return getListinDB(insertSql);
-
         }
 
         public List<string[]> getListinDB(string insertSql)
         {
-
-            List<string[]> Result = new List<string[]>();
+            
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
             MySqlConnection conexão;
             conexão = new MySqlConnection();
@@ -141,7 +145,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             conexão.Open();
             MySqlCommand command = new MySqlCommand(insertSql, conexão);
             MySqlDataReader mySqlDataReader = command.ExecuteReader();
-
+            List<string[]> Result = new List<string[]>();
             try
             {
                 if (!mySqlDataReader.HasRows)
