@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHolerite));
             LbHolerite = new Panel();
+            label2 = new Label();
+            CbAno = new ComboBox();
+            BtnImprimir = new Button();
+            label47 = new Label();
+            CbMes = new ComboBox();
             label20 = new Label();
             TxtPesquisarMatricula = new TextBox();
             BtnPesquisarMatricula = new Button();
@@ -139,6 +144,11 @@
             // 
             LbHolerite.AccessibleRole = AccessibleRole.None;
             LbHolerite.BackColor = Color.LightGray;
+            LbHolerite.Controls.Add(label2);
+            LbHolerite.Controls.Add(CbAno);
+            LbHolerite.Controls.Add(BtnImprimir);
+            LbHolerite.Controls.Add(label47);
+            LbHolerite.Controls.Add(CbMes);
             LbHolerite.Controls.Add(label20);
             LbHolerite.Controls.Add(TxtPesquisarMatricula);
             LbHolerite.Controls.Add(BtnPesquisarMatricula);
@@ -151,11 +161,66 @@
             LbHolerite.TabIndex = 2;
             LbHolerite.MouseClick += AllForms_MouseClick;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(795, 110);
+            label2.Name = "label2";
+            label2.Size = new Size(127, 20);
+            label2.TabIndex = 123;
+            label2.Text = "Selecionar o ano:";
+            // 
+            // CbAno
+            // 
+            CbAno.BackColor = Color.DarkGray;
+            CbAno.DropDownWidth = 185;
+            CbAno.FlatStyle = FlatStyle.Flat;
+            CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbAno.FormattingEnabled = true;
+            CbAno.Location = new Point(926, 105);
+            CbAno.Name = "CbAno";
+            CbAno.Size = new Size(121, 31);
+            CbAno.TabIndex = 122;
+            // 
+            // BtnImprimir
+            // 
+            BtnImprimir.FlatAppearance.BorderSize = 0;
+            BtnImprimir.FlatStyle = FlatStyle.Flat;
+            BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
+            BtnImprimir.Location = new Point(1004, 578);
+            BtnImprimir.Name = "BtnImprimir";
+            BtnImprimir.Size = new Size(43, 43);
+            BtnImprimir.TabIndex = 121;
+            BtnImprimir.UseVisualStyleBackColor = true;
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label47.Location = new Point(510, 110);
+            label47.Name = "label47";
+            label47.Size = new Size(130, 20);
+            label47.TabIndex = 80;
+            label47.Text = "Selecionar o mês:";
+            // 
+            // CbMes
+            // 
+            CbMes.BackColor = Color.DarkGray;
+            CbMes.DropDownWidth = 185;
+            CbMes.FlatStyle = FlatStyle.Flat;
+            CbMes.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbMes.FormattingEnabled = true;
+            CbMes.Location = new Point(645, 105);
+            CbMes.Name = "CbMes";
+            CbMes.Size = new Size(121, 31);
+            CbMes.TabIndex = 78;
+            // 
             // label20
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.Location = new Point(66, 110);
+            label20.Location = new Point(67, 110);
             label20.Name = "label20";
             label20.Size = new Size(234, 20);
             label20.TabIndex = 68;
@@ -166,7 +231,7 @@
             TxtPesquisarMatricula.BackColor = Color.DarkGray;
             TxtPesquisarMatricula.BorderStyle = BorderStyle.FixedSingle;
             TxtPesquisarMatricula.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtPesquisarMatricula.Location = new Point(306, 105);
+            TxtPesquisarMatricula.Location = new Point(307, 105);
             TxtPesquisarMatricula.Name = "TxtPesquisarMatricula";
             TxtPesquisarMatricula.Size = new Size(116, 31);
             TxtPesquisarMatricula.TabIndex = 1;
@@ -177,7 +242,7 @@
             BtnPesquisarMatricula.BackgroundImageLayout = ImageLayout.Stretch;
             BtnPesquisarMatricula.FlatAppearance.BorderSize = 0;
             BtnPesquisarMatricula.FlatStyle = FlatStyle.Flat;
-            BtnPesquisarMatricula.Location = new Point(428, 105);
+            BtnPesquisarMatricula.Location = new Point(429, 105);
             BtnPesquisarMatricula.Name = "BtnPesquisarMatricula";
             BtnPesquisarMatricula.Size = new Size(31, 31);
             BtnPesquisarMatricula.TabIndex = 66;
@@ -1104,9 +1169,9 @@
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(70, 50);
             label1.Name = "label1";
-            label1.Size = new Size(204, 37);
+            label1.Size = new Size(193, 37);
             label1.TabIndex = 60;
-            label1.Text = "_________________";
+            label1.Text = "________________";
             // 
             // FormHolerite
             // 
@@ -1248,5 +1313,10 @@
         private Label label24;
         private Label label21;
         private Label label7;
+        private Label label47;
+        private ComboBox CbMes;
+        private Button BtnImprimir;
+        private Label label2;
+        private ComboBox CbAno;
     }
 }

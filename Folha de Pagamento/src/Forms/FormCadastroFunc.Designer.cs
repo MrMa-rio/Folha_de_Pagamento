@@ -34,6 +34,7 @@
             BtnRefresh = new Button();
             BtnLimpar = new Button();
             PnlCtrlFunc = new Panel();
+            TxtSalarioBase = new MaskedTextBox();
             Pctdata = new PictureBox();
             BoxCalendario2 = new MonthCalendar();
             TxtReservista = new MaskedTextBox();
@@ -112,7 +113,6 @@
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
             toolTip1 = new ToolTip(components);
-            TxtSalarioBase = new MaskedTextBox();
             LbAlterarCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Pctdata).BeginInit();
@@ -238,6 +238,16 @@
             PnlCtrlFunc.Size = new Size(718, 434);
             PnlCtrlFunc.TabIndex = 7;
             PnlCtrlFunc.MouseClick += AllForms_MouseClick;
+            // 
+            // TxtSalarioBase
+            // 
+            TxtSalarioBase.BackColor = Color.DarkGray;
+            TxtSalarioBase.BorderStyle = BorderStyle.FixedSingle;
+            TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtSalarioBase.Location = new Point(510, 623);
+            TxtSalarioBase.Name = "TxtSalarioBase";
+            TxtSalarioBase.Size = new Size(165, 31);
+            TxtSalarioBase.TabIndex = 125;
             // 
             // Pctdata
             // 
@@ -1131,9 +1141,9 @@
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(60, 50);
             label1.Name = "label1";
-            label1.Size = new Size(402, 37);
+            label1.Size = new Size(413, 37);
             label1.TabIndex = 60;
-            label1.Text = "___________________________________";
+            label1.Text = "____________________________________";
             // 
             // BtnConfirmar
             // 
@@ -1160,16 +1170,6 @@
             toolTip1.SetToolTip(BtnCancelar, "Sair da Pagina");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
-            // 
-            // TxtSalarioBase
-            // 
-            TxtSalarioBase.BackColor = Color.DarkGray;
-            TxtSalarioBase.BorderStyle = BorderStyle.FixedSingle;
-            TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioBase.Location = new Point(510, 623);
-            TxtSalarioBase.Name = "TxtSalarioBase";
-            TxtSalarioBase.Size = new Size(165, 31);
-            TxtSalarioBase.TabIndex = 125;
             // 
             // FormCadastroFunc
             // 

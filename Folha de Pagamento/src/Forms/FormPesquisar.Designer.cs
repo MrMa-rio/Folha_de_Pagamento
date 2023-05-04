@@ -152,9 +152,9 @@
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(60, 50);
             label1.Name = "label1";
-            label1.Size = new Size(237, 37);
+            label1.Size = new Size(226, 37);
             label1.TabIndex = 60;
-            label1.Text = "____________________";
+            label1.Text = "___________________";
             // 
             // FormPesquisar
             // 

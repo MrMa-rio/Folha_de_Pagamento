@@ -30,8 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaDetalhada));
             LbFolhaDetalhada = new Panel();
-            BtnAlterarDados = new Button();
-            BtnGerarFolha = new Button();
+            BtnImprimir = new Button();
+            BtnEditar = new Button();
+            BtnConfirmar = new Button();
+            label47 = new Label();
+            CbMes = new ComboBox();
             TxtPesquisarMatricula = new MaskedTextBox();
             label20 = new Label();
             BtnPesquisarMatricula = new Button();
@@ -117,6 +120,8 @@
             label9 = new Label();
             LbTitulo = new Label();
             label1 = new Label();
+            label46 = new Label();
+            CbAno = new ComboBox();
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -132,8 +137,13 @@
             // 
             LbFolhaDetalhada.AccessibleRole = AccessibleRole.None;
             LbFolhaDetalhada.BackColor = Color.LightGray;
-            LbFolhaDetalhada.Controls.Add(BtnAlterarDados);
-            LbFolhaDetalhada.Controls.Add(BtnGerarFolha);
+            LbFolhaDetalhada.Controls.Add(label46);
+            LbFolhaDetalhada.Controls.Add(CbAno);
+            LbFolhaDetalhada.Controls.Add(BtnImprimir);
+            LbFolhaDetalhada.Controls.Add(BtnEditar);
+            LbFolhaDetalhada.Controls.Add(BtnConfirmar);
+            LbFolhaDetalhada.Controls.Add(label47);
+            LbFolhaDetalhada.Controls.Add(CbMes);
             LbFolhaDetalhada.Controls.Add(TxtPesquisarMatricula);
             LbFolhaDetalhada.Controls.Add(label20);
             LbFolhaDetalhada.Controls.Add(BtnPesquisarMatricula);
@@ -146,23 +156,63 @@
             LbFolhaDetalhada.TabIndex = 2;
             LbFolhaDetalhada.MouseClick += AllForms_MouseClick;
             // 
-            // BtnAlterarDados
+            // BtnImprimir
             // 
-            BtnAlterarDados.Location = new Point(973, 587);
-            BtnAlterarDados.Name = "BtnAlterarDados";
-            BtnAlterarDados.Size = new Size(75, 23);
-            BtnAlterarDados.TabIndex = 74;
-            BtnAlterarDados.Text = "Alterar Dados";
-            BtnAlterarDados.UseVisualStyleBackColor = true;
+            BtnImprimir.Enabled = false;
+            BtnImprimir.FlatAppearance.BorderSize = 0;
+            BtnImprimir.FlatStyle = FlatStyle.Flat;
+            BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
+            BtnImprimir.Location = new Point(1004, 578);
+            BtnImprimir.Name = "BtnImprimir";
+            BtnImprimir.Size = new Size(43, 43);
+            BtnImprimir.TabIndex = 117;
+            BtnImprimir.UseVisualStyleBackColor = true;
             // 
-            // BtnGerarFolha
+            // BtnEditar
             // 
-            BtnGerarFolha.Location = new Point(892, 587);
-            BtnGerarFolha.Name = "BtnGerarFolha";
-            BtnGerarFolha.Size = new Size(75, 23);
-            BtnGerarFolha.TabIndex = 73;
-            BtnGerarFolha.Text = "Gerar Folha";
-            BtnGerarFolha.UseVisualStyleBackColor = true;
+            BtnEditar.Enabled = false;
+            BtnEditar.FlatAppearance.BorderSize = 0;
+            BtnEditar.FlatStyle = FlatStyle.Flat;
+            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
+            BtnEditar.Location = new Point(955, 578);
+            BtnEditar.Name = "BtnEditar";
+            BtnEditar.Size = new Size(43, 43);
+            BtnEditar.TabIndex = 116;
+            BtnEditar.UseVisualStyleBackColor = true;
+            // 
+            // BtnConfirmar
+            // 
+            BtnConfirmar.Enabled = false;
+            BtnConfirmar.FlatAppearance.BorderSize = 0;
+            BtnConfirmar.FlatStyle = FlatStyle.Flat;
+            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
+            BtnConfirmar.Location = new Point(906, 578);
+            BtnConfirmar.Name = "BtnConfirmar";
+            BtnConfirmar.Size = new Size(43, 43);
+            BtnConfirmar.TabIndex = 115;
+            BtnConfirmar.UseVisualStyleBackColor = true;
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label47.Location = new Point(510, 110);
+            label47.Name = "label47";
+            label47.Size = new Size(130, 20);
+            label47.TabIndex = 77;
+            label47.Text = "Selecionar o mês:";
+            // 
+            // CbMes
+            // 
+            CbMes.BackColor = Color.DarkGray;
+            CbMes.DropDownWidth = 185;
+            CbMes.FlatStyle = FlatStyle.Flat;
+            CbMes.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbMes.FormattingEnabled = true;
+            CbMes.Location = new Point(645, 105);
+            CbMes.Name = "CbMes";
+            CbMes.Size = new Size(121, 31);
+            CbMes.TabIndex = 75;
             // 
             // TxtPesquisarMatricula
             // 
@@ -1118,6 +1168,28 @@
             label1.TabIndex = 60;
             label1.Text = "_________________________";
             // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label46.Location = new Point(795, 110);
+            label46.Name = "label46";
+            label46.Size = new Size(127, 20);
+            label46.TabIndex = 119;
+            label46.Text = "Selecionar o ano:";
+            // 
+            // CbAno
+            // 
+            CbAno.BackColor = Color.DarkGray;
+            CbAno.DropDownWidth = 185;
+            CbAno.FlatStyle = FlatStyle.Flat;
+            CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbAno.FormattingEnabled = true;
+            CbAno.Location = new Point(926, 105);
+            CbAno.Name = "CbAno";
+            CbAno.Size = new Size(121, 31);
+            CbAno.TabIndex = 118;
+            // 
             // FormFolhaDetalhada
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1201,8 +1273,6 @@
         internal Label TxtMatricula;
         internal Label label2;
         private MaskedTextBox TxtPesquisarMatricula;
-        private Button BtnAlterarDados;
-        private Button BtnGerarFolha;
         internal Label TxtTaxaDescINSS;
         internal Label TxtDescINSS;
         internal Label TxtSalarioBaseINSS;
@@ -1239,5 +1309,12 @@
         internal Label TxtVencimentos;
         internal Label TxtSalarioLiqMensal;
         internal Label TxtMaiorRemuneracao;
+        private ComboBox CbMes;
+        private Label label47;
+        private Button BtnEditar;
+        private Button BtnConfirmar;
+        private Button BtnImprimir;
+        private Label label46;
+        private ComboBox CbAno;
     }
 }

@@ -132,7 +132,7 @@
             panel19.Controls.Add(label26);
             panel19.Controls.Add(TxtFGTS);
             panel19.Controls.Add(label52);
-            panel19.Location = new Point(3, 336);
+            panel19.Location = new Point(3, 292);
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 132;
@@ -866,12 +866,12 @@
             LbTitulo.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
             LbTitulo.Image = (Image)resources.GetObject("LbTitulo.Image");
             LbTitulo.ImageAlign = ContentAlignment.MiddleRight;
-            LbTitulo.Location = new Point(86, 33);
+            LbTitulo.Location = new Point(71, 33);
             LbTitulo.Name = "LbTitulo";
             LbTitulo.Padding = new Padding(10, 0, 0, 0);
-            LbTitulo.Size = new Size(395, 41);
+            LbTitulo.Size = new Size(523, 41);
             LbTitulo.TabIndex = 50;
-            LbTitulo.Text = "Cálculo de Pagamentos       ";
+            LbTitulo.Text = "Impostos e Dados de Pagamentos     ";
             // 
             // label1
             // 
@@ -879,11 +879,11 @@
             label1.BackColor = Color.Transparent;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(88, 50);
+            label1.Location = new Point(67, 51);
             label1.Name = "label1";
-            label1.Size = new Size(413, 37);
+            label1.Size = new Size(534, 37);
             label1.TabIndex = 60;
-            label1.Text = "____________________________________";
+            label1.Text = "_______________________________________________";
             // 
             // FormCalculoPagamento
             // 

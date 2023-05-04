@@ -102,9 +102,9 @@
             BtnCalculoPagamento.ImageAlign = ContentAlignment.MiddleLeft;
             BtnCalculoPagamento.Location = new Point(35, 11);
             BtnCalculoPagamento.Name = "BtnCalculoPagamento";
-            BtnCalculoPagamento.Size = new Size(244, 40);
+            BtnCalculoPagamento.Size = new Size(297, 40);
             BtnCalculoPagamento.TabIndex = 7;
-            BtnCalculoPagamento.Text = "    Calculo Pagamento";
+            BtnCalculoPagamento.Text = "    Impostos e Dados de Pagamentos";
             BtnCalculoPagamento.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnCalculoPagamento.UseVisualStyleBackColor = false;
             BtnCalculoPagamento.MouseClick += BtnCalculoPagamento_MouseClick;
@@ -283,14 +283,13 @@
             BtnConfiguracao.FlatAppearance.BorderSize = 0;
             BtnConfiguracao.FlatStyle = FlatStyle.Flat;
             BtnConfiguracao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnConfiguracao.Image = Properties.Resources.settings;
+            BtnConfiguracao.Image = (Image)resources.GetObject("BtnConfiguracao.Image");
             BtnConfiguracao.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnConfiguracao.Location = new Point(11, 687);
+            BtnConfiguracao.Location = new Point(24, 685);
             BtnConfiguracao.Name = "BtnConfiguracao";
-            BtnConfiguracao.Size = new Size(174, 48);
+            BtnConfiguracao.Size = new Size(159, 48);
             BtnConfiguracao.TabIndex = 2;
-            BtnConfiguracao.Text = "Configurações";
-            BtnConfiguracao.TextAlign = ContentAlignment.MiddleRight;
+            BtnConfiguracao.Text = "Sobre";
             BtnConfiguracao.UseVisualStyleBackColor = false;
             // 
             // BtnLogout
@@ -302,7 +301,7 @@
             BtnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnLogout.Image = Properties.Resources.logout;
             BtnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnLogout.Location = new Point(191, 687);
+            BtnLogout.Location = new Point(184, 685);
             BtnLogout.Name = "BtnLogout";
             BtnLogout.Size = new Size(141, 48);
             BtnLogout.TabIndex = 3;
