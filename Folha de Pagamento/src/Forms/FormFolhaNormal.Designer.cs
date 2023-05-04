@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaNormal));
             LbFolhaNormal = new Panel();
+            label31 = new Label();
+            CbAno = new ComboBox();
+            label47 = new Label();
+            CbMes = new ComboBox();
+            BtnImprimir = new Button();
+            BtnEditar = new Button();
+            BtnConfirmar = new Button();
             PanelFolhaDetalhada = new Panel();
             panel8 = new Panel();
             LbLiquido = new Label();
@@ -138,6 +145,13 @@
             // 
             LbFolhaNormal.AccessibleRole = AccessibleRole.None;
             LbFolhaNormal.BackColor = Color.LightGray;
+            LbFolhaNormal.Controls.Add(label31);
+            LbFolhaNormal.Controls.Add(CbAno);
+            LbFolhaNormal.Controls.Add(label47);
+            LbFolhaNormal.Controls.Add(CbMes);
+            LbFolhaNormal.Controls.Add(BtnImprimir);
+            LbFolhaNormal.Controls.Add(BtnEditar);
+            LbFolhaNormal.Controls.Add(BtnConfirmar);
             LbFolhaNormal.Controls.Add(PanelFolhaDetalhada);
             LbFolhaNormal.Controls.Add(LbTitulo);
             LbFolhaNormal.Controls.Add(label1);
@@ -146,6 +160,85 @@
             LbFolhaNormal.Size = new Size(1110, 630);
             LbFolhaNormal.TabIndex = 2;
             LbFolhaNormal.MouseClick += AllForms_MouseClick;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label31.Location = new Point(363, 110);
+            label31.Name = "label31";
+            label31.Size = new Size(127, 20);
+            label31.TabIndex = 125;
+            label31.Text = "Selecionar o ano:";
+            // 
+            // CbAno
+            // 
+            CbAno.BackColor = Color.DarkGray;
+            CbAno.DropDownWidth = 185;
+            CbAno.FlatStyle = FlatStyle.Flat;
+            CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbAno.FormattingEnabled = true;
+            CbAno.Location = new Point(496, 105);
+            CbAno.Name = "CbAno";
+            CbAno.Size = new Size(121, 31);
+            CbAno.TabIndex = 124;
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label47.Location = new Point(67, 110);
+            label47.Name = "label47";
+            label47.Size = new Size(130, 20);
+            label47.TabIndex = 123;
+            label47.Text = "Selecionar o mês:";
+            // 
+            // CbMes
+            // 
+            CbMes.BackColor = Color.DarkGray;
+            CbMes.DropDownWidth = 185;
+            CbMes.FlatStyle = FlatStyle.Flat;
+            CbMes.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbMes.FormattingEnabled = true;
+            CbMes.Location = new Point(208, 105);
+            CbMes.Name = "CbMes";
+            CbMes.Size = new Size(121, 31);
+            CbMes.TabIndex = 121;
+            // 
+            // BtnImprimir
+            // 
+            BtnImprimir.FlatAppearance.BorderSize = 0;
+            BtnImprimir.FlatStyle = FlatStyle.Flat;
+            BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
+            BtnImprimir.Location = new Point(1004, 578);
+            BtnImprimir.Name = "BtnImprimir";
+            BtnImprimir.Size = new Size(43, 43);
+            BtnImprimir.TabIndex = 120;
+            BtnImprimir.UseVisualStyleBackColor = true;
+            // 
+            // BtnEditar
+            // 
+            BtnEditar.Enabled = false;
+            BtnEditar.FlatAppearance.BorderSize = 0;
+            BtnEditar.FlatStyle = FlatStyle.Flat;
+            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
+            BtnEditar.Location = new Point(955, 578);
+            BtnEditar.Name = "BtnEditar";
+            BtnEditar.Size = new Size(43, 43);
+            BtnEditar.TabIndex = 119;
+            BtnEditar.UseVisualStyleBackColor = true;
+            // 
+            // BtnConfirmar
+            // 
+            BtnConfirmar.Enabled = false;
+            BtnConfirmar.FlatAppearance.BorderSize = 0;
+            BtnConfirmar.FlatStyle = FlatStyle.Flat;
+            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
+            BtnConfirmar.Location = new Point(906, 578);
+            BtnConfirmar.Name = "BtnConfirmar";
+            BtnConfirmar.Size = new Size(43, 43);
+            BtnConfirmar.TabIndex = 118;
+            BtnConfirmar.UseVisualStyleBackColor = true;
             // 
             // PanelFolhaDetalhada
             // 
@@ -1226,5 +1319,12 @@
         private Panel panel10;
         private Panel panel9;
         private Panel panel5;
+        private Button BtnImprimir;
+        private Button BtnEditar;
+        private Button BtnConfirmar;
+        private Label label47;
+        private ComboBox CbMes;
+        private Label label31;
+        private ComboBox CbAno;
     }
 }

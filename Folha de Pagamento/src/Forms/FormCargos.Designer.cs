@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Button BtnDeletarCargo;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCargos));
             LbAdministrarCargos = new Panel();
             BtnRefresh = new Button();
@@ -59,6 +60,7 @@
             BtnConfirmar = new Button();
             BtnCancelar = new Button();
             toolTip1 = new ToolTip(components);
+            BtnDeletarCargo = new Button();
             LbAdministrarCargos.SuspendLayout();
             PnlAlteraCargo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -70,6 +72,7 @@
             // 
             LbAdministrarCargos.AccessibleRole = AccessibleRole.None;
             LbAdministrarCargos.BackColor = Color.LightGray;
+            LbAdministrarCargos.Controls.Add(BtnDeletarCargo);
             LbAdministrarCargos.Controls.Add(BtnRefresh);
             LbAdministrarCargos.Controls.Add(BtnErase1);
             LbAdministrarCargos.Controls.Add(button2);
@@ -378,7 +381,7 @@
             LbTitulo.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
             LbTitulo.Image = (Image)resources.GetObject("LbTitulo.Image");
             LbTitulo.ImageAlign = ContentAlignment.MiddleRight;
-            LbTitulo.Location = new Point(60, 33);
+            LbTitulo.Location = new Point(53, 33);
             LbTitulo.Name = "LbTitulo";
             LbTitulo.Padding = new Padding(10, 0, 0, 0);
             LbTitulo.Size = new Size(377, 41);
@@ -391,11 +394,11 @@
             label1.BackColor = Color.Transparent;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(70, 50);
+            label1.Location = new Point(60, 50);
             label1.Name = "label1";
-            label1.Size = new Size(402, 37);
+            label1.Size = new Size(380, 37);
             label1.TabIndex = 60;
-            label1.Text = "___________________________________";
+            label1.Text = "_________________________________";
             // 
             // BtnConfirmar
             // 
@@ -422,6 +425,19 @@
             toolTip1.SetToolTip(BtnCancelar, "Fechar Pagina");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
+            // 
+            // BtnDeletarCargo
+            // 
+            BtnDeletarCargo.BackgroundImage = (Image)resources.GetObject("BtnDeletarCargo.BackgroundImage");
+            BtnDeletarCargo.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnDeletarCargo.FlatAppearance.BorderSize = 0;
+            BtnDeletarCargo.FlatStyle = FlatStyle.Flat;
+            BtnDeletarCargo.Location = new Point(616, 508);
+            BtnDeletarCargo.Name = "BtnDeletarCargo";
+            BtnDeletarCargo.Size = new Size(43, 43);
+            BtnDeletarCargo.TabIndex = 125;
+            toolTip1.SetToolTip(BtnDeletarCargo, "Deletar Funcionário");
+            BtnDeletarCargo.UseVisualStyleBackColor = true;
             // 
             // FormCargos
             // 

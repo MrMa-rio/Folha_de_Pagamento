@@ -58,6 +58,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnImprimir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAYAAADhXXHAAAAABGdBTUEAALGPC/xhBQAAAaBJREFUWEft
+        mb0uREEYhk+nUOi0WpVotGhdgGjdgBtRUEl0EqWIChegJyrRaYVGIqFQ8D7JzubbOYPY+cY467zJ08yc
+        835Psj+Z3dNMaubFUgHodc2BeC8I/S6ZEqkB3jAnO9MiVe4Nc7ITy56LTQfosb1FZLeFR+ixvb1sLyt6
+        2V5W/A/ZDUHZkTgRtvRWsJ4LPbaXOawzl/nfZllcCltSCzxWRDJz4lmkbqwFPni1Er/c8DCAm97Eq3gc
+        rOVCD3300h/WYwe8WnkR4YIrsShqhLnMDy54jWRBhE3YEjXDfOuD3zD8vLCbHOFqhvnWB79hetmMZMmu
+        ikNxWgB66bfJkr0Wdt8b+m3Glo3PBqWwZwM32Sdx5wA9treI7G+cuiZHdkbYzX0RUkOW+XYPv5HcCHsB
+        BwgKd80alJJlDmvxgQqvVtaFvegzjoVH6En1x+CVzI5I3WC5EB6hJ9VvwefLrIkzcS9SBXvCI/Sk+pnL
+        fDx+FN70s8KWlXrPMsd+yMZKjW+DsdNp2U79P1sKF9lOPVMgnXlaE9KZ52B/IE3zASDUmB2DsuF0AAAA
+        AElFTkSuQmCC
+</value>
+  </data>
   <data name="BtnPesquisarMatricula.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAlhJREFUWEft

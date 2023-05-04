@@ -31,11 +31,13 @@
             components = new System.ComponentModel.Container();
             Button BtnEditar;
             Button button1;
+            Button button2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             panel1 = new Panel();
             TxtMatricula = new MaskedTextBox();
             BtnConfirmar = new Button();
             PnlCtrlFunc = new Panel();
+            TxtSalarioBase = new MaskedTextBox();
             PctData = new PictureBox();
             TxtNumRua = new NumericUpDown();
             TxtTituloEleitor = new MaskedTextBox();
@@ -104,9 +106,9 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
-            TxtSalarioBase = new MaskedTextBox();
             BtnEditar = new Button();
             button1 = new Button();
+            button2 = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctData).BeginInit();
@@ -122,7 +124,7 @@
             BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Location = new Point(116, 391);
+            BtnEditar.Location = new Point(116, 291);
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(43, 43);
             BtnEditar.TabIndex = 1;
@@ -144,9 +146,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.MouseClick += button1_MouseClick;
             // 
+            // button2
+            // 
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(67, 578);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 124;
+            toolTip1.SetToolTip(button2, "Deletar Funcionário");
+            button2.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(TxtMatricula);
             panel1.Controls.Add(BtnConfirmar);
             panel1.Controls.Add(PnlCtrlFunc);
@@ -263,6 +279,16 @@
             PnlCtrlFunc.Size = new Size(718, 434);
             PnlCtrlFunc.TabIndex = 12;
             PnlCtrlFunc.MouseClick += AllForms_MouseClick;
+            // 
+            // TxtSalarioBase
+            // 
+            TxtSalarioBase.BackColor = Color.DarkGray;
+            TxtSalarioBase.BorderStyle = BorderStyle.FixedSingle;
+            TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtSalarioBase.Location = new Point(509, 625);
+            TxtSalarioBase.Name = "TxtSalarioBase";
+            TxtSalarioBase.Size = new Size(156, 31);
+            TxtSalarioBase.TabIndex = 138;
             // 
             // PctData
             // 
@@ -1032,7 +1058,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(98, 443);
+            label2.Location = new Point(98, 343);
             label2.Name = "label2";
             label2.Size = new Size(77, 25);
             label2.TabIndex = 122;
@@ -1070,19 +1096,9 @@
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(60, 42);
             label1.Name = "label1";
-            label1.Size = new Size(457, 37);
+            label1.Size = new Size(468, 37);
             label1.TabIndex = 60;
-            label1.Text = "________________________________________";
-            // 
-            // TxtSalarioBase
-            // 
-            TxtSalarioBase.BackColor = Color.DarkGray;
-            TxtSalarioBase.BorderStyle = BorderStyle.FixedSingle;
-            TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioBase.Location = new Point(509, 625);
-            TxtSalarioBase.Name = "TxtSalarioBase";
-            TxtSalarioBase.Size = new Size(156, 31);
-            TxtSalarioBase.TabIndex = 138;
+            label1.Text = "_________________________________________";
             // 
             // FormAlterarCadastro
             // 
