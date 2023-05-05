@@ -32,6 +32,8 @@
             BtnArrowLeft = new Button();
             panel1 = new Panel();
             PanelSubMenuRel = new Panel();
+            BtnFolhaPNormalPesq = new Button();
+            FolhaPDetalhadaPesq = new Button();
             BtnCalculoPagamento = new Button();
             FolhaPDetalhada = new Button();
             BtnHolerite = new Button();
@@ -46,8 +48,6 @@
             BtnConfiguracao = new Button();
             BtnLogout = new Button();
             Pnl2 = new Panel();
-            FolhaPDetalhadaPesq = new Button();
-            BtnFolhaPNormalPesq = new Button();
             panel1.SuspendLayout();
             PanelSubMenuRel.SuspendLayout();
             PanelSubMenu.SuspendLayout();
@@ -95,6 +95,41 @@
             PanelSubMenuRel.Name = "PanelSubMenuRel";
             PanelSubMenuRel.Size = new Size(325, 278);
             PanelSubMenuRel.TabIndex = 6;
+            // 
+            // BtnFolhaPNormalPesq
+            // 
+            BtnFolhaPNormalPesq.BackColor = Color.Transparent;
+            BtnFolhaPNormalPesq.FlatAppearance.BorderSize = 0;
+            BtnFolhaPNormalPesq.FlatStyle = FlatStyle.Flat;
+            BtnFolhaPNormalPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnFolhaPNormalPesq.Image = (Image)resources.GetObject("BtnFolhaPNormalPesq.Image");
+            BtnFolhaPNormalPesq.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnFolhaPNormalPesq.Location = new Point(35, 95);
+            BtnFolhaPNormalPesq.Name = "BtnFolhaPNormalPesq";
+            BtnFolhaPNormalPesq.Size = new Size(244, 40);
+            BtnFolhaPNormalPesq.TabIndex = 13;
+            BtnFolhaPNormalPesq.Text = "    Pesquisar Folha Normal";
+            BtnFolhaPNormalPesq.TextAlign = ContentAlignment.MiddleLeft;
+            BtnFolhaPNormalPesq.TextImageRelation = TextImageRelation.ImageBeforeText;
+            BtnFolhaPNormalPesq.UseVisualStyleBackColor = false;
+            BtnFolhaPNormalPesq.MouseClick += BtnFolhaPNormalPesq_MouseClick;
+            // 
+            // FolhaPDetalhadaPesq
+            // 
+            FolhaPDetalhadaPesq.BackColor = Color.Transparent;
+            FolhaPDetalhadaPesq.FlatAppearance.BorderSize = 0;
+            FolhaPDetalhadaPesq.FlatStyle = FlatStyle.Flat;
+            FolhaPDetalhadaPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FolhaPDetalhadaPesq.Image = (Image)resources.GetObject("FolhaPDetalhadaPesq.Image");
+            FolhaPDetalhadaPesq.ImageAlign = ContentAlignment.MiddleLeft;
+            FolhaPDetalhadaPesq.Location = new Point(35, 175);
+            FolhaPDetalhadaPesq.Name = "FolhaPDetalhadaPesq";
+            FolhaPDetalhadaPesq.Size = new Size(255, 40);
+            FolhaPDetalhadaPesq.TabIndex = 12;
+            FolhaPDetalhadaPesq.Text = "    Pesquisar Folha Detalhada";
+            FolhaPDetalhadaPesq.TextImageRelation = TextImageRelation.ImageBeforeText;
+            FolhaPDetalhadaPesq.UseVisualStyleBackColor = false;
+            FolhaPDetalhadaPesq.MouseClick += FolhaPDetalhadaPesq_MouseClick;
             // 
             // BtnCalculoPagamento
             // 
@@ -325,39 +360,6 @@
             Pnl2.TabIndex = 4;
             Pnl2.Visible = false;
             Pnl2.VisibleChanged += Pnl2_VisibleChanged;
-            // 
-            // FolhaPDetalhadaPesq
-            // 
-            FolhaPDetalhadaPesq.BackColor = Color.Transparent;
-            FolhaPDetalhadaPesq.FlatAppearance.BorderSize = 0;
-            FolhaPDetalhadaPesq.FlatStyle = FlatStyle.Flat;
-            FolhaPDetalhadaPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            FolhaPDetalhadaPesq.Image = (Image)resources.GetObject("FolhaPDetalhadaPesq.Image");
-            FolhaPDetalhadaPesq.ImageAlign = ContentAlignment.MiddleLeft;
-            FolhaPDetalhadaPesq.Location = new Point(35, 175);
-            FolhaPDetalhadaPesq.Name = "FolhaPDetalhadaPesq";
-            FolhaPDetalhadaPesq.Size = new Size(255, 40);
-            FolhaPDetalhadaPesq.TabIndex = 12;
-            FolhaPDetalhadaPesq.Text = "    Pesquisar Folha Detalhada";
-            FolhaPDetalhadaPesq.TextImageRelation = TextImageRelation.ImageBeforeText;
-            FolhaPDetalhadaPesq.UseVisualStyleBackColor = false;
-            // 
-            // BtnFolhaPNormalPesq
-            // 
-            BtnFolhaPNormalPesq.BackColor = Color.Transparent;
-            BtnFolhaPNormalPesq.FlatAppearance.BorderSize = 0;
-            BtnFolhaPNormalPesq.FlatStyle = FlatStyle.Flat;
-            BtnFolhaPNormalPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnFolhaPNormalPesq.Image = (Image)resources.GetObject("BtnFolhaPNormalPesq.Image");
-            BtnFolhaPNormalPesq.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnFolhaPNormalPesq.Location = new Point(35, 95);
-            BtnFolhaPNormalPesq.Name = "BtnFolhaPNormalPesq";
-            BtnFolhaPNormalPesq.Size = new Size(244, 40);
-            BtnFolhaPNormalPesq.TabIndex = 13;
-            BtnFolhaPNormalPesq.Text = "    Pesquisar Folha Normal";
-            BtnFolhaPNormalPesq.TextAlign = ContentAlignment.MiddleLeft;
-            BtnFolhaPNormalPesq.TextImageRelation = TextImageRelation.ImageBeforeText;
-            BtnFolhaPNormalPesq.UseVisualStyleBackColor = false;
             // 
             // FormNavBar
             // 

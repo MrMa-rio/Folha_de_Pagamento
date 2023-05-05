@@ -16,6 +16,33 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             string dataInvert = dateArray[2] + dateArray[1] + dateArray[0];
             return dataInvert;
         }
+        public void getYear(string date)
+        {
+            string[] dateArray = date.Split('/');
+
+            string dataYear = dateArray[2];
+            string dataMouth = dateArray[1];
+            string dataDay = dateArray[0];
+            MessageBox.Show(dataYear);
+        }
+        //public void setYear(ComboBox CbYear)
+        //{
+        //    List<string[]> dates = c_Cargo.getCargosDB();
+        //    foreach (string[] date in dates)
+        //    {
+        //        if (CbYear.Items.Count < dates.Count)
+        //        {
+        //            CbYear.Height = dates.Count;
+        //            CbYear.Items.Add(date[1]);
+        //            CbYear.AutoCompleteCustomSource.Add(date[1]);
+        //        }
+        //        if (CbCargo.GetItemText(cargo[1]) != cargo[1])
+        //        {
+        //            CbCargo.Items.Add(cargo[1]);
+        //            CbCargo.AutoCompleteCustomSource.Add(cargo[1]);
+        //        }
+        //    }
+        //}
 
         public string setDateReInvert(string date)
         {

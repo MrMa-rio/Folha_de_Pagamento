@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace FOLHA_DE_PAGAMENTO_
@@ -117,6 +118,20 @@ namespace FOLHA_DE_PAGAMENTO_
                 }
                 c_VerificarLogin.logout(FormAtivo, this);
             }
+        }
+
+        private void BtnFolhaPNormalPesq_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormFolhaNormalPesq formNormalPesq = new FormFolhaNormalPesq(this);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formNormalPesq);
+            c_FormNavBarShow.AnimationHide(this, Pnl2);
+        }
+
+        private void FolhaPDetalhadaPesq_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormFolhaDetalhadaPesq formDetalhadaPesq = new FormFolhaDetalhadaPesq(this);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formDetalhadaPesq);
+            c_FormNavBarShow.AnimationHide(this, Pnl2);
         }
     }
 }

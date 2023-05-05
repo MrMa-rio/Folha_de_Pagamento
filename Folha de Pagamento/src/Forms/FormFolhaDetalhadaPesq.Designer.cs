@@ -1143,7 +1143,7 @@
             label13.Anchor = AnchorStyles.None;
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(181, 97);
+            label13.Location = new Point(128, 20);
             label13.Name = "label13";
             label13.Size = new Size(52, 25);
             label13.TabIndex = 1;

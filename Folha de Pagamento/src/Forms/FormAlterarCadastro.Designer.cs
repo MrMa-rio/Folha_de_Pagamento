@@ -30,11 +30,10 @@
         {
             components = new System.ComponentModel.Container();
             Button BtnEditar;
-            Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             Button button1;
-            Button BtnDeletarFunc;
             Button button2;
+            BtnDeletarFunc = new Button();
             panel1 = new Panel();
             BtnDeleteFunc = new Button();
             TxtMatricula = new MaskedTextBox();
@@ -112,7 +111,6 @@
             label12 = new Label();
             BtnEditar = new Button();
             button1 = new Button();
-            BtnDeletarFunc = new Button();
             button2 = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
@@ -150,6 +148,26 @@
             toolTip1.SetToolTip(button1, "Trocar Imagem Perfil");
             button1.UseVisualStyleBackColor = true;
             button1.MouseClick += button1_MouseClick;
+            // 
+            // BtnDeletarFunc
+            // 
+            BtnDeletarFunc.Location = new Point(0, 0);
+            BtnDeletarFunc.Name = "BtnDeletarFunc";
+            BtnDeletarFunc.Size = new Size(75, 23);
+            BtnDeletarFunc.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(116, 437);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 124;
+            toolTip1.SetToolTip(button2, "Criar Crachá");
+            button2.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -1107,27 +1125,14 @@
             label1.TabIndex = 60;
             label1.Text = "_________________________________________";
             // 
-            // button2
-            // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(116, 437);
-            button2.Name = "button2";
-            button2.Size = new Size(43, 43);
-            button2.TabIndex = 124;
-            toolTip1.SetToolTip(button2, "Criar Crachá");
-            button2.UseVisualStyleBackColor = true;
-            // 
             // label12
             // 
             label12.AutoSize = true;
+            label12.Name = "label12";
+            label12.TabIndex = 125;
             label12.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             label12.Location = new Point(93, 403);
-            label12.Name = "label12";
             label12.Size = new Size(89, 25);
-            label12.TabIndex = 125;
             label12.Text = "CRACHÁ";
             // 
             // FormAlterarCadastro
@@ -1233,5 +1238,7 @@
         private ToolTip toolTip1;
         private MaskedTextBox TxtSalarioBase;
         private Button BtnDeleteFunc;
+        private Button BtnDeletarFunc;
+        private Label label12;
     }
 }

@@ -1,7 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="src\Forms\FormCracha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Forms\FormFolhaDetalhadaPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Forms\FormFolhaDetalhadaPesq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Forms\FormFolhaNormalPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Forms\FormFolhaNormalPesq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Forms\FormHoleriteFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Forms\FormHoleritePDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="src\Forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Forms\FormPerfilUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="src\Forms\FormPesquisar.cs">
@@ -38,6 +62,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="src\Forms\FormShowDadosCadastrais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Forms\FormSobre.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

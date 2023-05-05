@@ -42,8 +42,6 @@
             BtnPesquisarMatricula = new Button();
             PanelFolhaDetalhada = new Panel();
             panel6 = new Panel();
-            label49 = new Label();
-            label48 = new Label();
             TxtSalarioLiqMensal = new Label();
             TxtMaiorRemuneracao = new Label();
             label41 = new Label();
@@ -76,8 +74,6 @@
             label23 = new Label();
             label24 = new Label();
             panel19 = new Panel();
-            label8 = new Label();
-            label56 = new Label();
             TxtSalarioLiquido = new Label();
             TxtTotaisDescontos = new Label();
             TxtSalBaseMensal = new Label();
@@ -121,11 +117,13 @@
             label13 = new Label();
             label14 = new Label();
             panel1 = new Panel();
+            LbTitulo = new Label();
+            label1 = new Label();
             label10 = new Label();
             label9 = new Label();
             label50 = new Label();
-            LbTitulo = new Label();
-            label1 = new Label();
+            label8 = new Label();
+            label56 = new Label();
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -141,7 +139,6 @@
             // 
             LbFolhaDetalhada.AccessibleRole = AccessibleRole.None;
             LbFolhaDetalhada.BackColor = Color.LightGray;
-            LbFolhaDetalhada.Controls.Add(button1);
             LbFolhaDetalhada.Controls.Add(label46);
             LbFolhaDetalhada.Controls.Add(CbAno);
             LbFolhaDetalhada.Controls.Add(BtnImprimir);
@@ -300,8 +297,6 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.FixedSingle;
-            panel6.Controls.Add(label49);
-            panel6.Controls.Add(label48);
             panel6.Controls.Add(TxtSalarioLiqMensal);
             panel6.Controls.Add(TxtMaiorRemuneracao);
             panel6.Controls.Add(label41);
@@ -311,27 +306,6 @@
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
             panel6.MouseClick += AllForms_MouseClick;
-            // 
-            // label49
-            // 
-            label49.AutoSize = true;
-            label49.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label49.Location = new Point(690, 25);
-            label49.MaximumSize = new Size(85, 19);
-            label49.Name = "label49";
-            label49.Size = new Size(83, 19);
-            label49.TabIndex = 78;
-            label49.Text = "20/12/2369";
-            // 
-            // label48
-            // 
-            label48.AutoSize = true;
-            label48.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label48.Location = new Point(690, 5);
-            label48.Name = "label48";
-            label48.Size = new Size(123, 19);
-            label48.TabIndex = 77;
-            label48.Text = "Data de emissão:";
             // 
             // TxtSalarioLiqMensal
             // 
@@ -692,25 +666,6 @@
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 17;
             panel19.MouseClick += AllForms_MouseClick;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(8, 25);
-            label8.Name = "label8";
-            label8.Size = new Size(51, 15);
-            label8.TabIndex = 94;
-            label8.Text = "Numero";
-            // 
-            // label56
-            // 
-            label56.AutoSize = true;
-            label56.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label56.Location = new Point(8, 5);
-            label56.Name = "label56";
-            label56.Size = new Size(20, 15);
-            label56.TabIndex = 93;
-            label56.Text = "ID";
             // 
             // TxtSalarioLiquido
             // 
@@ -1183,36 +1138,6 @@
             panel1.TabIndex = 6;
             panel1.MouseClick += AllForms_MouseClick;
             // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(3, 5);
-            label10.Name = "label10";
-            label10.Size = new Size(331, 25);
-            label10.TabIndex = 13;
-            label10.Text = "JOSE ANTONIO ALVES CARNEIRO ME";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(3, 35);
-            label9.Name = "label9";
-            label9.Size = new Size(537, 19);
-            label9.TabIndex = 14;
-            label9.Text = "RUA JORGE LUIZ REGISTRO, 48, JARDIM SANTA CRUZ, SERRANA-SP, CEP: 14150-000";
-            // 
-            // label50
-            // 
-            label50.AutoSize = true;
-            label50.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            label50.Location = new Point(680, 10);
-            label50.Name = "label50";
-            label50.Size = new Size(235, 25);
-            label50.TabIndex = 12;
-            label50.Text = "CNPJ : 13.545.586/0001-11";
-            // 
             // LbTitulo
             // 
             LbTitulo.AutoSize = true;
@@ -1235,9 +1160,58 @@
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(70, 50);
             label1.Name = "label1";
-            label1.Size = new Size(369, 37);
+            label1.Size = new Size(292, 37);
             label1.TabIndex = 60;
             label1.Text = "_________________________";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(20, 11);
+            label10.Name = "label10";
+            label10.Size = new Size(331, 25);
+            label10.TabIndex = 16;
+            label10.Text = "JOSE ANTONIO ALVES CARNEIRO ME";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(20, 41);
+            label9.Name = "label9";
+            label9.Size = new Size(537, 19);
+            label9.TabIndex = 17;
+            label9.Text = "RUA JORGE LUIZ REGISTRO, 48, JARDIM SANTA CRUZ, SERRANA-SP, CEP: 14150-000";
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label50.Location = new Point(697, 16);
+            label50.Name = "label50";
+            label50.Size = new Size(235, 25);
+            label50.TabIndex = 15;
+            label50.Text = "CNPJ : 13.545.586/0001-11";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(7, 27);
+            label8.Name = "label8";
+            label8.Size = new Size(51, 15);
+            label8.TabIndex = 96;
+            label8.Text = "Numero";
+            // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label56.Location = new Point(7, 7);
+            label56.Name = "label56";
+            label56.Size = new Size(20, 15);
+            label56.TabIndex = 95;
+            label56.Text = "ID";
             // 
             // FormFolhaDetalhada
             // 
@@ -1362,5 +1336,10 @@
         private Label label46;
         private ComboBox CbAno;
         internal MaskedTextBox TxtPesquisarMatricula;
+        private Label label10;
+        private Label label9;
+        private Label label50;
+        private Label label8;
+        private Label label56;
     }
 }

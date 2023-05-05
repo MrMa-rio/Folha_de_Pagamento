@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FOLHA_DE_PAGAMENTO_.src.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
 {
     public partial class FormFolhaNormalPesq : Form
     {
-        public FormFolhaNormalPesq()
+        private FormNavBar FormAtivo;
+        private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
+        public FormFolhaNormalPesq(FormNavBar navBar)
         {
             InitializeComponent();
+            FormAtivo = navBar;
         }
     }
 }

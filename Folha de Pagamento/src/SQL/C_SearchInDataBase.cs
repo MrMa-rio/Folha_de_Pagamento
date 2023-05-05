@@ -211,3 +211,5 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
     WHERE departamento.departamento_id = 16;
 
 */
+
+//select DATA_Emite from tb_fechamento where FK_Matricula = 19;
