@@ -32,17 +32,17 @@
             LbFolhaDetalhada = new Panel();
             button1 = new Button();
             label46 = new Label();
-            CbAno = new ComboBox();
+            CbMonth = new ComboBox();
             BtnImprimir = new Button();
             BtnEditar = new Button();
             label47 = new Label();
-            CbMes = new ComboBox();
+            CbYear = new ComboBox();
             TxtPesquisarMatricula = new MaskedTextBox();
             label20 = new Label();
             BtnPesquisarMatricula = new Button();
             PanelFolhaDetalhada = new Panel();
             panel6 = new Panel();
-            label49 = new Label();
+            TxtDataEmissao = new Label();
             label48 = new Label();
             TxtSalarioLiqMensal = new Label();
             TxtMaiorRemuneracao = new Label();
@@ -76,7 +76,7 @@
             label23 = new Label();
             label24 = new Label();
             panel19 = new Panel();
-            label8 = new Label();
+            TxtIdFolha = new Label();
             label56 = new Label();
             TxtSalarioLiquido = new Label();
             TxtTotaisDescontos = new Label();
@@ -143,11 +143,11 @@
             LbFolhaDetalhada.BackColor = Color.LightGray;
             LbFolhaDetalhada.Controls.Add(button1);
             LbFolhaDetalhada.Controls.Add(label46);
-            LbFolhaDetalhada.Controls.Add(CbAno);
+            LbFolhaDetalhada.Controls.Add(CbMonth);
             LbFolhaDetalhada.Controls.Add(BtnImprimir);
             LbFolhaDetalhada.Controls.Add(BtnEditar);
             LbFolhaDetalhada.Controls.Add(label47);
-            LbFolhaDetalhada.Controls.Add(CbMes);
+            LbFolhaDetalhada.Controls.Add(CbYear);
             LbFolhaDetalhada.Controls.Add(TxtPesquisarMatricula);
             LbFolhaDetalhada.Controls.Add(label20);
             LbFolhaDetalhada.Controls.Add(BtnPesquisarMatricula);
@@ -181,17 +181,19 @@
             label46.TabIndex = 119;
             label46.Text = "Selecionar o mês:";
             // 
-            // CbAno
+            // CbMonth
             // 
-            CbAno.BackColor = Color.DarkGray;
-            CbAno.DropDownWidth = 185;
-            CbAno.FlatStyle = FlatStyle.Flat;
-            CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbAno.FormattingEnabled = true;
-            CbAno.Location = new Point(926, 105);
-            CbAno.Name = "CbAno";
-            CbAno.Size = new Size(121, 31);
-            CbAno.TabIndex = 118;
+            CbMonth.BackColor = Color.DarkGray;
+            CbMonth.DropDownStyle = ComboBoxStyle.DropDownList;
+            CbMonth.DropDownWidth = 185;
+            CbMonth.FlatStyle = FlatStyle.Flat;
+            CbMonth.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbMonth.FormattingEnabled = true;
+            CbMonth.Location = new Point(926, 105);
+            CbMonth.Name = "CbMonth";
+            CbMonth.Size = new Size(121, 31);
+            CbMonth.TabIndex = 118;
+            CbMonth.TextChanged += CbMonth_TextChanged;
             // 
             // BtnImprimir
             // 
@@ -227,17 +229,20 @@
             label47.TabIndex = 77;
             label47.Text = "Selecionar o ano:";
             // 
-            // CbMes
+            // CbYear
             // 
-            CbMes.BackColor = Color.DarkGray;
-            CbMes.DropDownWidth = 185;
-            CbMes.FlatStyle = FlatStyle.Flat;
-            CbMes.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbMes.FormattingEnabled = true;
-            CbMes.Location = new Point(645, 105);
-            CbMes.Name = "CbMes";
-            CbMes.Size = new Size(121, 31);
-            CbMes.TabIndex = 75;
+            CbYear.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CbYear.AutoCompleteSource = AutoCompleteSource.ListItems;
+            CbYear.BackColor = Color.DarkGray;
+            CbYear.DropDownWidth = 185;
+            CbYear.FlatStyle = FlatStyle.Flat;
+            CbYear.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbYear.FormattingEnabled = true;
+            CbYear.Location = new Point(645, 105);
+            CbYear.Name = "CbYear";
+            CbYear.Size = new Size(121, 31);
+            CbYear.TabIndex = 75;
+            CbYear.TextChanged += CbYear_TextChanged;
             // 
             // TxtPesquisarMatricula
             // 
@@ -250,6 +255,7 @@
             TxtPesquisarMatricula.PromptChar = ' ';
             TxtPesquisarMatricula.Size = new Size(116, 31);
             TxtPesquisarMatricula.TabIndex = 72;
+            TxtPesquisarMatricula.KeyDown += TxtPesquisarMatricula_KeyDown;
             // 
             // label20
             // 
@@ -272,6 +278,7 @@
             BtnPesquisarMatricula.Size = new Size(31, 31);
             BtnPesquisarMatricula.TabIndex = 69;
             BtnPesquisarMatricula.UseVisualStyleBackColor = true;
+            BtnPesquisarMatricula.MouseClick += BtnPesquisarMatricula_MouseClick;
             // 
             // PanelFolhaDetalhada
             // 
@@ -294,7 +301,7 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.FixedSingle;
-            panel6.Controls.Add(label49);
+            panel6.Controls.Add(TxtDataEmissao);
             panel6.Controls.Add(label48);
             panel6.Controls.Add(TxtSalarioLiqMensal);
             panel6.Controls.Add(TxtMaiorRemuneracao);
@@ -305,16 +312,16 @@
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
             // 
-            // label49
+            // TxtDataEmissao
             // 
-            label49.AutoSize = true;
-            label49.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label49.Location = new Point(690, 25);
-            label49.MaximumSize = new Size(85, 19);
-            label49.Name = "label49";
-            label49.Size = new Size(83, 19);
-            label49.TabIndex = 78;
-            label49.Text = "20/12/2369";
+            TxtDataEmissao.AutoSize = true;
+            TxtDataEmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDataEmissao.Location = new Point(690, 25);
+            TxtDataEmissao.MaximumSize = new Size(85, 19);
+            TxtDataEmissao.Name = "TxtDataEmissao";
+            TxtDataEmissao.Size = new Size(83, 19);
+            TxtDataEmissao.TabIndex = 78;
+            TxtDataEmissao.Text = "20/12/2369";
             // 
             // label48
             // 
@@ -668,7 +675,7 @@
             // panel19
             // 
             panel19.BorderStyle = BorderStyle.FixedSingle;
-            panel19.Controls.Add(label8);
+            panel19.Controls.Add(TxtIdFolha);
             panel19.Controls.Add(label56);
             panel19.Controls.Add(TxtSalarioLiquido);
             panel19.Controls.Add(TxtTotaisDescontos);
@@ -683,14 +690,14 @@
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 17;
             // 
-            // label8
+            // TxtIdFolha
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(8, 25);
-            label8.Name = "label8";
-            label8.Size = new Size(51, 15);
-            label8.TabIndex = 94;
-            label8.Text = "Numero";
+            TxtIdFolha.AutoSize = true;
+            TxtIdFolha.Location = new Point(8, 25);
+            TxtIdFolha.Name = "TxtIdFolha";
+            TxtIdFolha.Size = new Size(51, 15);
+            TxtIdFolha.TabIndex = 94;
+            TxtIdFolha.Text = "Numero";
             // 
             // label56
             // 
@@ -1259,19 +1266,12 @@
         #endregion
 
         private Panel LbFolhaDetalhada;
-        private Button button1;
         private Label label46;
-        private ComboBox CbAno;
-        private Button BtnImprimir;
-        private Button BtnEditar;
         private Label label47;
-        private ComboBox CbMes;
-        private MaskedTextBox TxtPesquisarMatricula;
         private Label label20;
-        private Button BtnPesquisarMatricula;
         private Panel PanelFolhaDetalhada;
         private Panel panel6;
-        internal Label label49;
+        internal Label TxtDataEmissao;
         private Label label48;
         internal Label TxtSalarioLiqMensal;
         internal Label TxtMaiorRemuneracao;
@@ -1305,7 +1305,6 @@
         private Label label23;
         private Label label24;
         private Panel panel19;
-        private Label label8;
         private Label label56;
         internal Label TxtSalarioLiquido;
         internal Label TxtTotaisDescontos;
@@ -1355,5 +1354,13 @@
         private Label label50;
         private Label LbTitulo;
         private Label label1;
+        internal Button button1;
+        internal ComboBox CbMonth;
+        internal Button BtnImprimir;
+        internal Button BtnEditar;
+        internal ComboBox CbYear;
+        internal MaskedTextBox TxtPesquisarMatricula;
+        internal Button BtnPesquisarMatricula;
+        internal Label TxtIdFolha;
     }
 }

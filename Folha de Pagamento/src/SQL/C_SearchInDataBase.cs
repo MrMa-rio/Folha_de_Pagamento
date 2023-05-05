@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace FOLHA_DE_PAGAMENTO_.src.SQL
 {
@@ -184,6 +185,12 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             }
             return Result;
         }
+
+        public List<string[]> getDataFuncionario(string matricula)
+        {
+            string insertSql = $"select * from tb_funcionario where Matricula = {matricula}";
+            return getListinDB(insertSql);
+        }
         public List<string[]> getListSalariosDescINSS()
         {
             string insertSql = $"SELECT * FROM tb_inss;";
@@ -199,8 +206,47 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             string insertSql = $"SELECT * FROM tb_fgts";
             return getListinDB(insertSql);
         }
+
+        public List<string[]> getListDate(string matricula)
+        {
+            string insertSql = $"Select DATA_Emite from tb_fechamento where FK_Matricula = {matricula}";
+            return getListinDB(insertSql);
+        }
+        public List<string[]> getListMonth(string matricula, string year)
+        {
+            string insertSql = $"Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%{year}%' AND FK_Matricula = {matricula}";
+            return getListinDB(insertSql);
+        }
+        public List<string[]> getListFechamento(string matricula, string year, string month)
+        {
+            string insertSql = $"Select * from tb_fechamento where DATA_Emite LIKE '%{year}-{month}%' AND  FK_Matricula = {matricula}";
+            return getListinDB(insertSql); // dados folha do ano tal e mes tal...
+        }
+
+        public List<string[]> getTaxaINSS(string idINSS)
+        {
+            string insertSql = $"Select Taxa_Desconto from tb_inss where ID_INSS = {idINSS}";
+            return getListinDB(insertSql); // retorna a taxa atraves do ID
+        }
+        public List<string[]> getTaxaIRRF(string idIRRF)
+        {
+            string insertSql = $"Select Taxa_Desconto from tb_irf where ID_IRF = {idIRRF}";
+            return getListinDB(insertSql); // retorna a taxa atraves do ID
+        }
+        public List<string[]> getTaxaFGTS(string idFGTS)
+        {
+            string insertSql = $"Select Valor_FGTS from tb_fgts where ID_INSS = {idFGTS}";
+            return getListinDB(insertSql); // retorna a taxa atraves do ID
+        }
     }
 }
+//Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%2023%' AND FK_Matricula = 19; // Retorna dados com base na matricula e no ano
+//Select DATA_Emite from tb_fechamento where FK_Matricula = 19; // Retorna dados com base na matricula
+//Select * from tb_fechamento where DATA_Emite LIKE '%2023-05%' AND  FK_Matricula = 19; Retorna dados com base no mes, ano e matricula
+
+
+
+
 
 /*
  * Refereciando atraves de chaves estrangeiras

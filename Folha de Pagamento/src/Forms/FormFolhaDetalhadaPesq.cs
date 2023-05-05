@@ -21,5 +21,56 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
             InitializeComponent();
             FormAtivo = navBar;
         }
+
+        private void BtnPesquisarMatricula_MouseClick(object sender, MouseEventArgs e)
+        {
+            CbYear.Items.Clear();
+            CbYear.Text = string.Empty;
+            C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
+            c_RelatorioFolha.setYear(CbYear, TxtPesquisarMatricula.Text);
+            c_RelatorioFolha.setDadosFuncionario(TxtPesquisarMatricula.Text, this);
+        }
+
+        private void CbYear_TextChanged(object sender, EventArgs e)
+        {
+            if (CbYear.Items.Contains(CbYear.Text))
+            {
+                CbMonth.Items.Clear();
+                CbMonth.Text = string.Empty;
+                if (CbYear.Text.Trim() != "")
+                {
+                    C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
+                    c_RelatorioFolha.setMonth(this);
+                }
+            }
+            else
+            {
+                CbMonth.Items.Clear();
+                CbMonth.Text = string.Empty;
+            }
+        }
+
+        private void CbMonth_TextChanged(object sender, EventArgs e)
+        {
+            if (CbMonth.Text.Trim() != "" && CbYear.Text.Trim() != "")
+            {
+                C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
+                c_RelatorioFolha.getFolhaDetalhada(this);
+            }
+        }
+
+        private void TxtPesquisarMatricula_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CbYear.Items.Clear();
+                CbYear.Text = string.Empty;
+                C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
+                c_RelatorioFolha.setYear(CbYear, TxtPesquisarMatricula.Text);
+                c_RelatorioFolha.setDadosFuncionario(TxtPesquisarMatricula.Text, this);
+            }
+        }
     }
 }
+
+

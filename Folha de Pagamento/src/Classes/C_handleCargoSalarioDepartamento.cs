@@ -98,7 +98,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 return "3";
             }
         }
-
         public void getCargo(ComboBox CbCargo)
         {
             List<string[]> cargos = c_Cargo.getCargosDB();

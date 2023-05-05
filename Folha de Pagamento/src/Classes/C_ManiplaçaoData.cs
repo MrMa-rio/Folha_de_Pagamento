@@ -16,33 +16,31 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             string dataInvert = dateArray[2] + dateArray[1] + dateArray[0];
             return dataInvert;
         }
-        public void getYear(string date)
+        public string getYear(string date)
+        {
+            string[] dateArray = date.Split('/');
+
+            
+            
+            string dataYear = dateArray[2];
+            string dataMouth = dateArray[1];
+            string dataDay = dateArray[0];
+            return dataYear.Substring(0, 4);
+        }
+        public string getMonth(string date)
         {
             string[] dateArray = date.Split('/');
 
             string dataYear = dateArray[2];
-            string dataMouth = dateArray[1];
+            string dataMonth = dateArray[1];
             string dataDay = dateArray[0];
-            MessageBox.Show(dataYear);
+            return dataMonth.Substring(0, 2);
         }
-        //public void setYear(ComboBox CbYear)
-        //{
-        //    List<string[]> dates = c_Cargo.getCargosDB();
-        //    foreach (string[] date in dates)
-        //    {
-        //        if (CbYear.Items.Count < dates.Count)
-        //        {
-        //            CbYear.Height = dates.Count;
-        //            CbYear.Items.Add(date[1]);
-        //            CbYear.AutoCompleteCustomSource.Add(date[1]);
-        //        }
-        //        if (CbCargo.GetItemText(cargo[1]) != cargo[1])
-        //        {
-        //            CbCargo.Items.Add(cargo[1]);
-        //            CbCargo.AutoCompleteCustomSource.Add(cargo[1]);
-        //        }
-        //    }
-        //}
+        //Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%2023%' AND FK_Matricula = 19; // Retorna dados com base na matricula e no ano
+        //Select DATA_Emite from tb_fechamento where FK_Matricula = 19; // Retorna dados com base na matricula
+        //Select * from tb_fechamento where DATA_Emite LIKE '%2023-05%' AND  FK_Matricula = 19; Retorna dados com base no mes, ano e matricula
+
+        
 
         public string setDateReInvert(string date)
         {
