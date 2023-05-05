@@ -265,7 +265,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
         {
-            DialogResult alert = MessageBox.Show("Você está preste a fechar a Area de Alertar Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
+            DialogResult alert = MessageBox.Show("Você está prestes a fechar a Área de Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
             if (alert == DialogResult.OK)
             {
                 Close();

@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaDetalhadaPesq));
             LbFolhaDetalhada = new Panel();
+            button2 = new Button();
             button1 = new Button();
             label46 = new Label();
             CbMonth = new ComboBox();
             BtnImprimir = new Button();
-            BtnEditar = new Button();
             label47 = new Label();
             CbYear = new ComboBox();
             TxtPesquisarMatricula = new MaskedTextBox();
@@ -126,6 +127,7 @@
             label50 = new Label();
             LbTitulo = new Label();
             label1 = new Label();
+            toolTip1 = new ToolTip(components);
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -141,11 +143,11 @@
             // 
             LbFolhaDetalhada.AccessibleRole = AccessibleRole.None;
             LbFolhaDetalhada.BackColor = Color.LightGray;
+            LbFolhaDetalhada.Controls.Add(button2);
             LbFolhaDetalhada.Controls.Add(button1);
             LbFolhaDetalhada.Controls.Add(label46);
             LbFolhaDetalhada.Controls.Add(CbMonth);
             LbFolhaDetalhada.Controls.Add(BtnImprimir);
-            LbFolhaDetalhada.Controls.Add(BtnEditar);
             LbFolhaDetalhada.Controls.Add(label47);
             LbFolhaDetalhada.Controls.Add(CbYear);
             LbFolhaDetalhada.Controls.Add(TxtPesquisarMatricula);
@@ -159,6 +161,18 @@
             LbFolhaDetalhada.Size = new Size(1110, 630);
             LbFolhaDetalhada.TabIndex = 3;
             // 
+            // button2
+            // 
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(1004, 39);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 121;
+            toolTip1.SetToolTip(button2, "Voltar ao início");
+            button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             button1.Enabled = false;
@@ -169,6 +183,7 @@
             button1.Name = "button1";
             button1.Size = new Size(43, 43);
             button1.TabIndex = 120;
+            toolTip1.SetToolTip(button1, "Capturar tela em PDF");
             button1.UseVisualStyleBackColor = true;
             // 
             // label46
@@ -205,19 +220,8 @@
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 117;
+            toolTip1.SetToolTip(BtnImprimir, "Imprimir PDF");
             BtnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Enabled = false;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(906, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 116;
-            BtnEditar.UseVisualStyleBackColor = true;
             // 
             // label47
             // 
@@ -560,7 +564,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(537, 25);
+            label2.Location = new Point(619, 25);
             label2.MaximumSize = new Size(85, 19);
             label2.Name = "label2";
             label2.Size = new Size(26, 19);
@@ -571,7 +575,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(756, 5);
+            label5.Location = new Point(838, 5);
             label5.Name = "label5";
             label5.Size = new Size(74, 19);
             label5.TabIndex = 79;
@@ -581,7 +585,7 @@
             // 
             TxtSalarioBase.AutoSize = true;
             TxtSalarioBase.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioBase.Location = new Point(558, 25);
+            TxtSalarioBase.Location = new Point(640, 25);
             TxtSalarioBase.MaximumSize = new Size(85, 19);
             TxtSalarioBase.Name = "TxtSalarioBase";
             TxtSalarioBase.Size = new Size(60, 19);
@@ -592,7 +596,7 @@
             // 
             TxtDataAdmissao.AutoSize = true;
             TxtDataAdmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataAdmissao.Location = new Point(756, 25);
+            TxtDataAdmissao.Location = new Point(838, 25);
             TxtDataAdmissao.MaximumSize = new Size(85, 19);
             TxtDataAdmissao.Name = "TxtDataAdmissao";
             TxtDataAdmissao.Size = new Size(83, 19);
@@ -604,7 +608,7 @@
             TxtCargo.AutoSize = true;
             TxtCargo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCargo.Location = new Point(375, 25);
-            TxtCargo.MaximumSize = new Size(150, 19);
+            TxtCargo.MaximumSize = new Size(250, 19);
             TxtCargo.Name = "TxtCargo";
             TxtCargo.Size = new Size(146, 19);
             TxtCargo.TabIndex = 76;
@@ -636,7 +640,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.Location = new Point(550, 5);
+            label21.Location = new Point(632, 5);
             label21.Name = "label21";
             label21.Size = new Size(56, 19);
             label21.TabIndex = 16;
@@ -1362,5 +1366,7 @@
         internal MaskedTextBox TxtPesquisarMatricula;
         internal Button BtnPesquisarMatricula;
         internal Label TxtIdFolha;
+        private Button button2;
+        private ToolTip toolTip1;
     }
 }

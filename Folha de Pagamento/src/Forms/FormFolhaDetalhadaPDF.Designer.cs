@@ -30,6 +30,8 @@
         {
             PanelFolhaDetalhada = new Panel();
             panel6 = new Panel();
+            label49 = new Label();
+            label48 = new Label();
             TxtSalarioLiqMensal = new Label();
             TxtMaiorRemuneracao = new Label();
             label41 = new Label();
@@ -105,8 +107,6 @@
             label13 = new Label();
             label14 = new Label();
             panel1 = new Panel();
-            label49 = new Label();
-            label48 = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -150,6 +150,27 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label49.Location = new Point(645, 25);
+            label49.MaximumSize = new Size(85, 19);
+            label49.Name = "label49";
+            label49.Size = new Size(83, 19);
+            label49.TabIndex = 80;
+            label49.Text = "20/12/2369";
+            // 
+            // label48
+            // 
+            label48.AutoSize = true;
+            label48.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label48.Location = new Point(645, 5);
+            label48.Name = "label48";
+            label48.Size = new Size(123, 19);
+            label48.TabIndex = 79;
+            label48.Text = "Data de emissão:";
             // 
             // TxtSalarioLiqMensal
             // 
@@ -378,7 +399,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(537, 25);
+            label2.Location = new Point(619, 25);
             label2.MaximumSize = new Size(85, 19);
             label2.Name = "label2";
             label2.Size = new Size(26, 19);
@@ -389,7 +410,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(756, 5);
+            label5.Location = new Point(838, 5);
             label5.Name = "label5";
             label5.Size = new Size(74, 19);
             label5.TabIndex = 79;
@@ -399,7 +420,7 @@
             // 
             TxtSalarioBase.AutoSize = true;
             TxtSalarioBase.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioBase.Location = new Point(558, 25);
+            TxtSalarioBase.Location = new Point(640, 25);
             TxtSalarioBase.MaximumSize = new Size(85, 19);
             TxtSalarioBase.Name = "TxtSalarioBase";
             TxtSalarioBase.Size = new Size(60, 19);
@@ -410,7 +431,7 @@
             // 
             TxtDataAdmissao.AutoSize = true;
             TxtDataAdmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataAdmissao.Location = new Point(756, 25);
+            TxtDataAdmissao.Location = new Point(838, 25);
             TxtDataAdmissao.MaximumSize = new Size(85, 19);
             TxtDataAdmissao.Name = "TxtDataAdmissao";
             TxtDataAdmissao.Size = new Size(83, 19);
@@ -422,7 +443,7 @@
             TxtCargo.AutoSize = true;
             TxtCargo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCargo.Location = new Point(375, 25);
-            TxtCargo.MaximumSize = new Size(150, 19);
+            TxtCargo.MaximumSize = new Size(250, 19);
             TxtCargo.Name = "TxtCargo";
             TxtCargo.Size = new Size(146, 19);
             TxtCargo.TabIndex = 76;
@@ -454,7 +475,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.Location = new Point(550, 5);
+            label21.Location = new Point(632, 5);
             label21.Name = "label21";
             label21.Size = new Size(56, 19);
             label21.TabIndex = 16;
@@ -973,27 +994,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(955, 72);
             panel1.TabIndex = 6;
-            // 
-            // label49
-            // 
-            label49.AutoSize = true;
-            label49.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label49.Location = new Point(645, 25);
-            label49.MaximumSize = new Size(85, 19);
-            label49.Name = "label49";
-            label49.Size = new Size(83, 19);
-            label49.TabIndex = 80;
-            label49.Text = "20/12/2369";
-            // 
-            // label48
-            // 
-            label48.AutoSize = true;
-            label48.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label48.Location = new Point(645, 5);
-            label48.Name = "label48";
-            label48.Size = new Size(123, 19);
-            label48.TabIndex = 79;
-            label48.Text = "Data de emissão:";
             // 
             // label10
             // 

@@ -146,11 +146,11 @@
             BtnRefresh.BackgroundImageLayout = ImageLayout.Stretch;
             BtnRefresh.FlatAppearance.BorderSize = 0;
             BtnRefresh.FlatStyle = FlatStyle.Flat;
-            BtnRefresh.Location = new Point(693, 50);
+            BtnRefresh.Location = new Point(693, 95);
             BtnRefresh.Name = "BtnRefresh";
             BtnRefresh.Size = new Size(43, 43);
             BtnRefresh.TabIndex = 66;
-            toolTip1.SetToolTip(BtnRefresh, "Recarregar Pagina");
+            toolTip1.SetToolTip(BtnRefresh, "Recarregar página");
             BtnRefresh.UseVisualStyleBackColor = true;
             BtnRefresh.MouseClick += BtnRefresh_MouseClick;
             // 
@@ -163,7 +163,7 @@
             BtnLimpar.Name = "BtnLimpar";
             BtnLimpar.Size = new Size(43, 43);
             BtnLimpar.TabIndex = 61;
-            toolTip1.SetToolTip(BtnLimpar, "Limpar Campos");
+            toolTip1.SetToolTip(BtnLimpar, "Limpar todos os campos do formulário");
             BtnLimpar.UseVisualStyleBackColor = true;
             BtnLimpar.MouseClick += BtnLimpar_MouseClick;
             // 
@@ -482,6 +482,7 @@
             BtnCalendario2.Name = "BtnCalendario2";
             BtnCalendario2.Size = new Size(26, 26);
             BtnCalendario2.TabIndex = 101;
+            toolTip1.SetToolTip(BtnCalendario2, "Abrir calendário");
             BtnCalendario2.UseVisualStyleBackColor = true;
             BtnCalendario2.MouseClick += BtnCalendario2_MouseClick;
             // 
@@ -811,6 +812,7 @@
             BtnCalendario.Name = "BtnCalendario";
             BtnCalendario.Size = new Size(26, 26);
             BtnCalendario.TabIndex = 55;
+            toolTip1.SetToolTip(BtnCalendario, "Abrir calendário");
             BtnCalendario.UseVisualStyleBackColor = true;
             BtnCalendario.MouseClick += BtnCalendario_MouseClick;
             // 
@@ -968,7 +970,7 @@
             button2.Name = "button2";
             button2.Size = new Size(43, 43);
             button2.TabIndex = 62;
-            toolTip1.SetToolTip(button2, "Remover Foto");
+            toolTip1.SetToolTip(button2, "Remover foto");
             button2.UseVisualStyleBackColor = true;
             button2.MouseClick += button2_MouseClick;
             // 
@@ -982,7 +984,7 @@
             button1.Name = "button1";
             button1.Size = new Size(43, 43);
             button1.TabIndex = 122;
-            toolTip1.SetToolTip(button1, "Adicionar Foto");
+            toolTip1.SetToolTip(button1, "Adicionar foto");
             button1.UseVisualStyleBackColor = true;
             button1.MouseClick += button1_MouseClick;
             // 
@@ -1163,11 +1165,11 @@
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
-            BtnCancelar.Location = new Point(742, 50);
+            BtnCancelar.Location = new Point(742, 95);
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 19;
-            toolTip1.SetToolTip(BtnCancelar, "Sair da Pagina");
+            toolTip1.SetToolTip(BtnCancelar, "Voltar ao início");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
             // 

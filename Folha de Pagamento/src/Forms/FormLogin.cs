@@ -30,7 +30,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
             }
             else
             {
-                MessageBox.Show("Usuario/Senha Invalidos!");
+                MessageBox.Show("Usuário ou Senha Inválidos!");
             }
         }
 
@@ -45,7 +45,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Usuario/Senha Invalidos!");
+                    MessageBox.Show("Usuário ou Senha Inválidos!");
                 }
             }
         }

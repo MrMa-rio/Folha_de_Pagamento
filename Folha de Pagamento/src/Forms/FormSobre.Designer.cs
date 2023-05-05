@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSobre));
             LbAlterarCadastro = new Panel();
             panel2 = new Panel();
@@ -44,18 +45,19 @@
             label2 = new Label();
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
+            label17 = new Label();
+            label16 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            label7 = new Label();
+            label4 = new Label();
             pictureBox1 = new PictureBox();
             LbTitulo = new Label();
             label1 = new Label();
             BtnCancelar = new Button();
-            label4 = new Label();
-            label7 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            label16 = new Label();
-            label17 = new Label();
+            toolTip1 = new ToolTip(components);
             LbAlterarCadastro.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -240,14 +242,94 @@
             panel1.Size = new Size(500, 435);
             panel1.TabIndex = 61;
             // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.Location = new Point(133, 172);
+            label17.Name = "label17";
+            label17.Size = new Size(268, 32);
+            label17.TabIndex = 73;
+            label17.Text = "Criadores do Software";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Location = new Point(160, 210);
+            label16.Name = "label16";
+            label16.Size = new Size(210, 21);
+            label16.TabIndex = 79;
+            label16.Text = "Adler Baranauskas Benedicto";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.Location = new Point(172, 390);
+            label15.Name = "label15";
+            label15.Size = new Size(177, 21);
+            label15.TabIndex = 78;
+            label15.Text = "Yuri Gonçalves Carneiro";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(123, 360);
+            label14.Name = "label14";
+            label14.Size = new Size(278, 21);
+            label14.TabIndex = 77;
+            label14.Text = "Mario Alberto Rabelo Dos Santos Neto";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(188, 330);
+            label13.Name = "label13";
+            label13.Size = new Size(136, 21);
+            label13.TabIndex = 76;
+            label13.Text = "João Gabriel Atílio";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(160, 300);
+            label12.Name = "label12";
+            label12.Size = new Size(202, 21);
+            label12.TabIndex = 75;
+            label12.Text = "Caetano Dos Santos Queluz";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(205, 270);
+            label7.Name = "label7";
+            label7.Size = new Size(103, 21);
+            label7.TabIndex = 74;
+            label7.Text = "Breno Willian";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(160, 240);
+            label4.Name = "label4";
+            label4.Size = new Size(213, 21);
+            label4.TabIndex = 73;
+            label4.Text = "Ariel Molina da Silva Campos";
+            // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.ErrorImage = null;
-            pictureBox1.Location = new Point(186, 15);
+            pictureBox1.Location = new Point(174, 19);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(150, 150);
+            pictureBox1.Size = new Size(187, 150);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -287,87 +369,8 @@
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 19;
+            toolTip1.SetToolTip(BtnCancelar, "Voltar ao ínicio");
             BtnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(160, 240);
-            label4.Name = "label4";
-            label4.Size = new Size(213, 21);
-            label4.TabIndex = 73;
-            label4.Text = "Ariel Molina da Silva Campos";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(205, 270);
-            label7.Name = "label7";
-            label7.Size = new Size(103, 21);
-            label7.TabIndex = 74;
-            label7.Text = "Breno Willian";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(160, 300);
-            label12.Name = "label12";
-            label12.Size = new Size(202, 21);
-            label12.TabIndex = 75;
-            label12.Text = "Caetano Dos Santos Queluz";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(188, 330);
-            label13.Name = "label13";
-            label13.Size = new Size(136, 21);
-            label13.TabIndex = 76;
-            label13.Text = "João Gabriel Atílio";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(123, 360);
-            label14.Name = "label14";
-            label14.Size = new Size(278, 21);
-            label14.TabIndex = 77;
-            label14.Text = "Mario Alberto Rabelo Dos Santos Neto";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(172, 390);
-            label15.Name = "label15";
-            label15.Size = new Size(177, 21);
-            label15.TabIndex = 78;
-            label15.Text = "Yuri Gonçalves Carneiro";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(160, 210);
-            label16.Name = "label16";
-            label16.Size = new Size(210, 21);
-            label16.TabIndex = 79;
-            label16.Text = "Adler Baranauskas Benedicto";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(133, 172);
-            label17.Name = "label17";
-            label17.Size = new Size(268, 32);
-            label17.TabIndex = 73;
-            label17.Text = "Criadores do Software";
             // 
             // FormSobre
             // 
@@ -422,5 +425,6 @@
         private Label label12;
         private Label label7;
         private Label label4;
+        private ToolTip toolTip1;
     }
 }

@@ -35,6 +35,7 @@
             Button button2;
             BtnDeletarFunc = new Button();
             panel1 = new Panel();
+            button3 = new Button();
             BtnDeleteFunc = new Button();
             TxtMatricula = new MaskedTextBox();
             BtnConfirmar = new Button();
@@ -103,12 +104,12 @@
             btnPesquisar = new Button();
             LbMatricula = new Label();
             panel3 = new Panel();
+            label12 = new Label();
             label2 = new Label();
             PctUser = new PictureBox();
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
-            label12 = new Label();
             BtnEditar = new Button();
             button1 = new Button();
             button2 = new Button();
@@ -131,7 +132,7 @@
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(43, 43);
             BtnEditar.TabIndex = 1;
-            toolTip1.SetToolTip(BtnEditar, "Editar Funcionario");
+            toolTip1.SetToolTip(BtnEditar, "Editar funcionário");
             BtnEditar.UseVisualStyleBackColor = true;
             BtnEditar.MouseClick += BtnEditar_MouseClick;
             // 
@@ -149,13 +150,6 @@
             button1.UseVisualStyleBackColor = true;
             button1.MouseClick += button1_MouseClick;
             // 
-            // BtnDeletarFunc
-            // 
-            BtnDeletarFunc.Location = new Point(0, 0);
-            BtnDeletarFunc.Name = "BtnDeletarFunc";
-            BtnDeletarFunc.Size = new Size(75, 23);
-            BtnDeletarFunc.TabIndex = 0;
-            // 
             // button2
             // 
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
@@ -166,12 +160,20 @@
             button2.Name = "button2";
             button2.Size = new Size(43, 43);
             button2.TabIndex = 124;
-            toolTip1.SetToolTip(button2, "Criar Crachá");
+            toolTip1.SetToolTip(button2, "Criar crachá");
             button2.UseVisualStyleBackColor = true;
+            // 
+            // BtnDeletarFunc
+            // 
+            BtnDeletarFunc.Location = new Point(0, 0);
+            BtnDeletarFunc.Name = "BtnDeletarFunc";
+            BtnDeletarFunc.Size = new Size(75, 23);
+            BtnDeletarFunc.TabIndex = 0;
             // 
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(BtnDeleteFunc);
             panel1.Controls.Add(TxtMatricula);
             panel1.Controls.Add(BtnConfirmar);
@@ -188,6 +190,18 @@
             panel1.TabIndex = 0;
             panel1.MouseClick += AllForms_MouseClick;
             // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(742, 95);
+            button3.Name = "button3";
+            button3.Size = new Size(43, 43);
+            button3.TabIndex = 119;
+            toolTip1.SetToolTip(button3, "Voltar ao início");
+            button3.UseVisualStyleBackColor = true;
+            // 
             // BtnDeleteFunc
             // 
             BtnDeleteFunc.FlatAppearance.BorderSize = 0;
@@ -197,7 +211,7 @@
             BtnDeleteFunc.Name = "BtnDeleteFunc";
             BtnDeleteFunc.Size = new Size(43, 43);
             BtnDeleteFunc.TabIndex = 118;
-            toolTip1.SetToolTip(BtnDeleteFunc, "Delete Funcionario");
+            toolTip1.SetToolTip(BtnDeleteFunc, "Deletar funcionário");
             BtnDeleteFunc.UseVisualStyleBackColor = true;
             BtnDeleteFunc.Visible = false;
             // 
@@ -580,6 +594,7 @@
             BtnCalendario2.Name = "BtnCalendario2";
             BtnCalendario2.Size = new Size(26, 26);
             BtnCalendario2.TabIndex = 101;
+            toolTip1.SetToolTip(BtnCalendario2, "Abrir calendário");
             BtnCalendario2.UseVisualStyleBackColor = true;
             BtnCalendario2.MouseClick += BtnCalendario2_MouseClick;
             // 
@@ -896,6 +911,7 @@
             BtnCalendario.Name = "BtnCalendario";
             BtnCalendario.Size = new Size(26, 26);
             BtnCalendario.TabIndex = 55;
+            toolTip1.SetToolTip(BtnCalendario, "Abrir calendário");
             BtnCalendario.UseVisualStyleBackColor = true;
             BtnCalendario.MouseClick += BtnCalendario_MouseClick;
             // 
@@ -1032,7 +1048,7 @@
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 115;
-            toolTip1.SetToolTip(BtnCancelar, "Sair da Pagina");
+            toolTip1.SetToolTip(BtnCancelar, "Sair da Página");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
             // 
@@ -1049,7 +1065,7 @@
             btnPesquisar.Size = new Size(32, 32);
             btnPesquisar.TabIndex = 3;
             btnPesquisar.Tag = "Pesquisar";
-            toolTip1.SetToolTip(btnPesquisar, "Pesquisar");
+            toolTip1.SetToolTip(btnPesquisar, "Pesquisar por matrícula");
             btnPesquisar.UseVisualStyleBackColor = false;
             btnPesquisar.MouseClick += BtnPesquisar_MouseClick;
             // 
@@ -1078,6 +1094,16 @@
             panel3.Size = new Size(275, 526);
             panel3.TabIndex = 6;
             panel3.MouseClick += AllForms_MouseClick;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(93, 403);
+            label12.Name = "label12";
+            label12.Size = new Size(89, 25);
+            label12.TabIndex = 125;
+            label12.Text = "CRACHÁ";
             // 
             // label2
             // 
@@ -1124,16 +1150,6 @@
             label1.Size = new Size(468, 37);
             label1.TabIndex = 60;
             label1.Text = "_________________________________________";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Name = "label12";
-            label12.TabIndex = 125;
-            label12.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(93, 403);
-            label12.Size = new Size(89, 25);
-            label12.Text = "CRACHÁ";
             // 
             // FormAlterarCadastro
             // 
@@ -1240,5 +1256,6 @@
         private Button BtnDeleteFunc;
         private Button BtnDeletarFunc;
         private Label label12;
+        private Button button3;
     }
 }

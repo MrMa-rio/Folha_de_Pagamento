@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaDetalhada));
             LbFolhaDetalhada = new Panel();
-            label46 = new Label();
-            CbAno = new ComboBox();
+            button1 = new Button();
             BtnImprimir = new Button();
-            BtnEditar = new Button();
             BtnConfirmar = new Button();
-            label47 = new Label();
-            CbMes = new ComboBox();
             TxtPesquisarMatricula = new MaskedTextBox();
             label20 = new Label();
             BtnPesquisarMatricula = new Button();
@@ -74,6 +71,8 @@
             label23 = new Label();
             label24 = new Label();
             panel19 = new Panel();
+            label8 = new Label();
+            label56 = new Label();
             TxtSalarioLiquido = new Label();
             TxtTotaisDescontos = new Label();
             TxtSalBaseMensal = new Label();
@@ -117,13 +116,14 @@
             label13 = new Label();
             label14 = new Label();
             panel1 = new Panel();
-            LbTitulo = new Label();
-            label1 = new Label();
             label10 = new Label();
             label9 = new Label();
             label50 = new Label();
-            label8 = new Label();
-            label56 = new Label();
+            LbTitulo = new Label();
+            label1 = new Label();
+            toolTip1 = new ToolTip(components);
+            label46 = new Label();
+            label47 = new Label();
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -139,13 +139,9 @@
             // 
             LbFolhaDetalhada.AccessibleRole = AccessibleRole.None;
             LbFolhaDetalhada.BackColor = Color.LightGray;
-            LbFolhaDetalhada.Controls.Add(label46);
-            LbFolhaDetalhada.Controls.Add(CbAno);
+            LbFolhaDetalhada.Controls.Add(button1);
             LbFolhaDetalhada.Controls.Add(BtnImprimir);
-            LbFolhaDetalhada.Controls.Add(BtnEditar);
             LbFolhaDetalhada.Controls.Add(BtnConfirmar);
-            LbFolhaDetalhada.Controls.Add(label47);
-            LbFolhaDetalhada.Controls.Add(CbMes);
             LbFolhaDetalhada.Controls.Add(TxtPesquisarMatricula);
             LbFolhaDetalhada.Controls.Add(label20);
             LbFolhaDetalhada.Controls.Add(BtnPesquisarMatricula);
@@ -158,27 +154,17 @@
             LbFolhaDetalhada.TabIndex = 2;
             LbFolhaDetalhada.MouseClick += AllForms_MouseClick;
             // 
-            // label46
+            // button1
             // 
-            label46.AutoSize = true;
-            label46.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label46.Location = new Point(795, 110);
-            label46.Name = "label46";
-            label46.Size = new Size(127, 20);
-            label46.TabIndex = 119;
-            label46.Text = "Selecionar o ano:";
-            // 
-            // CbAno
-            // 
-            CbAno.BackColor = Color.DarkGray;
-            CbAno.DropDownWidth = 185;
-            CbAno.FlatStyle = FlatStyle.Flat;
-            CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbAno.FormattingEnabled = true;
-            CbAno.Location = new Point(926, 105);
-            CbAno.Name = "CbAno";
-            CbAno.Size = new Size(121, 31);
-            CbAno.TabIndex = 118;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(1004, 39);
+            button1.Name = "button1";
+            button1.Size = new Size(43, 43);
+            button1.TabIndex = 120;
+            toolTip1.SetToolTip(button1, "Voltar ao início");
+            button1.UseVisualStyleBackColor = true;
             // 
             // BtnImprimir
             // 
@@ -186,57 +172,25 @@
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
-            BtnImprimir.Location = new Point(955, 578);
+            BtnImprimir.Location = new Point(1004, 578);
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 117;
+            toolTip1.SetToolTip(BtnImprimir, "Cancelar");
             BtnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Enabled = false;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(906, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 116;
-            BtnEditar.UseVisualStyleBackColor = true;
             // 
             // BtnConfirmar
             // 
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(857, 578);
+            BtnConfirmar.Location = new Point(955, 578);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 115;
+            toolTip1.SetToolTip(BtnConfirmar, "Gerar folha detalhada");
             BtnConfirmar.UseVisualStyleBackColor = true;
             BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
-            // 
-            // label47
-            // 
-            label47.AutoSize = true;
-            label47.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label47.Location = new Point(510, 110);
-            label47.Name = "label47";
-            label47.Size = new Size(127, 20);
-            label47.TabIndex = 77;
-            label47.Text = "Selecionar o ano:";
-            // 
-            // CbMes
-            // 
-            CbMes.BackColor = Color.DarkGray;
-            CbMes.DropDownWidth = 185;
-            CbMes.FlatStyle = FlatStyle.Flat;
-            CbMes.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbMes.FormattingEnabled = true;
-            CbMes.Location = new Point(645, 105);
-            CbMes.Name = "CbMes";
-            CbMes.Size = new Size(121, 31);
-            CbMes.TabIndex = 75;
             // 
             // TxtPesquisarMatricula
             // 
@@ -297,6 +251,8 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.FixedSingle;
+            panel6.Controls.Add(label46);
+            panel6.Controls.Add(label47);
             panel6.Controls.Add(TxtSalarioLiqMensal);
             panel6.Controls.Add(TxtMaiorRemuneracao);
             panel6.Controls.Add(label41);
@@ -536,7 +492,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(537, 25);
+            label2.Location = new Point(650, 25);
             label2.MaximumSize = new Size(85, 19);
             label2.Name = "label2";
             label2.Size = new Size(26, 19);
@@ -547,7 +503,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(756, 5);
+            label5.Location = new Point(838, 5);
             label5.Name = "label5";
             label5.Size = new Size(74, 19);
             label5.TabIndex = 79;
@@ -557,7 +513,7 @@
             // 
             TxtSalarioBase.AutoSize = true;
             TxtSalarioBase.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioBase.Location = new Point(558, 25);
+            TxtSalarioBase.Location = new Point(673, 25);
             TxtSalarioBase.MaximumSize = new Size(85, 19);
             TxtSalarioBase.Name = "TxtSalarioBase";
             TxtSalarioBase.Size = new Size(60, 19);
@@ -568,7 +524,7 @@
             // 
             TxtDataAdmissao.AutoSize = true;
             TxtDataAdmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataAdmissao.Location = new Point(756, 25);
+            TxtDataAdmissao.Location = new Point(838, 25);
             TxtDataAdmissao.MaximumSize = new Size(85, 19);
             TxtDataAdmissao.Name = "TxtDataAdmissao";
             TxtDataAdmissao.Size = new Size(83, 19);
@@ -580,11 +536,11 @@
             TxtCargo.AutoSize = true;
             TxtCargo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCargo.Location = new Point(375, 25);
-            TxtCargo.MaximumSize = new Size(150, 19);
+            TxtCargo.MaximumSize = new Size(250, 19);
             TxtCargo.Name = "TxtCargo";
-            TxtCargo.Size = new Size(146, 19);
+            TxtCargo.Size = new Size(242, 19);
             TxtCargo.TabIndex = 76;
-            TxtCargo.Text = "Auxiliar Administrativo";
+            TxtCargo.Text = "Auxiliar Administrativo II Almoxarifado";
             // 
             // TxtNome
             // 
@@ -612,7 +568,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.Location = new Point(550, 5);
+            label21.Location = new Point(665, 5);
             label21.Name = "label21";
             label21.Size = new Size(56, 19);
             label21.TabIndex = 16;
@@ -666,6 +622,25 @@
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 17;
             panel19.MouseClick += AllForms_MouseClick;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(7, 27);
+            label8.Name = "label8";
+            label8.Size = new Size(51, 15);
+            label8.TabIndex = 96;
+            label8.Text = "Numero";
+            // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label56.Location = new Point(7, 7);
+            label56.Name = "label56";
+            label56.Size = new Size(20, 15);
+            label56.TabIndex = 95;
+            label56.Text = "ID";
             // 
             // TxtSalarioLiquido
             // 
@@ -1138,6 +1113,36 @@
             panel1.TabIndex = 6;
             panel1.MouseClick += AllForms_MouseClick;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(3, 5);
+            label10.Name = "label10";
+            label10.Size = new Size(331, 25);
+            label10.TabIndex = 16;
+            label10.Text = "JOSE ANTONIO ALVES CARNEIRO ME";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(3, 35);
+            label9.Name = "label9";
+            label9.Size = new Size(537, 19);
+            label9.TabIndex = 17;
+            label9.Text = "RUA JORGE LUIZ REGISTRO, 48, JARDIM SANTA CRUZ, SERRANA-SP, CEP: 14150-000";
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label50.Location = new Point(680, 10);
+            label50.Name = "label50";
+            label50.Size = new Size(235, 25);
+            label50.TabIndex = 15;
+            label50.Text = "CNPJ : 13.545.586/0001-11";
+            // 
             // LbTitulo
             // 
             LbTitulo.AutoSize = true;
@@ -1160,58 +1165,30 @@
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(70, 50);
             label1.Name = "label1";
-            label1.Size = new Size(292, 37);
+            label1.Size = new Size(369, 37);
             label1.TabIndex = 60;
-            label1.Text = "_________________________";
+            label1.Text = "________________________________";
             // 
-            // label10
+            // label46
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(20, 11);
-            label10.Name = "label10";
-            label10.Size = new Size(331, 25);
-            label10.TabIndex = 16;
-            label10.Text = "JOSE ANTONIO ALVES CARNEIRO ME";
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label46.Location = new Point(690, 25);
+            label46.MaximumSize = new Size(85, 19);
+            label46.Name = "label46";
+            label46.Size = new Size(83, 19);
+            label46.TabIndex = 78;
+            label46.Text = "12/12/2012";
             // 
-            // label9
+            // label47
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(20, 41);
-            label9.Name = "label9";
-            label9.Size = new Size(537, 19);
-            label9.TabIndex = 17;
-            label9.Text = "RUA JORGE LUIZ REGISTRO, 48, JARDIM SANTA CRUZ, SERRANA-SP, CEP: 14150-000";
-            // 
-            // label50
-            // 
-            label50.AutoSize = true;
-            label50.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            label50.Location = new Point(697, 16);
-            label50.Name = "label50";
-            label50.Size = new Size(235, 25);
-            label50.TabIndex = 15;
-            label50.Text = "CNPJ : 13.545.586/0001-11";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(7, 27);
-            label8.Name = "label8";
-            label8.Size = new Size(51, 15);
-            label8.TabIndex = 96;
-            label8.Text = "Numero";
-            // 
-            // label56
-            // 
-            label56.AutoSize = true;
-            label56.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label56.Location = new Point(7, 7);
-            label56.Name = "label56";
-            label56.Size = new Size(20, 15);
-            label56.TabIndex = 95;
-            label56.Text = "ID";
+            label47.AutoSize = true;
+            label47.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label47.Location = new Point(690, 5);
+            label47.Name = "label47";
+            label47.Size = new Size(123, 19);
+            label47.TabIndex = 77;
+            label47.Text = "Data de emissão:";
             // 
             // FormFolhaDetalhada
             // 
@@ -1328,18 +1305,17 @@
         internal Label TxtVencimentos;
         internal Label TxtSalarioLiqMensal;
         internal Label TxtMaiorRemuneracao;
-        private ComboBox CbMes;
-        private Label label47;
-        private Button BtnEditar;
         private Button BtnConfirmar;
         private Button BtnImprimir;
-        private Label label46;
-        private ComboBox CbAno;
         internal MaskedTextBox TxtPesquisarMatricula;
         private Label label10;
         private Label label9;
         private Label label50;
         private Label label8;
         private Label label56;
+        private ToolTip toolTip1;
+        private Button button1;
+        internal Label label46;
+        private Label label47;
     }
 }

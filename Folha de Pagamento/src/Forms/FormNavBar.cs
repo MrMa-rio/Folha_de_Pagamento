@@ -133,5 +133,12 @@ namespace FOLHA_DE_PAGAMENTO_
             handleForm = c_FormShow.setFormShow(FormAtivo, formDetalhadaPesq);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
         }
+
+        private void BtnConfiguracao_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormSobre formSobre = new FormSobre(this);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formSobre);
+            c_FormNavBarShow.AnimationHide(this, Pnl2);
+        }
     }
 }

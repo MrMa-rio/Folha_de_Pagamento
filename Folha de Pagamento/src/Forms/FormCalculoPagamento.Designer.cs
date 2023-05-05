@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCalculoPagamento));
             LbCalculoPagamento = new Panel();
             PanelCalculoPagamento = new Panel();
@@ -91,6 +92,10 @@
             label5 = new Label();
             LbTitulo = new Label();
             label1 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            toolTip1 = new ToolTip(components);
             LbCalculoPagamento.SuspendLayout();
             PanelCalculoPagamento.SuspendLayout();
             panel19.SuspendLayout();
@@ -102,6 +107,9 @@
             // 
             LbCalculoPagamento.AccessibleRole = AccessibleRole.None;
             LbCalculoPagamento.BackColor = Color.LightGray;
+            LbCalculoPagamento.Controls.Add(button3);
+            LbCalculoPagamento.Controls.Add(button2);
+            LbCalculoPagamento.Controls.Add(button1);
             LbCalculoPagamento.Controls.Add(PanelCalculoPagamento);
             LbCalculoPagamento.Controls.Add(LbTitulo);
             LbCalculoPagamento.Controls.Add(label1);
@@ -885,6 +893,42 @@
             label1.TabIndex = 60;
             label1.Text = "_______________________________________________";
             // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(1004, 95);
+            button1.Name = "button1";
+            button1.Size = new Size(43, 43);
+            button1.TabIndex = 61;
+            toolTip1.SetToolTip(button1, "Voltar ao início");
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(1004, 578);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 62;
+            toolTip1.SetToolTip(button2, "Limpar todos os campos do formulário");
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(955, 578);
+            button3.Name = "button3";
+            button3.Size = new Size(43, 43);
+            button3.TabIndex = 63;
+            toolTip1.SetToolTip(button3, "Confirmar");
+            button3.UseVisualStyleBackColor = true;
+            // 
             // FormCalculoPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1003,5 +1047,9 @@
         internal TextBox TxtAliquotaIr3;
         internal TextBox TxtAliquotaIr2;
         internal TextBox TxtAliquotaIr1;
+        private Button button1;
+        private Button button3;
+        private Button button2;
+        private ToolTip toolTip1;
     }
 }

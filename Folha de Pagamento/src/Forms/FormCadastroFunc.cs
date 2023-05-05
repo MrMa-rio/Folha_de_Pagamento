@@ -135,7 +135,7 @@ namespace FOLHA_DE_PAGAMENTO_
         }
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
         {
-            DialogResult alert = MessageBox.Show("Você está preste a fechar a Area de Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
+            DialogResult alert = MessageBox.Show("Você está prestes a fechar a Área de Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
             if (alert == DialogResult.OK)
             {
                 Close();
@@ -220,10 +220,15 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnLimpar_MouseClick(object sender, MouseEventArgs e)
         {
-            C_eraseBoxes c_EraseBoxes = new C_eraseBoxes();
-            c_EraseBoxes.eraseTextBox(PnlCtrlFunc);
-            c_EraseBoxes.erasemaskedTextBox(PnlCtrlFunc);
-            c_EraseBoxes.eraseCombobox(PnlCtrlFunc);
+            DialogResult alert = MessageBox.Show("Você está prestes a limpar todos os campos do Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
+            if (alert == DialogResult.OK)
+            {
+                C_eraseBoxes c_EraseBoxes = new C_eraseBoxes();
+                c_EraseBoxes.eraseTextBox(PnlCtrlFunc);
+                c_EraseBoxes.erasemaskedTextBox(PnlCtrlFunc);
+                c_EraseBoxes.eraseCombobox(PnlCtrlFunc);
+            }
+        
         }
         private void BtnRefresh_MouseClick(object sender, MouseEventArgs e)
         {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,16 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
 {
     public partial class FormSobre : Form
     {
-        public FormSobre()
+        private FormNavBar FormAtivo;
+        private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
+        public FormSobre(FormNavBar navBar)
         {
             InitializeComponent();
+            FormAtivo = navBar;
+        }
+        private void AllForms_MouseClick(object sender, MouseEventArgs e)
+        {
+            navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
         }
     }
 }
