@@ -279,7 +279,6 @@
             // BtnConfiguracao
             // 
             BtnConfiguracao.BackColor = Color.LightGray;
-            BtnConfiguracao.Enabled = false;
             BtnConfiguracao.FlatAppearance.BorderSize = 0;
             BtnConfiguracao.FlatStyle = FlatStyle.Flat;
             BtnConfiguracao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);

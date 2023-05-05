@@ -48,7 +48,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
         private void PnlBackground_MouseClick(object sender, MouseEventArgs e)
         {
             C_FormShow formShow = new C_FormShow();
-            FormAlterarCadastro formAlterarCadastro = new FormAlterarCadastro(formNavBar, DadosFuncionario[0]);
+            FormAlterarCadastro formAlterarCadastro = new FormAlterarCadastro(formNavBar, DadosFuncionario[0], Convert.ToInt32( formNavBar.FormAtivo.DataUser[4] ));
             formShow.setFormShow(formPrincipal, formAlterarCadastro);
         }
     }

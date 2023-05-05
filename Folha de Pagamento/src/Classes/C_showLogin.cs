@@ -18,7 +18,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 login.TopLevel = false;
                 formHome.Controls.Add(login);
                 login.TopLevel = false;
-                //login.Location = new Point(927, 84);
                 login.Dock = DockStyle.Right;
                 login.BringToFront();
                 login.Show();

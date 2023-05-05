@@ -215,6 +215,7 @@
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 120;
             BtnImprimir.UseVisualStyleBackColor = true;
+            BtnImprimir.MouseClick += BtnImprimir_MouseClick;
             // 
             // BtnEditar
             // 

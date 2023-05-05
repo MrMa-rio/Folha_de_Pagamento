@@ -33,6 +33,22 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
                 MessageBox.Show("Usuario/Senha Invalidos!");
             }
         }
+
+        private void TxtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (TxtUser.Text.Trim().Length != 0 && TxtPassword.Text.Trim().Length != 0)
+                {
+                    C_VerificarLogin c_VerificarLogin = new C_VerificarLogin();
+                    c_VerificarLogin.statusLogin(TxtUser.Text, TxtPassword.Text, this);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario/Senha Invalidos!");
+                }
+            }
+        }
     }
 }
 

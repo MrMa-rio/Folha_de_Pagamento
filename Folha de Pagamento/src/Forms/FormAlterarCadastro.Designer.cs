@@ -31,9 +31,9 @@
             components = new System.ComponentModel.Container();
             Button BtnEditar;
             Button button1;
-            Button button2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             panel1 = new Panel();
+            BtnDeleteFunc = new Button();
             TxtMatricula = new MaskedTextBox();
             BtnConfirmar = new Button();
             PnlCtrlFunc = new Panel();
@@ -108,7 +108,6 @@
             toolTip1 = new ToolTip(components);
             BtnEditar = new Button();
             button1 = new Button();
-            button2 = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctData).BeginInit();
@@ -146,23 +145,10 @@
             button1.UseVisualStyleBackColor = true;
             button1.MouseClick += button1_MouseClick;
             // 
-            // button2
-            // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(67, 578);
-            button2.Name = "button2";
-            button2.Size = new Size(43, 43);
-            button2.TabIndex = 124;
-            toolTip1.SetToolTip(button2, "Deletar Funcionário");
-            button2.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(BtnDeleteFunc);
             panel1.Controls.Add(TxtMatricula);
             panel1.Controls.Add(BtnConfirmar);
             panel1.Controls.Add(PnlCtrlFunc);
@@ -177,6 +163,19 @@
             panel1.Size = new Size(1110, 630);
             panel1.TabIndex = 0;
             panel1.MouseClick += AllForms_MouseClick;
+            // 
+            // BtnDeleteFunc
+            // 
+            BtnDeleteFunc.FlatAppearance.BorderSize = 0;
+            BtnDeleteFunc.FlatStyle = FlatStyle.Flat;
+            BtnDeleteFunc.Image = Properties.Resources.user_minus;
+            BtnDeleteFunc.Location = new Point(67, 582);
+            BtnDeleteFunc.Name = "BtnDeleteFunc";
+            BtnDeleteFunc.Size = new Size(43, 43);
+            BtnDeleteFunc.TabIndex = 118;
+            toolTip1.SetToolTip(BtnDeleteFunc, "Delete Funcionario");
+            BtnDeleteFunc.UseVisualStyleBackColor = true;
+            BtnDeleteFunc.Visible = false;
             // 
             // TxtMatricula
             // 
@@ -1202,5 +1201,6 @@
         internal PictureBox PctData;
         private ToolTip toolTip1;
         private MaskedTextBox TxtSalarioBase;
+        private Button BtnDeleteFunc;
     }
 }

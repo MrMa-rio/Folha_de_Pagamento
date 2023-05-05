@@ -26,8 +26,6 @@ namespace FOLHA_DE_PAGAMENTO_
         public FormNavBar(FormHome formHome) : this()
         {
             FormAtivo = formHome;
-
-
         }
 
         private void BtnArrowLeft_MouseClick(object sender, MouseEventArgs e)
@@ -45,7 +43,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BtnAlterarCadastro_MouseClick(object sender, MouseEventArgs e)
         {
 
-            FormAlterarCadastro formAlterarCadastro = new FormAlterarCadastro(this);
+            FormAlterarCadastro formAlterarCadastro = new FormAlterarCadastro(this, Convert.ToInt32(FormAtivo.DataUser[4]));
             handleForm = c_FormShow.setFormShow(FormAtivo, formAlterarCadastro);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
         }
@@ -108,10 +106,15 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BtnLogout_MouseClick(object sender, MouseEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Trocar de Perfil ?", "Trocar Usuario", MessageBoxButtons.YesNo);
-            if(dialogResult == DialogResult.Yes)
+            if (dialogResult == DialogResult.Yes)
             {
                 C_VerificarLogin c_VerificarLogin = new C_VerificarLogin();
                 c_FormNavBarShow.AnimationHide(this, Pnl2);
+
+                foreach (Control control in FormAtivo.Controls)
+                {
+                    control.Hide();
+                }
                 c_VerificarLogin.logout(FormAtivo, this);
             }
         }

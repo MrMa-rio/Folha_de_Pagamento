@@ -20,6 +20,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 FormHome formPrincipal = Application.OpenForms.OfType<FormHome>().FirstOrDefault();
                 formPrincipal.DataUser = Results[0];
                 formPrincipal.BtnMenu.Visible = true;
+                formPrincipal.BtnPerfil.Visible =true;
+                formPrincipal.BtnSetting.Visible = true;
                 formLogin.Close();
             }
         }
@@ -30,6 +32,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             C_showLogin showLogin = new C_showLogin();
             C_FormShow c_FormShow = new C_FormShow();
             formPrincipal.BtnMenu.Visible =false;
+            
             FormLogin formLogin = new FormLogin(formPrincipal);
             showLogin.ShowLogin(formPrincipal);
 

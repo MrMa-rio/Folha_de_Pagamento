@@ -39,17 +39,17 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 PnlPerfil.Visible = true;
             }
-            if(DataUser.Length > 1)
+            if (DataUser.Length > 1)
             {
-                label1.Text = DataUser[0].ToString();
-                label2.Text = DataUser[1].ToString();
-                label3.Text = DataUser[2].ToString();
-                label4.Text = DataUser[3].ToString();
-                label5.Text = DataUser[4].ToString();
-                label6.Text = DataUser[5].ToString();
+                label1.Text = DataUser[0].ToString(); //Matricula
+                label2.Text = DataUser[1].ToString(); //Nome
+                label3.Text = DataUser[2].ToString(); //FK Departamento
+                label4.Text = DataUser[3].ToString(); //FK Cargo
+                label5.Text = DataUser[4].ToString(); //NvlAcesso
+                label6.Text = DataUser[5].ToString(); //Status
             }
-            
+
         }
-        
+
     }
 }

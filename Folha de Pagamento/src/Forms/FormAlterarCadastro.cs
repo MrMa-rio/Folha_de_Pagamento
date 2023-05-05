@@ -19,10 +19,11 @@ namespace FOLHA_DE_PAGAMENTO_
     {
         private FormNavBar FormAtivo;
         private C_FormNavBarShow navBarShow = new C_FormNavBarShow();
-        C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
-        C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
-        C_VerificadorCEP verificadorCEP = new C_VerificadorCEP();
-        C_ManiplaçaoData c_Manipula = new C_ManiplaçaoData();
+        private C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
+        private C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
+        private C_VerificadorCEP verificadorCEP = new C_VerificadorCEP();
+        private C_ManiplaçaoData c_Manipula = new C_ManiplaçaoData();
+        private int NvlAcesso;
         string endereco = "";
 
         private bool validacao;
@@ -31,28 +32,33 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             InitializeComponent();
         }
-        public FormAlterarCadastro(FormNavBar navBar) : this()
+        public FormAlterarCadastro(FormNavBar navBar, int nvlAcesso) : this()
         {
             FormAtivo = navBar;
+            NvlAcesso = nvlAcesso;
+            C_privateArea c_PrivateArea = new C_privateArea();
+            c_PrivateArea.setDeleteFuncNvl1(BtnDeleteFunc, nvlAcesso);
+
         }
-        public FormAlterarCadastro(FormNavBar navBar, string matriculaFuncionario) : this()
+        public FormAlterarCadastro(FormNavBar navBar, string matriculaFuncionario, int nvlAcesso) : this()
         {
             FormAtivo = navBar;
             TxtMatricula.Text = matriculaFuncionario;
             Keyboard keyboard = new Keyboard();
             keyboard.SendKeys("{ENTER}");
+            NvlAcesso = nvlAcesso;
         }
 
         private void TxtCpf_TextChanged(object sender, EventArgs e)
         {
             C_ValidadorCPF c_ValidadorCPF = new C_ValidadorCPF();
             validacao = c_ValidadorCPF.setValidacao(TxtCpf, PctCpf);
-
         }
 
         private void BtnCalendario_MouseClick(object sender, MouseEventArgs e)
         {
             BoxCalendario.Visible = !BoxCalendario.Visible ? true : false;
+
         }
 
         private void BoxCalendario_DateChanged(object sender, DateRangeEventArgs e)

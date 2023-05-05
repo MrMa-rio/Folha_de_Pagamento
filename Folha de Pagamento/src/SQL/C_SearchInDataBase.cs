@@ -194,7 +194,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             string insertSql = $"SELECT * FROM tb_irf";
             return getListinDB(insertSql);
         }
-
         public List<string[]> getListValorFGTS()
         {
             string insertSql = $"SELECT * FROM tb_fgts";

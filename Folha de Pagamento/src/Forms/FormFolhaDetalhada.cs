@@ -59,5 +59,12 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             TxtPesquisarMatricula.SelectAll();
         }
+
+        private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
+            c_RelatorioFolha.setFolhaDetalhada(this);
+            MessageBox.Show("Folha de Pagamento Detalhada lançada com Sucesso!!");
+        }
     }
 }

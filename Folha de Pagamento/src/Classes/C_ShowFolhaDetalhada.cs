@@ -220,3 +220,5 @@ Lembrando que os salarios variam e sofrem reajustes
     Obs: no caso de cair no 9% em diante, é preciso fazer a conta progressiva 
     onde é feito o abate dos valores e suas porcentagem.
  */
+
+//SELECT FK_Cargo FROM bd_folha.tb_funcionario WHERE Matricula = 17;

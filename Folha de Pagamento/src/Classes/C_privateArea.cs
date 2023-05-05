@@ -14,6 +14,12 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             
             int NivelAcesso = Convert.ToInt32(NvlAcesso);
 
+            if(NivelAcesso == 1)
+            {
+                showCRUDCargo();
+                setNvl2NavBar();
+                setNvl1NavBar();
+            }
             if(NivelAcesso > 1 && NvlAcesso != null)
             {
                 if(NivelAcesso == 2)
@@ -22,10 +28,54 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 }
                 if(NivelAcesso == 3)
                 {
-
                     setNvl3NavBar();
                 }
             }
+        }
+
+        public void setDeleteFuncNvl1(Button DeleteFunc, int nvlAcesso)
+        {
+            if(nvlAcesso == 1)
+            {
+                DeleteFunc.Visible = true;
+            }
+            else
+            {
+                DeleteFunc.Visible = false;
+            }
+            
+
+        }
+
+        public void showCRUDCargo()
+        {
+            FormNavBar formNavbar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
+            formNavbar.BtnCargosFun.Visible = true;
+            
+        }
+        public void setNvl1NavBar()
+        {
+            FormNavBar formNavbar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
+            formNavbar.BtnCargosFun.Visible = true;
+            formNavbar.BtnPesquisar.Location = new Point(35, 148);
+        }
+        public void setNvl2NavBar()
+        {
+            FormNavBar formNavbar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
+            formNavbar.BtnGerenciamento.Visible = true;
+            formNavbar.PanelSubMenu.Visible = true;
+            formNavbar.PanelSubMenuRel.Visible = true;
+            formNavbar.PanelSubMenu.Visible = true;
+            foreach (Control control in formNavbar.PanelSubMenuRel.Controls)
+            {
+                if (control is Button)
+                {
+                    control.Visible = true;
+                }
+            }
+            formNavbar.BtnCargosFun.Visible = false;
+            formNavbar.BtnPesquisar.Location = new Point(35, 102);
+            formNavbar.BtnHolerite.Location = new Point(35, 149);
         }
 
         public void setNvl3NavBar()
@@ -45,22 +95,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formNavbar.BtnHolerite.Location = new Point(35, 11);
         }
 
-        public void setNvl2NavBar()
-        {
-            FormNavBar formNavbar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
-            formNavbar.BtnGerenciamento.Visible = true;
-            formNavbar.PanelSubMenu.Visible = true;
-            formNavbar.PanelSubMenuRel.Visible = true;
-            formNavbar.PanelSubMenu.Visible = true;
-            foreach (Control control in formNavbar.PanelSubMenuRel.Controls)
-            {
-                if (control is Button)
-                {
-                    control.Visible = true;
-                }
-            }
-            formNavbar.BtnHolerite.Location = new Point(35, 149);
-        }
+       
     }
 }
 

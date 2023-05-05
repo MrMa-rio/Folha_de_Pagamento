@@ -86,8 +86,9 @@
             TxtPassword.Name = "TxtPassword";
             TxtPassword.PlaceholderText = "Senha";
             TxtPassword.Size = new Size(214, 29);
-            TxtPassword.TabIndex = 6;
+            TxtPassword.TabIndex = 2;
             TxtPassword.UseSystemPasswordChar = true;
+            TxtPassword.KeyDown += TxtPassword_KeyDown;
             // 
             // TxtUser
             // 
@@ -96,7 +97,7 @@
             TxtUser.Name = "TxtUser";
             TxtUser.PlaceholderText = "Matricula : 0010";
             TxtUser.Size = new Size(214, 29);
-            TxtUser.TabIndex = 7;
+            TxtUser.TabIndex = 1;
             // 
             // label5
             // 

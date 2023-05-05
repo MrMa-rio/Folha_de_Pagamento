@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaDetalhada));
             LbFolhaDetalhada = new Panel();
+            label46 = new Label();
+            CbAno = new ComboBox();
             BtnImprimir = new Button();
             BtnEditar = new Button();
             BtnConfirmar = new Button();
@@ -120,8 +122,6 @@
             label9 = new Label();
             LbTitulo = new Label();
             label1 = new Label();
-            label46 = new Label();
-            CbAno = new ComboBox();
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -156,6 +156,28 @@
             LbFolhaDetalhada.TabIndex = 2;
             LbFolhaDetalhada.MouseClick += AllForms_MouseClick;
             // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label46.Location = new Point(795, 110);
+            label46.Name = "label46";
+            label46.Size = new Size(127, 20);
+            label46.TabIndex = 119;
+            label46.Text = "Selecionar o ano:";
+            // 
+            // CbAno
+            // 
+            CbAno.BackColor = Color.DarkGray;
+            CbAno.DropDownWidth = 185;
+            CbAno.FlatStyle = FlatStyle.Flat;
+            CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbAno.FormattingEnabled = true;
+            CbAno.Location = new Point(926, 105);
+            CbAno.Name = "CbAno";
+            CbAno.Size = new Size(121, 31);
+            CbAno.TabIndex = 118;
+            // 
             // BtnImprimir
             // 
             BtnImprimir.Enabled = false;
@@ -182,7 +204,6 @@
             // 
             // BtnConfirmar
             // 
-            BtnConfirmar.Enabled = false;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
@@ -191,6 +212,7 @@
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 115;
             BtnConfirmar.UseVisualStyleBackColor = true;
+            BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
             // 
             // label47
             // 
@@ -1168,28 +1190,6 @@
             label1.TabIndex = 60;
             label1.Text = "_________________________";
             // 
-            // label46
-            // 
-            label46.AutoSize = true;
-            label46.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label46.Location = new Point(795, 110);
-            label46.Name = "label46";
-            label46.Size = new Size(127, 20);
-            label46.TabIndex = 119;
-            label46.Text = "Selecionar o ano:";
-            // 
-            // CbAno
-            // 
-            CbAno.BackColor = Color.DarkGray;
-            CbAno.DropDownWidth = 185;
-            CbAno.FlatStyle = FlatStyle.Flat;
-            CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbAno.FormattingEnabled = true;
-            CbAno.Location = new Point(926, 105);
-            CbAno.Name = "CbAno";
-            CbAno.Size = new Size(121, 31);
-            CbAno.TabIndex = 118;
-            // 
             // FormFolhaDetalhada
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1272,7 +1272,6 @@
         internal Label TxtNome;
         internal Label TxtMatricula;
         internal Label label2;
-        private MaskedTextBox TxtPesquisarMatricula;
         internal Label TxtTaxaDescINSS;
         internal Label TxtDescINSS;
         internal Label TxtSalarioBaseINSS;
@@ -1316,5 +1315,6 @@
         private Button BtnImprimir;
         private Label label46;
         private ComboBox CbAno;
+        internal MaskedTextBox TxtPesquisarMatricula;
     }
 }
