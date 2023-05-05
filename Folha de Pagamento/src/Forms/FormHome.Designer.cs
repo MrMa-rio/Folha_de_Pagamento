@@ -84,7 +84,7 @@
             BtnSetting.Name = "BtnSetting";
             BtnSetting.Size = new Size(48, 48);
             BtnSetting.TabIndex = 2;
-            toolTip1.SetToolTip(BtnSetting, "Configuração");
+            toolTip1.SetToolTip(BtnSetting, "Sobre os criadores e a empresa");
             BtnSetting.UseVisualStyleBackColor = true;
             // 
             // PnlPerfil

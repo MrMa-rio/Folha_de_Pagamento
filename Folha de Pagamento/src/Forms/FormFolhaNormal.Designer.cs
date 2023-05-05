@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaNormal));
             LbFolhaNormal = new Panel();
+            button2 = new Button();
             button1 = new Button();
             BtnImprimir = new Button();
-            BtnEditar = new Button();
             BtnConfirmar = new Button();
             label31 = new Label();
             CbAno = new ComboBox();
@@ -128,6 +129,7 @@
             label34 = new Label();
             LbTitulo = new Label();
             label1 = new Label();
+            toolTip1 = new ToolTip(components);
             LbFolhaNormal.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel8.SuspendLayout();
@@ -150,9 +152,9 @@
             // 
             LbFolhaNormal.AccessibleRole = AccessibleRole.None;
             LbFolhaNormal.BackColor = Color.LightGray;
+            LbFolhaNormal.Controls.Add(button2);
             LbFolhaNormal.Controls.Add(button1);
             LbFolhaNormal.Controls.Add(BtnImprimir);
-            LbFolhaNormal.Controls.Add(BtnEditar);
             LbFolhaNormal.Controls.Add(BtnConfirmar);
             LbFolhaNormal.Controls.Add(label31);
             LbFolhaNormal.Controls.Add(CbAno);
@@ -167,6 +169,19 @@
             LbFolhaNormal.TabIndex = 2;
             LbFolhaNormal.MouseClick += AllForms_MouseClick;
             // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(1004, 39);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 130;
+            toolTip1.SetToolTip(button2, "Voltar ao início");
+            button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             button1.Enabled = false;
@@ -177,6 +192,7 @@
             button1.Name = "button1";
             button1.Size = new Size(43, 43);
             button1.TabIndex = 129;
+            toolTip1.SetToolTip(button1, "Cancelar");
             button1.UseVisualStyleBackColor = true;
             // 
             // BtnImprimir
@@ -185,23 +201,12 @@
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
-            BtnImprimir.Location = new Point(955, 578);
+            BtnImprimir.Location = new Point(1004, 578);
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
-            BtnImprimir.TabIndex = 128;
+            BtnImprimir.TabIndex = 120;
             BtnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Enabled = false;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(906, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 127;
-            BtnEditar.UseVisualStyleBackColor = true;
+            BtnImprimir.MouseClick += BtnImprimir_MouseClick;
             // 
             // BtnConfirmar
             // 
@@ -209,10 +214,11 @@
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(857, 578);
+            BtnConfirmar.Location = new Point(955, 578);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 126;
+            BtnConfirmar.TabIndex = 118;
+            toolTip1.SetToolTip(BtnConfirmar, "Gerar folha normal");
             BtnConfirmar.UseVisualStyleBackColor = true;
             // 
             // label31
@@ -258,42 +264,6 @@
             CbMes.Name = "CbMes";
             CbMes.Size = new Size(121, 31);
             CbMes.TabIndex = 121;
-            // 
-            // BtnImprimir
-            // 
-            BtnImprimir.FlatAppearance.BorderSize = 0;
-            BtnImprimir.FlatStyle = FlatStyle.Flat;
-            BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
-            BtnImprimir.Location = new Point(1004, 578);
-            BtnImprimir.Name = "BtnImprimir";
-            BtnImprimir.Size = new Size(43, 43);
-            BtnImprimir.TabIndex = 120;
-            BtnImprimir.UseVisualStyleBackColor = true;
-            BtnImprimir.MouseClick += BtnImprimir_MouseClick;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Enabled = false;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(955, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 119;
-            BtnEditar.UseVisualStyleBackColor = true;
-            // 
-            // BtnConfirmar
-            // 
-            BtnConfirmar.Enabled = false;
-            BtnConfirmar.FlatAppearance.BorderSize = 0;
-            BtnConfirmar.FlatStyle = FlatStyle.Flat;
-            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(906, 578);
-            BtnConfirmar.Name = "BtnConfirmar";
-            BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 118;
-            BtnConfirmar.UseVisualStyleBackColor = true;
             // 
             // PanelFolhaDetalhada
             // 
@@ -1426,9 +1396,10 @@
         private Label label34;
         private Button button1;
         private Button BtnImprimir;
-        private Button BtnEditar;
         private Button BtnConfirmar;
         private Label label8;
         private Label label35;
+        private Button button2;
+        private ToolTip toolTip1;
     }
 }

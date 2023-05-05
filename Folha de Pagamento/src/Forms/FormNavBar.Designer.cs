@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNavBar));
             BtnArrowLeft = new Button();
             panel1 = new Panel();
@@ -48,6 +49,7 @@
             BtnConfiguracao = new Button();
             BtnLogout = new Button();
             Pnl2 = new Panel();
+            toolTip1 = new ToolTip(components);
             panel1.SuspendLayout();
             PanelSubMenuRel.SuspendLayout();
             PanelSubMenu.SuspendLayout();
@@ -93,7 +95,7 @@
             PanelSubMenuRel.Dock = DockStyle.Top;
             PanelSubMenuRel.Location = new Point(0, 320);
             PanelSubMenuRel.Name = "PanelSubMenuRel";
-            PanelSubMenuRel.Size = new Size(325, 278);
+            PanelSubMenuRel.Size = new Size(325, 291);
             PanelSubMenuRel.TabIndex = 6;
             // 
             // BtnFolhaPNormalPesq
@@ -104,13 +106,14 @@
             BtnFolhaPNormalPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnFolhaPNormalPesq.Image = (Image)resources.GetObject("BtnFolhaPNormalPesq.Image");
             BtnFolhaPNormalPesq.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnFolhaPNormalPesq.Location = new Point(35, 95);
+            BtnFolhaPNormalPesq.Location = new Point(35, 107);
             BtnFolhaPNormalPesq.Name = "BtnFolhaPNormalPesq";
             BtnFolhaPNormalPesq.Size = new Size(244, 40);
             BtnFolhaPNormalPesq.TabIndex = 13;
             BtnFolhaPNormalPesq.Text = "    Pesquisar Folha Normal";
             BtnFolhaPNormalPesq.TextAlign = ContentAlignment.MiddleLeft;
             BtnFolhaPNormalPesq.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnFolhaPNormalPesq, "Pesquisar as folhas de pagamento normais");
             BtnFolhaPNormalPesq.UseVisualStyleBackColor = false;
             BtnFolhaPNormalPesq.MouseClick += BtnFolhaPNormalPesq_MouseClick;
             // 
@@ -122,12 +125,13 @@
             FolhaPDetalhadaPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FolhaPDetalhadaPesq.Image = (Image)resources.GetObject("FolhaPDetalhadaPesq.Image");
             FolhaPDetalhadaPesq.ImageAlign = ContentAlignment.MiddleLeft;
-            FolhaPDetalhadaPesq.Location = new Point(35, 175);
+            FolhaPDetalhadaPesq.Location = new Point(35, 199);
             FolhaPDetalhadaPesq.Name = "FolhaPDetalhadaPesq";
             FolhaPDetalhadaPesq.Size = new Size(255, 40);
             FolhaPDetalhadaPesq.TabIndex = 12;
             FolhaPDetalhadaPesq.Text = "    Pesquisar Folha Detalhada";
             FolhaPDetalhadaPesq.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(FolhaPDetalhadaPesq, "Pesquisar as folhas de pagamento detalhadas");
             FolhaPDetalhadaPesq.UseVisualStyleBackColor = false;
             FolhaPDetalhadaPesq.MouseClick += FolhaPDetalhadaPesq_MouseClick;
             // 
@@ -145,6 +149,7 @@
             BtnCalculoPagamento.TabIndex = 7;
             BtnCalculoPagamento.Text = "    Impostos e Dados de Pag.";
             BtnCalculoPagamento.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnCalculoPagamento, "Cálculos de impostos e dados de pagamentos");
             BtnCalculoPagamento.UseVisualStyleBackColor = false;
             BtnCalculoPagamento.MouseClick += BtnCalculoPagamento_MouseClick;
             // 
@@ -156,12 +161,13 @@
             FolhaPDetalhada.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FolhaPDetalhada.Image = (Image)resources.GetObject("FolhaPDetalhada.Image");
             FolhaPDetalhada.ImageAlign = ContentAlignment.MiddleLeft;
-            FolhaPDetalhada.Location = new Point(35, 135);
+            FolhaPDetalhada.Location = new Point(35, 153);
             FolhaPDetalhada.Name = "FolhaPDetalhada";
             FolhaPDetalhada.Size = new Size(269, 40);
             FolhaPDetalhada.TabIndex = 8;
             FolhaPDetalhada.Text = "    Gerar Folha Pag. Detalhada";
             FolhaPDetalhada.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(FolhaPDetalhada, "Gerar folha de pagamento detalhada");
             FolhaPDetalhada.UseVisualStyleBackColor = false;
             FolhaPDetalhada.MouseClick += BtnFolhaPDetalhada_MouseClick;
             // 
@@ -173,12 +179,13 @@
             BtnHolerite.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnHolerite.Image = (Image)resources.GetObject("BtnHolerite.Image");
             BtnHolerite.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnHolerite.Location = new Point(35, 215);
+            BtnHolerite.Location = new Point(35, 245);
             BtnHolerite.Name = "BtnHolerite";
             BtnHolerite.Size = new Size(221, 40);
             BtnHolerite.TabIndex = 9;
             BtnHolerite.Text = "    Holerite";
             BtnHolerite.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnHolerite, "Visualizar o holerite");
             BtnHolerite.UseVisualStyleBackColor = false;
             BtnHolerite.MouseClick += BtnHolerite_MouseClick;
             // 
@@ -190,13 +197,14 @@
             BtnFolhaPNormal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnFolhaPNormal.Image = (Image)resources.GetObject("BtnFolhaPNormal.Image");
             BtnFolhaPNormal.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnFolhaPNormal.Location = new Point(35, 55);
+            BtnFolhaPNormal.Location = new Point(35, 61);
             BtnFolhaPNormal.Name = "BtnFolhaPNormal";
             BtnFolhaPNormal.Size = new Size(287, 40);
             BtnFolhaPNormal.TabIndex = 11;
             BtnFolhaPNormal.Text = "    Gerar Folha Pag. Normal";
             BtnFolhaPNormal.TextAlign = ContentAlignment.MiddleLeft;
             BtnFolhaPNormal.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnFolhaPNormal, "Gerar folha de pagamento normal");
             BtnFolhaPNormal.UseVisualStyleBackColor = false;
             BtnFolhaPNormal.MouseClick += BtnFolhaPNormal_MouseClick;
             // 
@@ -214,6 +222,7 @@
             BtnRelatorio.TabIndex = 14;
             BtnRelatorio.Text = "  Relatorios";
             BtnRelatorio.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnRelatorio, "Click para minimizar");
             BtnRelatorio.UseVisualStyleBackColor = true;
             BtnRelatorio.MouseClick += BtnRelatorio_MouseClick;
             // 
@@ -243,6 +252,7 @@
             BtnCadastro.TabIndex = 0;
             BtnCadastro.Text = "    Cadastrar Funcionários";
             BtnCadastro.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnCadastro, "Cadastrar novos funcionários");
             BtnCadastro.UseVisualStyleBackColor = false;
             BtnCadastro.MouseClick += BtnCadastro_MouseClick;
             // 
@@ -261,6 +271,7 @@
             BtnAlterarCadastro.Text = "    Alterar Funcionários";
             BtnAlterarCadastro.TextAlign = ContentAlignment.MiddleRight;
             BtnAlterarCadastro.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnAlterarCadastro, "Alterar funcionários já cadastrados");
             BtnAlterarCadastro.UseVisualStyleBackColor = false;
             BtnAlterarCadastro.MouseClick += BtnAlterarCadastro_MouseClick;
             // 
@@ -278,6 +289,7 @@
             BtnCargosFun.TabIndex = 3;
             BtnCargosFun.Text = "    Cargos Funcionários";
             BtnCargosFun.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnCargosFun, "Criar ou modificar Cargos");
             BtnCargosFun.UseVisualStyleBackColor = false;
             BtnCargosFun.MouseClick += BtnCargosFun_MouseClick;
             // 
@@ -295,6 +307,7 @@
             BtnPesquisar.TabIndex = 4;
             BtnPesquisar.Text = "    Pesquisar";
             BtnPesquisar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnPesquisar, "Pesquisar funcionários");
             BtnPesquisar.UseVisualStyleBackColor = false;
             BtnPesquisar.MouseClick += BtnPesquisar_MouseClick;
             // 
@@ -312,6 +325,7 @@
             BtnGerenciamento.TabIndex = 12;
             BtnGerenciamento.Text = "Gerenciamento";
             BtnGerenciamento.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnGerenciamento, "Click para minimizar");
             BtnGerenciamento.UseVisualStyleBackColor = true;
             BtnGerenciamento.MouseClick += BtnGerenciamento_MouseClick;
             // 
@@ -328,7 +342,9 @@
             BtnConfiguracao.Size = new Size(159, 48);
             BtnConfiguracao.TabIndex = 2;
             BtnConfiguracao.Text = "Sobre";
+            toolTip1.SetToolTip(BtnConfiguracao, "Sobre os criadores e a empresa");
             BtnConfiguracao.UseVisualStyleBackColor = false;
+            BtnConfiguracao.MouseClick += BtnConfiguracao_MouseClick;
             // 
             // BtnLogout
             // 
@@ -344,6 +360,7 @@
             BtnLogout.TabIndex = 3;
             BtnLogout.Text = "Trocar Perfil";
             BtnLogout.TextAlign = ContentAlignment.MiddleRight;
+            toolTip1.SetToolTip(BtnLogout, "Sair do perfil atual");
             BtnLogout.UseVisualStyleBackColor = false;
             BtnLogout.MouseClick += BtnLogout_MouseClick;
             // 
@@ -399,5 +416,6 @@
         internal Button BtnCargosFun;
         internal Button BtnFolhaPNormalPesq;
         internal Button FolhaPDetalhadaPesq;
+        private ToolTip toolTip1;
     }
 }

@@ -99,6 +99,18 @@
         r/kNDPXKmTK6GQtQ0ZMhpjjjt9JqfQJ4tiWzQBWu3AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAYxJREFUWEfl
+        mDFKxkAUhHMET2BpKTaWXsFG7G0tbVSw0FN4AisRbDyBlp7A2gMIXkBnYB88Hrv77yaT5BcHPvj/3dl5
+        L2SzhAz/TYeJrdQ9+Enw99ZoD7wCa87gGOdW1Qn4ArE5g3P0rKJbEBt6T8RxehfTDngCsQm/7/x+NLiG
+        a2fVEfgAsfg5iOJY9HEtM2bRmII9FzRJU25Zy5YYLR4TbyCG34FecU3MYfbooyh3hEw9NmSZ8qt1mnxX
+        ZtsvQaV9XdUNiIvkT5xT7mRgD0U9AjN+g9nOLCfWYC2ryx6K8g0+c2AhsVZ3g1WjWM11W427gC8A9LTA
+        J5RrSqJH2mDuGNpE7Y1G3qD3tdKaV/M1G73vM/3PwbnevJqv2biWTx6o9skD1T55oNonD1T75IFqnzxQ
+        7ZMHqn3yQLVPHqj2yQPVvuEBmPGFAwWpC7OW+dhDURfAjOQY5KRskDXMQ9hDUQfAm9eAPVR1DXILl+AK
+        NOkMxC8Ac8JarNmtfXBa4DKRm/Ns8rHGX9Uw/AITy+sdwv60dAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="BtnConfirmar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAwZJREFUWEfl

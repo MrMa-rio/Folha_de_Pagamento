@@ -78,7 +78,7 @@
             BtnDeletarCargo.Name = "BtnDeletarCargo";
             BtnDeletarCargo.Size = new Size(43, 43);
             BtnDeletarCargo.TabIndex = 125;
-            toolTip1.SetToolTip(BtnDeletarCargo, "Deletar Cargo");
+            toolTip1.SetToolTip(BtnDeletarCargo, "Deletar cargo selecionado");
             BtnDeletarCargo.UseVisualStyleBackColor = true;
             // 
             // LbAdministrarCargos
@@ -108,7 +108,7 @@
             BtnRefresh.BackgroundImageLayout = ImageLayout.Stretch;
             BtnRefresh.FlatAppearance.BorderSize = 0;
             BtnRefresh.FlatStyle = FlatStyle.Flat;
-            BtnRefresh.Location = new Point(974, 54);
+            BtnRefresh.Location = new Point(974, 95);
             BtnRefresh.Name = "BtnRefresh";
             BtnRefresh.Size = new Size(43, 43);
             BtnRefresh.TabIndex = 65;
@@ -125,7 +125,7 @@
             BtnErase1.Name = "BtnErase1";
             BtnErase1.Size = new Size(43, 43);
             BtnErase1.TabIndex = 64;
-            toolTip1.SetToolTip(BtnErase1, "Limpa Campos");
+            toolTip1.SetToolTip(BtnErase1, "Limpar todos os campos");
             BtnErase1.UseVisualStyleBackColor = true;
             BtnErase1.MouseClick += BtnErase1_MouseClick;
             // 
@@ -138,7 +138,7 @@
             button2.Name = "button2";
             button2.Size = new Size(43, 43);
             button2.TabIndex = 63;
-            toolTip1.SetToolTip(button2, "Criar Cargo");
+            toolTip1.SetToolTip(button2, "Confirmar e criar cargo");
             button2.UseVisualStyleBackColor = true;
             button2.MouseClick += button2_MouseClick;
             // 
@@ -284,7 +284,7 @@
             BtnErase2.Name = "BtnErase2";
             BtnErase2.Size = new Size(43, 43);
             BtnErase2.TabIndex = 61;
-            toolTip1.SetToolTip(BtnErase2, "Limpa Campos");
+            toolTip1.SetToolTip(BtnErase2, "Limpar todos os campos");
             BtnErase2.UseVisualStyleBackColor = true;
             BtnErase2.MouseClick += BtnErase2_MouseClick;
             // 
@@ -422,7 +422,7 @@
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 18;
-            toolTip1.SetToolTip(BtnConfirmar, "Alterar Cargo");
+            toolTip1.SetToolTip(BtnConfirmar, "Confirmar e modificar cargo");
             BtnConfirmar.UseVisualStyleBackColor = true;
             BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
             // 
@@ -431,11 +431,11 @@
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
-            BtnCancelar.Location = new Point(1023, 54);
+            BtnCancelar.Location = new Point(1023, 95);
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 19;
-            toolTip1.SetToolTip(BtnCancelar, "Fechar Pagina");
+            toolTip1.SetToolTip(BtnCancelar, "Voltar ao início");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
             // 

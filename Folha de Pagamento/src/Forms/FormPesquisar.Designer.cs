@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisar));
             LbPesquisar = new Panel();
             TxtPesquisarCargo = new ComboBox();
@@ -38,6 +39,8 @@
             PanelPesquisar = new Panel();
             LbTitulo = new Label();
             label1 = new Label();
+            toolTip1 = new ToolTip(components);
+            button1 = new Button();
             LbPesquisar.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,6 +48,7 @@
             // 
             LbPesquisar.AccessibleRole = AccessibleRole.None;
             LbPesquisar.BackColor = Color.LightGray;
+            LbPesquisar.Controls.Add(button1);
             LbPesquisar.Controls.Add(TxtPesquisarCargo);
             LbPesquisar.Controls.Add(label3);
             LbPesquisar.Controls.Add(label2);
@@ -115,6 +119,7 @@
             BtnPesquisarNomes.Name = "BtnPesquisarNomes";
             BtnPesquisarNomes.Size = new Size(31, 31);
             BtnPesquisarNomes.TabIndex = 61;
+            toolTip1.SetToolTip(BtnPesquisarNomes, "Pesquisar");
             BtnPesquisarNomes.UseVisualStyleBackColor = false;
             // 
             // PanelPesquisar
@@ -156,6 +161,18 @@
             label1.TabIndex = 60;
             label1.Text = "___________________";
             // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(1004, 39);
+            button1.Name = "button1";
+            button1.Size = new Size(43, 43);
+            button1.TabIndex = 69;
+            toolTip1.SetToolTip(button1, "Voltar ao início");
+            button1.UseVisualStyleBackColor = true;
+            // 
             // FormPesquisar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -183,5 +200,7 @@
         private Button BtnPesquisarNomes;
         internal Panel PanelPesquisar;
         private ComboBox TxtPesquisarCargo;
+        private ToolTip toolTip1;
+        private Button button1;
     }
 }

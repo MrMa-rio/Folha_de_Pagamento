@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaNormalPesq));
             LbFolhaNormal = new Panel();
+            button2 = new Button();
             button1 = new Button();
             BtnImprimir = new Button();
-            BtnEditar = new Button();
             label31 = new Label();
             CbAno = new ComboBox();
             label47 = new Label();
@@ -127,6 +128,7 @@
             label34 = new Label();
             LbTitulo = new Label();
             label1 = new Label();
+            toolTip1 = new ToolTip(components);
             LbFolhaNormal.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel8.SuspendLayout();
@@ -149,9 +151,9 @@
             // 
             LbFolhaNormal.AccessibleRole = AccessibleRole.None;
             LbFolhaNormal.BackColor = Color.LightGray;
+            LbFolhaNormal.Controls.Add(button2);
             LbFolhaNormal.Controls.Add(button1);
             LbFolhaNormal.Controls.Add(BtnImprimir);
-            LbFolhaNormal.Controls.Add(BtnEditar);
             LbFolhaNormal.Controls.Add(label31);
             LbFolhaNormal.Controls.Add(CbAno);
             LbFolhaNormal.Controls.Add(label47);
@@ -164,6 +166,19 @@
             LbFolhaNormal.Size = new Size(1110, 630);
             LbFolhaNormal.TabIndex = 3;
             // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(1004, 39);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 130;
+            toolTip1.SetToolTip(button2, "Voltar ao início");
+            button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             button1.Enabled = false;
@@ -174,6 +189,7 @@
             button1.Name = "button1";
             button1.Size = new Size(43, 43);
             button1.TabIndex = 129;
+            toolTip1.SetToolTip(button1, "Capturar tela em PDF");
             button1.UseVisualStyleBackColor = true;
             // 
             // BtnImprimir
@@ -186,19 +202,8 @@
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 128;
+            toolTip1.SetToolTip(BtnImprimir, "Imprimir PDF");
             BtnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Enabled = false;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(906, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 127;
-            BtnEditar.UseVisualStyleBackColor = true;
             // 
             // label31
             // 
@@ -206,9 +211,9 @@
             label31.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label31.Location = new Point(363, 110);
             label31.Name = "label31";
-            label31.Size = new Size(127, 20);
+            label31.Size = new Size(130, 20);
             label31.TabIndex = 125;
-            label31.Text = "Selecionar o ano:";
+            label31.Text = "Selecionar o mês:";
             // 
             // CbAno
             // 
@@ -228,9 +233,9 @@
             label47.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label47.Location = new Point(67, 110);
             label47.Name = "label47";
-            label47.Size = new Size(130, 20);
+            label47.Size = new Size(127, 20);
             label47.TabIndex = 123;
-            label47.Text = "Selecionar o mês:";
+            label47.Text = "Selecionar o ano:";
             // 
             // CbMes
             // 
@@ -1141,7 +1146,7 @@
             label13.Anchor = AnchorStyles.None;
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(181, 97);
+            label13.Location = new Point(125, 20);
             label13.Name = "label13";
             label13.Size = new Size(52, 25);
             label13.TabIndex = 1;
@@ -1273,7 +1278,6 @@
         private Panel LbFolhaNormal;
         private Button button1;
         private Button BtnImprimir;
-        private Button BtnEditar;
         private Label label31;
         private ComboBox CbAno;
         private Label label47;
@@ -1368,5 +1372,7 @@
         private Label label34;
         private Label LbTitulo;
         private Label label1;
+        private Button button2;
+        private ToolTip toolTip1;
     }
 }

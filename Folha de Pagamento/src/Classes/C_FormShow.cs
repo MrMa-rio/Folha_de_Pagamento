@@ -38,7 +38,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         }
         public void refreshFormWithAlert(Form newForm, Form closeForm)
         {
-            DialogResult dialogResult = MessageBox.Show("Você está prestes à recarregar está página.\nAlguns dados poderão ser perdidos. Tem certeza?", "Atualizar Pagina", MessageBoxButtons.OKCancel);
+            DialogResult dialogResult = MessageBox.Show("           Você está prestes a recarregar está página.\n\tAlguns dados poderão ser perdidos.\n\n\t\tTem certeza?", "Atualizar Pagina", MessageBoxButtons.OKCancel);
             if (dialogResult == DialogResult.OK)
             {
                 refreshForm(newForm, closeForm);

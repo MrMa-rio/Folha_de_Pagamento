@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHolerite));
             LbHolerite = new Panel();
+            button2 = new Button();
             button1 = new Button();
             label2 = new Label();
             CbAno = new ComboBox();
@@ -119,6 +121,7 @@
             label9 = new Label();
             LbTitulo = new Label();
             label1 = new Label();
+            toolTip1 = new ToolTip(components);
             LbHolerite.SuspendLayout();
             PanelHolerite.SuspendLayout();
             panel19.SuspendLayout();
@@ -146,6 +149,7 @@
             // 
             LbHolerite.AccessibleRole = AccessibleRole.None;
             LbHolerite.BackColor = Color.LightGray;
+            LbHolerite.Controls.Add(button2);
             LbHolerite.Controls.Add(button1);
             LbHolerite.Controls.Add(label2);
             LbHolerite.Controls.Add(CbAno);
@@ -164,6 +168,19 @@
             LbHolerite.TabIndex = 2;
             LbHolerite.MouseClick += AllForms_MouseClick;
             // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(1004, 39);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 131;
+            toolTip1.SetToolTip(button2, "Voltar ao início");
+            button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             button1.Enabled = false;
@@ -174,6 +191,7 @@
             button1.Name = "button1";
             button1.Size = new Size(43, 43);
             button1.TabIndex = 130;
+            toolTip1.SetToolTip(button1, "Capturar tela em PDF");
             button1.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -207,6 +225,7 @@
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 121;
+            toolTip1.SetToolTip(BtnImprimir, "Imprimir PDF");
             BtnImprimir.UseVisualStyleBackColor = true;
             // 
             // label47
@@ -976,11 +995,11 @@
             LbCargo.AutoSize = true;
             LbCargo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             LbCargo.Location = new Point(630, 19);
-            LbCargo.MaximumSize = new Size(150, 19);
+            LbCargo.MaximumSize = new Size(250, 19);
             LbCargo.Name = "LbCargo";
-            LbCargo.Size = new Size(146, 19);
+            LbCargo.Size = new Size(149, 19);
             LbCargo.TabIndex = 73;
-            LbCargo.Text = "Auxiliar Administrativo";
+            LbCargo.Text = "Auxiliar Almoxarifado II";
             // 
             // LbNome
             // 
@@ -1345,5 +1364,7 @@
         private Label label10;
         private Label label9;
         private Button button1;
+        private Button button2;
+        private ToolTip toolTip1;
     }
 }

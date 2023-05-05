@@ -35,7 +35,7 @@ namespace FOLHA_DE_PAGAMENTO_
             C_PrintPDF c_PrintPDF = new C_PrintPDF();
             c_PrintPDF.printPdf(PanelFolhaDetalhada);
 
-            
+
         }
     }
 }

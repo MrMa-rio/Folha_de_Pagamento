@@ -823,7 +823,7 @@
             LbCargo.AutoSize = true;
             LbCargo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             LbCargo.Location = new Point(630, 19);
-            LbCargo.MaximumSize = new Size(150, 19);
+            LbCargo.MaximumSize = new Size(250, 19);
             LbCargo.Name = "LbCargo";
             LbCargo.Size = new Size(146, 19);
             LbCargo.TabIndex = 73;
