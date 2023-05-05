@@ -321,6 +321,7 @@
             // 
             TxtSalarioBase.BackColor = Color.DarkGray;
             TxtSalarioBase.BorderStyle = BorderStyle.FixedSingle;
+            TxtSalarioBase.Enabled = false;
             TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtSalarioBase.Location = new Point(509, 625);
             TxtSalarioBase.Name = "TxtSalarioBase";
