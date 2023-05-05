@@ -35,12 +35,12 @@
             BtnSetting = new Button();
             toolTip1 = new ToolTip(components);
             PnlPerfil = new Panel();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
             label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             PnlPerfil.SuspendLayout();
             SuspendLayout();
             // 
@@ -102,41 +102,14 @@
             PnlPerfil.TabIndex = 3;
             PnlPerfil.Visible = false;
             // 
-            // label1
+            // label6
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(29, 102);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(29, 330);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(29, 282);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 2;
-            label3.Text = "label3";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(29, 238);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 3;
-            label4.Text = "label4";
+            label6.AutoSize = true;
+            label6.Location = new Point(29, 148);
+            label6.Name = "label6";
+            label6.Size = new Size(72, 15);
+            label6.TabIndex = 5;
+            label6.Text = "Nivel acesso";
             // 
             // label5
             // 
@@ -147,14 +120,41 @@
             label5.TabIndex = 4;
             label5.Text = "label5";
             // 
-            // label6
+            // label4
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(29, 148);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 5;
-            label6.Text = "label6";
+            label4.AutoSize = true;
+            label4.Location = new Point(29, 238);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 15);
+            label4.TabIndex = 3;
+            label4.Text = "label4";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(29, 282);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 2;
+            label3.Text = "label3";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(29, 330);
+            label2.Name = "label2";
+            label2.Size = new Size(40, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Nome";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(29, 102);
+            label1.Name = "label1";
+            label1.Size = new Size(57, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Matricula";
             // 
             // FormHome
             // 

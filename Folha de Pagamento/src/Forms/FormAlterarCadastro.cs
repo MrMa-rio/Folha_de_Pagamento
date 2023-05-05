@@ -210,7 +210,7 @@ namespace FOLHA_DE_PAGAMENTO_
         }
         private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
         {
-            DialogResult messageAlert = MessageBox.Show("Você está preste à alterar este cadastro. Tem certeza?", "Alterar Cadastro", MessageBoxButtons.YesNo);
+            DialogResult messageAlert = MessageBox.Show("Você está prestes a alterar este cadastro. Tem certeza?", "Alterar Cadastro", MessageBoxButtons.YesNo);
             if (messageAlert == DialogResult.Yes)
             {
                 C_ManiplaçaoData c_InvertendoData = new C_ManiplaçaoData();

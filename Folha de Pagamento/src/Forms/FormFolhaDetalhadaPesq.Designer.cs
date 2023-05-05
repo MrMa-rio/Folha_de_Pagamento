@@ -1,6 +1,6 @@
-﻿namespace FOLHA_DE_PAGAMENTO_
+﻿namespace FOLHA_DE_PAGAMENTO_.src.Forms
 {
-    partial class FormFolhaDetalhada
+    partial class FormFolhaDetalhadaPesq
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaDetalhada));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaDetalhadaPesq));
             LbFolhaDetalhada = new Panel();
             button1 = new Button();
             label46 = new Label();
             CbAno = new ComboBox();
             BtnImprimir = new Button();
             BtnEditar = new Button();
-            BtnConfirmar = new Button();
             label47 = new Label();
             CbMes = new ComboBox();
             TxtPesquisarMatricula = new MaskedTextBox();
@@ -147,7 +146,6 @@
             LbFolhaDetalhada.Controls.Add(CbAno);
             LbFolhaDetalhada.Controls.Add(BtnImprimir);
             LbFolhaDetalhada.Controls.Add(BtnEditar);
-            LbFolhaDetalhada.Controls.Add(BtnConfirmar);
             LbFolhaDetalhada.Controls.Add(label47);
             LbFolhaDetalhada.Controls.Add(CbMes);
             LbFolhaDetalhada.Controls.Add(TxtPesquisarMatricula);
@@ -159,8 +157,7 @@
             LbFolhaDetalhada.Location = new Point(80, 90);
             LbFolhaDetalhada.Name = "LbFolhaDetalhada";
             LbFolhaDetalhada.Size = new Size(1110, 630);
-            LbFolhaDetalhada.TabIndex = 2;
-            LbFolhaDetalhada.MouseClick += AllForms_MouseClick;
+            LbFolhaDetalhada.TabIndex = 3;
             // 
             // button1
             // 
@@ -220,18 +217,6 @@
             BtnEditar.TabIndex = 116;
             BtnEditar.UseVisualStyleBackColor = true;
             // 
-            // BtnConfirmar
-            // 
-            BtnConfirmar.Enabled = false;
-            BtnConfirmar.FlatAppearance.BorderSize = 0;
-            BtnConfirmar.FlatStyle = FlatStyle.Flat;
-            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(857, 578);
-            BtnConfirmar.Name = "BtnConfirmar";
-            BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 115;
-            BtnConfirmar.UseVisualStyleBackColor = true;
-            // 
             // label47
             // 
             label47.AutoSize = true;
@@ -265,8 +250,6 @@
             TxtPesquisarMatricula.PromptChar = ' ';
             TxtPesquisarMatricula.Size = new Size(116, 31);
             TxtPesquisarMatricula.TabIndex = 72;
-            TxtPesquisarMatricula.Click += TxtPesquisarMatricula_Click;
-            TxtPesquisarMatricula.KeyDown += TxtPesquisarMatricula_KeyDown;
             // 
             // label20
             // 
@@ -289,7 +272,6 @@
             BtnPesquisarMatricula.Size = new Size(31, 31);
             BtnPesquisarMatricula.TabIndex = 69;
             BtnPesquisarMatricula.UseVisualStyleBackColor = true;
-            BtnPesquisarMatricula.MouseClick += BtnPesquisarMatricula_MouseClick;
             // 
             // PanelFolhaDetalhada
             // 
@@ -308,7 +290,6 @@
             PanelFolhaDetalhada.Name = "PanelFolhaDetalhada";
             PanelFolhaDetalhada.Size = new Size(980, 434);
             PanelFolhaDetalhada.TabIndex = 7;
-            PanelFolhaDetalhada.MouseClick += AllForms_MouseClick;
             // 
             // panel6
             // 
@@ -323,7 +304,6 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
-            panel6.MouseClick += AllForms_MouseClick;
             // 
             // label49
             // 
@@ -409,7 +389,6 @@
             panelFgts.Name = "panelFgts";
             panelFgts.Size = new Size(315, 257);
             panelFgts.TabIndex = 19;
-            panelFgts.MouseClick += AllForms_MouseClick;
             // 
             // label43
             // 
@@ -569,7 +548,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(956, 50);
             panel2.TabIndex = 18;
-            panel2.MouseClick += AllForms_MouseClick;
             // 
             // label2
             // 
@@ -704,7 +682,6 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 17;
-            panel19.MouseClick += AllForms_MouseClick;
             // 
             // label8
             // 
@@ -834,7 +811,6 @@
             panelIrrf.Name = "panelIrrf";
             panelIrrf.Size = new Size(315, 257);
             panelIrrf.TabIndex = 10;
-            panelIrrf.MouseClick += AllForms_MouseClick;
             // 
             // label36
             // 
@@ -1020,7 +996,6 @@
             panelInss.Name = "panelInss";
             panelInss.Size = new Size(315, 257);
             panelInss.TabIndex = 9;
-            panelInss.MouseClick += AllForms_MouseClick;
             // 
             // label35
             // 
@@ -1168,7 +1143,7 @@
             label13.Anchor = AnchorStyles.None;
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(125, 20);
+            label13.Location = new Point(181, 97);
             label13.Name = "label13";
             label13.Size = new Size(52, 25);
             label13.TabIndex = 1;
@@ -1194,7 +1169,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(955, 72);
             panel1.TabIndex = 6;
-            panel1.MouseClick += AllForms_MouseClick;
             // 
             // label10
             // 
@@ -1236,9 +1210,9 @@
             LbTitulo.Location = new Point(60, 33);
             LbTitulo.Name = "LbTitulo";
             LbTitulo.Padding = new Padding(10, 0, 0, 0);
-            LbTitulo.Size = new Size(378, 41);
+            LbTitulo.Size = new Size(431, 41);
             LbTitulo.TabIndex = 50;
-            LbTitulo.Text = "Gerar Folha Detalhada       ";
+            LbTitulo.Text = "Pesquisar Folha Detalhada       ";
             // 
             // label1
             // 
@@ -1248,11 +1222,11 @@
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label1.Location = new Point(70, 50);
             label1.Name = "label1";
-            label1.Size = new Size(369, 37);
+            label1.Size = new Size(424, 37);
             label1.TabIndex = 60;
-            label1.Text = "________________________________";
+            label1.Text = "_____________________________________";
             // 
-            // FormFolhaDetalhada
+            // FormFolhaDetalhadaPesq
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -1260,9 +1234,8 @@
             ClientSize = new Size(1248, 712);
             Controls.Add(LbFolhaDetalhada);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormFolhaDetalhada";
-            Text = "FormFolhaDetalhada";
-            MouseClick += AllForms_MouseClick;
+            Name = "FormFolhaDetalhadaPesq";
+            Text = "FormFolhaDetalhadaPesq";
             LbFolhaDetalhada.ResumeLayout(false);
             LbFolhaDetalhada.PerformLayout();
             PanelFolhaDetalhada.ResumeLayout(false);
@@ -1286,102 +1259,101 @@
         #endregion
 
         private Panel LbFolhaDetalhada;
-        private Panel PanelFolhaDetalhada;
-        private Label LbTitulo;
-        private Label label1;
-        private Panel panel1;
+        private Button button1;
+        private Label label46;
+        private ComboBox CbAno;
+        private Button BtnImprimir;
+        private Button BtnEditar;
+        private Label label47;
+        private ComboBox CbMes;
+        private MaskedTextBox TxtPesquisarMatricula;
         private Label label20;
         private Button BtnPesquisarMatricula;
-        private Panel panelIrrf;
-        private Label label16;
-        private Panel panelInss;
-        private Label label12;
-        private Label label13;
-        private Label label14;
-        private Panel panel2;
-        private Label label5;
-        private Label label21;
-        private Label label22;
-        private Label label23;
-        private Label label24;
-        private Panel panel19;
-        private Label label55;
-        private Label label54;
-        private Label label53;
-        private Label label52;
-        private Panel panelFgts;
-        private Label label25;
-        private Label label27;
+        private Panel PanelFolhaDetalhada;
         private Panel panel6;
+        internal Label label49;
+        private Label label48;
+        internal Label TxtSalarioLiqMensal;
+        internal Label TxtMaiorRemuneracao;
         private Label label41;
         private Label label42;
+        private Panel panelFgts;
+        private Label label43;
+        private Label label3;
+        private Label label44;
+        private Label label4;
+        private Label label45;
+        private Label label6;
+        private Label label7;
+        internal Label TxtTotalFGTS;
+        private Label label51;
+        internal Label TxtSalarioBaseFGTS;
+        internal Label TxtValorFGTS;
         private Label label26;
         private Label label29;
-        private Label label28;
-        private Label label30;
-        private Label label11;
-        private Label label15;
-        private Label label17;
-        private Label label33;
-        private Label label32;
-        private Label label51;
+        private Label label25;
+        private Panel panel2;
+        internal Label label2;
+        private Label label5;
         internal Label TxtSalarioBase;
         internal Label TxtDataAdmissao;
         internal Label TxtCargo;
         internal Label TxtNome;
         internal Label TxtMatricula;
-        internal Label label2;
-        private MaskedTextBox TxtPesquisarMatricula;
-        internal Label TxtTaxaDescINSS;
-        internal Label TxtDescINSS;
-        internal Label TxtSalarioBaseINSS;
-        internal Label TxtValorInss;
-        internal Label TxtTotalInss;
-        internal Label TxtTaxaDescIRRF;
-        internal Label TxtDescIRRF;
-        internal Label TxtSalarioBaseIRRF;
-        internal Label TxtTotalIRRF;
-        internal Label TxtValorIRRF;
-        private Label label3;
-        private Label label4;
-        private Label label6;
-        private Label label7;
-        private Label label43;
-        private Label label44;
-        private Label label45;
+        private Label label21;
+        private Label label22;
+        private Label label23;
+        private Label label24;
+        private Panel panel19;
+        private Label label8;
+        private Label label56;
+        internal Label TxtSalarioLiquido;
+        internal Label TxtTotaisDescontos;
+        internal Label TxtSalBaseMensal;
+        internal Label TxtVencimentos;
+        private Label label55;
+        private Label label54;
+        private Label label53;
+        private Label label52;
+        private Panel panelIrrf;
         private Label label36;
         private Label label37;
+        internal Label TxtTaxaDescIRRF;
         private Label label38;
+        internal Label TxtDescIRRF;
         private Label label39;
+        internal Label TxtSalarioBaseIRRF;
         private Label label40;
+        internal Label TxtTotalIRRF;
+        internal Label TxtValorIRRF;
+        private Label label28;
+        private Label label30;
+        private Label label11;
+        private Label label15;
+        private Label label17;
+        private Label label16;
+        private Panel panelInss;
         private Label label35;
         private Label label34;
         private Label label31;
         private Label label19;
         private Label label18;
-        internal Label TxtSalarioBaseFGTS;
-        internal Label TxtValorFGTS;
-        internal Label TxtTotalFGTS;
-        internal Label TxtSalarioLiquido;
-        internal Label TxtTotaisDescontos;
-        internal Label TxtSalBaseMensal;
-        internal Label TxtVencimentos;
-        internal Label TxtSalarioLiqMensal;
-        internal Label TxtMaiorRemuneracao;
-        private ComboBox CbMes;
-        private Label label47;
-        private Button BtnEditar;
-        private Button BtnConfirmar;
-        private Button BtnImprimir;
-        private Label label46;
-        private ComboBox CbAno;
-        internal Label label49;
-        private Label label48;
+        internal Label TxtTaxaDescINSS;
+        internal Label TxtDescINSS;
+        internal Label TxtSalarioBaseINSS;
+        internal Label TxtValorInss;
+        internal Label TxtTotalInss;
+        private Label label33;
+        private Label label32;
+        private Label label27;
+        private Label label12;
+        private Label label13;
+        private Label label14;
+        private Panel panel1;
         private Label label10;
         private Label label9;
         private Label label50;
-        private Button button1;
-        private Label label8;
-        private Label label56;
+        private Label LbTitulo;
+        private Label label1;
     }
 }

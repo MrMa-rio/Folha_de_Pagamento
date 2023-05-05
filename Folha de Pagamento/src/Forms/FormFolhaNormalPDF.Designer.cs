@@ -1,6 +1,6 @@
-﻿namespace FOLHA_DE_PAGAMENTO_
+﻿namespace FOLHA_DE_PAGAMENTO_.src.Forms
 {
-    partial class FormFolhaNormal
+    partial class FormFolhaNormalPDF
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaNormal));
-            LbFolhaNormal = new Panel();
-            button1 = new Button();
-            BtnImprimir = new Button();
-            BtnEditar = new Button();
-            BtnConfirmar = new Button();
-            label31 = new Label();
-            CbAno = new ComboBox();
-            label47 = new Label();
-            CbMes = new ComboBox();
             PanelFolhaDetalhada = new Panel();
             panel8 = new Panel();
-            label8 = new Label();
-            label35 = new Label();
             LbLiquido = new Label();
             LbDescontos = new Label();
             LbVencimentos = new Label();
@@ -49,8 +37,6 @@
             label69 = new Label();
             label70 = new Label();
             panel7 = new Panel();
-            label49 = new Label();
-            label48 = new Label();
             LbSalBaseMensPorcento = new Label();
             label53 = new Label();
             LbSalBaseMens = new Label();
@@ -123,12 +109,11 @@
             label13 = new Label();
             label14 = new Label();
             panel1 = new Panel();
+            label8 = new Label();
+            label49 = new Label();
+            label48 = new Label();
             label10 = new Label();
             label9 = new Label();
-            label34 = new Label();
-            LbTitulo = new Label();
-            label1 = new Label();
-            LbFolhaNormal.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel8.SuspendLayout();
             panel7.SuspendLayout();
@@ -146,124 +131,9 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // LbFolhaNormal
-            // 
-            LbFolhaNormal.AccessibleRole = AccessibleRole.None;
-            LbFolhaNormal.BackColor = Color.LightGray;
-            LbFolhaNormal.Controls.Add(button1);
-            LbFolhaNormal.Controls.Add(BtnImprimir);
-            LbFolhaNormal.Controls.Add(BtnEditar);
-            LbFolhaNormal.Controls.Add(BtnConfirmar);
-            LbFolhaNormal.Controls.Add(label31);
-            LbFolhaNormal.Controls.Add(CbAno);
-            LbFolhaNormal.Controls.Add(label47);
-            LbFolhaNormal.Controls.Add(CbMes);
-            LbFolhaNormal.Controls.Add(PanelFolhaDetalhada);
-            LbFolhaNormal.Controls.Add(LbTitulo);
-            LbFolhaNormal.Controls.Add(label1);
-            LbFolhaNormal.Location = new Point(80, 90);
-            LbFolhaNormal.Name = "LbFolhaNormal";
-            LbFolhaNormal.Size = new Size(1110, 630);
-            LbFolhaNormal.TabIndex = 2;
-            LbFolhaNormal.MouseClick += AllForms_MouseClick;
-            // 
-            // button1
-            // 
-            button1.Enabled = false;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(1004, 578);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 43);
-            button1.TabIndex = 129;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // BtnImprimir
-            // 
-            BtnImprimir.Enabled = false;
-            BtnImprimir.FlatAppearance.BorderSize = 0;
-            BtnImprimir.FlatStyle = FlatStyle.Flat;
-            BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
-            BtnImprimir.Location = new Point(955, 578);
-            BtnImprimir.Name = "BtnImprimir";
-            BtnImprimir.Size = new Size(43, 43);
-            BtnImprimir.TabIndex = 128;
-            BtnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Enabled = false;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(906, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 127;
-            BtnEditar.UseVisualStyleBackColor = true;
-            // 
-            // BtnConfirmar
-            // 
-            BtnConfirmar.Enabled = false;
-            BtnConfirmar.FlatAppearance.BorderSize = 0;
-            BtnConfirmar.FlatStyle = FlatStyle.Flat;
-            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(857, 578);
-            BtnConfirmar.Name = "BtnConfirmar";
-            BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 126;
-            BtnConfirmar.UseVisualStyleBackColor = true;
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label31.Location = new Point(363, 110);
-            label31.Name = "label31";
-            label31.Size = new Size(127, 20);
-            label31.TabIndex = 125;
-            label31.Text = "Selecionar o ano:";
-            // 
-            // CbAno
-            // 
-            CbAno.BackColor = Color.DarkGray;
-            CbAno.DropDownWidth = 185;
-            CbAno.FlatStyle = FlatStyle.Flat;
-            CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbAno.FormattingEnabled = true;
-            CbAno.Location = new Point(496, 105);
-            CbAno.Name = "CbAno";
-            CbAno.Size = new Size(121, 31);
-            CbAno.TabIndex = 124;
-            // 
-            // label47
-            // 
-            label47.AutoSize = true;
-            label47.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label47.Location = new Point(67, 110);
-            label47.Name = "label47";
-            label47.Size = new Size(130, 20);
-            label47.TabIndex = 123;
-            label47.Text = "Selecionar o mês:";
-            // 
-            // CbMes
-            // 
-            CbMes.BackColor = Color.DarkGray;
-            CbMes.DropDownWidth = 185;
-            CbMes.FlatStyle = FlatStyle.Flat;
-            CbMes.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbMes.FormattingEnabled = true;
-            CbMes.Location = new Point(208, 105);
-            CbMes.Name = "CbMes";
-            CbMes.Size = new Size(121, 31);
-            CbMes.TabIndex = 121;
-            // 
             // PanelFolhaDetalhada
             // 
-            PanelFolhaDetalhada.AutoScroll = true;
-            PanelFolhaDetalhada.AutoScrollMargin = new Size(0, 90);
-            PanelFolhaDetalhada.AutoScrollMinSize = new Size(0, 90);
+            PanelFolhaDetalhada.BackColor = Color.LightGray;
             PanelFolhaDetalhada.BorderStyle = BorderStyle.FixedSingle;
             PanelFolhaDetalhada.Controls.Add(panel8);
             PanelFolhaDetalhada.Controls.Add(panel7);
@@ -274,17 +144,14 @@
             PanelFolhaDetalhada.Controls.Add(panelIrrf);
             PanelFolhaDetalhada.Controls.Add(panelInss);
             PanelFolhaDetalhada.Controls.Add(panel1);
-            PanelFolhaDetalhada.Location = new Point(67, 142);
+            PanelFolhaDetalhada.Location = new Point(-1, 0);
             PanelFolhaDetalhada.Name = "PanelFolhaDetalhada";
-            PanelFolhaDetalhada.Size = new Size(980, 434);
-            PanelFolhaDetalhada.TabIndex = 62;
-            PanelFolhaDetalhada.MouseClick += AllForms_MouseClick;
+            PanelFolhaDetalhada.Size = new Size(965, 675);
+            PanelFolhaDetalhada.TabIndex = 63;
             // 
             // panel8
             // 
             panel8.BorderStyle = BorderStyle.FixedSingle;
-            panel8.Controls.Add(label8);
-            panel8.Controls.Add(label35);
             panel8.Controls.Add(LbLiquido);
             panel8.Controls.Add(LbDescontos);
             panel8.Controls.Add(LbVencimentos);
@@ -296,31 +163,12 @@
             panel8.Size = new Size(956, 50);
             panel8.TabIndex = 79;
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(8, 25);
-            label8.Name = "label8";
-            label8.Size = new Size(51, 15);
-            label8.TabIndex = 94;
-            label8.Text = "Numero";
-            // 
-            // label35
-            // 
-            label35.AutoSize = true;
-            label35.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label35.Location = new Point(8, 5);
-            label35.Name = "label35";
-            label35.Size = new Size(20, 15);
-            label35.TabIndex = 93;
-            label35.Text = "ID";
-            // 
             // LbLiquido
             // 
             LbLiquido.AutoSize = true;
             LbLiquido.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             LbLiquido.ForeColor = Color.FromArgb(0, 70, 0);
-            LbLiquido.Location = new Point(690, 25);
+            LbLiquido.Location = new Point(620, 25);
             LbLiquido.MaximumSize = new Size(85, 19);
             LbLiquido.Name = "LbLiquido";
             LbLiquido.Size = new Size(84, 19);
@@ -332,7 +180,7 @@
             LbDescontos.AutoSize = true;
             LbDescontos.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             LbDescontos.ForeColor = Color.FromArgb(170, 0, 0);
-            LbDescontos.Location = new Point(310, 25);
+            LbDescontos.Location = new Point(240, 25);
             LbDescontos.MaximumSize = new Size(85, 19);
             LbDescontos.Name = "LbDescontos";
             LbDescontos.Size = new Size(76, 19);
@@ -343,7 +191,7 @@
             // 
             LbVencimentos.AutoSize = true;
             LbVencimentos.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbVencimentos.Location = new Point(120, 25);
+            LbVencimentos.Location = new Point(50, 25);
             LbVencimentos.MaximumSize = new Size(85, 19);
             LbVencimentos.Name = "LbVencimentos";
             LbVencimentos.Size = new Size(84, 19);
@@ -354,7 +202,7 @@
             // 
             label68.AutoSize = true;
             label68.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label68.Location = new Point(690, 5);
+            label68.Location = new Point(620, 5);
             label68.Name = "label68";
             label68.Size = new Size(63, 19);
             label68.TabIndex = 16;
@@ -364,7 +212,7 @@
             // 
             label69.AutoSize = true;
             label69.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label69.Location = new Point(310, 5);
+            label69.Location = new Point(240, 5);
             label69.Name = "label69";
             label69.Size = new Size(81, 19);
             label69.TabIndex = 15;
@@ -374,7 +222,7 @@
             // 
             label70.AutoSize = true;
             label70.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label70.Location = new Point(120, 5);
+            label70.Location = new Point(50, 5);
             label70.Name = "label70";
             label70.Size = new Size(97, 19);
             label70.TabIndex = 13;
@@ -393,34 +241,12 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(956, 50);
             panel7.TabIndex = 24;
-            panel7.MouseClick += AllForms_MouseClick;
-            // 
-            // label49
-            // 
-            label49.AutoSize = true;
-            label49.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label49.Location = new Point(690, 25);
-            label49.MaximumSize = new Size(85, 19);
-            label49.Name = "label49";
-            label49.Size = new Size(83, 19);
-            label49.TabIndex = 82;
-            label49.Text = "20/12/2369";
-            // 
-            // label48
-            // 
-            label48.AutoSize = true;
-            label48.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label48.Location = new Point(690, 5);
-            label48.Name = "label48";
-            label48.Size = new Size(123, 19);
-            label48.TabIndex = 81;
-            label48.Text = "Data de emissão:";
             // 
             // LbSalBaseMensPorcento
             // 
             LbSalBaseMensPorcento.AutoSize = true;
             LbSalBaseMensPorcento.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbSalBaseMensPorcento.Location = new Point(310, 24);
+            LbSalBaseMensPorcento.Location = new Point(240, 24);
             LbSalBaseMensPorcento.MaximumSize = new Size(85, 19);
             LbSalBaseMensPorcento.Name = "LbSalBaseMensPorcento";
             LbSalBaseMensPorcento.Size = new Size(44, 19);
@@ -431,7 +257,7 @@
             // 
             label53.AutoSize = true;
             label53.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label53.Location = new Point(310, 5);
+            label53.Location = new Point(240, 5);
             label53.Name = "label53";
             label53.Size = new Size(103, 19);
             label53.TabIndex = 77;
@@ -441,7 +267,7 @@
             // 
             LbSalBaseMens.AutoSize = true;
             LbSalBaseMens.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbSalBaseMens.Location = new Point(120, 25);
+            LbSalBaseMens.Location = new Point(50, 25);
             LbSalBaseMens.MaximumSize = new Size(85, 19);
             LbSalBaseMens.Name = "LbSalBaseMens";
             LbSalBaseMens.Size = new Size(84, 19);
@@ -452,7 +278,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.Location = new Point(120, 5);
+            label20.Location = new Point(50, 5);
             label20.Name = "label20";
             label20.Size = new Size(169, 19);
             label20.TabIndex = 13;
@@ -473,13 +299,12 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
-            panel6.MouseClick += AllForms_MouseClick;
             // 
             // LbVInssOutros
             // 
             LbVInssOutros.AutoSize = true;
             LbVInssOutros.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbVInssOutros.Location = new Point(310, 25);
+            LbVInssOutros.Location = new Point(240, 25);
             LbVInssOutros.MaximumSize = new Size(85, 19);
             LbVInssOutros.Name = "LbVInssOutros";
             LbVInssOutros.Size = new Size(68, 19);
@@ -490,7 +315,7 @@
             // 
             LbBInssOutros.AutoSize = true;
             LbBInssOutros.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbBInssOutros.Location = new Point(120, 25);
+            LbBInssOutros.Location = new Point(50, 25);
             LbBInssOutros.MaximumSize = new Size(85, 19);
             LbBInssOutros.Name = "LbBInssOutros";
             LbBInssOutros.Size = new Size(76, 19);
@@ -501,7 +326,7 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label22.Location = new Point(310, 5);
+            label22.Location = new Point(240, 5);
             label22.Name = "label22";
             label22.Size = new Size(155, 19);
             label22.TabIndex = 78;
@@ -511,7 +336,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.Location = new Point(120, 5);
+            label21.Location = new Point(50, 5);
             label21.Name = "label21";
             label21.Size = new Size(156, 19);
             label21.TabIndex = 77;
@@ -521,7 +346,7 @@
             // 
             LbMensal.AutoSize = true;
             LbMensal.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbMensal.Location = new Point(690, 25);
+            LbMensal.Location = new Point(620, 25);
             LbMensal.MaximumSize = new Size(85, 19);
             LbMensal.Name = "LbMensal";
             LbMensal.Size = new Size(84, 19);
@@ -532,7 +357,7 @@
             // 
             LbMaiorRemun.AutoSize = true;
             LbMaiorRemun.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbMaiorRemun.Location = new Point(505, 25);
+            LbMaiorRemun.Location = new Point(435, 25);
             LbMaiorRemun.MaximumSize = new Size(85, 19);
             LbMaiorRemun.Name = "LbMaiorRemun";
             LbMaiorRemun.Size = new Size(84, 19);
@@ -543,7 +368,7 @@
             // 
             label41.AutoSize = true;
             label41.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label41.Location = new Point(690, 5);
+            label41.Location = new Point(620, 5);
             label41.Name = "label41";
             label41.Size = new Size(60, 19);
             label41.TabIndex = 15;
@@ -553,7 +378,7 @@
             // 
             label42.AutoSize = true;
             label42.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label42.Location = new Point(505, 5);
+            label42.Location = new Point(435, 5);
             label42.Name = "label42";
             label42.Size = new Size(149, 19);
             label42.TabIndex = 14;
@@ -573,7 +398,6 @@
             panelFgts.Name = "panelFgts";
             panelFgts.Size = new Size(315, 257);
             panelFgts.TabIndex = 19;
-            panelFgts.MouseClick += AllForms_MouseClick;
             // 
             // LbTotalFgts
             // 
@@ -653,7 +477,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(956, 50);
             panel2.TabIndex = 18;
-            panel2.MouseClick += AllForms_MouseClick;
             // 
             // label2
             // 
@@ -682,7 +505,6 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 100);
             panel19.TabIndex = 17;
-            panel19.MouseClick += AllForms_MouseClick;
             // 
             // panel3
             // 
@@ -694,7 +516,7 @@
             panel3.Controls.Add(label24);
             panel3.Location = new Point(-1, -1);
             panel3.Name = "panel3";
-            panel3.Size = new Size(956, 100);
+            panel3.Size = new Size(956, 109);
             panel3.TabIndex = 29;
             // 
             // panel10
@@ -935,7 +757,6 @@
             panelIrrf.Name = "panelIrrf";
             panelIrrf.Size = new Size(315, 257);
             panelIrrf.TabIndex = 10;
-            panelIrrf.MouseClick += AllForms_MouseClick;
             // 
             // LbIrrfPorcento
             // 
@@ -1066,7 +887,6 @@
             panelInss.Name = "panelInss";
             panelInss.Size = new Size(315, 257);
             panelInss.TabIndex = 9;
-            panelInss.MouseClick += AllForms_MouseClick;
             // 
             // LbInssPorcento
             // 
@@ -1185,12 +1005,42 @@
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label10);
             panel1.Controls.Add(label9);
-            panel1.Controls.Add(label34);
+            panel1.Controls.Add(label8);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(955, 72);
             panel1.TabIndex = 6;
-            panel1.MouseClick += AllForms_MouseClick;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(680, 10);
+            label8.Name = "label8";
+            label8.Size = new Size(235, 25);
+            label8.TabIndex = 8;
+            label8.Text = "CNPJ : 13.545.586/0001-11";
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label49.Location = new Point(620, 25);
+            label49.MaximumSize = new Size(85, 19);
+            label49.Name = "label49";
+            label49.Size = new Size(83, 19);
+            label49.TabIndex = 82;
+            label49.Text = "20/12/2369";
+            // 
+            // label48
+            // 
+            label48.AutoSize = true;
+            label48.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label48.Location = new Point(620, 5);
+            label48.Name = "label48";
+            label48.Size = new Size(123, 19);
+            label48.TabIndex = 81;
+            label48.Text = "Data de emissão:";
             // 
             // label10
             // 
@@ -1199,7 +1049,7 @@
             label10.Location = new Point(3, 5);
             label10.Name = "label10";
             label10.Size = new Size(331, 25);
-            label10.TabIndex = 13;
+            label10.TabIndex = 9;
             label10.Text = "JOSE ANTONIO ALVES CARNEIRO ME";
             // 
             // label9
@@ -1209,58 +1059,18 @@
             label9.Location = new Point(3, 35);
             label9.Name = "label9";
             label9.Size = new Size(537, 19);
-            label9.TabIndex = 14;
+            label9.TabIndex = 10;
             label9.Text = "RUA JORGE LUIZ REGISTRO, 48, JARDIM SANTA CRUZ, SERRANA-SP, CEP: 14150-000";
             // 
-            // label34
-            // 
-            label34.AutoSize = true;
-            label34.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            label34.Location = new Point(680, 10);
-            label34.Name = "label34";
-            label34.Size = new Size(235, 25);
-            label34.TabIndex = 12;
-            label34.Text = "CNPJ : 13.545.586/0001-11";
-            // 
-            // LbTitulo
-            // 
-            LbTitulo.AutoSize = true;
-            LbTitulo.FlatStyle = FlatStyle.Flat;
-            LbTitulo.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
-            LbTitulo.Image = (Image)resources.GetObject("LbTitulo.Image");
-            LbTitulo.ImageAlign = ContentAlignment.MiddleRight;
-            LbTitulo.Location = new Point(60, 33);
-            LbTitulo.Name = "LbTitulo";
-            LbTitulo.Padding = new Padding(10, 0, 0, 0);
-            LbTitulo.Size = new Size(342, 41);
-            LbTitulo.TabIndex = 50;
-            LbTitulo.Text = "Gerar Folha Normal       ";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(70, 50);
-            label1.Name = "label1";
-            label1.Size = new Size(336, 37);
-            label1.TabIndex = 60;
-            label1.Text = "_____________________________";
-            // 
-            // FormFolhaNormal
+            // FormFolhaNormalPDF
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 76, 32);
-            ClientSize = new Size(1248, 712);
-            Controls.Add(LbFolhaNormal);
+            ClientSize = new Size(963, 675);
+            Controls.Add(PanelFolhaDetalhada);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormFolhaNormal";
-            Text = "FormNormal";
-            MouseClick += AllForms_MouseClick;
-            LbFolhaNormal.ResumeLayout(false);
-            LbFolhaNormal.PerformLayout();
+            Name = "FormFolhaNormalPDF";
+            Text = "FormFolhaNormalPDF";
             PanelFolhaDetalhada.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
@@ -1295,23 +1105,62 @@
 
         #endregion
 
-        private Panel LbFolhaNormal;
-        private Label LbTitulo;
-        private Label label1;
         private Panel PanelFolhaDetalhada;
+        private Panel panel8;
+        private Label LbLiquido;
+        private Label LbDescontos;
+        private Label LbVencimentos;
+        private Label label68;
+        private Label label69;
+        private Label label70;
+        private Panel panel7;
+        private Label LbSalBaseMensPorcento;
+        private Label label53;
+        private Label LbSalBaseMens;
+        private Label label20;
         private Panel panel6;
+        private Label LbVInssOutros;
+        private Label LbBInssOutros;
+        private Label label22;
+        private Label label21;
         private Label LbMensal;
         private Label LbMaiorRemun;
         private Label label41;
         private Label label42;
         private Panel panelFgts;
+        private Label LbTotalFgts;
+        private Label label51;
         private Label LbBaseFgts;
         private Label LbValorFgts;
         private Label label26;
         private Label label29;
         private Label label25;
         private Panel panel2;
+        private Label label2;
         private Panel panel19;
+        private Panel panel3;
+        private Panel panel10;
+        private Label label19;
+        private Label label5;
+        private Panel panel9;
+        private Label label18;
+        private Label label4;
+        private Panel panel5;
+        private Label label7;
+        private Label label3;
+        private Panel panel4;
+        private Label label23;
+        private Label label6;
+        private Label label24;
+        private Label LbAtvDem;
+        private Label LbDemitidos;
+        private Label LbAtivos;
+        private Label LbClt;
+        private Label label71;
+        private Label label61;
+        private Label label59;
+        private Label label54;
+        private Label label52;
         private Panel panelIrrf;
         private Label LbIrrfPorcento;
         private Label LbIrrf;
@@ -1337,62 +1186,10 @@
         private Label label13;
         private Label label14;
         private Panel panel1;
-        private Label label2;
-        private Label LbTotalFgts;
-        private Label label51;
-        private Panel panel7;
-        private Label LbSalBaseMensPorcento;
-        private Label label53;
-        private Label LbSalBaseMens;
-        private Label label20;
-        private Label LbVInssOutros;
-        private Label LbBInssOutros;
-        private Label label22;
-        private Label label21;
-        private Panel panel8;
-        private Label LbLiquido;
-        private Label LbDescontos;
-        private Label LbVencimentos;
-        private Label label68;
-        private Label label69;
-        private Label label70;
-        private Label LbAtvDem;
-        private Label LbDemitidos;
-        private Label LbAtivos;
-        private Label LbClt;
-        private Label label71;
-        private Label label61;
-        private Label label59;
-        private Label label54;
-        private Label label52;
-        private Panel panel3;
-        private Panel panel4;
-        private Label label23;
-        private Label label6;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label7;
-        private Label label18;
-        private Label label19;
-        private Label label24;
-        private Panel panel10;
-        private Panel panel9;
-        private Panel panel5;
-        private Label label47;
-        private ComboBox CbMes;
-        private Label label31;
-        private ComboBox CbAno;
+        private Label label8;
         internal Label label49;
         private Label label48;
         private Label label10;
         private Label label9;
-        private Label label34;
-        private Button button1;
-        private Button BtnImprimir;
-        private Button BtnEditar;
-        private Button BtnConfirmar;
-        private Label label8;
-        private Label label35;
     }
 }

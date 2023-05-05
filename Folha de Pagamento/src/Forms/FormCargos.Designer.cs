@@ -68,6 +68,19 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
+            // BtnDeletarCargo
+            // 
+            BtnDeletarCargo.BackgroundImage = (Image)resources.GetObject("BtnDeletarCargo.BackgroundImage");
+            BtnDeletarCargo.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnDeletarCargo.FlatAppearance.BorderSize = 0;
+            BtnDeletarCargo.FlatStyle = FlatStyle.Flat;
+            BtnDeletarCargo.Location = new Point(616, 508);
+            BtnDeletarCargo.Name = "BtnDeletarCargo";
+            BtnDeletarCargo.Size = new Size(43, 43);
+            BtnDeletarCargo.TabIndex = 125;
+            toolTip1.SetToolTip(BtnDeletarCargo, "Deletar Cargo");
+            BtnDeletarCargo.UseVisualStyleBackColor = true;
+            // 
             // LbAdministrarCargos
             // 
             LbAdministrarCargos.AccessibleRole = AccessibleRole.None;
@@ -425,19 +438,6 @@
             toolTip1.SetToolTip(BtnCancelar, "Fechar Pagina");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
-            // 
-            // BtnDeletarCargo
-            // 
-            BtnDeletarCargo.BackgroundImage = (Image)resources.GetObject("BtnDeletarCargo.BackgroundImage");
-            BtnDeletarCargo.BackgroundImageLayout = ImageLayout.Stretch;
-            BtnDeletarCargo.FlatAppearance.BorderSize = 0;
-            BtnDeletarCargo.FlatStyle = FlatStyle.Flat;
-            BtnDeletarCargo.Location = new Point(616, 508);
-            BtnDeletarCargo.Name = "BtnDeletarCargo";
-            BtnDeletarCargo.Size = new Size(43, 43);
-            BtnDeletarCargo.TabIndex = 125;
-            toolTip1.SetToolTip(BtnDeletarCargo, "Deletar Funcionário");
-            BtnDeletarCargo.UseVisualStyleBackColor = true;
             // 
             // FormCargos
             // 

@@ -30,9 +30,10 @@
         {
             components = new System.ComponentModel.Container();
             Button BtnEditar;
-            Button button1;
-            Button button2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
+            Button button1;
+            Button BtnDeletarFunc;
+            Button button2;
             panel1 = new Panel();
             TxtMatricula = new MaskedTextBox();
             BtnConfirmar = new Button();
@@ -106,8 +107,10 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
+            label12 = new Label();
             BtnEditar = new Button();
             button1 = new Button();
+            BtnDeletarFunc = new Button();
             button2 = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
@@ -120,10 +123,10 @@
             // 
             // BtnEditar
             // 
-            BtnEditar.BackgroundImage = Properties.Resources.edit;
             BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
+            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
             BtnEditar.Location = new Point(116, 291);
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(43, 43);
@@ -146,23 +149,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.MouseClick += button1_MouseClick;
             // 
-            // button2
+            // BtnDeletarFunc
             // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(67, 578);
-            button2.Name = "button2";
-            button2.Size = new Size(43, 43);
-            button2.TabIndex = 124;
-            toolTip1.SetToolTip(button2, "Deletar Funcionário");
-            button2.UseVisualStyleBackColor = true;
+            BtnDeletarFunc.BackgroundImage = (Image)resources.GetObject("BtnDeletarFunc.BackgroundImage");
+            BtnDeletarFunc.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnDeletarFunc.FlatAppearance.BorderSize = 0;
+            BtnDeletarFunc.FlatStyle = FlatStyle.Flat;
+            BtnDeletarFunc.Location = new Point(67, 578);
+            BtnDeletarFunc.Name = "BtnDeletarFunc";
+            BtnDeletarFunc.Size = new Size(43, 43);
+            BtnDeletarFunc.TabIndex = 124;
+            toolTip1.SetToolTip(BtnDeletarFunc, "Deletar Funcionário");
+            BtnDeletarFunc.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(BtnDeletarFunc);
             panel1.Controls.Add(TxtMatricula);
             panel1.Controls.Add(BtnConfirmar);
             panel1.Controls.Add(PnlCtrlFunc);
@@ -1044,6 +1047,8 @@
             // 
             panel3.BackColor = Color.LightGray;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(label12);
+            panel3.Controls.Add(button2);
             panel3.Controls.Add(button1);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(BtnEditar);
@@ -1099,6 +1104,29 @@
             label1.Size = new Size(468, 37);
             label1.TabIndex = 60;
             label1.Text = "_________________________________________";
+            // 
+            // button2
+            // 
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(116, 437);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 124;
+            toolTip1.SetToolTip(button2, "Criar Crachá");
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(93, 403);
+            label12.Name = "label12";
+            label12.Size = new Size(89, 25);
+            label12.TabIndex = 125;
+            label12.Text = "CRACHÁ";
             // 
             // FormAlterarCadastro
             // 
@@ -1202,5 +1230,6 @@
         internal PictureBox PctData;
         private ToolTip toolTip1;
         private MaskedTextBox TxtSalarioBase;
+        private Label label12;
     }
 }

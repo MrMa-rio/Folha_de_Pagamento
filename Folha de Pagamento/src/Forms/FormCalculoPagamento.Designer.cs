@@ -132,7 +132,7 @@
             panel19.Controls.Add(label26);
             panel19.Controls.Add(TxtFGTS);
             panel19.Controls.Add(label52);
-            panel19.Location = new Point(3, 292);
+            panel19.Location = new Point(3, 336);
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 132;

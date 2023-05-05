@@ -39,7 +39,7 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 PnlPerfil.Visible = true;
             }
-            if(DataUser.Length > 1)
+            if (DataUser.Length > 1)
             {
                 label1.Text = DataUser[0].ToString();
                 label2.Text = DataUser[1].ToString();
@@ -48,8 +48,8 @@ namespace FOLHA_DE_PAGAMENTO_
                 label5.Text = DataUser[4].ToString();
                 label6.Text = DataUser[5].ToString();
             }
-            
+
         }
-        
+
     }
 }

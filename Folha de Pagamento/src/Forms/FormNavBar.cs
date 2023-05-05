@@ -108,7 +108,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BtnLogout_MouseClick(object sender, MouseEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Trocar de Perfil ?", "Trocar Usuario", MessageBoxButtons.YesNo);
-            if(dialogResult == DialogResult.Yes)
+            if (dialogResult == DialogResult.Yes)
             {
                 C_VerificarLogin c_VerificarLogin = new C_VerificarLogin();
                 c_FormNavBarShow.AnimationHide(this, Pnl2);
