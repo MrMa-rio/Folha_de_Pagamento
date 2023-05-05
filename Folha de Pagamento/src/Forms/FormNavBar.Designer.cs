@@ -46,6 +46,8 @@
             BtnConfiguracao = new Button();
             BtnLogout = new Button();
             Pnl2 = new Panel();
+            FolhaPDetalhadaPesq = new Button();
+            BtnFolhaPNormalPesq = new Button();
             panel1.SuspendLayout();
             PanelSubMenuRel.SuspendLayout();
             PanelSubMenu.SuspendLayout();
@@ -82,6 +84,8 @@
             // 
             // PanelSubMenuRel
             // 
+            PanelSubMenuRel.Controls.Add(BtnFolhaPNormalPesq);
+            PanelSubMenuRel.Controls.Add(FolhaPDetalhadaPesq);
             PanelSubMenuRel.Controls.Add(BtnCalculoPagamento);
             PanelSubMenuRel.Controls.Add(FolhaPDetalhada);
             PanelSubMenuRel.Controls.Add(BtnHolerite);
@@ -89,7 +93,7 @@
             PanelSubMenuRel.Dock = DockStyle.Top;
             PanelSubMenuRel.Location = new Point(0, 320);
             PanelSubMenuRel.Name = "PanelSubMenuRel";
-            PanelSubMenuRel.Size = new Size(342, 199);
+            PanelSubMenuRel.Size = new Size(325, 278);
             PanelSubMenuRel.TabIndex = 6;
             // 
             // BtnCalculoPagamento
@@ -100,11 +104,11 @@
             BtnCalculoPagamento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnCalculoPagamento.Image = (Image)resources.GetObject("BtnCalculoPagamento.Image");
             BtnCalculoPagamento.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnCalculoPagamento.Location = new Point(35, 11);
+            BtnCalculoPagamento.Location = new Point(35, 15);
             BtnCalculoPagamento.Name = "BtnCalculoPagamento";
             BtnCalculoPagamento.Size = new Size(297, 40);
             BtnCalculoPagamento.TabIndex = 7;
-            BtnCalculoPagamento.Text = "    Impostos e Dados de Pagamentos";
+            BtnCalculoPagamento.Text = "    Impostos e Dados de Pag.";
             BtnCalculoPagamento.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnCalculoPagamento.UseVisualStyleBackColor = false;
             BtnCalculoPagamento.MouseClick += BtnCalculoPagamento_MouseClick;
@@ -117,11 +121,11 @@
             FolhaPDetalhada.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             FolhaPDetalhada.Image = (Image)resources.GetObject("FolhaPDetalhada.Image");
             FolhaPDetalhada.ImageAlign = ContentAlignment.MiddleLeft;
-            FolhaPDetalhada.Location = new Point(35, 103);
+            FolhaPDetalhada.Location = new Point(35, 135);
             FolhaPDetalhada.Name = "FolhaPDetalhada";
-            FolhaPDetalhada.Size = new Size(255, 40);
+            FolhaPDetalhada.Size = new Size(269, 40);
             FolhaPDetalhada.TabIndex = 8;
-            FolhaPDetalhada.Text = "    Folha Pagamento Detalhada";
+            FolhaPDetalhada.Text = "    Gerar Folha Pag. Detalhada";
             FolhaPDetalhada.TextImageRelation = TextImageRelation.ImageBeforeText;
             FolhaPDetalhada.UseVisualStyleBackColor = false;
             FolhaPDetalhada.MouseClick += BtnFolhaPDetalhada_MouseClick;
@@ -134,7 +138,7 @@
             BtnHolerite.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnHolerite.Image = (Image)resources.GetObject("BtnHolerite.Image");
             BtnHolerite.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnHolerite.Location = new Point(35, 149);
+            BtnHolerite.Location = new Point(35, 215);
             BtnHolerite.Name = "BtnHolerite";
             BtnHolerite.Size = new Size(221, 40);
             BtnHolerite.TabIndex = 9;
@@ -151,11 +155,11 @@
             BtnFolhaPNormal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BtnFolhaPNormal.Image = (Image)resources.GetObject("BtnFolhaPNormal.Image");
             BtnFolhaPNormal.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnFolhaPNormal.Location = new Point(35, 57);
+            BtnFolhaPNormal.Location = new Point(35, 55);
             BtnFolhaPNormal.Name = "BtnFolhaPNormal";
-            BtnFolhaPNormal.Size = new Size(244, 40);
+            BtnFolhaPNormal.Size = new Size(287, 40);
             BtnFolhaPNormal.TabIndex = 11;
-            BtnFolhaPNormal.Text = "    Folha Pagamento Normal";
+            BtnFolhaPNormal.Text = "    Gerar Folha Pag. Normal";
             BtnFolhaPNormal.TextAlign = ContentAlignment.MiddleLeft;
             BtnFolhaPNormal.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnFolhaPNormal.UseVisualStyleBackColor = false;
@@ -171,7 +175,7 @@
             BtnRelatorio.ImageAlign = ContentAlignment.MiddleLeft;
             BtnRelatorio.Location = new Point(0, 257);
             BtnRelatorio.Name = "BtnRelatorio";
-            BtnRelatorio.Size = new Size(342, 63);
+            BtnRelatorio.Size = new Size(325, 63);
             BtnRelatorio.TabIndex = 14;
             BtnRelatorio.Text = "  Relatorios";
             BtnRelatorio.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -187,7 +191,7 @@
             PanelSubMenu.Dock = DockStyle.Top;
             PanelSubMenu.Location = new Point(0, 63);
             PanelSubMenu.Name = "PanelSubMenu";
-            PanelSubMenu.Size = new Size(342, 194);
+            PanelSubMenu.Size = new Size(325, 194);
             PanelSubMenu.TabIndex = 13;
             // 
             // BtnCadastro
@@ -269,7 +273,7 @@
             BtnGerenciamento.ImageAlign = ContentAlignment.MiddleLeft;
             BtnGerenciamento.Location = new Point(0, 0);
             BtnGerenciamento.Name = "BtnGerenciamento";
-            BtnGerenciamento.Size = new Size(342, 63);
+            BtnGerenciamento.Size = new Size(325, 63);
             BtnGerenciamento.TabIndex = 12;
             BtnGerenciamento.Text = "Gerenciamento";
             BtnGerenciamento.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -322,6 +326,39 @@
             Pnl2.Visible = false;
             Pnl2.VisibleChanged += Pnl2_VisibleChanged;
             // 
+            // FolhaPDetalhadaPesq
+            // 
+            FolhaPDetalhadaPesq.BackColor = Color.Transparent;
+            FolhaPDetalhadaPesq.FlatAppearance.BorderSize = 0;
+            FolhaPDetalhadaPesq.FlatStyle = FlatStyle.Flat;
+            FolhaPDetalhadaPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            FolhaPDetalhadaPesq.Image = (Image)resources.GetObject("FolhaPDetalhadaPesq.Image");
+            FolhaPDetalhadaPesq.ImageAlign = ContentAlignment.MiddleLeft;
+            FolhaPDetalhadaPesq.Location = new Point(35, 175);
+            FolhaPDetalhadaPesq.Name = "FolhaPDetalhadaPesq";
+            FolhaPDetalhadaPesq.Size = new Size(255, 40);
+            FolhaPDetalhadaPesq.TabIndex = 12;
+            FolhaPDetalhadaPesq.Text = "    Pesquisar Folha Detalhada";
+            FolhaPDetalhadaPesq.TextImageRelation = TextImageRelation.ImageBeforeText;
+            FolhaPDetalhadaPesq.UseVisualStyleBackColor = false;
+            // 
+            // BtnFolhaPNormalPesq
+            // 
+            BtnFolhaPNormalPesq.BackColor = Color.Transparent;
+            BtnFolhaPNormalPesq.FlatAppearance.BorderSize = 0;
+            BtnFolhaPNormalPesq.FlatStyle = FlatStyle.Flat;
+            BtnFolhaPNormalPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnFolhaPNormalPesq.Image = (Image)resources.GetObject("BtnFolhaPNormalPesq.Image");
+            BtnFolhaPNormalPesq.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnFolhaPNormalPesq.Location = new Point(35, 95);
+            BtnFolhaPNormalPesq.Name = "BtnFolhaPNormalPesq";
+            BtnFolhaPNormalPesq.Size = new Size(244, 40);
+            BtnFolhaPNormalPesq.TabIndex = 13;
+            BtnFolhaPNormalPesq.Text = "    Pesquisar Folha Normal";
+            BtnFolhaPNormalPesq.TextAlign = ContentAlignment.MiddleLeft;
+            BtnFolhaPNormalPesq.TextImageRelation = TextImageRelation.ImageBeforeText;
+            BtnFolhaPNormalPesq.UseVisualStyleBackColor = false;
+            // 
             // FormNavBar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -358,5 +395,7 @@
         internal Button BtnCalculoPagamento;
         internal Button BtnPesquisar;
         internal Button BtnCargosFun;
+        internal Button BtnFolhaPNormalPesq;
+        internal Button FolhaPDetalhadaPesq;
     }
 }

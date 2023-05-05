@@ -1,6 +1,6 @@
-﻿namespace FOLHA_DE_PAGAMENTO_
+﻿namespace FOLHA_DE_PAGAMENTO_.src.Forms
 {
-    partial class FormHolerite
+    partial class FormHoleritePDF
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHolerite));
-            LbHolerite = new Panel();
-            button1 = new Button();
-            label2 = new Label();
-            CbAno = new ComboBox();
-            BtnImprimir = new Button();
-            label47 = new Label();
-            CbMes = new ComboBox();
-            label20 = new Label();
-            TxtPesquisarMatricula = new TextBox();
-            BtnPesquisarMatricula = new Button();
             PanelHolerite = new Panel();
             panel19 = new Panel();
-            label41 = new Label();
-            label42 = new Label();
+            label17 = new Label();
+            label4 = new Label();
             LbFgts = new Label();
             LbBaseIrrf = new Label();
             LbBaseFgts = new Label();
@@ -117,9 +106,6 @@
             label8 = new Label();
             label10 = new Label();
             label9 = new Label();
-            LbTitulo = new Label();
-            label1 = new Label();
-            LbHolerite.SuspendLayout();
             PanelHolerite.SuspendLayout();
             panel19.SuspendLayout();
             panel18.SuspendLayout();
@@ -142,132 +128,10 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // LbHolerite
-            // 
-            LbHolerite.AccessibleRole = AccessibleRole.None;
-            LbHolerite.BackColor = Color.LightGray;
-            LbHolerite.Controls.Add(button1);
-            LbHolerite.Controls.Add(label2);
-            LbHolerite.Controls.Add(CbAno);
-            LbHolerite.Controls.Add(BtnImprimir);
-            LbHolerite.Controls.Add(label47);
-            LbHolerite.Controls.Add(CbMes);
-            LbHolerite.Controls.Add(label20);
-            LbHolerite.Controls.Add(TxtPesquisarMatricula);
-            LbHolerite.Controls.Add(BtnPesquisarMatricula);
-            LbHolerite.Controls.Add(PanelHolerite);
-            LbHolerite.Controls.Add(LbTitulo);
-            LbHolerite.Controls.Add(label1);
-            LbHolerite.Location = new Point(80, 90);
-            LbHolerite.Name = "LbHolerite";
-            LbHolerite.Size = new Size(1110, 630);
-            LbHolerite.TabIndex = 2;
-            LbHolerite.MouseClick += AllForms_MouseClick;
-            // 
-            // button1
-            // 
-            button1.Enabled = false;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(1004, 578);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 43);
-            button1.TabIndex = 130;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(795, 110);
-            label2.Name = "label2";
-            label2.Size = new Size(127, 20);
-            label2.TabIndex = 123;
-            label2.Text = "Selecionar o ano:";
-            // 
-            // CbAno
-            // 
-            CbAno.BackColor = Color.DarkGray;
-            CbAno.DropDownWidth = 185;
-            CbAno.FlatStyle = FlatStyle.Flat;
-            CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbAno.FormattingEnabled = true;
-            CbAno.Location = new Point(926, 105);
-            CbAno.Name = "CbAno";
-            CbAno.Size = new Size(121, 31);
-            CbAno.TabIndex = 122;
-            // 
-            // BtnImprimir
-            // 
-            BtnImprimir.FlatAppearance.BorderSize = 0;
-            BtnImprimir.FlatStyle = FlatStyle.Flat;
-            BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
-            BtnImprimir.Location = new Point(955, 578);
-            BtnImprimir.Name = "BtnImprimir";
-            BtnImprimir.Size = new Size(43, 43);
-            BtnImprimir.TabIndex = 121;
-            BtnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // label47
-            // 
-            label47.AutoSize = true;
-            label47.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label47.Location = new Point(510, 110);
-            label47.Name = "label47";
-            label47.Size = new Size(130, 20);
-            label47.TabIndex = 80;
-            label47.Text = "Selecionar o mês:";
-            // 
-            // CbMes
-            // 
-            CbMes.BackColor = Color.DarkGray;
-            CbMes.DropDownWidth = 185;
-            CbMes.FlatStyle = FlatStyle.Flat;
-            CbMes.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            CbMes.FormattingEnabled = true;
-            CbMes.Location = new Point(645, 105);
-            CbMes.Name = "CbMes";
-            CbMes.Size = new Size(121, 31);
-            CbMes.TabIndex = 78;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.Location = new Point(67, 110);
-            label20.Name = "label20";
-            label20.Size = new Size(234, 20);
-            label20.TabIndex = 68;
-            label20.Text = "Pesquisar por Matrícula/Código:";
-            // 
-            // TxtPesquisarMatricula
-            // 
-            TxtPesquisarMatricula.BackColor = Color.DarkGray;
-            TxtPesquisarMatricula.BorderStyle = BorderStyle.FixedSingle;
-            TxtPesquisarMatricula.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtPesquisarMatricula.Location = new Point(307, 105);
-            TxtPesquisarMatricula.Name = "TxtPesquisarMatricula";
-            TxtPesquisarMatricula.Size = new Size(116, 31);
-            TxtPesquisarMatricula.TabIndex = 1;
-            // 
-            // BtnPesquisarMatricula
-            // 
-            BtnPesquisarMatricula.BackgroundImage = (Image)resources.GetObject("BtnPesquisarMatricula.BackgroundImage");
-            BtnPesquisarMatricula.BackgroundImageLayout = ImageLayout.Stretch;
-            BtnPesquisarMatricula.FlatAppearance.BorderSize = 0;
-            BtnPesquisarMatricula.FlatStyle = FlatStyle.Flat;
-            BtnPesquisarMatricula.Location = new Point(429, 105);
-            BtnPesquisarMatricula.Name = "BtnPesquisarMatricula";
-            BtnPesquisarMatricula.Size = new Size(31, 31);
-            BtnPesquisarMatricula.TabIndex = 66;
-            BtnPesquisarMatricula.UseVisualStyleBackColor = true;
-            // 
             // PanelHolerite
             // 
             PanelHolerite.AutoScroll = true;
-            PanelHolerite.AutoScrollMargin = new Size(0, 90);
-            PanelHolerite.AutoScrollMinSize = new Size(0, 90);
+            PanelHolerite.BackColor = Color.LightGray;
             PanelHolerite.BorderStyle = BorderStyle.FixedSingle;
             PanelHolerite.Controls.Add(panel19);
             PanelHolerite.Controls.Add(panel18);
@@ -288,17 +152,16 @@
             PanelHolerite.Controls.Add(panel3);
             PanelHolerite.Controls.Add(panel2);
             PanelHolerite.Controls.Add(panel1);
-            PanelHolerite.Location = new Point(67, 142);
+            PanelHolerite.Location = new Point(1, 1);
             PanelHolerite.Name = "PanelHolerite";
-            PanelHolerite.Size = new Size(980, 434);
-            PanelHolerite.TabIndex = 7;
-            PanelHolerite.MouseClick += AllForms_MouseClick;
+            PanelHolerite.Size = new Size(980, 522);
+            PanelHolerite.TabIndex = 8;
             // 
             // panel19
             // 
             panel19.BorderStyle = BorderStyle.FixedSingle;
-            panel19.Controls.Add(label41);
-            panel19.Controls.Add(label42);
+            panel19.Controls.Add(label17);
+            panel19.Controls.Add(label4);
             panel19.Controls.Add(LbFgts);
             panel19.Controls.Add(LbBaseIrrf);
             panel19.Controls.Add(LbBaseFgts);
@@ -313,26 +176,25 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 16;
-            panel19.MouseClick += AllForms_MouseClick;
             // 
-            // label41
+            // label17
             // 
-            label41.AutoSize = true;
-            label41.Location = new Point(8, 25);
-            label41.Name = "label41";
-            label41.Size = new Size(51, 15);
-            label41.TabIndex = 92;
-            label41.Text = "Numero";
+            label17.AutoSize = true;
+            label17.Location = new Point(7, 25);
+            label17.Name = "label17";
+            label17.Size = new Size(51, 15);
+            label17.TabIndex = 80;
+            label17.Text = "Numero";
             // 
-            // label42
+            // label4
             // 
-            label42.AutoSize = true;
-            label42.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label42.Location = new Point(8, 5);
-            label42.Name = "label42";
-            label42.Size = new Size(20, 15);
-            label42.TabIndex = 91;
-            label42.Text = "ID";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(8, 5);
+            label4.Name = "label4";
+            label4.Size = new Size(20, 15);
+            label4.TabIndex = 79;
+            label4.Text = "ID";
             // 
             // LbFgts
             // 
@@ -342,7 +204,7 @@
             LbFgts.MaximumSize = new Size(85, 19);
             LbFgts.Name = "LbFgts";
             LbFgts.Size = new Size(68, 19);
-            LbFgts.TabIndex = 90;
+            LbFgts.TabIndex = 78;
             LbFgts.Text = "R$182,67";
             // 
             // LbBaseIrrf
@@ -353,7 +215,7 @@
             LbBaseIrrf.MaximumSize = new Size(85, 19);
             LbBaseIrrf.Name = "LbBaseIrrf";
             LbBaseIrrf.Size = new Size(76, 19);
-            LbBaseIrrf.TabIndex = 89;
+            LbBaseIrrf.TabIndex = 77;
             LbBaseIrrf.Text = "R$2097,39";
             // 
             // LbBaseFgts
@@ -364,7 +226,7 @@
             LbBaseFgts.MaximumSize = new Size(85, 19);
             LbBaseFgts.Name = "LbBaseFgts";
             LbBaseFgts.Size = new Size(76, 19);
-            LbBaseFgts.TabIndex = 88;
+            LbBaseFgts.TabIndex = 76;
             LbBaseFgts.Text = "R$2283,36";
             // 
             // LbBaseInss
@@ -375,7 +237,7 @@
             LbBaseInss.MaximumSize = new Size(85, 19);
             LbBaseInss.Name = "LbBaseInss";
             LbBaseInss.Size = new Size(76, 19);
-            LbBaseInss.TabIndex = 87;
+            LbBaseInss.TabIndex = 75;
             LbBaseInss.Text = "R$2283,36";
             // 
             // LbSalarioBase
@@ -386,7 +248,7 @@
             LbSalarioBase.MaximumSize = new Size(85, 19);
             LbSalarioBase.Name = "LbSalarioBase";
             LbSalarioBase.Size = new Size(76, 19);
-            LbSalarioBase.TabIndex = 86;
+            LbSalarioBase.TabIndex = 74;
             LbSalarioBase.Text = "R$2283,36";
             // 
             // label56
@@ -396,7 +258,7 @@
             label56.Location = new Point(800, 5);
             label56.Name = "label56";
             label56.Size = new Size(94, 19);
-            label56.TabIndex = 85;
+            label56.TabIndex = 17;
             label56.Text = "Base de IRRF";
             // 
             // label55
@@ -406,7 +268,7 @@
             label55.Location = new Point(624, 5);
             label55.Name = "label55";
             label55.Size = new Size(95, 19);
-            label55.TabIndex = 84;
+            label55.TabIndex = 16;
             label55.Text = "FGTS do mês";
             // 
             // label54
@@ -416,7 +278,7 @@
             label54.Location = new Point(434, 5);
             label54.Name = "label54";
             label54.Size = new Size(98, 19);
-            label54.TabIndex = 83;
+            label54.TabIndex = 15;
             label54.Text = "Base de FGTS";
             // 
             // label53
@@ -426,7 +288,7 @@
             label53.Location = new Point(248, 5);
             label53.Name = "label53";
             label53.Size = new Size(96, 19);
-            label53.TabIndex = 82;
+            label53.TabIndex = 14;
             label53.Text = "Base de INSS";
             // 
             // label52
@@ -436,7 +298,7 @@
             label52.Location = new Point(92, 5);
             label52.Name = "label52";
             label52.Size = new Size(91, 19);
-            label52.TabIndex = 81;
+            label52.TabIndex = 13;
             label52.Text = "Salário Base";
             // 
             // panel18
@@ -447,7 +309,6 @@
             panel18.Name = "panel18";
             panel18.Size = new Size(110, 30);
             panel18.TabIndex = 15;
-            panel18.MouseClick += AllForms_MouseClick;
             // 
             // label11
             // 
@@ -468,7 +329,6 @@
             panel17.Name = "panel17";
             panel17.Size = new Size(110, 30);
             panel17.TabIndex = 14;
-            panel17.MouseClick += AllForms_MouseClick;
             // 
             // label5
             // 
@@ -489,7 +349,6 @@
             panel15.Name = "panel15";
             panel15.Size = new Size(66, 30);
             panel15.TabIndex = 12;
-            panel15.MouseClick += AllForms_MouseClick;
             // 
             // label13
             // 
@@ -510,7 +369,6 @@
             panel16.Name = "panel16";
             panel16.Size = new Size(90, 30);
             panel16.TabIndex = 13;
-            panel16.MouseClick += AllForms_MouseClick;
             // 
             // label6
             // 
@@ -531,7 +389,6 @@
             panel10.Name = "panel10";
             panel10.Size = new Size(556, 30);
             panel10.TabIndex = 9;
-            panel10.MouseClick += AllForms_MouseClick;
             // 
             // label12
             // 
@@ -552,7 +409,6 @@
             panel14.Name = "panel14";
             panel14.Size = new Size(132, 40);
             panel14.TabIndex = 13;
-            panel14.MouseClick += AllForms_MouseClick;
             // 
             // label19
             // 
@@ -573,7 +429,6 @@
             panelValorLiquido.Name = "panelValorLiquido";
             panelValorLiquido.Size = new Size(184, 40);
             panelValorLiquido.TabIndex = 13;
-            panelValorLiquido.MouseClick += AllForms_MouseClick;
             // 
             // LbValorLiquido
             // 
@@ -596,7 +451,6 @@
             panelDescTotal.Name = "panelDescTotal";
             panelDescTotal.Size = new Size(110, 40);
             panelDescTotal.TabIndex = 13;
-            panelDescTotal.MouseClick += AllForms_MouseClick;
             // 
             // LbDescTotal
             // 
@@ -604,7 +458,7 @@
             LbDescTotal.AutoSize = true;
             LbDescTotal.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             LbDescTotal.ForeColor = Color.FromArgb(170, 0, 0);
-            LbDescTotal.Location = new Point(3, 9);
+            LbDescTotal.Location = new Point(3, -53);
             LbDescTotal.MaximumSize = new Size(88, 19);
             LbDescTotal.Name = "LbDescTotal";
             LbDescTotal.Size = new Size(68, 19);
@@ -619,7 +473,6 @@
             panelVencTotal.Name = "panelVencTotal";
             panelVencTotal.Size = new Size(110, 40);
             panelVencTotal.TabIndex = 12;
-            panelVencTotal.MouseClick += AllForms_MouseClick;
             // 
             // LbVencTotal
             // 
@@ -627,7 +480,7 @@
             LbVencTotal.AutoSize = true;
             LbVencTotal.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             LbVencTotal.ForeColor = Color.FromArgb(0, 70, 0);
-            LbVencTotal.Location = new Point(3, 9);
+            LbVencTotal.Location = new Point(3, -53);
             LbVencTotal.MaximumSize = new Size(88, 19);
             LbVencTotal.Name = "LbVencTotal";
             LbVencTotal.Size = new Size(76, 19);
@@ -645,7 +498,6 @@
             panelDescontos.Name = "panelDescontos";
             panelDescontos.Size = new Size(110, 160);
             panelDescontos.TabIndex = 12;
-            panelDescontos.MouseClick += AllForms_MouseClick;
             // 
             // label39
             // 
@@ -710,7 +562,6 @@
             panelVencimentos.Name = "panelVencimentos";
             panelVencimentos.Size = new Size(110, 160);
             panelVencimentos.TabIndex = 11;
-            panelVencimentos.MouseClick += AllForms_MouseClick;
             // 
             // label40
             // 
@@ -771,7 +622,6 @@
             panelReferencia.Name = "panelReferencia";
             panelReferencia.Size = new Size(90, 205);
             panelReferencia.TabIndex = 10;
-            panelReferencia.MouseClick += AllForms_MouseClick;
             // 
             // label32
             // 
@@ -832,7 +682,6 @@
             panelDescricao.Name = "panelDescricao";
             panelDescricao.Size = new Size(556, 205);
             panelDescricao.TabIndex = 10;
-            panelDescricao.MouseClick += AllForms_MouseClick;
             // 
             // label27
             // 
@@ -893,7 +742,6 @@
             panelCod.Name = "panelCod";
             panelCod.Size = new Size(66, 205);
             panelCod.TabIndex = 9;
-            panelCod.MouseClick += AllForms_MouseClick;
             // 
             // label28
             // 
@@ -958,7 +806,6 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(956, 50);
             panel4.TabIndex = 8;
-            panel4.MouseClick += AllForms_MouseClick;
             // 
             // LbAdmissao
             // 
@@ -1054,7 +901,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(628, 40);
             panel3.TabIndex = 7;
-            panel3.MouseClick += AllForms_MouseClick;
             // 
             // LbDataAssinatura
             // 
@@ -1064,7 +910,7 @@
             LbDataAssinatura.MaximumSize = new Size(85, 19);
             LbDataAssinatura.Name = "LbDataAssinatura";
             LbDataAssinatura.Size = new Size(83, 19);
-            LbDataAssinatura.TabIndex = 74;
+            LbDataAssinatura.TabIndex = 77;
             LbDataAssinatura.Text = "12/12/3012";
             // 
             // label50
@@ -1075,7 +921,7 @@
             label50.Location = new Point(206, 10);
             label50.Name = "label50";
             label50.Size = new Size(414, 19);
-            label50.TabIndex = 13;
+            label50.TabIndex = 76;
             label50.Text = "Assinatura : ______________________________________________________";
             // 
             // label49
@@ -1085,7 +931,7 @@
             label49.Location = new Point(0, 10);
             label49.Name = "label49";
             label49.Size = new Size(105, 19);
-            label49.TabIndex = 12;
+            label49.TabIndex = 75;
             label49.Text = "Data Emissão: ";
             // 
             // panel2
@@ -1098,7 +944,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(273, 111);
             panel2.TabIndex = 6;
-            panel2.MouseClick += AllForms_MouseClick;
             // 
             // LbMes
             // 
@@ -1140,7 +985,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(677, 111);
             panel1.TabIndex = 5;
-            panel1.MouseClick += AllForms_MouseClick;
             // 
             // label8
             // 
@@ -1149,7 +993,7 @@
             label8.Location = new Point(3, 80);
             label8.Name = "label8";
             label8.Size = new Size(180, 19);
-            label8.TabIndex = 11;
+            label8.TabIndex = 8;
             label8.Text = "CNPJ : 13.545.586/0001-11";
             // 
             // label10
@@ -1159,7 +1003,7 @@
             label10.Location = new Point(3, 15);
             label10.Name = "label10";
             label10.Size = new Size(331, 25);
-            label10.TabIndex = 9;
+            label10.TabIndex = 6;
             label10.Text = "JOSE ANTONIO ALVES CARNEIRO ME";
             // 
             // label9
@@ -1169,48 +1013,18 @@
             label9.Location = new Point(3, 50);
             label9.Name = "label9";
             label9.Size = new Size(537, 19);
-            label9.TabIndex = 10;
+            label9.TabIndex = 7;
             label9.Text = "RUA JORGE LUIZ REGISTRO, 48, JARDIM SANTA CRUZ, SERRANA-SP, CEP: 14150-000";
             // 
-            // LbTitulo
-            // 
-            LbTitulo.AutoSize = true;
-            LbTitulo.FlatStyle = FlatStyle.Flat;
-            LbTitulo.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
-            LbTitulo.Image = (Image)resources.GetObject("LbTitulo.Image");
-            LbTitulo.ImageAlign = ContentAlignment.MiddleRight;
-            LbTitulo.Location = new Point(60, 33);
-            LbTitulo.Name = "LbTitulo";
-            LbTitulo.Padding = new Padding(10, 0, 0, 0);
-            LbTitulo.Size = new Size(189, 41);
-            LbTitulo.TabIndex = 50;
-            LbTitulo.Text = "Holerite       ";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(70, 50);
-            label1.Name = "label1";
-            label1.Size = new Size(193, 37);
-            label1.TabIndex = 60;
-            label1.Text = "________________";
-            // 
-            // FormHolerite
+            // FormHoleritePDF
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 76, 32);
-            ClientSize = new Size(1248, 712);
-            Controls.Add(LbHolerite);
+            ClientSize = new Size(980, 524);
+            Controls.Add(PanelHolerite);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormHolerite";
-            Text = "FormHolerite";
-            MouseClick += AllForms_MouseClick;
-            LbHolerite.ResumeLayout(false);
-            LbHolerite.PerformLayout();
+            Name = "FormHoleritePDF";
+            Text = "FormHoleritePDF";
             PanelHolerite.ResumeLayout(false);
             panel19.ResumeLayout(false);
             panel19.PerformLayout();
@@ -1255,82 +1069,8 @@
 
         #endregion
 
-        private Panel LbHolerite;
         private Panel PanelHolerite;
-        private Label LbTitulo;
-        private Label label1;
-        private Panel panel2;
-        private Label label3;
-        private Panel panel1;
-        private Label LbMes;
-        private Label LbMensal;
-        private Panel panel3;
-        private Panel panelDescontos;
-        private Panel panelVencimentos;
-        private Panel panelReferencia;
-        private Panel panelDescricao;
-        private Panel panelCod;
-        private Panel panel4;
-        private Panel panel10;
-        private Panel panel14;
-        private Label label19;
-        private Panel panelValorLiquido;
-        private Panel panelDescTotal;
-        private Panel panelVencTotal;
-        private Label label11;
-        private Label label5;
-        private Label label6;
-        private Label label12;
-        private Label label13;
-        private Label label18;
-        private Label label16;
-        private Label label15;
-        private Label label14;
-        private Panel panel15;
-        private Panel panel16;
-        private Panel panel18;
-        private Panel panel17;
-        private Label label20;
-        private TextBox TxtPesquisarMatricula;
-        private Button BtnPesquisarMatricula;
-        private Label LbValorLiquido;
-        private Label LbDescTotal;
-        private Label LbVencTotal;
-        private Label label39;
-        private Label label37;
-        private Label label36;
-        private Label label35;
-        private Label label40;
-        private Label label38;
-        private Label label34;
-        private Label label33;
-        private Label label32;
-        private Label label31;
-        private Label label30;
-        private Label label29;
-        private Label label27;
-        private Label label26;
-        private Label label25;
-        private Label label28;
-        private Label label23;
-        private Label label22;
-        private Label LbAdmissao;
-        private Label LbCargo;
-        private Label LbNome;
-        private Label LbCodigo;
         private Panel panel19;
-        private Label LbDataAssinatura;
-        private Label label50;
-        private Label label49;
-        private Label label24;
-        private Label label21;
-        private Label label47;
-        private ComboBox CbMes;
-        private Button BtnImprimir;
-        private Label label2;
-        private ComboBox CbAno;
-        private Label label41;
-        private Label label42;
         private Label LbFgts;
         private Label LbBaseIrrf;
         private Label LbBaseFgts;
@@ -1341,9 +1081,71 @@
         private Label label54;
         private Label label53;
         private Label label52;
+        private Panel panel18;
+        private Label label11;
+        private Panel panel17;
+        private Label label5;
+        private Panel panel15;
+        private Label label13;
+        private Panel panel16;
+        private Label label6;
+        private Panel panel10;
+        private Label label12;
+        private Panel panel14;
+        private Label label19;
+        private Panel panelValorLiquido;
+        private Label LbValorLiquido;
+        private Panel panelDescTotal;
+        private Label LbDescTotal;
+        private Panel panelVencTotal;
+        private Label LbVencTotal;
+        private Panel panelDescontos;
+        private Label label39;
+        private Label label37;
+        private Label label36;
+        private Label label35;
+        private Panel panelVencimentos;
+        private Label label40;
+        private Label label38;
+        private Label label34;
+        private Label label33;
+        private Panel panelReferencia;
+        private Label label32;
+        private Label label31;
+        private Label label30;
+        private Label label29;
+        private Panel panelDescricao;
+        private Label label27;
+        private Label label26;
+        private Label label25;
+        private Label label24;
+        private Panel panelCod;
+        private Label label28;
+        private Label label23;
+        private Label label22;
+        private Label label21;
+        private Panel panel4;
+        private Label LbAdmissao;
+        private Label LbCargo;
+        private Label LbNome;
+        private Label LbCodigo;
+        private Label label18;
+        private Label label16;
+        private Label label15;
+        private Label label14;
+        private Panel panel3;
+        private Panel panel2;
+        private Label LbMes;
+        private Label label3;
+        private Label LbMensal;
+        private Panel panel1;
         private Label label8;
         private Label label10;
         private Label label9;
-        private Button button1;
+        private Label label17;
+        private Label label4;
+        private Label LbDataAssinatura;
+        private Label label50;
+        private Label label49;
     }
 }

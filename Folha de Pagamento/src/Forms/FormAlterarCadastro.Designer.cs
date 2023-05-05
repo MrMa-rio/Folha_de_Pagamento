@@ -32,6 +32,9 @@
             Button BtnEditar;
             Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
+            Button button1;
+            Button BtnDeletarFunc;
+            Button button2;
             panel1 = new Panel();
             BtnDeleteFunc = new Button();
             TxtMatricula = new MaskedTextBox();
@@ -106,8 +109,11 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
+            label12 = new Label();
             BtnEditar = new Button();
             button1 = new Button();
+            BtnDeletarFunc = new Button();
+            button2 = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctData).BeginInit();
@@ -119,10 +125,10 @@
             // 
             // BtnEditar
             // 
-            BtnEditar.BackgroundImage = Properties.Resources.edit;
             BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
+            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
             BtnEditar.Location = new Point(116, 291);
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(43, 43);
@@ -1043,6 +1049,8 @@
             // 
             panel3.BackColor = Color.LightGray;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(label12);
+            panel3.Controls.Add(button2);
             panel3.Controls.Add(button1);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(BtnEditar);
@@ -1098,6 +1106,29 @@
             label1.Size = new Size(468, 37);
             label1.TabIndex = 60;
             label1.Text = "_________________________________________";
+            // 
+            // button2
+            // 
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(116, 437);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 124;
+            toolTip1.SetToolTip(button2, "Criar Crachá");
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(93, 403);
+            label12.Name = "label12";
+            label12.Size = new Size(89, 25);
+            label12.TabIndex = 125;
+            label12.Text = "CRACHÁ";
             // 
             // FormAlterarCadastro
             // 
