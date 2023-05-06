@@ -149,7 +149,7 @@
             BtnRefresh.Location = new Point(693, 95);
             BtnRefresh.Name = "BtnRefresh";
             BtnRefresh.Size = new Size(43, 43);
-            BtnRefresh.TabIndex = 66;
+            BtnRefresh.TabIndex = 38;
             toolTip1.SetToolTip(BtnRefresh, "Recarregar página");
             BtnRefresh.UseVisualStyleBackColor = true;
             BtnRefresh.MouseClick += BtnRefresh_MouseClick;
@@ -162,7 +162,7 @@
             BtnLimpar.Location = new Point(742, 582);
             BtnLimpar.Name = "BtnLimpar";
             BtnLimpar.Size = new Size(43, 43);
-            BtnLimpar.TabIndex = 61;
+            BtnLimpar.TabIndex = 37;
             toolTip1.SetToolTip(BtnLimpar, "Limpar todos os campos do formulário");
             BtnLimpar.UseVisualStyleBackColor = true;
             BtnLimpar.MouseClick += BtnLimpar_MouseClick;
@@ -247,7 +247,7 @@
             TxtSalarioBase.Location = new Point(510, 623);
             TxtSalarioBase.Name = "TxtSalarioBase";
             TxtSalarioBase.Size = new Size(165, 31);
-            TxtSalarioBase.TabIndex = 125;
+            TxtSalarioBase.TabIndex = 13;
             // 
             // Pctdata
             // 
@@ -265,6 +265,7 @@
             BoxCalendario2.ShowToday = false;
             BoxCalendario2.ShowTodayCircle = false;
             BoxCalendario2.TabIndex = 102;
+            BoxCalendario2.TabStop = false;
             BoxCalendario2.Visible = false;
             BoxCalendario2.DateChanged += BoxCalendario2_DateSelected;
             // 
@@ -317,7 +318,7 @@
             TxtNumRua.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             TxtNumRua.Name = "TxtNumRua";
             TxtNumRua.Size = new Size(160, 31);
-            TxtNumRua.TabIndex = 20;
+            TxtNumRua.TabIndex = 21;
             // 
             // TxtTituloEleitor
             // 
@@ -392,7 +393,7 @@
             TxtCep.Mask = "00000-000";
             TxtCep.Name = "TxtCep";
             TxtCep.Size = new Size(160, 31);
-            TxtCep.TabIndex = 16;
+            TxtCep.TabIndex = 17;
             TxtCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtCep.MouseClick += TxtCep_MouseClick;
             TxtCep.Leave += TxtCep_Leave;
@@ -468,7 +469,7 @@
             TxtTelefone.Mask = "(00) 0 0000-0000";
             TxtTelefone.Name = "TxtTelefone";
             TxtTelefone.Size = new Size(287, 31);
-            TxtTelefone.TabIndex = 14;
+            TxtTelefone.TabIndex = 15;
             TxtTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtTelefone.MouseClick += TxtTelefone_MouseClick;
             TxtTelefone.TextChanged += TxtTelefone_TextChanged;
@@ -483,6 +484,7 @@
             BtnCalendario2.Name = "BtnCalendario2";
             BtnCalendario2.Size = new Size(26, 26);
             BtnCalendario2.TabIndex = 101;
+            BtnCalendario2.TabStop = false;
             toolTip1.SetToolTip(BtnCalendario2, "Abrir calendário");
             BtnCalendario2.UseVisualStyleBackColor = true;
             BtnCalendario2.MouseClick += BtnCalendario2_MouseClick;
@@ -496,7 +498,7 @@
             TxtDataAdmissao.Mask = "00/00/0000";
             TxtDataAdmissao.Name = "TxtDataAdmissao";
             TxtDataAdmissao.Size = new Size(121, 31);
-            TxtDataAdmissao.TabIndex = 13;
+            TxtDataAdmissao.TabIndex = 14;
             TxtDataAdmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // LbSalarioBase
@@ -580,7 +582,7 @@
             CbUF.MaxDropDownItems = 3;
             CbUF.Name = "CbUF";
             CbUF.Size = new Size(160, 31);
-            CbUF.TabIndex = 17;
+            CbUF.TabIndex = 18;
             // 
             // TxtCidade
             // 
@@ -591,7 +593,7 @@
             TxtCidade.Name = "TxtCidade";
             TxtCidade.PlaceholderText = "Ribeirão Preto";
             TxtCidade.Size = new Size(287, 31);
-            TxtCidade.TabIndex = 18;
+            TxtCidade.TabIndex = 19;
             // 
             // LbCidade
             // 
@@ -622,7 +624,7 @@
             TextEmail.Name = "TextEmail";
             TextEmail.PlaceholderText = " XXXX@gmail.com";
             TextEmail.Size = new Size(287, 31);
-            TextEmail.TabIndex = 15;
+            TextEmail.TabIndex = 16;
             // 
             // LbEmail
             // 
@@ -653,7 +655,7 @@
             TxtComplemento.Name = "TxtComplemento";
             TxtComplemento.PlaceholderText = " Apto.200";
             TxtComplemento.Size = new Size(287, 31);
-            TxtComplemento.TabIndex = 22;
+            TxtComplemento.TabIndex = 23;
             // 
             // LbComplemento
             // 
@@ -674,7 +676,7 @@
             TxtBairro.Name = "TxtBairro";
             TxtBairro.PlaceholderText = " Jd.Paraná";
             TxtBairro.Size = new Size(287, 31);
-            TxtBairro.TabIndex = 21;
+            TxtBairro.TabIndex = 22;
             // 
             // LbBairro
             // 
@@ -705,7 +707,7 @@
             TxtRua.Name = "TxtRua";
             TxtRua.PlaceholderText = " Avenida São Paulo";
             TxtRua.Size = new Size(287, 31);
-            TxtRua.TabIndex = 19;
+            TxtRua.TabIndex = 20;
             // 
             // LbRua
             // 
@@ -802,6 +804,7 @@
             BoxCalendario.ShowToday = false;
             BoxCalendario.ShowTodayCircle = false;
             BoxCalendario.TabIndex = 56;
+            BoxCalendario.TabStop = false;
             BoxCalendario.Visible = false;
             BoxCalendario.DateSelected += BoxCalendario_DateSelected;
             // 
@@ -815,6 +818,7 @@
             BtnCalendario.Name = "BtnCalendario";
             BtnCalendario.Size = new Size(26, 26);
             BtnCalendario.TabIndex = 55;
+            BtnCalendario.TabStop = false;
             toolTip1.SetToolTip(BtnCalendario, "Abrir calendário");
             BtnCalendario.UseVisualStyleBackColor = true;
             BtnCalendario.MouseClick += BtnCalendario_MouseClick;
@@ -973,7 +977,7 @@
             BtnApagarFoto.Location = new Point(143, 264);
             BtnApagarFoto.Name = "BtnApagarFoto";
             BtnApagarFoto.Size = new Size(43, 43);
-            BtnApagarFoto.TabIndex = 62;
+            BtnApagarFoto.TabIndex = 35;
             toolTip1.SetToolTip(BtnApagarFoto, "Remover foto");
             BtnApagarFoto.UseVisualStyleBackColor = true;
             BtnApagarFoto.MouseClick += button2_MouseClick;
@@ -987,7 +991,7 @@
             BtnFoto.Location = new Point(94, 264);
             BtnFoto.Name = "BtnFoto";
             BtnFoto.Size = new Size(43, 43);
-            BtnFoto.TabIndex = 122;
+            BtnFoto.TabIndex = 34;
             toolTip1.SetToolTip(BtnFoto, "Adicionar foto");
             BtnFoto.UseVisualStyleBackColor = true;
             BtnFoto.MouseClick += button1_MouseClick;
@@ -1003,6 +1007,7 @@
             LbTelefoneResult.ReadOnly = true;
             LbTelefoneResult.Size = new Size(129, 22);
             LbTelefoneResult.TabIndex = 121;
+            LbTelefoneResult.TabStop = false;
             LbTelefoneResult.Text = "00000000000";
             LbTelefoneResult.TextAlign = HorizontalAlignment.Center;
             // 
@@ -1159,7 +1164,7 @@
             BtnConfirmar.Location = new Point(693, 582);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 18;
+            BtnConfirmar.TabIndex = 36;
             toolTip1.SetToolTip(BtnConfirmar, "Confirmar");
             BtnConfirmar.UseVisualStyleBackColor = true;
             BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
@@ -1172,7 +1177,7 @@
             BtnHome.Location = new Point(742, 95);
             BtnHome.Name = "BtnHome";
             BtnHome.Size = new Size(43, 43);
-            BtnHome.TabIndex = 19;
+            BtnHome.TabIndex = 39;
             toolTip1.SetToolTip(BtnHome, "Voltar ao início");
             BtnHome.UseVisualStyleBackColor = true;
             BtnHome.MouseClick += BtnCancelar_MouseClick;

@@ -113,6 +113,8 @@
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
+            label49 = new Label();
+            TxtDataLancamento = new Label();
             PanelFolhaDetalhada.SuspendLayout();
             panel3.SuspendLayout();
             panel10.SuspendLayout();
@@ -356,6 +358,8 @@
             // panel7
             // 
             panel7.BorderStyle = BorderStyle.FixedSingle;
+            panel7.Controls.Add(TxtDataLancamento);
+            panel7.Controls.Add(label49);
             panel7.Controls.Add(label38);
             panel7.Controls.Add(label37);
             panel7.Controls.Add(LbMensal);
@@ -1029,6 +1033,26 @@
             label8.TabIndex = 8;
             label8.Text = "CNPJ : 13.545.586/0001-11";
             // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label49.Location = new Point(460, 5);
+            label49.Name = "label49";
+            label49.Size = new Size(147, 19);
+            label49.TabIndex = 85;
+            label49.Text = "Data de lançamento:";
+            // 
+            // TxtDataLancamento
+            // 
+            TxtDataLancamento.AutoSize = true;
+            TxtDataLancamento.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDataLancamento.Location = new Point(460, 25);
+            TxtDataLancamento.Name = "TxtDataLancamento";
+            TxtDataLancamento.Size = new Size(53, 19);
+            TxtDataLancamento.TabIndex = 86;
+            TxtDataLancamento.Text = "label50";
+            // 
             // FormFolhaNormalPDF
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1147,7 +1171,7 @@
         private Label label45;
         private Label label46;
         private Label label47;
-        internal Label LbAtivos;
-        internal Label LbClt;
+        private Label TxtDataLancamento;
+        private Label label49;
     }
 }

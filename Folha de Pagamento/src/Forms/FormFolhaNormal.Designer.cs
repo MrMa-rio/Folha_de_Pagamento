@@ -504,9 +504,8 @@
             TxtDataEmissao.Location = new Point(690, 25);
             TxtDataEmissao.MaximumSize = new Size(85, 19);
             TxtDataEmissao.Name = "TxtDataEmissao";
-            TxtDataEmissao.Size = new Size(83, 19);
+            TxtDataEmissao.Size = new Size(0, 19);
             TxtDataEmissao.TabIndex = 82;
-            TxtDataEmissao.Text = "20/12/2369";
             // 
             // label41
             // 

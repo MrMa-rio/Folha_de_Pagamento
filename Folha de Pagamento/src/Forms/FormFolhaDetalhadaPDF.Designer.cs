@@ -30,6 +30,8 @@
         {
             PanelFolhaDetalhada = new Panel();
             panel6 = new Panel();
+            label57 = new Label();
+            label56 = new Label();
             LbDataEmissao = new Label();
             label48 = new Label();
             TxtSalarioLiqMensal = new Label();
@@ -64,6 +66,9 @@
             label23 = new Label();
             label24 = new Label();
             panel19 = new Panel();
+            label50 = new Label();
+            label47 = new Label();
+            label46 = new Label();
             Lbid = new Label();
             label20 = new Label();
             TxtSalarioLiquido = new Label();
@@ -112,11 +117,8 @@
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            label46 = new Label();
-            label47 = new Label();
-            label50 = new Label();
-            label56 = new Label();
-            label57 = new Label();
+            label1 = new Label();
+            TxtDataLancamento = new Label();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
             panelFgts.SuspendLayout();
@@ -147,6 +149,8 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.FixedSingle;
+            panel6.Controls.Add(TxtDataLancamento);
+            panel6.Controls.Add(label1);
             panel6.Controls.Add(label57);
             panel6.Controls.Add(label56);
             panel6.Controls.Add(LbDataEmissao);
@@ -159,6 +163,26 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
+            // 
+            // label57
+            // 
+            label57.AutoSize = true;
+            label57.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label57.Location = new Point(285, 25);
+            label57.Name = "label57";
+            label57.Size = new Size(25, 19);
+            label57.TabIndex = 84;
+            label57.Text = "R$";
+            // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label56.Location = new Point(95, 25);
+            label56.Name = "label56";
+            label56.Size = new Size(25, 19);
+            label56.TabIndex = 83;
+            label56.Text = "R$";
             // 
             // LbDataEmissao
             // 
@@ -184,7 +208,7 @@
             // 
             TxtSalarioLiqMensal.AutoSize = true;
             TxtSalarioLiqMensal.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioLiqMensal.Location = new Point(262, 25);
+            TxtSalarioLiqMensal.Location = new Point(307, 25);
             TxtSalarioLiqMensal.MaximumSize = new Size(85, 19);
             TxtSalarioLiqMensal.Name = "TxtSalarioLiqMensal";
             TxtSalarioLiqMensal.Size = new Size(0, 19);
@@ -194,7 +218,7 @@
             // 
             TxtMaiorRemuneracao.AutoSize = true;
             TxtMaiorRemuneracao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtMaiorRemuneracao.Location = new Point(72, 25);
+            TxtMaiorRemuneracao.Location = new Point(117, 25);
             TxtMaiorRemuneracao.MaximumSize = new Size(85, 19);
             TxtMaiorRemuneracao.Name = "TxtMaiorRemuneracao";
             TxtMaiorRemuneracao.Size = new Size(0, 19);
@@ -204,7 +228,7 @@
             // 
             label41.AutoSize = true;
             label41.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label41.Location = new Point(240, 5);
+            label41.Location = new Point(285, 5);
             label41.Name = "label41";
             label41.Size = new Size(60, 19);
             label41.TabIndex = 15;
@@ -214,7 +238,7 @@
             // 
             label42.AutoSize = true;
             label42.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label42.Location = new Point(50, 5);
+            label42.Location = new Point(95, 5);
             label42.Name = "label42";
             label42.Size = new Size(149, 19);
             label42.TabIndex = 14;
@@ -529,6 +553,36 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 17;
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label50.Location = new Point(690, 25);
+            label50.Name = "label50";
+            label50.Size = new Size(25, 19);
+            label50.TabIndex = 83;
+            label50.Text = "R$";
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label47.Location = new Point(475, 25);
+            label47.Name = "label47";
+            label47.Size = new Size(25, 19);
+            label47.TabIndex = 82;
+            label47.Text = "R$";
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label46.Location = new Point(95, 25);
+            label46.Name = "label46";
+            label46.Size = new Size(25, 19);
+            label46.TabIndex = 81;
+            label46.Text = "R$";
             // 
             // Lbid
             // 
@@ -1035,55 +1089,24 @@
             label8.TabIndex = 12;
             label8.Text = "CNPJ : 13.545.586/0001-11";
             // 
-            // label46
+            // label1
             // 
-            label46.AutoSize = true;
-            label46.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label46.Location = new Point(95, 25);
-            label46.Name = "label46";
-            label46.Size = new Size(25, 19);
-            label46.TabIndex = 81;
-            label46.Text = "R$";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(475, 5);
+            label1.Name = "label1";
+            label1.Size = new Size(147, 19);
+            label1.TabIndex = 85;
+            label1.Text = "Data de lançamento:";
             // 
-            // label47
+            // TxtDataLancamento
             // 
-            label47.AutoSize = true;
-            label47.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label47.Location = new Point(475, 25);
-            label47.Name = "label47";
-            label47.Size = new Size(25, 19);
-            label47.TabIndex = 82;
-            label47.Text = "R$";
-            // 
-            // label50
-            // 
-            label50.AutoSize = true;
-            label50.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label50.Location = new Point(690, 25);
-            label50.Name = "label50";
-            label50.Size = new Size(25, 19);
-            label50.TabIndex = 83;
-            label50.Text = "R$";
-            // 
-            // label56
-            // 
-            label56.AutoSize = true;
-            label56.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label56.Location = new Point(50, 25);
-            label56.Name = "label56";
-            label56.Size = new Size(25, 19);
-            label56.TabIndex = 83;
-            label56.Text = "R$";
-            // 
-            // label57
-            // 
-            label57.AutoSize = true;
-            label57.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label57.Location = new Point(240, 25);
-            label57.Name = "label57";
-            label57.Size = new Size(25, 19);
-            label57.TabIndex = 84;
-            label57.Text = "R$";
+            TxtDataLancamento.AutoSize = true;
+            TxtDataLancamento.Location = new Point(475, 25);
+            TxtDataLancamento.Name = "TxtDataLancamento";
+            TxtDataLancamento.Size = new Size(44, 15);
+            TxtDataLancamento.TabIndex = 86;
+            TxtDataLancamento.Text = "label49";
             // 
             // FormFolhaDetalhadaPDF
             // 
@@ -1203,5 +1226,7 @@
         private Label label46;
         private Label label57;
         private Label label56;
+        private Label TxtDataLancamento;
+        private Label label1;
     }
 }

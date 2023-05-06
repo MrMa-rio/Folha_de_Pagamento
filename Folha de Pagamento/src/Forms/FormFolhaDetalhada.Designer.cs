@@ -39,6 +39,10 @@
             BtnPesquisarMatricula = new Button();
             PanelFolhaDetalhada = new Panel();
             panel6 = new Panel();
+            TxtDataLancamento = new Label();
+            label59 = new Label();
+            label46 = new Label();
+            label8 = new Label();
             TxtDataEmissao = new Label();
             label47 = new Label();
             TxtSalarioLiqMensal = new Label();
@@ -76,8 +80,6 @@
             label57 = new Label();
             label49 = new Label();
             label48 = new Label();
-            Lbid = new Label();
-            label56 = new Label();
             TxtSalarioLiquido = new Label();
             TxtTotaisDescontos = new Label();
             TxtSalBaseMensal = new Label();
@@ -252,6 +254,10 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.FixedSingle;
+            panel6.Controls.Add(TxtDataLancamento);
+            panel6.Controls.Add(label59);
+            panel6.Controls.Add(label46);
+            panel6.Controls.Add(label8);
             panel6.Controls.Add(TxtDataEmissao);
             panel6.Controls.Add(label47);
             panel6.Controls.Add(TxtSalarioLiqMensal);
@@ -264,6 +270,45 @@
             panel6.TabIndex = 23;
             panel6.MouseClick += AllForms_MouseClick;
             // 
+            // TxtDataLancamento
+            // 
+            TxtDataLancamento.AutoSize = true;
+            TxtDataLancamento.Location = new Point(475, 25);
+            TxtDataLancamento.Name = "TxtDataLancamento";
+            TxtDataLancamento.Size = new Size(44, 15);
+            TxtDataLancamento.TabIndex = 103;
+            TxtDataLancamento.Text = "label60";
+            // 
+            // label59
+            // 
+            label59.AutoSize = true;
+            label59.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label59.Location = new Point(475, 5);
+            label59.Name = "label59";
+            label59.Size = new Size(147, 19);
+            label59.TabIndex = 102;
+            label59.Text = "Data de lançamento:";
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label46.Location = new Point(285, 22);
+            label46.Name = "label46";
+            label46.Size = new Size(25, 19);
+            label46.TabIndex = 101;
+            label46.Text = "R$";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(95, 23);
+            label8.Name = "label8";
+            label8.Size = new Size(25, 19);
+            label8.TabIndex = 100;
+            label8.Text = "R$";
+            // 
             // TxtDataEmissao
             // 
             TxtDataEmissao.AutoSize = true;
@@ -271,9 +316,8 @@
             TxtDataEmissao.Location = new Point(690, 25);
             TxtDataEmissao.MaximumSize = new Size(85, 19);
             TxtDataEmissao.Name = "TxtDataEmissao";
-            TxtDataEmissao.Size = new Size(83, 19);
+            TxtDataEmissao.Size = new Size(0, 19);
             TxtDataEmissao.TabIndex = 78;
-            TxtDataEmissao.Text = "12/12/2012";
             // 
             // label47
             // 
@@ -289,7 +333,7 @@
             // 
             TxtSalarioLiqMensal.AutoSize = true;
             TxtSalarioLiqMensal.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioLiqMensal.Location = new Point(285, 25);
+            TxtSalarioLiqMensal.Location = new Point(305, 25);
             TxtSalarioLiqMensal.MaximumSize = new Size(85, 19);
             TxtSalarioLiqMensal.Name = "TxtSalarioLiqMensal";
             TxtSalarioLiqMensal.Size = new Size(0, 19);
@@ -299,7 +343,7 @@
             // 
             TxtMaiorRemuneracao.AutoSize = true;
             TxtMaiorRemuneracao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtMaiorRemuneracao.Location = new Point(120, 25);
+            TxtMaiorRemuneracao.Location = new Point(118, 23);
             TxtMaiorRemuneracao.MaximumSize = new Size(85, 19);
             TxtMaiorRemuneracao.Name = "TxtMaiorRemuneracao";
             TxtMaiorRemuneracao.Size = new Size(0, 19);
@@ -622,8 +666,6 @@
             panel19.Controls.Add(label57);
             panel19.Controls.Add(label49);
             panel19.Controls.Add(label48);
-            panel19.Controls.Add(Lbid);
-            panel19.Controls.Add(label56);
             panel19.Controls.Add(TxtSalarioLiquido);
             panel19.Controls.Add(TxtTotaisDescontos);
             panel19.Controls.Add(TxtSalBaseMensal);
@@ -667,24 +709,6 @@
             label48.Size = new Size(25, 19);
             label48.TabIndex = 97;
             label48.Text = "R$";
-            // 
-            // Lbid
-            // 
-            Lbid.AutoSize = true;
-            Lbid.Location = new Point(8, 25);
-            Lbid.Name = "Lbid";
-            Lbid.Size = new Size(0, 15);
-            Lbid.TabIndex = 96;
-            // 
-            // label56
-            // 
-            label56.AutoSize = true;
-            label56.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label56.Location = new Point(8, 5);
-            label56.Name = "label56";
-            label56.Size = new Size(20, 15);
-            label56.TabIndex = 95;
-            label56.Text = "ID";
             // 
             // TxtSalarioLiquido
             // 
@@ -1320,8 +1344,6 @@
         private Label label10;
         private Label label9;
         private Label label50;
-        private Label Lbid;
-        private Label label56;
         private ToolTip toolTip1;
         private Button button1;
         internal Label TxtDataEmissao;
@@ -1330,5 +1352,9 @@
         private Label label49;
         private Label label48;
         private Label label58;
+        private Label label46;
+        private Label label8;
+        private Label TxtDataLancamento;
+        private Label label59;
     }
 }

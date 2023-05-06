@@ -199,7 +199,7 @@
             label3.Name = "label3";
             label3.Size = new Size(261, 25);
             label3.TabIndex = 2;
-            label3.Text = "Jose Antonio Alves Carneiro";
+            label3.Text = "José Antonio Alves Carneiro";
             // 
             // label2
             // 

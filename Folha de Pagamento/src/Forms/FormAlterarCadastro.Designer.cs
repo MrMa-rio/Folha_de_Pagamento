@@ -131,7 +131,7 @@
             BtnEditar.Location = new Point(116, 291);
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 1;
+            BtnEditar.TabIndex = 3;
             toolTip1.SetToolTip(BtnEditar, "Editar funcionário");
             BtnEditar.UseVisualStyleBackColor = true;
             BtnEditar.MouseClick += BtnEditar_MouseClick;
@@ -145,7 +145,7 @@
             BtnEditarFoto.Location = new Point(218, 221);
             BtnEditarFoto.Name = "BtnEditarFoto";
             BtnEditarFoto.Size = new Size(43, 43);
-            BtnEditarFoto.TabIndex = 123;
+            BtnEditarFoto.TabIndex = 31;
             toolTip1.SetToolTip(BtnEditarFoto, "Trocar Imagem Perfil");
             BtnEditarFoto.UseVisualStyleBackColor = true;
             BtnEditarFoto.MouseClick += button1_MouseClick;
@@ -159,7 +159,7 @@
             BtnCracha.Location = new Point(116, 437);
             BtnCracha.Name = "BtnCracha";
             BtnCracha.Size = new Size(43, 43);
-            BtnCracha.TabIndex = 124;
+            BtnCracha.TabIndex = 30;
             toolTip1.SetToolTip(BtnCracha, "Criar crachá");
             BtnCracha.UseVisualStyleBackColor = true;
             // 
@@ -198,7 +198,7 @@
             BtnHome.Location = new Point(742, 95);
             BtnHome.Name = "BtnHome";
             BtnHome.Size = new Size(43, 43);
-            BtnHome.TabIndex = 119;
+            BtnHome.TabIndex = 32;
             toolTip1.SetToolTip(BtnHome, "Voltar ao início");
             BtnHome.UseVisualStyleBackColor = true;
             // 
@@ -210,7 +210,7 @@
             BtnDeleteFunc.Location = new Point(67, 582);
             BtnDeleteFunc.Name = "BtnDeleteFunc";
             BtnDeleteFunc.Size = new Size(43, 43);
-            BtnDeleteFunc.TabIndex = 118;
+            BtnDeleteFunc.TabIndex = 33;
             toolTip1.SetToolTip(BtnDeleteFunc, "Deletar funcionário");
             BtnDeleteFunc.UseVisualStyleBackColor = true;
             BtnDeleteFunc.Visible = false;
@@ -226,7 +226,7 @@
             TxtMatricula.PromptChar = ' ';
             TxtMatricula.RightToLeft = RightToLeft.No;
             TxtMatricula.Size = new Size(88, 31);
-            TxtMatricula.TabIndex = 117;
+            TxtMatricula.TabIndex = 1;
             TxtMatricula.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtMatricula.Click += TxtMatricula_Click;
             TxtMatricula.KeyDown += TxtMatricula_KeyDown;
@@ -240,7 +240,7 @@
             BtnConfirmar.Location = new Point(690, 578);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 114;
+            BtnConfirmar.TabIndex = 28;
             toolTip1.SetToolTip(BtnConfirmar, "Confirmar");
             BtnConfirmar.UseVisualStyleBackColor = true;
             BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
@@ -326,7 +326,7 @@
             TxtSalarioBase.Location = new Point(509, 625);
             TxtSalarioBase.Name = "TxtSalarioBase";
             TxtSalarioBase.Size = new Size(156, 31);
-            TxtSalarioBase.TabIndex = 138;
+            TxtSalarioBase.TabIndex = 17;
             // 
             // PctData
             // 
@@ -349,7 +349,7 @@
             TxtNumRua.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             TxtNumRua.Name = "TxtNumRua";
             TxtNumRua.Size = new Size(160, 31);
-            TxtNumRua.TabIndex = 24;
+            TxtNumRua.TabIndex = 25;
             // 
             // TxtTituloEleitor
             // 
@@ -382,7 +382,7 @@
             TxtReservista.BorderStyle = BorderStyle.FixedSingle;
             TxtReservista.Enabled = false;
             TxtReservista.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtReservista.Location = new Point(168, 364);
+            TxtReservista.Location = new Point(167, 364);
             TxtReservista.Mask = "00000000000";
             TxtReservista.Name = "TxtReservista";
             TxtReservista.PromptChar = ' ';
@@ -511,7 +511,7 @@
             TxtTelefone.Mask = "(00) 0 0000-0000";
             TxtTelefone.Name = "TxtTelefone";
             TxtTelefone.Size = new Size(287, 31);
-            TxtTelefone.TabIndex = 18;
+            TxtTelefone.TabIndex = 19;
             TxtTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtTelefone.MouseClick += TxtTelefone_MouseClick;
             // 
@@ -522,11 +522,11 @@
             TxtCep.Enabled = false;
             TxtCep.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCep.ForeColor = SystemColors.WindowText;
-            TxtCep.Location = new Point(166, 970);
+            TxtCep.Location = new Point(167, 970);
             TxtCep.Mask = "00,000-000";
             TxtCep.Name = "TxtCep";
             TxtCep.Size = new Size(100, 31);
-            TxtCep.TabIndex = 21;
+            TxtCep.TabIndex = 22;
             TxtCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtCep.MouseClick += TxtCep_MouseClick;
             TxtCep.Leave += TxtCep_Leave;
@@ -582,6 +582,7 @@
             BoxCalendario2.ShowToday = false;
             BoxCalendario2.ShowTodayCircle = false;
             BoxCalendario2.TabIndex = 102;
+            BoxCalendario2.TabStop = false;
             BoxCalendario2.Visible = false;
             BoxCalendario2.DateChanged += BoxCalendario2_DateChanged;
             // 
@@ -596,6 +597,7 @@
             BtnCalendario2.Name = "BtnCalendario2";
             BtnCalendario2.Size = new Size(26, 26);
             BtnCalendario2.TabIndex = 101;
+            BtnCalendario2.TabStop = false;
             toolTip1.SetToolTip(BtnCalendario2, "Abrir calendário");
             BtnCalendario2.UseVisualStyleBackColor = true;
             BtnCalendario2.MouseClick += BtnCalendario2_MouseClick;
@@ -610,7 +612,7 @@
             TxtDataAdmissao.Mask = "00/00/0000";
             TxtDataAdmissao.Name = "TxtDataAdmissao";
             TxtDataAdmissao.Size = new Size(121, 31);
-            TxtDataAdmissao.TabIndex = 17;
+            TxtDataAdmissao.TabIndex = 18;
             TxtDataAdmissao.MouseClick += TxtDataEmissao_MouseClick;
             // 
             // label26
@@ -675,7 +677,7 @@
             CbUF.MaxDropDownItems = 6;
             CbUF.Name = "CbUF";
             CbUF.Size = new Size(160, 31);
-            CbUF.TabIndex = 22;
+            CbUF.TabIndex = 23;
             // 
             // TxtCidade
             // 
@@ -687,7 +689,7 @@
             TxtCidade.Name = "TxtCidade";
             TxtCidade.PlaceholderText = "Guarulhos";
             TxtCidade.Size = new Size(287, 31);
-            TxtCidade.TabIndex = 23;
+            TxtCidade.TabIndex = 24;
             // 
             // label19
             // 
@@ -719,7 +721,7 @@
             TxtEmail.Name = "TxtEmail";
             TxtEmail.PlaceholderText = "digiteaqui@bol.com";
             TxtEmail.Size = new Size(287, 31);
-            TxtEmail.TabIndex = 19;
+            TxtEmail.TabIndex = 20;
             // 
             // label20
             // 
@@ -751,7 +753,7 @@
             TxtComplemento.Name = "TxtComplemento";
             TxtComplemento.PlaceholderText = "Apto.200";
             TxtComplemento.Size = new Size(287, 31);
-            TxtComplemento.TabIndex = 26;
+            TxtComplemento.TabIndex = 27;
             // 
             // label21
             // 
@@ -773,7 +775,7 @@
             TxtBairro.Name = "TxtBairro";
             TxtBairro.PlaceholderText = "Jd. Amelia";
             TxtBairro.Size = new Size(287, 31);
-            TxtBairro.TabIndex = 25;
+            TxtBairro.TabIndex = 26;
             // 
             // label11
             // 
@@ -805,7 +807,7 @@
             TxtRua.Name = "TxtRua";
             TxtRua.PlaceholderText = "Avelino das Dores";
             TxtRua.Size = new Size(287, 31);
-            TxtRua.TabIndex = 20;
+            TxtRua.TabIndex = 21;
             // 
             // label9
             // 
@@ -901,6 +903,7 @@
             BoxCalendario.ShowToday = false;
             BoxCalendario.ShowTodayCircle = false;
             BoxCalendario.TabIndex = 56;
+            BoxCalendario.TabStop = false;
             BoxCalendario.Visible = false;
             BoxCalendario.DateChanged += BoxCalendario_DateChanged;
             // 
@@ -915,6 +918,7 @@
             BtnCalendario.Name = "BtnCalendario";
             BtnCalendario.Size = new Size(26, 26);
             BtnCalendario.TabIndex = 55;
+            BtnCalendario.TabStop = false;
             toolTip1.SetToolTip(BtnCalendario, "Abrir calendário");
             BtnCalendario.UseVisualStyleBackColor = true;
             BtnCalendario.MouseClick += BtnCalendario_MouseClick;
@@ -1052,7 +1056,7 @@
             BtnCancelar.Location = new Point(742, 578);
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
-            BtnCancelar.TabIndex = 115;
+            BtnCancelar.TabIndex = 29;
             toolTip1.SetToolTip(BtnCancelar, "Sair da Página");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
@@ -1068,7 +1072,7 @@
             btnPesquisar.Location = new Point(265, 103);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(32, 32);
-            btnPesquisar.TabIndex = 3;
+            btnPesquisar.TabIndex = 2;
             btnPesquisar.Tag = "Pesquisar";
             toolTip1.SetToolTip(btnPesquisar, "Pesquisar por matrícula");
             btnPesquisar.UseVisualStyleBackColor = false;
