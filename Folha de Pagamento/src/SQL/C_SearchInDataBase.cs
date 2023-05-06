@@ -217,6 +217,25 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             string insertSql = $"Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%{year}%' AND FK_Matricula = {matricula}";
             return getListinDB(insertSql);
         }
+
+        public List<string[]> getListDate()
+        {
+            string insertSql = $"Select DATA_Emite from tb_fechamento";
+            return getListinDB(insertSql); //retorna a coluna data
+        }
+
+        public List<string[]> getListMonth(string year)
+        {
+            string insertSql = $"Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%{year}%' ";
+            return getListinDB(insertSql); //retorna coluna data atraves do parametro ano
+        }
+        public List<string[]> getRowMajor(string year, string month, string matricula)
+        {
+            string insertSql = $"Select * from tb_fechamento  where DATA_Emite LIKE '%{year}-{month}%' AND FK_Matricula = {matricula} ORDER BY ID_Holerite DESC LIMIT 1";
+            return getListinDB(insertSql);
+        }
+
+
         public List<string[]> getListFechamento(string matricula, string year, string month)
         {
             string insertSql = $"Select * from tb_fechamento where DATA_Emite LIKE '%{year}-{month}%' AND  FK_Matricula = {matricula}";

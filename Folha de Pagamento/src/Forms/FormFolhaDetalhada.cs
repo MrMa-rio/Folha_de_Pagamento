@@ -28,20 +28,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnPesquisarMatricula_MouseClick(object sender, MouseEventArgs e)
         {
-            C_ShowFolhaDetalhada c_ShowFolhaDetalhada = new C_ShowFolhaDetalhada();
-            double DescInss;
-            double DescIRRF;
-            double DescFGTS;
-            c_ShowFolhaDetalhada.getDataFuncionario(TxtPesquisarMatricula.Text, this);
-            DescInss = c_ShowFolhaDetalhada.calculoINSS(TxtSalarioBase.Text, this);
-            DescIRRF = c_ShowFolhaDetalhada.calculoIRRF(TxtSalarioBase.Text, DescInss, this);
-            DescFGTS = c_ShowFolhaDetalhada.calculoFGTS(TxtSalarioBase.Text, this);
-            c_ShowFolhaDetalhada.showResultadosGerais(DescInss, DescIRRF, TxtSalarioBase.Text, this);
-        }
-
-        private void TxtPesquisarMatricula_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+            if(TxtPesquisarMatricula.Text.Trim() != "")
             {
                 C_ShowFolhaDetalhada c_ShowFolhaDetalhada = new C_ShowFolhaDetalhada();
                 double DescInss;
@@ -55,6 +42,25 @@ namespace FOLHA_DE_PAGAMENTO_
             }
         }
 
+        private void TxtPesquisarMatricula_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if(TxtPesquisarMatricula.Text.Trim() != "")
+                {
+                    C_ShowFolhaDetalhada c_ShowFolhaDetalhada = new C_ShowFolhaDetalhada();
+                    double DescInss;
+                    double DescIRRF;
+                    double DescFGTS;
+                    c_ShowFolhaDetalhada.getDataFuncionario(TxtPesquisarMatricula.Text, this);
+                    DescInss = c_ShowFolhaDetalhada.calculoINSS(TxtSalarioBase.Text, this);
+                    DescIRRF = c_ShowFolhaDetalhada.calculoIRRF(TxtSalarioBase.Text, DescInss, this);
+                    DescFGTS = c_ShowFolhaDetalhada.calculoFGTS(TxtSalarioBase.Text, this);
+                    c_ShowFolhaDetalhada.showResultadosGerais(DescInss, DescIRRF, TxtSalarioBase.Text, this);
+                }
+            }
+        }
+
         private void TxtPesquisarMatricula_Click(object sender, EventArgs e)
         {
             TxtPesquisarMatricula.SelectAll();
@@ -62,9 +68,29 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
         {
+
             C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
-            c_RelatorioFolha.setFolhaDetalhada(this);
-            MessageBox.Show("Folha de Pagamento Detalhada lançada com Sucesso!!");
+            if (c_RelatorioFolha.dadosDuplicadoDetalhado(TxtMatricula.Text, TxtDataEmissao.Text))
+            {
+                c_RelatorioFolha.setFolhaDetalhada(this);
+                MessageBox.Show("Folha de Pagamento Detalhada lançada com Sucesso!!");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao lançar Folha. Dados Duplicados!");
+            }
+                
         }
     }
 }
+
+/*
+    TODO:
+            Fazer validação antes de subir no banco,
+            se caso tiver, nao subir.
+            
+            Calculo totais de todos os funcionarios.
+            
+ 
+ 
+ */

@@ -39,6 +39,8 @@
             BtnPesquisarMatricula = new Button();
             PanelFolhaDetalhada = new Panel();
             panel6 = new Panel();
+            TxtDataEmissao = new Label();
+            label47 = new Label();
             TxtSalarioLiqMensal = new Label();
             TxtMaiorRemuneracao = new Label();
             label41 = new Label();
@@ -122,8 +124,6 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
-            label46 = new Label();
-            label47 = new Label();
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -251,7 +251,7 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.FixedSingle;
-            panel6.Controls.Add(label46);
+            panel6.Controls.Add(TxtDataEmissao);
             panel6.Controls.Add(label47);
             panel6.Controls.Add(TxtSalarioLiqMensal);
             panel6.Controls.Add(TxtMaiorRemuneracao);
@@ -262,6 +262,27 @@
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
             panel6.MouseClick += AllForms_MouseClick;
+            // 
+            // TxtDataEmissao
+            // 
+            TxtDataEmissao.AutoSize = true;
+            TxtDataEmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDataEmissao.Location = new Point(690, 25);
+            TxtDataEmissao.MaximumSize = new Size(85, 19);
+            TxtDataEmissao.Name = "TxtDataEmissao";
+            TxtDataEmissao.Size = new Size(83, 19);
+            TxtDataEmissao.TabIndex = 78;
+            TxtDataEmissao.Text = "12/12/2012";
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label47.Location = new Point(690, 5);
+            label47.Name = "label47";
+            label47.Size = new Size(123, 19);
+            label47.TabIndex = 77;
+            label47.Text = "Data de emissão:";
             // 
             // TxtSalarioLiqMensal
             // 
@@ -1169,27 +1190,6 @@
             label1.TabIndex = 60;
             label1.Text = "________________________________";
             // 
-            // label46
-            // 
-            label46.AutoSize = true;
-            label46.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label46.Location = new Point(690, 25);
-            label46.MaximumSize = new Size(85, 19);
-            label46.Name = "label46";
-            label46.Size = new Size(83, 19);
-            label46.TabIndex = 78;
-            label46.Text = "12/12/2012";
-            // 
-            // label47
-            // 
-            label47.AutoSize = true;
-            label47.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label47.Location = new Point(690, 5);
-            label47.Name = "label47";
-            label47.Size = new Size(123, 19);
-            label47.TabIndex = 77;
-            label47.Text = "Data de emissão:";
-            // 
             // FormFolhaDetalhada
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1315,7 +1315,7 @@
         private Label label56;
         private ToolTip toolTip1;
         private Button button1;
-        internal Label label46;
+        internal Label TxtDataEmissao;
         private Label label47;
     }
 }

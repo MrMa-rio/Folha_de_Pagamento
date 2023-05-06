@@ -58,6 +58,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             FormNavBar formNavbar = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
             formNavbar.BtnCargosFun.Visible = true;
             formNavbar.BtnPesquisar.Location = new Point(35, 148);
+            formNavbar.BtnHolerite.Location = new Point(35, 245);
         }
         public void setNvl2NavBar()
         {
@@ -75,7 +76,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             }
             formNavbar.BtnCargosFun.Visible = false;
             formNavbar.BtnPesquisar.Location = new Point(35, 102);
-            formNavbar.BtnHolerite.Location = new Point(35, 149);
+            formNavbar.BtnHolerite.Location = new Point(35, 245);
         }
 
         public void setNvl3NavBar()

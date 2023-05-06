@@ -22,7 +22,6 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             InitializeComponent();
             FormAtivo = navBar;
-
         }
 
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
@@ -34,7 +33,29 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             C_PrintPDF c_PrintPDF = new C_PrintPDF();
             c_PrintPDF.printPdf(PanelFolhaDetalhada);
+        }
 
+        private void CbAno_DropDown(object sender, EventArgs e)
+        {
+            C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
+
+            c_RelatorioFolha.getYearFolhaNormal(CbAno);
+        }
+
+        private void CbAno_TextChanged(object sender, EventArgs e)
+        {
+            CbMes.Items.Clear();
+            if (CbAno.Text.Trim() != "")
+            {
+                C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
+                c_RelatorioFolha.setMonth(CbAno.Text, CbMes);
+            }
+        }
+
+        private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_SomaFolhaNormal c_SomaFolhaNormal = new C_SomaFolhaNormal();
+            c_SomaFolhaNormal.sumSalarioLiquido(CbAno.Text, CbMes.Text);
 
         }
     }

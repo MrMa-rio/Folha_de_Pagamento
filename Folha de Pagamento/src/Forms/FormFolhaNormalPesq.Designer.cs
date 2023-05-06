@@ -168,7 +168,6 @@
             // 
             // button2
             // 
-            button2.Enabled = false;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Image = (Image)resources.GetObject("button2.Image");
@@ -178,6 +177,7 @@
             button2.TabIndex = 130;
             toolTip1.SetToolTip(button2, "Voltar ao início");
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 

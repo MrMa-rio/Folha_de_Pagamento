@@ -136,7 +136,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             C_handleCargoSalarioDepartamento c_HandleCargoSalarioDepartamento = new C_handleCargoSalarioDepartamento();
             string[] result = new string[] { dataFuncionario[12], dataFuncionario[0], dataFuncionario[1], dataFuncionario[11], dataFuncionario[13], dataFuncionario[2], dataFuncionario[3], dataFuncionario[4], dataFuncionario[10], dataFuncionario[14], dataFuncionario[6], dataFuncionario[7] };
             string matriculaFuncionario = "0";
-            if (dataFuncionario[0].Length < 4 || dataFuncionario[9] == "false" || dataFuncionario[16] == "False" || dataFuncionario[10] == "" || dataFuncionario[11] == "" || dataFuncionario[13].Length < 9 || dataFuncionario[2] == "" || dataFuncionario[3] == "" || dataFuncionario[5] == "0" || dataFuncionario[6] == "0" || dataFuncionario[7].Length < 8)
+            if (dataFuncionario[0].Length < 4 || dataFuncionario[9] == "false" || dataFuncionario[16] == "False" || dataFuncionario[10] == "" || dataFuncionario[11] == "" || dataFuncionario[13].Length < 9 || dataFuncionario[15].Length < 11 || dataFuncionario[2].Length < 11 || dataFuncionario[3].Length < 11 || dataFuncionario[5] == "0" || dataFuncionario[6] == "0" || dataFuncionario[7].Length < 8)
             {
                 MessageBox.Show("Preencha os campos do Cadastro Pessoais.");
             }
@@ -175,17 +175,17 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                     string valuesCadPessoal = $"'{dataFuncionario[12]}'," +
                         $"'{dataFuncionario[0]}'," +
                         $"'{dataFuncionario[1]}'," +
-                        $"'{dataFuncionario[11]}'," +
-                        $"'{dataFuncionario[13]}'," +
+                        $"'{dataFuncionario[11][0]}'," +
+                        $"'{dataFuncionario[13]}'," + 
                         $"'{dataFuncionario[15]}'," + 
-                        $"'{dataFuncionario[2]}'," +
-                        $"'{dataFuncionario[3]}'," +
+                        $"'{dataFuncionario[2]}'," +  
+                        $"'{dataFuncionario[3]}'," +  
                         $"'{dataFuncionario[4]}'," +
                         $"'{dataFuncionario[10]}'," +
                         $"'{dataFuncionario[8]}'," +
-                        $"'123456', '{dataFuncionario[7]}'," +
+                        $"'{dataFuncionario[12]}', '{dataFuncionario[7]}'," +
                         $"{dataFuncionario[5]}, {dataFuncionario[6]}," +
-                        $" 1, {c_HandleCargoSalarioDepartamento.setNvlAcesso(dataFuncionario[5])} ";
+                        $" 1, {c_HandleCargoSalarioDepartamento.setNvlAcesso(dataFuncionario[5])}";
 
                     matriculaFuncionario = setDatainTableFuncionario("tb_funcionario", fillColumnsFuncionario, valuesCadPessoal, dataFuncionario[12]);
                     string valuesTelefone = $"'{matriculaFuncionario}', '{dataAdicional[8]}'";
@@ -200,7 +200,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                         MessageBox.Show("Cadastro realizado com Sucesso!!");
                         FormShowDadosCadastrais formShowDadosCadastrais = new FormShowDadosCadastrais(result, matriculaFuncionario);
                         formShowDadosCadastrais.ShowDialog();
-
                     }
                 }
             }

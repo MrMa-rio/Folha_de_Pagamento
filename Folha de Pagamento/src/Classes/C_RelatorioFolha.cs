@@ -12,6 +12,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
     {
         C_SearchInDataBase c_SearchInDataBase = new C_SearchInDataBase();
         C_handleCargoSalarioDepartamento c_HandleCargo = new C_handleCargoSalarioDepartamento();
+        C_ManiplaçaoData c_ManiplaçaoData = new C_ManiplaçaoData();
         public void setFolhaDetalhada(FormFolhaDetalhada formFolhaDetalhada)
         {
             C_SearchInDataBase c_SearchInData = new C_SearchInDataBase();
@@ -146,7 +147,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             ComboBox CbMonth = formFolhaDetalhada.CbMonth;
 
             C_SearchInDataBase c_SearchInDataBase = new C_SearchInDataBase();
-            C_ManiplaçaoData c_ManiplaçaoData = new C_ManiplaçaoData();
+            
 
             List<string[]> ListDate = c_SearchInDataBase.getListMonth(matricula, year);
 
@@ -169,17 +170,89 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 }
             }
         }
+
+        public void getYearFolhaNormal(ComboBox CbYear)
+        {
+            C_ManiplaçaoData c_ManiplaçaoData = new C_ManiplaçaoData();
+            C_SearchInDataBase c_SearchInDataBase = new C_SearchInDataBase();
+            List<string[]> ListDate = c_SearchInDataBase.getListDate();
+
+            foreach (string[] date in ListDate)
+            {
+                if (CbYear.Items.Count < ListDate.Count)
+                {
+                    if (!CbYear.Items.Contains(c_ManiplaçaoData.getYear(date[0])))
+                    {
+                        CbYear.Height = ListDate.Count;
+                        CbYear.Items.Add(c_ManiplaçaoData.getYear(date[0]));
+                        CbYear.AutoCompleteCustomSource.Add(c_ManiplaçaoData.getYear(date[0]));
+                    }
+
+                }
+                if (CbYear.GetItemText(c_ManiplaçaoData.getYear(date[0])) != c_ManiplaçaoData.getYear(date[0]))
+                {
+                    CbYear.Items.Add(c_ManiplaçaoData.getYear(date[0]));
+                    CbYear.AutoCompleteCustomSource.Add(c_ManiplaçaoData.getYear(date[0]));
+                }
+            }
+        }
+
+        public void setMonth(string year, ComboBox CbMonth)
+        {
+            List<string[]> ListDate = c_SearchInDataBase.getListMonth(year);
+
+            foreach (string[] date in ListDate)
+            {
+                if (CbMonth.Items.Count < ListDate.Count)
+                {
+                    if (!CbMonth.Items.Contains(c_ManiplaçaoData.getMonth(date[0])))
+                    {
+                        CbMonth.Height = ListDate.Count;
+                        CbMonth.Items.Add(c_ManiplaçaoData.getMonth(date[0]));
+                        CbMonth.AutoCompleteCustomSource.Add(c_ManiplaçaoData.getMonth(date[0]));
+                    }
+
+                }
+                if (CbMonth.GetItemText(c_ManiplaçaoData.getMonth(date[0])) != c_ManiplaçaoData.getMonth(date[0]))
+                {
+                    CbMonth.Items.Add(c_ManiplaçaoData.getMonth(date[0]));
+                    CbMonth.AutoCompleteCustomSource.Add(c_ManiplaçaoData.getMonth(date[0]));
+                }
+            }
+        }
+
+        public bool dadosDuplicadoDetalhado(string matricula, string dataEmissao)
+        {
+            
+
+            string month = c_ManiplaçaoData.getMonth(dataEmissao);
+            string year = c_ManiplaçaoData.getYear(dataEmissao);
+            string insertSql = $"SELECT * FROM bd_folha.tb_fechamento where DATA_Emite LIKE '%{year}-{month}%' AND FK_Matricula = {matricula}";
+            if(c_SearchInDataBase.getListinDB(insertSql).Count > 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        public bool dadosDuplicadoFNormal(string idFolhaNormal, string dataEmissao)
+        {
+
+
+            string month = c_ManiplaçaoData.getMonth(dataEmissao);
+            string year = c_ManiplaçaoData.getYear(dataEmissao);
+            string insertSql = $"SELECT * FROM bd_folha.tb_fechamento where DATA_Emite LIKE '%{year}-{month}%' AND ID_FechamentoEmpresa = {idFolhaNormal}";
+            if (c_SearchInDataBase.getListinDB(insertSql).Count > 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
     }
 
 }
-
-
-
-
-
-
-
-
 
 
 

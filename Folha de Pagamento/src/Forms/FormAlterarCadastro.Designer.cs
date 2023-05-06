@@ -456,6 +456,7 @@
             CbDepartamento.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbDepartamento.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbDepartamento.BackColor = Color.DarkGray;
+            CbDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
             CbDepartamento.Enabled = false;
             CbDepartamento.FlatStyle = FlatStyle.Flat;
             CbDepartamento.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
@@ -663,6 +664,7 @@
             CbUF.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbUF.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbUF.BackColor = Color.DarkGray;
+            CbUF.DropDownStyle = ComboBoxStyle.DropDownList;
             CbUF.Enabled = false;
             CbUF.FlatStyle = FlatStyle.Flat;
             CbUF.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
@@ -842,15 +844,16 @@
             // 
             // CbGenero
             // 
-            CbGenero.AutoCompleteCustomSource.AddRange(new string[] { "Masculino", "Feminino", "Transgênero", "Cisgênero", "Outro" });
+            CbGenero.AutoCompleteCustomSource.AddRange(new string[] { "Masculino", "Feminino", "Outro" });
             CbGenero.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbGenero.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbGenero.BackColor = Color.DarkGray;
+            CbGenero.DropDownStyle = ComboBoxStyle.DropDownList;
             CbGenero.Enabled = false;
             CbGenero.FlatStyle = FlatStyle.Flat;
             CbGenero.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbGenero.FormattingEnabled = true;
-            CbGenero.Items.AddRange(new object[] { "Masculino", "Feminino", "Transgênero", "Cisgênero", "Outro" });
+            CbGenero.Items.AddRange(new object[] { "Masculino", "Feminino", "Outro" });
             CbGenero.Location = new Point(167, 253);
             CbGenero.Name = "CbGenero";
             CbGenero.Size = new Size(160, 31);
@@ -978,6 +981,7 @@
             CbEstadoCivil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CbEstadoCivil.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbEstadoCivil.BackColor = Color.DarkGray;
+            CbEstadoCivil.DropDownStyle = ComboBoxStyle.DropDownList;
             CbEstadoCivil.Enabled = false;
             CbEstadoCivil.FlatStyle = FlatStyle.Flat;
             CbEstadoCivil.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);

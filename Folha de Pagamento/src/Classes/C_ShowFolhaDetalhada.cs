@@ -174,12 +174,13 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
 
             double descTotais = descINSS + descIRRF;
             double salarioLiquido = salario - descTotais;
-
+            DateTime dateTime = DateTime.Today;
             formFolhaDetalhada.TxtMaiorRemuneracao.Text = Txtsalario;
             formFolhaDetalhada.TxtSalarioLiqMensal.Text = Convert.ToDecimal(salarioLiquido).ToString("N2");
             formFolhaDetalhada.TxtVencimentos.Text = Txtsalario;
             formFolhaDetalhada.TxtTotaisDescontos.Text = Convert.ToDecimal(descTotais).ToString("N2");
             formFolhaDetalhada.TxtSalarioLiquido.Text = Convert.ToDecimal(salarioLiquido).ToString("N2");
+            formFolhaDetalhada.TxtDataEmissao.Text = dateTime.ToString();
         }
     }
 }

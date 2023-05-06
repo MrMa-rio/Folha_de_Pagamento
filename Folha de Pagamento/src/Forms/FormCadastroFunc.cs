@@ -228,7 +228,7 @@ namespace FOLHA_DE_PAGAMENTO_
                 c_EraseBoxes.erasemaskedTextBox(PnlCtrlFunc);
                 c_EraseBoxes.eraseCombobox(PnlCtrlFunc);
             }
-        
+
         }
         private void BtnRefresh_MouseClick(object sender, MouseEventArgs e)
         {

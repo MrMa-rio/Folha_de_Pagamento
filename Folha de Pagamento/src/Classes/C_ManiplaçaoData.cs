@@ -31,9 +31,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         {
             string[] dateArray = date.Split('/');
 
-            string dataYear = dateArray[2];
             string dataMonth = dateArray[1];
-            string dataDay = dateArray[0];
             return dataMonth.Substring(0, 2);
         }
         //Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%2023%' AND FK_Matricula = 19; // Retorna dados com base na matricula e no ano
