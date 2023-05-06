@@ -20,5 +20,11 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
             InitializeComponent();
             FormAtivo = navBar;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //C_SomaFolhaNormal c_SomaFolhaNormal = new C_SomaFolhaNormal();
+            //MessageBox.Show(c_SomaFolhaNormal.sumTaxaIRRFId("2023", "05", "2").ToString()); // retorna quantiadde da multiplicação ex: se retorno for 4 e o id 2, id2 = 7, 7x5 = 35
+        }
     }
 }

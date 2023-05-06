@@ -1169,7 +1169,7 @@
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 19;
-            toolTip1.SetToolTip(BtnCancelar, "Voltar ao início");
+            toolTip1.SetToolTip(BtnCancelar, "Vtar ao iníio");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
             // 

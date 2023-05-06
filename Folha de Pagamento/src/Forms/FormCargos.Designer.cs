@@ -428,6 +428,7 @@
             // 
             // BtnCancelar
             // 
+            BtnCancelar.Enabled = false;
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");

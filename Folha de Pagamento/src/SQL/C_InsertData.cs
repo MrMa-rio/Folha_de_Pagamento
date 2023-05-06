@@ -12,15 +12,15 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
 {
     internal class C_InsertData
     {
-        private readonly string IP = "localhost";
-        private readonly string User = "root";
-        private readonly string Password = "";
-        private readonly string TargetDB = "bd_folha";
+        //private readonly string IP = "localhost";
+        //private readonly string User = "root";
+        //private readonly string Password = "";
+        //private readonly string TargetDB = "bd_folha";
 
-        //private readonly string IP = "dbfolha.mysql.database.azure.com";
-        //private readonly string User = "administrador";
-        //private readonly string Password = "Senha@db123";
-        //private readonly string TargetDB = "DBfolha";
+        private readonly string IP = "dbfolha.mysql.database.azure.com";
+        private readonly string User = "Sistema";
+        private readonly string Password = "Senha@db123";
+        private readonly string TargetDB = "bd_folha";
 
         public string setDatainTableFuncionario(string table, string columnsTable, string values, string CPF)  //Ex: Table: TbFuncionarios, columnstable: (Nome,CPF...), values: (Mario, 42564537,...)
         {

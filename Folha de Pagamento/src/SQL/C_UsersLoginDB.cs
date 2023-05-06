@@ -11,15 +11,15 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
 {
     internal class C_Verificalogin
     {
-        private string IP = "localhost";
-        private string User = "root";
-        private string Password = "";
-        private string TargetDB = "bd_folha";
+        //private string IP = "localhost";
+        //private string User = "root";
+        //private string Password = "";
+        //private string TargetDB = "bd_folha";
 
-        //private readonly string IP = "dbfolha.mysql.database.azure.com";
-        //private readonly string User = "administrador";
-        //private readonly string Password = "Senha@db123";
-        //private readonly string TargetDB = "DBfolha";
+        private readonly string IP = "dbfolha.mysql.database.azure.com";
+        private readonly string User = "Sistema";
+        private readonly string Password = "Senha@db123";
+        private readonly string TargetDB = "bd_folha";
         public List<string[]> setLogin(string user, string password)
         {
             List<string[]> Results = new List<string[]>();
@@ -32,13 +32,13 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                 if(Results.Count == 1 )
                 {
                     
-                    MessageBox.Show("Login feito com Sucesso");
+                    MessageBox.Show("Login efetuado com Sucesso!");
                     return Results;
                 }
                 else
                 {
 
-                    MessageBox.Show("Nenhum Login encontrado /ou Senha Inválida!");
+                    MessageBox.Show("Nenhum Login encontrado ou Senha Inválida!");
                     return Results;
                 }
             

@@ -12,15 +12,15 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
 {
     internal class C_SearchInDataBase
     {
-        private string IP = "localhost";
-        private string User = "root";
-        private string Password = "";
-        private string TargetDB = "bd_folha";
+        //private string IP = "localhost";
+        //private string User = "root";
+        //private string Password = "";
+        //private string TargetDB = "bd_folha";
 
-        //private readonly string IP = "dbfolha.mysql.database.azure.com";
-        //private readonly string User = "administrador";
-        //private readonly string Password = "Senha@bd123";
-        //private readonly string TargetDB = "bd_folha";
+        private readonly string IP = "dbfolha.mysql.database.azure.com";
+        private readonly string User = "Sistema";
+        private readonly string Password = "Senha@db123";
+        private readonly string TargetDB = "bd_folha";
         //private readonly string SSL_mode = "require";
 
         //string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";

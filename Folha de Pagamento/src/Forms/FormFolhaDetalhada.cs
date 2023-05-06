@@ -66,5 +66,10 @@ namespace FOLHA_DE_PAGAMENTO_
             c_RelatorioFolha.setFolhaDetalhada(this);
             MessageBox.Show("Folha de Pagamento Detalhada lançada com Sucesso!!");
         }
+
+        private void panelInss_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
