@@ -49,14 +49,22 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
                 c_RelatorioFolha.setMonth(CbAno.Text, CbMes);
+                TxtDataEmissao.Text = DateTime.Today.ToString();
+
             }
+        }
+
+        private void CbMes_DropDown(object sender, EventArgs e)
+        {
+            C_SomaFolhaNormal c_SomaFolhaNormal = new C_SomaFolhaNormal();
+            c_SomaFolhaNormal.sumTotal(CbAno.Text, CbMes.Text, this);
+            TxtDataEmissao.Text = DateTime.Today.ToString();
         }
 
         private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
         {
-            C_SomaFolhaNormal c_SomaFolhaNormal = new C_SomaFolhaNormal();
-            c_SomaFolhaNormal.sumSalarioLiquido(CbAno.Text, CbMes.Text);
-
+            C_FolhaNormal c_FolhaNormal = new C_FolhaNormal();
+            c_FolhaNormal.setFolhaNormal(this);
         }
     }
 }

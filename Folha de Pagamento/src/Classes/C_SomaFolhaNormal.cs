@@ -1,4 +1,5 @@
-﻿using FOLHA_DE_PAGAMENTO_.src.SQL;
+﻿using FOLHA_DE_PAGAMENTO_.src.Forms;
+using FOLHA_DE_PAGAMENTO_.src.SQL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,12 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
     internal class C_SomaFolhaNormal
     {
         C_SearchInDataBase c_SearchInDataBase = new C_SearchInDataBase();
+
+        public int AtivosAndClt(string year, string month)
+        {
+            string insertSql = $"SELECT * FROM bd_folha.tb_fechamento where DATA_Emite LIKE '%{year}-{month}%'";
+            return c_SearchInDataBase.getListinDB(insertSql).Count;
+        }
 
         public string sumSalarioLiquido(string year, string month)
         {
@@ -57,18 +64,57 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             return resultado;
         }
 
-        public string sumTotal(string year, string month)
+        public void sumTotal(string year, string month, FormFolhaNormal formFolhaNormal)
         {
             double sumINSS = 0;
             double sumIRRF = 0;
 
-            for(int i = 1; i <= 4; i++)
+            for (int i = 1; i <= 4; i++)
             {
                 sumINSS += sumTaxaINSSId(year, month, $"{i}");
                 sumIRRF += sumTaxaIRRFId(year, month, $"{i}");
             }
-            MessageBox.Show($"{sumINSS} {sumIRRF}");
-            return "sem mundial";
+            formFolhaNormal.TxtTaxaDescINSS.Text =  sumINSS.ToString("N2");
+            formFolhaNormal.TxtTaxaDescIRRF.Text = sumIRRF.ToString("N2");
+
+            
+            formFolhaNormal.TxtDescINSS.Text = Convert.ToDouble( sumValorDescontoINSS(year, month).ToString()).ToString("N2");
+            formFolhaNormal.TxtDescIRRF.Text = Convert.ToDouble(sumValorDescontoIRF(year, month)).ToString("N2") ;
+
+            formFolhaNormal.TxtSalarioBaseINSS.Text = Convert.ToDouble(sumSalarioBruto(year, month)).ToString("N2");
+            formFolhaNormal.TxtSalarioBaseIRRF.Text = Convert.ToDouble(sumSalarioLiquido(year, month)).ToString("N2");
+
+            formFolhaNormal.TxtValorInss.Text = Convert.ToDouble(sumValorDescontoINSS(year,month)).ToString("N2");
+            formFolhaNormal.TxtValorIRRF.Text = Convert.ToDouble(sumValorDescontoIRF(year, month)).ToString("N2");
+
+            formFolhaNormal.TxtTotalInss.Text = Convert.ToDouble(sumValorDescontoINSS(year, month)).ToString("N2");
+            formFolhaNormal.TxtTotalIRRF.Text = Convert.ToDouble(sumValorDescontoIRF(year, month)).ToString("N2");
+
+            formFolhaNormal.TxtSalarioBaseFGTS.Text = Convert.ToDouble(sumSalarioBruto(year,month)).ToString("N2");
+            formFolhaNormal.TxtValorFGTS.Text = Convert.ToDouble(sumValorDescontoFGTS(year, month)).ToString("N2");
+            formFolhaNormal.TxtTotalFGTS.Text = Convert.ToDouble(sumValorDescontoFGTS(year, month)).ToString("N2");
+
+            formFolhaNormal.TxtMaiorRemuneracao.Text = Convert.ToDouble(sumSalarioBruto(year, month)).ToString("N2");
+            formFolhaNormal.TxtSalarioLiqMensal.Text = Convert.ToDouble(sumSalarioLiquido(year, month)).ToString("N2");
+
+            formFolhaNormal.TxtSalarioLiquido.Text = Convert.ToDouble(sumSalarioLiquido(year, month)).ToString("N2");
+            formFolhaNormal.TxtVencimentos.Text = Convert.ToDouble(sumSalarioBruto(year, month)).ToString("N2");
+
+            formFolhaNormal.TxtTotaisDescontos.Text = (Convert.ToDouble(sumValorDescontoFGTS(year,month)) + Convert.ToDouble(sumValorDescontoIRF(year, month) )).ToString();
+            formFolhaNormal.TxtAtivo.Text = AtivosAndClt(year, month).ToString();
+            formFolhaNormal.TxtCLT.Text = AtivosAndClt(year, month).ToString();
+        }
+        public void sumTotal(string year, string month, FormFolhaNormalPesq formFolhaNormal)
+        {
+            double sumINSS = 0;
+            double sumIRRF = 0;
+
+            for (int i = 1; i <= 4; i++)
+            {
+                sumINSS += sumTaxaINSSId(year, month, $"{i}");
+                sumIRRF += sumTaxaIRRFId(year, month, $"{i}");
+            }
+
         }
         //SELECT ROUND(SUM(Valor_DescontoFGTS),2) AS total_quantidade FROM tb_fechamento where DATA_Emite LIKE '%2023-05%';
     }

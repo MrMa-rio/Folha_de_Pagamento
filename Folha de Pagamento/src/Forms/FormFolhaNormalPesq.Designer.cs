@@ -196,7 +196,6 @@
             button2.TabIndex = 130;
             toolTip1.SetToolTip(button2, "Voltar ao início");
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // BtnPrint
             // 

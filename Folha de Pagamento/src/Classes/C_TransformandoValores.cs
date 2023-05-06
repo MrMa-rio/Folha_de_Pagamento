@@ -10,16 +10,17 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
     {
         public string alterandoFormatos(string valor)
         {
-            MessageBox.Show(valor[valor.Length - 3].ToString());
-            if (valor[valor.Length - 3].ToString() == ".")
+            if(valor != "")
             {
-                valor = valor.Remove(valor.Length - 3,1);
-                valor = valor.Insert(valor.Length - 2, ",");
-                MessageBox.Show(valor);
+                if (valor[valor.Length - 3].ToString() == ".")
+                {
+                    valor = valor.Remove(valor.Length - 3,1);
+                    valor = valor.Insert(valor.Length - 2, ",");
+                    MessageBox.Show(valor);
+                }
+                valor = valor.Replace(".", "");
+                valor = valor.Replace(',', '.');
             }
-            valor = valor.Replace(".", "");
-            valor = valor.Replace(',', '.');
-
             return valor;
         }
     }

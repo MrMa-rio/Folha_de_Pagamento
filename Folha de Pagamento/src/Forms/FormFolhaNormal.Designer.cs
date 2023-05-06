@@ -42,17 +42,15 @@
             panel3 = new Panel();
             panel10 = new Panel();
             label19 = new Label();
-            LbAtivo = new Label();
+            TxtAtivo = new Label();
             panel4 = new Panel();
+            TxtCLT = new Label();
             label23 = new Label();
-            LbClt = new Label();
             label24 = new Label();
             panel8 = new Panel();
             label50 = new Label();
             label46 = new Label();
             label45 = new Label();
-            Lbid = new Label();
-            label35 = new Label();
             TxtSalarioLiquido = new Label();
             TxtTotaisDescontos = new Label();
             TxtVencimentos = new Label();
@@ -69,8 +67,11 @@
             label48 = new Label();
             label42 = new Label();
             panelFgts = new Panel();
+            label5 = new Label();
             label40 = new Label();
+            TxtTaxaDescFGTS = new Label();
             label39 = new Label();
+            label8 = new Label();
             label43 = new Label();
             TxtTotalFGTS = new Label();
             label51 = new Label();
@@ -241,6 +242,7 @@
             CbMes.Name = "CbMes";
             CbMes.Size = new Size(121, 31);
             CbMes.TabIndex = 121;
+            CbMes.TextChanged += CbMes_DropDown;
             // 
             // PanelFolhaDetalhada
             // 
@@ -275,7 +277,7 @@
             // 
             panel10.BorderStyle = BorderStyle.FixedSingle;
             panel10.Controls.Add(label19);
-            panel10.Controls.Add(LbAtivo);
+            panel10.Controls.Add(TxtAtivo);
             panel10.Location = new Point(500, 38);
             panel10.Name = "panel10";
             panel10.Size = new Size(76, 50);
@@ -291,24 +293,33 @@
             label19.TabIndex = 19;
             label19.Text = "Ativos";
             // 
-            // LbAtivo
+            // TxtAtivo
             // 
-            LbAtivo.AutoSize = true;
-            LbAtivo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbAtivo.Location = new Point(28, 25);
-            LbAtivo.Name = "LbAtivo";
-            LbAtivo.Size = new Size(0, 19);
-            LbAtivo.TabIndex = 26;
+            TxtAtivo.AutoSize = true;
+            TxtAtivo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtAtivo.Location = new Point(28, 25);
+            TxtAtivo.Name = "TxtAtivo";
+            TxtAtivo.Size = new Size(0, 19);
+            TxtAtivo.TabIndex = 26;
             // 
             // panel4
             // 
             panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(TxtCLT);
             panel4.Controls.Add(label23);
-            panel4.Controls.Add(LbClt);
             panel4.Location = new Point(420, 38);
             panel4.Name = "panel4";
             panel4.Size = new Size(51, 49);
             panel4.TabIndex = 29;
+            // 
+            // TxtCLT
+            // 
+            TxtCLT.AutoSize = true;
+            TxtCLT.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtCLT.Location = new Point(16, 24);
+            TxtCLT.Name = "TxtCLT";
+            TxtCLT.Size = new Size(0, 19);
+            TxtCLT.TabIndex = 27;
             // 
             // label23
             // 
@@ -319,15 +330,6 @@
             label23.Size = new Size(32, 19);
             label23.TabIndex = 16;
             label23.Text = "CLT";
-            // 
-            // LbClt
-            // 
-            LbClt.AutoSize = true;
-            LbClt.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbClt.Location = new Point(14, 25);
-            LbClt.Name = "LbClt";
-            LbClt.Size = new Size(0, 19);
-            LbClt.TabIndex = 23;
             // 
             // label24
             // 
@@ -345,8 +347,6 @@
             panel8.Controls.Add(label50);
             panel8.Controls.Add(label46);
             panel8.Controls.Add(label45);
-            panel8.Controls.Add(Lbid);
-            panel8.Controls.Add(label35);
             panel8.Controls.Add(TxtSalarioLiquido);
             panel8.Controls.Add(TxtTotaisDescontos);
             panel8.Controls.Add(TxtVencimentos);
@@ -387,24 +387,6 @@
             label45.Size = new Size(25, 19);
             label45.TabIndex = 95;
             label45.Text = "R$";
-            // 
-            // Lbid
-            // 
-            Lbid.AutoSize = true;
-            Lbid.Location = new Point(8, 25);
-            Lbid.Name = "Lbid";
-            Lbid.Size = new Size(0, 15);
-            Lbid.TabIndex = 94;
-            // 
-            // label35
-            // 
-            label35.AutoSize = true;
-            label35.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label35.Location = new Point(8, 5);
-            label35.Name = "label35";
-            label35.Size = new Size(20, 15);
-            label35.TabIndex = 93;
-            label35.Text = "ID";
             // 
             // TxtSalarioLiquido
             // 
@@ -570,11 +552,10 @@
             // 
             panelFgts.BorderStyle = BorderStyle.FixedSingle;
             panelFgts.Controls.Add(label5);
-            panelFgts.Controls.Add(label6);
-            panelFgts.Controls.Add(label8);
-            panelFgts.Controls.Add(label49);
             panelFgts.Controls.Add(label40);
+            panelFgts.Controls.Add(TxtTaxaDescFGTS);
             panelFgts.Controls.Add(label39);
+            panelFgts.Controls.Add(label8);
             panelFgts.Controls.Add(label43);
             panelFgts.Controls.Add(TxtTotalFGTS);
             panelFgts.Controls.Add(label51);
@@ -589,25 +570,54 @@
             panelFgts.TabIndex = 19;
             panelFgts.MouseClick += AllForms_MouseClick;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(120, 120);
+            label5.Name = "label5";
+            label5.Size = new Size(20, 19);
+            label5.TabIndex = 31;
+            label5.Text = "%";
+            // 
             // label40
             // 
             label40.AutoSize = true;
             label40.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label40.Location = new Point(120, 90);
+            label40.Location = new Point(120, 150);
             label40.Name = "label40";
             label40.Size = new Size(25, 19);
             label40.TabIndex = 28;
             label40.Text = "R$";
             // 
+            // TxtTaxaDescFGTS
+            // 
+            TxtTaxaDescFGTS.AutoSize = true;
+            TxtTaxaDescFGTS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtTaxaDescFGTS.Location = new Point(150, 120);
+            TxtTaxaDescFGTS.Name = "TxtTaxaDescFGTS";
+            TxtTaxaDescFGTS.Size = new Size(0, 19);
+            TxtTaxaDescFGTS.TabIndex = 30;
+            // 
             // label39
             // 
             label39.AutoSize = true;
             label39.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label39.Location = new Point(120, 120);
+            label39.Location = new Point(120, 180);
             label39.Name = "label39";
             label39.Size = new Size(25, 19);
             label39.TabIndex = 27;
             label39.Text = "R$";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(4, 120);
+            label8.Name = "label8";
+            label8.Size = new Size(66, 19);
+            label8.TabIndex = 29;
+            label8.Text = "FGTS % :";
             // 
             // label43
             // 
@@ -642,7 +652,7 @@
             // 
             TxtSalarioBaseFGTS.AutoSize = true;
             TxtSalarioBaseFGTS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioBaseFGTS.Location = new Point(150, 90);
+            TxtSalarioBaseFGTS.Location = new Point(150, 150);
             TxtSalarioBaseFGTS.Name = "TxtSalarioBaseFGTS";
             TxtSalarioBaseFGTS.Size = new Size(0, 19);
             TxtSalarioBaseFGTS.TabIndex = 19;
@@ -651,7 +661,7 @@
             // 
             TxtValorFGTS.AutoSize = true;
             TxtValorFGTS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtValorFGTS.Location = new Point(150, 120);
+            TxtValorFGTS.Location = new Point(150, 180);
             TxtValorFGTS.Name = "TxtValorFGTS";
             TxtValorFGTS.Size = new Size(0, 19);
             TxtValorFGTS.TabIndex = 18;
@@ -1180,23 +1190,14 @@
         private Label LbTitulo;
         private Label label1;
         private Panel PanelFolhaDetalhada;
-        private Label TxtSalarioLiqMensal;
-        private Label TxtMaiorRemuneracao;
         private Label label41;
         private Label label42;
         private Panel panelFgts;
-        private Label TxtSalarioBaseFGTS;
-        private Label TxtValorFGTS;
         private Label label26;
         private Label label29;
         private Label label25;
         private Panel panel2;
         private Panel panelIrrf;
-        private Label TxtTaxaDescIRRF;
-        private Label TxtDescIRRF;
-        private Label TxtSalarioBaseIRRF;
-        private Label TxtTotalIRRF;
-        private Label TxtValorIRRF;
         private Label label28;
         private Label label30;
         private Label label11;
@@ -1204,11 +1205,6 @@
         private Label label17;
         private Label label16;
         private Panel panelInss;
-        private Label TxtTaxaDescINSS;
-        private Label TxtDescINSS;
-        private Label TxtSalarioBaseINSS;
-        private Label TxtValorInss;
-        private Label TxtTotalInss;
         private Label label33;
         private Label label32;
         private Label label27;
@@ -1217,13 +1213,9 @@
         private Label label14;
         private Panel panel1;
         private Label label2;
-        private Label TxtTotalFGTS;
         private Label label51;
         private Panel panel7;
         private Panel panel8;
-        private Label TxtSalarioLiquido;
-        private Label TxtTotaisDescontos;
-        private Label TxtVencimentos;
         private Label label68;
         private Label label69;
         private Label label70;
@@ -1231,7 +1223,6 @@
         private Panel panel4;
         private Label label23;
         private Label LbClt;
-        private Label LbAtivo;
         private Label label19;
         private Label label24;
         private Panel panel10;
@@ -1246,8 +1237,6 @@
         private Label label34;
         private Button BtnImprimir;
         private Button BtnConfirmar;
-        private Label Lbid;
-        private Label label35;
         private Button button2;
         private ToolTip toolTip1;
         private Label label50;
@@ -1272,5 +1261,26 @@
         private Label label6;
         private Label label8;
         private Label label49;
+        internal Label TxtSalarioLiqMensal;
+        internal Label TxtMaiorRemuneracao;
+        internal Label TxtSalarioBaseFGTS;
+        internal Label TxtValorFGTS;
+        internal Label TxtTaxaDescIRRF;
+        internal Label TxtDescIRRF;
+        internal Label TxtSalarioBaseIRRF;
+        internal Label TxtTotalIRRF;
+        internal Label TxtValorIRRF;
+        internal Label TxtTaxaDescINSS;
+        internal Label TxtDescINSS;
+        internal Label TxtSalarioBaseINSS;
+        internal Label TxtValorInss;
+        internal Label TxtTotalInss;
+        internal Label TxtTotalFGTS;
+        internal Label TxtSalarioLiquido;
+        internal Label TxtTotaisDescontos;
+        internal Label TxtVencimentos;
+        internal Label TxtAtivo;
+        internal Label TxtCLT;
+        internal Label TxtTaxaDescFGTS;
     }
 }
