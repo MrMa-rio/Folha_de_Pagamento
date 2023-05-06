@@ -82,7 +82,6 @@
             label48 = new Label();
             TxtSalarioLiquido = new Label();
             TxtTotaisDescontos = new Label();
-            TxtSalBaseMensal = new Label();
             TxtVencimentos = new Label();
             label55 = new Label();
             label54 = new Label();
@@ -129,6 +128,7 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
+            label56 = new Label();
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -333,7 +333,7 @@
             // 
             TxtSalarioLiqMensal.AutoSize = true;
             TxtSalarioLiqMensal.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioLiqMensal.Location = new Point(305, 25);
+            TxtSalarioLiqMensal.Location = new Point(307, 22);
             TxtSalarioLiqMensal.MaximumSize = new Size(85, 19);
             TxtSalarioLiqMensal.Name = "TxtSalarioLiqMensal";
             TxtSalarioLiqMensal.Size = new Size(0, 19);
@@ -663,12 +663,12 @@
             // panel19
             // 
             panel19.BorderStyle = BorderStyle.FixedSingle;
+            panel19.Controls.Add(label56);
             panel19.Controls.Add(label57);
             panel19.Controls.Add(label49);
             panel19.Controls.Add(label48);
             panel19.Controls.Add(TxtSalarioLiquido);
             panel19.Controls.Add(TxtTotaisDescontos);
-            panel19.Controls.Add(TxtSalBaseMensal);
             panel19.Controls.Add(TxtVencimentos);
             panel19.Controls.Add(label55);
             panel19.Controls.Add(label54);
@@ -731,16 +731,6 @@
             TxtTotaisDescontos.Name = "TxtTotaisDescontos";
             TxtTotaisDescontos.Size = new Size(0, 19);
             TxtTotaisDescontos.TabIndex = 76;
-            // 
-            // TxtSalBaseMensal
-            // 
-            TxtSalBaseMensal.AutoSize = true;
-            TxtSalBaseMensal.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalBaseMensal.Location = new Point(285, 25);
-            TxtSalBaseMensal.MaximumSize = new Size(85, 19);
-            TxtSalBaseMensal.Name = "TxtSalBaseMensal";
-            TxtSalBaseMensal.Size = new Size(0, 19);
-            TxtSalBaseMensal.TabIndex = 75;
             // 
             // TxtVencimentos
             // 
@@ -1223,6 +1213,16 @@
             label1.TabIndex = 60;
             label1.Text = "________________________________";
             // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label56.Location = new Point(350, 25);
+            label56.Name = "label56";
+            label56.Size = new Size(25, 19);
+            label56.TabIndex = 100;
+            label56.Text = "30";
+            // 
             // FormFolhaDetalhada
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1334,7 +1334,6 @@
         internal Label TxtTotalFGTS;
         internal Label TxtSalarioLiquido;
         internal Label TxtTotaisDescontos;
-        internal Label TxtSalBaseMensal;
         internal Label TxtVencimentos;
         internal Label TxtSalarioLiqMensal;
         internal Label TxtMaiorRemuneracao;
@@ -1356,5 +1355,6 @@
         private Label label8;
         private Label TxtDataLancamento;
         private Label label59;
+        private Label label56;
     }
 }

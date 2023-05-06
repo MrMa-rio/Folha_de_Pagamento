@@ -1171,6 +1171,8 @@
         private Label label45;
         private Label label46;
         private Label label47;
+        internal Label LbAtivos;
+        internal Label LbClt;
         private Label TxtDataLancamento;
         private Label label49;
     }
