@@ -81,6 +81,11 @@ namespace FOLHA_DE_PAGAMENTO_
             }
                 
         }
+
+        private void panelInss_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

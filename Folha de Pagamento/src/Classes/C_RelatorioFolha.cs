@@ -58,14 +58,10 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
 
         public void setDadosFuncionario(string matricula, FormFolhaDetalhadaPesq formFolhaDetalhada)
         {
-
             List<string[]> data = c_SearchInDataBase.getDataFuncionario(matricula);
-            
-
             formFolhaDetalhada.TxtMatricula.Text = data[0][0];
             formFolhaDetalhada.TxtNome.Text = data[0][2];
             formFolhaDetalhada.TxtDataAdmissao.Text = data[0][13];
-            
         }
 
         public void setDadosFolhaDetalhada(FormFolhaDetalhadaPesq formFolhaDetalhada, List<string[]> ListDate)
