@@ -569,6 +569,10 @@
             // panelFgts
             // 
             panelFgts.BorderStyle = BorderStyle.FixedSingle;
+            panelFgts.Controls.Add(label5);
+            panelFgts.Controls.Add(label6);
+            panelFgts.Controls.Add(label8);
+            panelFgts.Controls.Add(label49);
             panelFgts.Controls.Add(label40);
             panelFgts.Controls.Add(label39);
             panelFgts.Controls.Add(label43);
@@ -628,7 +632,7 @@
             // 
             label51.AutoSize = true;
             label51.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label51.Location = new Point(5, 210);
+            label51.Location = new Point(4, 210);
             label51.Name = "label51";
             label51.Size = new Size(50, 19);
             label51.TabIndex = 22;
@@ -656,7 +660,7 @@
             // 
             label26.AutoSize = true;
             label26.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label26.Location = new Point(4, 90);
+            label26.Location = new Point(4, 150);
             label26.Name = "label26";
             label26.Size = new Size(85, 19);
             label26.TabIndex = 12;
@@ -666,7 +670,7 @@
             // 
             label29.AutoSize = true;
             label29.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label29.Location = new Point(5, 120);
+            label29.Location = new Point(4, 180);
             label29.Name = "label29";
             label29.Size = new Size(89, 19);
             label29.TabIndex = 10;
@@ -1264,5 +1268,9 @@
         private Label label4;
         private Label label3;
         private Label label52;
+        private Label label5;
+        private Label label6;
+        private Label label8;
+        private Label label49;
     }
 }

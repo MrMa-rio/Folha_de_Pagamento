@@ -135,6 +135,7 @@ Folha de Pagamento/.vs/Folha_de_Pagamento/DesignTimeBuild/.dtbcache.v2
 *.cache
 *.v2
 *.1
+.vs/*
 Folha de Pagamento/.vs/Folha_de_Pagamento/DesignTimeBuild/.dtbcache.v2
 Folha de Pagamento/.vs/Folha_de_Pagamento/v17/.futdcache.v2
 Folha de Pagamento/.vs/Folha_de_Pagamento/v17/.suo
@@ -154,3 +155,9 @@ Folha de Pagamento/obj/FOLHA_DE_PAGAMENTO_.csproj.nuget.g.props
 Folha de Pagamento/obj/FOLHA_DE_PAGAMENTO_.csproj.nuget.g.targets
 Folha de Pagamento/obj/project.assets.json
 Folha de Pagamento/obj/project.nuget.cache
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+.vs/ProjectSettings.json
+.vs/Folha de Pagamento/v17/.wsuo
+.vs/Folha de Pagamento/FileContentIndex/read.lock
+.vs/Folha de Pagamento/FileContentIndex/45a38be2-c8e8-4f52-8973-2ad34181be9d.vsidx

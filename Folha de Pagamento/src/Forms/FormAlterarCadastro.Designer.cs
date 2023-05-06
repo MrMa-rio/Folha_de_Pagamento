@@ -31,11 +31,11 @@
             components = new System.ComponentModel.Container();
             Button BtnEditar;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
-            Button button1;
-            Button button2;
+            Button BtnEditarFoto;
+            Button BtnCracha;
             BtnDeletarFunc = new Button();
             panel1 = new Panel();
-            button3 = new Button();
+            BtnHome = new Button();
             BtnDeleteFunc = new Button();
             TxtMatricula = new MaskedTextBox();
             BtnConfirmar = new Button();
@@ -111,8 +111,8 @@
             label1 = new Label();
             toolTip1 = new ToolTip(components);
             BtnEditar = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            BtnEditarFoto = new Button();
+            BtnCracha = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctData).BeginInit();
@@ -136,32 +136,32 @@
             BtnEditar.UseVisualStyleBackColor = true;
             BtnEditar.MouseClick += BtnEditar_MouseClick;
             // 
-            // button1
+            // BtnEditarFoto
             // 
-            button1.BackgroundImage = Properties.Resources.editPhoto;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(218, 221);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 43);
-            button1.TabIndex = 123;
-            toolTip1.SetToolTip(button1, "Trocar Imagem Perfil");
-            button1.UseVisualStyleBackColor = true;
-            button1.MouseClick += button1_MouseClick;
+            BtnEditarFoto.BackgroundImage = Properties.Resources.editPhoto;
+            BtnEditarFoto.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnEditarFoto.FlatAppearance.BorderSize = 0;
+            BtnEditarFoto.FlatStyle = FlatStyle.Flat;
+            BtnEditarFoto.Location = new Point(218, 221);
+            BtnEditarFoto.Name = "BtnEditarFoto";
+            BtnEditarFoto.Size = new Size(43, 43);
+            BtnEditarFoto.TabIndex = 123;
+            toolTip1.SetToolTip(BtnEditarFoto, "Trocar Imagem Perfil");
+            BtnEditarFoto.UseVisualStyleBackColor = true;
+            BtnEditarFoto.MouseClick += button1_MouseClick;
             // 
-            // button2
+            // BtnCracha
             // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(116, 437);
-            button2.Name = "button2";
-            button2.Size = new Size(43, 43);
-            button2.TabIndex = 124;
-            toolTip1.SetToolTip(button2, "Criar crachá");
-            button2.UseVisualStyleBackColor = true;
+            BtnCracha.BackgroundImage = (Image)resources.GetObject("BtnCracha.BackgroundImage");
+            BtnCracha.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCracha.FlatAppearance.BorderSize = 0;
+            BtnCracha.FlatStyle = FlatStyle.Flat;
+            BtnCracha.Location = new Point(116, 437);
+            BtnCracha.Name = "BtnCracha";
+            BtnCracha.Size = new Size(43, 43);
+            BtnCracha.TabIndex = 124;
+            toolTip1.SetToolTip(BtnCracha, "Criar crachá");
+            BtnCracha.UseVisualStyleBackColor = true;
             // 
             // BtnDeletarFunc
             // 
@@ -173,7 +173,7 @@
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(BtnHome);
             panel1.Controls.Add(BtnDeleteFunc);
             panel1.Controls.Add(TxtMatricula);
             panel1.Controls.Add(BtnConfirmar);
@@ -190,17 +190,17 @@
             panel1.TabIndex = 0;
             panel1.MouseClick += AllForms_MouseClick;
             // 
-            // button3
+            // BtnHome
             // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(742, 95);
-            button3.Name = "button3";
-            button3.Size = new Size(43, 43);
-            button3.TabIndex = 119;
-            toolTip1.SetToolTip(button3, "Voltar ao início");
-            button3.UseVisualStyleBackColor = true;
+            BtnHome.FlatAppearance.BorderSize = 0;
+            BtnHome.FlatStyle = FlatStyle.Flat;
+            BtnHome.Image = (Image)resources.GetObject("BtnHome.Image");
+            BtnHome.Location = new Point(742, 95);
+            BtnHome.Name = "BtnHome";
+            BtnHome.Size = new Size(43, 43);
+            BtnHome.TabIndex = 119;
+            toolTip1.SetToolTip(BtnHome, "Voltar ao início");
+            BtnHome.UseVisualStyleBackColor = true;
             // 
             // BtnDeleteFunc
             // 
@@ -1089,8 +1089,8 @@
             panel3.BackColor = Color.LightGray;
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(label12);
-            panel3.Controls.Add(button2);
-            panel3.Controls.Add(button1);
+            panel3.Controls.Add(BtnCracha);
+            panel3.Controls.Add(BtnEditarFoto);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(BtnEditar);
             panel3.Controls.Add(PctUser);
@@ -1261,6 +1261,6 @@
         private Button BtnDeleteFunc;
         private Button BtnDeletarFunc;
         private Label label12;
-        private Button button3;
+        private Button BtnHome;
     }
 }
