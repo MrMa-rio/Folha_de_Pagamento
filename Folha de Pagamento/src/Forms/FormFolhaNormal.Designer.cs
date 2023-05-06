@@ -488,13 +488,13 @@
             // 
             // LbMaiorRemun
             // 
-            LbDataEmissao.AutoSize = true;
-            LbDataEmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbDataEmissao.Location = new Point(690, 25);
-            LbDataEmissao.MaximumSize = new Size(85, 19);
-            LbDataEmissao.Name = "LbDataEmissao";
-            LbDataEmissao.Size = new Size(0, 19);
-            LbDataEmissao.TabIndex = 82;
+            TxtDataEmissao.AutoSize = true;
+            TxtDataEmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDataEmissao.Location = new Point(690, 25);
+            TxtDataEmissao.MaximumSize = new Size(85, 19);
+            TxtDataEmissao.Name = "LbDataEmissao";
+            TxtDataEmissao.Size = new Size(0, 19);
+            TxtDataEmissao.TabIndex = 82;
             // 
             // label48
             // 
