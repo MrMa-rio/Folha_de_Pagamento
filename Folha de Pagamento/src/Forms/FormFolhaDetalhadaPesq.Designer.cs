@@ -131,6 +131,10 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
+            label3 = new Label();
+            label4 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -425,6 +429,10 @@
             // panelFgts
             // 
             panelFgts.BorderStyle = BorderStyle.FixedSingle;
+            panelFgts.Controls.Add(label3);
+            panelFgts.Controls.Add(label4);
+            panelFgts.Controls.Add(label6);
+            panelFgts.Controls.Add(label7);
             panelFgts.Controls.Add(TxtTotalFGTS);
             panelFgts.Controls.Add(label43);
             panelFgts.Controls.Add(TxtValorFGTS);
@@ -1239,6 +1247,46 @@
             label1.TabIndex = 60;
             label1.Text = "_____________________________________";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(147, 90);
+            label3.Name = "label3";
+            label3.Size = new Size(21, 19);
+            label3.TabIndex = 45;
+            label3.Text = "--";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(147, 120);
+            label4.Name = "label4";
+            label4.Size = new Size(21, 19);
+            label4.TabIndex = 44;
+            label4.Text = "--";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(30, 90);
+            label6.Name = "label6";
+            label6.Size = new Size(21, 19);
+            label6.TabIndex = 43;
+            label6.Text = "--";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(30, 120);
+            label7.Name = "label7";
+            label7.Size = new Size(21, 19);
+            label7.TabIndex = 42;
+            label7.Text = "--";
+            // 
             // FormFolhaDetalhadaPesq
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1373,5 +1421,9 @@
         private Label label57;
         private Button BtnConfirmar;
         private Button BtnEditar;
+        private Label label3;
+        private Label label4;
+        private Label label6;
+        private Label label7;
     }
 }

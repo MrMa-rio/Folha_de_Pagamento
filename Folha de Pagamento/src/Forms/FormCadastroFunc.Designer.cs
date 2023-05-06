@@ -95,8 +95,8 @@
             TxtNomeCompleto = new TextBox();
             LbNomeCompleto = new Label();
             PanelPerfilFunc = new Panel();
-            button2 = new Button();
-            button1 = new Button();
+            BtnApagarFoto = new Button();
+            BtnFoto = new Button();
             LbTelefoneResult = new MaskedTextBox();
             LbCpfResult = new MaskedTextBox();
             LbDataNascimentoResult = new MaskedTextBox();
@@ -111,7 +111,7 @@
             LbTitulo = new Label();
             label1 = new Label();
             BtnConfirmar = new Button();
-            BtnCancelar = new Button();
+            BtnHome = new Button();
             toolTip1 = new ToolTip(components);
             LbAlterarCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
@@ -133,7 +133,7 @@
             LbAlterarCadastro.Controls.Add(LbTitulo);
             LbAlterarCadastro.Controls.Add(label1);
             LbAlterarCadastro.Controls.Add(BtnConfirmar);
-            LbAlterarCadastro.Controls.Add(BtnCancelar);
+            LbAlterarCadastro.Controls.Add(BtnHome);
             LbAlterarCadastro.Location = new Point(80, 90);
             LbAlterarCadastro.Name = "LbAlterarCadastro";
             LbAlterarCadastro.Size = new Size(1110, 630);
@@ -945,8 +945,8 @@
             PanelPerfilFunc.AutoScroll = true;
             PanelPerfilFunc.BackColor = Color.LightGray;
             PanelPerfilFunc.BorderStyle = BorderStyle.FixedSingle;
-            PanelPerfilFunc.Controls.Add(button2);
-            PanelPerfilFunc.Controls.Add(button1);
+            PanelPerfilFunc.Controls.Add(BtnApagarFoto);
+            PanelPerfilFunc.Controls.Add(BtnFoto);
             PanelPerfilFunc.Controls.Add(LbTelefoneResult);
             PanelPerfilFunc.Controls.Add(LbCpfResult);
             PanelPerfilFunc.Controls.Add(LbDataNascimentoResult);
@@ -964,33 +964,33 @@
             PanelPerfilFunc.TabIndex = 4;
             PanelPerfilFunc.MouseClick += AllForms_MouseClick;
             // 
-            // button2
+            // BtnApagarFoto
             // 
-            button2.BackgroundImage = Properties.Resources.remove;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(143, 264);
-            button2.Name = "button2";
-            button2.Size = new Size(43, 43);
-            button2.TabIndex = 62;
-            toolTip1.SetToolTip(button2, "Remover foto");
-            button2.UseVisualStyleBackColor = true;
-            button2.MouseClick += button2_MouseClick;
+            BtnApagarFoto.BackgroundImage = Properties.Resources.remove;
+            BtnApagarFoto.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnApagarFoto.FlatAppearance.BorderSize = 0;
+            BtnApagarFoto.FlatStyle = FlatStyle.Flat;
+            BtnApagarFoto.Location = new Point(143, 264);
+            BtnApagarFoto.Name = "BtnApagarFoto";
+            BtnApagarFoto.Size = new Size(43, 43);
+            BtnApagarFoto.TabIndex = 62;
+            toolTip1.SetToolTip(BtnApagarFoto, "Remover foto");
+            BtnApagarFoto.UseVisualStyleBackColor = true;
+            BtnApagarFoto.MouseClick += button2_MouseClick;
             // 
-            // button1
+            // BtnFoto
             // 
-            button1.BackgroundImage = Properties.Resources.addPhoto;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(94, 264);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 43);
-            button1.TabIndex = 122;
-            toolTip1.SetToolTip(button1, "Adicionar foto");
-            button1.UseVisualStyleBackColor = true;
-            button1.MouseClick += button1_MouseClick;
+            BtnFoto.BackgroundImage = Properties.Resources.addPhoto;
+            BtnFoto.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnFoto.FlatAppearance.BorderSize = 0;
+            BtnFoto.FlatStyle = FlatStyle.Flat;
+            BtnFoto.Location = new Point(94, 264);
+            BtnFoto.Name = "BtnFoto";
+            BtnFoto.Size = new Size(43, 43);
+            BtnFoto.TabIndex = 122;
+            toolTip1.SetToolTip(BtnFoto, "Adicionar foto");
+            BtnFoto.UseVisualStyleBackColor = true;
+            BtnFoto.MouseClick += button1_MouseClick;
             // 
             // LbTelefoneResult
             // 
@@ -1164,18 +1164,18 @@
             BtnConfirmar.UseVisualStyleBackColor = true;
             BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
             // 
-            // BtnCancelar
+            // BtnHome
             // 
-            BtnCancelar.FlatAppearance.BorderSize = 0;
-            BtnCancelar.FlatStyle = FlatStyle.Flat;
-            BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
-            BtnCancelar.Location = new Point(742, 95);
-            BtnCancelar.Name = "BtnCancelar";
-            BtnCancelar.Size = new Size(43, 43);
-            BtnCancelar.TabIndex = 19;
-            toolTip1.SetToolTip(BtnCancelar, "Vtar ao iníio");
-            BtnCancelar.UseVisualStyleBackColor = true;
-            BtnCancelar.MouseClick += BtnCancelar_MouseClick;
+            BtnHome.FlatAppearance.BorderSize = 0;
+            BtnHome.FlatStyle = FlatStyle.Flat;
+            BtnHome.Image = (Image)resources.GetObject("BtnHome.Image");
+            BtnHome.Location = new Point(742, 95);
+            BtnHome.Name = "BtnHome";
+            BtnHome.Size = new Size(43, 43);
+            BtnHome.TabIndex = 19;
+            toolTip1.SetToolTip(BtnHome, "Voltar ao início");
+            BtnHome.UseVisualStyleBackColor = true;
+            BtnHome.MouseClick += BtnCancelar_MouseClick;
             // 
             // FormCadastroFunc
             // 
@@ -1212,7 +1212,7 @@
         private Panel PanelPerfilFunc;
         private PictureBox PctFotoFunc;
         private Button BtnConfirmar;
-        private Button BtnCancelar;
+        private Button BtnHome;
         private Panel PnlCtrlFunc;
         private MonthCalendar BoxCalendario;
         private Button BtnCalendario;
@@ -1283,8 +1283,8 @@
         private ComboBox CbDepartamento;
         private Label label6;
         private MaskedTextBox TxtReservista;
-        private Button button1;
-        private Button button2;
+        private Button BtnFoto;
+        private Button BtnApagarFoto;
         private PictureBox Pctdata;
         private ToolTip toolTip1;
         private Button BtnRefresh;
