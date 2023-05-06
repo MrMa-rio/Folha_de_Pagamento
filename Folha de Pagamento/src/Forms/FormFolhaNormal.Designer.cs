@@ -51,8 +51,6 @@
             label50 = new Label();
             label46 = new Label();
             label45 = new Label();
-            Lbid = new Label();
-            label35 = new Label();
             TxtSalarioLiquido = new Label();
             TxtTotaisDescontos = new Label();
             TxtVencimentos = new Label();
@@ -345,8 +343,6 @@
             panel8.Controls.Add(label50);
             panel8.Controls.Add(label46);
             panel8.Controls.Add(label45);
-            panel8.Controls.Add(Lbid);
-            panel8.Controls.Add(label35);
             panel8.Controls.Add(TxtSalarioLiquido);
             panel8.Controls.Add(TxtTotaisDescontos);
             panel8.Controls.Add(TxtVencimentos);
@@ -387,24 +383,6 @@
             label45.Size = new Size(25, 19);
             label45.TabIndex = 95;
             label45.Text = "R$";
-            // 
-            // Lbid
-            // 
-            Lbid.AutoSize = true;
-            Lbid.Location = new Point(8, 25);
-            Lbid.Name = "Lbid";
-            Lbid.Size = new Size(0, 15);
-            Lbid.TabIndex = 94;
-            // 
-            // label35
-            // 
-            label35.AutoSize = true;
-            label35.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label35.Location = new Point(8, 5);
-            label35.Name = "label35";
-            label35.Size = new Size(20, 15);
-            label35.TabIndex = 93;
-            label35.Text = "ID";
             // 
             // TxtSalarioLiquido
             // 
@@ -522,9 +500,8 @@
             TxtDataEmissao.Location = new Point(690, 25);
             TxtDataEmissao.MaximumSize = new Size(85, 19);
             TxtDataEmissao.Name = "TxtDataEmissao";
-            TxtDataEmissao.Size = new Size(83, 19);
+            TxtDataEmissao.Size = new Size(0, 19);
             TxtDataEmissao.TabIndex = 82;
-            TxtDataEmissao.Text = "20/12/2369";
             // 
             // label41
             // 
@@ -569,10 +546,6 @@
             // panelFgts
             // 
             panelFgts.BorderStyle = BorderStyle.FixedSingle;
-            panelFgts.Controls.Add(label5);
-            panelFgts.Controls.Add(label6);
-            panelFgts.Controls.Add(label8);
-            panelFgts.Controls.Add(label49);
             panelFgts.Controls.Add(label40);
             panelFgts.Controls.Add(label39);
             panelFgts.Controls.Add(label43);
@@ -1246,8 +1219,6 @@
         private Label label34;
         private Button BtnImprimir;
         private Button BtnConfirmar;
-        private Label Lbid;
-        private Label label35;
         private Button button2;
         private ToolTip toolTip1;
         private Label label50;

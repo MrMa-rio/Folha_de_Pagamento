@@ -28,7 +28,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnPesquisarMatricula_MouseClick(object sender, MouseEventArgs e)
         {
-            if(TxtPesquisarMatricula.Text.Trim() != "")
+            if (TxtPesquisarMatricula.Text.Trim() != "")
             {
                 C_ShowFolhaDetalhada c_ShowFolhaDetalhada = new C_ShowFolhaDetalhada();
                 double DescInss;
@@ -46,7 +46,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if(TxtPesquisarMatricula.Text.Trim() != "")
+                if (TxtPesquisarMatricula.Text.Trim() != "")
                 {
                     C_ShowFolhaDetalhada c_ShowFolhaDetalhada = new C_ShowFolhaDetalhada();
                     double DescInss;
@@ -79,7 +79,7 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 MessageBox.Show("Erro ao lançar Folha. Dados Duplicados!");
             }
-                
+
         }
 
         private void panelInss_Paint(object sender, PaintEventArgs e)

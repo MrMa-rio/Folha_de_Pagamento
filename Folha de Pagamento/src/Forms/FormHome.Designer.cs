@@ -132,7 +132,7 @@
             BtnTrocarUsuario.Name = "BtnTrocarUsuario";
             BtnTrocarUsuario.Size = new Size(162, 48);
             BtnTrocarUsuario.TabIndex = 13;
-            BtnTrocarUsuario.Text = "               Trocar de usuário";
+            BtnTrocarUsuario.Text = "               Trocar de perfil";
             BtnTrocarUsuario.UseVisualStyleBackColor = false;
             // 
             // label12

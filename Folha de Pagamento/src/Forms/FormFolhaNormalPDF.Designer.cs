@@ -59,6 +59,10 @@
             label41 = new Label();
             label42 = new Label();
             panelFgts = new Panel();
+            label44 = new Label();
+            label45 = new Label();
+            label46 = new Label();
+            label47 = new Label();
             label36 = new Label();
             label35 = new Label();
             label34 = new Label();
@@ -109,10 +113,8 @@
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            label44 = new Label();
-            label45 = new Label();
-            label46 = new Label();
-            label47 = new Label();
+            label49 = new Label();
+            TxtDataLancamento = new Label();
             PanelFolhaDetalhada.SuspendLayout();
             panel3.SuspendLayout();
             panel10.SuspendLayout();
@@ -356,6 +358,8 @@
             // panel7
             // 
             panel7.BorderStyle = BorderStyle.FixedSingle;
+            panel7.Controls.Add(TxtDataLancamento);
+            panel7.Controls.Add(label49);
             panel7.Controls.Add(label38);
             panel7.Controls.Add(label37);
             panel7.Controls.Add(LbMensal);
@@ -470,6 +474,46 @@
             panelFgts.Name = "panelFgts";
             panelFgts.Size = new Size(315, 257);
             panelFgts.TabIndex = 19;
+            // 
+            // label44
+            // 
+            label44.AutoSize = true;
+            label44.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label44.Location = new Point(147, 90);
+            label44.Name = "label44";
+            label44.Size = new Size(21, 19);
+            label44.TabIndex = 30;
+            label44.Text = "--";
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label45.Location = new Point(147, 120);
+            label45.Name = "label45";
+            label45.Size = new Size(21, 19);
+            label45.TabIndex = 29;
+            label45.Text = "--";
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label46.Location = new Point(30, 90);
+            label46.Name = "label46";
+            label46.Size = new Size(21, 19);
+            label46.TabIndex = 28;
+            label46.Text = "--";
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label47.Location = new Point(30, 120);
+            label47.Name = "label47";
+            label47.Size = new Size(21, 19);
+            label47.TabIndex = 27;
+            label47.Text = "--";
             // 
             // label36
             // 
@@ -989,45 +1033,25 @@
             label8.TabIndex = 8;
             label8.Text = "CNPJ : 13.545.586/0001-11";
             // 
-            // label44
+            // label49
             // 
-            label44.AutoSize = true;
-            label44.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label44.Location = new Point(147, 90);
-            label44.Name = "label44";
-            label44.Size = new Size(21, 19);
-            label44.TabIndex = 30;
-            label44.Text = "--";
+            label49.AutoSize = true;
+            label49.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label49.Location = new Point(460, 5);
+            label49.Name = "label49";
+            label49.Size = new Size(147, 19);
+            label49.TabIndex = 85;
+            label49.Text = "Data de lançamento:";
             // 
-            // label45
+            // TxtDataLancamento
             // 
-            label45.AutoSize = true;
-            label45.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label45.Location = new Point(147, 120);
-            label45.Name = "label45";
-            label45.Size = new Size(21, 19);
-            label45.TabIndex = 29;
-            label45.Text = "--";
-            // 
-            // label46
-            // 
-            label46.AutoSize = true;
-            label46.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label46.Location = new Point(30, 90);
-            label46.Name = "label46";
-            label46.Size = new Size(21, 19);
-            label46.TabIndex = 28;
-            label46.Text = "--";
-            // 
-            // label47
-            // 
-            label47.AutoSize = true;
-            label47.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label47.Location = new Point(30, 120);
-            label47.Name = "label47";
-            label47.Size = new Size(21, 19);
-            label47.TabIndex = 27;
-            label47.Text = "--";
+            TxtDataLancamento.AutoSize = true;
+            TxtDataLancamento.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDataLancamento.Location = new Point(460, 25);
+            TxtDataLancamento.Name = "TxtDataLancamento";
+            TxtDataLancamento.Size = new Size(53, 19);
+            TxtDataLancamento.TabIndex = 86;
+            TxtDataLancamento.Text = "label50";
             // 
             // FormFolhaNormalPDF
             // 
@@ -1149,5 +1173,7 @@
         private Label label45;
         private Label label46;
         private Label label47;
+        private Label TxtDataLancamento;
+        private Label label49;
     }
 }
