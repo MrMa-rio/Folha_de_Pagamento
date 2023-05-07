@@ -530,7 +530,7 @@
             // TxtDataLancamento
             // 
             TxtDataLancamento.AutoSize = true;
-            TxtDataLancamento.Location = new Point(460, 25);
+            TxtDataLancamento.Location = new Point(488, 25);
             TxtDataLancamento.Name = "TxtDataLancamento";
             TxtDataLancamento.Size = new Size(0, 15);
             TxtDataLancamento.TabIndex = 103;
