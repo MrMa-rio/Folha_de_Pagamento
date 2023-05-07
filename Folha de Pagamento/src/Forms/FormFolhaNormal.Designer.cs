@@ -180,6 +180,7 @@
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 120;
+            toolTip1.SetToolTip(BtnImprimir, "Imprimir folha");
             BtnImprimir.UseVisualStyleBackColor = true;
             BtnImprimir.MouseClick += BtnImprimir_MouseClick;
             // 

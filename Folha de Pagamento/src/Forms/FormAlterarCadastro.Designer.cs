@@ -146,7 +146,7 @@
             BtnEditarFoto.Name = "BtnEditarFoto";
             BtnEditarFoto.Size = new Size(43, 43);
             BtnEditarFoto.TabIndex = 31;
-            toolTip1.SetToolTip(BtnEditarFoto, "Trocar Imagem Perfil");
+            toolTip1.SetToolTip(BtnEditarFoto, "Trocar imagem perfil");
             BtnEditarFoto.UseVisualStyleBackColor = true;
             BtnEditarFoto.MouseClick += button1_MouseClick;
             // 
@@ -1034,7 +1034,7 @@
             TxtNomeCompleto.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtNomeCompleto.Location = new Point(167, 110);
             TxtNomeCompleto.Name = "TxtNomeCompleto";
-            TxtNomeCompleto.PlaceholderText = " Digite o nome aqui";
+            TxtNomeCompleto.PlaceholderText = "Digite o nome aqui";
             TxtNomeCompleto.Size = new Size(287, 31);
             TxtNomeCompleto.TabIndex = 4;
             // 

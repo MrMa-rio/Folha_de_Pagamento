@@ -113,8 +113,6 @@
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            label49 = new Label();
-            TxtDataLancamento = new Label();
             PanelFolhaDetalhada.SuspendLayout();
             panel3.SuspendLayout();
             panel10.SuspendLayout();
@@ -257,7 +255,7 @@
             // 
             label40.AutoSize = true;
             label40.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label40.Location = new Point(310, 25);
+            label40.Location = new Point(305, 25);
             label40.Name = "label40";
             label40.Size = new Size(25, 19);
             label40.TabIndex = 82;
@@ -339,7 +337,7 @@
             // 
             label69.AutoSize = true;
             label69.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label69.Location = new Point(310, 5);
+            label69.Location = new Point(305, 5);
             label69.Name = "label69";
             label69.Size = new Size(81, 19);
             label69.TabIndex = 15;
@@ -358,8 +356,6 @@
             // panel7
             // 
             panel7.BorderStyle = BorderStyle.FixedSingle;
-            panel7.Controls.Add(TxtDataLancamento);
-            panel7.Controls.Add(label49);
             panel7.Controls.Add(label38);
             panel7.Controls.Add(label37);
             panel7.Controls.Add(LbMensal);
@@ -407,11 +403,12 @@
             // 
             LbDataEmissao.AutoSize = true;
             LbDataEmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbDataEmissao.Location = new Point(620, 25);
+            LbDataEmissao.Location = new Point(637, 25);
             LbDataEmissao.MaximumSize = new Size(85, 19);
             LbDataEmissao.Name = "LbDataEmissao";
-            LbDataEmissao.Size = new Size(0, 19);
+            LbDataEmissao.Size = new Size(83, 19);
             LbDataEmissao.TabIndex = 82;
+            LbDataEmissao.Text = "10/10/2010";
             // 
             // LbMaiorRemun
             // 
@@ -1033,26 +1030,6 @@
             label8.TabIndex = 8;
             label8.Text = "CNPJ : 13.545.586/0001-11";
             // 
-            // label49
-            // 
-            label49.AutoSize = true;
-            label49.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label49.Location = new Point(460, 5);
-            label49.Name = "label49";
-            label49.Size = new Size(147, 19);
-            label49.TabIndex = 85;
-            label49.Text = "Data de lançamento:";
-            // 
-            // TxtDataLancamento
-            // 
-            TxtDataLancamento.AutoSize = true;
-            TxtDataLancamento.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataLancamento.Location = new Point(460, 25);
-            TxtDataLancamento.Name = "TxtDataLancamento";
-            TxtDataLancamento.Size = new Size(53, 19);
-            TxtDataLancamento.TabIndex = 86;
-            TxtDataLancamento.Text = "label50";
-            // 
             // FormFolhaNormalPDF
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1173,7 +1150,5 @@
         private Label label47;
         internal Label LbAtivos;
         internal Label LbClt;
-        private Label TxtDataLancamento;
-        private Label label49;
     }
 }

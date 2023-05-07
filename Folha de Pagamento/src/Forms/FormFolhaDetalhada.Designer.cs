@@ -39,8 +39,6 @@
             BtnPesquisarMatricula = new Button();
             PanelFolhaDetalhada = new Panel();
             panel6 = new Panel();
-            TxtDataLancamento = new Label();
-            label59 = new Label();
             label46 = new Label();
             label8 = new Label();
             TxtDataEmissao = new Label();
@@ -77,6 +75,7 @@
             label23 = new Label();
             label24 = new Label();
             panel19 = new Panel();
+            label56 = new Label();
             label57 = new Label();
             label49 = new Label();
             label48 = new Label();
@@ -128,7 +127,6 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
-            label56 = new Label();
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -181,7 +179,7 @@
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 117;
-            toolTip1.SetToolTip(BtnImprimir, "Cancelar");
+            toolTip1.SetToolTip(BtnImprimir, "Imprimir folha");
             BtnImprimir.UseVisualStyleBackColor = true;
             // 
             // BtnConfirmar
@@ -254,8 +252,6 @@
             // panel6
             // 
             panel6.BorderStyle = BorderStyle.FixedSingle;
-            panel6.Controls.Add(TxtDataLancamento);
-            panel6.Controls.Add(label59);
             panel6.Controls.Add(label46);
             panel6.Controls.Add(label8);
             panel6.Controls.Add(TxtDataEmissao);
@@ -269,25 +265,6 @@
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
             panel6.MouseClick += AllForms_MouseClick;
-            // 
-            // TxtDataLancamento
-            // 
-            TxtDataLancamento.AutoSize = true;
-            TxtDataLancamento.Location = new Point(475, 25);
-            TxtDataLancamento.Name = "TxtDataLancamento";
-            TxtDataLancamento.Size = new Size(44, 15);
-            TxtDataLancamento.TabIndex = 103;
-            TxtDataLancamento.Text = "label60";
-            // 
-            // label59
-            // 
-            label59.AutoSize = true;
-            label59.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label59.Location = new Point(475, 5);
-            label59.Name = "label59";
-            label59.Size = new Size(147, 19);
-            label59.TabIndex = 102;
-            label59.Text = "Data de lançamento:";
             // 
             // label46
             // 
@@ -679,6 +656,16 @@
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 17;
             panel19.MouseClick += AllForms_MouseClick;
+            // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label56.Location = new Point(350, 25);
+            label56.Name = "label56";
+            label56.Size = new Size(25, 19);
+            label56.TabIndex = 100;
+            label56.Text = "30";
             // 
             // label57
             // 
@@ -1213,16 +1200,6 @@
             label1.TabIndex = 60;
             label1.Text = "________________________________";
             // 
-            // label56
-            // 
-            label56.AutoSize = true;
-            label56.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label56.Location = new Point(350, 25);
-            label56.Name = "label56";
-            label56.Size = new Size(25, 19);
-            label56.TabIndex = 100;
-            label56.Text = "30";
-            // 
             // FormFolhaDetalhada
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1353,8 +1330,6 @@
         private Label label58;
         private Label label46;
         private Label label8;
-        private Label TxtDataLancamento;
-        private Label label59;
         private Label label56;
     }
 }

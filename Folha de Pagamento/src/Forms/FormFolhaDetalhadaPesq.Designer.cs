@@ -45,6 +45,8 @@
             BtnPesquisarMatricula = new Button();
             PanelFolhaDetalhada = new Panel();
             panel6 = new Panel();
+            TxtDataLancamento = new Label();
+            label60 = new Label();
             label49 = new Label();
             label8 = new Label();
             TxtSalarioLiqMensal = new TextBox();
@@ -135,8 +137,6 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
-            label60 = new Label();
-            TxtDataLancamento = new Label();
             LbFolhaDetalhada.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel6.SuspendLayout();
@@ -182,6 +182,7 @@
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 123;
+            toolTip1.SetToolTip(BtnConfirmar, "Gerar folha detalhada");
             BtnConfirmar.UseVisualStyleBackColor = true;
             // 
             // BtnEditar
@@ -193,6 +194,7 @@
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(43, 43);
             BtnEditar.TabIndex = 122;
+            toolTip1.SetToolTip(BtnEditar, "Editar folha");
             BtnEditar.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -315,6 +317,7 @@
             BtnPesquisarMatricula.Name = "BtnPesquisarMatricula";
             BtnPesquisarMatricula.Size = new Size(31, 31);
             BtnPesquisarMatricula.TabIndex = 69;
+            toolTip1.SetToolTip(BtnPesquisarMatricula, "Pesquisar");
             BtnPesquisarMatricula.UseVisualStyleBackColor = true;
             BtnPesquisarMatricula.MouseClick += BtnPesquisarMatricula_MouseClick;
             // 
@@ -351,6 +354,26 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
+            // 
+            // TxtDataLancamento
+            // 
+            TxtDataLancamento.AutoSize = true;
+            TxtDataLancamento.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDataLancamento.Location = new Point(505, 25);
+            TxtDataLancamento.Name = "TxtDataLancamento";
+            TxtDataLancamento.Size = new Size(83, 19);
+            TxtDataLancamento.TabIndex = 84;
+            TxtDataLancamento.Text = "20/12/3001";
+            // 
+            // label60
+            // 
+            label60.AutoSize = true;
+            label60.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label60.Location = new Point(475, 5);
+            label60.Name = "label60";
+            label60.Size = new Size(147, 19);
+            label60.TabIndex = 83;
+            label60.Text = "Data de lançamento:";
             // 
             // label49
             // 
@@ -394,11 +417,12 @@
             // 
             TxtDataEmissao.AutoSize = true;
             TxtDataEmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataEmissao.Location = new Point(690, 25);
+            TxtDataEmissao.Location = new Point(707, 25);
             TxtDataEmissao.MaximumSize = new Size(85, 19);
             TxtDataEmissao.Name = "TxtDataEmissao";
-            TxtDataEmissao.Size = new Size(0, 19);
+            TxtDataEmissao.Size = new Size(83, 19);
             TxtDataEmissao.TabIndex = 78;
+            TxtDataEmissao.Text = "12/12/2220";
             // 
             // label48
             // 
@@ -1290,25 +1314,6 @@
             label1.Size = new Size(424, 37);
             label1.TabIndex = 60;
             label1.Text = "_____________________________________";
-            // 
-            // label60
-            // 
-            label60.AutoSize = true;
-            label60.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label60.Location = new Point(475, 5);
-            label60.Name = "label60";
-            label60.Size = new Size(147, 19);
-            label60.TabIndex = 83;
-            label60.Text = "Data de lançamento:";
-            // 
-            // TxtDataLancamento
-            // 
-            TxtDataLancamento.AutoSize = true;
-            TxtDataLancamento.Location = new Point(475, 25);
-            TxtDataLancamento.Name = "TxtDataLancamento";
-            TxtDataLancamento.Size = new Size(44, 15);
-            TxtDataLancamento.TabIndex = 84;
-            TxtDataLancamento.Text = "label61";
             // 
             // FormFolhaDetalhadaPesq
             // 

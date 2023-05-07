@@ -62,6 +62,8 @@
             label69 = new Label();
             label70 = new Label();
             panel7 = new Panel();
+            TxtDataLancamento = new Label();
+            label5 = new Label();
             label21 = new Label();
             label20 = new Label();
             TxtSalarioLiqMensal = new TextBox();
@@ -128,8 +130,6 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
-            label5 = new Label();
-            TxtDataLancamento = new Label();
             LbFolhaNormal.SuspendLayout();
             PanelFolhaDetalhada.SuspendLayout();
             panel3.SuspendLayout();
@@ -170,10 +170,11 @@
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(858, 560);
+            BtnConfirmar.Location = new Point(860, 578);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 132;
+            toolTip1.SetToolTip(BtnConfirmar, "Gerar folha normal");
             BtnConfirmar.UseVisualStyleBackColor = true;
             // 
             // BtnEditar
@@ -181,10 +182,11 @@
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
             BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(907, 560);
+            BtnEditar.Location = new Point(909, 578);
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(43, 43);
             BtnEditar.TabIndex = 131;
+            toolTip1.SetToolTip(BtnEditar, "Editar folha");
             BtnEditar.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -205,7 +207,7 @@
             BtnPrint.FlatAppearance.BorderSize = 0;
             BtnPrint.FlatStyle = FlatStyle.Flat;
             BtnPrint.Image = (Image)resources.GetObject("BtnPrint.Image");
-            BtnPrint.Location = new Point(1004, 560);
+            BtnPrint.Location = new Point(1006, 578);
             BtnPrint.Name = "BtnPrint";
             BtnPrint.Size = new Size(43, 43);
             BtnPrint.TabIndex = 129;
@@ -218,7 +220,7 @@
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
-            BtnImprimir.Location = new Point(955, 560);
+            BtnImprimir.Location = new Point(957, 578);
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 128;
@@ -283,7 +285,7 @@
             PanelFolhaDetalhada.Controls.Add(panel1);
             PanelFolhaDetalhada.Location = new Point(67, 142);
             PanelFolhaDetalhada.Name = "PanelFolhaDetalhada";
-            PanelFolhaDetalhada.Size = new Size(980, 418);
+            PanelFolhaDetalhada.Size = new Size(980, 434);
             PanelFolhaDetalhada.TabIndex = 62;
             // 
             // panel3
@@ -503,6 +505,26 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(956, 50);
             panel7.TabIndex = 24;
+            // 
+            // TxtDataLancamento
+            // 
+            TxtDataLancamento.AutoSize = true;
+            TxtDataLancamento.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtDataLancamento.Location = new Point(488, 25);
+            TxtDataLancamento.Name = "TxtDataLancamento";
+            TxtDataLancamento.Size = new Size(83, 19);
+            TxtDataLancamento.TabIndex = 103;
+            TxtDataLancamento.Text = "10/11/1986";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(460, 5);
+            label5.Name = "label5";
+            label5.Size = new Size(147, 19);
+            label5.TabIndex = 102;
+            label5.Text = "Data de lançamento:";
             // 
             // label21
             // 
@@ -1170,25 +1192,6 @@
             label1.Size = new Size(391, 37);
             label1.TabIndex = 60;
             label1.Text = "__________________________________";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(460, 5);
-            label5.Name = "label5";
-            label5.Size = new Size(147, 19);
-            label5.TabIndex = 102;
-            label5.Text = "Data de lançamento:";
-            // 
-            // TxtDataLancamento
-            // 
-            TxtDataLancamento.AutoSize = true;
-            TxtDataLancamento.Location = new Point(460, 25);
-            TxtDataLancamento.Name = "TxtDataLancamento";
-            TxtDataLancamento.Size = new Size(44, 15);
-            TxtDataLancamento.TabIndex = 103;
-            TxtDataLancamento.Text = "label18";
             // 
             // FormFolhaNormalPesq
             // 

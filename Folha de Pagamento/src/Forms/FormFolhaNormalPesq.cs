@@ -24,7 +24,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             C_SomaFolhaNormal c_SomaFolhaNormal = new C_SomaFolhaNormal();
-           
+
         }
     }
 }
