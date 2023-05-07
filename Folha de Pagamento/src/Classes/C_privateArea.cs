@@ -43,8 +43,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             {
                 DeleteFunc.Visible = false;
             }
-            
-
         }
 
         public void showCRUDCargo()
@@ -59,6 +57,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formNavbar.BtnCargosFun.Visible = true;
             formNavbar.BtnPesquisar.Location = new Point(35, 148);
             formNavbar.BtnHolerite.Location = new Point(35, 245);
+            formNavbar.BtnHoleriteFunc.Visible = false;
         }
         public void setNvl2NavBar()
         {
@@ -77,6 +76,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formNavbar.BtnCargosFun.Visible = false;
             formNavbar.BtnPesquisar.Location = new Point(35, 102);
             formNavbar.BtnHolerite.Location = new Point(35, 245);
+            formNavbar.BtnHoleriteFunc.Visible = false;
+            formNavbar.BtnHolerite.Visible = true;
         }
 
         public void setNvl3NavBar()
@@ -92,11 +93,10 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                     control.Visible = false;
                 }
             }
-            formNavbar.BtnHolerite.Visible = true;
-            formNavbar.BtnHolerite.Location = new Point(35, 11);
+            formNavbar.BtnHoleriteFunc.Visible = true;
+            formNavbar.BtnHolerite.Visible = false;
+            formNavbar.BtnHoleriteFunc.Location = new Point(35, 11);
         }
-
-       
     }
 }
 

@@ -40,6 +40,8 @@
             CbMes = new ComboBox();
             PanelHolerite = new Panel();
             panel19 = new Panel();
+            TxtIDHolerite = new Label();
+            label4 = new Label();
             label44 = new Label();
             label43 = new Label();
             label42 = new Label();
@@ -81,29 +83,40 @@
             label48 = new Label();
             LbVencTotal = new Label();
             panelDescontos = new Panel();
-            label39 = new Label();
+            label32 = new Label();
+            label28 = new Label();
+            DescIRRF = new Label();
+            DescINSS = new Label();
             label37 = new Label();
             label36 = new Label();
             label35 = new Label();
             panelVencimentos = new Panel();
-            label40 = new Label();
-            label38 = new Label();
-            label34 = new Label();
+            label30 = new Label();
+            label27 = new Label();
+            label23 = new Label();
+            label17 = new Label();
+            TxtSalarioBaseMensal = new Label();
+            ValorFGTS = new Label();
+            VencIRRF = new Label();
+            VencINSS = new Label();
             label33 = new Label();
             panelReferencia = new Panel();
-            label32 = new Label();
             label31 = new Label();
-            label30 = new Label();
+            TaxaFGTS = new Label();
+            TaxaIRRF = new Label();
+            TaxaINSS = new Label();
             label29 = new Label();
             panelDescricao = new Panel();
-            label27 = new Label();
+            label22 = new Label();
+            TxtNomeCompleto = new Label();
             label26 = new Label();
             label25 = new Label();
             label24 = new Label();
             panelCod = new Panel();
-            label28 = new Label();
-            label23 = new Label();
-            label22 = new Label();
+            TxtIdFGTS = new Label();
+            TxtMatricula_ = new Label();
+            TxtIDIRRF = new Label();
+            TxtIDINSS = new Label();
             label21 = new Label();
             panel4 = new Panel();
             TxtDataAdmissao = new Label();
@@ -203,7 +216,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(348, 110);
+            label2.Location = new Point(67, 103);
             label2.Name = "label2";
             label2.Size = new Size(127, 20);
             label2.TabIndex = 123;
@@ -216,10 +229,11 @@
             CbAno.FlatStyle = FlatStyle.Flat;
             CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbAno.FormattingEnabled = true;
-            CbAno.Location = new Point(479, 105);
+            CbAno.Location = new Point(198, 98);
             CbAno.Name = "CbAno";
             CbAno.Size = new Size(121, 31);
             CbAno.TabIndex = 122;
+            CbAno.TextChanged += CbAno_TextChanged;
             // 
             // BtnImprimir
             // 
@@ -237,7 +251,7 @@
             // 
             label47.AutoSize = true;
             label47.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label47.Location = new Point(70, 110);
+            label47.Location = new Point(349, 103);
             label47.Name = "label47";
             label47.Size = new Size(130, 20);
             label47.TabIndex = 80;
@@ -250,10 +264,11 @@
             CbMes.FlatStyle = FlatStyle.Flat;
             CbMes.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbMes.FormattingEnabled = true;
-            CbMes.Location = new Point(205, 105);
+            CbMes.Location = new Point(484, 98);
             CbMes.Name = "CbMes";
             CbMes.Size = new Size(121, 31);
             CbMes.TabIndex = 78;
+            CbMes.TextChanged += CbMes_TextChanged;
             // 
             // PanelHolerite
             // 
@@ -286,6 +301,8 @@
             // panel19
             // 
             panel19.BorderStyle = BorderStyle.FixedSingle;
+            panel19.Controls.Add(TxtIDHolerite);
+            panel19.Controls.Add(label4);
             panel19.Controls.Add(label44);
             panel19.Controls.Add(label43);
             panel19.Controls.Add(label42);
@@ -307,6 +324,26 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 16;
+            // 
+            // TxtIDHolerite
+            // 
+            TxtIDHolerite.AutoSize = true;
+            TxtIDHolerite.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtIDHolerite.Location = new Point(3, 25);
+            TxtIDHolerite.Name = "TxtIDHolerite";
+            TxtIDHolerite.Size = new Size(65, 19);
+            TxtIDHolerite.TabIndex = 105;
+            TxtIDHolerite.Text = "0000000";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(3, 5);
+            label4.Name = "label4";
+            label4.Size = new Size(23, 19);
+            label4.TabIndex = 104;
+            label4.Text = "ID";
             // 
             // label44
             // 
@@ -732,7 +769,10 @@
             // panelDescontos
             // 
             panelDescontos.BorderStyle = BorderStyle.FixedSingle;
-            panelDescontos.Controls.Add(label39);
+            panelDescontos.Controls.Add(label32);
+            panelDescontos.Controls.Add(label28);
+            panelDescontos.Controls.Add(DescIRRF);
+            panelDescontos.Controls.Add(DescINSS);
             panelDescontos.Controls.Add(label37);
             panelDescontos.Controls.Add(label36);
             panelDescontos.Controls.Add(label35);
@@ -741,52 +781,83 @@
             panelDescontos.Size = new Size(110, 160);
             panelDescontos.TabIndex = 12;
             // 
-            // label39
+            // label32
             // 
-            label39.AutoSize = true;
-            label39.Dock = DockStyle.Top;
-            label39.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label39.ForeColor = Color.FromArgb(170, 0, 0);
-            label39.Location = new Point(0, 57);
-            label39.MaximumSize = new Size(88, 19);
-            label39.Name = "label39";
-            label39.Size = new Size(87, 19);
-            label39.TabIndex = 73;
-            label39.Text = "R$000.000.000";
+            label32.AutoSize = true;
+            label32.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label32.Location = new Point(4, 76);
+            label32.MaximumSize = new Size(88, 19);
+            label32.Name = "label32";
+            label32.Size = new Size(21, 19);
+            label32.TabIndex = 78;
+            label32.Text = "--";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label28.ForeColor = Color.FromArgb(170, 0, 0);
+            label28.Location = new Point(0, 0);
+            label28.MaximumSize = new Size(88, 19);
+            label28.Name = "label28";
+            label28.Size = new Size(25, 19);
+            label28.TabIndex = 76;
+            label28.Text = "R$";
+            // 
+            // DescIRRF
+            // 
+            DescIRRF.AutoSize = true;
+            DescIRRF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            DescIRRF.ForeColor = Color.FromArgb(170, 0, 0);
+            DescIRRF.Location = new Point(23, 38);
+            DescIRRF.MaximumSize = new Size(88, 19);
+            DescIRRF.Name = "DescIRRF";
+            DescIRRF.Size = new Size(57, 19);
+            DescIRRF.TabIndex = 74;
+            DescIRRF.Text = "000000";
+            // 
+            // DescINSS
+            // 
+            DescINSS.AutoSize = true;
+            DescINSS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            DescINSS.ForeColor = Color.FromArgb(170, 0, 0);
+            DescINSS.Location = new Point(23, 19);
+            DescINSS.MaximumSize = new Size(88, 19);
+            DescINSS.Name = "DescINSS";
+            DescINSS.Size = new Size(57, 19);
+            DescINSS.TabIndex = 75;
+            DescINSS.Text = "000000";
             // 
             // label37
             // 
             label37.AutoSize = true;
-            label37.Dock = DockStyle.Top;
             label37.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label37.ForeColor = Color.FromArgb(170, 0, 0);
             label37.Location = new Point(0, 38);
             label37.MaximumSize = new Size(88, 19);
             label37.Name = "label37";
-            label37.Size = new Size(60, 19);
+            label37.Size = new Size(25, 19);
             label37.TabIndex = 73;
-            label37.Text = "R$14,50";
+            label37.Text = "R$";
             // 
             // label36
             // 
             label36.AutoSize = true;
-            label36.Dock = DockStyle.Top;
             label36.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label36.ForeColor = Color.FromArgb(170, 0, 0);
             label36.Location = new Point(0, 19);
             label36.MaximumSize = new Size(88, 19);
             label36.Name = "label36";
-            label36.Size = new Size(68, 19);
+            label36.Size = new Size(25, 19);
             label36.TabIndex = 73;
-            label36.Text = "R$185,97";
+            label36.Text = "R$";
             // 
             // label35
             // 
             label35.AutoSize = true;
-            label35.Dock = DockStyle.Top;
             label35.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label35.ForeColor = Color.FromArgb(170, 0, 0);
-            label35.Location = new Point(0, 0);
+            label35.Location = new Point(23, 0);
             label35.MaximumSize = new Size(88, 19);
             label35.Name = "label35";
             label35.Size = new Size(17, 19);
@@ -796,50 +867,110 @@
             // panelVencimentos
             // 
             panelVencimentos.BorderStyle = BorderStyle.FixedSingle;
-            panelVencimentos.Controls.Add(label40);
-            panelVencimentos.Controls.Add(label38);
-            panelVencimentos.Controls.Add(label34);
+            panelVencimentos.Controls.Add(label30);
+            panelVencimentos.Controls.Add(label27);
+            panelVencimentos.Controls.Add(label23);
+            panelVencimentos.Controls.Add(label17);
+            panelVencimentos.Controls.Add(TxtSalarioBaseMensal);
+            panelVencimentos.Controls.Add(ValorFGTS);
+            panelVencimentos.Controls.Add(VencIRRF);
+            panelVencimentos.Controls.Add(VencINSS);
             panelVencimentos.Controls.Add(label33);
             panelVencimentos.Location = new Point(733, 209);
             panelVencimentos.Name = "panelVencimentos";
             panelVencimentos.Size = new Size(110, 160);
             panelVencimentos.TabIndex = 11;
             // 
-            // label40
+            // label30
             // 
-            label40.AutoSize = true;
-            label40.Dock = DockStyle.Top;
-            label40.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label40.Location = new Point(0, 57);
-            label40.MaximumSize = new Size(88, 19);
-            label40.Name = "label40";
-            label40.Size = new Size(65, 19);
-            label40.TabIndex = 73;
-            label40.Text = "0000000";
+            label30.AutoSize = true;
+            label30.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label30.Location = new Point(3, 76);
+            label30.MaximumSize = new Size(88, 19);
+            label30.Name = "label30";
+            label30.Size = new Size(21, 19);
+            label30.TabIndex = 75;
+            label30.Text = "--";
             // 
-            // label38
+            // label27
             // 
-            label38.AutoSize = true;
-            label38.Dock = DockStyle.Top;
-            label38.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label38.Location = new Point(0, 38);
-            label38.MaximumSize = new Size(88, 19);
-            label38.Name = "label38";
-            label38.Size = new Size(17, 19);
-            label38.TabIndex = 73;
-            label38.Text = "0";
+            label27.AutoSize = true;
+            label27.Dock = DockStyle.Top;
+            label27.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label27.Location = new Point(0, 57);
+            label27.MaximumSize = new Size(88, 19);
+            label27.Name = "label27";
+            label27.Size = new Size(25, 19);
+            label27.TabIndex = 77;
+            label27.Text = "R$";
             // 
-            // label34
+            // label23
             // 
-            label34.AutoSize = true;
-            label34.Dock = DockStyle.Top;
-            label34.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label34.Location = new Point(0, 19);
-            label34.MaximumSize = new Size(88, 19);
-            label34.Name = "label34";
-            label34.Size = new Size(17, 19);
-            label34.TabIndex = 73;
-            label34.Text = "0";
+            label23.AutoSize = true;
+            label23.Dock = DockStyle.Top;
+            label23.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label23.Location = new Point(0, 38);
+            label23.MaximumSize = new Size(88, 19);
+            label23.Name = "label23";
+            label23.Size = new Size(25, 19);
+            label23.TabIndex = 76;
+            label23.Text = "R$";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Dock = DockStyle.Top;
+            label17.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Location = new Point(0, 19);
+            label17.MaximumSize = new Size(88, 19);
+            label17.Name = "label17";
+            label17.Size = new Size(25, 19);
+            label17.TabIndex = 75;
+            label17.Text = "R$";
+            // 
+            // TxtSalarioBaseMensal
+            // 
+            TxtSalarioBaseMensal.AutoSize = true;
+            TxtSalarioBaseMensal.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtSalarioBaseMensal.Location = new Point(23, 0);
+            TxtSalarioBaseMensal.MaximumSize = new Size(88, 19);
+            TxtSalarioBaseMensal.Name = "TxtSalarioBaseMensal";
+            TxtSalarioBaseMensal.Size = new Size(49, 19);
+            TxtSalarioBaseMensal.TabIndex = 74;
+            TxtSalarioBaseMensal.Text = "00000";
+            // 
+            // ValorFGTS
+            // 
+            ValorFGTS.AutoSize = true;
+            ValorFGTS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            ValorFGTS.Location = new Point(23, 57);
+            ValorFGTS.MaximumSize = new Size(88, 19);
+            ValorFGTS.Name = "ValorFGTS";
+            ValorFGTS.Size = new Size(21, 19);
+            ValorFGTS.TabIndex = 73;
+            ValorFGTS.Text = "--";
+            // 
+            // VencIRRF
+            // 
+            VencIRRF.AutoSize = true;
+            VencIRRF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            VencIRRF.Location = new Point(23, 38);
+            VencIRRF.MaximumSize = new Size(88, 19);
+            VencIRRF.Name = "VencIRRF";
+            VencIRRF.Size = new Size(17, 19);
+            VencIRRF.TabIndex = 73;
+            VencIRRF.Text = "0";
+            // 
+            // VencINSS
+            // 
+            VencINSS.AutoSize = true;
+            VencINSS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            VencINSS.Location = new Point(23, 19);
+            VencINSS.MaximumSize = new Size(88, 19);
+            VencINSS.Name = "VencINSS";
+            VencINSS.Size = new Size(17, 19);
+            VencINSS.TabIndex = 73;
+            VencINSS.Text = "0";
             // 
             // label33
             // 
@@ -849,57 +980,70 @@
             label33.Location = new Point(0, 0);
             label33.MaximumSize = new Size(88, 19);
             label33.Name = "label33";
-            label33.Size = new Size(76, 19);
+            label33.Size = new Size(25, 19);
             label33.TabIndex = 73;
-            label33.Text = "R$2283,36";
+            label33.Text = "R$";
             // 
             // panelReferencia
             // 
             panelReferencia.BorderStyle = BorderStyle.FixedSingle;
-            panelReferencia.Controls.Add(label32);
             panelReferencia.Controls.Add(label31);
-            panelReferencia.Controls.Add(label30);
+            panelReferencia.Controls.Add(TaxaFGTS);
+            panelReferencia.Controls.Add(TaxaIRRF);
+            panelReferencia.Controls.Add(TaxaINSS);
             panelReferencia.Controls.Add(label29);
             panelReferencia.Location = new Point(636, 209);
             panelReferencia.Name = "panelReferencia";
             panelReferencia.Size = new Size(90, 205);
             panelReferencia.TabIndex = 10;
             // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.Dock = DockStyle.Top;
-            label32.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(0, 57);
-            label32.MaximumSize = new Size(88, 19);
-            label32.Name = "label32";
-            label32.Size = new Size(81, 19);
-            label32.TabIndex = 73;
-            label32.Text = "000000000";
-            // 
             // label31
             // 
             label31.AutoSize = true;
             label31.Dock = DockStyle.Top;
             label31.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(0, 38);
+            label31.Location = new Point(0, 76);
             label31.MaximumSize = new Size(88, 19);
             label31.Name = "label31";
-            label31.Size = new Size(28, 19);
-            label31.TabIndex = 74;
-            label31.Text = "7,5";
+            label31.Size = new Size(21, 19);
+            label31.TabIndex = 76;
+            label31.Text = "--";
             // 
-            // label30
+            // TaxaFGTS
             // 
-            label30.AutoSize = true;
-            label30.Dock = DockStyle.Top;
-            label30.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label30.Location = new Point(0, 19);
-            label30.MaximumSize = new Size(88, 19);
-            label30.Name = "label30";
-            label30.Size = new Size(36, 19);
-            label30.TabIndex = 73;
-            label30.Text = "8,14";
+            TaxaFGTS.AutoSize = true;
+            TaxaFGTS.Dock = DockStyle.Top;
+            TaxaFGTS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TaxaFGTS.Location = new Point(0, 57);
+            TaxaFGTS.MaximumSize = new Size(88, 19);
+            TaxaFGTS.Name = "TaxaFGTS";
+            TaxaFGTS.Size = new Size(21, 19);
+            TaxaFGTS.TabIndex = 73;
+            TaxaFGTS.Text = "--";
+            // 
+            // TaxaIRRF
+            // 
+            TaxaIRRF.AutoSize = true;
+            TaxaIRRF.Dock = DockStyle.Top;
+            TaxaIRRF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TaxaIRRF.Location = new Point(0, 38);
+            TaxaIRRF.MaximumSize = new Size(88, 19);
+            TaxaIRRF.Name = "TaxaIRRF";
+            TaxaIRRF.Size = new Size(28, 19);
+            TaxaIRRF.TabIndex = 74;
+            TaxaIRRF.Text = "7,5";
+            // 
+            // TaxaINSS
+            // 
+            TaxaINSS.AutoSize = true;
+            TaxaINSS.Dock = DockStyle.Top;
+            TaxaINSS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TaxaINSS.Location = new Point(0, 19);
+            TaxaINSS.MaximumSize = new Size(88, 19);
+            TaxaINSS.Name = "TaxaINSS";
+            TaxaINSS.Size = new Size(36, 19);
+            TaxaINSS.TabIndex = 73;
+            TaxaINSS.Text = "8,14";
             // 
             // label29
             // 
@@ -916,7 +1060,8 @@
             // panelDescricao
             // 
             panelDescricao.BorderStyle = BorderStyle.FixedSingle;
-            panelDescricao.Controls.Add(label27);
+            panelDescricao.Controls.Add(label22);
+            panelDescricao.Controls.Add(TxtNomeCompleto);
             panelDescricao.Controls.Add(label26);
             panelDescricao.Controls.Add(label25);
             panelDescricao.Controls.Add(label24);
@@ -925,17 +1070,28 @@
             panelDescricao.Size = new Size(556, 205);
             panelDescricao.TabIndex = 10;
             // 
-            // label27
+            // label22
             // 
-            label27.AutoSize = true;
-            label27.Dock = DockStyle.Top;
-            label27.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label27.Location = new Point(0, 57);
-            label27.MaximumSize = new Size(550, 0);
-            label27.Name = "label27";
-            label27.Size = new Size(549, 19);
-            label27.TabIndex = 72;
-            label27.Text = "Jubileu Gomes Soares da Costa Filho Neto dos Santos Nunes da Aparecida da Conceição";
+            label22.AutoSize = true;
+            label22.Dock = DockStyle.Top;
+            label22.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label22.Location = new Point(0, 57);
+            label22.MaximumSize = new Size(550, 0);
+            label22.Name = "label22";
+            label22.Size = new Size(40, 19);
+            label22.TabIndex = 73;
+            label22.Text = "FGTS";
+            // 
+            // TxtNomeCompleto
+            // 
+            TxtNomeCompleto.AutoSize = true;
+            TxtNomeCompleto.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtNomeCompleto.Location = new Point(2, 76);
+            TxtNomeCompleto.MaximumSize = new Size(550, 0);
+            TxtNomeCompleto.Name = "TxtNomeCompleto";
+            TxtNomeCompleto.Size = new Size(549, 19);
+            TxtNomeCompleto.TabIndex = 72;
+            TxtNomeCompleto.Text = "Jubileu Gomes Soares da Costa Filho Neto dos Santos Nunes da Aparecida da Conceição";
             // 
             // label26
             // 
@@ -976,50 +1132,62 @@
             // panelCod
             // 
             panelCod.BorderStyle = BorderStyle.FixedSingle;
-            panelCod.Controls.Add(label28);
-            panelCod.Controls.Add(label23);
-            panelCod.Controls.Add(label22);
+            panelCod.Controls.Add(TxtIdFGTS);
+            panelCod.Controls.Add(TxtMatricula_);
+            panelCod.Controls.Add(TxtIDIRRF);
+            panelCod.Controls.Add(TxtIDINSS);
             panelCod.Controls.Add(label21);
             panelCod.Location = new Point(3, 209);
             panelCod.Name = "panelCod";
             panelCod.Size = new Size(66, 205);
             panelCod.TabIndex = 9;
             // 
-            // label28
+            // TxtIdFGTS
             // 
-            label28.AutoSize = true;
-            label28.Dock = DockStyle.Top;
-            label28.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label28.Location = new Point(0, 57);
-            label28.MaximumSize = new Size(57, 19);
-            label28.Name = "label28";
-            label28.Size = new Size(57, 19);
-            label28.TabIndex = 73;
-            label28.Text = "000000";
+            TxtIdFGTS.AutoSize = true;
+            TxtIdFGTS.Dock = DockStyle.Top;
+            TxtIdFGTS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtIdFGTS.Location = new Point(0, 57);
+            TxtIdFGTS.MaximumSize = new Size(57, 19);
+            TxtIdFGTS.Name = "TxtIdFGTS";
+            TxtIdFGTS.Size = new Size(33, 19);
+            TxtIdFGTS.TabIndex = 74;
+            TxtIdFGTS.Text = "800";
             // 
-            // label23
+            // TxtMatricula_
             // 
-            label23.AutoSize = true;
-            label23.Dock = DockStyle.Top;
-            label23.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(0, 38);
-            label23.MaximumSize = new Size(57, 19);
-            label23.Name = "label23";
-            label23.Size = new Size(33, 19);
-            label23.TabIndex = 69;
-            label23.Text = "790";
+            TxtMatricula_.AutoSize = true;
+            TxtMatricula_.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtMatricula_.Location = new Point(-1, 76);
+            TxtMatricula_.MaximumSize = new Size(57, 19);
+            TxtMatricula_.Name = "TxtMatricula_";
+            TxtMatricula_.Size = new Size(57, 19);
+            TxtMatricula_.TabIndex = 73;
+            TxtMatricula_.Text = "000000";
             // 
-            // label22
+            // TxtIDIRRF
             // 
-            label22.AutoSize = true;
-            label22.Dock = DockStyle.Top;
-            label22.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(0, 19);
-            label22.MaximumSize = new Size(57, 19);
-            label22.Name = "label22";
-            label22.Size = new Size(33, 19);
-            label22.TabIndex = 69;
-            label22.Text = "780";
+            TxtIDIRRF.AutoSize = true;
+            TxtIDIRRF.Dock = DockStyle.Top;
+            TxtIDIRRF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtIDIRRF.Location = new Point(0, 38);
+            TxtIDIRRF.MaximumSize = new Size(57, 19);
+            TxtIDIRRF.Name = "TxtIDIRRF";
+            TxtIDIRRF.Size = new Size(33, 19);
+            TxtIDIRRF.TabIndex = 69;
+            TxtIDIRRF.Text = "790";
+            // 
+            // TxtIDINSS
+            // 
+            TxtIDINSS.AutoSize = true;
+            TxtIDINSS.Dock = DockStyle.Top;
+            TxtIDINSS.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtIDINSS.Location = new Point(0, 19);
+            TxtIDINSS.MaximumSize = new Size(57, 19);
+            TxtIDINSS.Name = "TxtIDINSS";
+            TxtIDINSS.Size = new Size(33, 19);
+            TxtIDINSS.TabIndex = 69;
+            TxtIDINSS.Text = "780";
             // 
             // label21
             // 
@@ -1029,9 +1197,9 @@
             label21.Location = new Point(0, 0);
             label21.MaximumSize = new Size(57, 19);
             label21.Name = "label21";
-            label21.Size = new Size(57, 19);
+            label21.Size = new Size(21, 19);
             label21.TabIndex = 17;
-            label21.Text = "000001";
+            label21.Text = "--";
             // 
             // panel4
             // 
@@ -1383,48 +1551,26 @@
         private Panel panel14;
         private Label label19;
         private Panel panelValorLiquido;
-        private Label TxtValorLiquido;
         private Panel panelDescTotal;
         private Label LbDescTotal;
         private Panel panelVencTotal;
         private Label LbVencTotal;
         private Panel panelDescontos;
-        private Label label39;
-        private Label label37;
-        private Label label36;
-        private Label label35;
         private Panel panelVencimentos;
-        private Label label40;
-        private Label label38;
-        private Label label34;
-        private Label label33;
         private Panel panelReferencia;
-        private Label label32;
-        private Label label31;
-        private Label label30;
         private Label label29;
         private Panel panelDescricao;
-        private Label label27;
-        private Label label26;
         private Label label25;
         private Label label24;
         private Panel panelCod;
-        private Label label28;
-        private Label label23;
-        private Label label22;
         private Label label21;
         private Panel panel4;
-        private Label TxtDataAdmissao;
-        private Label TxtCargo;
-        private Label TxtNome;
-        private Label TxtMatricula;
         private Label label18;
         private Label label16;
         private Label label15;
         private Label label14;
         private Panel panel3;
         private Panel panel2;
-        private Label TxtMes;
         private Label label3;
         private Label TxtMensal;
         private Panel panel1;
@@ -1433,23 +1579,16 @@
         private Label label9;
         private Label LbTitulo;
         private Label label1;
-        private Label TxtFgtsMes;
-        private Label TxtBaseirrf;
-        private Label TxtBaseFgts;
-        private Label TxtBaseinss;
-        private Label TxtSalarioBase;
         private Label label56;
         private Label label55;
         private Label label54;
         private Label label53;
         private Label label52;
         private Button button1;
-        private Label TxtDataEmissao;
         private Label label50;
         private Label label49;
         private Button BtnHome;
         private ToolTip toolTip1;
-        private Label TxtDataLancamento;
         private Label label7;
         private Label label44;
         private Label label43;
@@ -1459,9 +1598,51 @@
         private Label label45;
         private Label label51;
         private Label label48;
-        private Label TxtDescTotal;
-        private Label TxtVencTotal;
         private Label label20;
-        private Label TxtAno;
+        internal Label TxtValorLiquido;
+        internal Label label37;
+        internal Label label36;
+        internal Label label35;
+        internal Label ValorFGTS;
+        internal Label VencIRRF;
+        internal Label VencINSS;
+        internal Label label33;
+        internal Label TaxaFGTS;
+        internal Label TaxaIRRF;
+        internal Label TaxaINSS;
+        internal Label label26;
+        internal Label TxtFgtsMes;
+        internal Label TxtBaseirrf;
+        internal Label TxtBaseFgts;
+        internal Label TxtBaseinss;
+        internal Label TxtSalarioBase;
+        internal Label TxtDataEmissao;
+        internal Label TxtDataLancamento;
+        internal Label TxtDescTotal;
+        internal Label TxtVencTotal;
+        internal Label TxtNomeCompleto;
+        internal Label TxtMatricula;
+        internal Label TxtNome;
+        internal Label TxtCargo;
+        internal Label TxtDataAdmissao;
+        internal Label TxtMatricula_;
+        internal Label TxtIDIRRF;
+        internal Label TxtIDINSS;
+        internal Label TxtSalarioBaseMensal;
+        internal Label DescIRRF;
+        internal Label DescINSS;
+        internal Label TxtMes;
+        internal Label TxtAno;
+        internal Label TxtIDHolerite;
+        private Label label4;
+        internal Label label22;
+        internal Label TxtIdFGTS;
+        internal Label label32;
+        internal Label label28;
+        internal Label label30;
+        internal Label label27;
+        internal Label label23;
+        internal Label label17;
+        internal Label label31;
     }
 }

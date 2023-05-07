@@ -12,6 +12,7 @@ using FOLHA_DE_PAGAMENTO_.src.Classes;
 using FOLHA_DE_PAGAMENTO_.src.Servidor.GET;
 using FOLHA_DE_PAGAMENTO_.src.SQL;
 using Microsoft.VisualBasic.Devices;
+using FOLHA_DE_PAGAMENTO_.src.Forms;
 
 namespace FOLHA_DE_PAGAMENTO_
 {
@@ -292,6 +293,12 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 verificadorCEP.LocalizarCEP(TxtCep.Text, CbUF, TxtCidade, TxtBairro, TxtRua, TxtCep);
             }
+        }
+
+        private void BtnDeleteFunc_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormDesativarFunc formDesativarFunc = new FormDesativarFunc(this);
+            formDesativarFunc.ShowDialog();
         }
     }
 }

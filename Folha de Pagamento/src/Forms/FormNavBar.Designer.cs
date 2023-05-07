@@ -33,6 +33,7 @@
             BtnArrowLeft = new Button();
             panel1 = new Panel();
             PanelSubMenuRel = new Panel();
+            BtnHoleriteFunc = new Button();
             BtnFolhaPNormalPesq = new Button();
             FolhaPDetalhadaPesq = new Button();
             BtnCalculoPagamento = new Button();
@@ -86,6 +87,7 @@
             // 
             // PanelSubMenuRel
             // 
+            PanelSubMenuRel.Controls.Add(BtnHoleriteFunc);
             PanelSubMenuRel.Controls.Add(BtnFolhaPNormalPesq);
             PanelSubMenuRel.Controls.Add(FolhaPDetalhadaPesq);
             PanelSubMenuRel.Controls.Add(BtnCalculoPagamento);
@@ -95,8 +97,26 @@
             PanelSubMenuRel.Dock = DockStyle.Top;
             PanelSubMenuRel.Location = new Point(0, 320);
             PanelSubMenuRel.Name = "PanelSubMenuRel";
-            PanelSubMenuRel.Size = new Size(325, 291);
+            PanelSubMenuRel.Size = new Size(325, 336);
             PanelSubMenuRel.TabIndex = 6;
+            // 
+            // BtnHoleriteFunc
+            // 
+            BtnHoleriteFunc.BackColor = Color.Transparent;
+            BtnHoleriteFunc.FlatAppearance.BorderSize = 0;
+            BtnHoleriteFunc.FlatStyle = FlatStyle.Flat;
+            BtnHoleriteFunc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnHoleriteFunc.Image = (Image)resources.GetObject("BtnHoleriteFunc.Image");
+            BtnHoleriteFunc.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnHoleriteFunc.Location = new Point(35, 291);
+            BtnHoleriteFunc.Name = "BtnHoleriteFunc";
+            BtnHoleriteFunc.Size = new Size(221, 40);
+            BtnHoleriteFunc.TabIndex = 14;
+            BtnHoleriteFunc.Text = "    Holerite";
+            BtnHoleriteFunc.TextImageRelation = TextImageRelation.ImageBeforeText;
+            toolTip1.SetToolTip(BtnHoleriteFunc, "Visualizar o holerite");
+            BtnHoleriteFunc.UseVisualStyleBackColor = false;
+            BtnHoleriteFunc.MouseClick += BtnHoleriteFunc_MouseClick;
             // 
             // BtnFolhaPNormalPesq
             // 
@@ -417,5 +437,6 @@
         internal Button BtnFolhaPNormalPesq;
         internal Button FolhaPDetalhadaPesq;
         private ToolTip toolTip1;
+        internal Button BtnHoleriteFunc;
     }
 }

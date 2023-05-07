@@ -4,6 +4,9 @@
     <Compile Update="src\Forms\FormCracha.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="src\Forms\FormDesativarFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="src\Forms\FormFolhaDetalhadaPDF.cs">
       <SubType>Form</SubType>
     </Compile>

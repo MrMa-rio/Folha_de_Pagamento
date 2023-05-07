@@ -94,5 +94,22 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             }
             return Validacao;
         }
+        public string setMonthName(int month)
+        {
+            string monthName = "";
+            if (month == 01) { monthName = "Janeiro"; }
+            if (month == 02) { monthName = "Fevereiro"; }
+            if (month == 03) { monthName = "Março"; }
+            if (month == 04) { monthName = "Abril"; }
+            if (month == 05) { monthName = "Maio"; }
+            if (month == 06) { monthName = "Junho"; }
+            if (month == 07) { monthName = "Julho"; }
+            if (month == 08) { monthName = "Agosto"; }
+            if (month == 09) { monthName = "Setembro"; }
+            if (month == 10) { monthName = "Outubro"; }
+            if (month == 11) { monthName = "Novembro"; }
+            if (month == 12) { monthName = "Dezemvro"; }
+            return monthName;
+        }
     }
 }

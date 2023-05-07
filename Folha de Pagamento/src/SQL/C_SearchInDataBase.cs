@@ -59,7 +59,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                             return Result; //Retorna as informaçoes de apenas um funcionario.
                         }
                     }
-
                 }
             }
             catch (MySqlException ex)
@@ -76,8 +75,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             }
             return Result;
         }
-
-
         public string[] getData(string Matricula, string Table)
         {
             string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
@@ -233,8 +230,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             string insertSql = $"Select * from tb_fechamento  where DATA_Emite LIKE '%{year}-{month}%' AND FK_Matricula = {matricula} ORDER BY ID_Holerite DESC LIMIT 1";
             return getListinDB(insertSql);
         }
-
-
         public List<string[]> getListFechamento(string matricula, string year, string month)
         {
             string insertSql = $"Select * from tb_fechamento where DATA_Emite LIKE '%{year}-{month}%' AND  FK_Matricula = {matricula}";
@@ -253,7 +248,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
         }
         public List<string[]> getTaxaFGTS(string idFGTS)
         {
-            string insertSql = $"Select Valor_FGTS from tb_fgts where ID_INSS = {idFGTS}";
+            string insertSql = $"Select Valor_FGTS from tb_fgts where ID_FGTS = {idFGTS}";
             return getListinDB(insertSql); // retorna a taxa atraves do ID
         }
     }
@@ -261,9 +256,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
 //Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%2023%' AND FK_Matricula = 19; // Retorna dados com base na matricula e no ano
 //Select DATA_Emite from tb_fechamento where FK_Matricula = 19; // Retorna dados com base na matricula
 //Select * from tb_fechamento where DATA_Emite LIKE '%2023-05%' AND  FK_Matricula = 19; Retorna dados com base no mes, ano e matricula
-
-
-
 
 
 /*

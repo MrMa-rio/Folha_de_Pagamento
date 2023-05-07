@@ -98,6 +98,12 @@ namespace FOLHA_DE_PAGAMENTO_
             handleForm = c_FormShow.setFormShow(FormAtivo, formHolerite);
             c_FormNavBarShow.AnimationHide(this, Pnl2);
         }
+        private void BtnHoleriteFunc_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormHoleriteFunc formHolerite = new FormHoleriteFunc(FormAtivo.DataUser[0], this);
+            handleForm = c_FormShow.setFormShow(FormAtivo, formHolerite);
+            c_FormNavBarShow.AnimationHide(this, Pnl2);
+        }
 
         private void Pnl2_VisibleChanged(object sender, EventArgs e)
         {

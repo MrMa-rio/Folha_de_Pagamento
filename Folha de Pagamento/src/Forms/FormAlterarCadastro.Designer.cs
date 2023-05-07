@@ -214,6 +214,7 @@
             toolTip1.SetToolTip(BtnDeleteFunc, "Deletar funcionário");
             BtnDeleteFunc.UseVisualStyleBackColor = true;
             BtnDeleteFunc.Visible = false;
+            BtnDeleteFunc.MouseClick += BtnDeleteFunc_MouseClick;
             // 
             // TxtMatricula
             // 

@@ -83,6 +83,31 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                 return false;
             }
         }
+        public void desativaFuncionario(string cpf)
+        {
+            string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
+            string updateSql = $"UPDATE `tb_funcionario` SET `Status` = 'Inativo' WHERE (`CPF` = '{cpf}')";
+            MySqlConnection conexao = new MySqlConnection();
+
+            try
+            {
+                conexao.ConnectionString = endereco;
+                MySqlCommand command = new MySqlCommand(updateSql, conexao);
+
+                conexao.Open();
+                command.ExecuteReader();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message + "\n Algo de Errado Na conexão ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conexao.Close(); }
+        }
     }
 }
 
