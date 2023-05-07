@@ -361,9 +361,8 @@
             TxtDataLancamento.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TxtDataLancamento.Location = new Point(505, 25);
             TxtDataLancamento.Name = "TxtDataLancamento";
-            TxtDataLancamento.Size = new Size(83, 19);
+            TxtDataLancamento.Size = new Size(0, 19);
             TxtDataLancamento.TabIndex = 84;
-            TxtDataLancamento.Text = "20/12/3001";
             // 
             // label60
             // 
@@ -420,9 +419,8 @@
             TxtDataEmissao.Location = new Point(707, 25);
             TxtDataEmissao.MaximumSize = new Size(85, 19);
             TxtDataEmissao.Name = "TxtDataEmissao";
-            TxtDataEmissao.Size = new Size(83, 19);
+            TxtDataEmissao.Size = new Size(0, 19);
             TxtDataEmissao.TabIndex = 78;
-            TxtDataEmissao.Text = "12/12/2220";
             // 
             // label48
             // 

@@ -691,7 +691,7 @@
             // 
             label48.AutoSize = true;
             label48.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label48.Location = new Point(690, 25);
+            label48.Location = new Point(690, 23);
             label48.Name = "label48";
             label48.Size = new Size(25, 19);
             label48.TabIndex = 97;
@@ -702,7 +702,7 @@
             TxtSalarioLiquido.AutoSize = true;
             TxtSalarioLiquido.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TxtSalarioLiquido.ForeColor = Color.FromArgb(0, 70, 0);
-            TxtSalarioLiquido.Location = new Point(709, 25);
+            TxtSalarioLiquido.Location = new Point(713, 25);
             TxtSalarioLiquido.MaximumSize = new Size(85, 19);
             TxtSalarioLiquido.Name = "TxtSalarioLiquido";
             TxtSalarioLiquido.Size = new Size(0, 19);
