@@ -178,10 +178,11 @@
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(858, 560);
+            BtnConfirmar.Location = new Point(860, 578);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 132;
+            toolTip1.SetToolTip(BtnConfirmar, "Gerar folha normal");
             BtnConfirmar.UseVisualStyleBackColor = true;
             // 
             // BtnEditar
@@ -189,10 +190,11 @@
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
             BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(907, 560);
+            BtnEditar.Location = new Point(909, 578);
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(43, 43);
             BtnEditar.TabIndex = 131;
+            toolTip1.SetToolTip(BtnEditar, "Editar folha");
             BtnEditar.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -213,7 +215,7 @@
             BtnPrint.FlatAppearance.BorderSize = 0;
             BtnPrint.FlatStyle = FlatStyle.Flat;
             BtnPrint.Image = (Image)resources.GetObject("BtnPrint.Image");
-            BtnPrint.Location = new Point(1004, 560);
+            BtnPrint.Location = new Point(1006, 578);
             BtnPrint.Name = "BtnPrint";
             BtnPrint.Size = new Size(43, 43);
             BtnPrint.TabIndex = 129;
@@ -226,7 +228,7 @@
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
-            BtnImprimir.Location = new Point(955, 560);
+            BtnImprimir.Location = new Point(957, 578);
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 128;
@@ -294,7 +296,7 @@
             PanelFolhaDetalhada.Controls.Add(panel1);
             PanelFolhaDetalhada.Location = new Point(67, 142);
             PanelFolhaDetalhada.Name = "PanelFolhaDetalhada";
-            PanelFolhaDetalhada.Size = new Size(980, 418);
+            PanelFolhaDetalhada.Size = new Size(980, 434);
             PanelFolhaDetalhada.TabIndex = 62;
             // 
             // panel3

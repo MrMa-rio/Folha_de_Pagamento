@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisar));
             LbPesquisar = new Panel();
+            button1 = new Button();
             TxtPesquisarCargo = new ComboBox();
             label3 = new Label();
             label2 = new Label();
@@ -40,7 +41,6 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
-            button1 = new Button();
             LbPesquisar.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,6 +63,18 @@
             LbPesquisar.TabIndex = 1;
             LbPesquisar.MouseClick += AllForms_MouseClick;
             // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(1004, 39);
+            button1.Name = "button1";
+            button1.Size = new Size(43, 43);
+            button1.TabIndex = 69;
+            toolTip1.SetToolTip(button1, "Voltar ao início");
+            button1.UseVisualStyleBackColor = true;
+            // 
             // TxtPesquisarCargo
             // 
             TxtPesquisarCargo.BackColor = Color.DarkGray;
@@ -73,6 +85,7 @@
             TxtPesquisarCargo.Name = "TxtPesquisarCargo";
             TxtPesquisarCargo.Size = new Size(207, 31);
             TxtPesquisarCargo.TabIndex = 68;
+            toolTip1.SetToolTip(TxtPesquisarCargo, "Selecione um cargo");
             TxtPesquisarCargo.DropDown += TxtPesquisarCargo_DropDown;
             TxtPesquisarCargo.TextChanged += TxtPesquisarCargo_TextChanged;
             // 
@@ -103,6 +116,7 @@
             TxtPesquisarNomes.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtPesquisarNomes.Location = new Point(234, 101);
             TxtPesquisarNomes.Name = "TxtPesquisarNomes";
+            TxtPesquisarNomes.PlaceholderText = "Digite um nome";
             TxtPesquisarNomes.Size = new Size(290, 31);
             TxtPesquisarNomes.TabIndex = 63;
             TxtPesquisarNomes.TextChanged += TxtPesquisarNomes_TextChanged;
@@ -160,18 +174,6 @@
             label1.Size = new Size(226, 37);
             label1.TabIndex = 60;
             label1.Text = "___________________";
-            // 
-            // button1
-            // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(1004, 39);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 43);
-            button1.TabIndex = 69;
-            toolTip1.SetToolTip(button1, "Voltar ao início");
-            button1.UseVisualStyleBackColor = true;
             // 
             // FormPesquisar
             // 

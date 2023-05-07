@@ -34,8 +34,8 @@
             BtnPerfil = new Button();
             BtnSetting = new Button();
             toolTip1 = new ToolTip(components);
-            PnlPerfil = new Panel();
             BtnTrocarUsuario = new Button();
+            PnlPerfil = new Panel();
             label12 = new Label();
             label11 = new Label();
             label10 = new Label();
@@ -96,6 +96,24 @@
             toolTip1.SetToolTip(BtnSetting, "Sobre os criadores e a empresa");
             BtnSetting.UseVisualStyleBackColor = true;
             // 
+            // BtnTrocarUsuario
+            // 
+            BtnTrocarUsuario.BackColor = Color.Transparent;
+            BtnTrocarUsuario.FlatAppearance.BorderSize = 0;
+            BtnTrocarUsuario.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 192);
+            BtnTrocarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
+            BtnTrocarUsuario.FlatStyle = FlatStyle.Flat;
+            BtnTrocarUsuario.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnTrocarUsuario.Image = (Image)resources.GetObject("BtnTrocarUsuario.Image");
+            BtnTrocarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnTrocarUsuario.Location = new Point(57, 315);
+            BtnTrocarUsuario.Name = "BtnTrocarUsuario";
+            BtnTrocarUsuario.Size = new Size(180, 48);
+            BtnTrocarUsuario.TabIndex = 13;
+            BtnTrocarUsuario.Text = "           Trocar de perfil";
+            toolTip1.SetToolTip(BtnTrocarUsuario, "Trocar de perfil");
+            BtnTrocarUsuario.UseVisualStyleBackColor = false;
+            // 
             // PnlPerfil
             // 
             PnlPerfil.BackColor = Color.White;
@@ -114,26 +132,11 @@
             PnlPerfil.Controls.Add(label3);
             PnlPerfil.Controls.Add(label2);
             PnlPerfil.Controls.Add(label1);
-            PnlPerfil.Location = new Point(971, 82);
+            PnlPerfil.Location = new Point(971, 90);
             PnlPerfil.Name = "PnlPerfil";
             PnlPerfil.Size = new Size(281, 371);
             PnlPerfil.TabIndex = 3;
             PnlPerfil.Visible = false;
-            // 
-            // BtnTrocarUsuario
-            // 
-            BtnTrocarUsuario.BackColor = Color.Transparent;
-            BtnTrocarUsuario.FlatAppearance.BorderSize = 0;
-            BtnTrocarUsuario.FlatStyle = FlatStyle.Flat;
-            BtnTrocarUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            BtnTrocarUsuario.Image = (Image)resources.GetObject("BtnTrocarUsuario.Image");
-            BtnTrocarUsuario.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnTrocarUsuario.Location = new Point(60, 315);
-            BtnTrocarUsuario.Name = "BtnTrocarUsuario";
-            BtnTrocarUsuario.Size = new Size(162, 48);
-            BtnTrocarUsuario.TabIndex = 13;
-            BtnTrocarUsuario.Text = "               Trocar de perfil";
-            BtnTrocarUsuario.UseVisualStyleBackColor = false;
             // 
             // label12
             // 

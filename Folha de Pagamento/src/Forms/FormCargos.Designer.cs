@@ -34,7 +34,7 @@
             LbAdministrarCargos = new Panel();
             BtnRefresh = new Button();
             BtnErase1 = new Button();
-            button2 = new Button();
+            BtnConfirmarCargo = new Button();
             PnlAlteraCargo = new Panel();
             TxtAlterarSalario = new MaskedTextBox();
             CbCargo = new ComboBox();
@@ -88,7 +88,7 @@
             LbAdministrarCargos.Controls.Add(BtnDeletarCargo);
             LbAdministrarCargos.Controls.Add(BtnRefresh);
             LbAdministrarCargos.Controls.Add(BtnErase1);
-            LbAdministrarCargos.Controls.Add(button2);
+            LbAdministrarCargos.Controls.Add(BtnConfirmarCargo);
             LbAdministrarCargos.Controls.Add(PnlAlteraCargo);
             LbAdministrarCargos.Controls.Add(BtnErase2);
             LbAdministrarCargos.Controls.Add(PnlCadastraCargos);
@@ -112,7 +112,7 @@
             BtnRefresh.Name = "BtnRefresh";
             BtnRefresh.Size = new Size(43, 43);
             BtnRefresh.TabIndex = 65;
-            toolTip1.SetToolTip(BtnRefresh, "Recarregar Pagina");
+            toolTip1.SetToolTip(BtnRefresh, "Recarregar página");
             BtnRefresh.UseVisualStyleBackColor = true;
             BtnRefresh.MouseClick += BtnRefresh_MouseClick;
             // 
@@ -129,18 +129,18 @@
             BtnErase1.UseVisualStyleBackColor = true;
             BtnErase1.MouseClick += BtnErase1_MouseClick;
             // 
-            // button2
+            // BtnConfirmarCargo
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(60, 508);
-            button2.Name = "button2";
-            button2.Size = new Size(43, 43);
-            button2.TabIndex = 63;
-            toolTip1.SetToolTip(button2, "Confirmar e criar cargo");
-            button2.UseVisualStyleBackColor = true;
-            button2.MouseClick += button2_MouseClick;
+            BtnConfirmarCargo.FlatAppearance.BorderSize = 0;
+            BtnConfirmarCargo.FlatStyle = FlatStyle.Flat;
+            BtnConfirmarCargo.Image = (Image)resources.GetObject("BtnConfirmarCargo.Image");
+            BtnConfirmarCargo.Location = new Point(60, 508);
+            BtnConfirmarCargo.Name = "BtnConfirmarCargo";
+            BtnConfirmarCargo.Size = new Size(43, 43);
+            BtnConfirmarCargo.TabIndex = 63;
+            toolTip1.SetToolTip(BtnConfirmarCargo, "Confirmar e criar cargo");
+            BtnConfirmarCargo.UseVisualStyleBackColor = true;
+            BtnConfirmarCargo.MouseClick += button2_MouseClick;
             // 
             // PnlAlteraCargo
             // 
@@ -167,9 +167,9 @@
             TxtAlterarSalario.BackColor = Color.DarkGray;
             TxtAlterarSalario.BorderStyle = BorderStyle.FixedSingle;
             TxtAlterarSalario.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtAlterarSalario.Location = new Point(219, 267);
+            TxtAlterarSalario.Location = new Point(220, 270);
             TxtAlterarSalario.Name = "TxtAlterarSalario";
-            TxtAlterarSalario.Size = new Size(181, 31);
+            TxtAlterarSalario.Size = new Size(125, 31);
             TxtAlterarSalario.TabIndex = 44;
             // 
             // CbCargo
@@ -199,7 +199,7 @@
             // 
             pictureBox2.BackgroundImage = Properties.Resources.edit;
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(201, 19);
+            pictureBox2.Location = new Point(201, 17);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(30, 30);
             pictureBox2.TabIndex = 36;
@@ -234,7 +234,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(49, 271);
+            label6.Location = new Point(50, 270);
             label6.Name = "label6";
             label6.Size = new Size(97, 21);
             label6.TabIndex = 40;
@@ -245,9 +245,9 @@
             TxtAlterarCargo.BackColor = Color.DarkGray;
             TxtAlterarCargo.BorderStyle = BorderStyle.FixedSingle;
             TxtAlterarCargo.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtAlterarCargo.Location = new Point(219, 205);
+            TxtAlterarCargo.Location = new Point(220, 205);
             TxtAlterarCargo.Name = "TxtAlterarCargo";
-            TxtAlterarCargo.PlaceholderText = "Ajudante Geral";
+            TxtAlterarCargo.PlaceholderText = "Selecionar o cargo acima";
             TxtAlterarCargo.Size = new Size(212, 31);
             TxtAlterarCargo.TabIndex = 35;
             TxtAlterarCargo.TabStop = false;
@@ -256,7 +256,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(49, 208);
+            label7.Location = new Point(50, 208);
             label7.Name = "label7";
             label7.Size = new Size(153, 21);
             label7.TabIndex = 39;
@@ -291,8 +291,6 @@
             // PnlCadastraCargos
             // 
             PnlCadastraCargos.AutoScroll = true;
-            PnlCadastraCargos.AutoScrollMargin = new Size(0, 90);
-            PnlCadastraCargos.AutoScrollMinSize = new Size(0, 90);
             PnlCadastraCargos.BorderStyle = BorderStyle.FixedSingle;
             PnlCadastraCargos.Controls.Add(pictureBox1);
             PnlCadastraCargos.Controls.Add(TxtSalarioBase);
@@ -322,9 +320,9 @@
             TxtSalarioBase.BackColor = Color.DarkGray;
             TxtSalarioBase.BorderStyle = BorderStyle.FixedSingle;
             TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtSalarioBase.Location = new Point(150, 218);
+            TxtSalarioBase.Location = new Point(164, 270);
             TxtSalarioBase.Name = "TxtSalarioBase";
-            TxtSalarioBase.PlaceholderText = "1060,00.";
+            TxtSalarioBase.PlaceholderText = "Digitar valor";
             TxtSalarioBase.Size = new Size(125, 31);
             TxtSalarioBase.TabIndex = 3;
             TxtSalarioBase.TabStop = false;
@@ -359,7 +357,7 @@
             // 
             LbDataNascimento.AutoSize = true;
             LbDataNascimento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbDataNascimento.Location = new Point(15, 218);
+            LbDataNascimento.Location = new Point(25, 270);
             LbDataNascimento.Name = "LbDataNascimento";
             LbDataNascimento.Size = new Size(97, 21);
             LbDataNascimento.TabIndex = 34;
@@ -370,9 +368,9 @@
             TxtCargo.BackColor = Color.DarkGray;
             TxtCargo.BorderStyle = BorderStyle.FixedSingle;
             TxtCargo.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCargo.Location = new Point(150, 158);
+            TxtCargo.Location = new Point(164, 205);
             TxtCargo.Name = "TxtCargo";
-            TxtCargo.PlaceholderText = "Auxiliar de Compras";
+            TxtCargo.PlaceholderText = "Digitar o cargo";
             TxtCargo.Size = new Size(219, 31);
             TxtCargo.TabIndex = 2;
             TxtCargo.TabStop = false;
@@ -381,11 +379,11 @@
             // 
             LbNomeCompleto.AutoSize = true;
             LbNomeCompleto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            LbNomeCompleto.Location = new Point(15, 158);
+            LbNomeCompleto.Location = new Point(25, 205);
             LbNomeCompleto.Name = "LbNomeCompleto";
-            LbNomeCompleto.Size = new Size(97, 21);
+            LbNomeCompleto.Size = new Size(129, 21);
             LbNomeCompleto.TabIndex = 32;
-            LbNomeCompleto.Text = "Novo Cargo:";
+            LbNomeCompleto.Text = "Criar novo cargo:";
             // 
             // LbTitulo
             // 
@@ -484,7 +482,7 @@
         private TextBox TxtAlterarCargo;
         private Label label7;
         private Button BtnErase1;
-        private Button button2;
+        private Button BtnConfirmarCargo;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private ComboBox CbCargo;

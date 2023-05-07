@@ -289,7 +289,7 @@
             BtnCargosFun.TabIndex = 3;
             BtnCargosFun.Text = "    Cargos Funcionários";
             BtnCargosFun.TextImageRelation = TextImageRelation.ImageBeforeText;
-            toolTip1.SetToolTip(BtnCargosFun, "Criar ou modificar Cargos");
+            toolTip1.SetToolTip(BtnCargosFun, "Criar ou modificar cargos");
             BtnCargosFun.UseVisualStyleBackColor = false;
             BtnCargosFun.MouseClick += BtnCargosFun_MouseClick;
             // 

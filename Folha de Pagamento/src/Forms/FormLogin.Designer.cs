@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             label1 = new Label();
             BtnEntrar = new Button();
@@ -40,6 +41,7 @@
             label6 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            toolTip1 = new ToolTip(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -65,6 +67,7 @@
             BtnEntrar.Size = new Size(248, 60);
             BtnEntrar.TabIndex = 3;
             BtnEntrar.Text = "Login";
+            toolTip1.SetToolTip(BtnEntrar, "Fazer login");
             BtnEntrar.UseVisualStyleBackColor = true;
             BtnEntrar.MouseClick += BtnEntrar_MouseClick;
             // 
@@ -84,7 +87,7 @@
             TxtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TxtPassword.Location = new Point(74, 291);
             TxtPassword.Name = "TxtPassword";
-            TxtPassword.PlaceholderText = "Senha";
+            TxtPassword.PlaceholderText = "Digite sua senha";
             TxtPassword.Size = new Size(214, 29);
             TxtPassword.TabIndex = 2;
             TxtPassword.UseSystemPasswordChar = true;
@@ -95,7 +98,7 @@
             TxtUser.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TxtUser.Location = new Point(74, 210);
             TxtUser.Name = "TxtUser";
-            TxtUser.PlaceholderText = "Matricula : 0010";
+            TxtUser.PlaceholderText = "Digite sua matrícula";
             TxtUser.Size = new Size(214, 29);
             TxtUser.TabIndex = 1;
             // 
@@ -109,6 +112,7 @@
             label5.Size = new Size(141, 19);
             label5.TabIndex = 8;
             label5.Text = "Esqueceu sua senha ?";
+            toolTip1.SetToolTip(label5, "Esqueceu a senha ?");
             // 
             // panel1
             // 
@@ -199,5 +203,6 @@
         private TextBox TxtUser;
         private PictureBox pictureBox3;
         private Label label6;
+        private ToolTip toolTip1;
     }
 }

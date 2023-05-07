@@ -292,6 +292,7 @@
             BtnPesquisarMatricula.Name = "BtnPesquisarMatricula";
             BtnPesquisarMatricula.Size = new Size(31, 31);
             BtnPesquisarMatricula.TabIndex = 66;
+            toolTip1.SetToolTip(BtnPesquisarMatricula, "Pesquisar");
             BtnPesquisarMatricula.UseVisualStyleBackColor = true;
             // 
             // PanelHolerite

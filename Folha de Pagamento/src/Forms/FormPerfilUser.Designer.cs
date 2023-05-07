@@ -211,6 +211,8 @@
             // 
             button1.BackColor = Color.Transparent;
             button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 192);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Image = (Image)resources.GetObject("button1.Image");
