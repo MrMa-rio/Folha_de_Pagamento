@@ -19,9 +19,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                         " Total_TaxaIRRF, Total_TaxaINSS," +
                         " Total_TaxaFGTS, SalarioBase_INSS, SalarioBase_IRRF," +
                         " SalarioBase_FGTS, SalarioBrutoTotal, Desc_INSS, Desc_IRRF," +
-                        " Desc_Total, CLT, Funcionarios_Ativos ";
+                        " Desc_Total, CLT, Funcionarios_Ativos, Salario_Liquido, Valor_FGTS ";
             C_TransformandoValores c_TransformandoValores = new C_TransformandoValores();
-
 
             string DATA_Fechamento = formFolhaNormal.TxtDataEmissao.Text;
             string Total_TaxaIRRF = c_TransformandoValores.alterandoFormatos(formFolhaNormal.TxtTaxaDescIRRF.Text);
@@ -36,6 +35,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             string Desc_Total = c_TransformandoValores.alterandoFormatos(formFolhaNormal.TxtTotaisDescontos.Text);
             string CLT = formFolhaNormal.TxtCLT.Text;
             string Funcionarios_Ativos= formFolhaNormal.TxtAtivo.Text;
+            string SalarioLiquido = c_TransformandoValores.alterandoFormatos( formFolhaNormal.TxtSalarioLiquido.Text );
+            string TotalTaxaFGTS = formFolhaNormal.TxtTaxaDescFGTS.Text;
 
             values = $"STR_TO_DATE('{DATA_Fechamento}', '%d/%m/%Y')," + 
                 $"'{Total_TaxaIRRF}','{Total_TaxaINSS}'," +
@@ -43,8 +44,9 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 $"'{SalarioBase_INSS}'," +
                 $"'{SalarioBase_IRRF}','{SalarioBase_FGTS}'," +
                 $"'{SalarioBrutoTotal}','{Desc_INSS}','{Desc_IRRF}'," +
-                $"'{Desc_Total}','{CLT}','{Funcionarios_Ativos}'";
-
+                $"'{Desc_Total}','{CLT}','{Funcionarios_Ativos}'," +
+                $"'{SalarioLiquido}', '{TotalTaxaFGTS}'"
+            ;
             insertData.setData("tb_fechamentoemp", columns, values);
             
         }

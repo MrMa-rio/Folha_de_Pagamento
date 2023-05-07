@@ -20,11 +20,23 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
             InitializeComponent();
             FormAtivo = navBar;
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void CbAno_DropDown(object sender, EventArgs e)
         {
-            C_SomaFolhaNormal c_SomaFolhaNormal = new C_SomaFolhaNormal();
-           
+            C_FolhaNormalPesq c_FolhaNormal = new C_FolhaNormalPesq();
+            c_FolhaNormal.getYearFolhaNormal(CbAno);
+        }
+
+        private void CbAno_TextChanged(object sender, EventArgs e)
+        {
+            C_FolhaNormalPesq c_FolhaNormalPesq = new C_FolhaNormalPesq();
+            c_FolhaNormalPesq.getMonthFolhaNormal(CbMes, CbAno.Text);
+
+        }
+
+        private void CbMes_TextChanged(object sender, EventArgs e)
+        {
+            C_FolhaNormalPesq c_FolhaNormalPesq = new C_FolhaNormalPesq();
+            c_FolhaNormalPesq.ShowFolhaNormalPesq(this);
         }
     }
 }

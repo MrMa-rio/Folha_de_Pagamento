@@ -47,8 +47,6 @@
             label46 = new Label();
             TxtDataLancamento = new Label();
             label7 = new Label();
-            Txtid = new Label();
-            label4 = new Label();
             TxtFgtsMes = new Label();
             TxtBaseirrf = new Label();
             TxtBaseFgts = new Label();
@@ -295,8 +293,6 @@
             panel19.Controls.Add(label46);
             panel19.Controls.Add(TxtDataLancamento);
             panel19.Controls.Add(label7);
-            panel19.Controls.Add(Txtid);
-            panel19.Controls.Add(label4);
             panel19.Controls.Add(TxtFgtsMes);
             panel19.Controls.Add(TxtBaseirrf);
             panel19.Controls.Add(TxtBaseFgts);
@@ -381,25 +377,6 @@
             label7.Size = new Size(147, 19);
             label7.TabIndex = 93;
             label7.Text = "Data de lançamento:";
-            // 
-            // Txtid
-            // 
-            Txtid.AutoSize = true;
-            Txtid.Location = new Point(7, 25);
-            Txtid.Name = "Txtid";
-            Txtid.Size = new Size(51, 15);
-            Txtid.TabIndex = 92;
-            Txtid.Text = "Numero";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(8, 5);
-            label4.Name = "label4";
-            label4.Size = new Size(20, 15);
-            label4.TabIndex = 91;
-            label4.Text = "ID";
             // 
             // TxtFgtsMes
             // 
@@ -1456,8 +1433,6 @@
         private Label label9;
         private Label LbTitulo;
         private Label label1;
-        private Label Txtid;
-        private Label label4;
         private Label TxtFgtsMes;
         private Label TxtBaseirrf;
         private Label TxtBaseFgts;

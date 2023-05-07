@@ -50,7 +50,6 @@ namespace FOLHA_DE_PAGAMENTO_
                 C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
                 c_RelatorioFolha.setMonth(CbAno.Text, CbMes);
                 TxtDataEmissao.Text = DateTime.Today.ToString();
-
             }
         }
 
