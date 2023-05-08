@@ -372,6 +372,7 @@
             BtnCancelar.TabIndex = 19;
             toolTip1.SetToolTip(BtnCancelar, "Voltar ao ínicio");
             BtnCancelar.UseVisualStyleBackColor = true;
+            BtnCancelar.MouseClick += BtnCancelar_MouseClick;
             // 
             // FormSobre
             // 

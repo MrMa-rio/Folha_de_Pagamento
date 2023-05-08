@@ -25,18 +25,19 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 formLogin.Close();
             }
         }
-        public void logout(FormHome formPrincipal, FormNavBar formNavBar)
+        public void logout(FormHome formPrincipal)
         {
-            FormNavBar formPrincipal_ = Application.OpenForms.OfType<FormNavBar>().FirstOrDefault();
-            FormNavBar formNav = new FormNavBar(formPrincipal);
+            formPrincipal.PnlPerfil.Visible = false;
             C_showLogin showLogin = new C_showLogin();
-            C_FormShow c_FormShow = new C_FormShow();
-            formPrincipal.BtnMenu.Visible =false;
-            
-            FormLogin formLogin = new FormLogin(formPrincipal);
+            formPrincipal.BtnMenu.Visible = false;
             showLogin.ShowLogin(formPrincipal);
-
-            formPrincipal_.Refresh();
+        }
+        public void logoutPerfil(FormHome formPrincipal)
+        {
+            formPrincipal.PnlPerfil.Visible = false;
+            C_showLogin showLogin = new C_showLogin();
+            showLogin.ShowLogin(formPrincipal);
+            formPrincipal.BtnMenu.Visible = false;
         }
     }
 }
