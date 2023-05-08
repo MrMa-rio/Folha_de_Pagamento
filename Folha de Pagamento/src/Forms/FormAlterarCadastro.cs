@@ -37,7 +37,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             FormAtivo = navBar;
             NvlAcesso = nvlAcesso;
-           
+
             c_PrivateArea.setDeleteFuncNvl1(BtnDeleteFunc, nvlAcesso);
 
         }

@@ -78,7 +78,7 @@
             BtnDeletarCargo.Location = new Point(616, 508);
             BtnDeletarCargo.Name = "BtnDeletarCargo";
             BtnDeletarCargo.Size = new Size(43, 43);
-            BtnDeletarCargo.TabIndex = 125;
+            BtnDeletarCargo.TabIndex = 11;
             toolTip1.SetToolTip(BtnDeletarCargo, "Deletar cargo selecionado");
             BtnDeletarCargo.UseVisualStyleBackColor = true;
             // 
@@ -113,7 +113,7 @@
             BtnRefresh.Location = new Point(974, 95);
             BtnRefresh.Name = "BtnRefresh";
             BtnRefresh.Size = new Size(43, 43);
-            BtnRefresh.TabIndex = 65;
+            BtnRefresh.TabIndex = 10;
             toolTip1.SetToolTip(BtnRefresh, "Recarregar página");
             BtnRefresh.UseVisualStyleBackColor = true;
             BtnRefresh.MouseClick += BtnRefresh_MouseClick;
@@ -127,7 +127,7 @@
             BtnErase1.Location = new Point(109, 508);
             BtnErase1.Name = "BtnErase1";
             BtnErase1.Size = new Size(43, 43);
-            BtnErase1.TabIndex = 64;
+            BtnErase1.TabIndex = 3;
             toolTip1.SetToolTip(BtnErase1, "Limpar todos os campos");
             BtnErase1.UseVisualStyleBackColor = true;
             BtnErase1.MouseClick += BtnErase1_MouseClick;
@@ -141,7 +141,7 @@
             BtnConfirmarCargo.Location = new Point(60, 508);
             BtnConfirmarCargo.Name = "BtnConfirmarCargo";
             BtnConfirmarCargo.Size = new Size(43, 43);
-            BtnConfirmarCargo.TabIndex = 63;
+            BtnConfirmarCargo.TabIndex = 2;
             toolTip1.SetToolTip(BtnConfirmarCargo, "Confirmar e criar cargo");
             BtnConfirmarCargo.UseVisualStyleBackColor = true;
             BtnConfirmarCargo.MouseClick += button2_MouseClick;
@@ -174,7 +174,7 @@
             TxtAlterarSalario.Location = new Point(220, 270);
             TxtAlterarSalario.Name = "TxtAlterarSalario";
             TxtAlterarSalario.Size = new Size(125, 31);
-            TxtAlterarSalario.TabIndex = 44;
+            TxtAlterarSalario.TabIndex = 6;
             // 
             // CbCargo
             // 
@@ -185,7 +185,7 @@
             CbCargo.Location = new Point(219, 110);
             CbCargo.Name = "CbCargo";
             CbCargo.Size = new Size(212, 31);
-            CbCargo.TabIndex = 42;
+            CbCargo.TabIndex = 4;
             CbCargo.DropDown += CbCargo_TextChanged;
             CbCargo.TextChanged += CbCargo_TextChanged;
             // 
@@ -253,8 +253,7 @@
             TxtAlterarCargo.Name = "TxtAlterarCargo";
             TxtAlterarCargo.PlaceholderText = "Selecionar o cargo acima";
             TxtAlterarCargo.Size = new Size(212, 31);
-            TxtAlterarCargo.TabIndex = 35;
-            TxtAlterarCargo.TabStop = false;
+            TxtAlterarCargo.TabIndex = 5;
             // 
             // label7
             // 
@@ -288,7 +287,7 @@
             BtnErase2.Location = new Point(1024, 508);
             BtnErase2.Name = "BtnErase2";
             BtnErase2.Size = new Size(43, 43);
-            BtnErase2.TabIndex = 61;
+            BtnErase2.TabIndex = 8;
             toolTip1.SetToolTip(BtnErase2, "Limpar todos os campos");
             BtnErase2.UseVisualStyleBackColor = true;
             BtnErase2.MouseClick += BtnErase2_MouseClick;
@@ -329,8 +328,7 @@
             TxtSalarioBase.Name = "TxtSalarioBase";
             TxtSalarioBase.PlaceholderText = "Digitar valor";
             TxtSalarioBase.Size = new Size(125, 31);
-            TxtSalarioBase.TabIndex = 3;
-            TxtSalarioBase.TabStop = false;
+            TxtSalarioBase.TabIndex = 1;
             // 
             // label4
             // 
@@ -377,8 +375,7 @@
             TxtCargo.Name = "TxtCargo";
             TxtCargo.PlaceholderText = "Digitar o cargo";
             TxtCargo.Size = new Size(219, 31);
-            TxtCargo.TabIndex = 2;
-            TxtCargo.TabStop = false;
+            TxtCargo.TabIndex = 0;
             // 
             // LbNomeCompleto
             // 
@@ -425,7 +422,7 @@
             BtnConfirmar.Location = new Point(975, 508);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 18;
+            BtnConfirmar.TabIndex = 7;
             toolTip1.SetToolTip(BtnConfirmar, "Confirmar e modificar cargo");
             BtnConfirmar.UseVisualStyleBackColor = true;
             BtnConfirmar.MouseClick += BtnConfirmar_MouseClick;
@@ -440,7 +437,7 @@
             BtnCancelar.Location = new Point(1023, 95);
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
-            BtnCancelar.TabIndex = 19;
+            BtnCancelar.TabIndex = 9;
             toolTip1.SetToolTip(BtnCancelar, "Voltar ao início");
             BtnCancelar.UseVisualStyleBackColor = true;
             BtnCancelar.MouseClick += BtnCancelar_MouseClick;
