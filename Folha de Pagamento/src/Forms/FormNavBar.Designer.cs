@@ -62,6 +62,7 @@
             BtnArrowLeft.BackColor = Color.Transparent;
             BtnArrowLeft.BackgroundImage = Properties.Resources.arrow_left;
             BtnArrowLeft.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnArrowLeft.Cursor = Cursors.Hand;
             BtnArrowLeft.FlatAppearance.BorderSize = 0;
             BtnArrowLeft.FlatStyle = FlatStyle.Flat;
             BtnArrowLeft.Location = new Point(27, 28);
