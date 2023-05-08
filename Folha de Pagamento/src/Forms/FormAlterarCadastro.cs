@@ -26,7 +26,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private C_ManiplaçaoData c_Manipula = new C_ManiplaçaoData();
         private int NvlAcesso;
         string endereco = "";
-
+        C_privateArea c_PrivateArea = new C_privateArea();
         private bool validacao;
         private bool validacaoDate;
         public FormAlterarCadastro()
@@ -37,7 +37,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             FormAtivo = navBar;
             NvlAcesso = nvlAcesso;
-            C_privateArea c_PrivateArea = new C_privateArea();
+           
             c_PrivateArea.setDeleteFuncNvl1(BtnDeleteFunc, nvlAcesso);
 
         }
@@ -48,6 +48,7 @@ namespace FOLHA_DE_PAGAMENTO_
             Keyboard keyboard = new Keyboard();
             keyboard.SendKeys("{ENTER}");
             NvlAcesso = nvlAcesso;
+            c_PrivateArea.setDeleteFuncNvl1(BtnDeleteFunc, nvlAcesso);
         }
 
         private void TxtCpf_TextChanged(object sender, EventArgs e)
