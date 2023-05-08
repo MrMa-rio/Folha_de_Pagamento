@@ -49,11 +49,11 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
         }
         private void BtnPrint_MouseClick(object sender, MouseEventArgs e)
         {
-            //FormFolhaDetalhadaPDF formFolhaDetalhadaPDF = new FormFolhaDetalhadaPDF(this);
-            //C_PrintPDF c_PrintPDF = new C_PrintPDF();
-            //formFolhaDetalhadaPDF.Show();
-            //c_PrintPDF.printPdf(formFolhaDetalhadaPDF.PanelFolhaDetalhada);
-            //formFolhaDetalhadaPDF.Close();
+            FormFolhaNormalPDF formPDF = new FormFolhaNormalPDF(this);
+            C_PrintPDF c_PrintPDF = new C_PrintPDF();
+            formPDF.Show();
+            c_PrintPDF.printPdf(formPDF.PanelFolhaDetalhada);
+            formPDF.Close();
         }
     }
 }

@@ -146,23 +146,100 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             folhaDetalhadaPDF.TxtSalBaseMensal.Text = formFolhaDetalhada.TxtSalBaseMensal.Text;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public void WriterFolhaDetalhada(FormFolhaDetalhadaPDF folhaDetalhadaPDF, FormFolhaDetalhada formFolhaDetalhada)
+        {
+            folhaDetalhadaPDF.TxtMatricula.Text = formFolhaDetalhada.TxtMatricula.Text;
+            folhaDetalhadaPDF.TxtNome.Text = formFolhaDetalhada.TxtNome.Text;
+            folhaDetalhadaPDF.TxtCargo.Text = formFolhaDetalhada.TxtCargo.Text;
+            folhaDetalhadaPDF.TxtSalarioBase.Text = formFolhaDetalhada.TxtSalarioBase.Text;
+            folhaDetalhadaPDF.TxtDataAdmissao.Text = formFolhaDetalhada.TxtDataAdmissao.Text;
+
+            folhaDetalhadaPDF.TxtTaxaDescINSS.Text = formFolhaDetalhada.TxtTaxaDescINSS.Text;
+            folhaDetalhadaPDF.TxtDescINSS.Text = formFolhaDetalhada.TxtDescINSS.Text;
+            folhaDetalhadaPDF.TxtSalarioBaseINSS.Text = formFolhaDetalhada.TxtSalarioBaseINSS.Text;
+            folhaDetalhadaPDF.TxtValorInss.Text = formFolhaDetalhada.TxtValorInss.Text;
+            folhaDetalhadaPDF.TxtTotalInss.Text = formFolhaDetalhada.TxtTotalInss.Text;
+
+            folhaDetalhadaPDF.TxtTaxaDescIRRF.Text = formFolhaDetalhada.TxtTaxaDescIRRF.Text;
+            folhaDetalhadaPDF.TxtDescIRRF.Text = formFolhaDetalhada.TxtDescIRRF.Text;
+            folhaDetalhadaPDF.TxtSalarioBaseIRRF.Text = formFolhaDetalhada.TxtSalarioBaseIRRF.Text;
+            folhaDetalhadaPDF.TxtValorIRRF.Text = formFolhaDetalhada.TxtValorIRRF.Text;
+            folhaDetalhadaPDF.TxtTotalIRRF.Text = formFolhaDetalhada.TxtTotalIRRF.Text;
+
+            folhaDetalhadaPDF.TxtSalarioBaseFGTS.Text = formFolhaDetalhada.TxtSalarioBaseFGTS.Text;
+            folhaDetalhadaPDF.TxtValorFGTS.Text = formFolhaDetalhada.TxtValorFGTS.Text;
+            folhaDetalhadaPDF.TxtTotalFGTS.Text = formFolhaDetalhada.TxtTotalFGTS.Text;
+
+            folhaDetalhadaPDF.TxtMaiorRemuneracao.Text = formFolhaDetalhada.TxtMaiorRemuneracao.Text;
+            folhaDetalhadaPDF.TxtSalarioLiqMensal.Text = formFolhaDetalhada.TxtSalarioLiqMensal.Text;
+            //folhaDetalhadaPDF.TxtDataEmissao.Text = formFolhaDetalhada.TxtDataLancamento.Text;
+            folhaDetalhadaPDF.TxtDataLancamento.Text = formFolhaDetalhada.TxtDataEmissao.Text;
+
+           // folhaDetalhadaPDF.TxtIdFolha.Text = formFolhaDetalhada.TxtIdFolha.Text;
+            folhaDetalhadaPDF.TxtVencimentos.Text = formFolhaDetalhada.TxtVencimentos.Text;
+            //folhaDetalhadaPDF.TxtSalBaseMensal.Text = formFolhaDetalhada.TxtSalBaseMensal.Text;
+            folhaDetalhadaPDF.TxtTotaisDescontos.Text = formFolhaDetalhada.TxtTotaisDescontos.Text;
+            folhaDetalhadaPDF.TxtSalarioLiquido.Text = formFolhaDetalhada.TxtSalarioLiquido.Text;
+            //folhaDetalhadaPDF.TxtSalBaseMensal.Text = formFolhaDetalhada.TxtSalBaseMensal.Text;
+        }
+
+        public void WriterFolhaNormal(FormFolhaNormalPDF formNormalPDF, FormFolhaNormalPesq formFolhaNormal)
+        {
+
+            formNormalPDF.TxtTaxaINSS.Text = formFolhaNormal.TxtTaxaINSS.Text;
+            formNormalPDF.TxtINSSDesc.Text = formFolhaNormal.TxtINSSDesc.Text;
+            formNormalPDF.TxtSalarioINSS.Text = formFolhaNormal.TxtSalarioINSS.Text;
+            formNormalPDF.TxtINSSValor.Text = formFolhaNormal.TxtINSSValor.Text;
+            formNormalPDF.TxtDescTotalINSS.Text = formFolhaNormal.TxtDescTotalINSS.Text;
+
+            formNormalPDF.TxtTaxaDescIRRF.Text = formFolhaNormal.TxtTaxaDescIRRF.Text;
+            formNormalPDF.TxtDescIRRF.Text = formFolhaNormal.TxtDescIRRF.Text;
+            formNormalPDF.TxtSalarioBaseIRRF.Text = formFolhaNormal.TxtSalarioBaseIRRF.Text;
+            formNormalPDF.TxtValorIRRF.Text = formFolhaNormal.TxtValorIRRF.Text;
+            formNormalPDF.TxtTotalIRRF.Text = formFolhaNormal.TxtTotalIRRF.Text;
+
+            formNormalPDF.TxtTaxaFGTS.Text = formFolhaNormal.TxtTaxaFGTS.Text;
+            formNormalPDF.TxtSalarioBaseFGTS.Text = formFolhaNormal.TxtSalarioBaseFGTS.Text;
+            formNormalPDF.TxtValorFGTS.Text = formFolhaNormal.TxtValorFGTS.Text;
+            formNormalPDF.TxtTotalFGTS.Text = formFolhaNormal.TxtTotalFGTS.Text;
+
+            formNormalPDF.TxtMaiorRemuneracao.Text = formFolhaNormal.TxtMaiorRemuneracao.Text;
+            formNormalPDF.TxtSalarioLiqMensal.Text = formFolhaNormal.TxtSalarioLiqMensal.Text;
+            formNormalPDF.TxtDataLancamento.Text = formFolhaNormal.TxtDataLancamento.Text;
+            formNormalPDF.TxtDataEmissao.Text = formFolhaNormal.TxtDataEmissao.Text;
+            
+            formNormalPDF.TxtID.Text = formFolhaNormal.TxtID.Text;
+            formNormalPDF.TxtVencimentos.Text = formFolhaNormal.TxtVencimentos.Text;
+            formNormalPDF.TxtTotaisDescontos.Text = formFolhaNormal.TxtTotaisDescontos.Text;
+            formNormalPDF.TxtSalarioLiquido.Text = formFolhaNormal.TxtSalarioLiquido.Text;
+
+            formNormalPDF.LbClt.Text = formFolhaNormal.LbClt.Text;
+            formNormalPDF.LbAtivos.Text = formFolhaNormal.LbAtivos.Text;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void WriterFolhaNormal(FormFolhaNormalPDF formNormalPDF, FormFolhaNormal formFolhaNormal)
         {
 
         }

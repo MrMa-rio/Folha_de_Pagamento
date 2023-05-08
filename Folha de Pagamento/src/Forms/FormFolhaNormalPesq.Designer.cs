@@ -68,7 +68,6 @@
             label21 = new Label();
             label20 = new Label();
             TxtSalarioLiqMensal = new TextBox();
-            label49 = new Label();
             TxtMaiorRemuneracao = new TextBox();
             label41 = new Label();
             label48 = new Label();
@@ -340,7 +339,7 @@
             // 
             LbAtivos.AutoSize = true;
             LbAtivos.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            LbAtivos.Location = new Point(27, 25);
+            LbAtivos.Location = new Point(23, 24);
             LbAtivos.Name = "LbAtivos";
             LbAtivos.Size = new Size(0, 19);
             LbAtivos.TabIndex = 26;
@@ -514,7 +513,6 @@
             panel7.Controls.Add(label21);
             panel7.Controls.Add(label20);
             panel7.Controls.Add(TxtSalarioLiqMensal);
-            panel7.Controls.Add(label49);
             panel7.Controls.Add(TxtMaiorRemuneracao);
             panel7.Controls.Add(label41);
             panel7.Controls.Add(label48);
@@ -536,7 +534,7 @@
             // TxtDataLancamento
             // 
             TxtDataLancamento.AutoSize = true;
-            TxtDataLancamento.Location = new Point(488, 25);
+            TxtDataLancamento.Location = new Point(466, 24);
             TxtDataLancamento.Name = "TxtDataLancamento";
             TxtDataLancamento.Size = new Size(0, 15);
             TxtDataLancamento.TabIndex = 103;
@@ -577,16 +575,6 @@
             TxtSalarioLiqMensal.Name = "TxtSalarioLiqMensal";
             TxtSalarioLiqMensal.Size = new Size(100, 16);
             TxtSalarioLiqMensal.TabIndex = 99;
-            // 
-            // label49
-            // 
-            label49.AutoSize = true;
-            label49.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label49.Location = new Point(690, 25);
-            label49.MaximumSize = new Size(85, 19);
-            label49.Name = "label49";
-            label49.Size = new Size(0, 19);
-            label49.TabIndex = 82;
             // 
             // TxtMaiorRemuneracao
             // 
@@ -701,7 +689,7 @@
             // label57
             // 
             label57.AutoSize = true;
-            label57.Location = new Point(100, 210);
+            label57.Location = new Point(100, 212);
             label57.Name = "label57";
             label57.Size = new Size(20, 15);
             label57.TabIndex = 25;
@@ -1337,7 +1325,6 @@
         private Label label69;
         private Label label70;
         private Panel panel7;
-        internal Label label49;
         private Label label48;
         private Label label41;
         private Label label42;
