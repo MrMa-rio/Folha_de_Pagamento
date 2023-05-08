@@ -1116,7 +1116,7 @@
             // 
             TxtDataEmissao.AutoSize = true;
             TxtDataEmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataEmissao.Location = new Point(98, 10);
+            TxtDataEmissao.Location = new Point(103, 10);
             TxtDataEmissao.MaximumSize = new Size(85, 19);
             TxtDataEmissao.Name = "TxtDataEmissao";
             TxtDataEmissao.Size = new Size(83, 19);
