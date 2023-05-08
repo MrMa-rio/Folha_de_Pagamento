@@ -24,7 +24,6 @@ namespace FOLHA_DE_PAGAMENTO_
         private bool ValidacaoDate;
         private string endereco = "";
         private string matricula;
-
         public FormCadastroFunc(FormNavBar NavBar)
         {
             InitializeComponent();
@@ -130,8 +129,6 @@ namespace FOLHA_DE_PAGAMENTO_
                 FormCadastroFunc formCadastroFunc = new FormCadastroFunc(navBar);
                 c_FormShow.refreshForm(formCadastroFunc, this);
             }
-
-
         }
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
         {
@@ -202,33 +199,23 @@ namespace FOLHA_DE_PAGAMENTO_
                 c_verificadorCEP.LocalizarCEP(TxtCep.Text, CbUF, TxtCidade, TxtBairro, TxtRua, TxtCep);
             }
         }
-
         private void CbCargo_DropDown(object sender, EventArgs e)
         {
             CbCargo.Controls.Clear();
             C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
             c_HandleCargoSalario.getCargo(CbCargo);
             LbCargoResult.Text = CbCargo.Text;
-
         }
         private void CbCargo_Leave(object sender, EventArgs e)
         {
             C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
             c_HandleCargoSalario.getSalario(CbCargo, TxtSalarioBase);
-
         }
 
         private void BtnLimpar_MouseClick(object sender, MouseEventArgs e)
         {
-            DialogResult alert = MessageBox.Show("Você está prestes a limpar todos os campos do Cadastro! Tem certeza?", "Alerta!", MessageBoxButtons.OKCancel);
-            if (alert == DialogResult.OK)
-            {
-                C_eraseBoxes c_EraseBoxes = new C_eraseBoxes();
-                c_EraseBoxes.eraseTextBox(PnlCtrlFunc);
-                c_EraseBoxes.erasemaskedTextBox(PnlCtrlFunc);
-                c_EraseBoxes.eraseCombobox(PnlCtrlFunc);
-            }
-
+            C_eraseBoxes c_EraseBoxes = new C_eraseBoxes();
+            c_EraseBoxes.eraseTextBox(PnlCtrlFunc);
         }
         private void BtnRefresh_MouseClick(object sender, MouseEventArgs e)
         {

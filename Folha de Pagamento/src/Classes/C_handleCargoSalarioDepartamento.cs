@@ -194,5 +194,42 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 return false;
             }
         }
+
+        public bool deleteCargo(ComboBox CbCargo) 
+        {
+            C_SearchInDataBase c_SearchInDataBase = new C_SearchInDataBase();
+            C_InsertData c_InsertData = new C_InsertData();
+            List<string[]> cargos = c_Cargo.getCargosDB();
+            foreach (string[] cargo in cargos)
+            {
+                if (CbCargo.Text == cargo[1])
+                {
+                    string Id = setIdCargo(CbCargo.Text);
+                    string insertSql = $"SELECT FK_Cargo FROM bd_folha.tb_funcionario where FK_Cargo = {Id}";
+                    int FuncionariosNoCargo = c_SearchInDataBase.getListinDB(insertSql).Count;
+
+                    if (FuncionariosNoCargo == 0)
+                    {
+                        DialogResult dialogResult = MessageBox.Show("Você está preste à deletar este cargo! Continuar? ", "Deletar Cargo", MessageBoxButtons.OKCancel);
+                        if (dialogResult == DialogResult.OK)
+                        {
+                            string deleteComando = $"DELETE FROM `bd_folha`.`tb_cargo` WHERE (`ID_Cargo` = '{Id}')";
+                            c_InsertData.deleteData(deleteComando);
+                            MessageBox.Show("Cargo desativado com sucesso!");
+                            return true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Para excluir um cargo, certifique-se de que não haja nenhum colaborador vinculado a ele. Por favor, verifique.");
+                        return false;
+                    }
+                    break;
+                }
+                
+            }
+            MessageBox.Show("O cargo não existe ou está Incorreto");
+            return false;
+        }
     }
 }

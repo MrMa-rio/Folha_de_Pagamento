@@ -99,6 +99,33 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                 conexão.Close();
             }
         }
+        public void deleteData(string insertSql)
+        {
+            string endereco = $"server={IP};uid={User};pwd={Password};database={TargetDB}";
+
+            MySqlConnection conexão = new MySqlConnection(); ;
+
+            try
+            {
+                conexão.ConnectionString = endereco;
+                MySqlCommand commandInsert = new MySqlCommand(insertSql, conexão);
+                conexão.Open();
+                commandInsert.ExecuteReader();
+                conexão.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message + "\n Algo de Errado Na conexão ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexão.Close();
+            }
+        }
         /*
          *  dbfolha.mysql.database.azure.com
             adminitrador

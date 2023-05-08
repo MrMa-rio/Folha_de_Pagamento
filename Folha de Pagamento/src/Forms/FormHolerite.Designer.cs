@@ -194,7 +194,6 @@
             // BtnHome
             // 
             BtnHome.Cursor = Cursors.Hand;
-            BtnHome.Enabled = false;
             BtnHome.FlatAppearance.BorderSize = 0;
             BtnHome.FlatStyle = FlatStyle.Flat;
             BtnHome.Image = (Image)resources.GetObject("BtnHome.Image");
@@ -204,6 +203,7 @@
             BtnHome.TabIndex = 131;
             toolTip1.SetToolTip(BtnHome, "Voltar ao início");
             BtnHome.UseVisualStyleBackColor = true;
+            BtnHome.MouseClick += BtnHome_MouseClick;
             // 
             // BtnPrint
             // 

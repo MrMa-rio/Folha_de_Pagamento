@@ -19,9 +19,6 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         public string getYear(string date)
         {
             string[] dateArray = date.Split('/');
-
-            
-            
             string dataYear = dateArray[2];
             string dataMouth = dateArray[1];
             string dataDay = dateArray[0];
@@ -34,15 +31,9 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             string dataMonth = dateArray[1];
             return dataMonth.Substring(0, 2);
         }
-        //Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%2023%' AND FK_Matricula = 19; // Retorna dados com base na matricula e no ano
-        //Select DATA_Emite from tb_fechamento where FK_Matricula = 19; // Retorna dados com base na matricula
-        //Select * from tb_fechamento where DATA_Emite LIKE '%2023-05%' AND  FK_Matricula = 19; Retorna dados com base no mes, ano e matricula
-
         
-
         public string setDateReInvert(string date)
         {
-            //string dataAmericana = "2023-04-24"; // data no formato americano
             DateTime data = DateTime.ParseExact(date, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture); // converter a string para um objeto DateTime
             string dataBrasileira = data.ToString("ddMMyyyy");
             return dataBrasileira;
@@ -57,9 +48,9 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             bool prevDateTime = DateTime.TryParseExact(valor, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out data);
             if (prevDateTime)
             {
-                if(data > DayDate || data.Year < DayDate.Year - 80)
+                if(data > DayDate || (DateTime.Today.Year - data.Year) < 18  || data.Year < DayDate.Year - 80)
                 {
-                    MessageBox.Show("Essa Data não é válida!");
+                    MessageBox.Show("Essa data está invalida!");
                     return false;
                 }
                 else 

@@ -169,6 +169,7 @@
             button1.TabIndex = 120;
             toolTip1.SetToolTip(button1, "Voltar ao início");
             button1.UseVisualStyleBackColor = true;
+            button1.MouseClick += button1_MouseClick;
             // 
             // BtnImprimir
             // 

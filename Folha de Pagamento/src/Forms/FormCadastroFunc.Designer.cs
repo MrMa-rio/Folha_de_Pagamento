@@ -435,7 +435,7 @@
             TxtRg.BorderStyle = BorderStyle.FixedSingle;
             TxtRg.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtRg.Location = new Point(165, 295);
-            TxtRg.Mask = "00,000,000-0";
+            TxtRg.Mask = "00,000,000-A";
             TxtRg.Name = "TxtRg";
             TxtRg.Size = new Size(162, 31);
             TxtRg.TabIndex = 5;

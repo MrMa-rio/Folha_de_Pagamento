@@ -81,6 +81,7 @@
             BtnDeletarCargo.TabIndex = 125;
             toolTip1.SetToolTip(BtnDeletarCargo, "Deletar cargo selecionado");
             BtnDeletarCargo.UseVisualStyleBackColor = true;
+            BtnDeletarCargo.MouseClick += BtnDeletarCargo_MouseClick;
             // 
             // LbAdministrarCargos
             // 
@@ -433,7 +434,6 @@
             // BtnCancelar
             // 
             BtnCancelar.Cursor = Cursors.Hand;
-            BtnCancelar.Enabled = false;
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");

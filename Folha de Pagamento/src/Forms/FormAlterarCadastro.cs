@@ -37,9 +37,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             FormAtivo = navBar;
             NvlAcesso = nvlAcesso;
-           
             c_PrivateArea.setDeleteFuncNvl1(BtnDeleteFunc, nvlAcesso);
-
         }
         public FormAlterarCadastro(FormNavBar navBar, string matriculaFuncionario, int nvlAcesso) : this()
         {
@@ -60,9 +58,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BtnCalendario_MouseClick(object sender, MouseEventArgs e)
         {
             BoxCalendario.Visible = !BoxCalendario.Visible ? true : false;
-
         }
-
         private void BoxCalendario_DateChanged(object sender, DateRangeEventArgs e)
         {
             TxtCalendario.Text = BoxCalendario.SelectionEnd.ToString();
@@ -214,7 +210,6 @@ namespace FOLHA_DE_PAGAMENTO_
             CbCargo.Controls.Clear();
             C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
             c_HandleCargoSalario.getCargo(CbCargo);
-
         }
         private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
         {

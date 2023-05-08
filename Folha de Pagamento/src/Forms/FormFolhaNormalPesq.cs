@@ -38,5 +38,14 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
             C_FolhaNormalPesq c_FolhaNormalPesq = new C_FolhaNormalPesq();
             c_FolhaNormalPesq.ShowFolhaNormalPesq(this);
         }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você está prestes a sair desta página.\nTem certeza?", "Sair da Página", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

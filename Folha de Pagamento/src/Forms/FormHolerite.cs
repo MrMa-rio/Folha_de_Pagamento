@@ -65,5 +65,14 @@ namespace FOLHA_DE_PAGAMENTO_
             Matricula = TxtPesquisarMatricula.Text;
             c_ShowHoleriteFunc.getYear(Matricula, CbAno);
         }
+
+        private void BtnHome_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você está prestes a sair desta página.\nTem certeza?", "Sair da Página", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

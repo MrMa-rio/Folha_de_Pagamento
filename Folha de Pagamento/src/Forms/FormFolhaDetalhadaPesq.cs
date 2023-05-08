@@ -70,6 +70,15 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
                 c_RelatorioFolha.setDadosFuncionario(TxtPesquisarMatricula.Text, this);
             }
         }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você está prestes a sair desta página.\nTem certeza?", "Sair da Página", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }
 

@@ -54,7 +54,6 @@ namespace FOLHA_DE_PAGAMENTO_
         private void CbCargo_TextChanged(object sender, EventArgs e)
         {
             C_handleCargoSalarioDepartamento c_HandleCargoSalarioDepartamento = new C_handleCargoSalarioDepartamento();
-
             c_HandleCargoSalarioDepartamento.getCargo(CbCargo);
             c_HandleCargoSalarioDepartamento.getSalario(CbCargo, TxtAlterarSalario);
             TxtAlterarCargo.Text = CbCargo.Text;
@@ -88,6 +87,12 @@ namespace FOLHA_DE_PAGAMENTO_
             FormCargos formCargos = new FormCargos(navBar);
             C_FormShow c_FormShow = new C_FormShow();
             c_FormShow.refreshFormWithAlert(formCargos, this);
+        }
+
+        private void BtnDeletarCargo_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_handleCargoSalarioDepartamento c_HandleCargoSalarioDepartamento = new C_handleCargoSalarioDepartamento();
+            c_HandleCargoSalarioDepartamento.deleteCargo(CbCargo);
         }
     }
 }

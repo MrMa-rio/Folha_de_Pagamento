@@ -1,11 +1,12 @@
 using FOLHA_DE_PAGAMENTO_.src.Classes;
 using FOLHA_DE_PAGAMENTO_.src.Forms;
+using FOLHA_DE_PAGAMENTO_.src.Servidor.GET;
 
 namespace FOLHA_DE_PAGAMENTO_
 {
     public partial class FormHome : Form
     {
-
+        C_ManipulaçãoImagens c_ManipulaçãoImagens = new C_ManipulaçãoImagens();
         C_FormNavBarShow navBarShow = new C_FormNavBarShow();
         public FormNavBar NavBar;
         internal string[] DataUser = new string[1];
@@ -47,6 +48,10 @@ namespace FOLHA_DE_PAGAMENTO_
                 label4.Text = DataUser[3].ToString(); //FK Cargo
                 label5.Text = DataUser[4].ToString(); //NvlAcesso
                 label6.Text = DataUser[5].ToString(); //Status
+            }
+            if (!c_ManipulaçãoImagens.getImagemUser(PboxPerfil, DataUser[0]))
+            {
+                PboxPerfil.BackgroundImage = Properties.Resources.circle_account1;
             }
         }
 

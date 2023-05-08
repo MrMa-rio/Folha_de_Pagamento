@@ -75,6 +75,7 @@
             button1.TabIndex = 69;
             toolTip1.SetToolTip(button1, "Voltar ao início");
             button1.UseVisualStyleBackColor = true;
+            button1.MouseClick += button1_MouseClick;
             // 
             // TxtPesquisarCargo
             // 

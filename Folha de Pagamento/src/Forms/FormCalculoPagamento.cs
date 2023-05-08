@@ -22,6 +22,23 @@ namespace FOLHA_DE_PAGAMENTO_
             calculosFolha.setSalariosBaseINSS(this);
             calculosFolha.setSalariosBaseIRRF(this);
         }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você está prestes a sair desta página.\nTem certeza?", "Sair da Página", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_eraseBoxes c_EraseBoxes = new C_eraseBoxes();
+            c_EraseBoxes.eraseTextBox(panel5);
+            c_EraseBoxes.eraseTextBox(panel4);
+
+        }
     }
 }
 

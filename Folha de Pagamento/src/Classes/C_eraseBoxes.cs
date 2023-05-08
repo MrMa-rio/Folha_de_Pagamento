@@ -10,12 +10,18 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
     {
         public void eraseTextBox(Panel PanelAdminCargos)
         {
-            foreach (Control controle in PanelAdminCargos.Controls)
+            DialogResult dialogResult = MessageBox.Show("Você está preste à LIMPAR todos os campos! ", "Limpar Campos", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
             {
-                if (controle is TextBox) // verifica se o controle é um TextBox
+                foreach (Control controle in PanelAdminCargos.Controls)
                 {
-                    ((TextBox)controle).Text = "";
+                    if (controle is TextBox) // verifica se o controle é um TextBox
+                    {
+                        ((TextBox)controle).Text = "";
+                    }
                 }
+                eraseCombobox(PanelAdminCargos);
+                erasemaskedTextBox(PanelAdminCargos);
             }
         }
         public void erasemaskedTextBox(Panel PanelAdminCargos)

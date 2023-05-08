@@ -51,5 +51,14 @@ namespace FOLHA_DE_PAGAMENTO_
             C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
             c_HandleCargoSalario.getCargo(TxtPesquisarCargo);
         }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você está prestes a sair desta página.\nTem certeza?", "Sair da Página", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

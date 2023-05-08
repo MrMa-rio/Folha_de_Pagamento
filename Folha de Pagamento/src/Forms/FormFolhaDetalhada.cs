@@ -82,20 +82,13 @@ namespace FOLHA_DE_PAGAMENTO_
 
         }
 
-        private void panelInss_Paint(object sender, PaintEventArgs e)
+        private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-
+            DialogResult dialogResult = MessageBox.Show("Você está prestes a sair desta página.\nTem certeza?", "Sair da Página", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
     }
 }
-
-/*
-    TODO:
-            Fazer validação antes de subir no banco,
-            se caso tiver, nao subir.
-            
-            Calculo totais de todos os funcionarios.
-            
- 
- 
- */

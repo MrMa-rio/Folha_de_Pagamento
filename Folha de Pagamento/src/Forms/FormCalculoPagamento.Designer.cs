@@ -143,6 +143,7 @@
             button2.TabIndex = 62;
             toolTip1.SetToolTip(button2, "Limpar todos os campos do formulário");
             button2.UseVisualStyleBackColor = true;
+            button2.MouseClick += button2_MouseClick;
             // 
             // button1
             // 
@@ -156,6 +157,7 @@
             button1.TabIndex = 61;
             toolTip1.SetToolTip(button1, "Voltar ao início");
             button1.UseVisualStyleBackColor = true;
+            button1.MouseClick += button1_MouseClick;
             // 
             // PanelCalculoPagamento
             // 

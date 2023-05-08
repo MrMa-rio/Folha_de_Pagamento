@@ -65,5 +65,14 @@ namespace FOLHA_DE_PAGAMENTO_
             C_FolhaNormal c_FolhaNormal = new C_FolhaNormal();
             c_FolhaNormal.setFolhaNormal(this);
         }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Você está prestes a sair desta página.\nTem certeza?", "Sair da Página", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }
