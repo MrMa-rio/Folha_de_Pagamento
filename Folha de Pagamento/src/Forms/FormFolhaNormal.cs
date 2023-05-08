@@ -57,7 +57,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             C_SomaFolhaNormal c_SomaFolhaNormal = new C_SomaFolhaNormal();
             c_SomaFolhaNormal.sumTotal(CbAno.Text, CbMes.Text, this);
-            TxtDataEmissao.Text = DateTime.Today.ToString();
+            TxtDataEmissao.Text = DateTime.Today.ToString().Substring(0, 10);
         }
 
         private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)

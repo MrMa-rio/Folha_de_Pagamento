@@ -216,7 +216,6 @@
             // BtnPrint
             // 
             BtnPrint.Cursor = Cursors.Hand;
-            BtnPrint.Enabled = false;
             BtnPrint.FlatAppearance.BorderSize = 0;
             BtnPrint.FlatStyle = FlatStyle.Flat;
             BtnPrint.Image = (Image)resources.GetObject("BtnPrint.Image");
@@ -226,6 +225,7 @@
             BtnPrint.TabIndex = 129;
             toolTip1.SetToolTip(BtnPrint, "Capturar tela em PDF");
             BtnPrint.UseVisualStyleBackColor = true;
+            BtnPrint.MouseClick += BtnPrint_MouseClick;
             // 
             // BtnImprimir
             // 

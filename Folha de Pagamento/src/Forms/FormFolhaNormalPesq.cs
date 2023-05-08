@@ -47,5 +47,13 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
                 this.Close();
             }
         }
+        private void BtnPrint_MouseClick(object sender, MouseEventArgs e)
+        {
+            //FormFolhaDetalhadaPDF formFolhaDetalhadaPDF = new FormFolhaDetalhadaPDF(this);
+            //C_PrintPDF c_PrintPDF = new C_PrintPDF();
+            //formFolhaDetalhadaPDF.Show();
+            //c_PrintPDF.printPdf(formFolhaDetalhadaPDF.PanelFolhaDetalhada);
+            //formFolhaDetalhadaPDF.Close();
+        }
     }
 }
