@@ -58,6 +58,7 @@
             BtnMenu.BackColor = Color.FromArgb(46, 76, 32);
             BtnMenu.BackgroundImage = Properties.Resources.menu2;
             BtnMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnMenu.Cursor = Cursors.Hand;
             BtnMenu.FlatAppearance.BorderSize = 0;
             BtnMenu.FlatStyle = FlatStyle.Flat;
             BtnMenu.Location = new Point(27, 28);
@@ -73,6 +74,7 @@
             // 
             BtnPerfil.BackgroundImage = Properties.Resources.user;
             BtnPerfil.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnPerfil.Cursor = Cursors.Hand;
             BtnPerfil.FlatAppearance.BorderSize = 0;
             BtnPerfil.FlatStyle = FlatStyle.Flat;
             BtnPerfil.Location = new Point(1180, 28);
@@ -87,6 +89,7 @@
             // 
             BtnSetting.BackgroundImage = (Image)resources.GetObject("BtnSetting.BackgroundImage");
             BtnSetting.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnSetting.Cursor = Cursors.Hand;
             BtnSetting.FlatAppearance.BorderSize = 0;
             BtnSetting.FlatStyle = FlatStyle.Flat;
             BtnSetting.Location = new Point(1107, 28);
@@ -99,6 +102,7 @@
             // BtnTrocarUsuario
             // 
             BtnTrocarUsuario.BackColor = Color.Transparent;
+            BtnTrocarUsuario.Cursor = Cursors.Hand;
             BtnTrocarUsuario.FlatAppearance.BorderSize = 0;
             BtnTrocarUsuario.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 192);
             BtnTrocarUsuario.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);

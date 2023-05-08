@@ -188,6 +188,7 @@
             // 
             // BtnHome
             // 
+            BtnHome.Cursor = Cursors.Hand;
             BtnHome.Enabled = false;
             BtnHome.FlatAppearance.BorderSize = 0;
             BtnHome.FlatStyle = FlatStyle.Flat;
@@ -201,6 +202,7 @@
             // 
             // button1
             // 
+            button1.Cursor = Cursors.Hand;
             button1.Enabled = false;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
@@ -237,6 +239,7 @@
             // 
             // BtnImprimir
             // 
+            BtnImprimir.Cursor = Cursors.Hand;
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");

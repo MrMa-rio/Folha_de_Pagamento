@@ -210,6 +210,7 @@
             // button1
             // 
             button1.BackColor = Color.Transparent;
+            button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 255, 192);
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 255, 192);

@@ -144,6 +144,7 @@
             // 
             BtnRefresh.BackgroundImage = Properties.Resources.refresh1;
             BtnRefresh.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnRefresh.Cursor = Cursors.Hand;
             BtnRefresh.FlatAppearance.BorderSize = 0;
             BtnRefresh.FlatStyle = FlatStyle.Flat;
             BtnRefresh.Location = new Point(693, 95);
@@ -156,6 +157,7 @@
             // 
             // BtnLimpar
             // 
+            BtnLimpar.Cursor = Cursors.Hand;
             BtnLimpar.FlatAppearance.BorderSize = 0;
             BtnLimpar.FlatStyle = FlatStyle.Flat;
             BtnLimpar.Image = (Image)resources.GetObject("BtnLimpar.Image");
@@ -478,6 +480,7 @@
             // 
             BtnCalendario2.BackgroundImage = Properties.Resources.calendario;
             BtnCalendario2.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCalendario2.Cursor = Cursors.Hand;
             BtnCalendario2.FlatAppearance.BorderSize = 0;
             BtnCalendario2.FlatStyle = FlatStyle.Flat;
             BtnCalendario2.Location = new Point(294, 697);
@@ -812,6 +815,7 @@
             // 
             BtnCalendario.BackgroundImage = Properties.Resources.calendario;
             BtnCalendario.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCalendario.Cursor = Cursors.Hand;
             BtnCalendario.FlatAppearance.BorderSize = 0;
             BtnCalendario.FlatStyle = FlatStyle.Flat;
             BtnCalendario.Location = new Point(337, 150);
@@ -972,6 +976,7 @@
             // 
             BtnApagarFoto.BackgroundImage = Properties.Resources.remove;
             BtnApagarFoto.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnApagarFoto.Cursor = Cursors.Hand;
             BtnApagarFoto.FlatAppearance.BorderSize = 0;
             BtnApagarFoto.FlatStyle = FlatStyle.Flat;
             BtnApagarFoto.Location = new Point(143, 264);
@@ -986,6 +991,7 @@
             // 
             BtnFoto.BackgroundImage = Properties.Resources.addPhoto;
             BtnFoto.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnFoto.Cursor = Cursors.Hand;
             BtnFoto.FlatAppearance.BorderSize = 0;
             BtnFoto.FlatStyle = FlatStyle.Flat;
             BtnFoto.Location = new Point(94, 264);
@@ -1158,6 +1164,7 @@
             // 
             // BtnConfirmar
             // 
+            BtnConfirmar.Cursor = Cursors.Hand;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
@@ -1171,6 +1178,7 @@
             // 
             // BtnHome
             // 
+            BtnHome.Cursor = Cursors.Hand;
             BtnHome.FlatAppearance.BorderSize = 0;
             BtnHome.FlatStyle = FlatStyle.Flat;
             BtnHome.Image = (Image)resources.GetObject("BtnHome.Image");

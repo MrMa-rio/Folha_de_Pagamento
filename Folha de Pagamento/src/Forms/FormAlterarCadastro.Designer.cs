@@ -125,6 +125,7 @@
             // BtnEditar
             // 
             BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnEditar.Cursor = Cursors.Hand;
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
             BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
@@ -140,6 +141,7 @@
             // 
             BtnEditarFoto.BackgroundImage = Properties.Resources.editPhoto;
             BtnEditarFoto.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnEditarFoto.Cursor = Cursors.Hand;
             BtnEditarFoto.FlatAppearance.BorderSize = 0;
             BtnEditarFoto.FlatStyle = FlatStyle.Flat;
             BtnEditarFoto.Location = new Point(218, 221);
@@ -154,6 +156,7 @@
             // 
             BtnCracha.BackgroundImage = (Image)resources.GetObject("BtnCracha.BackgroundImage");
             BtnCracha.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCracha.Cursor = Cursors.Hand;
             BtnCracha.FlatAppearance.BorderSize = 0;
             BtnCracha.FlatStyle = FlatStyle.Flat;
             BtnCracha.Location = new Point(116, 437);
@@ -192,6 +195,7 @@
             // 
             // BtnHome
             // 
+            BtnHome.Cursor = Cursors.Hand;
             BtnHome.FlatAppearance.BorderSize = 0;
             BtnHome.FlatStyle = FlatStyle.Flat;
             BtnHome.Image = (Image)resources.GetObject("BtnHome.Image");
@@ -204,6 +208,7 @@
             // 
             // BtnDeleteFunc
             // 
+            BtnDeleteFunc.Cursor = Cursors.Hand;
             BtnDeleteFunc.FlatAppearance.BorderSize = 0;
             BtnDeleteFunc.FlatStyle = FlatStyle.Flat;
             BtnDeleteFunc.Image = Properties.Resources.user_minus;
@@ -234,6 +239,7 @@
             // 
             // BtnConfirmar
             // 
+            BtnConfirmar.Cursor = Cursors.Hand;
             BtnConfirmar.Enabled = false;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
@@ -591,6 +597,7 @@
             // 
             BtnCalendario2.BackgroundImage = Properties.Resources.calendario;
             BtnCalendario2.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCalendario2.Cursor = Cursors.Hand;
             BtnCalendario2.Enabled = false;
             BtnCalendario2.FlatAppearance.BorderSize = 0;
             BtnCalendario2.FlatStyle = FlatStyle.Flat;
@@ -912,6 +919,7 @@
             // 
             BtnCalendario.BackgroundImage = Properties.Resources.calendario;
             BtnCalendario.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnCalendario.Cursor = Cursors.Hand;
             BtnCalendario.Enabled = false;
             BtnCalendario.FlatAppearance.BorderSize = 0;
             BtnCalendario.FlatStyle = FlatStyle.Flat;
@@ -1051,6 +1059,7 @@
             // 
             // BtnCancelar
             // 
+            BtnCancelar.Cursor = Cursors.Hand;
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
@@ -1067,6 +1076,7 @@
             btnPesquisar.BackColor = Color.LightGray;
             btnPesquisar.BackgroundImage = Properties.Resources.Search;
             btnPesquisar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPesquisar.Cursor = Cursors.Hand;
             btnPesquisar.FlatAppearance.BorderSize = 0;
             btnPesquisar.FlatStyle = FlatStyle.Flat;
             btnPesquisar.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);

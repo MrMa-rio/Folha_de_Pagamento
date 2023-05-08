@@ -175,6 +175,7 @@
             // 
             // BtnConfirmar
             // 
+            BtnConfirmar.Cursor = Cursors.Hand;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
@@ -187,6 +188,7 @@
             // 
             // BtnEditar
             // 
+            BtnEditar.Cursor = Cursors.Hand;
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
             BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
@@ -199,6 +201,7 @@
             // 
             // button2
             // 
+            button2.Cursor = Cursors.Hand;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Image = (Image)resources.GetObject("button2.Image");
@@ -211,6 +214,7 @@
             // 
             // BtnPrint
             // 
+            BtnPrint.Cursor = Cursors.Hand;
             BtnPrint.Enabled = false;
             BtnPrint.FlatAppearance.BorderSize = 0;
             BtnPrint.FlatStyle = FlatStyle.Flat;
@@ -224,6 +228,7 @@
             // 
             // BtnImprimir
             // 
+            BtnImprimir.Cursor = Cursors.Hand;
             BtnImprimir.Enabled = false;
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;

@@ -159,6 +159,7 @@
             // 
             // button1
             // 
+            button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
@@ -171,6 +172,7 @@
             // 
             // BtnImprimir
             // 
+            BtnImprimir.Cursor = Cursors.Hand;
             BtnImprimir.Enabled = false;
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
@@ -184,6 +186,7 @@
             // 
             // BtnConfirmar
             // 
+            BtnConfirmar.Cursor = Cursors.Hand;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
@@ -223,6 +226,7 @@
             // 
             BtnPesquisarMatricula.BackgroundImage = (Image)resources.GetObject("BtnPesquisarMatricula.BackgroundImage");
             BtnPesquisarMatricula.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnPesquisarMatricula.Cursor = Cursors.Hand;
             BtnPesquisarMatricula.FlatAppearance.BorderSize = 0;
             BtnPesquisarMatricula.FlatStyle = FlatStyle.Flat;
             BtnPesquisarMatricula.Location = new Point(429, 105);
