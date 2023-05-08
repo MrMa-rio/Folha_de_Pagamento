@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaNormal));
             LbFolhaNormal = new Panel();
+            button1 = new Button();
             button2 = new Button();
             BtnImprimir = new Button();
             BtnConfirmar = new Button();
@@ -141,6 +142,7 @@
             // 
             LbFolhaNormal.AccessibleRole = AccessibleRole.None;
             LbFolhaNormal.BackColor = Color.LightGray;
+            LbFolhaNormal.Controls.Add(button1);
             LbFolhaNormal.Controls.Add(button2);
             LbFolhaNormal.Controls.Add(BtnImprimir);
             LbFolhaNormal.Controls.Add(BtnConfirmar);
@@ -156,6 +158,20 @@
             LbFolhaNormal.Size = new Size(1110, 630);
             LbFolhaNormal.TabIndex = 2;
             LbFolhaNormal.MouseClick += AllForms_MouseClick;
+            // 
+            // button1
+            // 
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = Properties.Resources.camera;
+            button1.Location = new Point(1004, 582);
+            button1.Name = "button1";
+            button1.Size = new Size(43, 43);
+            button1.TabIndex = 131;
+            toolTip1.SetToolTip(button1, "Imprimir folha");
+            button1.UseVisualStyleBackColor = true;
+            button1.MouseClick += button1_MouseClick;
             // 
             // button2
             // 
@@ -174,11 +190,10 @@
             // BtnImprimir
             // 
             BtnImprimir.Cursor = Cursors.Hand;
-            BtnImprimir.Enabled = false;
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
-            BtnImprimir.Location = new Point(1004, 578);
+            BtnImprimir.Location = new Point(955, 582);
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 120;
@@ -192,7 +207,7 @@
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(955, 578);
+            BtnConfirmar.Location = new Point(906, 582);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 118;
@@ -505,7 +520,7 @@
             // 
             TxtDataEmissao.AutoSize = true;
             TxtDataEmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataEmissao.Location = new Point(690, 25);
+            TxtDataEmissao.Location = new Point(696, 25);
             TxtDataEmissao.MaximumSize = new Size(85, 19);
             TxtDataEmissao.Name = "TxtDataEmissao";
             TxtDataEmissao.Size = new Size(0, 19);
@@ -1261,7 +1276,6 @@
         private Label label3;
         private Label label52;
         private Label label5;
-        private Label label6;
         private Label label8;
         private Label label49;
         internal Label TxtSalarioLiqMensal;
@@ -1285,5 +1299,6 @@
         internal Label TxtAtivo;
         internal Label TxtCLT;
         internal Label TxtTaxaDescFGTS;
+        internal Button button1;
     }
 }

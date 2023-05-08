@@ -1,5 +1,6 @@
 ﻿using FOLHA_DE_PAGAMENTO_.src.Classes;
 using FOLHA_DE_PAGAMENTO_.src.Forms;
+using FOLHA_DE_PAGAMENTO_.src.PDF;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,6 +84,12 @@ namespace FOLHA_DE_PAGAMENTO_
             formHoleritePDF.Show();
             c_PrintPDF.printPdf(formHoleritePDF.PanelHolerite);
             formHoleritePDF.Close();
+        }
+
+        private void BtnImprimir_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_GerarPDF c_GerarPDF = new C_GerarPDF();
+            c_GerarPDF.printPDF(this);
         }
     }
 }

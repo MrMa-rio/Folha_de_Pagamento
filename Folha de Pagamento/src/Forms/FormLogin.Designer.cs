@@ -96,6 +96,7 @@
             TxtPassword.BackColor = Color.FromArgb(46, 90, 32);
             TxtPassword.BorderStyle = BorderStyle.None;
             TxtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtPassword.ForeColor = Color.White;
             TxtPassword.Location = new Point(74, 346);
             TxtPassword.Name = "TxtPassword";
             TxtPassword.PlaceholderText = "Digite sua senha";
