@@ -103,6 +103,7 @@
             // BtnHoleriteFunc
             // 
             BtnHoleriteFunc.BackColor = Color.Transparent;
+            BtnHoleriteFunc.Cursor = Cursors.Hand;
             BtnHoleriteFunc.FlatAppearance.BorderSize = 0;
             BtnHoleriteFunc.FlatStyle = FlatStyle.Flat;
             BtnHoleriteFunc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -121,6 +122,7 @@
             // BtnFolhaPNormalPesq
             // 
             BtnFolhaPNormalPesq.BackColor = Color.Transparent;
+            BtnFolhaPNormalPesq.Cursor = Cursors.Hand;
             BtnFolhaPNormalPesq.FlatAppearance.BorderSize = 0;
             BtnFolhaPNormalPesq.FlatStyle = FlatStyle.Flat;
             BtnFolhaPNormalPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -140,6 +142,7 @@
             // FolhaPDetalhadaPesq
             // 
             FolhaPDetalhadaPesq.BackColor = Color.Transparent;
+            FolhaPDetalhadaPesq.Cursor = Cursors.Hand;
             FolhaPDetalhadaPesq.FlatAppearance.BorderSize = 0;
             FolhaPDetalhadaPesq.FlatStyle = FlatStyle.Flat;
             FolhaPDetalhadaPesq.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -158,6 +161,7 @@
             // BtnCalculoPagamento
             // 
             BtnCalculoPagamento.BackColor = Color.Transparent;
+            BtnCalculoPagamento.Cursor = Cursors.Hand;
             BtnCalculoPagamento.FlatAppearance.BorderSize = 0;
             BtnCalculoPagamento.FlatStyle = FlatStyle.Flat;
             BtnCalculoPagamento.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -176,6 +180,7 @@
             // FolhaPDetalhada
             // 
             FolhaPDetalhada.BackColor = Color.Transparent;
+            FolhaPDetalhada.Cursor = Cursors.Hand;
             FolhaPDetalhada.FlatAppearance.BorderSize = 0;
             FolhaPDetalhada.FlatStyle = FlatStyle.Flat;
             FolhaPDetalhada.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -194,6 +199,7 @@
             // BtnHolerite
             // 
             BtnHolerite.BackColor = Color.Transparent;
+            BtnHolerite.Cursor = Cursors.Hand;
             BtnHolerite.FlatAppearance.BorderSize = 0;
             BtnHolerite.FlatStyle = FlatStyle.Flat;
             BtnHolerite.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -212,6 +218,7 @@
             // BtnFolhaPNormal
             // 
             BtnFolhaPNormal.BackColor = Color.Transparent;
+            BtnFolhaPNormal.Cursor = Cursors.Hand;
             BtnFolhaPNormal.FlatAppearance.BorderSize = 0;
             BtnFolhaPNormal.FlatStyle = FlatStyle.Flat;
             BtnFolhaPNormal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -230,6 +237,7 @@
             // 
             // BtnRelatorio
             // 
+            BtnRelatorio.Cursor = Cursors.Hand;
             BtnRelatorio.Dock = DockStyle.Top;
             BtnRelatorio.FlatAppearance.BorderSize = 0;
             BtnRelatorio.FlatStyle = FlatStyle.Flat;
@@ -261,6 +269,7 @@
             // BtnCadastro
             // 
             BtnCadastro.BackColor = Color.Transparent;
+            BtnCadastro.Cursor = Cursors.Hand;
             BtnCadastro.FlatAppearance.BorderSize = 0;
             BtnCadastro.FlatStyle = FlatStyle.Flat;
             BtnCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -279,6 +288,7 @@
             // BtnAlterarCadastro
             // 
             BtnAlterarCadastro.BackColor = Color.Transparent;
+            BtnAlterarCadastro.Cursor = Cursors.Hand;
             BtnAlterarCadastro.FlatAppearance.BorderSize = 0;
             BtnAlterarCadastro.FlatStyle = FlatStyle.Flat;
             BtnAlterarCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -298,6 +308,7 @@
             // BtnCargosFun
             // 
             BtnCargosFun.BackColor = Color.Transparent;
+            BtnCargosFun.Cursor = Cursors.Hand;
             BtnCargosFun.FlatAppearance.BorderSize = 0;
             BtnCargosFun.FlatStyle = FlatStyle.Flat;
             BtnCargosFun.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -316,6 +327,7 @@
             // BtnPesquisar
             // 
             BtnPesquisar.BackColor = Color.Transparent;
+            BtnPesquisar.Cursor = Cursors.Hand;
             BtnPesquisar.FlatAppearance.BorderSize = 0;
             BtnPesquisar.FlatStyle = FlatStyle.Flat;
             BtnPesquisar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -333,6 +345,7 @@
             // 
             // BtnGerenciamento
             // 
+            BtnGerenciamento.Cursor = Cursors.Hand;
             BtnGerenciamento.Dock = DockStyle.Top;
             BtnGerenciamento.FlatAppearance.BorderSize = 0;
             BtnGerenciamento.FlatStyle = FlatStyle.Flat;
@@ -352,6 +365,7 @@
             // BtnConfiguracao
             // 
             BtnConfiguracao.BackColor = Color.LightGray;
+            BtnConfiguracao.Cursor = Cursors.Hand;
             BtnConfiguracao.FlatAppearance.BorderSize = 0;
             BtnConfiguracao.FlatStyle = FlatStyle.Flat;
             BtnConfiguracao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -369,6 +383,7 @@
             // BtnLogout
             // 
             BtnLogout.BackColor = Color.LightGray;
+            BtnLogout.Cursor = Cursors.Hand;
             BtnLogout.FlatAppearance.BorderSize = 0;
             BtnLogout.FlatStyle = FlatStyle.Flat;
             BtnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);

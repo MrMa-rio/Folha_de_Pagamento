@@ -72,6 +72,7 @@
             // 
             BtnDeletarCargo.BackgroundImage = (Image)resources.GetObject("BtnDeletarCargo.BackgroundImage");
             BtnDeletarCargo.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnDeletarCargo.Cursor = Cursors.Hand;
             BtnDeletarCargo.FlatAppearance.BorderSize = 0;
             BtnDeletarCargo.FlatStyle = FlatStyle.Flat;
             BtnDeletarCargo.Location = new Point(616, 508);
@@ -106,6 +107,7 @@
             // 
             BtnRefresh.BackgroundImage = Properties.Resources.refresh1;
             BtnRefresh.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnRefresh.Cursor = Cursors.Hand;
             BtnRefresh.FlatAppearance.BorderSize = 0;
             BtnRefresh.FlatStyle = FlatStyle.Flat;
             BtnRefresh.Location = new Point(974, 95);
@@ -118,6 +120,7 @@
             // 
             // BtnErase1
             // 
+            BtnErase1.Cursor = Cursors.Hand;
             BtnErase1.FlatAppearance.BorderSize = 0;
             BtnErase1.FlatStyle = FlatStyle.Flat;
             BtnErase1.Image = (Image)resources.GetObject("BtnErase1.Image");
@@ -131,6 +134,7 @@
             // 
             // BtnConfirmarCargo
             // 
+            BtnConfirmarCargo.Cursor = Cursors.Hand;
             BtnConfirmarCargo.FlatAppearance.BorderSize = 0;
             BtnConfirmarCargo.FlatStyle = FlatStyle.Flat;
             BtnConfirmarCargo.Image = (Image)resources.GetObject("BtnConfirmarCargo.Image");
@@ -277,6 +281,7 @@
             // 
             // BtnErase2
             // 
+            BtnErase2.Cursor = Cursors.Hand;
             BtnErase2.FlatAppearance.BorderSize = 0;
             BtnErase2.FlatStyle = FlatStyle.Flat;
             BtnErase2.Image = (Image)resources.GetObject("BtnErase2.Image");
@@ -413,6 +418,7 @@
             // 
             // BtnConfirmar
             // 
+            BtnConfirmar.Cursor = Cursors.Hand;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
@@ -426,6 +432,7 @@
             // 
             // BtnCancelar
             // 
+            BtnCancelar.Cursor = Cursors.Hand;
             BtnCancelar.Enabled = false;
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;

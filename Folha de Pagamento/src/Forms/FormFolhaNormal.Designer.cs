@@ -159,6 +159,7 @@
             // 
             // button2
             // 
+            button2.Cursor = Cursors.Hand;
             button2.Enabled = false;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
@@ -172,6 +173,7 @@
             // 
             // BtnImprimir
             // 
+            BtnImprimir.Cursor = Cursors.Hand;
             BtnImprimir.Enabled = false;
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
@@ -186,6 +188,7 @@
             // 
             // BtnConfirmar
             // 
+            BtnConfirmar.Cursor = Cursors.Hand;
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");

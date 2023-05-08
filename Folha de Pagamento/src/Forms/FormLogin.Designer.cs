@@ -51,22 +51,28 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(48, 16);
+            label1.Font = new Font("Segoe UI", 30F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(48, 51);
             label1.Name = "label1";
-            label1.Size = new Size(222, 54);
+            label1.Size = new Size(238, 54);
             label1.TabIndex = 0;
             label1.Text = "Bem vindo!";
             // 
             // BtnEntrar
             // 
+            BtnEntrar.BackgroundImage = (Image)resources.GetObject("BtnEntrar.BackgroundImage");
+            BtnEntrar.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnEntrar.Cursor = Cursors.Hand;
+            BtnEntrar.FlatAppearance.BorderSize = 0;
+            BtnEntrar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BtnEntrar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            BtnEntrar.FlatStyle = FlatStyle.Flat;
             BtnEntrar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnEntrar.Location = new Point(34, 432);
+            BtnEntrar.Location = new Point(34, 477);
             BtnEntrar.Name = "BtnEntrar";
             BtnEntrar.Size = new Size(248, 60);
             BtnEntrar.TabIndex = 3;
-            BtnEntrar.Text = "Login";
             toolTip1.SetToolTip(BtnEntrar, "Fazer login");
             BtnEntrar.UseVisualStyleBackColor = true;
             BtnEntrar.MouseClick += BtnEntrar_MouseClick;
@@ -75,8 +81,8 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(34, 85);
+            label4.ForeColor = Color.WhiteSmoke;
+            label4.Location = new Point(34, 130);
             label4.Name = "label4";
             label4.Size = new Size(257, 28);
             label4.TabIndex = 5;
@@ -84,8 +90,9 @@
             // 
             // TxtPassword
             // 
+            TxtPassword.BackColor = Color.DarkGray;
             TxtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtPassword.Location = new Point(74, 291);
+            TxtPassword.Location = new Point(74, 326);
             TxtPassword.Name = "TxtPassword";
             TxtPassword.PlaceholderText = "Digite sua senha";
             TxtPassword.Size = new Size(214, 29);
@@ -95,8 +102,9 @@
             // 
             // TxtUser
             // 
+            TxtUser.BackColor = Color.DarkGray;
             TxtUser.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtUser.Location = new Point(74, 210);
+            TxtUser.Location = new Point(74, 245);
             TxtUser.Name = "TxtUser";
             TxtUser.PlaceholderText = "Digite sua matrícula";
             TxtUser.Size = new Size(214, 29);
@@ -105,9 +113,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Cursor = Cursors.Hand;
             label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(147, 335);
+            label5.ForeColor = Color.WhiteSmoke;
+            label5.Location = new Point(147, 370);
             label5.Name = "label5";
             label5.Size = new Size(141, 19);
             label5.TabIndex = 8;
@@ -116,7 +125,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(46, 90, 32);
+            panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(pictureBox2);
@@ -127,15 +136,15 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(BtnEntrar);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(12, 32);
+            panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(319, 723);
+            panel1.Size = new Size(319, 743);
             panel1.TabIndex = 9;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(48, 682);
+            pictureBox3.Location = new Point(48, 685);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(26, 26);
             pictureBox3.TabIndex = 14;
@@ -146,7 +155,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(80, 689);
+            label6.Location = new Point(80, 688);
             label6.Name = "label6";
             label6.Size = new Size(185, 19);
             label6.TabIndex = 13;
@@ -155,7 +164,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(28, 199);
+            pictureBox2.Location = new Point(28, 234);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(40, 40);
             pictureBox2.TabIndex = 10;
@@ -164,7 +173,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(28, 280);
+            pictureBox1.Location = new Point(28, 315);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(40, 40);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -175,7 +184,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(46, 90, 32);
+            BackColor = Color.LightGray;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(343, 790);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;

@@ -65,6 +65,7 @@
             // 
             // button1
             // 
+            button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
@@ -123,9 +124,10 @@
             // 
             // BtnPesquisarNomes
             // 
-            BtnPesquisarNomes.BackColor = Color.DarkGray;
+            BtnPesquisarNomes.BackColor = Color.LightGray;
             BtnPesquisarNomes.BackgroundImage = (Image)resources.GetObject("BtnPesquisarNomes.BackgroundImage");
             BtnPesquisarNomes.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnPesquisarNomes.Cursor = Cursors.Hand;
             BtnPesquisarNomes.Enabled = false;
             BtnPesquisarNomes.FlatAppearance.BorderSize = 0;
             BtnPesquisarNomes.FlatStyle = FlatStyle.Flat;
