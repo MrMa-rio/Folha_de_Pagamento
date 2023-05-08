@@ -248,8 +248,10 @@
             TxtSalarioBase.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtSalarioBase.Location = new Point(510, 623);
             TxtSalarioBase.Name = "TxtSalarioBase";
+            TxtSalarioBase.ReadOnly = true;
             TxtSalarioBase.Size = new Size(165, 31);
             TxtSalarioBase.TabIndex = 13;
+            TxtSalarioBase.TabStop = false;
             // 
             // Pctdata
             // 
@@ -576,6 +578,7 @@
             CbUF.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbUF.BackColor = Color.DarkGray;
             CbUF.DropDownStyle = ComboBoxStyle.DropDownList;
+            CbUF.Enabled = false;
             CbUF.FlatStyle = FlatStyle.Flat;
             CbUF.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             CbUF.FormattingEnabled = true;
@@ -762,6 +765,7 @@
             CbGenero.Name = "CbGenero";
             CbGenero.Size = new Size(160, 31);
             CbGenero.TabIndex = 4;
+            toolTip1.SetToolTip(CbGenero, "Escolha o gênero");
             // 
             // LbGenero
             // 
@@ -837,6 +841,7 @@
             TxtDataNascimento.Name = "TxtDataNascimento";
             TxtDataNascimento.Size = new Size(121, 31);
             TxtDataNascimento.TabIndex = 1;
+            toolTip1.SetToolTip(TxtDataNascimento, "Digitar a data");
             TxtDataNascimento.MouseClick += TxtDataNascimento_MouseClick;
             TxtDataNascimento.TextChanged += TxtDataNascimento_TextChanged;
             // 
@@ -851,6 +856,7 @@
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 2;
             TxtCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            toolTip1.SetToolTip(TxtCpf, "Digite o CEP");
             TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
@@ -895,6 +901,7 @@
             CbEstadoCivil.Name = "CbEstadoCivil";
             CbEstadoCivil.Size = new Size(160, 31);
             CbEstadoCivil.TabIndex = 3;
+            toolTip1.SetToolTip(CbEstadoCivil, "Escolha o estado civil");
             // 
             // LbEstadoCivil
             // 
@@ -936,6 +943,7 @@
             TxtNomeCompleto.PlaceholderText = " Digite o nome aqui";
             TxtNomeCompleto.Size = new Size(287, 31);
             TxtNomeCompleto.TabIndex = 0;
+            toolTip1.SetToolTip(TxtNomeCompleto, "Digite o nome");
             TxtNomeCompleto.TextChanged += TxtNomeCompleto_TextChanged;
             // 
             // LbNomeCompleto
