@@ -35,7 +35,6 @@
             Button BtnCracha;
             BtnDeletarFunc = new Button();
             panel1 = new Panel();
-            BtnHome = new Button();
             BtnDeleteFunc = new Button();
             TxtMatricula = new MaskedTextBox();
             BtnConfirmar = new Button();
@@ -105,7 +104,6 @@
             LbMatricula = new Label();
             panel3 = new Panel();
             label12 = new Label();
-            label2 = new Label();
             PctUser = new PictureBox();
             LbTitulo = new Label();
             label1 = new Label();
@@ -129,7 +127,7 @@
             BtnEditar.FlatAppearance.BorderSize = 0;
             BtnEditar.FlatStyle = FlatStyle.Flat;
             BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(116, 291);
+            BtnEditar.Location = new Point(742, 578);
             BtnEditar.Name = "BtnEditar";
             BtnEditar.Size = new Size(43, 43);
             BtnEditar.TabIndex = 3;
@@ -159,7 +157,7 @@
             BtnCracha.Cursor = Cursors.Hand;
             BtnCracha.FlatAppearance.BorderSize = 0;
             BtnCracha.FlatStyle = FlatStyle.Flat;
-            BtnCracha.Location = new Point(116, 437);
+            BtnCracha.Location = new Point(116, 385);
             BtnCracha.Name = "BtnCracha";
             BtnCracha.Size = new Size(43, 43);
             BtnCracha.TabIndex = 30;
@@ -176,11 +174,11 @@
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
-            panel1.Controls.Add(BtnHome);
             panel1.Controls.Add(BtnDeleteFunc);
             panel1.Controls.Add(TxtMatricula);
             panel1.Controls.Add(BtnConfirmar);
             panel1.Controls.Add(PnlCtrlFunc);
+            panel1.Controls.Add(BtnEditar);
             panel1.Controls.Add(BtnCancelar);
             panel1.Controls.Add(btnPesquisar);
             panel1.Controls.Add(LbMatricula);
@@ -192,19 +190,6 @@
             panel1.Size = new Size(1110, 630);
             panel1.TabIndex = 0;
             panel1.MouseClick += AllForms_MouseClick;
-            // 
-            // BtnHome
-            // 
-            BtnHome.Cursor = Cursors.Hand;
-            BtnHome.FlatAppearance.BorderSize = 0;
-            BtnHome.FlatStyle = FlatStyle.Flat;
-            BtnHome.Image = (Image)resources.GetObject("BtnHome.Image");
-            BtnHome.Location = new Point(742, 95);
-            BtnHome.Name = "BtnHome";
-            BtnHome.Size = new Size(43, 43);
-            BtnHome.TabIndex = 32;
-            toolTip1.SetToolTip(BtnHome, "Voltar ao início");
-            BtnHome.UseVisualStyleBackColor = true;
             // 
             // BtnDeleteFunc
             // 
@@ -1062,7 +1047,7 @@
             BtnCancelar.FlatAppearance.BorderSize = 0;
             BtnCancelar.FlatStyle = FlatStyle.Flat;
             BtnCancelar.Image = (Image)resources.GetObject("BtnCancelar.Image");
-            BtnCancelar.Location = new Point(742, 578);
+            BtnCancelar.Location = new Point(742, 93);
             BtnCancelar.Name = "BtnCancelar";
             BtnCancelar.Size = new Size(43, 43);
             BtnCancelar.TabIndex = 29;
@@ -1105,8 +1090,6 @@
             panel3.Controls.Add(label12);
             panel3.Controls.Add(BtnCracha);
             panel3.Controls.Add(BtnEditarFoto);
-            panel3.Controls.Add(label2);
-            panel3.Controls.Add(BtnEditar);
             panel3.Controls.Add(PctUser);
             panel3.Location = new Point(810, 50);
             panel3.Name = "panel3";
@@ -1118,21 +1101,11 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(93, 403);
+            label12.Location = new Point(93, 351);
             label12.Name = "label12";
             label12.Size = new Size(89, 25);
             label12.TabIndex = 125;
             label12.Text = "CRACHÁ";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(98, 343);
-            label2.Name = "label2";
-            label2.Size = new Size(77, 25);
-            label2.TabIndex = 122;
-            label2.Text = "EDITAR";
             // 
             // PctUser
             // 
@@ -1235,7 +1208,6 @@
         private Button BtnCancelar;
         private Label LbRg;
         private Label LbCep;
-        private Label label2;
         internal ComboBox CbGenero;
         internal MaskedTextBox TxtCalendario;
         internal MaskedTextBox TxtCpf;
@@ -1275,6 +1247,5 @@
         private Button BtnDeleteFunc;
         private Button BtnDeletarFunc;
         private Label label12;
-        private Button BtnHome;
     }
 }

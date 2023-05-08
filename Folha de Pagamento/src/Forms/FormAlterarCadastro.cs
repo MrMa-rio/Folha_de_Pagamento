@@ -37,6 +37,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             FormAtivo = navBar;
             NvlAcesso = nvlAcesso;
+
             c_PrivateArea.setDeleteFuncNvl1(BtnDeleteFunc, nvlAcesso);
         }
         public FormAlterarCadastro(FormNavBar navBar, string matriculaFuncionario, int nvlAcesso) : this()

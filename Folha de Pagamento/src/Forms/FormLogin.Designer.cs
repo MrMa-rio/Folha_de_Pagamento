@@ -55,7 +55,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 30F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(38, 18);
+            label1.Location = new Point(38, 38);
             label1.Name = "label1";
             label1.Size = new Size(250, 48);
             label1.TabIndex = 0;
@@ -71,7 +71,7 @@
             BtnEntrar.FlatStyle = FlatStyle.Flat;
             BtnEntrar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             BtnEntrar.ForeColor = Color.White;
-            BtnEntrar.Location = new Point(34, 477);
+            BtnEntrar.Location = new Point(34, 497);
             BtnEntrar.Name = "BtnEntrar";
             BtnEntrar.Size = new Size(248, 60);
             BtnEntrar.TabIndex = 3;
@@ -85,7 +85,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.WhiteSmoke;
-            label4.Location = new Point(62, 123);
+            label4.Location = new Point(62, 143);
             label4.Name = "label4";
             label4.Size = new Size(195, 20);
             label4.TabIndex = 5;
@@ -96,7 +96,7 @@
             TxtPassword.BackColor = Color.FromArgb(46, 90, 32);
             TxtPassword.BorderStyle = BorderStyle.None;
             TxtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtPassword.Location = new Point(74, 326);
+            TxtPassword.Location = new Point(74, 346);
             TxtPassword.Name = "TxtPassword";
             TxtPassword.PlaceholderText = "Digite sua senha";
             TxtPassword.Size = new Size(214, 22);
@@ -110,7 +110,7 @@
             TxtUser.BorderStyle = BorderStyle.None;
             TxtUser.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             TxtUser.ForeColor = Color.White;
-            TxtUser.Location = new Point(74, 245);
+            TxtUser.Location = new Point(74, 265);
             TxtUser.Name = "TxtUser";
             TxtUser.PlaceholderText = "Digite sua matrícula";
             TxtUser.Size = new Size(214, 22);
@@ -122,7 +122,7 @@
             label5.Cursor = Cursors.Hand;
             label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.WhiteSmoke;
-            label5.Location = new Point(147, 370);
+            label5.Location = new Point(147, 390);
             label5.Name = "label5";
             label5.Size = new Size(141, 19);
             label5.TabIndex = 8;
@@ -173,7 +173,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(28, 234);
+            pictureBox2.Location = new Point(28, 254);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(40, 40);
             pictureBox2.TabIndex = 10;
@@ -182,7 +182,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(28, 315);
+            pictureBox1.Location = new Point(28, 335);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(40, 40);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -193,7 +193,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.FromArgb(66, 110, 82);
-            label2.Location = new Point(72, 336);
+            label2.Location = new Point(72, 356);
             label2.Name = "label2";
             label2.Size = new Size(222, 15);
             label2.TabIndex = 15;
@@ -203,7 +203,7 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.FromArgb(66, 110, 82);
-            label3.Location = new Point(72, 255);
+            label3.Location = new Point(72, 275);
             label3.Name = "label3";
             label3.Size = new Size(222, 15);
             label3.TabIndex = 16;
