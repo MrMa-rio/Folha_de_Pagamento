@@ -49,6 +49,11 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
                 }
             }
         }
+
+        private void label5_MouseClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Por favor, entre em contato com o Administrador. ");
+        }
     }
 }
 

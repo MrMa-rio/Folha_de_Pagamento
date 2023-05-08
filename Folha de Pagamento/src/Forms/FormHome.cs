@@ -48,8 +48,39 @@ namespace FOLHA_DE_PAGAMENTO_
                 label5.Text = DataUser[4].ToString(); //NvlAcesso
                 label6.Text = DataUser[5].ToString(); //Status
             }
-
         }
 
+        private void BtnTrocarUsuario_MouseClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Trocar de Perfil ?", "Trocar Usuario", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                C_FormNavBarShow c_FormNavBarShow = new C_FormNavBarShow();
+                C_VerificarLogin c_VerificarLogin = new C_VerificarLogin();
+                c_FormNavBarShow.AnimationHide(NavBar, NavBar.Pnl2);
+
+                foreach (Control control in this.Controls)
+                {
+                    control.Hide();
+                }
+                c_VerificarLogin.logoutPerfil(this);
+            }
+        }
+
+        private void BtnSetting_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormSobre formSobre = new FormSobre();
+            C_FormShow c_FormShow = new C_FormShow();
+            c_FormShow.setFormShow(this, formSobre);
+        }
+
+        private void BtnMenu_VisibleChanged(object sender, EventArgs e)
+        {
+            if(BtnMenu.Visible == true) 
+            {
+                navBarShow.setNavBarShow(this, NavBar, NavBar.Pnl2);
+
+            }
+        }
     }
 }

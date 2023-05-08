@@ -41,6 +41,8 @@
             label6 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            label2 = new Label();
+            label3 = new Label();
             toolTip1 = new ToolTip(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -51,28 +53,29 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 30F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Verdana", 30F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(48, 51);
+            label1.Location = new Point(38, 18);
             label1.Name = "label1";
-            label1.Size = new Size(238, 54);
+            label1.Size = new Size(250, 48);
             label1.TabIndex = 0;
             label1.Text = "Bem vindo!";
             // 
             // BtnEntrar
             // 
-            BtnEntrar.BackgroundImage = (Image)resources.GetObject("BtnEntrar.BackgroundImage");
             BtnEntrar.BackgroundImageLayout = ImageLayout.Stretch;
             BtnEntrar.Cursor = Cursors.Hand;
             BtnEntrar.FlatAppearance.BorderSize = 0;
             BtnEntrar.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            BtnEntrar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            BtnEntrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 122, 44);
             BtnEntrar.FlatStyle = FlatStyle.Flat;
             BtnEntrar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnEntrar.ForeColor = Color.White;
             BtnEntrar.Location = new Point(34, 477);
             BtnEntrar.Name = "BtnEntrar";
             BtnEntrar.Size = new Size(248, 60);
             BtnEntrar.TabIndex = 3;
+            BtnEntrar.Text = "Login";
             toolTip1.SetToolTip(BtnEntrar, "Fazer login");
             BtnEntrar.UseVisualStyleBackColor = true;
             BtnEntrar.MouseClick += BtnEntrar_MouseClick;
@@ -80,34 +83,37 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.WhiteSmoke;
-            label4.Location = new Point(34, 130);
+            label4.Location = new Point(62, 123);
             label4.Name = "label4";
-            label4.Size = new Size(257, 28);
+            label4.Size = new Size(195, 20);
             label4.TabIndex = 5;
             label4.Text = "Faça o Login para continuar.";
             // 
             // TxtPassword
             // 
-            TxtPassword.BackColor = Color.DarkGray;
+            TxtPassword.BackColor = Color.FromArgb(46, 90, 32);
+            TxtPassword.BorderStyle = BorderStyle.None;
             TxtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TxtPassword.Location = new Point(74, 326);
             TxtPassword.Name = "TxtPassword";
             TxtPassword.PlaceholderText = "Digite sua senha";
-            TxtPassword.Size = new Size(214, 29);
+            TxtPassword.Size = new Size(214, 22);
             TxtPassword.TabIndex = 2;
             TxtPassword.UseSystemPasswordChar = true;
             TxtPassword.KeyDown += TxtPassword_KeyDown;
             // 
             // TxtUser
             // 
-            TxtUser.BackColor = Color.DarkGray;
-            TxtUser.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            TxtUser.BackColor = Color.FromArgb(46, 90, 32);
+            TxtUser.BorderStyle = BorderStyle.None;
+            TxtUser.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            TxtUser.ForeColor = Color.White;
             TxtUser.Location = new Point(74, 245);
             TxtUser.Name = "TxtUser";
             TxtUser.PlaceholderText = "Digite sua matrícula";
-            TxtUser.Size = new Size(214, 29);
+            TxtUser.Size = new Size(214, 22);
             TxtUser.TabIndex = 1;
             // 
             // label5
@@ -122,6 +128,7 @@
             label5.TabIndex = 8;
             label5.Text = "Esqueceu sua senha ?";
             toolTip1.SetToolTip(label5, "Esqueceu a senha ?");
+            label5.MouseClick += label5_MouseClick;
             // 
             // panel1
             // 
@@ -136,6 +143,8 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(BtnEntrar);
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label3);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(319, 743);
@@ -180,12 +189,31 @@
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.FromArgb(66, 110, 82);
+            label2.Location = new Point(72, 336);
+            label2.Name = "label2";
+            label2.Size = new Size(222, 15);
+            label2.TabIndex = 15;
+            label2.Text = "___________________________________________";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.FromArgb(66, 110, 82);
+            label3.Location = new Point(72, 255);
+            label3.Name = "label3";
+            label3.Size = new Size(222, 15);
+            label3.TabIndex = 16;
+            label3.Text = "___________________________________________";
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightGray;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = Color.FromArgb(46, 90, 32);
             ClientSize = new Size(343, 790);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -214,5 +242,7 @@
         private PictureBox pictureBox3;
         private Label label6;
         private ToolTip toolTip1;
+        private Label label2;
+        private Label label3;
     }
 }

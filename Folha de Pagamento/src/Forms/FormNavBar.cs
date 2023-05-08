@@ -122,7 +122,7 @@ namespace FOLHA_DE_PAGAMENTO_
                 {
                     control.Hide();
                 }
-                c_VerificarLogin.logout(FormAtivo, this);
+                c_VerificarLogin.logout(FormAtivo);
             }
         }
 

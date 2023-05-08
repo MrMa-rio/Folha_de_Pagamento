@@ -68,6 +68,7 @@
             toolTip1.SetToolTip(BtnMenu, "Menu");
             BtnMenu.UseVisualStyleBackColor = false;
             BtnMenu.Visible = false;
+            BtnMenu.VisibleChanged += BtnMenu_VisibleChanged;
             BtnMenu.MouseClick += BtnMenu_MouseClick;
             // 
             // BtnPerfil
@@ -98,6 +99,7 @@
             BtnSetting.TabIndex = 2;
             toolTip1.SetToolTip(BtnSetting, "Sobre os criadores e a empresa");
             BtnSetting.UseVisualStyleBackColor = true;
+            BtnSetting.MouseClick += BtnSetting_MouseClick;
             // 
             // BtnTrocarUsuario
             // 
@@ -117,6 +119,7 @@
             BtnTrocarUsuario.Text = "           Trocar de perfil";
             toolTip1.SetToolTip(BtnTrocarUsuario, "Trocar de perfil");
             BtnTrocarUsuario.UseVisualStyleBackColor = false;
+            BtnTrocarUsuario.MouseClick += BtnTrocarUsuario_MouseClick;
             // 
             // PnlPerfil
             // 
@@ -326,7 +329,6 @@
         #endregion
         private ToolTip toolTip1;
         internal Button BtnMenu;
-        private Panel PnlPerfil;
         private Label label6;
         private Label label5;
         private Label label4;
@@ -343,5 +345,6 @@
         private Label label8;
         private Label label7;
         private Button BtnTrocarUsuario;
+        internal Panel PnlPerfil;
     }
 }
