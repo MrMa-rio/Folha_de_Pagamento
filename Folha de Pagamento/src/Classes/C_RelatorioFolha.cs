@@ -104,8 +104,9 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formFolhaDetalhada.TxtTotaisDescontos.Text = (descINSS_ + descIRRF_).ToString("N2");
 
             formFolhaDetalhada.TxtIdFolha.Text = ListDate[0][0];
-            formFolhaDetalhada.TxtDataEmissao.Text = ListDate[0][1];
-
+            formFolhaDetalhada.TxtDataLancamento.Text = ListDate[0][1].Substring(0, 10);
+            formFolhaDetalhada.TxtDataEmissao.Text = DateTime.Today.ToString().Substring(0,10);
+            formFolhaDetalhada.TxtSalBaseMensal.Text = formFolhaDetalhada.TxtVencimentos.Text;
 
 
         }

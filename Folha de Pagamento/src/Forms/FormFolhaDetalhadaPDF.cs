@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FOLHA_DE_PAGAMENTO_.src.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
         public FormFolhaDetalhadaPDF()
         {
             InitializeComponent();
+        }
+        public FormFolhaDetalhadaPDF(FormFolhaDetalhadaPesq folhaDetalhadaPesq) : this()
+        {
+            C_PrintPDF c_PrintPDF = new C_PrintPDF();
+            c_PrintPDF.WriterFolhaDetalhada(this, folhaDetalhadaPesq);
+        }
+        public FormFolhaDetalhadaPDF(FormFolhaDetalhada folhaDetalhada) : this()
+        {
+            C_PrintPDF c_PrintPDF = new C_PrintPDF();
+            c_PrintPDF.WriterFolhaDetalhada(this, folhaDetalhada);
         }
     }
 }

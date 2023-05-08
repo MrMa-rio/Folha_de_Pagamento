@@ -208,7 +208,6 @@
             // BtnPrint
             // 
             BtnPrint.Cursor = Cursors.Hand;
-            BtnPrint.Enabled = false;
             BtnPrint.FlatAppearance.BorderSize = 0;
             BtnPrint.FlatStyle = FlatStyle.Flat;
             BtnPrint.Image = (Image)resources.GetObject("BtnPrint.Image");
@@ -218,6 +217,7 @@
             BtnPrint.TabIndex = 130;
             toolTip1.SetToolTip(BtnPrint, "Capturar tela em PDF");
             BtnPrint.UseVisualStyleBackColor = true;
+            BtnPrint.MouseClick += BtnPrint_MouseClick;
             // 
             // label2
             // 
@@ -320,7 +320,7 @@
             // PanelHolerite
             // 
             PanelHolerite.AutoScroll = true;
-            PanelHolerite.AutoScrollMargin = new Size(0, 90);
+            PanelHolerite.AutoScrollMargin = new Size(0, 10);
             PanelHolerite.AutoScrollMinSize = new Size(0, 90);
             PanelHolerite.BorderStyle = BorderStyle.FixedSingle;
             PanelHolerite.Controls.Add(panel19);
@@ -849,9 +849,9 @@
             label30.Location = new Point(21, 0);
             label30.MaximumSize = new Size(88, 19);
             label30.Name = "label30";
-            label30.Size = new Size(57, 19);
+            label30.Size = new Size(17, 19);
             label30.TabIndex = 75;
-            label30.Text = "000000";
+            label30.Text = "0";
             // 
             // label27
             // 
@@ -1236,7 +1236,7 @@
             TxtIDINSS.Name = "TxtIDINSS";
             TxtIDINSS.Size = new Size(33, 19);
             TxtIDINSS.TabIndex = 69;
-            TxtIDINSS.Text = "780";
+            TxtIDINSS.Text = "980";
             // 
             // label21
             // 

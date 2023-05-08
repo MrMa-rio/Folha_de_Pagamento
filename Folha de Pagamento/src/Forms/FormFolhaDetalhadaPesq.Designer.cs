@@ -216,7 +216,6 @@
             // BtnPrint
             // 
             BtnPrint.Cursor = Cursors.Hand;
-            BtnPrint.Enabled = false;
             BtnPrint.FlatAppearance.BorderSize = 0;
             BtnPrint.FlatStyle = FlatStyle.Flat;
             BtnPrint.Image = (Image)resources.GetObject("BtnPrint.Image");
@@ -226,6 +225,7 @@
             BtnPrint.TabIndex = 120;
             toolTip1.SetToolTip(BtnPrint, "Capturar tela em PDF");
             BtnPrint.UseVisualStyleBackColor = true;
+            BtnPrint.MouseClick += BtnPrint_MouseClick;
             // 
             // label46
             // 
@@ -366,7 +366,7 @@
             // 
             TxtDataLancamento.AutoSize = true;
             TxtDataLancamento.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataLancamento.Location = new Point(505, 25);
+            TxtDataLancamento.Location = new Point(695, 22);
             TxtDataLancamento.Name = "TxtDataLancamento";
             TxtDataLancamento.Size = new Size(0, 19);
             TxtDataLancamento.TabIndex = 84;
@@ -423,7 +423,7 @@
             // 
             TxtDataEmissao.AutoSize = true;
             TxtDataEmissao.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtDataEmissao.Location = new Point(707, 25);
+            TxtDataEmissao.Location = new Point(484, 25);
             TxtDataEmissao.MaximumSize = new Size(85, 19);
             TxtDataEmissao.Name = "TxtDataEmissao";
             TxtDataEmissao.Size = new Size(0, 19);
@@ -942,9 +942,9 @@
             label36.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label36.Location = new Point(144, 90);
             label36.Name = "label36";
-            label36.Size = new Size(25, 19);
+            label36.Size = new Size(20, 19);
             label36.TabIndex = 35;
-            label36.Text = "R$";
+            label36.Text = "%";
             // 
             // TxtSalarioBaseIRRF
             // 
@@ -1148,9 +1148,9 @@
             label35.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label35.Location = new Point(146, 90);
             label35.Name = "label35";
-            label35.Size = new Size(25, 19);
+            label35.Size = new Size(20, 19);
             label35.TabIndex = 30;
-            label35.Text = "R$";
+            label35.Text = "%";
             // 
             // label34
             // 
@@ -1458,7 +1458,7 @@
         private Label label4;
         private Label label6;
         private Label label7;
-        private Label TxtDataLancamento;
         private Label label60;
+        internal Label TxtDataLancamento;
     }
 }

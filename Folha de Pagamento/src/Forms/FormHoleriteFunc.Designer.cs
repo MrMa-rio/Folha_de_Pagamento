@@ -203,7 +203,6 @@
             // button1
             // 
             button1.Cursor = Cursors.Hand;
-            button1.Enabled = false;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
@@ -213,6 +212,7 @@
             button1.TabIndex = 131;
             toolTip1.SetToolTip(button1, "Capturar tela em PDF");
             button1.UseVisualStyleBackColor = true;
+            button1.MouseClick += button1_MouseClick;
             // 
             // label2
             // 

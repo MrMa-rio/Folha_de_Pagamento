@@ -52,5 +52,14 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
                 this.Close();
             }
         }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            C_PrintPDF c_PrintPDF = new C_PrintPDF();
+            FormHoleritePDF formHoleritePDF = new FormHoleritePDF(this);
+            formHoleritePDF.Show();
+            c_PrintPDF.printPdf(formHoleritePDF.PanelHolerite);
+            formHoleritePDF.Close();
+        }
     }
 }
