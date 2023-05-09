@@ -166,6 +166,7 @@
             PnlAlteraCargo.Name = "PnlAlteraCargo";
             PnlAlteraCargo.Size = new Size(450, 360);
             PnlAlteraCargo.TabIndex = 62;
+            PnlAlteraCargo.MouseClick += AllForms_MouseClick;
             // 
             // TxtAlterarSalario
             // 
@@ -176,8 +177,8 @@
             TxtAlterarSalario.Name = "TxtAlterarSalario";
             TxtAlterarSalario.Size = new Size(125, 31);
             TxtAlterarSalario.TabIndex = 6;
-            TxtAlterarSalario.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(TxtAlterarSalario, "Digite o novo salário");
+            TxtAlterarSalario.KeyPress += All_KeyPress;
             // 
             // CbCargo
             // 
@@ -259,8 +260,8 @@
             TxtAlterarCargo.PlaceholderText = "Selecionar o cargo acima";
             TxtAlterarCargo.Size = new Size(212, 31);
             TxtAlterarCargo.TabIndex = 5;
-            TxtAlterarCargo.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(TxtAlterarCargo, "Digite o nome do cargo");
+            TxtAlterarCargo.KeyPress += All_KeyPress;
             // 
             // label7
             // 
@@ -336,8 +337,8 @@
             TxtSalarioBase.PlaceholderText = "Digitar valor";
             TxtSalarioBase.Size = new Size(125, 31);
             TxtSalarioBase.TabIndex = 1;
-            TxtSalarioBase.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(TxtSalarioBase, "Digitar valor do salário");
+            TxtSalarioBase.KeyPress += All_KeyPress;
             // 
             // label4
             // 
@@ -385,8 +386,8 @@
             TxtCargo.PlaceholderText = "Digitar o cargo";
             TxtCargo.Size = new Size(219, 31);
             TxtCargo.TabIndex = 0;
-            TxtCargo.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(TxtCargo, "Digitar o cargo");
+            TxtCargo.KeyPress += All_KeyPress;
             // 
             // LbNomeCompleto
             // 

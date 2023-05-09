@@ -29,7 +29,9 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                                     ComboBox CbCargo, 
                                     MaskedTextBox MatriculaFuncionario,
                                     Button BtnEditar,
-                                    Panel PanelTarget) 
+                                    Panel PanelTarget,
+                                    Button BtnCracha
+                                    ) 
         {
             string[] ResultFuncionario;
             
@@ -55,6 +57,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                     CbDepartamento.Text = c_HandleCargoSalario.getIdDepartamento( ResultFuncionario[14] );
                     CbCargo.Text = c_HandleCargoSalario.getIdCargo( ResultFuncionario[15] );
                     BtnEditar.Enabled = true;
+                    BtnCracha.Enabled = true;
+
                     if(TxtCpf.Text.Length == 11)
                     {
                         return true;

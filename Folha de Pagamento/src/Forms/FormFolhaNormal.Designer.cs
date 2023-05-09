@@ -199,7 +199,6 @@
             BtnImprimir.TabIndex = 120;
             toolTip1.SetToolTip(BtnImprimir, "Imprimir folha");
             BtnImprimir.UseVisualStyleBackColor = true;
-            BtnImprimir.MouseClick += BtnImprimir_MouseClick;
             // 
             // BtnConfirmar
             // 
@@ -228,6 +227,7 @@
             // CbAno
             // 
             CbAno.BackColor = Color.DarkGray;
+            CbAno.DropDownStyle = ComboBoxStyle.DropDownList;
             CbAno.DropDownWidth = 185;
             CbAno.FlatStyle = FlatStyle.Flat;
             CbAno.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
@@ -239,6 +239,7 @@
             toolTip1.SetToolTip(CbAno, "Selecionar o ano");
             CbAno.DropDown += CbAno_DropDown;
             CbAno.TextChanged += CbAno_TextChanged;
+            CbAno.KeyPress += All_KeyPress1;
             // 
             // label47
             // 
@@ -264,6 +265,7 @@
             CbMes.TabIndex = 121;
             toolTip1.SetToolTip(CbMes, "Selecionar o mês");
             CbMes.TextChanged += CbMes_DropDown;
+            CbMes.KeyPress += All_KeyPress1;
             // 
             // PanelFolhaDetalhada
             // 

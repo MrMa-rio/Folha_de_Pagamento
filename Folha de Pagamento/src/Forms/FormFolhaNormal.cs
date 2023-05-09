@@ -31,16 +31,11 @@ namespace FOLHA_DE_PAGAMENTO_
             navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
         }
 
-        private void BtnImprimir_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void CbAno_DropDown(object sender, EventArgs e)
         {
             C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
-
-            c_RelatorioFolha.getYearFolhaNormal(CbAno);
+            C_FolhaNormalPesq c_FolhaNormalPesq = new C_FolhaNormalPesq();
+            c_FolhaNormalPesq.getYearFolhaNormal(CbAno);
         }
 
         private void CbAno_TextChanged(object sender, EventArgs e)
@@ -74,8 +69,6 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 MessageBox.Show("Erro ao lançar Folha. Dados Duplicados!");
             }
-
-
         }
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
@@ -94,6 +87,13 @@ namespace FOLHA_DE_PAGAMENTO_
             formPDF.Show();
             c_PrintPDF.printPdf(formPDF.PanelFolhaDetalhada);
             formPDF.Close();
+        }
+        private void All_KeyPress1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

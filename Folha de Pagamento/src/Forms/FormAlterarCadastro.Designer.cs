@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             Button BtnEditarFoto;
-            Button BtnCracha;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             BtnDeletarFunc = new Button();
             panel1 = new Panel();
@@ -39,6 +38,7 @@
             TxtMatricula = new MaskedTextBox();
             BtnConfirmar = new Button();
             PnlCtrlFunc = new Panel();
+            PctDataAdmissao = new PictureBox();
             TxtSalarioBase = new MaskedTextBox();
             PctData = new PictureBox();
             TxtNumRua = new NumericUpDown();
@@ -103,15 +103,16 @@
             btnPesquisar = new Button();
             LbMatricula = new Label();
             panel3 = new Panel();
+            BtnCracha = new Button();
             label12 = new Label();
             PctUser = new PictureBox();
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
             BtnEditarFoto = new Button();
-            BtnCracha = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PctDataAdmissao).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PctData).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumRua).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
@@ -133,20 +134,6 @@
             toolTip1.SetToolTip(BtnEditarFoto, "Trocar imagem perfil");
             BtnEditarFoto.UseVisualStyleBackColor = true;
             BtnEditarFoto.MouseClick += button1_MouseClick;
-            // 
-            // BtnCracha
-            // 
-            BtnCracha.BackgroundImage = (Image)resources.GetObject("BtnCracha.BackgroundImage");
-            BtnCracha.BackgroundImageLayout = ImageLayout.Stretch;
-            BtnCracha.Cursor = Cursors.Hand;
-            BtnCracha.FlatAppearance.BorderSize = 0;
-            BtnCracha.FlatStyle = FlatStyle.Flat;
-            BtnCracha.Location = new Point(116, 385);
-            BtnCracha.Name = "BtnCracha";
-            BtnCracha.Size = new Size(43, 43);
-            BtnCracha.TabIndex = 30;
-            toolTip1.SetToolTip(BtnCracha, "Criar crachá");
-            BtnCracha.UseVisualStyleBackColor = true;
             // 
             // BtnDeletarFunc
             // 
@@ -241,6 +228,7 @@
             PnlCtrlFunc.AutoScrollMargin = new Size(0, 10);
             PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
             PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
+            PnlCtrlFunc.Controls.Add(PctDataAdmissao);
             PnlCtrlFunc.Controls.Add(TxtSalarioBase);
             PnlCtrlFunc.Controls.Add(PctData);
             PnlCtrlFunc.Controls.Add(TxtNumRua);
@@ -307,6 +295,14 @@
             PnlCtrlFunc.TabIndex = 12;
             PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
+            // PctDataAdmissao
+            // 
+            PctDataAdmissao.Location = new Point(294, 679);
+            PctDataAdmissao.Name = "PctDataAdmissao";
+            PctDataAdmissao.Size = new Size(26, 26);
+            PctDataAdmissao.TabIndex = 301;
+            PctDataAdmissao.TabStop = false;
+            // 
             // TxtSalarioBase
             // 
             TxtSalarioBase.BackColor = Color.DarkGray;
@@ -320,6 +316,7 @@
             TxtSalarioBase.TabIndex = 300;
             TxtSalarioBase.TabStop = false;
             toolTip1.SetToolTip(TxtSalarioBase, "Este é o salário base");
+            TxtSalarioBase.KeyPress += All_KeyPress;
             // 
             // PctData
             // 
@@ -344,6 +341,7 @@
             TxtNumRua.Size = new Size(160, 31);
             TxtNumRua.TabIndex = 25;
             toolTip1.SetToolTip(TxtNumRua, "Informe o número");
+            TxtNumRua.KeyPress += All_KeyPress;
             // 
             // TxtTituloEleitor
             // 
@@ -360,6 +358,7 @@
             TxtTituloEleitor.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             toolTip1.SetToolTip(TxtTituloEleitor, "Digite o título");
             TxtTituloEleitor.MouseClick += TxtTituloEleitor_MouseClick;
+            TxtTituloEleitor.KeyPress += All_KeyPress;
             // 
             // LbTituloEleitor
             // 
@@ -386,6 +385,7 @@
             TxtReservista.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             toolTip1.SetToolTip(TxtReservista, "Digite o reservista");
             TxtReservista.MouseClick += TxtReservista_MouseClick;
+            TxtReservista.KeyPress += All_KeyPress;
             // 
             // LbReservista
             // 
@@ -412,6 +412,7 @@
             TxtNit.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             toolTip1.SetToolTip(TxtNit, "Digite o NIS");
             TxtNit.MouseClick += TxtNit_MouseClick;
+            TxtNit.KeyPress += All_KeyPress;
             // 
             // LbNit
             // 
@@ -437,6 +438,7 @@
             TxtCTrabalho.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             toolTip1.SetToolTip(TxtCTrabalho, "Digite a carteira de trabalho");
             TxtCTrabalho.MouseClick += TxtCTrabalho_MouseClick;
+            TxtCTrabalho.KeyPress += All_KeyPress;
             // 
             // LbCarteiraTrabalho
             // 
@@ -465,6 +467,7 @@
             CbDepartamento.Size = new Size(185, 31);
             CbDepartamento.TabIndex = 13;
             toolTip1.SetToolTip(CbDepartamento, "Escolha o departamento");
+            CbDepartamento.KeyPress += All_KeyPress;
             // 
             // label6
             // 
@@ -490,6 +493,7 @@
             TxtPis.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             toolTip1.SetToolTip(TxtPis, "Digite o PIS");
             TxtPis.MouseClick += TxtPis_MouseClick;
+            TxtPis.KeyPress += All_KeyPress;
             // 
             // label3
             // 
@@ -515,6 +519,7 @@
             TxtTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             toolTip1.SetToolTip(TxtTelefone, "Digite o telefone");
             TxtTelefone.MouseClick += TxtTelefone_MouseClick;
+            TxtTelefone.KeyPress += All_KeyPress;
             // 
             // TxtCep
             // 
@@ -531,6 +536,7 @@
             TxtCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             toolTip1.SetToolTip(TxtCep, "Digite o CEP");
             TxtCep.MouseClick += TxtCep_MouseClick;
+            TxtCep.KeyPress += All_KeyPress;
             TxtCep.Leave += TxtCep_Leave;
             // 
             // LbCep
@@ -557,6 +563,7 @@
             TxtRg.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             toolTip1.SetToolTip(TxtRg, "Digite o RG");
             TxtRg.MouseClick += TxtRg_MouseClick;
+            TxtRg.KeyPress += All_KeyPress;
             // 
             // LbRg
             // 
@@ -597,7 +604,7 @@
             BtnCalendario2.Enabled = false;
             BtnCalendario2.FlatAppearance.BorderSize = 0;
             BtnCalendario2.FlatStyle = FlatStyle.Flat;
-            BtnCalendario2.Location = new Point(294, 679);
+            BtnCalendario2.Location = new Point(326, 679);
             BtnCalendario2.Name = "BtnCalendario2";
             BtnCalendario2.Size = new Size(26, 26);
             BtnCalendario2.TabIndex = 101;
@@ -619,6 +626,7 @@
             TxtDataAdmissao.TabIndex = 18;
             toolTip1.SetToolTip(TxtDataAdmissao, "Digite a data");
             TxtDataAdmissao.MouseClick += TxtDataEmissao_MouseClick;
+            TxtDataAdmissao.KeyPress += All_KeyPress;
             // 
             // label26
             // 
@@ -683,6 +691,7 @@
             CbUF.Name = "CbUF";
             CbUF.Size = new Size(160, 31);
             CbUF.TabIndex = 23;
+            CbUF.KeyPress += All_KeyPress;
             // 
             // TxtCidade
             // 
@@ -696,6 +705,7 @@
             TxtCidade.Size = new Size(287, 31);
             TxtCidade.TabIndex = 24;
             toolTip1.SetToolTip(TxtCidade, "Digite a cidade");
+            TxtCidade.KeyPress += All_KeyPress;
             // 
             // label19
             // 
@@ -728,6 +738,7 @@
             TxtEmail.PlaceholderText = "digiteaqui@seuemail.com";
             TxtEmail.Size = new Size(287, 31);
             TxtEmail.TabIndex = 20;
+            TxtEmail.KeyPress += All_KeyPress1;
             // 
             // label20
             // 
@@ -760,6 +771,7 @@
             TxtComplemento.PlaceholderText = "Apto.200";
             TxtComplemento.Size = new Size(287, 31);
             TxtComplemento.TabIndex = 27;
+            TxtComplemento.KeyPress += All_KeyPress;
             // 
             // label21
             // 
@@ -783,6 +795,7 @@
             TxtBairro.Size = new Size(287, 31);
             TxtBairro.TabIndex = 26;
             toolTip1.SetToolTip(TxtBairro, "Digite o bairro");
+            TxtBairro.KeyPress += All_KeyPress;
             // 
             // label11
             // 
@@ -815,6 +828,7 @@
             TxtRua.PlaceholderText = "Digite a rua";
             TxtRua.Size = new Size(287, 31);
             TxtRua.TabIndex = 21;
+            TxtRua.KeyPress += All_KeyPress;
             // 
             // label9
             // 
@@ -868,6 +882,7 @@
             CbGenero.Size = new Size(160, 31);
             CbGenero.TabIndex = 8;
             toolTip1.SetToolTip(CbGenero, "Selecionar o gênero");
+            CbGenero.KeyPress += All_KeyPress;
             // 
             // LbGenero
             // 
@@ -947,6 +962,7 @@
             toolTip1.SetToolTip(TxtCalendario, "Digite a data");
             TxtCalendario.MouseClick += TxtCalendario_MouseClick;
             TxtCalendario.TextChanged += TxtCalendario_TextChanged;
+            TxtCalendario.KeyPress += All_KeyPress;
             // 
             // TxtCpf
             // 
@@ -963,6 +979,7 @@
             toolTip1.SetToolTip(TxtCpf, "Digite o CPF");
             TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
+            TxtCpf.KeyPress += All_KeyPress;
             // 
             // CbCargo
             // 
@@ -980,6 +997,7 @@
             toolTip1.SetToolTip(CbCargo, "Escolha o cargo");
             CbCargo.DropDown += CbCargo_DropDown;
             CbCargo.TextChanged += CbCargo_TextChanged;
+            CbCargo.KeyPress += All_KeyPress;
             // 
             // LbCargo
             // 
@@ -1008,6 +1026,7 @@
             CbEstadoCivil.Size = new Size(160, 31);
             CbEstadoCivil.TabIndex = 7;
             toolTip1.SetToolTip(CbEstadoCivil, "Selecionar o estado civil");
+            CbEstadoCivil.KeyPress += All_KeyPress;
             // 
             // LbEstadoCivil
             // 
@@ -1051,6 +1070,7 @@
             TxtNomeCompleto.Size = new Size(287, 31);
             TxtNomeCompleto.TabIndex = 4;
             toolTip1.SetToolTip(TxtNomeCompleto, "Digitar o nome");
+            TxtNomeCompleto.KeyPress += All_KeyPress;
             // 
             // LbNomeCompleto
             // 
@@ -1108,8 +1128,8 @@
             // 
             panel3.BackColor = Color.LightGray;
             panel3.BorderStyle = BorderStyle.FixedSingle;
-            panel3.Controls.Add(label12);
             panel3.Controls.Add(BtnCracha);
+            panel3.Controls.Add(label12);
             panel3.Controls.Add(BtnEditarFoto);
             panel3.Controls.Add(PctUser);
             panel3.Location = new Point(810, 50);
@@ -1117,6 +1137,21 @@
             panel3.Size = new Size(275, 526);
             panel3.TabIndex = 6;
             panel3.MouseClick += AllForms_MouseClick;
+            // 
+            // BtnCracha
+            // 
+            BtnCracha.Cursor = Cursors.Hand;
+            BtnCracha.Enabled = false;
+            BtnCracha.FlatAppearance.BorderSize = 0;
+            BtnCracha.FlatStyle = FlatStyle.Flat;
+            BtnCracha.Image = Properties.Resources.contact;
+            BtnCracha.Location = new Point(116, 385);
+            BtnCracha.Name = "BtnCracha";
+            BtnCracha.Size = new Size(43, 43);
+            BtnCracha.TabIndex = 62;
+            toolTip1.SetToolTip(BtnCracha, "Sair da Página");
+            BtnCracha.UseVisualStyleBackColor = true;
+            BtnCracha.MouseClick += BtnCracha_MouseClick;
             // 
             // label12
             // 
@@ -1182,6 +1217,7 @@
             panel1.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);
             PnlCtrlFunc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)PctDataAdmissao).EndInit();
             ((System.ComponentModel.ISupportInitialize)PctData).EndInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumRua).EndInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).EndInit();
@@ -1269,5 +1305,7 @@
         private Button BtnDeletarFunc;
         private Label label12;
         private Button BtnEditar;
+        private PictureBox PctDataAdmissao;
+        private Button BtnCracha;
     }
 }

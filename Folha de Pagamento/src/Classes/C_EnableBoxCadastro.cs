@@ -10,6 +10,9 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
     {
         public void setEnableAltCadastro(FormAlterarCadastro formAlterarCadastro )
         {
+
+           
+
             formAlterarCadastro.TxtNomeCompleto.Enabled = true;
             formAlterarCadastro.TxtCpf.Enabled = true;
             //formAlterarCadastro.TxtCalendario.Enabled = true;
@@ -43,6 +46,61 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formAlterarCadastro.CbCargo.Enabled = true;
             formAlterarCadastro.TxtDataAdmissao.Enabled = true;
             formAlterarCadastro.TxtCTrabalho.Enabled = true;
+        }
+        public void enable_disable(Panel panel)
+        {
+            
+            foreach (Control controle in panel.Controls)
+            {
+                if (controle is MaskedTextBox) // verifica se o controle é um TextBox
+                {
+                    if ( controle.Enabled == false )
+                    {
+                        ((MaskedTextBox)controle).Enabled = true;
+                    }
+                    else
+                    {
+                        ((MaskedTextBox)controle).Enabled = false;
+                    }
+                }
+
+                if (controle is TextBox) // verifica se o controle é um TextBox
+                {
+                    if (controle.Enabled == false)
+                    {
+                        ((TextBox)controle).Enabled = true;
+                    }
+                    else
+                    {
+                        ((TextBox)controle).Enabled = false;
+                    }
+                }
+
+                if (controle is Button) // verifica se o controle é um TextBox
+                {
+                    if (controle.Enabled == false)
+                    {
+                        ((Button)controle).Enabled = true;
+                    }
+                    else
+                    {
+                        ((Button)controle).Enabled = false;
+                    }
+                }
+
+                if (controle is ComboBox) // verifica se o controle é um TextBox
+                {
+                    if (controle.Enabled == false)
+                    {
+                        ((ComboBox)controle).Enabled = true;
+                    }
+                    else
+                    {
+                        ((ComboBox)controle).Enabled = false;
+                    }
+                }
+
+            }
         }
     }
 }

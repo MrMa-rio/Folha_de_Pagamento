@@ -34,6 +34,7 @@
             BtnRefresh = new Button();
             BtnLimpar = new Button();
             PnlCtrlFunc = new Panel();
+            PctDataAdmissao = new PictureBox();
             TxtSalarioBase = new MaskedTextBox();
             Pctdata = new PictureBox();
             BoxCalendario2 = new MonthCalendar();
@@ -115,6 +116,7 @@
             toolTip1 = new ToolTip(components);
             LbAlterarCadastro.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PctDataAdmissao).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Pctdata).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumRua).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).BeginInit();
@@ -175,6 +177,7 @@
             PnlCtrlFunc.AutoScrollMargin = new Size(0, 10);
             PnlCtrlFunc.AutoScrollMinSize = new Size(0, 90);
             PnlCtrlFunc.BorderStyle = BorderStyle.FixedSingle;
+            PnlCtrlFunc.Controls.Add(PctDataAdmissao);
             PnlCtrlFunc.Controls.Add(TxtSalarioBase);
             PnlCtrlFunc.Controls.Add(Pctdata);
             PnlCtrlFunc.Controls.Add(BoxCalendario2);
@@ -241,6 +244,15 @@
             PnlCtrlFunc.TabIndex = 7;
             PnlCtrlFunc.MouseClick += AllForms_MouseClick;
             // 
+            // PctDataAdmissao
+            // 
+            PctDataAdmissao.BackgroundImageLayout = ImageLayout.Stretch;
+            PctDataAdmissao.Location = new Point(294, 700);
+            PctDataAdmissao.Name = "PctDataAdmissao";
+            PctDataAdmissao.Size = new Size(26, 26);
+            PctDataAdmissao.TabIndex = 125;
+            PctDataAdmissao.TabStop = false;
+            // 
             // TxtSalarioBase
             // 
             TxtSalarioBase.BackColor = Color.DarkGray;
@@ -252,8 +264,8 @@
             TxtSalarioBase.Size = new Size(165, 31);
             TxtSalarioBase.TabIndex = 13;
             TxtSalarioBase.TabStop = false;
-            TxtSalarioBase.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(TxtSalarioBase, "Este é o salário base");
+            TxtSalarioBase.KeyPress += All_KeyPress;
             // 
             // Pctdata
             // 
@@ -306,8 +318,8 @@
             CbDepartamento.Name = "CbDepartamento";
             CbDepartamento.Size = new Size(185, 31);
             CbDepartamento.TabIndex = 9;
-            CbDepartamento.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(CbDepartamento, "Selecionar o departamento");
+            CbDepartamento.KeyPress += All_KeyPress;
             // 
             // label6
             // 
@@ -501,7 +513,7 @@
             BtnCalendario2.Cursor = Cursors.Hand;
             BtnCalendario2.FlatAppearance.BorderSize = 0;
             BtnCalendario2.FlatStyle = FlatStyle.Flat;
-            BtnCalendario2.Location = new Point(294, 697);
+            BtnCalendario2.Location = new Point(324, 699);
             BtnCalendario2.Name = "BtnCalendario2";
             BtnCalendario2.Size = new Size(26, 26);
             BtnCalendario2.TabIndex = 101;
@@ -522,6 +534,7 @@
             TxtDataAdmissao.TabIndex = 14;
             toolTip1.SetToolTip(TxtDataAdmissao, "Digite a data de admissão");
             TxtDataAdmissao.MouseClick += TxtDataEmissao_MouseClick;
+            TxtDataAdmissao.TextChanged += TxtDataAdmissao_TextChanged;
             TxtDataAdmissao.KeyPress += All_KeyPress;
             // 
             // LbSalarioBase
@@ -607,8 +620,8 @@
             CbUF.Name = "CbUF";
             CbUF.Size = new Size(160, 31);
             CbUF.TabIndex = 18;
-            CbUF.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(CbUF, "Digite o UF");
+            CbUF.KeyPress += All_KeyPress;
             // 
             // TxtCidade
             // 
@@ -620,8 +633,8 @@
             TxtCidade.PlaceholderText = "Digite a cidade";
             TxtCidade.Size = new Size(287, 31);
             TxtCidade.TabIndex = 19;
-            TxtCidade.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(TxtCidade, "Digite a cidade");
+            TxtCidade.KeyPress += All_KeyPress;
             // 
             // LbCidade
             // 
@@ -653,7 +666,7 @@
             TextEmail.PlaceholderText = "Digite o e-mail";
             TextEmail.Size = new Size(287, 31);
             TextEmail.TabIndex = 16;
-            TextEmail.KeyPress += All_KeyPress;
+            TextEmail.KeyPress += All_KeyPress1;
             // 
             // LbEmail
             // 
@@ -685,8 +698,8 @@
             TxtComplemento.PlaceholderText = " Apto.200";
             TxtComplemento.Size = new Size(287, 31);
             TxtComplemento.TabIndex = 23;
-            TxtComplemento.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(TxtComplemento, "Digite um complemento");
+            TxtComplemento.KeyPress += All_KeyPress;
             // 
             // LbComplemento
             // 
@@ -708,8 +721,8 @@
             TxtBairro.PlaceholderText = "Digite o bairro";
             TxtBairro.Size = new Size(287, 31);
             TxtBairro.TabIndex = 22;
-            TxtBairro.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(TxtBairro, "Digite o bairro");
+            TxtBairro.KeyPress += All_KeyPress;
             // 
             // LbBairro
             // 
@@ -741,8 +754,8 @@
             TxtRua.PlaceholderText = "Digite a rua";
             TxtRua.Size = new Size(287, 31);
             TxtRua.TabIndex = 20;
-            TxtRua.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(TxtRua, "Digite a rua");
+            TxtRua.KeyPress += All_KeyPress;
             // 
             // LbRua
             // 
@@ -794,9 +807,8 @@
             CbGenero.Name = "CbGenero";
             CbGenero.Size = new Size(160, 31);
             CbGenero.TabIndex = 4;
-            toolTip1.SetToolTip(CbGenero, "Escolha o gênero");
-            CbGenero.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(CbGenero, "Selecionar o gênero");
+            CbGenero.KeyPress += All_KeyPress;
             // 
             // LbGenero
             // 
@@ -935,9 +947,8 @@
             CbEstadoCivil.Name = "CbEstadoCivil";
             CbEstadoCivil.Size = new Size(160, 31);
             CbEstadoCivil.TabIndex = 3;
-            CbEstadoCivil.KeyPress += All_KeyPress;
             toolTip1.SetToolTip(CbEstadoCivil, "Selecionar o estado civil");
-            
+            CbEstadoCivil.KeyPress += All_KeyPress;
             // 
             // LbEstadoCivil
             // 
@@ -1253,6 +1264,7 @@
             LbAlterarCadastro.PerformLayout();
             PnlCtrlFunc.ResumeLayout(false);
             PnlCtrlFunc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)PctDataAdmissao).EndInit();
             ((System.ComponentModel.ISupportInitialize)Pctdata).EndInit();
             ((System.ComponentModel.ISupportInitialize)TxtNumRua).EndInit();
             ((System.ComponentModel.ISupportInitialize)PctCpf).EndInit();
@@ -1347,5 +1359,6 @@
         private ToolTip toolTip1;
         private Button BtnRefresh;
         private MaskedTextBox TxtSalarioBase;
+        private PictureBox PctDataAdmissao;
     }
 }

@@ -24,6 +24,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private C_ShowDataUsers c_ShowDataUsers = new C_ShowDataUsers();
         private C_VerificadorCEP verificadorCEP = new C_VerificadorCEP();
         private C_ManiplaçaoData c_Manipula = new C_ManiplaçaoData();
+        private Form formCracha = null;
         private int NvlAcesso;
         string endereco = "";
         C_privateArea c_PrivateArea = new C_privateArea();
@@ -102,7 +103,7 @@ namespace FOLHA_DE_PAGAMENTO_
                 TxtRg, TxtCTrabalho, TxtNit, TxtPis,
                 TxtTituloEleitor, CbEstadoCivil,
                 TxtReservista, TxtDataAdmissao,
-                CbDepartamento, CbCargo, TxtMatricula, BtnEditar, PnlCtrlFunc
+                CbDepartamento, CbCargo, TxtMatricula, BtnEditar, PnlCtrlFunc, BtnCracha
                 );
             c_ShowDataUsers.setShowEndereco(TxtRua, TxtNumRua, TxtBairro, TxtComplemento, CbUF, TxtCidade, TxtCep, TxtMatricula);
             c_ShowDataUsers.setShowTelefone(TxtTelefone, TxtMatricula);
@@ -124,7 +125,8 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BtnEditar_MouseClick(object sender, MouseEventArgs e)
         {
             C_EnableBoxCadastro c_EnableBoxCadastro = new C_EnableBoxCadastro();
-            c_EnableBoxCadastro.setEnableAltCadastro(this);
+            //c_EnableBoxCadastro.setEnableAltCadastro(this);
+            c_EnableBoxCadastro.enable_disable(PnlCtrlFunc);
             BtnDeleteFunc.Enabled = false;
         }
         private void TxtRg_MouseClick(object sender, MouseEventArgs e)
@@ -152,7 +154,7 @@ namespace FOLHA_DE_PAGAMENTO_
                     TxtRg, TxtCTrabalho, TxtNit, TxtPis,
                     TxtTituloEleitor, CbEstadoCivil,
                     TxtReservista, TxtDataAdmissao,
-                    CbDepartamento, CbCargo, TxtMatricula, BtnEditar, PnlCtrlFunc
+                    CbDepartamento, CbCargo, TxtMatricula, BtnEditar, PnlCtrlFunc, BtnCracha
                     );
 
                 c_ShowDataUsers.setShowEndereco(TxtRua, TxtNumRua, TxtBairro, TxtComplemento, CbUF, TxtCidade, TxtCep, TxtMatricula);
@@ -231,7 +233,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
                 string departamento = c_HandleCargoSalario.setIdDepartamento(CbDepartamento.Text);
                 string cargo = c_HandleCargoSalario.setIdCargo(CbCargo.Text);
-                string NvlAcesso = c_HandleCargoSalario.setNvlAcesso(CbDepartamento.Text); // 
+                string NvlAcesso = c_HandleCargoSalario.setNvlAcesso(CbDepartamento.Text); /////////////////////////////////////////////////
                 string[] data = new string[] { TxtCpf.Text,
                     TxtNomeCompleto.Text, DataNascimento,
                     CbGenero.Text, TxtRg.Text,TxtCTrabalho.Text, TxtNit.Text,
@@ -298,11 +300,43 @@ namespace FOLHA_DE_PAGAMENTO_
                 verificadorCEP.LocalizarCEP(TxtCep.Text, CbUF, TxtCidade, TxtBairro, TxtRua, TxtCep);
             }
         }
-
         private void BtnDeleteFunc_MouseClick(object sender, MouseEventArgs e)
         {
             FormDesativarFunc formDesativarFunc = new FormDesativarFunc(this);
             formDesativarFunc.ShowDialog();
+        }
+        private void All_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+        private void All_KeyPress1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '@')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtDataAdmissao_TextChanged(object sender, EventArgs e)
+        {
+            //validacaoDataAdmissao = c_Manipula.setValidacaoDataAdmissao(TxtDataAdmissao, BoxCalendario2.TodayDate, PctDataAdmissao);
+        }
+
+        private void BtnCracha_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (formCracha == null)
+            {
+                formCracha = new FormCracha(TxtMatricula.Text);
+                formCracha.Show();
+            }
+            else
+            {
+                formCracha.Close();
+                formCracha = null;
+            }
         }
     }
 }

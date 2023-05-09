@@ -50,7 +50,7 @@
             // 
             PctFotoFunc.BackColor = Color.Transparent;
             PctFotoFunc.BackgroundImage = (Image)resources.GetObject("PctFotoFunc.BackgroundImage");
-            PctFotoFunc.BackgroundImageLayout = ImageLayout.Zoom;
+            PctFotoFunc.BackgroundImageLayout = ImageLayout.Stretch;
             PctFotoFunc.ErrorImage = null;
             PctFotoFunc.Location = new Point(72, 50);
             PctFotoFunc.Name = "PctFotoFunc";
@@ -233,8 +233,10 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(PctFotoFunc);
-            FormBorderStyle = FormBorderStyle.None;
+            MaximumSize = new Size(281, 410);
+            MinimumSize = new Size(281, 410);
             Name = "FormCracha";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormCracha";
             ((System.ComponentModel.ISupportInitialize)PctFotoFunc).EndInit();
             ResumeLayout(false);

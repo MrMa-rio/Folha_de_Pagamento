@@ -63,10 +63,58 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                 return false;
             }
         }
+        public bool handleDataAdmissao(string dataAdmissao, DateTime DataAtual)
+        {
+            string valor = dataAdmissao;
+
+            string formato = "dd/MM/yyyy";
+
+            DateTime data;//dataAdmissao
+            bool prevDateTime = DateTime.TryParseExact(valor, formato, CultureInfo.InvariantCulture, DateTimeStyles.None, out data);
+            if (prevDateTime)
+            {
+                TimeSpan diferenca = data - DateTime.Today;
+                if ((DateTime.Today.Year != data.Year) || data.Month != DateTime.Today.Month || diferenca.TotalDays > 5 || diferenca.TotalDays < -5)
+                {
+                    MessageBox.Show("Essa data está invalida!");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
         public bool setValidacaoData(MaskedTextBox DataNascimento, DateTime DayTime, PictureBox pictureBox)
         {
             bool Validacao;
             Validacao = convertDate(DataNascimento.Text, DayTime);
+            if (Validacao)
+            {
+                pictureBox.BackgroundImage = Properties.Resources.check__1_;
+            }
+            if (!Validacao)
+            {
+                pictureBox.BackgroundImage = Properties.Resources.x__1_;
+            }
+            if (DataNascimento.Text == "  /  /")
+            {
+                pictureBox.Visible = false;
+            }
+            else
+            {
+                pictureBox.Visible = true;
+            }
+            return Validacao;
+        }
+        public bool setValidacaoDataAdmissao(MaskedTextBox DataNascimento, DateTime DayTime, PictureBox pictureBox)
+        {
+            bool Validacao;
+            Validacao = handleDataAdmissao(DataNascimento.Text, DayTime);
             if (Validacao)
             {
                 pictureBox.BackgroundImage = Properties.Resources.check__1_;

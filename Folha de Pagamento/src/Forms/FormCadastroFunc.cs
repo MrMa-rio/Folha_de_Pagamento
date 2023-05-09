@@ -22,6 +22,7 @@ namespace FOLHA_DE_PAGAMENTO_
         private C_VerificadorCEP c_verificadorCEP = new C_VerificadorCEP();
         private bool ValidadorCPF;
         private bool ValidacaoDate;
+        private bool ValidacaoDataAdmissao;
         private string endereco = "";
         private string matricula;
         public FormCadastroFunc(FormNavBar NavBar)
@@ -106,7 +107,7 @@ namespace FOLHA_DE_PAGAMENTO_
                 departamento, cargo, DataAdmissao,
                 TxtReservista.Text, ValidadorCPF.ToString(),
                 CbEstadoCivil.Text, CbGenero.Text,
-                TxtCpf.Text, TxtRg.Text, CbCargo.Text,TxtCTrabalho.Text,ValidacaoDate.ToString()
+                TxtCpf.Text, TxtRg.Text, CbCargo.Text,TxtCTrabalho.Text,ValidacaoDate.ToString(), ValidacaoDataAdmissao.ToString()
             };
 
             string[] dataCadastroAdicional = new string[] { TxtRua.Text, TxtNumRua.Value.ToString(),
@@ -227,10 +228,23 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void All_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
             {
-                e.Handled = true; // Bloqueia o caractere
+                e.Handled = true;
             }
+        }
+
+        private void All_KeyPress1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '@')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtDataAdmissao_TextChanged(object sender, EventArgs e)
+        {
+            ValidacaoDataAdmissao = c_InvertendoData.setValidacaoDataAdmissao(TxtDataAdmissao, BoxCalendario2.TodayDate, PctDataAdmissao);
         }
     }
 }

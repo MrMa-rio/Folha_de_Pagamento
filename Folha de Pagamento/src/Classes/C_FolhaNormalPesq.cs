@@ -17,7 +17,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         public void getYearFolhaNormal(ComboBox CbYear)
         {
             
-            string insertSql = $"SELECT DATA_Fechamento FROM bd_folha.tb_fechamentoemp";
+            string insertSql = $"SELECT DATA_Fechamento FROM bd_folha.tb_fechamentoemp order by DATA_Fechamento ASC";
             List<string[]> Results = c_SearchInDataBase.getListinDB(insertSql);
             foreach (string[] date in Results)
             {
@@ -40,7 +40,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         }
         public void getMonthFolhaNormal(ComboBox CbMonth, string year)
         {
-            string insertSql = $"SELECT DATA_Fechamento FROM bd_folha.tb_fechamentoemp where DATA_Fechamento LIKE '%{year}%'";
+            string insertSql = $"SELECT DATA_Fechamento FROM bd_folha.tb_fechamentoemp where DATA_Fechamento LIKE '%{year}%' order by DATA_Fechamento ASC";
             List<string[]> Results = c_SearchInDataBase.getListinDB(insertSql);
 
             foreach (string[] date in Results)
