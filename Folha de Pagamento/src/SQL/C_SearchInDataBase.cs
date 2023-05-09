@@ -208,26 +208,26 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             List<string[]> strings = new List<string[]>();
             if (getDatainTable(matricula).Length > 0)
             {
-                string insertSql = $"Select DATA_Emite from tb_fechamento where FK_Matricula = {matricula} order by DATA_Emite asc;";
+                string insertSql = $"Select DATA_Emite from tb_fechamento where FK_Matricula = {matricula} order by DATA_Emite asc";
                 return getListinDB(insertSql);
             }
             return strings;
         }
         public List<string[]> getListMonth(string matricula, string year)
         {
-            string insertSql = $"Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%{year}%' AND FK_Matricula = {matricula} order by DATA_Emite asc;";
+            string insertSql = $"Select DATA_Emite from tb_fechamento where DATA_Emite LIKE '%{year}%' AND FK_Matricula = {matricula} order by DATA_Emite asc";
             return getListinDB(insertSql);
         }
 
         public List<string[]> getListDate()
         {
-            string insertSql = $"Select DATA_Emite from tb_fechamento ORDER BY DATA_Emite ASC ;";
+            string insertSql = $"Select DATA_Emite from tb_fechamento ORDER BY DATA_Emite ASC ";
             return getListinDB(insertSql); //retorna a coluna data
         }
 
         public List<string[]> getListMonth(string year)
         {
-            string insertSql = $"SELECT DATA_Emite FROM tb_fechamentoemp where DATA_Emite LIKE '%{year}%' ORDER BY DATA_Emite ASC";
+            string insertSql = $"SELECT DATA_Fechamento FROM tb_fechamentoemp where DATA_Fechamento LIKE '%{year}%' ORDER BY DATA_Fechamento ASC";
             return getListinDB(insertSql); //retorna coluna data atraves do parametro ano
         }
         public List<string[]> getRowMajor(string year, string month, string matricula)
