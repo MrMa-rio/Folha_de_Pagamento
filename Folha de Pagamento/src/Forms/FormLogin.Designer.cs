@@ -102,6 +102,7 @@
             TxtPassword.PlaceholderText = "Digite sua senha";
             TxtPassword.Size = new Size(214, 22);
             TxtPassword.TabIndex = 2;
+            toolTip1.SetToolTip(TxtPassword, "Digite sua senha");
             TxtPassword.UseSystemPasswordChar = true;
             TxtPassword.KeyDown += TxtPassword_KeyDown;
             // 
@@ -116,6 +117,7 @@
             TxtUser.PlaceholderText = "Digite sua matrícula";
             TxtUser.Size = new Size(214, 22);
             TxtUser.TabIndex = 1;
+            toolTip1.SetToolTip(TxtUser, "Digite seu usuário");
             // 
             // label5
             // 

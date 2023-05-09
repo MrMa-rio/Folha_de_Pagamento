@@ -121,6 +121,7 @@
             TxtPesquisarNomes.PlaceholderText = "Digite um nome";
             TxtPesquisarNomes.Size = new Size(290, 31);
             TxtPesquisarNomes.TabIndex = 63;
+            toolTip1.SetToolTip(TxtPesquisarNomes, "Digite um nome");
             TxtPesquisarNomes.TextChanged += TxtPesquisarNomes_TextChanged;
             // 
             // BtnPesquisarNomes

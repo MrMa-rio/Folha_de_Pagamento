@@ -169,7 +169,7 @@
             button1.Name = "button1";
             button1.Size = new Size(43, 43);
             button1.TabIndex = 131;
-            toolTip1.SetToolTip(button1, "Imprimir folha");
+            toolTip1.SetToolTip(button1, "Capturar tela em PDF");
             button1.UseVisualStyleBackColor = true;
             button1.MouseClick += button1_MouseClick;
             // 
@@ -236,6 +236,7 @@
             CbAno.Name = "CbAno";
             CbAno.Size = new Size(121, 31);
             CbAno.TabIndex = 124;
+            toolTip1.SetToolTip(CbAno, "Selecionar o ano");
             CbAno.DropDown += CbAno_DropDown;
             CbAno.TextChanged += CbAno_TextChanged;
             // 
@@ -261,6 +262,7 @@
             CbMes.Name = "CbMes";
             CbMes.Size = new Size(121, 31);
             CbMes.TabIndex = 121;
+            toolTip1.SetToolTip(CbMes, "Selecionar o mês");
             CbMes.TextChanged += CbMes_DropDown;
             // 
             // PanelFolhaDetalhada
