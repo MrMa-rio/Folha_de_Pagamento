@@ -41,8 +41,3 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         }
     }
 }
-
-//Esta ocorrendo um bug onde se existe uma matricula valida, ele esta liberando acesso à navBar
-//sabendo que isso nao pode ocorrer.
-//Escrever um metodo onde ele comece a impor niveis de acesso a cada parte dos menus.
-//melhore as estruturas dos niveis de login entre outros.

@@ -61,6 +61,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             holeritePDF.TxtDescTotal.Text = formHolerite.TxtDescTotal.Text;
 
             holeritePDF.TxtDataEmissao.Text = formHolerite.TxtDataEmissao.Text;
+            holeritePDF.TxtValorLiquido.Text = formHolerite.TxtValorLiquido.Text;
+
             holeritePDF.TxtIDHolerite.Text = formHolerite.TxtIDHolerite.Text;
             holeritePDF.TxtSalarioBase.Text = formHolerite.TxtSalarioBase.Text;
             holeritePDF.TxtBaseinss.Text = formHolerite.TxtBaseinss.Text;
@@ -216,32 +218,37 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             formNormalPDF.LbClt.Text = formFolhaNormal.LbClt.Text;
             formNormalPDF.LbAtivos.Text = formFolhaNormal.LbAtivos.Text;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public void WriterFolhaNormal(FormFolhaNormalPDF formNormalPDF, FormFolhaNormal formFolhaNormal)
         {
+            formNormalPDF.TxtTaxaINSS.Text = formFolhaNormal.TxtTaxaDescINSS.Text;
+            formNormalPDF.TxtINSSDesc.Text = formFolhaNormal.TxtDescINSS.Text;
+            formNormalPDF.TxtSalarioINSS.Text = formFolhaNormal.TxtSalarioBaseINSS.Text;
+            formNormalPDF.TxtINSSValor.Text = formFolhaNormal.TxtValorInss.Text;
+            formNormalPDF.TxtDescTotalINSS.Text = formFolhaNormal.TxtTotalInss.Text;
 
+            formNormalPDF.TxtTaxaDescIRRF.Text = formFolhaNormal.TxtTaxaDescIRRF.Text;
+            formNormalPDF.TxtDescIRRF.Text = formFolhaNormal.TxtDescIRRF.Text;
+            formNormalPDF.TxtSalarioBaseIRRF.Text = formFolhaNormal.TxtSalarioBaseIRRF.Text;
+            formNormalPDF.TxtValorIRRF.Text = formFolhaNormal.TxtValorIRRF.Text;
+            formNormalPDF.TxtTotalIRRF.Text = formFolhaNormal.TxtTotalIRRF.Text;
+
+            formNormalPDF.TxtTaxaFGTS.Text = formFolhaNormal.TxtTaxaDescFGTS.Text;
+            formNormalPDF.TxtSalarioBaseFGTS.Text = formFolhaNormal.TxtSalarioBaseFGTS.Text;
+            formNormalPDF.TxtValorFGTS.Text = formFolhaNormal.TxtValorFGTS.Text;
+            formNormalPDF.TxtTotalFGTS.Text = formFolhaNormal.TxtTotalFGTS.Text;
+
+            formNormalPDF.TxtMaiorRemuneracao.Text = formFolhaNormal.TxtMaiorRemuneracao.Text;
+            formNormalPDF.TxtSalarioLiqMensal.Text = formFolhaNormal.TxtSalarioLiqMensal.Text;
+            formNormalPDF.TxtDataLancamento.Text = formFolhaNormal.TxtDataEmissao.Text;
+            formNormalPDF.TxtDataEmissao.Text = formFolhaNormal.TxtDataEmissao.Text;
+
+            formNormalPDF.TxtID.Visible = false;
+            formNormalPDF.TxtVencimentos.Text = formFolhaNormal.TxtVencimentos.Text;
+            formNormalPDF.TxtTotaisDescontos.Text = formFolhaNormal.TxtTotaisDescontos.Text;
+            formNormalPDF.TxtSalarioLiquido.Text = formFolhaNormal.TxtSalarioLiquido.Text;
+
+            formNormalPDF.LbClt.Text = formFolhaNormal.TxtCLT.Text;
+            formNormalPDF.LbAtivos.Text = formFolhaNormal.TxtAtivo.Text;
         }
     }
 }

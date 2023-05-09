@@ -1,4 +1,6 @@
 ﻿using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.Forms;
+using FOLHA_DE_PAGAMENTO_.src.PDF;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,8 +33,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnImprimir_MouseClick(object sender, MouseEventArgs e)
         {
-            C_PrintPDF c_PrintPDF = new C_PrintPDF();
-            c_PrintPDF.printPdf(PanelFolhaDetalhada);
+           
         }
 
         private void CbAno_DropDown(object sender, EventArgs e)
@@ -63,7 +64,18 @@ namespace FOLHA_DE_PAGAMENTO_
         private void BtnConfirmar_MouseClick(object sender, MouseEventArgs e)
         {
             C_FolhaNormal c_FolhaNormal = new C_FolhaNormal();
-            c_FolhaNormal.setFolhaNormal(this);
+            C_RelatorioFolha c_RelatorioFolha = new C_RelatorioFolha();
+            if (c_RelatorioFolha.dadosDuplicadoFNormal(TxtDataEmissao.Text))
+            {
+                c_FolhaNormal.setFolhaNormal(this);
+                MessageBox.Show("Folha de Pagamento Detalhada lançada com Sucesso!!");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao lançar Folha. Dados Duplicados!");
+            }
+
+
         }
 
         private void button2_MouseClick(object sender, MouseEventArgs e)
@@ -73,6 +85,15 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 this.Close();
             }
+        }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormFolhaNormalPDF formPDF = new FormFolhaNormalPDF(this);
+            C_PrintPDF c_PrintPDF = new C_PrintPDF();
+            formPDF.Show();
+            c_PrintPDF.printPdf(formPDF.PanelFolhaDetalhada);
+            formPDF.Close();
         }
     }
 }

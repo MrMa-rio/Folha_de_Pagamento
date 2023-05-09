@@ -224,6 +224,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
 
             string month = c_ManiplaçaoData.getMonth(dataEmissao);
             string year = c_ManiplaçaoData.getYear(dataEmissao);
+            //'
             string insertSql = $"SELECT * FROM bd_folha.tb_fechamento where DATA_Emite LIKE '%{year}-{month}%' AND FK_Matricula = {matricula}";
             if(c_SearchInDataBase.getListinDB(insertSql).Count > 0)
             {
@@ -232,13 +233,13 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
 
             return true;
         }
-        public bool dadosDuplicadoFNormal(string idFolhaNormal, string dataEmissao)
+        public bool dadosDuplicadoFNormal(string dataEmissao)
         {
 
 
             string month = c_ManiplaçaoData.getMonth(dataEmissao);
             string year = c_ManiplaçaoData.getYear(dataEmissao);
-            string insertSql = $"SELECT * FROM bd_folha.tb_fechamento where DATA_Emite LIKE '%{year}-{month}%' AND ID_FechamentoEmpresa = {idFolhaNormal}";
+            string insertSql = $"SELECT * FROM bd_folha.tb_fechamentoemp where DATA_Fechamento LIKE '%{year}-{month}%' ";
             if (c_SearchInDataBase.getListinDB(insertSql).Count > 0)
             {
                 return false;

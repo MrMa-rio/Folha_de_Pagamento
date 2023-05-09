@@ -52,6 +52,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Servidor.GET
 
         public string setFotoNovoFuncionario(PictureBox User)
         {
+            
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             openFileDialog.InitialDirectory = @"C:\"; // Define o diretório inicial

@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaDetalhada));
             LbFolhaDetalhada = new Panel();
+            button2 = new Button();
             button1 = new Button();
             BtnImprimir = new Button();
             BtnConfirmar = new Button();
@@ -142,6 +143,7 @@
             // 
             LbFolhaDetalhada.AccessibleRole = AccessibleRole.None;
             LbFolhaDetalhada.BackColor = Color.LightGray;
+            LbFolhaDetalhada.Controls.Add(button2);
             LbFolhaDetalhada.Controls.Add(button1);
             LbFolhaDetalhada.Controls.Add(BtnImprimir);
             LbFolhaDetalhada.Controls.Add(BtnConfirmar);
@@ -156,6 +158,20 @@
             LbFolhaDetalhada.Size = new Size(1110, 630);
             LbFolhaDetalhada.TabIndex = 2;
             LbFolhaDetalhada.MouseClick += AllForms_MouseClick;
+            // 
+            // button2
+            // 
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = Properties.Resources.camera1;
+            button2.Location = new Point(1004, 581);
+            button2.Name = "button2";
+            button2.Size = new Size(43, 43);
+            button2.TabIndex = 121;
+            toolTip1.SetToolTip(button2, "Imprimir folha");
+            button2.UseVisualStyleBackColor = true;
+            button2.MouseClick += button2_MouseClick;
             // 
             // button1
             // 
@@ -178,7 +194,7 @@
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
-            BtnImprimir.Location = new Point(1004, 578);
+            BtnImprimir.Location = new Point(955, 581);
             BtnImprimir.Name = "BtnImprimir";
             BtnImprimir.Size = new Size(43, 43);
             BtnImprimir.TabIndex = 117;
@@ -191,7 +207,7 @@
             BtnConfirmar.FlatAppearance.BorderSize = 0;
             BtnConfirmar.FlatStyle = FlatStyle.Flat;
             BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(955, 578);
+            BtnConfirmar.Location = new Point(906, 581);
             BtnConfirmar.Name = "BtnConfirmar";
             BtnConfirmar.Size = new Size(43, 43);
             BtnConfirmar.TabIndex = 115;
@@ -1336,5 +1352,6 @@
         private Label label46;
         private Label label8;
         private Label label56;
+        private Button button2;
     }
 }

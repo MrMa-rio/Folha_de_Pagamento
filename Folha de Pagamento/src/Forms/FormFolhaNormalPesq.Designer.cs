@@ -112,7 +112,6 @@
             label38 = new Label();
             label18 = new Label();
             TxtDescTotalINSS = new TextBox();
-            label37 = new Label();
             TxtINSSValor = new TextBox();
             TxtTotalInss = new TextBox();
             TxtSalarioINSS = new TextBox();
@@ -405,6 +404,7 @@
             TxtVencimentos.BorderStyle = BorderStyle.None;
             TxtVencimentos.Location = new Point(145, 27);
             TxtVencimentos.Name = "TxtVencimentos";
+            TxtVencimentos.ReadOnly = true;
             TxtVencimentos.Size = new Size(100, 16);
             TxtVencimentos.TabIndex = 95;
             // 
@@ -414,6 +414,7 @@
             TxtSalarioLiquido.BorderStyle = BorderStyle.None;
             TxtSalarioLiquido.Location = new Point(715, 25);
             TxtSalarioLiquido.Name = "TxtSalarioLiquido";
+            TxtSalarioLiquido.ReadOnly = true;
             TxtSalarioLiquido.Size = new Size(100, 16);
             TxtSalarioLiquido.TabIndex = 98;
             // 
@@ -423,6 +424,7 @@
             TxtTotaisDescontos.BorderStyle = BorderStyle.None;
             TxtTotaisDescontos.Location = new Point(335, 25);
             TxtTotaisDescontos.Name = "TxtTotaisDescontos";
+            TxtTotaisDescontos.ReadOnly = true;
             TxtTotaisDescontos.Size = new Size(100, 16);
             TxtTotaisDescontos.TabIndex = 97;
             // 
@@ -498,6 +500,7 @@
             TxtDataEmissao.BorderStyle = BorderStyle.None;
             TxtDataEmissao.Location = new Point(696, 24);
             TxtDataEmissao.Name = "TxtDataEmissao";
+            TxtDataEmissao.ReadOnly = true;
             TxtDataEmissao.Size = new Size(100, 16);
             TxtDataEmissao.TabIndex = 104;
             // 
@@ -543,6 +546,7 @@
             TxtSalarioLiqMensal.BorderStyle = BorderStyle.None;
             TxtSalarioLiqMensal.Location = new Point(335, 24);
             TxtSalarioLiqMensal.Name = "TxtSalarioLiqMensal";
+            TxtSalarioLiqMensal.ReadOnly = true;
             TxtSalarioLiqMensal.Size = new Size(100, 16);
             TxtSalarioLiqMensal.TabIndex = 99;
             // 
@@ -552,6 +556,7 @@
             TxtMaiorRemuneracao.BorderStyle = BorderStyle.None;
             TxtMaiorRemuneracao.Location = new Point(145, 26);
             TxtMaiorRemuneracao.Name = "TxtMaiorRemuneracao";
+            TxtMaiorRemuneracao.ReadOnly = true;
             TxtMaiorRemuneracao.Size = new Size(100, 16);
             TxtMaiorRemuneracao.TabIndex = 97;
             // 
@@ -614,6 +619,7 @@
             TxtTaxaFGTS.BorderStyle = BorderStyle.None;
             TxtTaxaFGTS.Location = new Point(137, 121);
             TxtTaxaFGTS.Name = "TxtTaxaFGTS";
+            TxtTaxaFGTS.ReadOnly = true;
             TxtTaxaFGTS.Size = new Size(100, 16);
             TxtTaxaFGTS.TabIndex = 31;
             // 
@@ -699,6 +705,7 @@
             TxtTotalFGTS.BorderStyle = BorderStyle.None;
             TxtTotalFGTS.Location = new Point(137, 210);
             TxtTotalFGTS.Name = "TxtTotalFGTS";
+            TxtTotalFGTS.ReadOnly = true;
             TxtTotalFGTS.Size = new Size(100, 16);
             TxtTotalFGTS.TabIndex = 22;
             // 
@@ -718,6 +725,7 @@
             TxtValorFGTS.BorderStyle = BorderStyle.None;
             TxtValorFGTS.Location = new Point(137, 180);
             TxtValorFGTS.Name = "TxtValorFGTS";
+            TxtValorFGTS.ReadOnly = true;
             TxtValorFGTS.Size = new Size(100, 16);
             TxtValorFGTS.TabIndex = 21;
             // 
@@ -737,6 +745,7 @@
             TxtSalarioBaseFGTS.BorderStyle = BorderStyle.None;
             TxtSalarioBaseFGTS.Location = new Point(137, 150);
             TxtSalarioBaseFGTS.Name = "TxtSalarioBaseFGTS";
+            TxtSalarioBaseFGTS.ReadOnly = true;
             TxtSalarioBaseFGTS.Size = new Size(100, 16);
             TxtSalarioBaseFGTS.TabIndex = 20;
             // 
@@ -844,6 +853,7 @@
             TxtTotalIRRF.BorderStyle = BorderStyle.None;
             TxtTotalIRRF.Location = new Point(175, 213);
             TxtTotalIRRF.Name = "TxtTotalIRRF";
+            TxtTotalIRRF.ReadOnly = true;
             TxtTotalIRRF.Size = new Size(100, 16);
             TxtTotalIRRF.TabIndex = 23;
             // 
@@ -853,6 +863,7 @@
             TxtValorIRRF.BorderStyle = BorderStyle.None;
             TxtValorIRRF.Location = new Point(175, 183);
             TxtValorIRRF.Name = "TxtValorIRRF";
+            TxtValorIRRF.ReadOnly = true;
             TxtValorIRRF.Size = new Size(100, 16);
             TxtValorIRRF.TabIndex = 19;
             // 
@@ -872,6 +883,7 @@
             TxtSalarioBaseIRRF.BorderStyle = BorderStyle.None;
             TxtSalarioBaseIRRF.Location = new Point(175, 153);
             TxtSalarioBaseIRRF.Name = "TxtSalarioBaseIRRF";
+            TxtSalarioBaseIRRF.ReadOnly = true;
             TxtSalarioBaseIRRF.Size = new Size(100, 16);
             TxtSalarioBaseIRRF.TabIndex = 18;
             // 
@@ -891,6 +903,7 @@
             TxtDescIRRF.BorderStyle = BorderStyle.None;
             TxtDescIRRF.Location = new Point(175, 123);
             TxtDescIRRF.Name = "TxtDescIRRF";
+            TxtDescIRRF.ReadOnly = true;
             TxtDescIRRF.Size = new Size(100, 16);
             TxtDescIRRF.TabIndex = 17;
             // 
@@ -910,6 +923,7 @@
             TxtTaxaDescIRRF.BorderStyle = BorderStyle.None;
             TxtTaxaDescIRRF.Location = new Point(175, 93);
             TxtTaxaDescIRRF.Name = "TxtTaxaDescIRRF";
+            TxtTaxaDescIRRF.ReadOnly = true;
             TxtTaxaDescIRRF.Size = new Size(100, 16);
             TxtTaxaDescIRRF.TabIndex = 16;
             // 
@@ -952,7 +966,6 @@
             panelInss.Controls.Add(label38);
             panelInss.Controls.Add(label18);
             panelInss.Controls.Add(TxtDescTotalINSS);
-            panelInss.Controls.Add(label37);
             panelInss.Controls.Add(TxtINSSValor);
             panelInss.Controls.Add(TxtTotalInss);
             panelInss.Controls.Add(TxtSalarioINSS);
@@ -1012,7 +1025,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(146, 90);
+            label18.Location = new Point(148, 93);
             label18.Name = "label18";
             label18.Size = new Size(17, 15);
             label18.TabIndex = 25;
@@ -1022,26 +1035,19 @@
             // 
             TxtDescTotalINSS.BackColor = Color.LightGray;
             TxtDescTotalINSS.BorderStyle = BorderStyle.None;
-            TxtDescTotalINSS.Location = new Point(175, 210);
+            TxtDescTotalINSS.Location = new Point(175, 213);
             TxtDescTotalINSS.Name = "TxtDescTotalINSS";
+            TxtDescTotalINSS.ReadOnly = true;
             TxtDescTotalINSS.Size = new Size(100, 16);
             TxtDescTotalINSS.TabIndex = 24;
-            // 
-            // label37
-            // 
-            label37.AutoSize = true;
-            label37.Location = new Point(146, 93);
-            label37.Name = "label37";
-            label37.Size = new Size(20, 15);
-            label37.TabIndex = 25;
-            label37.Text = "R$";
             // 
             // TxtINSSValor
             // 
             TxtINSSValor.BackColor = Color.LightGray;
             TxtINSSValor.BorderStyle = BorderStyle.None;
-            TxtINSSValor.Location = new Point(175, 180);
+            TxtINSSValor.Location = new Point(175, 183);
             TxtINSSValor.Name = "TxtINSSValor";
+            TxtINSSValor.ReadOnly = true;
             TxtINSSValor.Size = new Size(100, 16);
             TxtINSSValor.TabIndex = 15;
             // 
@@ -1051,6 +1057,7 @@
             TxtTotalInss.BorderStyle = BorderStyle.None;
             TxtTotalInss.Location = new Point(175, 213);
             TxtTotalInss.Name = "TxtTotalInss";
+            TxtTotalInss.ReadOnly = true;
             TxtTotalInss.Size = new Size(100, 16);
             TxtTotalInss.TabIndex = 24;
             // 
@@ -1058,8 +1065,9 @@
             // 
             TxtSalarioINSS.BackColor = Color.LightGray;
             TxtSalarioINSS.BorderStyle = BorderStyle.None;
-            TxtSalarioINSS.Location = new Point(175, 150);
+            TxtSalarioINSS.Location = new Point(175, 153);
             TxtSalarioINSS.Name = "TxtSalarioINSS";
+            TxtSalarioINSS.ReadOnly = true;
             TxtSalarioINSS.Size = new Size(100, 16);
             TxtSalarioINSS.TabIndex = 14;
             // 
@@ -1069,6 +1077,7 @@
             TxtValorInss.BorderStyle = BorderStyle.None;
             TxtValorInss.Location = new Point(175, 183);
             TxtValorInss.Name = "TxtValorInss";
+            TxtValorInss.ReadOnly = true;
             TxtValorInss.Size = new Size(100, 16);
             TxtValorInss.TabIndex = 15;
             // 
@@ -1076,8 +1085,9 @@
             // 
             TxtINSSDesc.BackColor = Color.LightGray;
             TxtINSSDesc.BorderStyle = BorderStyle.None;
-            TxtINSSDesc.Location = new Point(175, 120);
+            TxtINSSDesc.Location = new Point(175, 122);
             TxtINSSDesc.Name = "TxtINSSDesc";
+            TxtINSSDesc.ReadOnly = true;
             TxtINSSDesc.Size = new Size(100, 16);
             TxtINSSDesc.TabIndex = 13;
             // 
@@ -1085,8 +1095,9 @@
             // 
             TxtSalarioBaseINSS.BackColor = Color.LightGray;
             TxtSalarioBaseINSS.BorderStyle = BorderStyle.None;
-            TxtSalarioBaseINSS.Location = new Point(175, 153);
+            TxtSalarioBaseINSS.Location = new Point(175, 152);
             TxtSalarioBaseINSS.Name = "TxtSalarioBaseINSS";
+            TxtSalarioBaseINSS.ReadOnly = true;
             TxtSalarioBaseINSS.Size = new Size(100, 16);
             TxtSalarioBaseINSS.TabIndex = 14;
             // 
@@ -1094,8 +1105,9 @@
             // 
             TxtTaxaINSS.BackColor = Color.LightGray;
             TxtTaxaINSS.BorderStyle = BorderStyle.None;
-            TxtTaxaINSS.Location = new Point(175, 90);
+            TxtTaxaINSS.Location = new Point(175, 93);
             TxtTaxaINSS.Name = "TxtTaxaINSS";
+            TxtTaxaINSS.ReadOnly = true;
             TxtTaxaINSS.Size = new Size(100, 16);
             TxtTaxaINSS.TabIndex = 12;
             // 
@@ -1105,6 +1117,7 @@
             TxtDescINSS.BorderStyle = BorderStyle.None;
             TxtDescINSS.Location = new Point(175, 123);
             TxtDescINSS.Name = "TxtDescINSS";
+            TxtDescINSS.ReadOnly = true;
             TxtDescINSS.Size = new Size(100, 16);
             TxtDescINSS.TabIndex = 13;
             // 
@@ -1114,6 +1127,7 @@
             TxtTaxaDescINSS.BorderStyle = BorderStyle.None;
             TxtTaxaDescINSS.Location = new Point(175, 93);
             TxtTaxaDescINSS.Name = "TxtTaxaDescINSS";
+            TxtTaxaDescINSS.ReadOnly = true;
             TxtTaxaDescINSS.Size = new Size(100, 16);
             TxtTaxaDescINSS.TabIndex = 12;
             // 
@@ -1349,7 +1363,6 @@
         private Label label40;
         private Label label39;
         private Label label38;
-        private Label label37;
         private Label label53;
         private Label label52;
         private Label label22;

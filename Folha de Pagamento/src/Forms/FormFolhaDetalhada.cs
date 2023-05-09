@@ -1,4 +1,5 @@
 ﻿using FOLHA_DE_PAGAMENTO_.src.Classes;
+using FOLHA_DE_PAGAMENTO_.src.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,7 +80,6 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 MessageBox.Show("Erro ao lançar Folha. Dados Duplicados!");
             }
-
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
@@ -89,6 +89,15 @@ namespace FOLHA_DE_PAGAMENTO_
             {
                 this.Close();
             }
+        }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormFolhaDetalhadaPDF formFolhaDetalhadaPDF = new FormFolhaDetalhadaPDF(this);
+            C_PrintPDF c_PrintPDF = new C_PrintPDF();
+            formFolhaDetalhadaPDF.Show();
+            c_PrintPDF.printPdf(formFolhaDetalhadaPDF.PanelFolhaDetalhada);
+            formFolhaDetalhadaPDF.Close();
         }
     }
 }
