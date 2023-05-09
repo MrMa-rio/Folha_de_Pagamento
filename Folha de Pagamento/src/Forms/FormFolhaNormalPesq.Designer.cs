@@ -31,8 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaNormalPesq));
             LbFolhaNormal = new Panel();
-            BtnConfirmar = new Button();
-            BtnEditar = new Button();
             button2 = new Button();
             BtnPrint = new Button();
             BtnImprimir = new Button();
@@ -155,8 +153,6 @@
             // 
             LbFolhaNormal.AccessibleRole = AccessibleRole.None;
             LbFolhaNormal.BackColor = Color.LightGray;
-            LbFolhaNormal.Controls.Add(BtnConfirmar);
-            LbFolhaNormal.Controls.Add(BtnEditar);
             LbFolhaNormal.Controls.Add(button2);
             LbFolhaNormal.Controls.Add(BtnPrint);
             LbFolhaNormal.Controls.Add(BtnImprimir);
@@ -171,32 +167,6 @@
             LbFolhaNormal.Name = "LbFolhaNormal";
             LbFolhaNormal.Size = new Size(1110, 630);
             LbFolhaNormal.TabIndex = 3;
-            // 
-            // BtnConfirmar
-            // 
-            BtnConfirmar.Cursor = Cursors.Hand;
-            BtnConfirmar.FlatAppearance.BorderSize = 0;
-            BtnConfirmar.FlatStyle = FlatStyle.Flat;
-            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(860, 578);
-            BtnConfirmar.Name = "BtnConfirmar";
-            BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 132;
-            toolTip1.SetToolTip(BtnConfirmar, "Gerar folha normal");
-            BtnConfirmar.UseVisualStyleBackColor = true;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Cursor = Cursors.Hand;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(909, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 131;
-            toolTip1.SetToolTip(BtnEditar, "Editar folha");
-            BtnEditar.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -1385,8 +1355,6 @@
         private Label label22;
         private Label label21;
         private Label label20;
-        private Button BtnConfirmar;
-        private Button BtnEditar;
         private Label label4;
         private Label label6;
         private Label label7;

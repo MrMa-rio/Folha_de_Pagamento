@@ -31,8 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaDetalhadaPesq));
             LbFolhaDetalhada = new Panel();
-            BtnConfirmar = new Button();
-            BtnEditar = new Button();
             button2 = new Button();
             BtnPrint = new Button();
             label46 = new Label();
@@ -153,8 +151,6 @@
             LbFolhaDetalhada.AccessibleRole = AccessibleRole.None;
             LbFolhaDetalhada.AutoScroll = true;
             LbFolhaDetalhada.BackColor = Color.LightGray;
-            LbFolhaDetalhada.Controls.Add(BtnConfirmar);
-            LbFolhaDetalhada.Controls.Add(BtnEditar);
             LbFolhaDetalhada.Controls.Add(button2);
             LbFolhaDetalhada.Controls.Add(BtnPrint);
             LbFolhaDetalhada.Controls.Add(label46);
@@ -172,32 +168,6 @@
             LbFolhaDetalhada.Name = "LbFolhaDetalhada";
             LbFolhaDetalhada.Size = new Size(1110, 630);
             LbFolhaDetalhada.TabIndex = 3;
-            // 
-            // BtnConfirmar
-            // 
-            BtnConfirmar.Cursor = Cursors.Hand;
-            BtnConfirmar.FlatAppearance.BorderSize = 0;
-            BtnConfirmar.FlatStyle = FlatStyle.Flat;
-            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(857, 578);
-            BtnConfirmar.Name = "BtnConfirmar";
-            BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 123;
-            toolTip1.SetToolTip(BtnConfirmar, "Gerar folha detalhada");
-            BtnConfirmar.UseVisualStyleBackColor = true;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Cursor = Cursors.Hand;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(906, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 122;
-            toolTip1.SetToolTip(BtnEditar, "Editar folha");
-            BtnEditar.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -1452,8 +1422,6 @@
         private Label label59;
         private Label label58;
         private Label label57;
-        private Button BtnConfirmar;
-        private Button BtnEditar;
         private Label label3;
         private Label label4;
         private Label label6;
