@@ -36,6 +36,7 @@
             TxtMatricula = new Label();
             TxtNomeCompleto = new Label();
             PnlInformacoesFunc = new Panel();
+            label13 = new Label();
             TxtCargo = new Label();
             label6 = new Label();
             TxtDataAdmissao = new MaskedTextBox();
@@ -47,7 +48,6 @@
             TxtCpf = new MaskedTextBox();
             label11 = new Label();
             BtnOK = new Button();
-            label13 = new Label();
             PnlInformacoesFunc.SuspendLayout();
             SuspendLayout();
             // 
@@ -148,6 +148,16 @@
             PnlInformacoesFunc.Size = new Size(436, 416);
             PnlInformacoesFunc.TabIndex = 10;
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Location = new Point(42, 360);
+            label13.Name = "label13";
+            label13.Size = new Size(347, 30);
+            label13.TabIndex = 21;
+            label13.Text = "Cadastro efetuado com sucesso!";
+            // 
             // TxtCargo
             // 
             TxtCargo.AutoSize = true;
@@ -227,7 +237,7 @@
             TxtRg.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             TxtRg.ForeColor = SystemColors.WindowText;
             TxtRg.Location = new Point(222, 155);
-            TxtRg.Mask = "00,000,000-0";
+            TxtRg.Mask = "00,000,000-A";
             TxtRg.Name = "TxtRg";
             TxtRg.ReadOnly = true;
             TxtRg.Size = new Size(118, 25);
@@ -274,16 +284,6 @@
             BtnOK.Text = "OK";
             BtnOK.UseVisualStyleBackColor = false;
             BtnOK.MouseClick += BtnOK_MouseClick;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(42, 360);
-            label13.Name = "label13";
-            label13.Size = new Size(347, 30);
-            label13.TabIndex = 21;
-            label13.Text = "Cadastro efetuado com sucesso!";
             // 
             // FormShowDadosCadastrais
             // 

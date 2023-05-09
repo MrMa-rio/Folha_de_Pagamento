@@ -55,5 +55,17 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
             c_PrintPDF.printPdf(formPDF.PanelFolhaDetalhada);
             formPDF.Close();
         }
+        private void AllForms_MouseClick(object sender, MouseEventArgs e)
+        {
+            navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
+
+        }
+        private void All_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloqueia o caractere
+            }
+        }
     }
 }

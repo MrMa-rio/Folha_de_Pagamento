@@ -10,6 +10,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
     {
         public string alterandoFormatos(string valor)
         {
+            valor = Convert.ToDouble(valor).ToString("N2");
             if(valor != "")
             {
                 if (valor[valor.Length - 3].ToString() == ".")

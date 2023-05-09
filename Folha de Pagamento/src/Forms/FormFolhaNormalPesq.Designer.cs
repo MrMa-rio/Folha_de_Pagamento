@@ -31,8 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaNormalPesq));
             LbFolhaNormal = new Panel();
-            BtnConfirmar = new Button();
-            BtnEditar = new Button();
             button2 = new Button();
             BtnPrint = new Button();
             BtnImprimir = new Button();
@@ -154,8 +152,6 @@
             // 
             LbFolhaNormal.AccessibleRole = AccessibleRole.None;
             LbFolhaNormal.BackColor = Color.LightGray;
-            LbFolhaNormal.Controls.Add(BtnConfirmar);
-            LbFolhaNormal.Controls.Add(BtnEditar);
             LbFolhaNormal.Controls.Add(button2);
             LbFolhaNormal.Controls.Add(BtnPrint);
             LbFolhaNormal.Controls.Add(BtnImprimir);
@@ -170,32 +166,7 @@
             LbFolhaNormal.Name = "LbFolhaNormal";
             LbFolhaNormal.Size = new Size(1110, 630);
             LbFolhaNormal.TabIndex = 3;
-            // 
-            // BtnConfirmar
-            // 
-            BtnConfirmar.Cursor = Cursors.Hand;
-            BtnConfirmar.FlatAppearance.BorderSize = 0;
-            BtnConfirmar.FlatStyle = FlatStyle.Flat;
-            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(860, 578);
-            BtnConfirmar.Name = "BtnConfirmar";
-            BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 132;
-            toolTip1.SetToolTip(BtnConfirmar, "Gerar folha normal");
-            BtnConfirmar.UseVisualStyleBackColor = true;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Cursor = Cursors.Hand;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(909, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 131;
-            toolTip1.SetToolTip(BtnEditar, "Editar folha");
-            BtnEditar.UseVisualStyleBackColor = true;
+            LbFolhaNormal.MouseClick += AllForms_MouseClick;
             // 
             // button2
             // 
@@ -228,7 +199,6 @@
             // BtnImprimir
             // 
             BtnImprimir.Cursor = Cursors.Hand;
-            BtnImprimir.Enabled = false;
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
@@ -262,6 +232,7 @@
             CbAno.TabIndex = 124;
             CbAno.DropDown += CbAno_DropDown;
             CbAno.TextChanged += CbAno_TextChanged;
+            CbAno.KeyPress += All_KeyPress;
             // 
             // label47
             // 
@@ -285,6 +256,7 @@
             CbMes.Size = new Size(121, 31);
             CbMes.TabIndex = 121;
             CbMes.TextChanged += CbMes_TextChanged;
+            CbMes.KeyPress += All_KeyPress;
             // 
             // PanelFolhaDetalhada
             // 
@@ -302,6 +274,7 @@
             PanelFolhaDetalhada.Name = "PanelFolhaDetalhada";
             PanelFolhaDetalhada.Size = new Size(980, 434);
             PanelFolhaDetalhada.TabIndex = 62;
+            PanelFolhaDetalhada.MouseClick += AllForms_MouseClick;
             // 
             // panel3
             // 
@@ -313,6 +286,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(956, 100);
             panel3.TabIndex = 29;
+            panel3.MouseClick += AllForms_MouseClick;
             // 
             // panel10
             // 
@@ -323,6 +297,7 @@
             panel10.Name = "panel10";
             panel10.Size = new Size(76, 50);
             panel10.TabIndex = 32;
+            panel10.MouseClick += AllForms_MouseClick;
             // 
             // label19
             // 
@@ -352,6 +327,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(51, 49);
             panel4.TabIndex = 29;
+            panel4.MouseClick += AllForms_MouseClick;
             // 
             // label23
             // 
@@ -400,6 +376,7 @@
             panel8.Name = "panel8";
             panel8.Size = new Size(956, 50);
             panel8.TabIndex = 79;
+            panel8.MouseClick += AllForms_MouseClick;
             // 
             // label53
             // 
@@ -523,6 +500,7 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(956, 50);
             panel7.TabIndex = 24;
+            panel7.MouseClick += AllForms_MouseClick;
             // 
             // TxtDataEmissao
             // 
@@ -642,6 +620,7 @@
             panelFgts.Name = "panelFgts";
             panelFgts.Size = new Size(315, 257);
             panelFgts.TabIndex = 19;
+            panelFgts.MouseClick += AllForms_MouseClick;
             // 
             // TxtTaxaFGTS
             // 
@@ -797,6 +776,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(956, 50);
             panel2.TabIndex = 18;
+            panel2.MouseClick += AllForms_MouseClick;
             // 
             // label2
             // 
@@ -831,6 +811,7 @@
             panelIrrf.Name = "panelIrrf";
             panelIrrf.Size = new Size(315, 257);
             panelIrrf.TabIndex = 10;
+            panelIrrf.MouseClick += AllForms_MouseClick;
             // 
             // label8
             // 
@@ -1015,6 +996,7 @@
             panelInss.Name = "panelInss";
             panelInss.Size = new Size(315, 257);
             panelInss.TabIndex = 9;
+            panelInss.MouseClick += AllForms_MouseClick;
             // 
             // label43
             // 
@@ -1232,6 +1214,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(955, 72);
             panel1.TabIndex = 6;
+            panel1.MouseClick += AllForms_MouseClick;
             // 
             // label10
             // 
@@ -1276,6 +1259,7 @@
             LbTitulo.Size = new Size(395, 41);
             LbTitulo.TabIndex = 50;
             LbTitulo.Text = "Pesquisar Folha Normal       ";
+            LbTitulo.MouseClick += AllForms_MouseClick;
             // 
             // label1
             // 
@@ -1299,6 +1283,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormFolhaNormalPesq";
             Text = "FormFolhaNormalPesq";
+            MouseClick += AllForms_MouseClick;
             LbFolhaNormal.ResumeLayout(false);
             LbFolhaNormal.PerformLayout();
             PanelFolhaDetalhada.ResumeLayout(false);
@@ -1398,8 +1383,6 @@
         private Label label22;
         private Label label21;
         private Label label20;
-        private Button BtnConfirmar;
-        private Button BtnEditar;
         private Label label4;
         private Label label6;
         private Label label7;

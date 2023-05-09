@@ -15,6 +15,7 @@ namespace FOLHA_DE_PAGAMENTO_
     {
         FormNavBar FormAtivo;
         C_CalculosFolha calculosFolha = new C_CalculosFolha();
+        C_FormNavBarShow navBarShow = new C_FormNavBarShow();
         public FormCalculoPagamento(FormNavBar navBar)
         {
             InitializeComponent();
@@ -39,33 +40,17 @@ namespace FOLHA_DE_PAGAMENTO_
             c_EraseBoxes.eraseTextBox(panel4);
 
         }
+        private void AllForms_MouseClick(object sender, MouseEventArgs e)
+        {
+            navBarShow.AnimationHide(FormAtivo, FormAtivo.Pnl2);
+
+        }
+        private void All_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloqueia o caractere
+            }
+        }
     }
 }
-
-/*
- * Criar a logica onde o programa ira se
- * comunicar com o banco e puxar tais informações
- * necessarias.
- * Organizar as tela que irao receber as informaçoes
- * Criar a logica dos calculos que independente do
- * valor do salario base, ele rode com precisão.
- * Criar uma logica onde apresente os dados de cada funcionario
- * e aparece o tempo de contribuição salário atual e os descontos
- * emissão do PDF
- 
- 
- 
- */
-
-
-/*
- Etapas para os descontos 
-
-Antes de descontar o IRRF teremos que calcular o salario bruto do funcionario
-Entao calcularemos quantos dias ele trabalhou, se entre esses dias teve feriado(caso sim, ver se ele trabalhou nesse dia, se sim, dobrar o valor desse dia)
-calcular as horas extras.
-Somando tudo isso, fazer os descontos se o funcionario tem dependentes
- 
- 
- */
-

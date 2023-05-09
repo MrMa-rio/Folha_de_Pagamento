@@ -252,6 +252,7 @@
             TxtSalarioBase.Size = new Size(165, 31);
             TxtSalarioBase.TabIndex = 13;
             TxtSalarioBase.TabStop = false;
+            TxtSalarioBase.KeyPress += All_KeyPress;
             // 
             // Pctdata
             // 
@@ -286,6 +287,7 @@
             TxtReservista.TabIndex = 7;
             TxtReservista.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtReservista.MouseClick += TxtReservista_MouseClick;
+            TxtReservista.KeyPress += All_KeyPress;
             // 
             // CbDepartamento
             // 
@@ -302,6 +304,7 @@
             CbDepartamento.Name = "CbDepartamento";
             CbDepartamento.Size = new Size(185, 31);
             CbDepartamento.TabIndex = 9;
+            CbDepartamento.KeyPress += All_KeyPress;
             // 
             // label6
             // 
@@ -337,6 +340,7 @@
             TxtTituloEleitor.TabIndex = 6;
             TxtTituloEleitor.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtTituloEleitor.MouseClick += TxtTituloEleitor_MouseClick;
+            TxtTituloEleitor.KeyPress += All_KeyPress;
             // 
             // TxtPis
             // 
@@ -377,6 +381,7 @@
             TxtNit.TabIndex = 11;
             TxtNit.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
             TxtNit.MouseClick += TxtNit_MouseClick;
+            TxtNit.KeyPress += All_KeyPress;
             // 
             // label3
             // 
@@ -505,6 +510,7 @@
             TxtDataAdmissao.Size = new Size(121, 31);
             TxtDataAdmissao.TabIndex = 14;
             TxtDataAdmissao.MouseClick += TxtDataEmissao_MouseClick;
+            TxtDataAdmissao.KeyPress += All_KeyPress;
             // 
             // LbSalarioBase
             // 
@@ -589,6 +595,7 @@
             CbUF.Name = "CbUF";
             CbUF.Size = new Size(160, 31);
             CbUF.TabIndex = 18;
+            CbUF.KeyPress += All_KeyPress;
             // 
             // TxtCidade
             // 
@@ -600,6 +607,7 @@
             TxtCidade.PlaceholderText = "Ribeirão Preto";
             TxtCidade.Size = new Size(287, 31);
             TxtCidade.TabIndex = 19;
+            TxtCidade.KeyPress += All_KeyPress;
             // 
             // LbCidade
             // 
@@ -631,6 +639,7 @@
             TextEmail.PlaceholderText = " XXXX@gmail.com";
             TextEmail.Size = new Size(287, 31);
             TextEmail.TabIndex = 16;
+            TextEmail.KeyPress += All_KeyPress;
             // 
             // LbEmail
             // 
@@ -662,6 +671,7 @@
             TxtComplemento.PlaceholderText = " Apto.200";
             TxtComplemento.Size = new Size(287, 31);
             TxtComplemento.TabIndex = 23;
+            TxtComplemento.KeyPress += All_KeyPress;
             // 
             // LbComplemento
             // 
@@ -683,6 +693,7 @@
             TxtBairro.PlaceholderText = " Jd.Paraná";
             TxtBairro.Size = new Size(287, 31);
             TxtBairro.TabIndex = 22;
+            TxtBairro.KeyPress += All_KeyPress;
             // 
             // LbBairro
             // 
@@ -714,6 +725,7 @@
             TxtRua.PlaceholderText = " Avenida São Paulo";
             TxtRua.Size = new Size(287, 31);
             TxtRua.TabIndex = 20;
+            TxtRua.KeyPress += All_KeyPress;
             // 
             // LbRua
             // 
@@ -766,6 +778,7 @@
             CbGenero.Size = new Size(160, 31);
             CbGenero.TabIndex = 4;
             toolTip1.SetToolTip(CbGenero, "Escolha o gênero");
+            CbGenero.KeyPress += All_KeyPress;
             // 
             // LbGenero
             // 
@@ -844,6 +857,7 @@
             toolTip1.SetToolTip(TxtDataNascimento, "Digitar a data");
             TxtDataNascimento.MouseClick += TxtDataNascimento_MouseClick;
             TxtDataNascimento.TextChanged += TxtDataNascimento_TextChanged;
+            TxtDataNascimento.KeyPress += All_KeyPress;
             // 
             // TxtCpf
             // 
@@ -874,6 +888,7 @@
             CbCargo.TabIndex = 8;
             CbCargo.DropDown += CbCargo_DropDown;
             CbCargo.TextChanged += CbCargo_DropDown;
+            CbCargo.KeyPress += All_KeyPress;
             CbCargo.Leave += CbCargo_Leave;
             // 
             // LbCargo
@@ -902,6 +917,7 @@
             CbEstadoCivil.Size = new Size(160, 31);
             CbEstadoCivil.TabIndex = 3;
             toolTip1.SetToolTip(CbEstadoCivil, "Escolha o estado civil");
+            CbEstadoCivil.KeyPress += All_KeyPress;
             // 
             // LbEstadoCivil
             // 
@@ -945,6 +961,7 @@
             TxtNomeCompleto.TabIndex = 0;
             toolTip1.SetToolTip(TxtNomeCompleto, "Digite o nome");
             TxtNomeCompleto.TextChanged += TxtNomeCompleto_TextChanged;
+            TxtNomeCompleto.KeyPress += All_KeyPress;
             // 
             // LbNomeCompleto
             // 

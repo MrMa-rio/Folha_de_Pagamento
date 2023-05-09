@@ -90,6 +90,7 @@
             toolTip1.SetToolTip(TxtPesquisarCargo, "Selecione um cargo");
             TxtPesquisarCargo.DropDown += TxtPesquisarCargo_DropDown;
             TxtPesquisarCargo.TextChanged += TxtPesquisarCargo_TextChanged;
+            TxtPesquisarCargo.KeyPress += All_KeyPress;
             // 
             // label3
             // 
@@ -122,6 +123,7 @@
             TxtPesquisarNomes.Size = new Size(290, 31);
             TxtPesquisarNomes.TabIndex = 63;
             TxtPesquisarNomes.TextChanged += TxtPesquisarNomes_TextChanged;
+            TxtPesquisarNomes.KeyPress += All_KeyPress;
             // 
             // BtnPesquisarNomes
             // 

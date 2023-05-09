@@ -102,7 +102,7 @@ namespace FOLHA_DE_PAGAMENTO_
                 TxtRg, TxtCTrabalho, TxtNit, TxtPis,
                 TxtTituloEleitor, CbEstadoCivil,
                 TxtReservista, TxtDataAdmissao,
-                CbDepartamento, CbCargo, TxtMatricula
+                CbDepartamento, CbCargo, TxtMatricula, BtnEditar, PnlCtrlFunc
                 );
             c_ShowDataUsers.setShowEndereco(TxtRua, TxtNumRua, TxtBairro, TxtComplemento, CbUF, TxtCidade, TxtCep, TxtMatricula);
             c_ShowDataUsers.setShowTelefone(TxtTelefone, TxtMatricula);
@@ -125,6 +125,7 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             C_EnableBoxCadastro c_EnableBoxCadastro = new C_EnableBoxCadastro();
             c_EnableBoxCadastro.setEnableAltCadastro(this);
+            BtnDeleteFunc.Enabled = false;
         }
         private void TxtRg_MouseClick(object sender, MouseEventArgs e)
         {
@@ -139,18 +140,19 @@ namespace FOLHA_DE_PAGAMENTO_
         private void TxtCep_MouseClick(object sender, MouseEventArgs e)
         {
             TxtCep.SelectAll();
+
         }
 
         private void TxtMatricula_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto,
+                bool Validacao = c_ShowDataUsers.setShowDataUser(TxtCpf, TxtNomeCompleto,
                     TxtCalendario, CbGenero,
                     TxtRg, TxtCTrabalho, TxtNit, TxtPis,
                     TxtTituloEleitor, CbEstadoCivil,
                     TxtReservista, TxtDataAdmissao,
-                    CbDepartamento, CbCargo, TxtMatricula
+                    CbDepartamento, CbCargo, TxtMatricula, BtnEditar, PnlCtrlFunc
                     );
 
                 c_ShowDataUsers.setShowEndereco(TxtRua, TxtNumRua, TxtBairro, TxtComplemento, CbUF, TxtCidade, TxtCep, TxtMatricula);
@@ -166,6 +168,11 @@ namespace FOLHA_DE_PAGAMENTO_
                 {
                     BtnConfirmar.Enabled = false;
                 }
+                if (Validacao)
+                {
+                    BtnDeleteFunc.Enabled = true;
+                }
+                else { BtnDeleteFunc.Enabled = false; }
             }
         }
 

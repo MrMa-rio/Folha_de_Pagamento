@@ -176,6 +176,7 @@
             TxtAlterarSalario.Name = "TxtAlterarSalario";
             TxtAlterarSalario.Size = new Size(125, 31);
             TxtAlterarSalario.TabIndex = 6;
+            TxtAlterarSalario.KeyPress += All_KeyPress;
             // 
             // CbCargo
             // 
@@ -189,6 +190,7 @@
             CbCargo.TabIndex = 4;
             CbCargo.DropDown += CbCargo_TextChanged;
             CbCargo.TextChanged += CbCargo_TextChanged;
+            CbCargo.KeyPress += All_KeyPress;
             // 
             // label8
             // 
@@ -255,6 +257,7 @@
             TxtAlterarCargo.PlaceholderText = "Selecionar o cargo acima";
             TxtAlterarCargo.Size = new Size(212, 31);
             TxtAlterarCargo.TabIndex = 5;
+            TxtAlterarCargo.KeyPress += All_KeyPress;
             // 
             // label7
             // 
@@ -330,6 +333,7 @@
             TxtSalarioBase.PlaceholderText = "Digitar valor";
             TxtSalarioBase.Size = new Size(125, 31);
             TxtSalarioBase.TabIndex = 1;
+            TxtSalarioBase.KeyPress += All_KeyPress;
             // 
             // label4
             // 
@@ -377,6 +381,7 @@
             TxtCargo.PlaceholderText = "Digitar o cargo";
             TxtCargo.Size = new Size(219, 31);
             TxtCargo.TabIndex = 0;
+            TxtCargo.KeyPress += All_KeyPress;
             // 
             // LbNomeCompleto
             // 

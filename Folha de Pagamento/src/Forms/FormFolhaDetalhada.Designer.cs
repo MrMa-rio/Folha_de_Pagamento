@@ -228,6 +228,7 @@
             TxtPesquisarMatricula.TabIndex = 72;
             TxtPesquisarMatricula.Click += TxtPesquisarMatricula_Click;
             TxtPesquisarMatricula.KeyDown += TxtPesquisarMatricula_KeyDown;
+            TxtPesquisarMatricula.KeyPress += All_KeyPress;
             // 
             // label20
             // 

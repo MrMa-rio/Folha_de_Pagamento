@@ -31,8 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFolhaDetalhadaPesq));
             LbFolhaDetalhada = new Panel();
-            BtnConfirmar = new Button();
-            BtnEditar = new Button();
             button2 = new Button();
             BtnPrint = new Button();
             label46 = new Label();
@@ -153,8 +151,6 @@
             LbFolhaDetalhada.AccessibleRole = AccessibleRole.None;
             LbFolhaDetalhada.AutoScroll = true;
             LbFolhaDetalhada.BackColor = Color.LightGray;
-            LbFolhaDetalhada.Controls.Add(BtnConfirmar);
-            LbFolhaDetalhada.Controls.Add(BtnEditar);
             LbFolhaDetalhada.Controls.Add(button2);
             LbFolhaDetalhada.Controls.Add(BtnPrint);
             LbFolhaDetalhada.Controls.Add(label46);
@@ -172,32 +168,7 @@
             LbFolhaDetalhada.Name = "LbFolhaDetalhada";
             LbFolhaDetalhada.Size = new Size(1110, 630);
             LbFolhaDetalhada.TabIndex = 3;
-            // 
-            // BtnConfirmar
-            // 
-            BtnConfirmar.Cursor = Cursors.Hand;
-            BtnConfirmar.FlatAppearance.BorderSize = 0;
-            BtnConfirmar.FlatStyle = FlatStyle.Flat;
-            BtnConfirmar.Image = (Image)resources.GetObject("BtnConfirmar.Image");
-            BtnConfirmar.Location = new Point(857, 578);
-            BtnConfirmar.Name = "BtnConfirmar";
-            BtnConfirmar.Size = new Size(43, 43);
-            BtnConfirmar.TabIndex = 123;
-            toolTip1.SetToolTip(BtnConfirmar, "Gerar folha detalhada");
-            BtnConfirmar.UseVisualStyleBackColor = true;
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.Cursor = Cursors.Hand;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(906, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 122;
-            toolTip1.SetToolTip(BtnEditar, "Editar folha");
-            BtnEditar.UseVisualStyleBackColor = true;
+            LbFolhaDetalhada.MouseClick += AllForms_MouseClick;
             // 
             // button2
             // 
@@ -250,11 +221,11 @@
             CbMonth.Size = new Size(121, 31);
             CbMonth.TabIndex = 118;
             CbMonth.TextChanged += CbMonth_TextChanged;
+            CbMonth.KeyPress += All_KeyPress;
             // 
             // BtnImprimir
             // 
             BtnImprimir.Cursor = Cursors.Hand;
-            BtnImprimir.Enabled = false;
             BtnImprimir.FlatAppearance.BorderSize = 0;
             BtnImprimir.FlatStyle = FlatStyle.Flat;
             BtnImprimir.Image = (Image)resources.GetObject("BtnImprimir.Image");
@@ -289,6 +260,7 @@
             CbYear.Size = new Size(121, 31);
             CbYear.TabIndex = 75;
             CbYear.TextChanged += CbYear_TextChanged;
+            CbYear.KeyPress += All_KeyPress;
             // 
             // TxtPesquisarMatricula
             // 
@@ -302,6 +274,7 @@
             TxtPesquisarMatricula.Size = new Size(116, 31);
             TxtPesquisarMatricula.TabIndex = 72;
             TxtPesquisarMatricula.KeyDown += TxtPesquisarMatricula_KeyDown;
+            TxtPesquisarMatricula.KeyPress += All_KeyPress;
             // 
             // label20
             // 
@@ -361,6 +334,7 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(956, 50);
             panel6.TabIndex = 23;
+            panel6.MouseClick += AllForms_MouseClick;
             // 
             // TxtDataLancamento
             // 
@@ -480,6 +454,7 @@
             panelFgts.Name = "panelFgts";
             panelFgts.Size = new Size(315, 257);
             panelFgts.TabIndex = 19;
+            panelFgts.MouseClick += AllForms_MouseClick;
             // 
             // label3
             // 
@@ -636,6 +611,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(956, 50);
             panel2.TabIndex = 18;
+            panel2.MouseClick += AllForms_MouseClick;
             // 
             // label2
             // 
@@ -768,6 +744,7 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 17;
+            panel19.MouseClick += AllForms_MouseClick;
             // 
             // label59
             // 
@@ -917,6 +894,7 @@
             panelIrrf.Name = "panelIrrf";
             panelIrrf.Size = new Size(315, 257);
             panelIrrf.TabIndex = 10;
+            panelIrrf.MouseClick += AllForms_MouseClick;
             // 
             // TxtTotalIRRF
             // 
@@ -1096,6 +1074,7 @@
             panelInss.Name = "panelInss";
             panelInss.Size = new Size(315, 257);
             panelInss.TabIndex = 9;
+            panelInss.MouseClick += AllForms_MouseClick;
             // 
             // TxtTotalInss
             // 
@@ -1263,6 +1242,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(955, 72);
             panel1.TabIndex = 6;
+            panel1.MouseClick += AllForms_MouseClick;
             // 
             // label10
             // 
@@ -1330,6 +1310,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormFolhaDetalhadaPesq";
             Text = "FormFolhaDetalhadaPesq";
+            MouseClick += AllForms_MouseClick;
             LbFolhaDetalhada.ResumeLayout(false);
             LbFolhaDetalhada.PerformLayout();
             PanelFolhaDetalhada.ResumeLayout(false);
@@ -1452,8 +1433,6 @@
         private Label label59;
         private Label label58;
         private Label label57;
-        private Button BtnConfirmar;
-        private Button BtnEditar;
         private Label label3;
         private Label label4;
         private Label label6;

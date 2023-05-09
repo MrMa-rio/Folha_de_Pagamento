@@ -117,6 +117,7 @@
             LbCalculoPagamento.Name = "LbCalculoPagamento";
             LbCalculoPagamento.Size = new Size(1110, 630);
             LbCalculoPagamento.TabIndex = 1;
+            LbCalculoPagamento.MouseClick += AllForms_MouseClick;
             // 
             // button3
             // 
@@ -174,6 +175,7 @@
             PanelCalculoPagamento.Name = "PanelCalculoPagamento";
             PanelCalculoPagamento.Size = new Size(980, 434);
             PanelCalculoPagamento.TabIndex = 7;
+            PanelCalculoPagamento.MouseClick += AllForms_MouseClick;
             // 
             // panel19
             // 
@@ -185,6 +187,7 @@
             panel19.Name = "panel19";
             panel19.Size = new Size(956, 50);
             panel19.TabIndex = 132;
+            panel19.MouseClick += AllForms_MouseClick;
             // 
             // label26
             // 
@@ -195,6 +198,7 @@
             label26.Size = new Size(330, 25);
             label26.TabIndex = 165;
             label26.Text = "do salário bruto pago ao trabalhador.";
+            label26.MouseClick += AllForms_MouseClick;
             // 
             // TxtFGTS
             // 
@@ -208,6 +212,7 @@
             TxtFGTS.Size = new Size(38, 31);
             TxtFGTS.TabIndex = 164;
             TxtFGTS.Text = "8%";
+            TxtFGTS.KeyPress += All_KeyPress;
             // 
             // label52
             // 
@@ -218,6 +223,7 @@
             label52.Size = new Size(414, 25);
             label52.TabIndex = 13;
             label52.Text = "Fundo de Garantia do Tempo de Serviço (FGTS)";
+            label52.MouseClick += AllForms_MouseClick;
             // 
             // panel5
             // 
@@ -256,6 +262,7 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(465, 327);
             panel5.TabIndex = 131;
+            panel5.MouseClick += AllForms_MouseClick;
             // 
             // TxtSalarioIrId5Max
             // 
@@ -269,6 +276,7 @@
             TxtSalarioIrId5Max.TabIndex = 196;
             TxtSalarioIrId5Max.Text = "999999";
             TxtSalarioIrId5Max.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId5Max.KeyPress += All_KeyPress;
             // 
             // TxtSalarioIrId4Max
             // 
@@ -282,6 +290,7 @@
             TxtSalarioIrId4Max.TabIndex = 195;
             TxtSalarioIrId4Max.Text = "999999";
             TxtSalarioIrId4Max.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId4Max.KeyPress += All_KeyPress;
             // 
             // TxtSalarioIrId3Max
             // 
@@ -295,6 +304,7 @@
             TxtSalarioIrId3Max.TabIndex = 194;
             TxtSalarioIrId3Max.Text = "999999";
             TxtSalarioIrId3Max.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId3Max.KeyPress += All_KeyPress;
             // 
             // TxtSalarioIrId2Max
             // 
@@ -308,6 +318,7 @@
             TxtSalarioIrId2Max.TabIndex = 193;
             TxtSalarioIrId2Max.Text = "999999";
             TxtSalarioIrId2Max.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId2Max.KeyPress += All_KeyPress;
             // 
             // TxtSalarioIrId1Max
             // 
@@ -321,6 +332,7 @@
             TxtSalarioIrId1Max.TabIndex = 192;
             TxtSalarioIrId1Max.Text = "999999";
             TxtSalarioIrId1Max.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId1Max.KeyPress += All_KeyPress;
             // 
             // TxtSalarioIrId5Min
             // 
@@ -334,6 +346,7 @@
             TxtSalarioIrId5Min.TabIndex = 191;
             TxtSalarioIrId5Min.Text = "999999";
             TxtSalarioIrId5Min.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId5Min.KeyPress += All_KeyPress;
             // 
             // TxtSalarioIrId4Min
             // 
@@ -347,6 +360,7 @@
             TxtSalarioIrId4Min.TabIndex = 190;
             TxtSalarioIrId4Min.Text = "999999";
             TxtSalarioIrId4Min.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId4Min.KeyPress += All_KeyPress;
             // 
             // TxtSalarioIrId3Min
             // 
@@ -360,6 +374,7 @@
             TxtSalarioIrId3Min.TabIndex = 189;
             TxtSalarioIrId3Min.Text = "999999";
             TxtSalarioIrId3Min.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId3Min.KeyPress += All_KeyPress;
             // 
             // TxtSalarioIrId2Min
             // 
@@ -373,6 +388,7 @@
             TxtSalarioIrId2Min.TabIndex = 188;
             TxtSalarioIrId2Min.Text = "999999";
             TxtSalarioIrId2Min.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId2Min.KeyPress += All_KeyPress;
             // 
             // TxtSalarioIrId1Min
             // 
@@ -386,6 +402,7 @@
             TxtSalarioIrId1Min.TabIndex = 187;
             TxtSalarioIrId1Min.Text = "999999";
             TxtSalarioIrId1Min.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtSalarioIrId1Min.KeyPress += All_KeyPress;
             // 
             // label9
             // 
@@ -449,6 +466,7 @@
             textBox16.Size = new Size(75, 31);
             textBox16.TabIndex = 139;
             textBox16.Text = "R$869,36";
+            textBox16.KeyPress += All_KeyPress;
             // 
             // textBox15
             // 
@@ -462,6 +480,7 @@
             textBox15.Size = new Size(75, 31);
             textBox15.TabIndex = 138;
             textBox15.Text = "R$636,13";
+            textBox15.KeyPress += All_KeyPress;
             // 
             // textBox14
             // 
@@ -475,6 +494,7 @@
             textBox14.Size = new Size(75, 31);
             textBox14.TabIndex = 137;
             textBox14.Text = "R$354,80";
+            textBox14.KeyPress += All_KeyPress;
             // 
             // textBox13
             // 
@@ -488,6 +508,7 @@
             textBox13.Size = new Size(75, 31);
             textBox13.TabIndex = 136;
             textBox13.Text = "R$142,80";
+            textBox13.KeyPress += All_KeyPress;
             // 
             // textBox12
             // 
@@ -501,6 +522,7 @@
             textBox12.Size = new Size(75, 31);
             textBox12.TabIndex = 135;
             textBox12.Text = "Isento";
+            textBox12.KeyPress += All_KeyPress;
             // 
             // TxtAliquotaIr5
             // 
@@ -515,6 +537,7 @@
             TxtAliquotaIr5.TabIndex = 134;
             TxtAliquotaIr5.Text = "27,50%";
             TxtAliquotaIr5.TextAlign = HorizontalAlignment.Center;
+            TxtAliquotaIr5.KeyPress += All_KeyPress;
             // 
             // TxtAliquotaIr4
             // 
@@ -529,6 +552,7 @@
             TxtAliquotaIr4.TabIndex = 133;
             TxtAliquotaIr4.Text = "22,50%";
             TxtAliquotaIr4.TextAlign = HorizontalAlignment.Center;
+            TxtAliquotaIr4.KeyPress += All_KeyPress;
             // 
             // TxtAliquotaIr3
             // 
@@ -543,6 +567,7 @@
             TxtAliquotaIr3.TabIndex = 132;
             TxtAliquotaIr3.Text = "15,00%";
             TxtAliquotaIr3.TextAlign = HorizontalAlignment.Center;
+            TxtAliquotaIr3.KeyPress += All_KeyPress;
             // 
             // TxtAliquotaIr2
             // 
@@ -557,6 +582,7 @@
             TxtAliquotaIr2.TabIndex = 131;
             TxtAliquotaIr2.Text = "7,50%";
             TxtAliquotaIr2.TextAlign = HorizontalAlignment.Center;
+            TxtAliquotaIr2.KeyPress += All_KeyPress;
             // 
             // TxtAliquotaIr1
             // 
@@ -571,6 +597,7 @@
             TxtAliquotaIr1.TabIndex = 130;
             TxtAliquotaIr1.Text = "Isento";
             TxtAliquotaIr1.TextAlign = HorizontalAlignment.Center;
+            TxtAliquotaIr1.KeyPress += All_KeyPress;
             // 
             // label2
             // 
@@ -649,6 +676,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(491, 327);
             panel4.TabIndex = 130;
+            panel4.MouseClick += AllForms_MouseClick;
             // 
             // TxtAliquota4
             // 
@@ -663,6 +691,7 @@
             TxtAliquota4.TabIndex = 196;
             TxtAliquota4.Text = "14%";
             TxtAliquota4.TextAlign = HorizontalAlignment.Center;
+            TxtAliquota4.KeyPress += All_KeyPress;
             // 
             // TxtAliquota3
             // 
@@ -677,6 +706,7 @@
             TxtAliquota3.TabIndex = 195;
             TxtAliquota3.Text = "12%";
             TxtAliquota3.TextAlign = HorizontalAlignment.Center;
+            TxtAliquota3.KeyPress += All_KeyPress;
             // 
             // TxtAliquota2
             // 
@@ -691,6 +721,7 @@
             TxtAliquota2.TabIndex = 194;
             TxtAliquota2.Text = "9%";
             TxtAliquota2.TextAlign = HorizontalAlignment.Center;
+            TxtAliquota2.KeyPress += All_KeyPress;
             // 
             // TxtAliquota1
             // 
@@ -705,6 +736,7 @@
             TxtAliquota1.TabIndex = 150;
             TxtAliquota1.Text = "7.5%";
             TxtAliquota1.TextAlign = HorizontalAlignment.Center;
+            TxtAliquota1.KeyPress += All_KeyPress;
             // 
             // TxtFxSalarioID4Max
             // 
@@ -717,6 +749,7 @@
             TxtFxSalarioID4Max.Size = new Size(100, 31);
             TxtFxSalarioID4Max.TabIndex = 193;
             TxtFxSalarioID4Max.Text = "999999";
+            TxtFxSalarioID4Max.KeyPress += All_KeyPress;
             // 
             // TxtFxSalarioID3Max
             // 
@@ -729,6 +762,7 @@
             TxtFxSalarioID3Max.Size = new Size(100, 31);
             TxtFxSalarioID3Max.TabIndex = 192;
             TxtFxSalarioID3Max.Text = "999999";
+            TxtFxSalarioID3Max.KeyPress += All_KeyPress;
             // 
             // TxtFxSalarioID2Max
             // 
@@ -741,6 +775,7 @@
             TxtFxSalarioID2Max.Size = new Size(100, 31);
             TxtFxSalarioID2Max.TabIndex = 191;
             TxtFxSalarioID2Max.Text = "999999";
+            TxtFxSalarioID2Max.KeyPress += All_KeyPress;
             // 
             // TxtFxSalarioID1Max
             // 
@@ -752,6 +787,7 @@
             TxtFxSalarioID1Max.ReadOnly = true;
             TxtFxSalarioID1Max.Size = new Size(100, 31);
             TxtFxSalarioID1Max.TabIndex = 190;
+            TxtFxSalarioID1Max.KeyPress += All_KeyPress;
             // 
             // TxtFxSalarioID4Min
             // 
@@ -764,6 +800,7 @@
             TxtFxSalarioID4Min.Size = new Size(100, 31);
             TxtFxSalarioID4Min.TabIndex = 189;
             TxtFxSalarioID4Min.Text = "999999";
+            TxtFxSalarioID4Min.KeyPress += All_KeyPress;
             // 
             // TxtFxSalarioID3Min
             // 
@@ -776,6 +813,7 @@
             TxtFxSalarioID3Min.Size = new Size(100, 31);
             TxtFxSalarioID3Min.TabIndex = 188;
             TxtFxSalarioID3Min.Text = "999999";
+            TxtFxSalarioID3Min.KeyPress += All_KeyPress;
             // 
             // TxtFxSalarioID2Min
             // 
@@ -788,6 +826,7 @@
             TxtFxSalarioID2Min.Size = new Size(100, 31);
             TxtFxSalarioID2Min.TabIndex = 187;
             TxtFxSalarioID2Min.Text = "999999";
+            TxtFxSalarioID2Min.KeyPress += All_KeyPress;
             // 
             // TxtFxSalarioID1Min
             // 
@@ -801,6 +840,7 @@
             TxtFxSalarioID1Min.TabIndex = 186;
             TxtFxSalarioID1Min.Text = "999999";
             TxtFxSalarioID1Min.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            TxtFxSalarioID1Min.KeyPress += All_KeyPress;
             // 
             // label12
             // 
@@ -921,6 +961,7 @@
             LbTitulo.Size = new Size(523, 41);
             LbTitulo.TabIndex = 50;
             LbTitulo.Text = "Impostos e Dados de Pagamentos     ";
+            LbTitulo.MouseClick += AllForms_MouseClick;
             // 
             // label1
             // 
@@ -944,6 +985,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormCalculoPagamento";
             Text = "FormCalculoPagamento";
+            MouseClick += AllForms_MouseClick;
             LbCalculoPagamento.ResumeLayout(false);
             LbCalculoPagamento.PerformLayout();
             PanelCalculoPagamento.ResumeLayout(false);

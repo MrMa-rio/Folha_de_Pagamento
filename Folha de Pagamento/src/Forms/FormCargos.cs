@@ -94,5 +94,12 @@ namespace FOLHA_DE_PAGAMENTO_
             C_handleCargoSalarioDepartamento c_HandleCargoSalarioDepartamento = new C_handleCargoSalarioDepartamento();
             c_HandleCargoSalarioDepartamento.deleteCargo(CbCargo);
         }
+        private void All_KeyPress(object sender, KeyPressEventArgs e )
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

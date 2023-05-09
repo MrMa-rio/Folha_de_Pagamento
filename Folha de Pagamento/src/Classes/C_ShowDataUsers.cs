@@ -12,6 +12,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
         C_SearchInDataBase searchInData = new C_SearchInDataBase();
         C_handleCargoSalarioDepartamento c_HandleCargoSalario = new C_handleCargoSalarioDepartamento();
         C_handleDataGener c_HandleDataGener = new C_handleDataGener();
+        C_HideAllBox c_HideAllBox = new C_HideAllBox();
         public bool setShowDataUser(MaskedTextBox TxtCpf, 
                                     TextBox TxtNomeCompleto, 
                                     MaskedTextBox TxtCalendario, 
@@ -26,35 +27,41 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                                     MaskedTextBox TxtDataAdmissao, 
                                     ComboBox CbDepartamento, 
                                     ComboBox CbCargo, 
-                                    MaskedTextBox MatriculaFuncionario) 
+                                    MaskedTextBox MatriculaFuncionario,
+                                    Button BtnEditar,
+                                    Panel PanelTarget) 
         {
             string[] ResultFuncionario;
             
             if(MatriculaFuncionario.Text.Trim().Length > 0)
             {
-               
+                c_HideAllBox.hideAll(PanelTarget);
                 ResultFuncionario = searchInData.getDatainTable(MatriculaFuncionario.Text);
-                TxtCpf.Text = ResultFuncionario[1];
-                TxtNomeCompleto.Text = ResultFuncionario[2];
-                TxtCalendario.Text = ResultFuncionario[3];
-                CbGenero.Text = c_HandleDataGener.handleGener( ResultFuncionario[4] );
-                TxtRg.Text = ResultFuncionario[5];
-                TxtCTrabalho.Text = ResultFuncionario[6];
-                TxtNit.Text = ResultFuncionario[7];
-                TxtPis.Text = ResultFuncionario[8];
-                TxtTituloEleitor.Text = ResultFuncionario[9];
-                CbEstadoCivil.Text = ResultFuncionario[10];
-                TxtReservista.Text = ResultFuncionario[11];
-                TxtDataAdmissao.Text = ResultFuncionario[13];
-                CbDepartamento.Text = c_HandleCargoSalario.getIdDepartamento( ResultFuncionario[14] );
-                CbCargo.Text = c_HandleCargoSalario.getIdCargo( ResultFuncionario[15] );
+                if(ResultFuncionario.Length > 0)
+                {
 
-                return true;
+                    TxtCpf.Text = ResultFuncionario[1];
+                    TxtNomeCompleto.Text = ResultFuncionario[2];
+                    TxtCalendario.Text = ResultFuncionario[3];
+                    CbGenero.Text = c_HandleDataGener.handleGener( ResultFuncionario[4] );
+                    TxtRg.Text = ResultFuncionario[5];
+                    TxtCTrabalho.Text = ResultFuncionario[6];
+                    TxtNit.Text = ResultFuncionario[7];
+                    TxtPis.Text = ResultFuncionario[8];
+                    TxtTituloEleitor.Text = ResultFuncionario[9];
+                    CbEstadoCivil.Text = ResultFuncionario[10];
+                    TxtReservista.Text = ResultFuncionario[11];
+                    TxtDataAdmissao.Text = ResultFuncionario[13];
+                    CbDepartamento.Text = c_HandleCargoSalario.getIdDepartamento( ResultFuncionario[14] );
+                    CbCargo.Text = c_HandleCargoSalario.getIdCargo( ResultFuncionario[15] );
+                    BtnEditar.Enabled = true;
+                    if(TxtCpf.Text.Length == 11)
+                    {
+                        return true;
+                    }
+                }
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
         public bool setShowEndereco(TextBox TxtRua, NumericUpDown TxtRuaNum, TextBox TxtBairro, TextBox TxtComplemento, ComboBox CbUF, TextBox TxtCidade, MaskedTextBox TxtCep, MaskedTextBox MatriculaFuncionario)

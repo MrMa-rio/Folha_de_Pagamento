@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Button BtnEditar;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             Button BtnEditarFoto;
             Button BtnCracha;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlterarCadastro));
             BtnDeletarFunc = new Button();
             panel1 = new Panel();
+            BtnEditar = new Button();
             BtnDeleteFunc = new Button();
             TxtMatricula = new MaskedTextBox();
             BtnConfirmar = new Button();
@@ -108,7 +108,6 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
-            BtnEditar = new Button();
             BtnEditarFoto = new Button();
             BtnCracha = new Button();
             panel1.SuspendLayout();
@@ -119,21 +118,6 @@
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PctUser).BeginInit();
             SuspendLayout();
-            // 
-            // BtnEditar
-            // 
-            BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
-            BtnEditar.Cursor = Cursors.Hand;
-            BtnEditar.FlatAppearance.BorderSize = 0;
-            BtnEditar.FlatStyle = FlatStyle.Flat;
-            BtnEditar.Image = (Image)resources.GetObject("BtnEditar.Image");
-            BtnEditar.Location = new Point(742, 578);
-            BtnEditar.Name = "BtnEditar";
-            BtnEditar.Size = new Size(43, 43);
-            BtnEditar.TabIndex = 3;
-            toolTip1.SetToolTip(BtnEditar, "Editar funcionário");
-            BtnEditar.UseVisualStyleBackColor = true;
-            BtnEditar.MouseClick += BtnEditar_MouseClick;
             // 
             // BtnEditarFoto
             // 
@@ -174,11 +158,11 @@
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
+            panel1.Controls.Add(BtnEditar);
             panel1.Controls.Add(BtnDeleteFunc);
             panel1.Controls.Add(TxtMatricula);
             panel1.Controls.Add(BtnConfirmar);
             panel1.Controls.Add(PnlCtrlFunc);
-            panel1.Controls.Add(BtnEditar);
             panel1.Controls.Add(BtnCancelar);
             panel1.Controls.Add(btnPesquisar);
             panel1.Controls.Add(LbMatricula);
@@ -191,9 +175,24 @@
             panel1.TabIndex = 0;
             panel1.MouseClick += AllForms_MouseClick;
             // 
+            // BtnEditar
+            // 
+            BtnEditar.BackgroundImage = Properties.Resources.edit;
+            BtnEditar.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnEditar.Enabled = false;
+            BtnEditar.FlatAppearance.BorderSize = 0;
+            BtnEditar.FlatStyle = FlatStyle.Flat;
+            BtnEditar.Location = new Point(742, 578);
+            BtnEditar.Name = "BtnEditar";
+            BtnEditar.Size = new Size(43, 43);
+            BtnEditar.TabIndex = 61;
+            BtnEditar.UseVisualStyleBackColor = true;
+            BtnEditar.MouseClick += BtnEditar_MouseClick;
+            // 
             // BtnDeleteFunc
             // 
             BtnDeleteFunc.Cursor = Cursors.Hand;
+            BtnDeleteFunc.Enabled = false;
             BtnDeleteFunc.FlatAppearance.BorderSize = 0;
             BtnDeleteFunc.FlatStyle = FlatStyle.Flat;
             BtnDeleteFunc.Image = Properties.Resources.user_minus;
@@ -1269,5 +1268,6 @@
         private Button BtnDeleteFunc;
         private Button BtnDeletarFunc;
         private Label label12;
+        private Button BtnEditar;
     }
 }

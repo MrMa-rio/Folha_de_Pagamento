@@ -91,5 +91,12 @@ namespace FOLHA_DE_PAGAMENTO_
             C_GerarPDF c_GerarPDF = new C_GerarPDF();
             c_GerarPDF.printPDF(this);
         }
+        private void All_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloqueia o caractere
+            }
+        }
     }
 }

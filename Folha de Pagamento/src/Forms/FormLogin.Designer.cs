@@ -104,6 +104,7 @@
             TxtPassword.TabIndex = 2;
             TxtPassword.UseSystemPasswordChar = true;
             TxtPassword.KeyDown += TxtPassword_KeyDown;
+            TxtPassword.KeyPress += All_KeyPress;
             // 
             // TxtUser
             // 
@@ -116,6 +117,7 @@
             TxtUser.PlaceholderText = "Digite sua matrícula";
             TxtUser.Size = new Size(214, 22);
             TxtUser.TabIndex = 1;
+            TxtUser.KeyPress += All_KeyPress;
             // 
             // label5
             // 

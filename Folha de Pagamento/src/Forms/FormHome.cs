@@ -28,31 +28,13 @@ namespace FOLHA_DE_PAGAMENTO_
         private void AllForms_MouseClick(object sender, MouseEventArgs e)
         {
             navBarShow.AnimationHide(NavBar, NavBar.Pnl2);
+
         }
 
         private void BtnPerfil_MouseClick(object sender, MouseEventArgs e)
         {
-            if (PnlPerfil.Visible)
-            {
-                PnlPerfil.Visible = false;
-            }
-            else
-            {
-                PnlPerfil.Visible = true;
-            }
-            if (DataUser.Length > 1)
-            {
-                label1.Text = DataUser[0].ToString(); //Matricula
-                label2.Text = DataUser[1].ToString(); //Nome
-                label3.Text = DataUser[2].ToString(); //FK Departamento
-                label4.Text = DataUser[3].ToString(); //FK Cargo
-                label5.Text = DataUser[4].ToString(); //NvlAcesso
-                label6.Text = DataUser[5].ToString(); //Status
-            }
-            if (!c_ManipulaçãoImagens.getImagemUser(PboxPerfil, DataUser[0]))
-            {
-                PboxPerfil.BackgroundImage = Properties.Resources.circle_account1;
-            }
+            C_ShowPerfilUser c_ShowPerfilUser = new C_ShowPerfilUser();
+            c_ShowPerfilUser.ShowPerfil(PnlPerfil, DataUser, PboxPerfil, this);
         }
 
         private void BtnTrocarUsuario_MouseClick(object sender, MouseEventArgs e)
@@ -81,7 +63,7 @@ namespace FOLHA_DE_PAGAMENTO_
 
         private void BtnMenu_VisibleChanged(object sender, EventArgs e)
         {
-            if(BtnMenu.Visible == true) 
+            if (BtnMenu.Visible == true)
             {
                 navBarShow.setNavBarShow(this, NavBar, NavBar.Pnl2);
 

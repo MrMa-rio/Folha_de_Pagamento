@@ -242,6 +242,7 @@
             CbAno.Sorted = true;
             CbAno.TabIndex = 122;
             CbAno.TextChanged += CbAno_TextChanged;
+            CbAno.KeyPress += All_KeyPress;
             // 
             // BtnImprimir
             // 
@@ -281,6 +282,7 @@
             CbMes.Sorted = true;
             CbMes.TabIndex = 78;
             CbMes.TextChanged += CbMes_TextChanged;
+            CbMes.KeyPress += All_KeyPress;
             // 
             // label20
             // 
@@ -302,6 +304,7 @@
             TxtPesquisarMatricula.Size = new Size(116, 31);
             TxtPesquisarMatricula.TabIndex = 1;
             TxtPesquisarMatricula.KeyDown += TxtPesquisarMatricula_KeyDown;
+            TxtPesquisarMatricula.KeyPress += All_KeyPress;
             // 
             // BtnPesquisarMatricula
             // 

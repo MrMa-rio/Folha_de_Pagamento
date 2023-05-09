@@ -224,5 +224,13 @@ namespace FOLHA_DE_PAGAMENTO_
             C_FormShow c_FormShow = new C_FormShow();
             c_FormShow.refreshFormWithAlert(formCadastroFunc, this);
         }
+
+        private void All_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloqueia o caractere
+            }
+        }
     }
 }

@@ -329,12 +329,6 @@
         #endregion
         private ToolTip toolTip1;
         internal Button BtnMenu;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
         internal Button BtnPerfil;
         internal Button BtnSetting;
         private PictureBox PboxPerfil;
@@ -346,5 +340,11 @@
         private Label label7;
         private Button BtnTrocarUsuario;
         internal Panel PnlPerfil;
+        internal Label label6;
+        internal Label label5;
+        internal Label label4;
+        internal Label label3;
+        internal Label label2;
+        internal Label label1;
     }
 }

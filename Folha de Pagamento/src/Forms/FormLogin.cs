@@ -54,6 +54,13 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
         {
             MessageBox.Show("Por favor, entre em contato com o Administrador. ");
         }
+        private void All_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloqueia o caractere
+            }
+        }
     }
 }
 

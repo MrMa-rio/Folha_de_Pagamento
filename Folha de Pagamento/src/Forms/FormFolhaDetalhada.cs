@@ -54,9 +54,9 @@ namespace FOLHA_DE_PAGAMENTO_
                     double DescIRRF;
                     double DescFGTS;
                     c_ShowFolhaDetalhada.getDataFuncionario(TxtPesquisarMatricula.Text, this);
-                    DescInss = c_ShowFolhaDetalhada.calculoINSS(TxtSalarioBase.Text, this);
-                    DescIRRF = c_ShowFolhaDetalhada.calculoIRRF(TxtSalarioBase.Text, DescInss, this);
-                    DescFGTS = c_ShowFolhaDetalhada.calculoFGTS(TxtSalarioBase.Text, this);
+                    DescInss = c_ShowFolhaDetalhada.calculoINSS(TxtSalarioBase.Text.Trim() != "" ? TxtSalarioBase.Text : "0", this);
+                    DescIRRF = c_ShowFolhaDetalhada.calculoIRRF(TxtSalarioBase.Text.Trim() != "" ? TxtSalarioBase.Text : "0", DescInss, this);
+                    DescFGTS = c_ShowFolhaDetalhada.calculoFGTS(TxtSalarioBase.Text.Trim() != "" ? TxtSalarioBase.Text : "0", this);
                     c_ShowFolhaDetalhada.showResultadosGerais(DescInss, DescIRRF, TxtSalarioBase.Text, this);
                 }
             }
@@ -98,6 +98,13 @@ namespace FOLHA_DE_PAGAMENTO_
             formFolhaDetalhadaPDF.Show();
             c_PrintPDF.printPdf(formFolhaDetalhadaPDF.PanelFolhaDetalhada);
             formFolhaDetalhadaPDF.Close();
+        }
+        private void All_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloqueia o caractere
+            }
         }
     }
 }

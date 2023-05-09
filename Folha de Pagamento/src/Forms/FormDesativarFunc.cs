@@ -22,6 +22,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.Forms
             TxtCPF.Text = formAlterarCadastro.TxtCpf.Text;
             TxtCargo.Text = formAlterarCadastro.CbCargo.Text;
             TxtDepartamento.Text = formAlterarCadastro.CbDepartamento.Text;
+            TxtDataDemissional.Text = DateTime.Today.ToString().Substring(0, 10);
         }
 
         private void BtnCancelar_MouseClick(object sender, MouseEventArgs e)
