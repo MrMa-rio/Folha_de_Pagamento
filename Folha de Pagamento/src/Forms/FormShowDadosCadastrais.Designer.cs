@@ -162,7 +162,7 @@
             // 
             TxtCargo.AutoSize = true;
             TxtCargo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            TxtCargo.Location = new Point(222, 235);
+            TxtCargo.Location = new Point(222, 233);
             TxtCargo.MaximumSize = new Size(220, 22);
             TxtCargo.Name = "TxtCargo";
             TxtCargo.Size = new Size(0, 22);
