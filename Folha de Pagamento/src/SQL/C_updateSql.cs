@@ -35,7 +35,7 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
             string insertSqlTelefone = $"UPDATE `tb_telefone` SET `Telefone` = '{DataTelefone[0]}' WHERE (`FK_Matricula` = '{Data[14]}')";
             string insertSqlEmail = $"UPDATE `tb_email` SET `Email` = '{DataEmail[0]}' WHERE (`FK_Matricula` = '{Data[14]}')";
             MySqlConnection conexao = new MySqlConnection();
-            if (Data[16] == "True" && Data[17] == "True")
+            if (Data[16] == "True" && Data[17] == "True" && Data[1].Length > 5 && Data[0].Length == 11 && Data[7].Length == 11 && Data[5].Length == 11 && Data[6].Length == 11 )
             {
                 try
                 {

@@ -213,8 +213,10 @@ namespace FOLHA_DE_PAGAMENTO_.src.SQL
                         $"'{dataFuncionario[12]}', '{dataFuncionario[7]}'," +
                         $"{dataFuncionario[5]}, {dataFuncionario[6]}," +
                         $" 1, {c_HandleCargoSalarioDepartamento.setNvlAcesso(dataFuncionario[5])}";
-
-                    matriculaFuncionario = setDatainTableFuncionario("tb_funcionario", fillColumnsFuncionario, valuesCadPessoal, dataFuncionario[12]);
+                    C_SearchInDataBase c_SearchInDataBase = new C_SearchInDataBase();
+                    string sqlMatricula = $"SELECT Matricula FROM bd_folha.tb_funcionario where CPF = '{dataFuncionario[12]}'";
+                    setDatainTableFuncionario("tb_funcionario", fillColumnsFuncionario, valuesCadPessoal, dataFuncionario[12]);
+                    matriculaFuncionario = c_SearchInDataBase.getListinDB(sqlMatricula)[0][0];
                     string valuesTelefone = $"'{matriculaFuncionario}', '{dataAdicional[8]}'";
                     string valuesEmail = $"'{matriculaFuncionario}', '{dataAdicional[7]}'";
                     string valuesCadAdicionais = $"'{matriculaFuncionario}', '{dataAdicional[0]}', '{dataAdicional[1]}', '{dataAdicional[6]}', '{dataAdicional[3]}', '{dataAdicional[4]}', '{dataAdicional[2]}', '{dataAdicional[5]}'";

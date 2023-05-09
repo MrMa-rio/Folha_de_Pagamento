@@ -99,6 +99,17 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
                         ((ComboBox)controle).Enabled = false;
                     }
                 }
+                if (controle is NumericUpDown) // verifica se o controle é um TextBox
+                {
+                    if (controle.Enabled == false)
+                    {
+                        ((NumericUpDown)controle).Enabled = true;
+                    }
+                    else
+                    {
+                        ((NumericUpDown)controle).Enabled = false;
+                    }
+                }
 
             }
         }

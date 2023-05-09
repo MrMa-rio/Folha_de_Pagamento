@@ -131,6 +131,7 @@
             button3.TabIndex = 63;
             toolTip1.SetToolTip(button3, "Confirmar");
             button3.UseVisualStyleBackColor = true;
+            button3.Visible = false;
             // 
             // button2
             // 
@@ -144,6 +145,7 @@
             button2.TabIndex = 62;
             toolTip1.SetToolTip(button2, "Limpar todos os campos do formulário");
             button2.UseVisualStyleBackColor = true;
+            button2.Visible = false;
             button2.MouseClick += button2_MouseClick;
             // 
             // button1

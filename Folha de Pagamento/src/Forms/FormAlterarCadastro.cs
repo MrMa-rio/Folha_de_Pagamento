@@ -84,7 +84,10 @@ namespace FOLHA_DE_PAGAMENTO_
         {
             TxtCpf.SelectAll();
         }
-
+        private void Scroll_MouseWheel(object sender, MouseEventArgs e)
+        {
+            ((HandledMouseEventArgs)e).Handled = true;
+        }
         private void TxtDataEmissao_MouseClick(object sender, MouseEventArgs e)
         {
             TxtDataAdmissao.SelectAll();

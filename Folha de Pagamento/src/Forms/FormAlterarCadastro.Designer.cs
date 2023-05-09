@@ -109,6 +109,7 @@
             LbTitulo = new Label();
             label1 = new Label();
             toolTip1 = new ToolTip(components);
+            process1 = new System.Diagnostics.Process();
             BtnEditarFoto = new Button();
             panel1.SuspendLayout();
             PnlCtrlFunc.SuspendLayout();
@@ -453,13 +454,14 @@
             // CbDepartamento
             // 
             CbDepartamento.AutoCompleteCustomSource.AddRange(new string[] { "Contabil", "Adminstração", "Engenharia", "Produção" });
-            CbDepartamento.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CbDepartamento.AutoCompleteMode = AutoCompleteMode.Suggest;
             CbDepartamento.AutoCompleteSource = AutoCompleteSource.ListItems;
             CbDepartamento.BackColor = Color.DarkGray;
             CbDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
             CbDepartamento.Enabled = false;
             CbDepartamento.FlatStyle = FlatStyle.Flat;
             CbDepartamento.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            CbDepartamento.ForeColor = SystemColors.WindowText;
             CbDepartamento.FormattingEnabled = true;
             CbDepartamento.Items.AddRange(new object[] { "Contabil", "Adminstração", "Engenharia", "Produção" });
             CbDepartamento.Location = new Point(509, 551);
@@ -1199,6 +1201,17 @@
             label1.TabIndex = 60;
             label1.Text = "_________________________________________";
             // 
+            // process1
+            // 
+            process1.StartInfo.Domain = "";
+            process1.StartInfo.LoadUserProfile = false;
+            process1.StartInfo.Password = null;
+            process1.StartInfo.StandardErrorEncoding = null;
+            process1.StartInfo.StandardInputEncoding = null;
+            process1.StartInfo.StandardOutputEncoding = null;
+            process1.StartInfo.UserName = "";
+            process1.SynchronizingObject = this;
+            // 
             // FormAlterarCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1307,5 +1320,6 @@
         private Button BtnEditar;
         private PictureBox PctDataAdmissao;
         private Button BtnCracha;
+        private System.Diagnostics.Process process1;
     }
 }
