@@ -249,6 +249,7 @@
             BtnImprimir.TabIndex = 121;
             toolTip1.SetToolTip(BtnImprimir, "Imprimir PDF");
             BtnImprimir.UseVisualStyleBackColor = true;
+            BtnImprimir.MouseClick += BtnImprimir_MouseClick;
             // 
             // label47
             // 

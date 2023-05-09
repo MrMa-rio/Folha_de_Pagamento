@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Correios.CEP.Net" Version="1.1.6" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="MySql.Data" Version="8.0.33" />
     <PackageReference Include="ViaCep" Version="4.1.96" />
   </ItemGroup>

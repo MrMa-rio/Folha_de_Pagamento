@@ -61,6 +61,8 @@ namespace FOLHA_DE_PAGAMENTO_.src.Classes
             holeritePDF.TxtDescTotal.Text = formHolerite.TxtDescTotal.Text;
 
             holeritePDF.TxtDataEmissao.Text = formHolerite.TxtDataEmissao.Text;
+            holeritePDF.TxtValorLiquido.Text = formHolerite.TxtValorLiquido.Text;
+
             holeritePDF.TxtIDHolerite.Text = formHolerite.TxtIDHolerite.Text;
             holeritePDF.TxtSalarioBase.Text = formHolerite.TxtSalarioBase.Text;
             holeritePDF.TxtBaseinss.Text = formHolerite.TxtBaseinss.Text;
