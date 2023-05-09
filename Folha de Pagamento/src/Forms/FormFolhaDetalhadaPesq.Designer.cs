@@ -220,6 +220,7 @@
             CbMonth.Name = "CbMonth";
             CbMonth.Size = new Size(121, 31);
             CbMonth.TabIndex = 118;
+            toolTip1.SetToolTip(CbMonth, "Selecione o mês");
             CbMonth.TextChanged += CbMonth_TextChanged;
             CbMonth.KeyPress += All_KeyPress;
             // 
@@ -259,6 +260,7 @@
             CbYear.Name = "CbYear";
             CbYear.Size = new Size(121, 31);
             CbYear.TabIndex = 75;
+            toolTip1.SetToolTip(CbYear, "Selecione o ano");
             CbYear.TextChanged += CbYear_TextChanged;
             CbYear.KeyPress += All_KeyPress;
             // 
@@ -273,6 +275,7 @@
             TxtPesquisarMatricula.PromptChar = ' ';
             TxtPesquisarMatricula.Size = new Size(116, 31);
             TxtPesquisarMatricula.TabIndex = 72;
+            toolTip1.SetToolTip(TxtPesquisarMatricula, "Digite a matrícula");
             TxtPesquisarMatricula.KeyDown += TxtPesquisarMatricula_KeyDown;
             TxtPesquisarMatricula.KeyPress += All_KeyPress;
             // 

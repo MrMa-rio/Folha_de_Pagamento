@@ -253,6 +253,7 @@
             TxtSalarioBase.TabIndex = 13;
             TxtSalarioBase.TabStop = false;
             TxtSalarioBase.KeyPress += All_KeyPress;
+            toolTip1.SetToolTip(TxtSalarioBase, "Este é o salário base");
             // 
             // Pctdata
             // 
@@ -286,6 +287,7 @@
             TxtReservista.Size = new Size(162, 31);
             TxtReservista.TabIndex = 7;
             TxtReservista.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            toolTip1.SetToolTip(TxtReservista, "Digitar o reservista");
             TxtReservista.MouseClick += TxtReservista_MouseClick;
             TxtReservista.KeyPress += All_KeyPress;
             // 
@@ -305,6 +307,7 @@
             CbDepartamento.Size = new Size(185, 31);
             CbDepartamento.TabIndex = 9;
             CbDepartamento.KeyPress += All_KeyPress;
+            toolTip1.SetToolTip(CbDepartamento, "Selecionar o departamento");
             // 
             // label6
             // 
@@ -326,6 +329,7 @@
             TxtNumRua.Name = "TxtNumRua";
             TxtNumRua.Size = new Size(160, 31);
             TxtNumRua.TabIndex = 21;
+            toolTip1.SetToolTip(TxtNumRua, "Digite o número");
             // 
             // TxtTituloEleitor
             // 
@@ -339,6 +343,7 @@
             TxtTituloEleitor.Size = new Size(162, 31);
             TxtTituloEleitor.TabIndex = 6;
             TxtTituloEleitor.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            toolTip1.SetToolTip(TxtTituloEleitor, "Digitar o título");
             TxtTituloEleitor.MouseClick += TxtTituloEleitor_MouseClick;
             TxtTituloEleitor.KeyPress += All_KeyPress;
             // 
@@ -353,6 +358,7 @@
             TxtPis.Size = new Size(165, 31);
             TxtPis.TabIndex = 12;
             TxtPis.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            toolTip1.SetToolTip(TxtPis, "Digite o PIS");
             TxtPis.MouseClick += TxtPis_MouseClick;
             // 
             // TxtCTrabalho
@@ -366,6 +372,7 @@
             TxtCTrabalho.Size = new Size(165, 31);
             TxtCTrabalho.TabIndex = 10;
             TxtCTrabalho.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            toolTip1.SetToolTip(TxtCTrabalho, "Digite a carteira de trabalho");
             TxtCTrabalho.MouseClick += TxtCTrabalho_MouseClick;
             // 
             // TxtNit
@@ -380,6 +387,7 @@
             TxtNit.Size = new Size(165, 31);
             TxtNit.TabIndex = 11;
             TxtNit.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            toolTip1.SetToolTip(TxtNit, "Digite o NIT");
             TxtNit.MouseClick += TxtNit_MouseClick;
             TxtNit.KeyPress += All_KeyPress;
             // 
@@ -404,6 +412,7 @@
             TxtCep.Size = new Size(160, 31);
             TxtCep.TabIndex = 17;
             TxtCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            toolTip1.SetToolTip(TxtCep, "Digite o CEP");
             TxtCep.MouseClick += TxtCep_MouseClick;
             TxtCep.Leave += TxtCep_Leave;
             // 
@@ -424,7 +433,7 @@
             LbTituloEleitor.Name = "LbTituloEleitor";
             LbTituloEleitor.Size = new Size(125, 21);
             LbTituloEleitor.TabIndex = 111;
-            LbTituloEleitor.Text = " Titulo de Eleitor:";
+            LbTituloEleitor.Text = " Título de Eleitor:";
             // 
             // LbReservista
             // 
@@ -447,6 +456,7 @@
             TxtRg.Size = new Size(162, 31);
             TxtRg.TabIndex = 5;
             TxtRg.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            toolTip1.SetToolTip(TxtRg, "Digitar o RG");
             TxtRg.MouseClick += TxtRg_MouseClick;
             // 
             // LbCep
@@ -480,6 +490,7 @@
             TxtTelefone.Size = new Size(287, 31);
             TxtTelefone.TabIndex = 15;
             TxtTelefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            toolTip1.SetToolTip(TxtTelefone, "Digite o telefone");
             TxtTelefone.MouseClick += TxtTelefone_MouseClick;
             TxtTelefone.TextChanged += TxtTelefone_TextChanged;
             // 
@@ -509,6 +520,7 @@
             TxtDataAdmissao.Name = "TxtDataAdmissao";
             TxtDataAdmissao.Size = new Size(121, 31);
             TxtDataAdmissao.TabIndex = 14;
+            toolTip1.SetToolTip(TxtDataAdmissao, "Digite a data de admissão");
             TxtDataAdmissao.MouseClick += TxtDataEmissao_MouseClick;
             TxtDataAdmissao.KeyPress += All_KeyPress;
             // 
@@ -596,6 +608,7 @@
             CbUF.Size = new Size(160, 31);
             CbUF.TabIndex = 18;
             CbUF.KeyPress += All_KeyPress;
+            toolTip1.SetToolTip(CbUF, "Digite o UF");
             // 
             // TxtCidade
             // 
@@ -604,10 +617,11 @@
             TxtCidade.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtCidade.Location = new Point(167, 1020);
             TxtCidade.Name = "TxtCidade";
-            TxtCidade.PlaceholderText = "Ribeirão Preto";
+            TxtCidade.PlaceholderText = "Digite a cidade";
             TxtCidade.Size = new Size(287, 31);
             TxtCidade.TabIndex = 19;
             TxtCidade.KeyPress += All_KeyPress;
+            toolTip1.SetToolTip(TxtCidade, "Digite a cidade");
             // 
             // LbCidade
             // 
@@ -636,7 +650,7 @@
             TextEmail.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TextEmail.Location = new Point(167, 909);
             TextEmail.Name = "TextEmail";
-            TextEmail.PlaceholderText = " XXXX@gmail.com";
+            TextEmail.PlaceholderText = "Digite o e-mail";
             TextEmail.Size = new Size(287, 31);
             TextEmail.TabIndex = 16;
             TextEmail.KeyPress += All_KeyPress;
@@ -672,6 +686,7 @@
             TxtComplemento.Size = new Size(287, 31);
             TxtComplemento.TabIndex = 23;
             TxtComplemento.KeyPress += All_KeyPress;
+            toolTip1.SetToolTip(TxtComplemento, "Digite um complemento");
             // 
             // LbComplemento
             // 
@@ -690,10 +705,11 @@
             TxtBairro.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtBairro.Location = new Point(167, 1131);
             TxtBairro.Name = "TxtBairro";
-            TxtBairro.PlaceholderText = " Jd.Paraná";
+            TxtBairro.PlaceholderText = "Digite o bairro";
             TxtBairro.Size = new Size(287, 31);
             TxtBairro.TabIndex = 22;
             TxtBairro.KeyPress += All_KeyPress;
+            toolTip1.SetToolTip(TxtBairro, "Digite o bairro");
             // 
             // LbBairro
             // 
@@ -722,10 +738,11 @@
             TxtRua.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
             TxtRua.Location = new Point(167, 1057);
             TxtRua.Name = "TxtRua";
-            TxtRua.PlaceholderText = " Avenida São Paulo";
+            TxtRua.PlaceholderText = "Digite a rua";
             TxtRua.Size = new Size(287, 31);
             TxtRua.TabIndex = 20;
             TxtRua.KeyPress += All_KeyPress;
+            toolTip1.SetToolTip(TxtRua, "Digite a rua");
             // 
             // LbRua
             // 
@@ -779,6 +796,7 @@
             CbGenero.TabIndex = 4;
             toolTip1.SetToolTip(CbGenero, "Escolha o gênero");
             CbGenero.KeyPress += All_KeyPress;
+            toolTip1.SetToolTip(CbGenero, "Selecionar o gênero");
             // 
             // LbGenero
             // 
@@ -870,7 +888,7 @@
             TxtCpf.Size = new Size(160, 31);
             TxtCpf.TabIndex = 2;
             TxtCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            toolTip1.SetToolTip(TxtCpf, "Digite o CEP");
+            toolTip1.SetToolTip(TxtCpf, "Digite o CPF");
             TxtCpf.MouseClick += TxtCpf_MouseClick;
             TxtCpf.TextChanged += TxtCpf_TextChanged;
             // 
@@ -886,6 +904,7 @@
             CbCargo.Name = "CbCargo";
             CbCargo.Size = new Size(185, 31);
             CbCargo.TabIndex = 8;
+            toolTip1.SetToolTip(CbCargo, "Selecionar o cargo");
             CbCargo.DropDown += CbCargo_DropDown;
             CbCargo.TextChanged += CbCargo_DropDown;
             CbCargo.KeyPress += All_KeyPress;
@@ -916,8 +935,9 @@
             CbEstadoCivil.Name = "CbEstadoCivil";
             CbEstadoCivil.Size = new Size(160, 31);
             CbEstadoCivil.TabIndex = 3;
-            toolTip1.SetToolTip(CbEstadoCivil, "Escolha o estado civil");
             CbEstadoCivil.KeyPress += All_KeyPress;
+            toolTip1.SetToolTip(CbEstadoCivil, "Selecionar o estado civil");
+            
             // 
             // LbEstadoCivil
             // 

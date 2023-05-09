@@ -169,7 +169,7 @@
             button2.Name = "button2";
             button2.Size = new Size(43, 43);
             button2.TabIndex = 121;
-            toolTip1.SetToolTip(button2, "Imprimir folha");
+            toolTip1.SetToolTip(button2, "Capturar tela em PDF");
             button2.UseVisualStyleBackColor = true;
             button2.MouseClick += button2_MouseClick;
             // 
@@ -226,6 +226,7 @@
             TxtPesquisarMatricula.PromptChar = ' ';
             TxtPesquisarMatricula.Size = new Size(116, 31);
             TxtPesquisarMatricula.TabIndex = 72;
+            toolTip1.SetToolTip(TxtPesquisarMatricula, "Digite a matrícula");
             TxtPesquisarMatricula.Click += TxtPesquisarMatricula_Click;
             TxtPesquisarMatricula.KeyDown += TxtPesquisarMatricula_KeyDown;
             TxtPesquisarMatricula.KeyPress += All_KeyPress;

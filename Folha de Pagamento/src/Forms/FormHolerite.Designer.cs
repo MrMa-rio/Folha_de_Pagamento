@@ -436,9 +436,9 @@
             TxtDataLancamento.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TxtDataLancamento.Location = new Point(810, 25);
             TxtDataLancamento.Name = "TxtDataLancamento";
-            TxtDataLancamento.Size = new Size(83, 19);
+            TxtDataLancamento.Size = new Size(21, 19);
             TxtDataLancamento.TabIndex = 94;
-            TxtDataLancamento.Text = "12/12/2000";
+            TxtDataLancamento.Text = "--";
             // 
             // label4
             // 
@@ -455,9 +455,9 @@
             TxtIDHolerite.AutoSize = true;
             TxtIDHolerite.Location = new Point(8, 25);
             TxtIDHolerite.Name = "TxtIDHolerite";
-            TxtIDHolerite.Size = new Size(51, 15);
+            TxtIDHolerite.Size = new Size(17, 15);
             TxtIDHolerite.TabIndex = 92;
-            TxtIDHolerite.Text = "Numero";
+            TxtIDHolerite.Text = "--";
             // 
             // label42
             // 
@@ -476,9 +476,9 @@
             TxtFgtsMes.Location = new Point(525, 25);
             TxtFgtsMes.MaximumSize = new Size(85, 19);
             TxtFgtsMes.Name = "TxtFgtsMes";
-            TxtFgtsMes.Size = new Size(60, 19);
+            TxtFgtsMes.Size = new Size(21, 19);
             TxtFgtsMes.TabIndex = 90;
-            TxtFgtsMes.Text = "1182,67";
+            TxtFgtsMes.Text = "--";
             // 
             // TxtBaseirrf
             // 
@@ -487,9 +487,9 @@
             TxtBaseirrf.Location = new Point(676, 25);
             TxtBaseirrf.MaximumSize = new Size(85, 19);
             TxtBaseirrf.Name = "TxtBaseirrf";
-            TxtBaseirrf.Size = new Size(60, 19);
+            TxtBaseirrf.Size = new Size(21, 19);
             TxtBaseirrf.TabIndex = 89;
-            TxtBaseirrf.Text = "2097,39";
+            TxtBaseirrf.Text = "--";
             // 
             // TxtBaseFgts
             // 
@@ -498,9 +498,9 @@
             TxtBaseFgts.Location = new Point(388, 25);
             TxtBaseFgts.MaximumSize = new Size(85, 19);
             TxtBaseFgts.Name = "TxtBaseFgts";
-            TxtBaseFgts.Size = new Size(60, 19);
+            TxtBaseFgts.Size = new Size(21, 19);
             TxtBaseFgts.TabIndex = 88;
-            TxtBaseFgts.Text = "2283,36";
+            TxtBaseFgts.Text = "--";
             // 
             // TxtBaseinss
             // 
@@ -509,9 +509,9 @@
             TxtBaseinss.Location = new Point(247, 25);
             TxtBaseinss.MaximumSize = new Size(85, 19);
             TxtBaseinss.Name = "TxtBaseinss";
-            TxtBaseinss.Size = new Size(60, 19);
+            TxtBaseinss.Size = new Size(21, 19);
             TxtBaseinss.TabIndex = 87;
-            TxtBaseinss.Text = "2283,36";
+            TxtBaseinss.Text = "--";
             // 
             // TxtSalarioBase
             // 
@@ -520,9 +520,9 @@
             TxtSalarioBase.Location = new Point(117, 25);
             TxtSalarioBase.MaximumSize = new Size(85, 19);
             TxtSalarioBase.Name = "TxtSalarioBase";
-            TxtSalarioBase.Size = new Size(60, 19);
+            TxtSalarioBase.Size = new Size(21, 19);
             TxtSalarioBase.TabIndex = 86;
-            TxtSalarioBase.Text = "2283,36";
+            TxtSalarioBase.Text = "--";
             // 
             // label56
             // 
@@ -731,9 +731,9 @@
             TxtValorLiquido.Location = new Point(27, 10);
             TxtValorLiquido.MaximumSize = new Size(88, 19);
             TxtValorLiquido.Name = "TxtValorLiquido";
-            TxtValorLiquido.Size = new Size(60, 19);
+            TxtValorLiquido.Size = new Size(21, 19);
             TxtValorLiquido.TabIndex = 73;
-            TxtValorLiquido.Text = "2082,89";
+            TxtValorLiquido.Text = "--";
             // 
             // panelDescTotal
             // 
@@ -766,9 +766,9 @@
             TxtDescTotal.Location = new Point(25, 9);
             TxtDescTotal.MaximumSize = new Size(88, 19);
             TxtDescTotal.Name = "TxtDescTotal";
-            TxtDescTotal.Size = new Size(60, 19);
+            TxtDescTotal.Size = new Size(21, 19);
             TxtDescTotal.TabIndex = 73;
-            TxtDescTotal.Text = "1200,47";
+            TxtDescTotal.Text = "--";
             // 
             // panelVencTotal
             // 
@@ -801,9 +801,9 @@
             TxtVencTotal.Location = new Point(25, 9);
             TxtVencTotal.MaximumSize = new Size(88, 19);
             TxtVencTotal.Name = "TxtVencTotal";
-            TxtVencTotal.Size = new Size(60, 19);
+            TxtVencTotal.Size = new Size(21, 19);
             TxtVencTotal.TabIndex = 73;
-            TxtVencTotal.Text = "2283,36";
+            TxtVencTotal.Text = "--";
             // 
             // panelDescontos
             // 
@@ -829,9 +829,9 @@
             DescIRRF.Location = new Point(21, 38);
             DescIRRF.MaximumSize = new Size(88, 19);
             DescIRRF.Name = "DescIRRF";
-            DescIRRF.Size = new Size(57, 19);
+            DescIRRF.Size = new Size(21, 19);
             DescIRRF.TabIndex = 77;
-            DescIRRF.Text = "000000";
+            DescIRRF.Text = "--";
             // 
             // DescINSS
             // 
@@ -841,9 +841,9 @@
             DescINSS.Location = new Point(21, 19);
             DescINSS.MaximumSize = new Size(88, 19);
             DescINSS.Name = "DescINSS";
-            DescINSS.Size = new Size(57, 19);
+            DescINSS.Size = new Size(21, 19);
             DescINSS.TabIndex = 76;
-            DescINSS.Text = "000000";
+            DescINSS.Text = "--";
             // 
             // label30
             // 
@@ -853,9 +853,9 @@
             label30.Location = new Point(21, 0);
             label30.MaximumSize = new Size(88, 19);
             label30.Name = "label30";
-            label30.Size = new Size(17, 19);
+            label30.Size = new Size(21, 19);
             label30.TabIndex = 75;
-            label30.Text = "0";
+            label30.Text = "--";
             // 
             // label27
             // 
@@ -934,9 +934,9 @@
             ValorFGTS.Location = new Point(21, 57);
             ValorFGTS.MaximumSize = new Size(88, 19);
             ValorFGTS.Name = "ValorFGTS";
-            ValorFGTS.Size = new Size(57, 19);
+            ValorFGTS.Size = new Size(21, 19);
             ValorFGTS.TabIndex = 78;
-            ValorFGTS.Text = "000000";
+            ValorFGTS.Text = "--";
             // 
             // VencIRRF
             // 
@@ -946,9 +946,9 @@
             VencIRRF.Location = new Point(21, 38);
             VencIRRF.MaximumSize = new Size(88, 19);
             VencIRRF.Name = "VencIRRF";
-            VencIRRF.Size = new Size(57, 19);
+            VencIRRF.Size = new Size(21, 19);
             VencIRRF.TabIndex = 77;
-            VencIRRF.Text = "000000";
+            VencIRRF.Text = "--";
             // 
             // VencINSS
             // 
@@ -958,9 +958,9 @@
             VencINSS.Location = new Point(21, 19);
             VencINSS.MaximumSize = new Size(88, 19);
             VencINSS.Name = "VencINSS";
-            VencINSS.Size = new Size(57, 19);
+            VencINSS.Size = new Size(21, 19);
             VencINSS.TabIndex = 76;
-            VencINSS.Text = "000000";
+            VencINSS.Text = "--";
             // 
             // TxtSalarioBaseMensal
             // 
@@ -970,9 +970,9 @@
             TxtSalarioBaseMensal.Location = new Point(21, 0);
             TxtSalarioBaseMensal.MaximumSize = new Size(88, 19);
             TxtSalarioBaseMensal.Name = "TxtSalarioBaseMensal";
-            TxtSalarioBaseMensal.Size = new Size(57, 19);
+            TxtSalarioBaseMensal.Size = new Size(21, 19);
             TxtSalarioBaseMensal.TabIndex = 75;
-            TxtSalarioBaseMensal.Text = "000000";
+            TxtSalarioBaseMensal.Text = "--";
             // 
             // label23
             // 
@@ -1080,9 +1080,9 @@
             TaxaIRRF.Location = new Point(0, 38);
             TaxaIRRF.MaximumSize = new Size(88, 19);
             TaxaIRRF.Name = "TaxaIRRF";
-            TaxaIRRF.Size = new Size(28, 19);
+            TaxaIRRF.Size = new Size(21, 19);
             TaxaIRRF.TabIndex = 74;
-            TaxaIRRF.Text = "7,5";
+            TaxaIRRF.Text = "--";
             // 
             // TaxaINSS
             // 
@@ -1092,9 +1092,9 @@
             TaxaINSS.Location = new Point(0, 19);
             TaxaINSS.MaximumSize = new Size(88, 19);
             TaxaINSS.Name = "TaxaINSS";
-            TaxaINSS.Size = new Size(36, 19);
+            TaxaINSS.Size = new Size(21, 19);
             TaxaINSS.TabIndex = 73;
-            TaxaINSS.Text = "8,14";
+            TaxaINSS.Text = "--";
             // 
             // label29
             // 
@@ -1141,9 +1141,9 @@
             TxtNomeCompleto.Location = new Point(-1, 76);
             TxtNomeCompleto.MaximumSize = new Size(550, 0);
             TxtNomeCompleto.Name = "TxtNomeCompleto";
-            TxtNomeCompleto.Size = new Size(549, 19);
+            TxtNomeCompleto.Size = new Size(21, 19);
             TxtNomeCompleto.TabIndex = 72;
-            TxtNomeCompleto.Text = "Jubileu Gomes Soares da Costa Filho Neto dos Santos Nunes da Aparecida da Conceição";
+            TxtNomeCompleto.Text = "--";
             // 
             // label26
             // 
@@ -1203,9 +1203,9 @@
             TxtIdFGTS.Location = new Point(0, 57);
             TxtIdFGTS.MaximumSize = new Size(57, 19);
             TxtIdFGTS.Name = "TxtIdFGTS";
-            TxtIdFGTS.Size = new Size(33, 19);
+            TxtIdFGTS.Size = new Size(21, 19);
             TxtIdFGTS.TabIndex = 74;
-            TxtIdFGTS.Text = "800";
+            TxtIdFGTS.Text = "--";
             // 
             // TxtMatricula_
             // 
@@ -1214,9 +1214,9 @@
             TxtMatricula_.Location = new Point(-1, 76);
             TxtMatricula_.MaximumSize = new Size(57, 19);
             TxtMatricula_.Name = "TxtMatricula_";
-            TxtMatricula_.Size = new Size(57, 19);
+            TxtMatricula_.Size = new Size(21, 19);
             TxtMatricula_.TabIndex = 73;
-            TxtMatricula_.Text = "000000";
+            TxtMatricula_.Text = "--";
             // 
             // TxtIDIRRF
             // 
@@ -1226,9 +1226,9 @@
             TxtIDIRRF.Location = new Point(0, 38);
             TxtIDIRRF.MaximumSize = new Size(57, 19);
             TxtIDIRRF.Name = "TxtIDIRRF";
-            TxtIDIRRF.Size = new Size(33, 19);
+            TxtIDIRRF.Size = new Size(21, 19);
             TxtIDIRRF.TabIndex = 69;
-            TxtIDIRRF.Text = "790";
+            TxtIDIRRF.Text = "--";
             // 
             // TxtIDINSS
             // 
@@ -1238,9 +1238,9 @@
             TxtIDINSS.Location = new Point(0, 19);
             TxtIDINSS.MaximumSize = new Size(57, 19);
             TxtIDINSS.Name = "TxtIDINSS";
-            TxtIDINSS.Size = new Size(33, 19);
+            TxtIDINSS.Size = new Size(21, 19);
             TxtIDINSS.TabIndex = 69;
-            TxtIDINSS.Text = "980";
+            TxtIDINSS.Text = "--";
             // 
             // label21
             // 
@@ -1278,9 +1278,8 @@
             TxtDataAdmissao.Location = new Point(845, 19);
             TxtDataAdmissao.MaximumSize = new Size(90, 19);
             TxtDataAdmissao.Name = "TxtDataAdmissao";
-            TxtDataAdmissao.Size = new Size(83, 19);
+            TxtDataAdmissao.Size = new Size(0, 19);
             TxtDataAdmissao.TabIndex = 73;
-            TxtDataAdmissao.Text = "12/12/2050";
             // 
             // TxtCargo
             // 
@@ -1289,9 +1288,8 @@
             TxtCargo.Location = new Point(630, 19);
             TxtCargo.MaximumSize = new Size(250, 19);
             TxtCargo.Name = "TxtCargo";
-            TxtCargo.Size = new Size(149, 19);
+            TxtCargo.Size = new Size(0, 19);
             TxtCargo.TabIndex = 73;
-            TxtCargo.Text = "Auxiliar Almoxarifado II";
             // 
             // TxtNome
             // 
@@ -1300,9 +1298,8 @@
             TxtNome.Location = new Point(70, 19);
             TxtNome.MaximumSize = new Size(550, 0);
             TxtNome.Name = "TxtNome";
-            TxtNome.Size = new Size(549, 19);
+            TxtNome.Size = new Size(0, 19);
             TxtNome.TabIndex = 73;
-            TxtNome.Text = "Jubileu Gomes Soares da Costa Filho Neto dos Santos Nunes da Aparecida da Conceição";
             // 
             // TxtMatricula
             // 
@@ -1311,9 +1308,8 @@
             TxtMatricula.Location = new Point(0, 19);
             TxtMatricula.MaximumSize = new Size(57, 19);
             TxtMatricula.Name = "TxtMatricula";
-            TxtMatricula.Size = new Size(57, 19);
+            TxtMatricula.Size = new Size(0, 19);
             TxtMatricula.TabIndex = 73;
-            TxtMatricula.Text = "000000";
             // 
             // label18
             // 
@@ -1374,9 +1370,9 @@
             TxtDataEmissao.Location = new Point(102, 10);
             TxtDataEmissao.MaximumSize = new Size(85, 19);
             TxtDataEmissao.Name = "TxtDataEmissao";
-            TxtDataEmissao.Size = new Size(83, 19);
+            TxtDataEmissao.Size = new Size(21, 19);
             TxtDataEmissao.TabIndex = 74;
-            TxtDataEmissao.Text = "12/12/3012";
+            TxtDataEmissao.Text = "--";
             // 
             // label50
             // 
@@ -1429,9 +1425,9 @@
             TxtAno.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TxtAno.Location = new Point(160, 80);
             TxtAno.Name = "TxtAno";
-            TxtAno.Size = new Size(41, 19);
+            TxtAno.Size = new Size(21, 19);
             TxtAno.TabIndex = 9;
-            TxtAno.Text = "2005";
+            TxtAno.Text = "--";
             // 
             // TxtMes
             // 
@@ -1439,9 +1435,9 @@
             TxtMes.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             TxtMes.Location = new Point(60, 80);
             TxtMes.Name = "TxtMes";
-            TxtMes.Size = new Size(72, 19);
+            TxtMes.Size = new Size(21, 19);
             TxtMes.TabIndex = 8;
-            TxtMes.Text = "Dezembro";
+            TxtMes.Text = "--";
             // 
             // label3
             // 
